@@ -1,0 +1,6 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const input=JSON.parse(readFileSync('district-data.json','utf8'));
+const bbox=[77.585,12.966,77.604,12.985],seen=new Set(),features=[];
+for(const f of input.features){const type=f.geometry.type;const pieces=type==='MultiPolygon'?f.geometry.coordinates:type==='Polygon'?[f.geometry.coordinates]:type==='MultiLineString'?f.geometry.coordinates:type==='LineString'?[f.geometry.coordinates]:[];
+ for(const c of pieces){const polygon=type.includes('Polygon');const points=polygon?c[0]:c;if(!points.some(p=>p[0]>=bbox[0]&&p[0]<=bbox[2]&&p[1]>=bbox[1]&&p[1]<=bbox[3]))continue;const geometry={type:polygon?'Polygon':'LineString',coordinates:c};const key=f.properties._layer+JSON.stringify(c);if(seen.has(key))continue;seen.add(key);features.push({type:'Feature',id:features.length,geometry,properties:f.properties});}}
+const data={type:'FeatureCollection',bbox,source:'OpenStreetMap contributors via OpenFreeMap vector tiles',captured:'2026-09-09',features};writeFileSync('district-data.json',JSON.stringify(data));const counts={};for(const f of features)counts[f.properties._layer]=(counts[f.properties._layer]||0)+1;console.log({counts,bytes:JSON.stringify(data).length});

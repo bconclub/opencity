@@ -1,0 +1,26 @@
+const {chromium}=require('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const assert=require('node:assert/strict');
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+ const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:4173');await page.waitForFunction(()=>typeof ready!=='undefined'&&ready,{timeout:60000});
+ await page.waitForFunction(()=>map.areTilesLoaded(),{timeout:60000});
+ const count=await page.evaluate(()=>map.queryRenderedFeatures({layers:['city-buildings']}).length);assert(count>0,'Expected actual building geometry');
+ await page.screenshot({path:'bengaluru-desktop.png'});
+ await page.getByRole('button',{name:'Plan view',exact:true}).click();await page.waitForFunction(()=>map.getPitch()===0);
+ await page.getByRole('button',{name:'3D model',exact:true}).click();await page.waitForFunction(()=>map.getPitch()===60);
+ await page.locator('#place').selectOption('4');await page.waitForFunction(()=>!map.isMoving());assert.equal(await page.locator('#district').textContent(),'Indiranagar');
+ await page.locator('#buildings').uncheck();assert.equal(await page.evaluate(()=>map.getLayoutProperty('city-buildings','visibility')),'none');await page.locator('#buildings').check();
+ await page.locator('#labels').uncheck();assert.equal(await page.evaluate(()=>map.getStyle().layers.filter(l=>l.type==='symbol').every(l=>l.layout.visibility==='none')),true);await page.locator('#labels').check();
+ await page.locator('#orbit').click();const bearing=await page.evaluate(()=>map.getBearing());await page.waitForFunction(b=>map.getBearing()!==b,bearing);await page.locator('#orbit').click();
+ await page.locator('#overview').click();await page.waitForFunction(()=>!map.isMoving());assert.equal(await page.locator('#district').textContent(),'Greater Bengaluru');
+ await page.locator('#home').click();await page.waitForFunction(()=>!map.isMoving());
+ await page.waitForFunction(()=>map.areTilesLoaded());
+ const point=await page.evaluate(()=>{const canvas=map.getCanvas();for(let y=220;y<canvas.clientHeight-240;y+=12)for(let x=380;x<canvas.clientWidth-100;x+=12)if(map.queryRenderedFeatures([x,y],{layers:['city-buildings']}).length)return{x,y};});
+ assert(point,'Find clickable building');await page.mouse.click(point.x,point.y);await page.locator('#inspector').waitFor({state:'visible'});await page.locator('#close-inspector').click();
+ await page.setViewportSize({width:390,height:844});await page.reload();await page.waitForFunction(()=>ready);await page.waitForFunction(()=>map.areTilesLoaded());
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:'bengaluru-mobile.png'});
+ await page.locator('#collapse').click();await page.locator('#place').selectOption('10');assert.equal(await page.locator('#district').textContent(),'Bellandur Lake');assert.equal(await page.locator('#collapse').getAttribute('aria-expanded'),'false');
+ const motion=await browser.newPage({reducedMotion:'reduce'});await motion.goto('http://127.0.0.1:4173');await motion.waitForFunction(()=>ready);await motion.locator('#orbit').click();assert.equal(await motion.evaluate(()=>orbit),false);
+ console.log(JSON.stringify({buildingFeatures:count,checks:['desktop real geometry','plan/3D','destination','building/label toggles','orbit','overview/home','building inspection','mobile layout and destination','reduced motion'],pageErrors:errors}));assert.deepEqual(errors,[]);await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

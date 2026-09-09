@@ -1,0 +1,2 @@
+import assert from 'node:assert/strict';import {domeLimit,CBD_DOME as d} from './cbd-boundary.js';
+for(const p of [[77.62,12.99,600],[77.59,12.97,1000],[77.57,12.95,90],[77.5945,12.9755,92]]){const v=domeLimit(...p),x=(v.lng-d.lng)*111320*Math.cos(d.lat*Math.PI/180),y=(v.lat-d.lat)*111320;assert(x*x/d.x**2+y*y/d.y**2+v.alt**2/d.z**2<=.9750001);assert(v.alt>=62&&v.alt<=782);assert(Math.abs(Math.hypot(...v.normal)-1)<1e-9);}console.log('PASS: dome boundary positions, ceiling, normals.');
