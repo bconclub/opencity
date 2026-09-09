@@ -21,11 +21,11 @@ export function advanceDynamics(s,input,dt){
   s.rollRate+=(68*(rollTarget-s.roll)-15*s.rollRate)*h;
   s.pitch+=s.pitchRate*h;s.roll+=s.rollRate*h;
   angle=s.heading*RAD;
-  const thrustForward=-9.81*Math.tan(s.pitch),thrustSide=9.81*Math.tan(s.roll);
+  const thrustForward=-9.81*Math.tan(s.pitch)*(input.boost&&!input.brake?2.2:1),thrustSide=9.81*Math.tan(s.roll);
   const drag=.025+.0018*velocity+(input.brake?.8:0);
   s.vx+=(Math.sin(angle)*thrustForward+Math.cos(angle)*thrustSide-s.vx*drag)*h;
   s.vy+=(Math.cos(angle)*thrustForward-Math.sin(angle)*thrustSide-s.vy*drag)*h;
-  const v=Math.hypot(s.vx,s.vy);if(v>58){s.vx*=58/v;s.vy*=58/v;}
+  const v=Math.hypot(s.vx,s.vy);const maxSpeed=input.boost&&!input.brake?85:58;if(v>maxSpeed){s.vx*=maxSpeed/v;s.vy*=maxSpeed/v;}
   // Collective has a response time; steep banks cause a small, recoverable sink.
   const sink=(1-Math.cos(s.roll)*Math.cos(s.pitch))*2;
   s.vz+=(input.vertical*26-(input.vertical?sink:0)-s.vz)*(1-Math.exp(-h*3.5));

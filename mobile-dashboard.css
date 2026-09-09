@@ -1,0 +1,31 @@
+.controller-options{margin:8px 0 0}.controller-options summary{font-size:12px;min-height:32px;color:#c4d7cc;cursor:pointer}
+@media(max-width:760px),(max-height:550px) and (pointer:coarse){
+ body.flight-active #flight-hud,body.auto-active #auto-hud{top:auto!important;bottom:calc(28px + env(safe-area-inset-bottom));left:12px;right:12px;width:auto;max-height:none;overflow:visible;padding:10px 12px;border-radius:20px;background:linear-gradient(135deg,#102620f5,#163a30f5);display:grid;grid-template-columns:110px 1fr;gap:4px 12px;box-shadow:0 8px 30px #0004}
+ body.flight-active #flight-hud[hidden],body.auto-active #auto-hud[hidden]{display:none}
+ body.flight-active #flight-hud .flight-top,body.auto-active #auto-hud .flight-top{grid-column:2;grid-row:1;justify-content:flex-end}
+ .flight-top>div{display:none}
+ body.flight-active #flight-hud .instruments,body.auto-active #auto-hud .instruments{grid-column:1;grid-row:1/4;margin:0;display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+ .instruments>div:first-child{width:100px;height:100px;border-radius:50%;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#142e25 60%,transparent 62%),conic-gradient(from 225deg,#e9c263 0deg var(--speed-arc,0deg),#36564a var(--speed-arc,0deg) 270deg,transparent 270deg);border:1px solid #7a9f7630}
+ body.flight-active #flight-hud .instruments strong,body.auto-active #auto-hud .instruments strong{font-size:30px;font-variant-numeric:tabular-nums;line-height:1}
+ .instruments>div:first-child span{font-size:10px;letter-spacing:.12em;margin-top:6px}
+ .instruments>div:not(:first-child){display:flex;align-items:baseline;gap:4px}
+ body.flight-active #flight-hud .instruments>div:not(:first-child) strong,body.auto-active #auto-hud .instruments>div:not(:first-child) strong{font-size:13px}
+ .instruments>div:not(:first-child) span{font-size:9px}
+ #auto-hud .instruments>div:nth-child(2),#flight-hud .instruments>div:nth-child(3){display:none!important}
+ body.flight-active #flight-hud .flight-actions,body.auto-active #auto-hud .flight-actions{grid-column:2;grid-row:2;display:grid;grid-template-columns:1fr 1fr;gap:5px;align-self:center}
+ #reset-auto,#reset-flight{display:none}
+ body.flight-active #flight-hud button,body.auto-active #auto-hud button{min-height:40px;padding:7px;font-size:11px;border-radius:10px}
+ .controller-options{grid-column:2;grid-row:3;margin:0;justify-self:end;align-self:end}.controller-options summary{min-height:28px;padding:5px}
+ .controller-options[open] .controller-options-body{position:absolute;bottom:calc(100% + 8px);right:0;width:min(320px,calc(100vw - 24px));background:#102a24;padding:14px;border:1px solid #58786d;border-radius:14px;max-height:40dvh;overflow:auto}
+ body.flight-active #flight-controls,body.auto-active #auto-controls{bottom:calc(200px + env(safe-area-inset-bottom));left:12px;right:12px;width:auto;gap:8px}
+ body.auto-active #auto-controls{display:flex!important;align-items:flex-end;justify-content:space-between}
+ .auto-turn-controls{display:grid;grid-template-columns:1fr 1fr;gap:5px}.auto-turn-controls button[data-auto-key=Space]{grid-column:1/3;grid-row:2}
+ .auto-pedals{display:flex;flex-direction:column;gap:5px}
+ body.auto-active #auto-controls button{min-width:48px;min-height:44px;font-size:11px;padding:8px;background:#15372ee8;color:#eaf6ee;border-color:#6a8c7b}
+ body.flight-active #flight-controls button{min-width:48px;min-height:44px;font-size:11px;padding:7px}
+ .maplibregl-ctrl-attrib{max-width:100vw}
+}
+@media(orientation:landscape) and (max-height:550px){
+ body.flight-active #flight-hud,body.auto-active #auto-hud{width:300px;left:12px;right:auto;bottom:24px}
+ body.flight-active #flight-controls,body.auto-active #auto-controls{bottom:24px;left:auto;right:12px;width:calc(100vw - 348px);max-width:340px}
+}

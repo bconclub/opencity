@@ -24,3 +24,14 @@ Version policy: each released build increments the last number. 0.0.99 rolls to 
 - Helicopter center reticle with a two-second building focus ring and mapped details.
 - GitHub Pages deployment workflow; core simulation checks run before deployment.
 - Auto and helicopter playable. Other vehicle cards remain coming soon. Multiplayer/admin remains a documented plan.
+
+## 0.0.3 · 2026-09-09
+
+- Bottom mobile speed gauge and compact flight instruments.
+- Controller details moved into expandable Controls panel.
+
+## 0.0.7 · 2026-09-09 (local)
+
+- Hold Shift, touch Boost, or RB/R1 to boost auto/helicopter movement.
+- Includes bottom mobile gauges, performance telemetry, own-asset cache and forward reticle from local iterations 0.0.3–0.0.6.
+- Core and boost physics checks passed. Mobile auto UI visually reviewed at 390×844. Reticle flight verification remains open.

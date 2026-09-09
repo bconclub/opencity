@@ -1,0 +1,4 @@
+(() => {
+ function prepare(hud){if(!hud||hud.dataset.dashboard)return;hud.dataset.dashboard='true';const options=document.createElement('details');options.className='controller-options';options.innerHTML='<summary>Controls</summary><div class="controller-options-body"></div>';hud.append(options);const body=options.lastElementChild;hud.querySelectorAll('.gamepad-status,.tilt-controls').forEach(el=>{const next=el.nextElementSibling;body.append(el);if(el.classList.contains('gamepad-status')&&next?.tagName==='BUTTON')body.append(next);});}
+ setInterval(()=>{for(const id of ['auto','flight']){const hud=document.getElementById(id+'-hud');prepare(hud);if(!hud||hud.hidden)continue;const speed=Number(document.getElementById(id+'-speed')?.textContent)||0;hud.style.setProperty('--speed-arc',Math.min(270,speed/(id==='auto'?70:180)*270)+'deg');}},100);
+})();

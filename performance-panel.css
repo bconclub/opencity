@@ -1,0 +1,4 @@
+#performance-panel{position:fixed;right:12px;top:max(12px,env(safe-area-inset-top));width:230px;z-index:20;margin:0;padding:9px 12px;border:1px solid #527062;border-radius:10px;background:#10221eeb;color:#d6e8dd;font:11px/1.4 monospace;max-height:45dvh;overflow:auto}
+#performance-panel summary{cursor:pointer;min-height:28px;display:list-item;font:12px/1.6 sans-serif;color:#eff6ee}#perf-summary{float:right;color:#eac666}
+#performance-panel dl{display:grid;grid-template-columns:1fr auto;gap:4px;margin:8px 0}#performance-panel dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}#performance-panel small{display:block;color:#9fb6a9;font:10px/1.4 sans-serif}
+@media(max-width:760px){#performance-panel{top:62px;width:205px;right:10px;max-height:32dvh;font-size:10px}#performance-panel:not([open]){width:175px}}

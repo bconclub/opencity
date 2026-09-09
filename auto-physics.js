@@ -9,12 +9,12 @@ export function advanceCar(s,input,dt,world={}){
   const targetSteer=(input.steer||0)*(.56/(1+Math.abs(forward)*.045));s.steer+=(targetSteer-s.steer)*(1-Math.exp(-h*7));
   const brake=input.brake||(input.reverse&&forward>.15)||(input.throttle&&forward<-.15);
   s.reverseWait=input.reverse&&Math.abs(forward)<.2?s.reverseWait+h:Math.abs(forward)>=.2?s.reverseWait:0;
-  let accel=input.throttle&&!brake?4.2*clamp(Number(input.throttle),0,1):input.reverse&&!brake&&(s.reverseWait>.35||forward<-.2)?-2.4*clamp(Number(input.reverse),0,1):0;
+  let accel=input.throttle&&!brake?(input.boost?8.4:4.2)*clamp(Number(input.throttle),0,1):input.reverse&&!brake&&(s.reverseWait>.35||forward<-.2)?-2.4*clamp(Number(input.reverse),0,1):0;
   const drag=(onRoad?.16:.9)+Math.abs(forward)*.012;
   const oldForward=forward;forward+=accel*h-forward*drag*h;
   if(brake)forward=Math.sign(forward)*Math.max(0,Math.abs(forward)-(input.brake?12:8)*h);
   if(!input.throttle&&!input.reverse&&Math.abs(forward)<.035)forward=0;
-  forward=clamp(forward,-4,19);
+  forward=clamp(forward,-4,input.boost?32:19);
   const targetYaw=forward*Math.tan(s.steer)/1.96;
   // Grip limits lateral acceleration; momentum lags body rotation at speed.
   const limit=(onRoad?7.5:3.8)/Math.max(1,Math.abs(forward));
