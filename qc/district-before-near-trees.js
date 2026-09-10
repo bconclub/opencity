@@ -173,6 +173,3 @@ export async function installDistrict(map){
  visibility();map.triggerRepaint();window.districtState=()=>({loaded:true,landmarkParts:landmarks.parts,landmarkDomes:landmarks.domes,replacedParts,mappedColorBuildings,enabled,shown,buildings:buildingPolygons.length,trees:treePositions.length,roofDetails,duplicateBuildings,invalidElevatedBases,contextBuildings:context.count,drawGroups:structure.children.length+2,facadeAtlasSize:512,facadeVariants:16,materialDetail:'packed roughness and baked recess shading; illustrative facades'});
  document.querySelector('#view-caption').textContent='Central district preview. Facades, roof details and planting are illustrative.';
 }
-
-
-
