@@ -1,0 +1,22 @@
+{
+  "base": "https://www.opencity.world/",
+  "serviceWorkers": "allow",
+  "version": "v0.0.30",
+  "checks": [
+    "loading gate waits for city and ride assets",
+    "name and private room creation",
+    "onboarding fits 330/390/430px",
+    "invalid invite error and real invite join",
+    "cycle starts and renders to remote player",
+    "auto starts and renders to remote player",
+    "cybertruck starts and renders to remote player",
+    "cybercab starts and renders to remote player",
+    "kitt starts and renders to remote player",
+    "helicopter starts and renders to remote player",
+    "real asset cache installs without restarting onboarding",
+    "remembered name and room reconnect after reload",
+    "leave and cleanup",
+    "Free room public onboarding"
+  ],
+  "errors": []
+}

@@ -27,3 +27,7 @@ Driver axes differ from authored cars: source Blender Z-up, -Y forward; exported
 - Tesla Cybertruck dimensions: https://www.tesla.com/ownersmanual/cybertruck/en_us/Owners_Manual.pdf
 - Cybercab gold design context: https://shop.tesla.com/product/cybercab-trucker-hat
 - KITT: original stylized reconstruction of recognizable 1982 Trans Am body, scanner nose, pop-up headlight lids, T-top glass and rear spoiler, authored from general design knowledge. No downloaded model or branded texture.
+
+## Current Cybercab selection, v0.0.29 onward
+
+The active player asset is assets/vehicles/cybercab-meshy-approved.glb, with cybercab-meshy-traffic.glb for ambient NPCs. These preserve the original Meshy appearance selected by the user after comparison. They are not the older procedural cybercab.glb described above. The player mesh has 24,848 triangles, one material and 1K textures; traffic has 6,000 triangles. Wheels remain joined and static. Source topology still has visible creases. See PIPELINE.md and assets/vehicles/cybercab-approved.json for provenance and export details.

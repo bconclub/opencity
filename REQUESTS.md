@@ -1,10 +1,10 @@
 # Current release audit, 2026-09-11
 
-Current release candidate: 0.0.30. Historical entries below are retained, including old pending states. Current source and verification supersede those old states.
+Current verified live release: 0.0.30. Historical entries below are retained, including old pending states. Current source and verification supersede those old states.
 
 - Live 0.0.29: Vidhana street patch, 37 mapped lamps / 7 signals, circulating 20 desktop / 8 mobile Cybercabs, one-way routing and junction right-of-way. Selected original Meshy Cybercab, actual vehicle preview images and daylight reflection lighting.
-- 0.0.30 candidate: loading cover waits for city/street/traffic layers and available ride assets. Name and room choices open afterward. First cache installation no longer reloads onboarding.
-- Full two-player candidate check with real production rooms passed: Create / Join / Free room, all six ride starts and remote models, remembered name, reload/rejoin, Resume, 330/390/430px onboarding. See qc/live-onboarding-audit.json and qc/GOAL-AUDIT.md.
+- Live 0.0.30: loading cover waits for city/street/traffic layers and available ride assets. Name and room choices open afterward. First cache installation no longer reloads onboarding.
+- Full two-player live check with real service workers and production rooms passed: Create / Join / Free room, all six ride starts and remote models, remembered name, reload/rejoin, Resume, 330/390/430px onboarding. See qc/live-onboarding-audit.json and qc/GOAL-AUDIT.md.
 - Existing available lineup: Cycle, Auto, Helicopter, Cybertruck, Cybercab, Knight Rider. Cybercab retains fixed original material appearance. Authored Cybertruck/KITT remain approximations; clean manufacturer-quality body topology, complete wheel rigs and further landmark fidelity remain follow-up visual work. NPC traffic is local ambient traffic, not server-synchronized.
 
 # OpenCity request register
