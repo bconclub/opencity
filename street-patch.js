@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {prepareStreetSurfaces} from './street-surface-materials.js';
 
 export const STREET_PATCH_ORIGIN=Object.freeze([77.5907159,12.9797946]);
 const installed=new WeakMap();
@@ -31,8 +32,9 @@ async function install(map){
    for(let x=Math.floor(Math.min(a.x,b.x,c.x)/cellSize);x<=Math.floor(Math.max(a.x,b.x,c.x)/cellSize);x++)for(let y=Math.floor(Math.min(a.y,b.y,c.y)/cellSize);y<=Math.floor(Math.max(a.y,b.y,c.y)/cellSize);y++){const key=x+','+y;if(!cells.has(key))cells.set(key,[]);cells.get(key).push(id);}
   }
  });
- scene.add(gltf.scene,new THREE.HemisphereLight(0xffffff,0x697060,2.1));
- const sun=new THREE.DirectionalLight(0xfff0d4,2.5);sun.position.set(-20,-30,60);scene.add(sun);
+ const surfaces=prepareStreetSurfaces(gltf.scene);
+ scene.add(gltf.scene,new THREE.HemisphereLight(0xffffff,0x596568,2.1));
+ const sun=new THREE.DirectionalLight(0xfffbf3,2.5);sun.position.set(-20,-30,60);scene.add(sun);
  const matrix=new THREE.Matrix4().makeTranslation(origin.x,origin.y,origin.z).scale(new THREE.Vector3(scale,-scale,scale));
  const layer={id:'osm2world-street-patch',type:'custom',renderingMode:'3d',onAdd(m,gl){renderer=new THREE.WebGLRenderer({canvas:m.getCanvas(),context:gl});renderer.autoClear=false;renderer.resetState();},render(gl,args){
   if(!visible||disposed)return;
@@ -45,7 +47,7 @@ async function install(map){
   for(const id of cells.get(Math.floor(x/cellSize)+','+Math.floor(y/cellSize))??[]){const {a,b,c,den}=triangles[id],u=((b.y-c.y)*(x-c.x)+(c.x-b.x)*(y-c.y))/den,v=((c.y-a.y)*(x-c.x)+(a.x-c.x)*(y-c.y))/den,w=1-u-v;if(u>=-1e-6&&v>=-1e-6&&w>=-1e-6){const z=u*a.z+v*b.z+w*c.z;height=height===null?z:Math.max(height,z);}}
   return height;
  }
- function disposeResources(){if(disposed)return;disposed=true;gltf.scene.traverse(m=>{if(m.isMesh){m.geometry.dispose();for(const mat of Array.isArray(m.material)?m.material:[m.material])mat.dispose();}});renderer?.dispose();cells.clear();triangles.length=0;installed.delete(map);}
- const api={bounds:metadata.bounds,origin:STREET_PATCH_ORIGIN,footprintURL:STREET_PATCH_FOOTPRINT,heightAt,contains:(lng,lat)=>heightAt(lng,lat)!==null,setVisible(value){visible=!!value;map.triggerRepaint();},state:()=>({ready:!disposed,visible,origin:STREET_PATCH_ORIGIN,bounds:metadata.bounds,meshes:metadata.meshes,triangles:metadata.triangles,indexedTriangles:triangles.length,indexCells:cells.size,frames,drawCalls:lastCalls,renderedTriangles:lastTriangles}),dispose(){if(map.getLayer(layer.id))map.removeLayer(layer.id);else disposeResources();}};
+ function disposeResources(){if(disposed)return;disposed=true;surfaces.dispose();gltf.scene.traverse(m=>{if(m.isMesh){m.geometry.dispose();for(const mat of Array.isArray(m.material)?m.material:[m.material])mat.dispose();}});renderer?.dispose();cells.clear();triangles.length=0;installed.delete(map);}
+ const api={bounds:metadata.bounds,origin:STREET_PATCH_ORIGIN,footprintURL:STREET_PATCH_FOOTPRINT,heightAt,contains:(lng,lat)=>heightAt(lng,lat)!==null,setVisible(value){visible=!!value;map.triggerRepaint();},state:()=>({ready:!disposed,visible,origin:STREET_PATCH_ORIGIN,bounds:metadata.bounds,meshes:metadata.meshes,triangles:metadata.triangles,indexedTriangles:triangles.length,indexCells:cells.size,frames,drawCalls:lastCalls,renderedTriangles:lastTriangles,...surfaces.state()}),dispose(){if(map.getLayer(layer.id))map.removeLayer(layer.id);else disposeResources();}};
  map.addLayer(layer);map.triggerRepaint();return api;
 }

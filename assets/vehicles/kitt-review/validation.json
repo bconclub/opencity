@@ -1,0 +1,41 @@
+{
+  "wheelbase_m": 2.5654,
+  "wheel_radius_m": 0.321,
+  "track_m": 1.524,
+  "track_status": "photo estimate; confirm exact Trans Am option",
+  "triangles": 24076,
+  "materials": 4,
+  "wheels": {
+    "FL": [
+      -0.762,
+      1.2827,
+      0.321
+    ],
+    "FR": [
+      0.762,
+      1.2827,
+      0.321
+    ],
+    "RL": [
+      -0.762,
+      -1.2827,
+      0.321
+    ],
+    "RR": [
+      0.762,
+      -1.2827,
+      0.321
+    ]
+  },
+  "rig": "Steer parent around source Z, Wheel child around source X",
+  "verified": [
+    "base wheelbase 101 inches"
+  ],
+  "estimated": [
+    "custom KITT nose dimensions",
+    "surface station profiles",
+    "track",
+    "tyre rolling radius"
+  ],
+  "source": "Original Blender reconstruction from Pontiac brochure and KITT photographic references; not CAD"
+}

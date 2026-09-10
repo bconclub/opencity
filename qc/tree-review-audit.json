@@ -1,0 +1,72 @@
+{
+  "desktop": {
+    "stats": [
+      {
+        "mode": "current",
+        "calls": 3,
+        "triangles": 66
+      },
+      {
+        "mode": "blend",
+        "calls": 6,
+        "triangles": 1072
+      },
+      {
+        "mode": "cutout",
+        "calls": 4,
+        "triangles": 648
+      }
+    ],
+    "width": 1440,
+    "height": 710,
+    "alphaTextures": [
+      {
+        "name": "branch-1-01",
+        "width": 1024,
+        "height": 1024,
+        "clearPixels": 863488,
+        "solidPixels": 60897,
+        "softPixels": 124191
+      },
+      {
+        "name": "branch-1-02",
+        "width": 1024,
+        "height": 1024,
+        "clearPixels": 768548,
+        "solidPixels": 99901,
+        "softPixels": 180127
+      }
+    ]
+  },
+  "mobile": {
+    "stats": [
+      {
+        "mode": "cutout",
+        "calls": 4,
+        "triangles": 648
+      }
+    ],
+    "width": 390,
+    "height": 440,
+    "alphaTextures": [
+      {
+        "name": "branch-1-01",
+        "width": 1024,
+        "height": 1024,
+        "clearPixels": 863488,
+        "solidPixels": 60897,
+        "softPixels": 124191
+      },
+      {
+        "name": "branch-1-02",
+        "width": 1024,
+        "height": 1024,
+        "clearPixels": 768548,
+        "solidPixels": 99901,
+        "softPixels": 180127
+      }
+    ]
+  },
+  "errors": [],
+  "note": "Functional/visual capture only; no frame-time measurement. Draw counts include one ground draw per panel."
+}

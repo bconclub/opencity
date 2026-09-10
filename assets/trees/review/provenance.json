@@ -1,0 +1,37 @@
+{
+  "source": "https://media.githubusercontent.com/media/shapespark/shapespark-assets/main/shapespark-low-poly-plants-kit/shapespark-low-poly-plants-kit.gltf",
+  "author": "Shapespark",
+  "license": "CC0-1.0",
+  "licenseURL": "https://github.com/shapespark/shapespark-assets/blob/main/LICENSE",
+  "sourceFileBytes": 27040185,
+  "sourceLfsSha256": "ac33eec69ab0ace22817af29a40a8cf3a4bdf5e560ffdd060a5cd9c4b9b7a2b7",
+  "wholeSourceDownloaded": false,
+  "rangeBytesTransferred": 2219112,
+  "node": "Tree-01-1",
+  "removedTranslation": [
+    9.418022155761719,
+    0,
+    2.748640298843384
+  ],
+  "triangles": 646,
+  "materials": [
+    {
+      "name": "trunk-01",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true
+    },
+    {
+      "name": "branch-1-01",
+      "alphaMode": "BLEND",
+      "doubleSided": true
+    },
+    {
+      "name": "branch-1-02",
+      "alphaMode": "BLEND",
+      "doubleSided": true
+    }
+  ],
+  "bytes": 1563176,
+  "sha256": "270832be3632e661a5ea9b9a78b7046379b13f6149071cbe2c6e4ad2bc356d03",
+  "modification": "Single tree extracted losslessly; translation from presentation grid removed. No retopology, texture changes, or material changes. Not installed in game."
+}

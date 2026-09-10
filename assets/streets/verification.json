@@ -18,7 +18,12 @@
     "indexCells": 930,
     "frames": 2,
     "drawCalls": 4,
-    "renderedTriangles": 2130
+    "renderedTriangles": 2130,
+    "surfaceTextures": 2,
+    "textureSize": 256,
+    "repeatMetres": 2,
+    "geometryAdded": 0,
+    "originalProceduralTextures": true
   },
   "heights": {
     "hits": 1416,
