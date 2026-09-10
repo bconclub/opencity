@@ -72,6 +72,15 @@ def surface(name,rows,mat,crown=.02):
   for i in range(cols):a=j*(cols+1)+i;f.append((a,a+1,a+cols+2,a+cols+1))
  return mesh(name,v,f,mat,True)
 
+def pillar_strip(name,points,width,mat):
+ # Pressed flat sheet framing, not a round tube. Width follows the local
+ # cross-car direction; solidify gives the exposed window edge real depth.
+ v=[]
+ for x,y,z in points:v.extend([(x-width/2,y,z),(x+width/2,y,z)])
+ o=mesh(name,v,[(2*i,2*i+1,2*i+3,2*i+2) for i in range(len(points)-1)],mat,True)
+ m=o.modifiers.new('Sheet thickness','SOLIDIFY');m.thickness=.008
+ bevel(o,.003,1);return o
+
 # Measured base-car platform. KITT nose/surface station offsets are photo estimates.
 # Smooth cross sections, curved flanks, real cut-out wheel openings.
 stations=[(-2.41,.79,.29,.75),(-2.28,.875,.24,.81),(-1.9,.906,.205,.835),(-1.55,.9145,.20,.855),(REAR,.9145,.20,.855),(-.94,.904,.195,.83),(-.55,.889,.19,.815),(0,.884,.19,.807),(.60,.897,.195,.807),(FRONT,.9145,.20,.806),(1.65,.904,.23,.775),(1.99,.873,.27,.707),(2.28,.82,.30,.644),(2.41,.735,.34,.608)]
@@ -132,7 +141,7 @@ surface('Rear panoramic hatch',[(-.91,.675,1.22),(-1.12,.705,1.156),(-1.42,.735,
 for s in [-1,1]:
  # Glass T tops, windscreen and rear pillars have physically distinct edges.
  mesh('T top glass',[(s*.079,-.86,1.238),(s*.61,-.86,1.229),(s*.635,-.16,1.235),(s*.075,-.16,1.257)],[(0,1,2,3)],glass)
- line('Roof rail',[(s*.645,-.93,1.211),(s*.67,-.63,1.237),(s*.66,-.16,1.237),(s*.638,-.055,1.23),(s*.77,.595,.84)],.024,paint)
+ pillar_strip('Roof and A pillar',[(s*.645,-.93,1.211),(s*.67,-.63,1.237),(s*.66,-.16,1.237),(s*.638,-.055,1.23),(s*.77,.595,.84)],.057,paint)
  line('Windscreen seal',[(s*.632,-.054,1.231),(s*.66,.06,1.174),(s*.70,.24,1.067),(s*.747,.45,.925),(s*.767,.595,.841)],.009,trim,(.010,.012,.014))
  window=[(s*.66,-.87,1.204),(s*.642,-.09,1.207),(s*.772,.552,.86),(s*.868,-.87,.849)]
  mesh('Door glass',window,[(0,1,2,3)],glass)
@@ -147,8 +156,8 @@ for s in [-1,1]:
  box('Mirror lens',(s*.961,.316,.892),(.112,.008,.051),glass,.009)
  box('Side amber marker',(s*.878,1.946,.567),(.014,.175,.040),lamps,.004,(1,.31,.015))
  box('Rear side red marker',(s*.881,-2.1,.532),(.014,.14,.038),lamps,.004,(.45,.008,.003))
-line('Front roof header',[(-.65,-.13,1.241),(0,-.13,1.264),(.65,-.13,1.241)],.018,paint)
-line('Rear roof header',[(-.67,-.9,1.228),(0,-.9,1.240),(.67,-.9,1.228)],.018,paint)
+surface('Front roof header',[(-.15,.65,1.241),(-.105,.645,1.239)],paint,.023)
+surface('Rear roof header',[(-.917,.67,1.226),(-.875,.668,1.23)],paint,.012)
 # Simple visible interior provides depth behind glass at chase-camera distances.
 box('Cabin floor',(0,-.38,.37),(1.49,2.25,.055),trim,.01,(.033,.024,.016))
 box('Dashboard',(0,.39,.76),(1.40,.29,.16),trim,.045,(.08,.054,.031))

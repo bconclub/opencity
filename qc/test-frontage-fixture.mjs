@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createFrontageLampBatch} from '../assets-source/fixtures/frontage-pedestrian-lamp.js';
+const response=await fetch('https://unpkg.com/three@0.169.0/build/three.module.js');assert(response.ok);
+const T=await import('data:text/javascript;base64,'+Buffer.from(await response.text()).toString('base64'));
+const placements=[{x:123.25,y:-19.125,z:2.75,heading:.73},{x:-50,y:60,z:0}],original=JSON.stringify(placements);
+const batch=createFrontageLampBatch(T,placements),g=batch.mesh.geometry;
+assert.equal(JSON.stringify(placements),original);assert.equal(batch.state().materials,1);assert.equal(batch.state().textures,0);
+assert(g.userData.triangles<3000);assert(Math.abs(g.boundingBox.min.z)<1e-6);assert(Math.abs(g.boundingBox.max.z-4.6)<1e-6);
+for(const attribute of Object.values(g.attributes))for(const n of attribute.array)assert(Number.isFinite(n));
+const m=new T.Matrix4();placements.forEach((p,i)=>{batch.mesh.getMatrixAt(i,m);const v=new T.Vector3().setFromMatrixPosition(m);assert.deepEqual(v.toArray(),[p.x,p.y,p.z]);});
+const parts=g.userData.parts;assert(parts.find(p=>p.name==='fluted-shaft'));assert.equal(parts.filter(p=>p.name.startsWith('head-rib-')).length,6);
+assert.throws(()=>createFrontageLampBatch(T,[{x:0,y:0,z:NaN}]),TypeError);
+console.log(JSON.stringify({passed:true,...batch.state(),baseZ:g.boundingBox.min.z,height:g.boundingBox.max.z,geometryBytes:Object.values(g.attributes).reduce((s,a)=>s+a.array.byteLength,0)}));batch.dispose();

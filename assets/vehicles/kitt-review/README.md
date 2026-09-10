@@ -9,7 +9,7 @@ refinement before replacing the live model.
 - Editable source: `D:/CodexTools/Blender/projects/kitt-reference/kitt-reference.blend`.
 - Browser comparison: `/kitt-workshop.html`.
 - Platform wheelbase: 101 inches, 2.5654 metres.
-- 24,076 source triangles, four materials, one tiny embedded lamp palette.
+- 24,212 source triangles, four materials, one tiny embedded lamp palette.
 - Separate `Steer_FL/FR/RL/RR` and `Wheel_FL/FR/RL/RR` nodes.
 - Source axes Z-up / +Y forward; exported GLB Y-up / -Z forward.
 - Paint, glass, trim and lamps remain separate. Scanner segments animate independently.
@@ -27,3 +27,7 @@ as coloured emission in standard glTF, so the export uses explicit palette UVs.
 QA: `qc/verify-kitt-rig.cjs` checks actual GLBs for four independent wheels,
 stationary pivot centres during spin/steer, Ackermann steering and neutral reset.
 It does not certify shape fidelity.
+
+The second framing pass replaces round roof/A-pillar tubes with thin sheet
+sections and flat roof headers. Body contours still require refinement. This
+change is confined to the workshop candidate; the live vehicle is unchanged.
