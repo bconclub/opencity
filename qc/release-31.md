@@ -3,7 +3,7 @@
 This is an incremental quality and playability release. It does not complete
 the high-fidelity CBD goal or replace the live KITT with the workshop candidate.
 
-## Published changes
+## Changes prepared for release
 
 - Proportional mobile throttle and steering, clean touch release, manual takeover.
 - Hidden helicopter HUD no longer overlays the car's gear display.
@@ -15,7 +15,7 @@ the high-fidelity CBD goal or replace the live KITT with the workshop candidate.
 - More varied facade materials and two invalid inverted building heights fixed.
 - Fine metric street grain; restrained neutral-gray concrete guided by historical
   frontage photographs. Geometry, routes and mapped crossings remain unchanged.
-- A separate `/kitt-workshop.html` compares the current model and a 24,076-triangle
+- A separate `/kitt-workshop.html` compares the current model and a 24,212-triangle
   original Blender reconstruction. It is a work in progress, not manufacturer CAD.
 - Build validation catches static imports accidentally added to classic scripts.
 
@@ -40,7 +40,14 @@ Global MSAA (+97.6%) and nearby textured trees (+10.2% additional cost and poor
 canopy consistency) failed the performance/visual gate. Neither is enabled.
 Candidate tree code and evidence remain in the repository for further work.
 
-The supplied Meshy Cybercab still has surface artefacts and fused wheels.
+The supplied Meshy Cybercab still has surface artefacts. Its playable model now
+uses repaired, separately rotating tyres and gold discs; the original retained
+body and textures are unchanged. The shared NPC LOD is unchanged. The wheel
+repair has 24,667 triangles and three materials and is 98,468 bytes smaller.
+Matched whole-scene Cybercab ABBA measured 246.82 to 243.40 ms (-1.39%); this
+passes the 10% regression gate but is not evidence of a reliable speedup or a
+physical-phone FPS result. Custom draw calls increase from 47 to 59 because
+the wheels move independently. See the separate Cybercab rig acceptance evidence.
 The live KITT geometry remains approximate. The separate new candidate also needs
 shape refinement. Landmark architecture, street fixtures and foliage require more
 reference-led work; physical-phone performance remains unverified. No Unity
