@@ -18,6 +18,7 @@ jobs:
           node-version: '22'
       - run: npm run check
       - run: node verify-car-physics.mjs && node verify-dynamics.mjs && node verify-dome.mjs && node verify-gamepad-noise.mjs
+      - run: node verify-vehicle-physics.mjs && node verify-auto-roam.mjs && node verify-traffic-simulation.mjs
       - name: Install multiplayer dependencies
         working-directory: multiplayer-server
         run: npm ci --ignore-scripts

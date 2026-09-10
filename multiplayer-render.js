@@ -1,3 +1,4 @@
+import {installVehicleEnvironment} from './vehicle-environment.js';
 import {createBlenderVehicle} from './blender-vehicle.js';
 import {createSupercar} from './supercar-model.js';
 import {createTwoWheeler} from './vehicle-models.js';
@@ -20,7 +21,7 @@ async function installRenderer(map) {
  const scale=origin.meterInMercatorCoordinateUnits();
  const transform=new T.Matrix4().makeTranslation(origin.x,origin.y,origin.z).scale(new T.Vector3(scale,-scale,scale));
  const head=new T.Vector3(),headRotation=new T.Euler(),clip=new T.Vector4(), RAD=Math.PI/180;
- let ownId=null,renderer,last=0,disposed=false;
+ let ownId=null,renderer,disposeEnvironment,last=0,disposed=false;
  scene.add(new T.HemisphereLight(0xffffff,0x688471,2.4));
  const sun=new T.DirectionalLight(0xffefd5,3);sun.position.set(-50,30,100);scene.add(sun);
  const labels=document.createElement('div');labels.className='multiplayer-name-tags';
@@ -30,7 +31,10 @@ async function installRenderer(map) {
   if(!model)return;
   const geometries=new Set(),materials=new Set(),textures=new Set();
   model.group.traverse(o=>{if(o.geometry)geometries.add(o.geometry);for(const m of (Array.isArray(o.material)?o.material:[o.material]))if(m){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v);}});
-  model.group.removeFromParent();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());
+  model.group.removeFromParent();materials.forEach(m=>m.dispose());
+  // GLB clones own their materials, but geometry and textures remain cached and
+  // shared with other players, the local car and traffic.
+  if(!model.group.userData.sharedAssetResources){geometries.forEach(g=>g.dispose());textures.forEach(t=>t.dispose());}
  }
  function remove(id){const e=entries.get(id);if(!e)return;disposeModel(e.model);e.label.remove();entries.delete(id);emotes.delete(id);}
  function valid(p){return p&&['cybertruck','cybercab','kitt','auto','helicopter','supercar','yulu','bike','delivery','cycle'].includes(p.vehicle)&&['lng','lat','altitude','heading','pitch','roll','speed'].every(k=>Number.isFinite(p[k]))&&Math.abs(p.lng)<=180&&Math.abs(p.lat)<85&&p.altitude>=-10&&p.altitude<10000;}
@@ -62,7 +66,7 @@ async function installRenderer(map) {
   map.triggerRepaint();
  }
  const layer={id:'multiplayer-vehicles',type:'custom',renderingMode:'3d',
-  onAdd(m,gl){renderer=new T.WebGLRenderer({canvas:m.getCanvas(),context:gl,antialias:true});renderer.autoClear=false;},
+  onAdd(m,gl){renderer=new T.WebGLRenderer({canvas:m.getCanvas(),context:gl,antialias:true});renderer.autoClear=false;disposeEnvironment=installVehicleEnvironment(T,renderer,scene);},
   render(gl,args){
    const now=performance.now(),dt=last?Math.min((now-last)/1000,.1):0;last=now;
    camera.projectionMatrix.fromArray(args.defaultProjectionData.mainMatrix).multiply(transform);
@@ -111,7 +115,7 @@ async function installRenderer(map) {
    }
    if(entries.size){renderer.resetState();const start=performance.now();renderer.render(scene,camera);window.recordCityRender?.('Multiplayer',renderer,performance.now()-start);map.triggerRepaint();}
   },
-  onRemove(){renderer?.dispose();}
+  onRemove(){disposeEnvironment?.();renderer?.dispose();}
  };
  function destroy(){if(disposed)return;disposed=true;window.removeEventListener('multiplayer-players',receive);window.removeEventListener('multiplayer-emote',showEmote);window.removeEventListener('multiplayer-speaking',showSpeaking);emotes.clear();speaking.clear();map.off('remove',destroy);for(const id of entries.keys())remove(id);labels.remove();if(map.getLayer(layer.id))map.removeLayer(layer.id);delete map.__multiplayerRenderer;}
  function showEmote(event){const {id,emote}=event.detail||{};if(typeof id!=='string'||!['hi','wave'].includes(emote)||!entries.has(id))return;emotes.set(id,{emote,until:performance.now()+3000});map.triggerRepaint();}

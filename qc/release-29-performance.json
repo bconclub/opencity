@@ -1,0 +1,89 @@
+{
+  "device": "Same Windows host, Edge headless SwiftShader software renderer",
+  "viewport": [
+    1100,
+    760
+  ],
+  "results": [
+    {
+      "mode": "baseline",
+      "median": 200,
+      "p95": 233.29999999999927,
+      "mean": 201.88277777776955,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 20,
+        "drawCalls": 4,
+        "trianglesPerVehicle": 5002,
+        "submitMs": 0.10000000149011612,
+        "simulationMs": 0.19999999552965164,
+        "mobile": false,
+        "stopped": 2,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes"
+      },
+      "errors": []
+    },
+    {
+      "mode": "candidate",
+      "median": 216.70000000000073,
+      "p95": 250.09999999999854,
+      "mean": 219.83111111111944,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 20,
+        "drawCalls": 1,
+        "trianglesPerVehicle": 6000,
+        "submitMs": 0,
+        "simulationMs": 0.8000000044703484,
+        "mobile": false,
+        "stopped": 3,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes"
+      },
+      "errors": []
+    },
+    {
+      "mode": "candidate",
+      "median": 216.70000000000437,
+      "p95": 416.6000000000022,
+      "mean": 219.69555555557218,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 20,
+        "drawCalls": 1,
+        "trianglesPerVehicle": 6000,
+        "submitMs": 0.10000000149011612,
+        "simulationMs": 0.8000000044703484,
+        "mobile": false,
+        "stopped": 3,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes"
+      },
+      "errors": []
+    },
+    {
+      "mode": "baseline",
+      "median": 200,
+      "p95": 383.3000000000029,
+      "mean": 201.60944444444448,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 20,
+        "drawCalls": 4,
+        "trianglesPerVehicle": 5002,
+        "submitMs": 0.09999999403953552,
+        "simulationMs": 0.4000000059604645,
+        "mobile": false,
+        "stopped": 2,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes"
+      },
+      "errors": []
+    }
+  ]
+}

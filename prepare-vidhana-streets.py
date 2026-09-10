@@ -31,7 +31,7 @@ for w in r.findall('way'):
   try:lanes=int(t.get('lanes','0'))
   except ValueError:lanes=0
   width=(max(3,lanes*3.2) if lanes else {'primary':9,'secondary':7,'tertiary':6,'service':4}.get(h,5)) if road else 1.8
- props={'osm':'way/'+w.get('id'),'name':t.get('name',''),'surface':t.get('surface','unknown'),'width':width,'widthEstimated':'width' not in t,'lanes':lanes,'note':t.get('note','')}
+ props={'osm':'way/'+w.get('id'),'name':t.get('name',''),'surface':t.get('surface','unknown'),'width':width,'widthEstimated':'width' not in t,'lanes':lanes,'note':t.get('note',''),'oneway':t.get('oneway','yes' if t.get('junction')=='roundabout' else 'no')}
  used=False
  for a,b in zip(p,p[1:]):
   segment=clip(a,b)

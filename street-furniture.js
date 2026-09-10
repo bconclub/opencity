@@ -1,4 +1,5 @@
 // Mapped positions; fixture dimensions are original simplified reconstructions.
+import {signalPhase} from './traffic-simulation.js';
 export async function installStreetFurniture(map) {
   const [T, data] = await Promise.all([
     import('https://unpkg.com/three@0.169.0/build/three.module.js'),
@@ -32,7 +33,7 @@ export async function installStreetFurniture(map) {
       rod([0,0,.2],[0,0,3.65],.065,metal);
       box(.43,.27,1.14,0,0,3.26,0x172524);
       box(.53,.08,1.27,0,-.15,3.26,0x303d37);
-      // Three visible lenses, deliberately dark: no assumed live traffic phase.
+      // Dark lens housings; active lens is batched separately below.
       for(const [z,c] of [[3.59,0x922e27],[3.26,0x92702a],[2.93,0x236341]]) {
         rod([0,.137,z],[0,.17,z],.116,c);
         box(.30,.27,.045,0,.2,z+.145,0x172524);
@@ -63,6 +64,9 @@ export async function installStreetFurniture(map) {
     const geometry=fixture(type), mesh=new T.InstancedMesh(geometry,material,items.length);
     mesh.frustumCulled=false;scene.add(mesh);return {items,mesh,geometry};
   });
+  const signals=groups[2].items,activeLensGeometry=new T.SphereGeometry(.119,10,6),activeLensMaterial=new T.MeshBasicMaterial({color:0xffffff});
+  const activeLenses=new T.InstancedMesh(activeLensGeometry,activeLensMaterial,signals.length);activeLenses.frustumCulled=false;scene.add(activeLenses);
+  const phaseColours={red:new T.Color(0xff3024),amber:new T.Color(0xffbf20),green:new T.Color(0x32ff72)},phaseHeights={red:3.59,amber:3.26,green:2.93};
   let renderer,visible=0,drawCalls=0,submitMs=0;const dummy=new T.Object3D();
   map.addLayer({id:'street-furniture',type:'custom',renderingMode:'3d',
     onAdd(m,gl){renderer=new T.WebGLRenderer({canvas:m.getCanvas(),context:gl});renderer.autoClear=false;},
@@ -75,12 +79,17 @@ export async function installStreetFurniture(map) {
         }
         group.mesh.count=count;group.mesh.instanceMatrix.needsUpdate=true;visible+=count;if(count)drawCalls++;
       }
+      let lenses=0;const now=Date.now()/1000;
+      for(const item of signals){if(Math.hypot(item.x-cx,item.y-cy)>850)continue;const phase=signalPhase(item,now),a=item.heading*Math.PI/180;
+        dummy.position.set(item.x+Math.sin(a)*.185,item.y+Math.cos(a)*.185,.12+phaseHeights[phase]);dummy.rotation.set(0,0,-a);dummy.scale.set(1,.35,1);dummy.updateMatrix();activeLenses.setMatrixAt(lenses,dummy.matrix);activeLenses.setColorAt(lenses++,phaseColours[phase]);
+      }
+      dummy.scale.set(1,1,1);activeLenses.count=lenses;activeLenses.instanceMatrix.needsUpdate=true;if(activeLenses.instanceColor)activeLenses.instanceColor.needsUpdate=true;if(lenses)drawCalls++;
       camera.projectionMatrix.fromArray(args.defaultProjectionData.mainMatrix).multiply(transform);
       renderer.resetState();const start=performance.now();renderer.render(scene,camera);submitMs=performance.now()-start;
       window.recordCityRender?.('Street furniture',renderer,submitMs);renderer.resetState();
     },
-    onRemove(){for(const group of groups)group.geometry.dispose();material.dispose();renderer.dispose();}
+    onRemove(){for(const group of groups)group.geometry.dispose();activeLensGeometry.dispose();activeLensMaterial.dispose();material.dispose();renderer.dispose();}
   });
-  window.streetFurnitureState=()=>({loaded:true,...data.counts,visible,drawCalls,submitMs,positionSource:'OSM nodes',shapeAccuracy:'Simplified original reconstruction, dimensions unverified',triangles:groups.reduce((sum,g)=>sum+g.geometry.attributes.position.count/3*g.mesh.count,0)});
+  window.streetFurnitureState=()=>({loaded:true,...data.counts,visible,drawCalls,submitMs,positionSource:'OSM nodes',signalTiming:'Simulated game cycle, not live traffic data',signalPhases:signals.map(s=>({id:s.id,phase:signalPhase(s,Date.now()/1000)})),shapeAccuracy:'Simplified original reconstruction, dimensions unverified',triangles:groups.reduce((sum,g)=>sum+g.geometry.attributes.position.count/3*g.mesh.count,0)+activeLensGeometry.index.count/3*activeLenses.count});
   return {counts:data.counts};
 }

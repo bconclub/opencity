@@ -22,6 +22,11 @@ test('real websocket peers: room isolation, validation, reconnect, limits and ex
   b.send({type:'join',room:aw.room,name:'B',protocol:1,world:'cbd-1'});const bw=await b.wait(m=>m.type==='welcome');assert.equal(bw.players.length,2);assert.notEqual(aw.id,bw.id);
   c.send({type:'create',name:'C',protocol:1,world:'cbd-1'});const cw=await c.wait(m=>m.type==='welcome');assert.notEqual(cw.room,aw.room);
   a.send({type:'pose',pose});const movement=await b.wait(m=>m.type==='snapshot'&&m.players.some(p=>p.id===aw.id&&p.pose.speed===12));assert.deepEqual(movement.players.find(p=>p.id===aw.id).pose,pose);
+  for(const vehicle of ['cybercab','kitt','cybertruck']){
+   a.send({type:'pose',pose:{...pose,vehicle}});
+   const update=await b.wait(m=>m.type==='snapshot'&&m.players.some(p=>p.id===aw.id&&p.pose.vehicle===vehicle));
+   assert.equal(update.players.find(p=>p.id===aw.id).pose.vehicle,vehicle);
+  }
   const isolated=await c.wait(m=>m.type==='snapshot');assert.equal(isolated.players.length,1);assert.equal(isolated.players[0].id,cw.id);
   a.send({type:'pose',pose:{...pose,lng:0}});assert.equal((await a.wait(m=>m.type==='error')).code,'invalid_pose');
   a.send({type:'pose',pose:{...pose,speed:'12'}});assert.equal((await a.wait(m=>m.type==='error')).code,'invalid_pose');

@@ -1,0 +1,11 @@
+{
+  "provenance": "Meshy7 reconstruction from three generated references, selected by user after comparison",
+  "playerTriangles": 24848,
+  "trafficTriangles": 6000,
+  "materials": 1,
+  "textureMax": 1024,
+  "appearance": "Unmodified Meshy textures and normals",
+  "wheels": "Joined static mesh",
+  "playerBytes": 4535896,
+  "trafficBytes": 3864428
+}

@@ -1,0 +1,49 @@
+{
+  "device": "Same Windows host, Edge headless SwiftShader software renderer",
+  "viewport": [
+    1100,
+    760
+  ],
+  "results": [
+    {
+      "mode": "baseline",
+      "median": 216.60000000000036,
+      "p95": 383.40000000000146,
+      "mean": 212.08944444443614,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 20,
+        "drawCalls": 4,
+        "trianglesPerVehicle": 5002,
+        "submitMs": 0,
+        "simulationMs": 0.30000000447034836,
+        "mobile": false,
+        "stopped": 2,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes"
+      },
+      "errors": []
+    },
+    {
+      "mode": "candidate",
+      "median": 216.70000000000073,
+      "p95": 250,
+      "mean": 220.9066666666584,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 20,
+        "drawCalls": 1,
+        "trianglesPerVehicle": 6000,
+        "submitMs": 0,
+        "simulationMs": 0.6999999955296516,
+        "mobile": false,
+        "stopped": 1,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes"
+      },
+      "errors": []
+    }
+  ]
+}

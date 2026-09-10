@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><base href="/"><script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.169.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.169.0/examples/jsm/"}}</script><script type="module">
+import {installVehicleEnvironment} from '/vehicle-environment.js';import * as T from 'three';import {createBlenderVehicle} from '/blender-vehicle.js';import {createAuto} from '/auto-model.js';import {createHelicopter} from '/helicopter.js';import {createTwoWheeler} from '/vehicle-models.js';
+const renderer=new T.WebGLRenderer({alpha:true,antialias:true,preserveDrawingBuffer:true});renderer.setSize(640,420);renderer.setPixelRatio(1);renderer.setClearColor(0,0);renderer.outputColorSpace=T.SRGBColorSpace;document.body.append(renderer.domElement);
+window.renderVehiclePreview=async id=>{
+ const scene=new T.Scene();const disposeEnvironment=installVehicleEnvironment(T,renderer,scene);scene.add(new T.HemisphereLight(0xffffff,0x60756b,2.4));const sun=new T.DirectionalLight(0xffffff,3);sun.position.set(-5,4,10);scene.add(sun);const fill=new T.DirectionalLight(0xcce8ff,1);fill.position.set(4,-6,4);scene.add(fill);
+ const model=id==='auto'?createAuto(T):id==='helicopter'?createHelicopter(T):id==='cycle'?createTwoWheeler(T,{variant:'cycle'}):createBlenderVehicle(T,id);await model.ready;scene.add(model.group);model.group.updateMatrixWorld(true);
+ const bounds=new T.Box3().setFromObject(model.group),center=bounds.getCenter(new T.Vector3());const camera=new T.OrthographicCamera(-5,5,5,-5,.01,200);camera.up.set(0,0,1);camera.position.copy(center).add(new T.Vector3(7,10,5));camera.lookAt(center);camera.updateMatrixWorld();
+ let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;
+ for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){const p=new T.Vector3(x,y,z).applyMatrix4(camera.matrixWorldInverse);minX=Math.min(minX,p.x);maxX=Math.max(maxX,p.x);minY=Math.min(minY,p.y);maxY=Math.max(maxY,p.y);}
+ const half=Math.max((maxY-minY)/2,(maxX-minX)/2/(640/420))*1.07;camera.left=-half*640/420;camera.right=half*640/420;camera.top=half;camera.bottom=-half;camera.updateProjectionMatrix();renderer.render(scene,camera);
+ const image=renderer.domElement.toDataURL('image/webp',.94);disposeEnvironment();return image;
+};
+</script>

@@ -1,0 +1,81 @@
+{
+  "device": "Same Windows host, Edge headless SwiftShader software renderer",
+  "viewport": [
+    1100,
+    760
+  ],
+  "results": [
+    {
+      "mode": "baseline",
+      "median": 200,
+      "p95": 383.2999999999993,
+      "mean": 202.4066666666584,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 10,
+        "drawCalls": 4,
+        "trianglesPerVehicle": 5002,
+        "submitMs": 0,
+        "mobile": false,
+        "mode": "Local ambient traffic"
+      },
+      "errors": []
+    },
+    {
+      "mode": "candidate",
+      "median": 199.89999999999782,
+      "p95": 233.40000000000146,
+      "mean": 191.631666666675,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 20,
+        "drawCalls": 4,
+        "trianglesPerVehicle": 5794,
+        "submitMs": 0,
+        "simulationMs": 0.30000000074505806,
+        "mobile": false,
+        "stopped": 2,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes"
+      },
+      "errors": []
+    },
+    {
+      "mode": "candidate",
+      "median": 200,
+      "p95": 383.2999999999993,
+      "mean": 201.09611111112355,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 20,
+        "drawCalls": 4,
+        "trianglesPerVehicle": 5794,
+        "submitMs": 0,
+        "simulationMs": 0.19999999925494194,
+        "mobile": false,
+        "stopped": 2,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes"
+      },
+      "errors": []
+    },
+    {
+      "mode": "baseline",
+      "median": 183.40000000000146,
+      "p95": 216.70000000000437,
+      "mean": 191.2322222222305,
+      "traffic": {
+        "vehicles": 20,
+        "visible": 10,
+        "drawCalls": 4,
+        "trianglesPerVehicle": 5002,
+        "submitMs": 0,
+        "mobile": false,
+        "mode": "Local ambient traffic"
+      },
+      "errors": []
+    }
+  ]
+}
