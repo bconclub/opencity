@@ -1,0 +1,55 @@
+{
+  "source": "User supplied D:/Brands BCON/OpenCity/Models/Auto Driver.glb",
+  "source_triangles": 498494,
+  "rigged": false,
+  "animated": false,
+  "candidate_triangles": 12000,
+  "blender_bounds_min": [
+    -0.29780930280685425,
+    -0.27334335446357727,
+    -0.0006074742996133864
+  ],
+  "blender_bounds_max": [
+    0.29850512742996216,
+    0.27829334139823914,
+    1.029070258140564
+  ],
+  "materials": 1,
+  "textures": [
+    {
+      "name": "Render Result",
+      "size": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "texture_pbr_v128",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "texture_pbr_v128_metallic-texture_pbr_v128_roughness",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "texture_pbr_v128_normal",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Viewer Node",
+      "size": [
+        256,
+        256
+      ]
+    }
+  ]
+}

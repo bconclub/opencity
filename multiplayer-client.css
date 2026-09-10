@@ -4,3 +4,33 @@
 .multiplayer-entry-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0}.multiplayer-name-dialog [hidden]{display:none!important}.multiplayer-entry-notice{min-height:20px;overflow-wrap:anywhere}.multiplayer-entry-room{margin-top:12px}
 .multiplayer-entry-actions{grid-template-columns:1fr}.multiplayer-entry-actions button{min-height:44px;text-align:left;padding:10px 14px}.multiplayer-entry-actions button:last-child{background:#24493a}
 .multiplayer-name-dialog{max-height:calc(100dvh - 40px);overflow:auto}.multiplayer-remembered{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px}.multiplayer-remembered button{width:auto;min-height:32px;padding:5px 8px;font-size:11px}.multiplayer-meetup-view>button{width:auto;margin-bottom:16px}.multiplayer-meetup-form label{margin-top:8px}.multiplayer-meetup-form p{font-size:11px}.multiplayer-meetup-card{border:1px solid #658279;border-radius:10px;padding:12px;margin:10px 0}.multiplayer-meetup-card h3{margin:0;font-size:16px}
+/* Room entry: quiet city lobby, three clear routes into the same world. */
+.multiplayer-name-dialog{--entry-ink:#eef6ef;--entry-muted:#b5c9bd;--entry-line:#476359;box-sizing:border-box;width:min(460px,calc(100vw - 32px));padding:32px;border:0;border-radius:24px;background:#142c25;color:var(--entry-ink);box-shadow:0 24px 80px #06191166;max-height:calc(100dvh - 32px)}
+.multiplayer-name-dialog::backdrop{background:#122a2566;backdrop-filter:blur(2px)}
+.multiplayer-name-dialog .entry-brand{font-size:15px;font-weight:750;margin-bottom:28px;color:#d0e9a4}
+.multiplayer-name-dialog h2{font-size:34px;letter-spacing:-.035em;line-height:1.1;margin:0 0 10px;font-weight:750}
+.multiplayer-name-dialog p{font-size:14px;color:var(--entry-muted);margin:0 0 24px}
+.multiplayer-name-dialog label{font-size:14px;font-weight:600}
+.multiplayer-name-dialog input{margin:8px 0 24px;padding:14px 16px;background:#203d32;border:1px solid var(--entry-line);border-radius:12px;min-height:50px;color:var(--entry-ink)}
+.multiplayer-name-dialog input:focus{outline:2px solid #c8e79b;outline-offset:3px}
+.multiplayer-entry-actions{gap:10px;margin:0}
+.multiplayer-name-dialog .room-choice{display:flex;align-items:center;gap:16px;width:100%;padding:18px 16px;min-height:82px;text-align:left;background:#244436;border:1px solid transparent;border-radius:14px;transition:background .15s,border-color .15s}
+.multiplayer-name-dialog .room-choice:hover{background:#2d5141;border-color:#739780}
+.multiplayer-name-dialog .room-choice svg{width:28px;height:28px;flex-shrink:0;color:#d0e9a4}
+.multiplayer-name-dialog .room-choice>span:not(.room-choice-arrow){flex:1;min-width:0}
+.multiplayer-name-dialog .room-choice strong{display:block;font-size:17px;font-weight:650}
+.multiplayer-name-dialog .room-choice small{display:block;margin-top:5px;font-size:14px;color:#c1d4c7;line-height:1.3}
+.multiplayer-name-dialog .room-choice-arrow{font-size:23px;color:#c1d4c7}
+.multiplayer-name-dialog .room-choice:last-child{background:#d0e9a4;color:#173124}
+.multiplayer-name-dialog .room-choice:last-child small,.multiplayer-name-dialog .room-choice:last-child svg,.multiplayer-name-dialog .room-choice:last-child .room-choice-arrow{color:#355337}
+.multiplayer-name-dialog .room-choice:last-child:hover{background:#e0f1bf}
+.multiplayer-name-dialog .entry-foot{margin:24px 0 0;font-size:12px;text-align:center;color:#aec5b5}
+.multiplayer-name-dialog .multiplayer-entry-notice:empty{display:none}
+.multiplayer-name-dialog .multiplayer-entry-notice:not(:empty){margin:16px 0 0;color:#f5d398}
+.multiplayer-remembered{margin:8px 0 24px;padding:12px 0;border-bottom:1px solid var(--entry-line)}
+.multiplayer-name-dialog button:disabled{opacity:.55;cursor:wait}
+@media(max-width:480px){.multiplayer-name-dialog{padding:24px;border-radius:20px}.multiplayer-name-dialog .entry-brand{margin-bottom:20px}.multiplayer-name-dialog h2{font-size:30px}.multiplayer-name-dialog .room-choice{min-height:76px;padding:14px 12px;gap:12px}.multiplayer-name-dialog .room-choice small{font-size:14px}.multiplayer-name-dialog .entry-foot{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){.multiplayer-name-dialog .room-choice{transition:none}}
+
+.multiplayer-panel:not([open]){display:none!important}.desktop-room-toggle{position:fixed;top:18px;right:110px;z-index:14;min-height:44px;padding:8px 16px;border:1px solid #638576;border-radius:12px;background:#17392e;color:#eff8ee;font:600 14px system-ui;cursor:pointer}@media(max-width:760px),(max-height:550px) and (pointer:coarse){.desktop-room-toggle{display:none}}
+.room-directory{border-top:1px solid #66857655;margin-top:12px;padding-top:10px}.room-directory-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.room-directory-heading h3{margin:0;font-size:13px}.room-directory-status{font-size:11px;line-height:1.5;color:#c5d9cd}.room-directory-list{list-style:none;margin:0;padding:0;max-height:240px;overflow:auto}.room-directory-item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 0;border-top:1px solid #ffffff15}.room-directory-item strong,.room-directory-item small{display:block;font-size:11px}.room-directory-item small{color:#b9d4c5;margin-top:3px}.room-directory-item button:disabled{opacity:.5;cursor:default}

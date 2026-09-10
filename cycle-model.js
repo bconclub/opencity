@@ -39,6 +39,17 @@ export function createCycle(T) {
  mesh(new T.TubeGeometry(cable,12,.003,4,false),dark,[0,0,0]);
  box(.055,.025,.045,[0,-.32,.94],new T.MeshStandardMaterial({color:0xb82925}));
  box(.065,.06,.045,[0,.47,1.05],new T.MeshStandardMaterial({color:0xebf4da,emissive:0x353d25}));
+
+ const shirt=new T.MeshStandardMaterial({color:0x428ca1,roughness:.9}),skin=new T.MeshStandardMaterial({color:0x986846,roughness:.85});
+ const rider=new T.Group();rider.name='Helmeted cyclist';body.add(rider);
+ function oval(p,scale,material){const o=mesh(new T.SphereGeometry(1,12,8),material,p,rider);o.scale.set(...scale);return o;}
+ oval([0,-.24,1.13],[.15,.12,.14],dark);oval([0,-.08,1.40],[.19,.12,.25],shirt);
+ tube([0,.015,1.56],[0,.07,1.64],.055,skin,rider);oval([0,.10,1.73],[.125,.14,.16],skin);oval([0,.075,1.82],[.145,.17,.095],dark);
+ for(const side of [-1,1]){tube([side*.15,-.03,1.51],[side*.22,.21,1.27],.055,shirt,rider);tube([side*.22,.21,1.27],[side*.27,.44,1.10],.037,skin,rider);oval([side*.27,.44,1.10],[.045,.055,.035],skin);}
+ const legs=[-1,1].map(side=>({side,upper:tube([0,0,0],[0,1,0],.062,dark,rider),lower:tube([0,0,0],[0,1,0],.042,dark,rider),shoe:oval([0,0,0],[.06,.12,.045],dark)}));
+ function limb(o,a,b){const av=new T.Vector3(...a),bv=new T.Vector3(...b),d=bv.sub(av);o.position.copy(av.addScaledVector(d,.5));o.scale.y=d.length();o.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),d.normalize());}
+ function updateRider(angle){for(const leg of legs){const s=leg.side,foot=[s*.15,-.10+s*.15*Math.cos(angle),.34+s*.15*Math.sin(angle)],hip=[s*.105,-.24,1.13],knee=[s*.15,.12,.74+(foot[2]-.34)*.45];limb(leg.upper,hip,knee);limb(leg.lower,knee,foot);leg.shoe.position.set(...foot);}}
+ updateRider(0);
  group.userData={vehicle:'cycle',wheelRadius:.34,originalAsset:true};
- return {group,body,wheels,front:steering,steering,frontWheel,rearWheel,pedals,wheelRadius:.34};
+ return {group,body,updateRider,wheels,front:steering,steering,frontWheel,rearWheel,pedals,wheelRadius:.34};
 }

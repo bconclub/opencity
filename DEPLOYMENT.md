@@ -30,3 +30,6 @@ Version 0.0.13 adds named guest rooms and Resume. Backend: https://opencity-room
 
 ## Current production, 2026-09-10
 Both https://opencity.world and https://www.opencity.world are active on Vercel with verified TLS. The earlier registration/phone-verification blocker above is resolved. Apex points to 76.76.21.21 and www aliases apex. The Vercel fallback remains available. Backend supports private rooms and public open-room matching, maximum eight players.
+
+## Voice service wiring
+OpenCity reuses the existing LiveKit endpoint wss://livekit.goproxe.com. Rooms are named opencity-<room id>. The OpenCity room backend reads LIVEKIT_URL/API_KEY/API_SECRET from /opt/opencity-rooms/voice.env (mode0600). Secrets stay on VPS. Existing LiveKit and other projects were not restarted. Game sockets mint short-lived microphone-only tokens for their own player/room; disconnect attempts participant removal. TURN/media network settings remain the existing service configuration. Actual synthetic-microphone audio was received in two browser contexts with mute/leave cleanup verified. Corporate firewall coverage and real headset/mobile audio still need device testing.

@@ -52,3 +52,32 @@ Next priority after release plumbing: Kingfisher mansion, then vehicle fidelity/
 - Fix moving name-tag flicker; publish verified changes for live testing.
 - Audio planned: room text/Hi/Hello first, optional WebRTC voice later with explicit microphone opt-in.
 - Custom domain opencity.world and www.opencity.world verified live; model cache moved to D with verified C junction.
+
+## Active social/vehicle work, 2026-09-10
+- Voice: existing LiveKit on VPS reused with room-scoped microphone-only tokens, explicit Join/Mute/Leave. Actual two-browser synthetic microphone RTP test passed; physical-device check still needed.
+- Quick Hi greetings and six shared vehicle colors.
+- Outside dome: flat road line art from mapped local data, clipped outside ellipse; no exterior building geometry.
+- Owner model source: D:/Brands BCON/OpenCity/Models. Current upload auto-rickshaw.zip; replace existing auto using that asset. Original upload remains untouched.
+- Vehicle agent: Yulu, Rapido-style rider, Swiggy-style delivery rider, then cycle/drone integration. Generic original geometry until owner supplies matching licensed assets; no imported Sketchfab claim.
+
+## 2026-09-10: simplify rides and browse rooms
+- Visible picker narrowed to Cycle, Helicopter, Auto and Supercar. Extra bicycle/delivery variants removed from selection; existing assets retained.
+- Color swatches fixed against conflicting card CSS and moved above vehicle choices with selected-color label.
+- Room panel gains live public-room listing with occupancy/capacity and join action; private rooms remain invite-only.
+
+- Enlarge aiming dot for visibility: completed in 0.0.24 with outlined dot and light ring.
+
+- Starting-location choice, unified control center, cyclist and gesture boost: completed 0.0.25.
+- Cybertruck replacement pending usable source asset: linked Cybertruck and Cybercab both have downloads disabled. Do not relabel existing supercar as imported Tesla.
+- Bengaluru 2070 concept: retain recognizable CBD landmarks, fictional future infill; prototype autonomous cab passenger tours, then benchmark before scaling to 20 shared-model NPCs.
+- OSM repo review: OSM2World preferred offline GLB/LOD generation; Streets GL selective visual techniques; Godot 3D Tiles currently lacks supported web export per README.
+
+## Latest steering, 2026-09-10
+- Payments = pavements. No commerce work. Start Vidhana Soudha frontage, complete 500m then 1km.
+- Spectrum replaces fixed swatches. Custom hex accepted locally and by updated server tests; production server update awaiting explicit approval after auto-review rejection.
+- Target vehicle lineup: Cybertruck, Knight Rider, Auto, Helicopter, Cybercab. Cybercab fixed colour, other player rides configurable. Linked KITT: downloads disabled, 988,509 faces, licence absent in public metadata. Not imported.
+- Sparse park dogs requested. Labrador CC BY kenchoo / original all of life, 52,772 faces, idle clip. Chrome blocked file download; not imported, no fake success claim.
+- NPC ambient cabs and auto-roam implemented locally; driver and helicopter input cancels auto-roam; test scene confirms low draw-call cost. No claim of passenger boarding or server-synchronised NPCs.
+- OSM2World actual street conversion probe succeeded; isolated GLB/preview under experiments, production adoption pending alignment/visual review.
+
+Latest colour clarification: change picker only, not theme. Exact local colour now selected by tapping/dragging the spectrum. Server left unchanged after approval clarification; peer appearance maps to nearest existing preset. No remote code upload or restart occurred. Earlier server-update approval item is withdrawn.

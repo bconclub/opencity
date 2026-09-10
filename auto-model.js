@@ -1,7 +1,10 @@
+import {upgradeAuto} from './auto-asset.js';
+import {bindVehiclePaint} from './vehicle-colors.js';
 // Original geometry guided by the user's reference photos. No stock-photo textures.
-export function createAuto(T){
+export function createAuto(T,{remote=false}={}){
  const group=new T.Group(),body=new T.Group();group.add(body);
  const paint=new T.MeshStandardMaterial({color:0x087448,roughness:.38,metalness:.28});
+ paint.userData.vehiclePaint=true;
  const yellow=new T.MeshStandardMaterial({color:0xf1c928,roughness:.72});
  const rubber=new T.MeshStandardMaterial({color:0x19221d,roughness:.95});
  const trim=new T.MeshStandardMaterial({color:0x303831,roughness:.55,metalness:.2});
@@ -64,5 +67,7 @@ export function createAuto(T){
  // Batch static parts by material, leaving wheels and steering independently animated.
  function batch(parent,skip){const bins=new Map();for(const o of [...parent.children]){if(skip.has(o)||!o.isMesh)continue;o.updateMatrix();const key=o.material;let bin=bins.get(key);if(!bin){bin=[];bins.set(key,bin);}const g=o.geometry.index?o.geometry.toNonIndexed():o.geometry.clone();g.applyMatrix4(o.matrix);bin.push(g);parent.remove(o);o.geometry.dispose();}for(const [material,gs]of bins){const geo=new T.BufferGeometry();for(const name of ['position','normal','uv']){const values=[];for(const g of gs){const a=g.getAttribute(name);if(a)values.push(...a.array);}if(values.length)geo.setAttribute(name,new T.Float32BufferAttribute(values,name==='uv'?2:3));}geo.computeBoundingSphere();parent.add(new T.Mesh(geo,material));gs.forEach(g=>g.dispose());}}
  batch(body,new Set([...wheels,front]));for(const w of wheels)batch(w,new Set());batch(front,new Set(wheels));
- return{group,body,wheels,front};
+ return upgradeAuto(T,{group,body,wheels,front,...bindVehiclePaint(group,remote)},remote);
 }
+
+

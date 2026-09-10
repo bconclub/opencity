@@ -1,0 +1,37 @@
+{
+  "state": {
+    "ready": true,
+    "visible": true,
+    "origin": [
+      77.5907159,
+      12.9797946
+    ],
+    "bounds": [
+      77.5887816777979,
+      12.977819540905388,
+      77.5926831432082,
+      12.981769855276205
+    ],
+    "meshes": 4,
+    "triangles": 2130,
+    "indexedTriangles": 1416,
+    "indexCells": 930,
+    "frames": 2,
+    "drawCalls": 4,
+    "renderedTriangles": 2130
+  },
+  "heights": {
+    "hits": 1416,
+    "total": 1416,
+    "min": 0,
+    "max": 0.09974931645887714,
+    "outside": null,
+    "mercatorCircumference": 40030228.88407185
+  },
+  "lifecycle": {
+    "same": true,
+    "removed": true,
+    "reinstalled": true
+  },
+  "errors": []
+}

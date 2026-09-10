@@ -3,6 +3,7 @@
  const el=id=>document.getElementById(id);
  const pads=[{name:'Cubbon departure',lng:77.592,lat:12.9745},{name:'Cubbon north',lng:77.5928,lat:12.9762}];
  const keys=new Set();const RAD=Math.PI/180;const METRES=111320;
+ let roaming=false,tourIndex=0;const tour=[[77.592,12.9745],[77.597,12.973],[77.598,12.978],[77.592,12.979]];
  let active=false,paused=false,phase='parked',raf=0,last=0,THREE,layer,loading=false,oldCamera,oldHandlers,alt=2,lng=pads[0].lng,lat=pads[0].lat,heading=0,speed=0,side=0,rotorAngle=0,selectedPad=0,travel=0,cameraMode='chase',cameraHeading=0,flightNotice='',noticeUntil=0;
  let cameraOrbitYaw=0,cameraOrbitLift=0;let tilt,gamepad;let oldSymbols=[],boundary,mouse={id:null,x:0,y:0,turn:0,forward:0},wheelLift=0,wheelUntil=0;let dynamics,physics,craft,cameraRig,lookRig,rotorPower=0,oldMaxZoom;
  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -38,7 +39,7 @@
   const x=(lng-origin.lng)*METRES*cos,y=(lat-origin.lat)*METRES;
   const a=(heading+cameraOrbitYaw)*RAD,velocity=Math.hypot(dynamics.vx,dynamics.vy);
   const overhead=cameraMode==='overhead';
-  const framing=innerWidth<761?1.15:1; const behind=overhead?8:(38+velocity*.45)*framing,shoulder=overhead?0:12;
+  const framing=innerWidth<761?1.25:1; const behind=overhead?8:(48+velocity*.45)*framing,shoulder=overhead?0:12;
   const desired={x:x-Math.sin(a)*behind+Math.cos(a)*shoulder,y:y-Math.cos(a)*behind-Math.sin(a)*shoulder,z:alt+(overhead?180:(23+velocity*.12)*framing+cameraOrbitLift)};
   const look={x:x+Math.sin(a)*5,y:y+Math.cos(a)*5,z:alt+3.4};
   if(!cameraRig||snap||reduced){cameraRig=physics.createSpring(desired.x,desired.y,desired.z);lookRig=physics.createSpring(look.x,look.y,look.z);}
@@ -47,7 +48,7 @@
   const target=[origin.lng+lookRig.x/(METRES*cos),origin.lat+lookRig.y/METRES];
   map.jumpTo(map.calculateCameraOptionsFromTo(position,Math.max(cameraRig.z,alt+16),target,lookRig.z));
  }
- function reset(){window.setDomeOverview?.(false);release();const p=pads[selectedPad];lng=p.lng;lat=p.lat;alt=2;heading=0;speed=0;side=0;travel=0;phase='parked';cameraHeading=0;cameraOrbitYaw=cameraOrbitLift=0;paused=false;dynamics=physics.createDynamics();cameraRig=lookRig=null;rotorPower=0;rotorAngle=0;el('pause-flight').textContent='Pause';el('pause-flight').setAttribute('aria-pressed','false');camera();notice('On virtual pad. Press Take off to begin.');updateHUD();}
+ function reset(){roaming=false;window.setDomeOverview?.(false);release();const p=pads[selectedPad];lng=p.lng;lat=p.lat;alt=2;heading=0;speed=0;side=0;travel=0;phase='parked';cameraHeading=0;cameraOrbitYaw=cameraOrbitLift=0;paused=false;dynamics=physics.createDynamics();cameraRig=lookRig=null;rotorPower=0;rotorAngle=0;el('pause-flight').textContent='Pause';el('pause-flight').setAttribute('aria-pressed','false');camera();notice('On virtual pad. Press Take off to begin.');updateHUD();}
  function takeoff(){if(paused)return;if(phase==='parked'){phase='takeoff';notice('Climbing to 90 m. Steering unlocks at cruise height.');}else if(phase==='flying'){const pad=nearest();if(distance(pad)>35||Math.abs(speed)>8||Math.abs(side)>4){notice('To land: approach a pad within 35 m and slow below 29 km/h.');return;}selectedPad=pads.indexOf(pad);phase='landing';speed=side=0;dynamics.vx=dynamics.vy=dynamics.vz=0;release();notice('Landing on '+pad.name+'.');}}
  function updateHUD(){el('flight-speed').textContent=Math.round(Math.hypot(speed,side)*3.6);el('flight-altitude').textContent=Math.round(alt-2);el('flight-heading').textContent=String(Math.round((heading+360)%360)).padStart(3,'0')+'°';el('flight-distance').textContent=(travel/1000).toFixed(2);el('flight-phase').textContent=paused?'Paused':({parked:'On pad',takeoff:'Taking off',flying:'Free flight',landing:'Landing'})[phase];el('takeoff').textContent=phase==='parked'?'Take off':phase==='flying'?'Land on pad':phase==='takeoff'?'Taking off…':'Landing…';el('takeoff').disabled=paused||phase==='takeoff'||phase==='landing';const p=nearest();el('pad-distance').textContent=`${p.name} · ${(distance(p)/1000).toFixed(2)} km`;if(performance.now()>noticeUntil){const message=paused?'Flight paused. Resume when ready.':phase==='flying'?'Arrows fly · Drag mouse to steer · Q/E altitude · Space hover':phase==='parked'?'Ready on virtual pad. Select Take off.':phase==='takeoff'?'Automatic climb to 90 m.':'Automatic pad approach.';if(el('flight-message').textContent!==message)el('flight-message').textContent=message;}}
  function step(t){if(!active)return;const dt=last?Math.min((t-last)/1000,.2):0;last=t;const pad=gamepad.poll();if(pad.disconnected)setPaused(true);if(pad.pause)setPaused(!paused);if(pad.camera)el('camera-flight').click();if(pad.takeoff)takeoff();
@@ -60,6 +61,7 @@
    if(phase==='landing'){const p=pads[selectedPad];lng+=(p.lng-lng)*Math.min(1,dt*3);lat+=(p.lat-lat)*Math.min(1,dt*3);alt=Math.max(2,alt-18*dt);dynamics.pitch*=Math.exp(-dt*4);dynamics.roll*=Math.exp(-dt*4);if(alt===2){lng=p.lng;lat=p.lat;phase='parked';dynamics=physics.createDynamics();dynamics.heading=heading;notice('Landed. Explore another route when ready.');}}
    if(phase==='flying'){
     const input={forward:clamp(Number(keys.has('ArrowUp'))-Number(keys.has('ArrowDown'))+mouse.forward+pad.forward,-1,1),turn:clamp(Number(keys.has('ArrowRight'))-Number(keys.has('ArrowLeft'))+mouse.turn+(tilt?.getSteer()||0)+pad.turn,-1,1),strafe:0,vertical:clamp(Number(keys.has('KeyE'))-Number(keys.has('KeyQ'))+(performance.now()<wheelUntil?wheelLift:0)+pad.vertical,-1,1),boost:keys.has('ShiftLeft')||pad.boost,brake:keys.has('Space')||pad.brake};
+    if(roaming&&(keys.size||Math.abs(input.forward)>.1||Math.abs(input.turn)>.1||Math.abs(input.vertical)>.1||input.brake||input.boost))roaming=false;if(roaming){const target=tour[tourIndex],dx=(target[0]-lng)*METRES*Math.cos(lat*RAD),dy=(target[1]-lat)*METRES;if(Math.hypot(dx,dy)<65)tourIndex=(tourIndex+1)%tour.length;const turn=gap(Math.atan2(dx,dy)/RAD,heading);input.turn=clamp(turn/70,-.7,.7);input.forward=Math.abs(turn)>60?.12:.38;input.vertical=clamp((120-alt)/45,-.45,.45);}
     const movement=physics.advanceDynamics(dynamics,input,dt);heading=dynamics.heading;
     const next=offset(movement.dx,movement.dy),bounded=boundary.domeLimit(next[0],next[1],alt+movement.dz);
     if(bounded.hit){const n=bounded.normal,dot=dynamics.vx*n[0]+dynamics.vy*n[1]+dynamics.vz*n[2];if(dot>0){dynamics.vx-=dot*1.08*n[0];dynamics.vy-=dot*1.08*n[1];dynamics.vz-=dot*1.08*n[2];}if(performance.now()>noticeUntil)notice('CBD shield boundary. Turn back into the city.');}
@@ -91,8 +93,11 @@
   document.querySelectorAll('[data-flight-key]').forEach(b=>{b.addEventListener('pointerdown',e=>{e.preventDefault();if(!active||paused)return;b.setPointerCapture(e.pointerId);keys.add(b.dataset.flightKey);if(b.dataset.flightKey==='ArrowUp'&&phase==='parked')takeoff();b.classList.add('held');});for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,()=>{keys.delete(b.dataset.flightKey);b.classList.remove('held');});});
   window.addEventListener('blur',()=>{if(active)setPaused(true);});document.addEventListener('visibilitychange',()=>{if(document.hidden&&active)setPaused(true);});
   // Read-only diagnostics for regression checks; no simulation-state mutation hook.
+  document.addEventListener('keydown',e=>{if(active&&!e.target.matches('input,select,textarea')&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space','KeyQ','KeyE','ShiftLeft'].includes(e.code))roaming=false;},true);
+  window.setFlightRoam=value=>{if(!active)return false;roaming=!!value;if(roaming){setPaused(false);if(phase==='parked')takeoff();}return roaming;};
+  window.startFlightTakeoff=()=>{if(!active)return;if(paused)setPaused(false);takeoff();updateHUD();};
   window.flightCameraControls={orbit(dx,dy){if(!active)return;window.setDomeOverview?.(false);cameraMode='chase';cameraOrbitYaw=(cameraOrbitYaw+dx)%360;cameraOrbitLift=clamp(cameraOrbitLift+dy,-12,95);camera(1,true);map.triggerRepaint();}};
-  window.flightState=()=>({active,paused,phase,lng,lat,altitude:alt-2,heading,speed,travel,cameraMode,cameraOrbitYaw,cameraOrbitLift,rotorAngle,rotorPower,pitch:dynamics?.pitch||0,roll:dynamics?.roll||0,yawRate:dynamics?.yawRate||0,velocity:dynamics?{x:dynamics.vx,y:dynamics.vy,z:dynamics.vz}:null,cameraPosition:cameraRig?{x:cameraRig.x,y:cameraRig.y,z:cameraRig.z}:null,tilt:tilt?.state(),gamepad:gamepad?.state(),mouse:{turn:mouse.turn,forward:mouse.forward,dragging:mouse.id!==null},keys:[...keys]});
+  window.flightState=()=>({roaming,active,paused,phase,lng,lat,altitude:alt-2,heading,speed,travel,cameraMode,cameraOrbitYaw,cameraOrbitLift,rotorAngle,rotorPower,pitch:dynamics?.pitch||0,roll:dynamics?.roll||0,yawRate:dynamics?.yawRate||0,velocity:dynamics?{x:dynamics.vx,y:dynamics.vy,z:dynamics.vz}:null,cameraPosition:cameraRig?{x:cameraRig.x,y:cameraRig.y,z:cameraRig.z}:null,tilt:tilt?.state(),gamepad:gamepad?.state(),mouse:{turn:mouse.turn,forward:mouse.forward,dragging:mouse.id!==null},keys:[...keys]});
  }
  init();
 })();

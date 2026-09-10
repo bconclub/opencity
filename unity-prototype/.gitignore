@@ -1,0 +1,9 @@
+Library/
+Temp/
+Logs/
+Obj/
+UserSettings/
+Builds/
+Assets/Models/Drone/*.fbx
+*.csproj
+*.sln

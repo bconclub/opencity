@@ -27,3 +27,13 @@ body.flight-active #flight-hud,body.auto-active #auto-hud{top:76px}
 @media(max-height:550px){#vehicle-picker{width:min(670px,calc(100vw - 24px));grid-template-columns:repeat(5,minmax(0,1fr));max-height:calc(100dvh - 82px);gap:8px}.vehicle-card-label{flex-direction:column;align-items:flex-start}.vehicle-art svg{height:72px}#vehicle-picker button{min-height:118px}}
 #dome-view-toggle{pointer-events:auto;min-height:32px;padding:4px 8px;border:1px solid #6ba39c;border-radius:7px;background:#23443d;color:#d4fbf5;font-size:11px}#ride-brand{pointer-events:none}#dome-view-toggle[aria-pressed=true]{background:#3c6b62}
 .spawn-choice{grid-column:1/-1;font-size:11px;margin:0;color:#c3d9cd}.spawn-choice select{width:100%;min-height:38px;margin:5px 0;background:#25473a;color:#f0f6ee;border:1px solid #60816d;border-radius:7px;font-size:12px;padding:6px}.spawn-choice small{display:block;font-size:10px;font-weight:400}
+#departure-choice{box-sizing:border-box;width:min(390px,calc(100vw - 28px));max-height:calc(100dvh - 32px);overflow:auto;padding:24px;border:1px solid #658a79;border-radius:22px;background:#132e27;color:#f4f4e8;box-shadow:0 24px 90px #0006;font-family:inherit}
+#departure-choice::backdrop{background:#091c2466;backdrop-filter:blur(5px)}
+#departure-choice h2{font-size:24px;margin:8px 0}#departure-choice p{color:#bdd1c4;font-size:13px}
+#departure-choice .departure-eyebrow{font-size:11px;letter-spacing:.15em;color:#eed28b;margin-top:24px}
+#departure-choice button{font:inherit;cursor:pointer;min-height:44px;color:inherit}
+#departure-choice .departure-back{border:0;background:transparent;padding:0 12px 0 0}
+#departure-choice .departure-options{display:grid;gap:10px;margin-top:20px}
+#departure-choice .departure-options button{padding:16px;text-align:left;background:#254b3d;border:1px solid #527763;border-radius:14px}
+#departure-choice button:hover{background:#35604d}#departure-choice button:focus-visible{outline:3px solid #f3d483;outline-offset:3px}
+#departure-choice strong,#departure-choice span{display:block}#departure-choice span{font-size:12px;color:#c4d6c9;margin-top:6px}

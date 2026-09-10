@@ -1,8 +1,10 @@
+import {bindVehiclePaint} from './vehicle-colors.js';
 // Original utility-helicopter model. Local coordinates: x right, y nose, z up.
-export function createHelicopter(T){
+export function createHelicopter(T,{remote=false}={}){
  const group=new T.Group();group.name='Helicopter heading';
  const body=new T.Group();body.name='Airframe attitude';group.add(body);
  const paint=new T.MeshStandardMaterial({color:0xe8ede7,roughness:.35,metalness:.32});
+ paint.userData.vehiclePaint=true;
  const red=new T.MeshStandardMaterial({color:0xc84629,roughness:.36,metalness:.25});
  const glass=new T.MeshStandardMaterial({color:0x173e4a,roughness:.12,metalness:.72});
  const carbon=new T.MeshStandardMaterial({color:0x24302e,roughness:.62,metalness:.18});
@@ -53,5 +55,6 @@ export function createHelicopter(T){
  mesh(new T.SphereGeometry(.10,10,8),new T.MeshBasicMaterial({color:0xc42f23}),-1.43,-.3,2.2);
  mesh(new T.SphereGeometry(.10,10,8),new T.MeshBasicMaterial({color:0x389c68}),1.43,-.3,2.2);
  group.scale.setScalar(1.45);
- return{group,body,rotor,tailRotor,rotorDisc};
+ return{group,body,rotor,tailRotor,rotorDisc,...bindVehiclePaint(group,remote)};
 }
+

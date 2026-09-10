@@ -9,8 +9,8 @@ export function addStreetDetail(map,graph,data){
  const nearby=graph.edges.filter(e=>distance(centre,graph.nodes[e.a].p,graph.nodes[e.b].p)<radius+30);
  const rings=data.features.filter(f=>f.properties._layer==='building'&&f.geometry.type==='Polygon').map(f=>f.geometry.coordinates[0].map(toLocal)).filter(r=>r.some(p=>Math.hypot(p[0]-centre[0],p[1]-centre[1])<radius+40));
  const inside=(p,r)=>{let yes=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])yes=!yes;}return yes;};
- const features=[];
- const polygon=(corners,kind,shade)=>{features.push({type:'Feature',properties:{kind,shade},geometry:{type:'Polygon',coordinates:[[...corners,corners[0]].map(toLngLat)]}});};
+ const features=[],surfaceCells=new Map();
+ const polygon=(corners,kind,shade)=>{if(kind==='walk'||kind==='kerb'){const item={corners,height:kind==='walk'?.12:.19};for(let x=Math.floor(Math.min(...corners.map(p=>p[0]))/4);x<=Math.floor(Math.max(...corners.map(p=>p[0]))/4);x++)for(let y=Math.floor(Math.min(...corners.map(p=>p[1]))/4);y<=Math.floor(Math.max(...corners.map(p=>p[1]))/4);y++){const k=x+','+y;if(!surfaceCells.has(k))surfaceCells.set(k,[]);surfaceCells.get(k).push(item);}}features.push({type:'Feature',properties:{kind,shade},geometry:{type:'Polygon',coordinates:[[...corners,corners[0]].map(toLngLat)]}});};
  for(const edge of nearby){
   const a=graph.nodes[edge.a].p,b=graph.nodes[edge.b].p,dx=(b[0]-a[0])/edge.length,dy=(b[1]-a[1])/edge.length,w=width(edge);
   const point=(s,o)=>[a[0]+dx*s-dy*o,a[1]+dy*s+dx*o];
@@ -42,5 +42,5 @@ export function addStreetDetail(map,graph,data){
   const id='street-'+kind;ids.push(id);map.addLayer({id,type:'fill-extrusion',source:'street-detail',filter:['==',['get','kind'],kind],layout:{visibility:'none'},paint:{'fill-extrusion-color':['get','shade'],'fill-extrusion-height':height,'fill-extrusion-base':.01,'fill-extrusion-opacity':1}},'district-detail');
  }
  ids.push('street-paint');map.addLayer({id:'street-paint',type:'fill',source:'street-detail',filter:['==',['get','kind'],'paint'],layout:{visibility:'none'},paint:{'fill-color':['get','shade'],'fill-opacity':.72}},'district-detail');
- return{setVisible(visible){for(const id of ids)map.setLayoutProperty(id,'visibility',visible?'visible':'none');},features:features.length,centre:toLngLat(centre),radius};
+ return{heightAt(x,y){let height=0;for(const item of surfaceCells.get(Math.floor(x/4)+','+Math.floor(y/4))||[])if(inside([x,y],item.corners))height=Math.max(height,item.height);return height;},setVisible(visible){for(const id of ids)map.setLayoutProperty(id,'visibility',visible?'visible':'none');},features:features.length,centre:toLngLat(centre),radius};
 }

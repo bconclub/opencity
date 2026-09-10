@@ -1,5 +1,5 @@
 // Optional personal analytics. Durable locally; cloud writes require verified Auth.
-const PREFIX='opencity-ride-v1:',VEHICLES=new Set(['auto','helicopter','cycle','drone','supercar','cab','yulu']);
+const PREFIX='opencity-ride-v1:',VEHICLES=new Set(['auto','helicopter','cycle','drone','supercar','cab','yulu','bike','delivery']);
 export function installPlayerStats(config={}) {
  if(window.playerStats)return window.playerStats;
  const url=config.url?new URL(config.url):null;
@@ -16,7 +16,7 @@ export function installPlayerStats(config={}) {
  function end(){if(!current)return;current.ended_at=new Date().toISOString();checkpoint();current=null;void flush();}
  function vehicleState(){
   const auto=window.autoState?.(),flight=window.flightState?.();
-  if(auto?.active)return{vehicle:'auto',paused:auto.paused,speed:auto.speed||0,flying:false};
+  if(auto?.active)return{vehicle:auto.vehicleType||'auto',paused:auto.paused,speed:auto.speed||0,flying:false};
   if(flight?.active)return{vehicle:'helicopter',paused:flight.paused,speed:flight.velocity?Math.hypot(flight.velocity.x,flight.velocity.y):Math.abs(flight.speed||0),flying:['takeoff','flying','landing'].includes(flight.phase)};
   return null;
  }

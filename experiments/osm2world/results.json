@@ -1,0 +1,28 @@
+{
+  "selectionCenter": {
+    "lon": 77.5908,
+    "lat": 12.9798
+  },
+  "projection": "MetricMapProjection",
+  "projectionOrigin": {
+    "lon": 77.59071589999999,
+    "lat": 12.9797946
+  },
+  "inputBounds": {
+    "minlon": 77.5887867,
+    "maxlon": 77.5926451,
+    "minlat": 12.9778248,
+    "maxlat": 12.9817644
+  },
+  "selectionRadiusM": 180,
+  "nodes": 340,
+  "ways": 67,
+  "meshCount": 158,
+  "vertices": 6357,
+  "triangles": 2119,
+  "conversionMs": 662.5,
+  "totalMs": 1052.199999999255,
+  "geometryJsonBytes": 510675,
+  "geometryGzipBytes": 51547,
+  "logs": []
+}

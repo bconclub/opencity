@@ -4,14 +4,14 @@ begin;
 create table public.profiles (
  id uuid primary key references auth.users(id) on delete cascade,
  display_name text not null check (char_length(btrim(display_name)) between 1 and 24),
- favorite_vehicle text check (favorite_vehicle in ('auto','helicopter','cycle','drone','supercar','cab','yulu')),
+ favorite_vehicle text check (favorite_vehicle in ('auto','helicopter','cycle','drone','supercar','cab','yulu','bike','delivery')),
  created_at timestamptz not null default now()
 );
 
 create table public.ride_sessions (
  id uuid primary key,
  player_id uuid not null references auth.users(id) on delete cascade,
- vehicle text not null check (vehicle in ('auto','helicopter','cycle','drone','supercar','cab','yulu')),
+ vehicle text not null check (vehicle in ('auto','helicopter','cycle','drone','supercar','cab','yulu','bike','delivery')),
  started_at timestamptz not null,
  ended_at timestamptz,
  active_seconds numeric not null default 0 check (active_seconds between 0 and 86400),

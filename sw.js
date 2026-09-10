@@ -3,7 +3,7 @@
 const version=new URL(self.location.href).searchParams.get('v')||'dev';
 const cacheName='opencity-assets-'+version;
 const root=new URL('./',self.location.href);
-const files=['player-cloud.js','player-stats.js','player-stats-ui.js','supabase-config.json','mobile-drive.js','mobile-drive.css','mobile-menu.js','mobile-menu.css','multiplayer-client.js','multiplayer-client.css','multiplayer-render.js','multiplayer-config.json','resume-overlay.js','resume-overlay.css','controller-monitor.js','controller-monitor.css','performance-panel.js','performance-panel.css','index.html','app.js','styles.css','flight.js','flight.css','flight-physics.js','helicopter.js','auto-mode.js','auto-model.js','auto-physics.js','auto-roads.js','auto-world.js','auto.css','district.js','district-data.json','building-context.js','landmarks.js','landmark-data.json','cbd-boundary.js','cbd-dome.js','cockpit.css','mobile-controls.css','tilt-controls.js','gamepad-controls.js','vehicle-shell.js','vehicle-shell.css','focus-pointer.js','focus-pointer.css','mobile-dashboard.js','mobile-dashboard.css'];
+const files=['blender-vehicle.js','driving-data.js','vidhana-road-network.json','street-patch.js','street-furniture.js','assets/streets/furniture.json','assets/streets/vidhana-streets.glb','assets/streets/vidhana-streets.json','assets/streets/vidhana-footprint.geojson','assets/vehicles/cybertruck.glb','assets/vehicles/cybercab.glb','assets/vehicles/kitt.glb','vidhana-streets.js','vidhana-street-data.json','npc-traffic.js','supercar-model.js','auto-asset.js','assets/auto/auto-rickshaw.glb','vehicle-models.js','voice-chat.js','voice-chat.css','social-entry.js','social-controls.js','social-controls.css','vehicle-colors.js','player-cloud.js','player-stats.js','player-stats-ui.js','supabase-config.json','mobile-drive.js','mobile-drive.css','mobile-menu.js','mobile-menu.css','multiplayer-client.js','multiplayer-client.css','multiplayer-render.js','multiplayer-config.json','resume-overlay.js','resume-overlay.css','controller-monitor.js','controller-monitor.css','performance-panel.js','performance-panel.css','index.html','app.js','styles.css','flight.js','flight.css','flight-physics.js','helicopter.js','auto-mode.js','auto-model.js','auto-physics.js','auto-roads.js','auto-world.js','auto.css','district.js','district-data.json','building-context.js','landmarks.js','landmark-data.json','cbd-boundary.js','cbd-dome.js','cockpit.css','mobile-controls.css','tilt-controls.js','gamepad-controls.js','vehicle-shell.js','vehicle-shell.css','focus-pointer.js','focus-pointer.css','mobile-dashboard.js','mobile-dashboard.css'];
 files.push('street-detail.js');
 const allowed=new Set(files.map(f=>new URL(f,root).href));
 self.addEventListener('install',event=>event.waitUntil(caches.open(cacheName).then(cache=>cache.addAll([...allowed]))));
@@ -19,5 +19,11 @@ self.addEventListener('fetch',event=>{
 
 
 
+
+
+
+
+self.addEventListener('message',event=>{if(event.data?.type==='ACTIVATE_RELEASE')self.skipWaiting();});
+self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
 
 
