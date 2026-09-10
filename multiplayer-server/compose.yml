@@ -1,0 +1,15 @@
+services:
+  rooms:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8790:8787"
+    environment:
+      PORT: 8787
+      ALLOWED_ORIGINS: "https://opencity-two.vercel.app,https://opencity.world,https://www.opencity.world,http://127.0.0.1:4173"
+    mem_limit: 256m
+    cpus: 1
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+

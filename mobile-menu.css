@@ -1,0 +1,23 @@
+#mobile-menu,#mobile-menu-close{display:none}
+#mobile-menu-toggle{display:none}
+@media(max-width:760px),(max-height:550px) and (pointer:coarse){
+ #mobile-menu{position:fixed;top:calc(68px + env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right));z-index:1500;display:flex;gap:5px;padding:4px;border-radius:14px;background:#102c26ed;border:1px solid #6b8b7a}
+ #mobile-menu button{width:44px;height:44px;padding:10px;border:0;background:transparent;color:#e7f5e9;border-radius:9px}#mobile-menu svg{width:24px;height:24px}#mobile-menu button[aria-expanded=true]{background:#45644f;color:#e9d78a}#mobile-menu button:focus-visible{outline:2px solid #f0cb75}
+ body #performance-panel,body #multiplayer-panel,body #controller-monitor,body #vehicle-picker{display:none!important}
+ body .mobile-tool-open{display:block!important;position:fixed!important;inset:auto!important;top:calc(169px + env(safe-area-inset-top))!important;left:12px!important;right:12px!important;width:auto!important;max-width:none!important;transform:none!important;max-height:calc(100dvh - 193px - env(safe-area-inset-top))!important;overflow:auto!important;box-sizing:border-box;padding:16px!important;margin:0!important;z-index:1500!important;border:1px solid #648776;border-radius:14px;background:#102c26fa;color:#edf8ef}
+ body #vehicle-picker.mobile-tool-open{display:grid!important;grid-template-columns:1fr 1fr!important}
+ body .controller-options.mobile-tool-open .controller-options-body{display:block!important;position:static!important;width:auto!important;max-height:none!important;padding:8px 0!important;background:none;border:0}
+ body .controller-options.mobile-tool-open>summary{display:none}
+ #mobile-menu-close:not([hidden]){display:block;position:fixed;top:calc(122px + env(safe-area-inset-top));right:12px;z-index:1501;min-height:40px;border:1px solid #6e927e;border-radius:9px;background:#17392e;color:#fff;padding:8px 14px}
+ body.mobile-tools-open #flight-controls,body.mobile-tools-open #auto-controls{visibility:hidden}
+ #ride-brand{max-width:calc(100vw - 24px);box-sizing:border-box;font-size:13px;gap:8px}
+ #resume-overlay{inset:auto 12px calc(202px + env(safe-area-inset-bottom));padding:0;background:none;backdrop-filter:none;z-index:1400}#resume-overlay>div{width:100%;padding:8px;border-radius:12px}#resume-overlay h2,#resume-overlay p,#resume-exit{display:none}#resume-overlay #resume-ride{min-height:44px}
+ .multiplayer-name-dialog{box-sizing:border-box;max-height:calc(100dvh - 32px);overflow:auto}
+}
+@media(max-width:760px),(max-height:550px) and (pointer:coarse){
+ #mobile-menu:not(.expanded){display:none}#mobile-menu-toggle{display:block;position:fixed;top:calc(15px + env(safe-area-inset-top));right:12px;width:44px;height:44px;padding:10px;z-index:1502;border-radius:12px;border:1px solid #668677;background:#12382cec;color:#eef8ed}#mobile-menu-toggle svg{width:24px;height:24px}
+ #ride-brand{max-width:calc(100vw - 84px);left:12px;padding:10px;gap:6px}#ride-brand #dome-view-toggle{display:none}
+ body .controller-options:not(.mobile-tool-open)>summary{display:none}
+}
+
+@media(max-width:760px),(max-height:550px) and (pointer:coarse){body #performance-panel.mobile-tool-open,body #multiplayer-panel.mobile-tool-open,body #controller-monitor.mobile-tool-open{display:block!important}}

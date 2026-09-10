@@ -17,3 +17,8 @@ node_modules/
 /update-mobile-release.mjs
 /update-cache-release.mjs
 /adjust-reticle.mjs
+/fix-cache-updates.mjs
+/fix-flight-overview.mjs
+
+/public-release/
+/public-release_*.zip

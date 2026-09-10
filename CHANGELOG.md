@@ -35,3 +35,26 @@ Version policy: each released build increments the last number. 0.0.99 rolls to 
 - Hold Shift, touch Boost, or RB/R1 to boost auto/helicopter movement.
 - Includes bottom mobile gauges, performance telemetry, own-asset cache and forward reticle from local iterations 0.0.3–0.0.6.
 - Core and boost physics checks passed. Mobile auto UI visually reviewed at 390×844. Reticle flight verification remains open.
+
+## 0.0.13 (2026-09-10)
+- Shareable guest rooms with player names and realtime auto/helicopter rendering.
+- Resume overlay on return to a paused vehicle.
+- Separate secure room service deployed on existing VPS; frontend on Vercel.
+
+
+## 0.0.14 (2026-09-10)
+- Fixed late-loading controller and tilt controls expanding the mobile cockpit.
+- Compact bottom gauges and separated touch controls; room panels collapse on vehicle entry.
+- Mobile performance panel starts collapsed; unavailable gamepad badge hidden while riding.
+
+
+## 0.0.16 (2026-09-10)
+- Floating dual-touch driving/view controls, double-tap hover and a short mobile tutorial.
+- Compact mobile ride instruments/menu, persisted player names, four room/meetup entry actions.
+- Live-pose player name anchors avoid network-echo jitter; own-tag movement test passes.
+- CBD exterior mask and boundary geometry filtering; textured spawn roads and raised sidewalks.
+- Preload vehicle resources and compile district shaders; retain versioned local asset cache.
+- Local ride/flight stats and supplied Supabase browser wiring. Database migration awaits authorized account; live voice is planned, not shipped.
+
+## 0.0.17 (2026-09-10)
+- Start attribution collapsed behind the info button; retain source credits on tap.

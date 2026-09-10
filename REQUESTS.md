@@ -28,3 +28,27 @@ Status as of this working build. “Implemented” describes code, not proof of 
 | Cache city data locally in Chrome | Own-asset service-worker cache added; cache lifecycle verification outstanding. External tiles remain provider-managed. GPU frames still redraw as camera moves. |
 
 Next priority after release plumbing: Kingfisher mansion, then vehicle fidelity/lineup. This register preserves unfinished requests when new steering arrives.
+
+- 2026-09-09: Controller status always visible with current device and live axes/buttons. Simulated monitor and both vehicle tests pass; physical browser activation still unverified. Hostinger preview deployed v0.0.11; opencity.world pending setup.
+
+- 2026-09-10: Controller troubleshooting paused by user. Vercel production v0.0.12 live at https://opencity-two.vercel.app. Auto/helicopter public smoke tests pass. Cycle/drone source models included; not playable. opencity.world attached to Vercel; Hostinger registration being completed with saved owner details.
+
+- 2026-09-10: Multiplayer v0.0.13 deployed: enter name, create room, join code/link, live vehicle/name rendering, roster, reconnect and leave. Auto and helicopter supported, maximum eight guests. Room state is ephemeral. Added visible Resume overlay for paused rides. Full public two-client verification in progress.
+
+- 2026-09-10: Public two-browser multiplayer v0.0.13 passed all integration checks (room/invite/name, movement, both models, resume, reload/rejoin, leave cleanup). Mobile HUD repair in progress after actual phone screenshot. Large tools/downloads must use D:; Blender already installed there.
+
+- 2026-09-10: User requires tools/downloads on D:. Recorded in INSTALLATION.md. Mobile v0.0.14 reconciles late controls into closed settings and compacts gauges; portrait/landscape verification underway.
+
+- VERIFIED v0.0.14: actual public mobile helicopter at330x633 HUD162px,12px gap above tothumbcontrols, no loosegamepad/tilt controls, roomclosed, settingshidden. Rendered layouttests bothvehicletypes330/390/landscape pass.
+
+- v0.0.15: Mobile icon bar for rides, room, settings, performance. Single panel at a time; closing panel exposes Resume after pause. Desktop layout preserved. Verified narrow live game and panel switching.
+
+## Active requests, 2026-09-10
+- Mobile map first: floating movement/view pads, double-tap hover, short first-ride tutorial; hide pads on release. Compact automatic gauges, menu-only secondary panels.
+- Persistent Chrome player name; room create/join and meetup host/browse with topics, dates and attendance, up to 8 players per room.
+- Supabase wiring only. Owner supplies project and keys; no project creation. Ride/flight time and favorite vehicle stats.
+- Reduce late asset loading; preload city/ride resources and retain versioned local assets. Moving camera still renders frames.
+- Compact attribution behind info control; preserve access to source credits.
+- Fix moving name-tag flicker; publish verified changes for live testing.
+- Audio planned: room text/Hi/Hello first, optional WebRTC voice later with explicit microphone opt-in.
+- Custom domain opencity.world and www.opencity.world verified live; model cache moved to D with verified C junction.

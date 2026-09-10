@@ -4,7 +4,7 @@
  const pads=[{name:'Cubbon departure',lng:77.592,lat:12.9745},{name:'Cubbon north',lng:77.5928,lat:12.9762}];
  const keys=new Set();const RAD=Math.PI/180;const METRES=111320;
  let active=false,paused=false,phase='parked',raf=0,last=0,THREE,layer,loading=false,oldCamera,oldHandlers,alt=2,lng=pads[0].lng,lat=pads[0].lat,heading=0,speed=0,side=0,rotorAngle=0,selectedPad=0,travel=0,cameraMode='chase',cameraHeading=0,flightNotice='',noticeUntil=0;
- let tilt,gamepad;let oldSymbols=[],boundary,mouse={id:null,x:0,y:0,turn:0,forward:0},wheelLift=0,wheelUntil=0;let dynamics,physics,craft,cameraRig,lookRig,rotorPower=0,oldMaxZoom;
+ let cameraOrbitYaw=0,cameraOrbitLift=0;let tilt,gamepad;let oldSymbols=[],boundary,mouse={id:null,x:0,y:0,turn:0,forward:0},wheelLift=0,wheelUntil=0;let dynamics,physics,craft,cameraRig,lookRig,rotorPower=0,oldMaxZoom;
  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
  const gap=(a,b)=>((a-b+540)%360)-180;
  const distance=p=>Math.hypot((p.lng-lng)*METRES*Math.cos(lat*RAD),(p.lat-lat)*METRES);
@@ -14,12 +14,14 @@
  function release(){mouse.id=null;mouse.turn=mouse.forward=0;wheelLift=0;keys.clear();if(map)map.getCanvas().style.cursor="";document.querySelectorAll('[data-flight-key]').forEach(b=>b.classList.remove('held'));}
  function setPaused(value){if(!active)return;paused=value;release();last=0;el('pause-flight').textContent=paused?'Resume':'Pause';el('pause-flight').setAttribute('aria-pressed',String(paused));notice(paused?'Flight paused. Resume when ready.':'Controls active.');}
  function padFeature(p){const ring=[];for(let i=0;i<=48;i++){const a=i/48*Math.PI*2;ring.push([p.lng+22*Math.cos(a)/(METRES*Math.cos(p.lat*RAD)),p.lat+22*Math.sin(a)/METRES]);}return{type:'Feature',properties:{name:p.name},geometry:{type:'Polygon',coordinates:[ring]}};}
- async function ensureLayer(){
+ let preparePromise;
+ function ensureLayer(){if(!preparePromise)preparePromise=buildLayer().catch(e=>{preparePromise=null;throw e;});return preparePromise;}window.prepareHelicopter=ensureLayer;
+ async function buildLayer(){
   if(layer)return;
   const modules=await Promise.all([import('https://unpkg.com/three@0.169.0/build/three.module.js'),import('./flight-physics.js'),import('./helicopter.js'),import('./cbd-boundary.js'),import('./tilt-controls.js'),import('./gamepad-controls.js')]);
   gamepad=modules[5].createGamepadControls(el('flight-hud'),'flight');THREE=modules[0];physics=modules[1];boundary=modules[3];tilt=modules[4].createTiltControls(el('flight-hud'),()=>active&&!paused);craft=modules[2].createHelicopter(THREE);dynamics=physics.createDynamics();
   layer={id:'helicopter-model',type:'custom',renderingMode:'3d',
-   onAdd(map,gl){this.camera=new THREE.Camera();this.scene=new THREE.Scene();this.scene.add(craft.group);this.scene.add(new THREE.HemisphereLight(0xffffff,0x688471,2.4));const sun=new THREE.DirectionalLight(0xffefd5,3);sun.position.set(-50,30,100);this.scene.add(sun);this.renderer=new THREE.WebGLRenderer({canvas:map.getCanvas(),context:gl,antialias:true});this.renderer.autoClear=false;},
+   onAdd(map,gl){this.camera=new THREE.Camera();this.scene=new THREE.Scene();this.scene.add(craft.group);this.scene.add(new THREE.HemisphereLight(0xffffff,0x688471,2.4));const sun=new THREE.DirectionalLight(0xffefd5,3);sun.position.set(-50,30,100);this.scene.add(sun);this.renderer=new THREE.WebGLRenderer({canvas:map.getCanvas(),context:gl,antialias:true});this.renderer.autoClear=false;this.renderer.compile(this.scene,this.camera);this.renderer.resetState();},
    render(gl,args){if(!active)return;const c=maplibregl.MercatorCoordinate.fromLngLat([lng,lat],alt);const s=c.meterInMercatorCoordinateUnits();const transform=new THREE.Matrix4().makeTranslation(c.x,c.y,c.z).scale(new THREE.Vector3(s,-s,s));craft.group.rotation.z=-heading*RAD;craft.body.rotation.set(dynamics.pitch,dynamics.roll,0,'YXZ');craft.rotor.rotation.z=rotorAngle;craft.tailRotor.rotation.x=-rotorAngle*3.7;craft.rotorDisc.material.opacity=rotorPower*.085;this.camera.projectionMatrix.fromArray(args.defaultProjectionData.mainMatrix).multiply(transform);this.renderer.resetState();{const submitStart=performance.now();this.renderer.render(this.scene,this.camera);window.recordCityRender?.('Helicopter',this.renderer,performance.now()-submitStart);}},
    onRemove(){this.scene.traverse(o=>{o.geometry?.dispose();if(o.material)o.material.dispose();});this.renderer.dispose();}
   };
@@ -30,13 +32,14 @@
   map.addLayer(layer);
  }
  function camera(dt=1,snap=false){
+  if(window.domeOverview){window.applyDomeOverview?.();return;}
   if(cameraMode==='shield'){map.jumpTo({center:[77.5945,12.9755],zoom:14.8,pitch:55,bearing:-25});return;}
   const origin=pads[selectedPad],cos=Math.cos(origin.lat*RAD);
   const x=(lng-origin.lng)*METRES*cos,y=(lat-origin.lat)*METRES;
-  const a=heading*RAD,velocity=Math.hypot(dynamics.vx,dynamics.vy);
+  const a=(heading+cameraOrbitYaw)*RAD,velocity=Math.hypot(dynamics.vx,dynamics.vy);
   const overhead=cameraMode==='overhead';
-  const framing=innerWidth<761?1.5:1; const behind=overhead?8:(48+velocity*.55)*framing,shoulder=overhead?0:12;
-  const desired={x:x-Math.sin(a)*behind+Math.cos(a)*shoulder,y:y-Math.cos(a)*behind-Math.sin(a)*shoulder,z:alt+(overhead?180:(28+velocity*.12)*framing)};
+  const framing=innerWidth<761?1.15:1; const behind=overhead?8:(38+velocity*.45)*framing,shoulder=overhead?0:12;
+  const desired={x:x-Math.sin(a)*behind+Math.cos(a)*shoulder,y:y-Math.cos(a)*behind-Math.sin(a)*shoulder,z:alt+(overhead?180:(23+velocity*.12)*framing+cameraOrbitLift)};
   const look={x:x+Math.sin(a)*5,y:y+Math.cos(a)*5,z:alt+3.4};
   if(!cameraRig||snap||reduced){cameraRig=physics.createSpring(desired.x,desired.y,desired.z);lookRig=physics.createSpring(look.x,look.y,look.z);}
   else{physics.advanceSpring(cameraRig,desired,dt,5.2);physics.advanceSpring(lookRig,look,dt,10);}
@@ -44,7 +47,7 @@
   const target=[origin.lng+lookRig.x/(METRES*cos),origin.lat+lookRig.y/METRES];
   map.jumpTo(map.calculateCameraOptionsFromTo(position,Math.max(cameraRig.z,alt+16),target,lookRig.z));
  }
- function reset(){release();const p=pads[selectedPad];lng=p.lng;lat=p.lat;alt=2;heading=0;speed=0;side=0;travel=0;phase='parked';cameraHeading=0;paused=false;dynamics=physics.createDynamics();cameraRig=lookRig=null;rotorPower=0;rotorAngle=0;el('pause-flight').textContent='Pause';el('pause-flight').setAttribute('aria-pressed','false');camera();notice('On virtual pad. Press Take off to begin.');updateHUD();}
+ function reset(){window.setDomeOverview?.(false);release();const p=pads[selectedPad];lng=p.lng;lat=p.lat;alt=2;heading=0;speed=0;side=0;travel=0;phase='parked';cameraHeading=0;cameraOrbitYaw=cameraOrbitLift=0;paused=false;dynamics=physics.createDynamics();cameraRig=lookRig=null;rotorPower=0;rotorAngle=0;el('pause-flight').textContent='Pause';el('pause-flight').setAttribute('aria-pressed','false');camera();notice('On virtual pad. Press Take off to begin.');updateHUD();}
  function takeoff(){if(paused)return;if(phase==='parked'){phase='takeoff';notice('Climbing to 90 m. Steering unlocks at cruise height.');}else if(phase==='flying'){const pad=nearest();if(distance(pad)>35||Math.abs(speed)>8||Math.abs(side)>4){notice('To land: approach a pad within 35 m and slow below 29 km/h.');return;}selectedPad=pads.indexOf(pad);phase='landing';speed=side=0;dynamics.vx=dynamics.vy=dynamics.vz=0;release();notice('Landing on '+pad.name+'.');}}
  function updateHUD(){el('flight-speed').textContent=Math.round(Math.hypot(speed,side)*3.6);el('flight-altitude').textContent=Math.round(alt-2);el('flight-heading').textContent=String(Math.round((heading+360)%360)).padStart(3,'0')+'°';el('flight-distance').textContent=(travel/1000).toFixed(2);el('flight-phase').textContent=paused?'Paused':({parked:'On pad',takeoff:'Taking off',flying:'Free flight',landing:'Landing'})[phase];el('takeoff').textContent=phase==='parked'?'Take off':phase==='flying'?'Land on pad':phase==='takeoff'?'Taking off…':'Landing…';el('takeoff').disabled=paused||phase==='takeoff'||phase==='landing';const p=nearest();el('pad-distance').textContent=`${p.name} · ${(distance(p)/1000).toFixed(2)} km`;if(performance.now()>noticeUntil){const message=paused?'Flight paused. Resume when ready.':phase==='flying'?'Arrows fly · Drag mouse to steer · Q/E altitude · Space hover':phase==='parked'?'Ready on virtual pad. Select Take off.':phase==='takeoff'?'Automatic climb to 90 m.':'Automatic pad approach.';if(el('flight-message').textContent!==message)el('flight-message').textContent=message;}}
  function step(t){if(!active)return;const dt=last?Math.min((t-last)/1000,.2):0;last=t;const pad=gamepad.poll();if(pad.disconnected)setPaused(true);if(pad.pause)setPaused(!paused);if(pad.camera)el('camera-flight').click();if(pad.takeoff)takeoff();
@@ -88,7 +91,10 @@
   document.querySelectorAll('[data-flight-key]').forEach(b=>{b.addEventListener('pointerdown',e=>{e.preventDefault();if(!active||paused)return;b.setPointerCapture(e.pointerId);keys.add(b.dataset.flightKey);if(b.dataset.flightKey==='ArrowUp'&&phase==='parked')takeoff();b.classList.add('held');});for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,()=>{keys.delete(b.dataset.flightKey);b.classList.remove('held');});});
   window.addEventListener('blur',()=>{if(active)setPaused(true);});document.addEventListener('visibilitychange',()=>{if(document.hidden&&active)setPaused(true);});
   // Read-only diagnostics for regression checks; no simulation-state mutation hook.
-  window.flightState=()=>({active,paused,phase,lng,lat,altitude:alt-2,heading,speed,travel,cameraMode,rotorAngle,rotorPower,pitch:dynamics?.pitch||0,roll:dynamics?.roll||0,yawRate:dynamics?.yawRate||0,velocity:dynamics?{x:dynamics.vx,y:dynamics.vy,z:dynamics.vz}:null,cameraPosition:cameraRig?{x:cameraRig.x,y:cameraRig.y,z:cameraRig.z}:null,tilt:tilt?.state(),gamepad:gamepad?.state(),mouse:{turn:mouse.turn,forward:mouse.forward,dragging:mouse.id!==null},keys:[...keys]});
+  window.flightCameraControls={orbit(dx,dy){if(!active)return;window.setDomeOverview?.(false);cameraMode='chase';cameraOrbitYaw=(cameraOrbitYaw+dx)%360;cameraOrbitLift=clamp(cameraOrbitLift+dy,-12,95);camera(1,true);map.triggerRepaint();}};
+  window.flightState=()=>({active,paused,phase,lng,lat,altitude:alt-2,heading,speed,travel,cameraMode,cameraOrbitYaw,cameraOrbitLift,rotorAngle,rotorPower,pitch:dynamics?.pitch||0,roll:dynamics?.roll||0,yawRate:dynamics?.yawRate||0,velocity:dynamics?{x:dynamics.vx,y:dynamics.vy,z:dynamics.vz}:null,cameraPosition:cameraRig?{x:cameraRig.x,y:cameraRig.y,z:cameraRig.z}:null,tilt:tilt?.state(),gamepad:gamepad?.state(),mouse:{turn:mouse.turn,forward:mouse.forward,dragging:mouse.id!==null},keys:[...keys]});
  }
  init();
 })();
+
+

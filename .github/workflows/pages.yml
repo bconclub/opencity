@@ -1,21 +1,16 @@
-name: Publish city
+name: Validate city
 on:
   push:
     branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
-  group: github-pages
+  group: validate-city-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  deploy:
+  validate:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,15 +18,18 @@ jobs:
           node-version: '22'
       - run: npm run check
       - run: node verify-car-physics.mjs && node verify-dynamics.mjs && node verify-dome.mjs && node verify-gamepad-noise.mjs
-      - name: Stage public app files
-        run: |
-          mkdir public
-          cp *.html *.css *.js district-data.json landmark-data.json release.json public/
-          touch public/.nojekyll
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - name: Install multiplayer dependencies
+        working-directory: multiplayer-server
+        run: npm ci --ignore-scripts
+      - name: Test multiplayer rooms
+        working-directory: multiplayer-server
+        run: npm test
+      - name: Stage Vercel production app
+        run: node stage-production.mjs
+      - name: Upload validated production files
+        uses: actions/upload-artifact@v4
         with:
-          path: public
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+          name: public-release
+          path: public-release/
+          if-no-files-found: error
+          retention-days: 7

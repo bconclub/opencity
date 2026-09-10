@@ -26,9 +26,19 @@ async function boot(){
   }
   const labelIndex=style.layers.findIndex(l=>l.type==='symbol');
   style.layers.splice(labelIndex,0,{id:'city-buildings',type:'fill-extrusion',source:'openmaptiles','source-layer':'building',minzoom:13,paint:{'fill-extrusion-color':['interpolate',['linear'],['coalesce',['get','render_height'],8],0,'#d8d8c7',30,'#b6bead',100,'#829b8c'],'fill-extrusion-height':['max',3,['coalesce',['get','render_height'],8]],'fill-extrusion-base':['coalesce',['get','render_min_height'],0],'fill-extrusion-opacity':.96}});
-  map=new maplibregl.Map({container:'map',style,center:[77.596,12.9716],zoom:16,pitch:60,bearing:-25,maxPitch:70,minZoom:14.4,maxZoom:20,maxBounds:[[77.585,12.966],[77.604,12.985]],hash:true,attributionControl:true});
+  (await import('./cbd-dome.js')).prepareCBDStyle(style);
+  map=new maplibregl.Map({container:'map',style,center:[77.596,12.9716],zoom:16,pitch:60,bearing:-25,maxPitch:85,minZoom:13.7,maxZoom:20,maxBounds:[[77.585,12.966],[77.604,12.985]],hash:true,attributionControl:false});
+  map.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
+  const attribution=map.getContainer().querySelector('.maplibregl-ctrl-attrib');
+  if(attribution){
+   const collapse=()=>{attribution.open=false;attribution.classList.remove('maplibregl-compact-show');};
+   const initialState=new MutationObserver(()=>{if(attribution.open)collapse();});
+   initialState.observe(attribution,{attributes:true,attributeFilter:['open']});
+   attribution.querySelector('summary').addEventListener('click',()=>initialState.disconnect(),{once:true});
+   map.once('remove',()=>initialState.disconnect());collapse();
+  }
   map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),'top-right');map.addControl(new maplibregl.ScaleControl({unit:'metric'}),'bottom-left');
-  map.on('load',()=>{ready=true;clearTimeout(loadTimer);$('failure').hidden=true;map.setLight({anchor:'viewport',color:'#fff5df',intensity:.45,position:[1.5,190,45]});sync();status('Explore the city · Building heights are schematic');import('./district.js').then(m=>m.installDistrict(map)).then(()=>import('./cbd-dome.js')).then(m=>m.installDome(map)).catch(e=>{console.error(e);status('District details could not load. Reload to retry.');});});
+  map.on('load',()=>{ready=true;clearTimeout(loadTimer);$('failure').hidden=true;map.setLight({anchor:'viewport',color:'#fff5df',intensity:.45,position:[1.5,190,45]});sync();status('Explore the city · Building heights are schematic');import('./district.js').then(m=>m.installDistrict(map)).then(()=>import('./cbd-dome.js')).then(m=>m.installDome(map)).then(()=>import('./multiplayer-render.js')).then(m=>m.installMultiplayer(map)).then(()=>{const state=window.multiplayerState?.();if(state)window.dispatchEvent(new CustomEvent('multiplayer-players',{detail:state}));}).catch(e=>{console.error(e);status('District details could not load. Reload to retry.');});});
   map.on('error',e=>{console.error(e.error);if(!ready)status('Waiting for map data…');else{status('Some map data could not load. Move the view or reload.');clearTimeout(statusTimer);statusTimer=setTimeout(()=>status('Explore the city · Building heights are schematic'),8000);}});
   map.on('move',sync);map.on('dragstart',stopOrbit);map.on('zoomstart',e=>{if(e.originalEvent)stopOrbit();});
   map.on('click','city-buildings',e=>{const f=e.features?.[0];if(!f)return;const p=f.properties||{};$('building-name').textContent=p.name||'Mapped building';const height=Number(p.render_height);$('building-height').textContent=Number.isFinite(height)?`Display height: ${Math.max(3,height).toFixed(0)} m (schematic)`:'Display height: 8 m (fallback)';$('inspector').hidden=false;});
@@ -49,3 +59,7 @@ $('close-inspector').onclick=()=>$('inspector').hidden=true;
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){stopOrbit();$('inspector').hidden=true;}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopOrbit();});
 boot();
+
+
+
+

@@ -1,3 +1,4 @@
+import {polygonTouchesCBD} from './cbd-dome.js';
 // Render only streamed polygons wholly outside the detailed district.
 // Vector-tile features can group hundreds of separate buildings in one MultiPolygon,
 // so a feature-level `within` filter cannot reliably prevent duplicate surfaces.
@@ -14,6 +15,7 @@ export function createBuildingContext(map,bbox){
   for(const f of map.querySourceFeatures('openmaptiles',{sourceLayer:'building'})){
    const polygons=f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[];
    for(const polygon of polygons){
+    if(!polygonTouchesCBD(polygon))continue;
     const ring=polygon[0];let w=Infinity,e=-Infinity,s=Infinity,n=-Infinity;
     for(const p of ring){w=Math.min(w,p[0]);e=Math.max(e,p[0]);s=Math.min(s,p[1]);n=Math.max(n,p[1]);}
     if(e<west||w>east||n<south||s>north)continue;
@@ -30,3 +32,4 @@ export function createBuildingContext(map,bbox){
  map.on('moveend',()=>schedule());map.on('sourcedata',e=>{if(e.sourceId==='openmaptiles'&&e.isSourceLoaded)schedule(true);});
  return{setVisible(value){active=value;map.setLayoutProperty('district-context-buildings','visibility',value?'visible':'none');if(value)schedule(true);else{clearTimeout(timer);timer=0;}},get count(){return count;}};
 }
+

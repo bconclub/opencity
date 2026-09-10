@@ -29,3 +29,25 @@
  body.flight-active #flight-hud,body.auto-active #auto-hud{width:300px;left:12px;right:auto;bottom:24px}
  body.flight-active #flight-controls,body.auto-active #auto-controls{bottom:24px;left:auto;right:12px;width:calc(100vw - 348px);max-width:340px}
 }
+/* Closed settings must stay hidden even when children have explicit grid/flex styles. */
+.controller-options:not([open]) > .controller-options-body{display:none!important}
+@media(max-width:760px),(orientation:landscape) and (max-height:550px){
+ body.flight-active #flight-hud,body.auto-active #auto-hud{box-sizing:border-box;height:162px;min-height:0;max-height:162px;padding:8px 10px;grid-template-columns:92px minmax(0,1fr);grid-template-rows:32px minmax(0,1fr) 24px;gap:4px 10px;bottom:calc(24px + env(safe-area-inset-bottom));overflow:visible}
+ body.flight-active #flight-hud .instruments,body.auto-active #auto-hud .instruments{align-content:center;gap:5px;grid-row:1/4}
+ body.flight-active #flight-hud .instruments>div:first-child,body.auto-active #auto-hud .instruments>div:first-child{box-sizing:border-box;width:88px;height:88px;flex-shrink:0}
+ body.flight-active #flight-hud .flight-top,body.auto-active #auto-hud .flight-top{min-width:0;align-self:start}
+ body.flight-active #flight-hud .flight-top button,body.auto-active #auto-hud .flight-top button{min-height:32px;padding:5px 9px}
+ body.flight-active #flight-hud .flight-actions,body.auto-active #auto-hud .flight-actions{align-self:stretch;align-content:center;min-height:0;gap:4px}
+ body.flight-active #flight-hud .flight-actions button,body.auto-active #auto-hud .flight-actions button{min-height:32px;height:32px;padding:4px;font-size:10px;white-space:nowrap;min-width:0}
+ body.flight-active #flight-hud .controller-options,body.auto-active #auto-hud .controller-options{min-width:0;max-width:100%;position:static}
+ .controller-options summary{box-sizing:border-box;min-height:24px;height:24px;padding:3px 6px;font-size:11px}
+ .controller-options[open] .controller-options-body{box-sizing:border-box;z-index:30;max-width:calc(100vw - 24px);max-height:35dvh}
+ body.flight-active #flight-controls,body.auto-active #auto-controls{bottom:calc(198px + env(safe-area-inset-bottom));gap:7px}
+ body.flight-active #flight-controls button,body.auto-active #auto-controls button{min-height:44px;min-width:44px;max-width:100%;box-sizing:border-box;padding:6px;font-size:10px}
+ .direction-controls>div{gap:4px;margin:5px 0}.height-controls{gap:5px}.auto-pedals{gap:5px}
+ .controller-options-body #flight-message,.controller-options-body #auto-message{display:block!important;min-height:0;margin:8px 0;font-size:11px}
+}
+@media(orientation:landscape) and (max-height:550px){
+ body.flight-active #flight-hud,body.auto-active #auto-hud{width:280px;left:12px;right:auto;bottom:24px}
+ body.flight-active #flight-controls,body.auto-active #auto-controls{bottom:24px;left:310px;right:12px;width:auto;max-width:none}
+}

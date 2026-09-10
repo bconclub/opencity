@@ -1,3 +1,5 @@
+import {polygonTouchesCBD} from './cbd-dome.js';
+import {CBD_DOME} from './cbd-boundary.js';
 // Central Bengaluru art pass: mapped footprints, preserved mapped colours, illustrative fallback materials and planting.
 export async function installDistrict(map){
  const [T,response,contextModule,landmarkModule,landmarkResponse]=await Promise.all([import('https://unpkg.com/three@0.169.0/build/three.module.js'),fetch('./district-data.json'),import('./building-context.js'),import('./landmarks.js'),fetch('./landmark-data.json')]);
@@ -37,7 +39,7 @@ export async function installDistrict(map){
  function index(map,bounds,item){for(let x=Math.floor(bounds[0]/40);x<=Math.floor(bounds[2]/40);x++)for(let y=Math.floor(bounds[1]/40);y<=Math.floor(bounds[3]/40);y++){const key=x+','+y;if(!map.has(key))map.set(key,[]);map.get(key).push(item);}}
  function boundsOf(r){return[Math.min(...r.map(p=>p[0])),Math.min(...r.map(p=>p[1])),Math.max(...r.map(p=>p[0])),Math.max(...r.map(p=>p[1]))];}
  let roofDetails=0,replacedParts=0;const landmarkRings=landmarkData.features.map(f=>f.geometry.coordinates[0].map(xy));
- for(const feature of data.features.filter(f=>f.properties._layer==='building')){
+ for(const feature of data.features.filter(f=>f.properties._layer==='building'&&polygonTouchesCBD(f.geometry.coordinates))){
   const rings=feature.geometry.coordinates.map(r=>r.slice(0,-1).map(xy));if(rings[0].length<3)continue;
   const b=boundsOf(rings[0]),size=area(rings[0]);if(size<5)continue;
   const key=rings.map(r=>r.map(p=>p.map(v=>v.toFixed(2)).join(',')).sort().join(';')).sort().join('|')+'|'+feature.properties.render_height+'|'+feature.properties.render_min_height;
@@ -60,7 +62,7 @@ export async function installDistrict(map){
  const treePositions=[],treeGrid=new Set();
  const patches=data.features.filter(f=>f.properties._layer==='landcover'&&(f.properties.class==='wood'||['park','garden','shrubbery','scrub'].includes(f.properties.subclass)));
  for(const f of patches){const rings=f.geometry.coordinates.map(r=>r.map(xy)),b=boundsOf(rings[0]),count=Math.min(1800,Math.ceil(area(rings[0])/140));for(let i=0;i<count*3&&treePositions.length<2800;i++){
-  const x=b[0]+rand()*(b[2]-b[0]),y=b[1]+rand()*(b[3]-b[1]);if(Math.abs(x)>1200||Math.abs(y)>1200||!inPoly([x,y],rings))continue;
+  const x=b[0]+rand()*(b[2]-b[0]),y=b[1]+rand()*(b[3]-b[1]);if(x*x/(CBD_DOME.x**2)+y*y/(CBD_DOME.y**2)>1||!inPoly([x,y],rings))continue;
   // Keep virtual departure pad clear; planting does not represent surveyed trees.
   const pad=xy([77.592,12.9745]);if(Math.hypot(x-pad[0],y-pad[1])<34)continue;
   const cell=Math.floor(x/40)+','+Math.floor(y/40);if((spatial.get(cell)||[]).some(r=>inPoly([x,y],r)))continue;
@@ -80,7 +82,7 @@ export async function installDistrict(map){
  const geo={type:'FeatureCollection',features:data.features.filter(f=>f.properties._layer==='building')};
  const context=contextModule.createBuildingContext(map,bbox);
  const firstSymbol=map.getStyle().layers.find(l=>l.type==='symbol')?.id;
- map.addSource('district-pick',{type:'geojson',data:geo});map.addLayer({id:'district-pick',type:'fill-extrusion',source:'district-pick',minzoom:14.4,paint:{'fill-extrusion-height':['max',3,['coalesce',['get','render_height'],8]],'fill-extrusion-opacity':0}},firstSymbol);
+ map.addSource('district-pick',{type:'geojson',data:geo});map.addLayer({id:'district-pick',type:'fill-extrusion',source:'district-pick',minzoom:13.7,paint:{'fill-extrusion-height':['max',3,['coalesce',['get','render_height'],8]],'fill-extrusion-opacity':0}},firstSymbol);
  map.addSource('district-green',{type:'geojson',data:{type:'FeatureCollection',features:data.features.filter(f=>f.properties._layer==='landcover')}});
  const firstRoad=map.getStyle().layers.find(l=>l['source-layer']==='transportation')?.id;
  map.addLayer({id:'district-green',type:'fill',source:'district-green',paint:{'fill-color':['match',['get','class'],'wood','#587448','grass','#819769','sand','#d0c3a1','#a0a583']}},firstRoad);
@@ -90,7 +92,7 @@ export async function installDistrict(map){
  map.addLayer({id:'district-detail',type:'custom',renderingMode:'3d',onAdd(m,gl){renderer=new T.WebGLRenderer({canvas:m.getCanvas(),context:gl,antialias:true});renderer.autoClear=false;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;renderer.shadowMap.needsUpdate=true;},render(gl,args){if(!shown)return;structure.visible=buildingsVisible;vegetation.visible=treesVisible;ground.visible=buildingsVisible||treesVisible;camera.projectionMatrix.fromArray(args.defaultProjectionData.mainMatrix).multiply(matrix);renderer.resetState();{const submitStart=performance.now();renderer.render(scene,camera);window.recordCityRender?.('District',renderer,performance.now()-submitStart);}}},firstSymbol);
  const label=document.createElement('label');label.className='toggle';label.innerHTML='<span>Detailed central district</span><input id="detail-toggle" type="checkbox" checked>';document.querySelector('#nature').closest('fieldset').appendChild(label);
  const note=document.createElement('div');note.id='detail-note';note.textContent='CBD study · Landmark reconstruction in progress';document.body.appendChild(note);
- function visibility(){const center=map.getCenter();const near=center.lng>bbox[0]-.006&&center.lng<bbox[2]+.006&&center.lat>bbox[1]-.006&&center.lat<bbox[3]+.006;const value=enabled&&map.getZoom()>=14.4&&near;if(value!==shown){shown=value;map.setFilter('city-buildings',null);map.setLayoutProperty('city-buildings','visibility',shown?'none':buildingsVisible?'visible':'none');context.setVisible(shown&&buildingsVisible);map.setLayoutProperty('district-pick','visibility',shown&&buildingsVisible?'visible':'none');map.setLayoutProperty('district-green','visibility',shown?'visible':'none');map.triggerRepaint();}note.hidden=!shown;}
+ function visibility(){const center=map.getCenter();const near=center.lng>bbox[0]-.006&&center.lng<bbox[2]+.006&&center.lat>bbox[1]-.006&&center.lat<bbox[3]+.006;const value=enabled&&map.getZoom()>=13.7&&near;if(value!==shown){shown=value;map.setFilter('city-buildings',['==',['literal',1],0]);map.setLayoutProperty('city-buildings','visibility',shown?'none':buildingsVisible?'visible':'none');context.setVisible(shown&&buildingsVisible);map.setLayoutProperty('district-pick','visibility',shown&&buildingsVisible?'visible':'none');map.setLayoutProperty('district-green','visibility',shown?'visible':'none');map.triggerRepaint();}note.hidden=!shown;}
  document.querySelector('#detail-toggle').onchange=e=>{enabled=e.target.checked;visibility();};
  document.querySelector('#buildings').addEventListener('change',e=>{buildingsVisible=e.target.checked;map.setLayoutProperty('city-buildings','visibility',shown?'none':buildingsVisible?'visible':'none');context.setVisible(shown&&buildingsVisible);map.setLayoutProperty('district-pick','visibility',shown&&buildingsVisible?'visible':'none');renderer.shadowMap.needsUpdate=true;map.triggerRepaint();});
  document.querySelector('#nature').addEventListener('change',e=>{treesVisible=e.target.checked;renderer.shadowMap.needsUpdate=true;map.triggerRepaint();});
@@ -108,6 +110,10 @@ export async function installDistrict(map){
   candidates.sort((a,b)=>area(a.rings[0])-area(b.rings[0]));const target=candidates[0];if(!target)return null;
   const p=target.properties;return{id:target.id,name:p.name||p.site||'Unnamed mapped building',height:Number(p.height??p.render_height)||8,source:'OpenStreetMap',note:'Model height is schematic',lng:origin[0]+point[0]/(metres*cos),lat:origin[1]+point[1]/metres};
  };
+ renderer.compile(scene,camera);
  visibility();map.triggerRepaint();window.districtState=()=>({loaded:true,landmarkParts:landmarks.parts,landmarkDomes:landmarks.domes,replacedParts,mappedColorBuildings,enabled,shown,buildings:buildingPolygons.length,trees:treePositions.length,roofDetails,duplicateBuildings,contextBuildings:context.count,drawGroups:structure.children.length+2});
  document.querySelector('#view-caption').textContent='Central district preview. Facades, roof details and planting are illustrative.';
 }
+
+
+

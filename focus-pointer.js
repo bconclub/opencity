@@ -1,6 +1,6 @@
 (() => {
  const root=document.createElement('div');root.id='flight-focus';root.hidden=true;
- root.innerHTML='<div class="focus-cross"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M30 4v8M30 48v8M4 30h8M48 30h8"/><circle class="focus-track" cx="30" cy="30" r="20"/><circle class="focus-progress" cx="30" cy="30" r="20" pathLength="100"/><circle cx="30" cy="30" r="2" class="focus-dot"/></svg></div><div class="focus-info" hidden><strong></strong><span></span><small></small></div>';
+ root.innerHTML='<div class="focus-cross"><svg viewBox="0 0 60 60" aria-hidden="true"><circle class="focus-track" cx="30" cy="30" r="20"/><circle class="focus-progress" cx="30" cy="30" r="20" pathLength="100"/><circle cx="30" cy="30" r="2" class="focus-dot"/></svg></div><div class="focus-info" hidden><strong></strong><span></span><small></small></div>';
  document.body.append(root);const ring=root.querySelector('.focus-progress'),info=root.querySelector('.focus-info');
  let target=null,since=0,last=0,progress=0;
  function reset(){target=null;since=0;progress=0;info.hidden=true;ring.style.strokeDashoffset='100';root.classList.remove('has-target');}

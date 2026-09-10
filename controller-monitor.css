@@ -1,0 +1,10 @@
+#controller-monitor{position:fixed;left:24px;bottom:28px;z-index:1200;max-width:min(360px,calc(100vw - 32px));color:#e9f5ed;background:#142f29ed;border:1px solid #577c6e;border-radius:12px;font:12px/1.45 system-ui;box-shadow:0 4px 20px #0003}
+#controller-monitor summary{display:flex;align-items:center;gap:8px;padding:10px 12px;cursor:pointer;list-style:none}
+#controller-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pad-led{width:8px;height:8px;background:#f0bb55;border-radius:50%;flex-shrink:0}
+[data-state=connected] .pad-led{background:#77d5a0}[data-state=active] .pad-led{background:#72ff9f;box-shadow:0 0 8px #72ff9f}
+.pad-details{padding:0 12px 12px}.pad-details p{margin:0 0 8px}.pad-details output{display:block;white-space:pre-wrap;font:11px/1.6 monospace}.pad-details button{margin-top:10px;padding:6px 10px;color:inherit;background:#335247;border:1px solid #739486;border-radius:6px}
+body.flight-active #controller-monitor,body.auto-active #controller-monitor{bottom:auto;top:70px}
+@media(max-width:600px){#controller-monitor{left:12px;bottom:auto;top:58px;max-width:calc(100vw - 130px);font-size:10px}#controller-monitor summary{padding:7px 9px}#controller-monitor[open]{max-width:calc(100vw - 24px)}body.flight-active #controller-monitor,body.auto-active #controller-monitor{top:58px}}
+
+@media(max-width:760px){body.flight-active #controller-monitor[data-state=missing]{display:none}}
