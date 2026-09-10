@@ -71,7 +71,8 @@ window.addEventListener('vehicle-color-change',e=>{if(paintHex(e.detail?.color))
 window.sendQuickEmote=emote=>{if(emote!=='hi'||!id||socket?.readyState!==WebSocket.OPEN)return false;socket.send(JSON.stringify({type:'emote',emote}));return true;};
 window.multiplayerState=()=>({name,room,id,status,public:isPublic,connected:!!id,players:players.map(p=>({...p})),lastMessage,pose:localPose()});
 if(room&&!validRoom(room)){room='';notice.textContent='Invalid invite. Start a new meetup.';}
-render();dispatch();if(room&&name)connect();else promptName();
+function enterWhenReady(){render();dispatch();if(room&&name)connect();else promptName();}
+if(window.cityBootReady)enterWhenReady();else window.addEventListener('city-ready',enterWhenReady,{once:true});
 
 let riding=document.body.classList.contains('flight-active');
 new MutationObserver(()=>{const next=document.body.classList.contains('flight-active');if(next&&!riding)panel.open=false;riding=next;}).observe(document.body,{attributes:true,attributeFilter:['class']});
