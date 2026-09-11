@@ -6,7 +6,8 @@ const {selectCoverage} = require('./select-coverage.cjs');
 const {chromium} = require('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const root = path.resolve(__dirname, '../..');
 const source = path.join(root, 'vidhana-streets.osm');
-const output = path.join(__dirname, 'coverage-500');
+const includeSemantics = process.argv.includes('--semantics');
+const output = path.join(__dirname, includeSemantics ? 'coverage-500-semantic' : 'coverage-500');
 const server = http.createServer((req, res) => {
   const files = {'/module.mjs': 'D:/CodexTools/OSM2World/osm2world-core-web.mjs', '/input.osm': source};
   if (files[req.url]) {
@@ -39,14 +40,14 @@ const server = http.createServer((req, res) => {
     });
     const selected = selectCoverage(elements, [77.5908, 12.9798], 500);
     if (selected.missingNodeWays.length) throw Error('Incomplete source highway references: ' + selected.missingNodeWays.join(','));
-    const converted = await page.evaluate(async input => {
+    const converted = await page.evaluate(async ({input, includeSemantics}) => {
       const {O2WConverter, loadO2WConfig} = await import('/module.mjs');
       const config = await new Promise((resolve, reject) => loadO2WConfig(location.origin + '/style.properties', {lod: '2', mapProjection: 'MetricMapProjection'}, resolve, reject));
       const converter = new O2WConverter(); converter.setConfig(config);
       const start = performance.now();
       const meshes = await new Promise((resolve, reject) => converter.convertJson(JSON.stringify(input), resolve, reject));
-      return {conversionMs: performance.now() - start, geometry: meshes.map(m => ({positions: Array.from(m.positions()), normals: Array.from(m.normals()), indices: Array.from(m.indices()), uvs: Array.from(m.uvs()), color: Array.from(m.color()), texture: m.baseColorTexture()}))};
-    }, selected.input);
+      return {conversionMs: performance.now() - start, geometry: meshes.map(m => ({positions: Array.from(m.positions()), normals: Array.from(m.normals()), indices: Array.from(m.indices()), uvs: Array.from(m.uvs()), color: Array.from(m.color()), texture: m.baseColorTexture(), ...(includeSemantics ? {name: typeof m.name === 'function' ? m.name() : null, materialName: typeof m.materialName === 'function' ? m.materialName() : null} : {})}))};
+    }, {input: selected.input, includeSemantics});
     if (errors.length) throw Error(errors.join('\n'));
     for (const mesh of converted.geometry) {
       if (![...mesh.positions, ...mesh.normals, ...mesh.indices].every(Number.isFinite)) throw Error('Non-finite converter geometry');

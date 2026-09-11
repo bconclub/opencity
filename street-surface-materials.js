@@ -37,12 +37,17 @@ export function prepareStreetSurfaces(root){
    const value=mat.color.r;
    // The audited asset batches use converter defaults: white paint, .55
    // concrete, .4 paving and .3 asphalt (stored in glTF linear colour).
-   const paint=value>.6;
+   const explicit=Object.hasOwn(mat.userData,'streetSurfaceRole');
+   const role=explicit?mat.userData.streetSurfaceRole:value>.6?'marking':value>.2?'concrete':value>.1?'paving':'asphalt';
+   const styles={marking:{color:'#ecebe2',map:null},concrete:{color:'#a6a9ab',map:concrete},paving:{color:'#92958d',map:concrete},asphalt:{color:'#626b70',map:asphalt}};
    // These are dry matte surfaces; vertex-lit diffuse shading avoids spending
    // per-pixel metallic BRDF work on a near-zero-specular pavement material.
    // Restrained visual match to the documented 2019 Ambedkar Veedhi photo.
    // Material batch identification comes from the export, not pixel surveying.
-   const replacement=new THREE.MeshLambertMaterial({side:mat.side,color:paint?'#ecebe2':value>.2?'#a6a9ab':value>.1?'#92958d':'#626b70',map:paint?null:value>.1?concrete:asphalt});
+   // Explicit source/unknown roles retain their linear source colour. Sign
+   // whites and red surfaces must never fall into the legacy gray-road test.
+   const replacement=new THREE.MeshLambertMaterial({side:mat.side,...(Object.hasOwn(styles,role)?styles[role]:{color:mat.color,map:null})});
+   replacement.userData.streetSurfaceRole=role;
    mat.dispose();return replacement;
   });
   mesh.material=Array.isArray(mesh.material)?replacements:replacements[0];
