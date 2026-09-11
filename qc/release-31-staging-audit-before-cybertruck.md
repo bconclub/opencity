@@ -9,19 +9,7 @@
 - Full staging manifest:108unique source files, plus generated `vercel.json`.
 - All108source files are present in output and have matching SHA256 hashes.
 - Generated Vercel configuration matches the staging script, including no-store release discovery and no-cache service-worker headers.
-- 167 unique source/path dependency pairs checked. No missing local dependency or hash mismatch was found. The earlier audit counted repeated literals separately (175 references).
-
-## Cybertruck refresh
-
-Refreshed after the parent restaged the promoted Cybertruck and geometry-derived wheelbase integration. Five source files changed, and all five staged copies match their new source hashes:
-
-- `assets/vehicles/cybertruck.glb`
-- `assets/vehicles/previews/cybertruck.webp`
-- `blender-vehicle.js`
-- `multiplayer-render.js`
-- `vehicle-tuning.js`
-
-The original reports are preserved as `qc/release-31-staging-audit-before-cybertruck.json` and `qc/release-31-staging-audit-before-cybertruck.md`. The full manifest remains 108 source files; the unexpected-file inventory and KITT comparison integrity are unchanged.
+-175direct dependency references checked. No missing local dependency or hash mismatch was found.
 
 Dependency checks cover static imports and requests, HTML/CSS references, local asset literals, helper-loaded road JSON, service-worker registration, street metadata atlas URL, all current dynamic vehicle-model loader outcomes, six current picker preview images and external-resource references inside GLBs. Remote CDN, map and room-server availability was not tested by this offline audit.
 

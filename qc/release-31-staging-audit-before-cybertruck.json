@@ -13,7 +13,7 @@
   "actualFileCount": 114,
   "missingManifestFiles": [],
   "sourceHashMismatches": [],
-  "directDependencyCount": 167,
+  "directDependencyCount": 175,
   "missingDirectDependencies": [],
   "unexpectedStagedNamesOnly": [
     ".gitignore",
@@ -110,8 +110,8 @@
     },
     {
       "path": "assets/vehicles/cybertruck.glb",
-      "sha256": "e6ad2ff4ffc3b4ee4de73600f28eb264e2fc3b3fac65f31ebb0d4f50cda4fc05",
-      "bytes": 623688,
+      "sha256": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b",
+      "bytes": 429708,
       "match": true
     },
     {
@@ -158,8 +158,8 @@
     },
     {
       "path": "assets/vehicles/previews/cybertruck.webp",
-      "sha256": "a71955478726639a4fff9e823e697fbce34b2dc8fbc9505e2c7af137801862f6",
-      "bytes": 15402,
+      "sha256": "0aac078686eb638fbac7481a4e9119491c253afd9b607506c9abca64a141efc1",
+      "bytes": 14690,
       "match": true
     },
     {
@@ -230,8 +230,8 @@
     },
     {
       "path": "blender-vehicle.js",
-      "sha256": "ddd671c7408099ac1eacc5629d6765a8b5615f32e32a7d726d1445e4bef00dc7",
-      "bytes": 4470,
+      "sha256": "49918c61c5fd70fd306c00090b0c35f7907b799fb27c4d8368edc2fcc6b2b45a",
+      "bytes": 4427,
       "match": true
     },
     {
@@ -458,8 +458,8 @@
     },
     {
       "path": "multiplayer-render.js",
-      "sha256": "fe9adc39f4bea36d63ebb07a48ac4882371a0419260c44436e9a9e322968ddb8",
-      "bytes": 11552,
+      "sha256": "4994187f7164f37c4c615d19792e90e6e8732803d6962cf42a73fe4ad346ddef",
+      "bytes": 11538,
       "match": true
     },
     {
@@ -650,8 +650,8 @@
     },
     {
       "path": "vehicle-tuning.js",
-      "sha256": "94a1079e12f90d2d8f025e4fa31c3df11bb2752facb4f047402d921a6e307d4f",
-      "bytes": 2259,
+      "sha256": "52cca7998769d48a8644b0680096ed0438750ea0657b2aa46617addb63b0f0b8",
+      "bytes": 2254,
       "match": true
     },
     {
@@ -698,6 +698,11 @@
     },
     {
       "source": "app.js",
+      "path": "cbd-dome.js",
+      "kind": "module/request"
+    },
+    {
+      "source": "app.js",
       "path": "vidhana-streets.js",
       "kind": "module/request"
     },
@@ -722,6 +727,11 @@
       "kind": "module/request"
     },
     {
+      "source": "assets/streets/vidhana-streets.json",
+      "path": "assets/streets/vidhana-coverage.png",
+      "kind": "metadata URL"
+    },
+    {
       "source": "auto-asset.js",
       "path": "vehicle-colors.js",
       "kind": "module/request"
@@ -730,6 +740,11 @@
       "source": "auto-asset.js",
       "path": "assets/auto/auto-rickshaw.glb",
       "kind": "module/request"
+    },
+    {
+      "source": "auto-asset.js",
+      "path": "assets/auto/auto-rickshaw.glb",
+      "kind": "asset literal"
     },
     {
       "source": "auto-mode.js",
@@ -940,16 +955,6 @@
       "source": "driving-data.js",
       "path": "auto-roads.js",
       "kind": "module/request"
-    },
-    {
-      "source": "driving-data.js",
-      "path": "district-data.json",
-      "kind": "direct/helper literal"
-    },
-    {
-      "source": "driving-data.js",
-      "path": "vidhana-road-network.json",
-      "kind": "direct/helper literal"
     },
     {
       "source": "flight-physics.js",
@@ -1207,13 +1212,13 @@
       "kind": "module/request"
     },
     {
-      "source": "local-cache.js",
-      "path": "sw.js",
-      "kind": "direct/helper literal"
+      "source": "multiplayer-client.js",
+      "path": "vehicle-colors.js",
+      "kind": "module/request"
     },
     {
       "source": "multiplayer-client.js",
-      "path": "vehicle-colors.js",
+      "path": "multiplayer-config.json",
       "kind": "module/request"
     },
     {
@@ -1297,6 +1302,11 @@
       "kind": "module/request"
     },
     {
+      "source": "npc-traffic.js",
+      "path": "assets/streets/furniture.json",
+      "kind": "asset literal"
+    },
+    {
       "source": "player-stats-ui.js",
       "path": "player-stats.js",
       "kind": "module/request"
@@ -1337,6 +1347,11 @@
       "kind": "module/request"
     },
     {
+      "source": "street-furniture.js",
+      "path": "assets/streets/furniture.json",
+      "kind": "asset literal"
+    },
+    {
       "source": "street-patch.js",
       "path": "street-surface-materials.js",
       "kind": "module/request"
@@ -1355,6 +1370,16 @@
       "source": "street-patch.js",
       "path": "street-surface-coverage.js",
       "kind": "module/request"
+    },
+    {
+      "source": "street-patch.js",
+      "path": "assets/streets/vidhana-streets.glb",
+      "kind": "asset literal"
+    },
+    {
+      "source": "street-patch.js",
+      "path": "assets/streets/vidhana-streets.json",
+      "kind": "asset literal"
     },
     {
       "source": "supercar-model.js",
@@ -1462,6 +1487,11 @@
       "kind": "module/request"
     },
     {
+      "source": "vehicle-shell.js",
+      "path": "auto-mode.js",
+      "kind": "module/request"
+    },
+    {
       "source": "vidhana-streets.js",
       "path": "vidhana-street-data.json",
       "kind": "module/request"
@@ -1487,39 +1517,49 @@
       "kind": "validated dynamic model outcome"
     },
     {
+      "source": "driving-data.js",
+      "path": "district-data.json",
+      "kind": "literal passed through request helper"
+    },
+    {
+      "source": "driving-data.js",
+      "path": "vidhana-road-network.json",
+      "kind": "literal passed through request helper"
+    },
+    {
+      "source": "local-cache.js",
+      "path": "sw.js",
+      "kind": "service worker registration"
+    },
+    {
       "source": "vehicle-shell.js",
       "path": "assets/vehicles/previews/cycle.webp",
-      "kind": "validated dynamic picker outcome"
+      "kind": "validated current picker dynamic preview"
     },
     {
       "source": "vehicle-shell.js",
       "path": "assets/vehicles/previews/helicopter.webp",
-      "kind": "validated dynamic picker outcome"
+      "kind": "validated current picker dynamic preview"
     },
     {
       "source": "vehicle-shell.js",
       "path": "assets/vehicles/previews/auto.webp",
-      "kind": "validated dynamic picker outcome"
+      "kind": "validated current picker dynamic preview"
     },
     {
       "source": "vehicle-shell.js",
       "path": "assets/vehicles/previews/cybertruck.webp",
-      "kind": "validated dynamic picker outcome"
+      "kind": "validated current picker dynamic preview"
     },
     {
       "source": "vehicle-shell.js",
       "path": "assets/vehicles/previews/cybercab.webp",
-      "kind": "validated dynamic picker outcome"
+      "kind": "validated current picker dynamic preview"
     },
     {
       "source": "vehicle-shell.js",
       "path": "assets/vehicles/previews/kitt.webp",
-      "kind": "validated dynamic picker outcome"
-    },
-    {
-      "source": "assets/streets/vidhana-streets.json",
-      "path": "assets/streets/vidhana-coverage.png",
-      "kind": "metadata asset URL"
+      "kind": "validated current picker dynamic preview"
     }
   ],
   "blockers": [],
@@ -1553,14 +1593,5 @@
     "Stale model files are not referenced by the current runtime or service-worker cache; their presence does not block this build but staging is not an exact clean mirror.",
     "No .vercel or .gitignore contents were read or included.",
     "External CDN/map/server availability is outside this offline staging audit."
-  ],
-  "directDependencyCountMethod": "Unique source/path pairs, previously repeated literals were counted separately.",
-  "changedSinceBeforeCybertruck": [
-    "assets/vehicles/cybertruck.glb",
-    "assets/vehicles/previews/cybertruck.webp",
-    "blender-vehicle.js",
-    "multiplayer-render.js",
-    "vehicle-tuning.js"
-  ],
-  "refreshReason": "Promoted Cybertruck and geometry-derived wheelbase integration"
+  ]
 }
