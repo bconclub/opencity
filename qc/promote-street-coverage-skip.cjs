@@ -1,0 +1,12 @@
+const fs=require('node:fs'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const candidate=fs.readFileSync('qc/street-coverage-skip-candidate.js');
+assert.equal(sha(candidate),'af14ada4dbf36f3b24de72061d3f68bac5fbf8ed04a28c1fdf399b35f2a00c82');
+const before=fs.readFileSync('street-surface-coverage.js');
+assert.equal(before.toString().replaceAll('\r\n','\n'),fs.readFileSync('qc/street-coverage-skip-baseline.js','utf8').replaceAll('\r\n','\n'));
+const performance=JSON.parse(fs.readFileSync('qc/street-coverage-skip-performance.json'));
+assert.equal(performance.passed,true,'Cumulative frame-time gate must pass');
+fs.writeFileSync('street-surface-coverage.js',candidate);
+assert.equal(sha(fs.readFileSync('street-surface-coverage.js')),sha(candidate));
+fs.writeFileSync('qc/street-coverage-skip-promotion.json',JSON.stringify({beforeSHA256:sha(before),runtimeSHA256:sha(candidate),performanceEvidence:'qc/street-coverage-skip-performance.json',exactTestedBytes:true,vehicleAssetsChanged:false},null,2)+'\n');
+console.log('Promoted exact visually checked, benchmarked street shader. Vehicle assets unchanged.');

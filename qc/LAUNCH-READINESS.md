@@ -20,7 +20,7 @@ verified production version remains 0.0.30.
 | Historical pedestrian lamp | Model study only | `frontage-placement-assessment.md`; none of 37 mapped lamp nodes can be confidently assigned that fixture from available photos. |
 | Auto driver | Source audited, unsuitable as realistic driver | `auto-driver-source-audit.md`; supplied character is seated astronaut, current auto remains empty. |
 | Physical phone performance | Unverified | Headless relative timings are not actual phone FPS. |
-| Cumulative release performance | Road gate failed, optimization required | Full repository v0.0.30 snapshot versus `4e4a19a`: matched KITT road ABBA 322.78 to 357.22 ms, +10.67%, above the 10% limit. Per-change passes do not override this result. Keep release out of production pending a tested optimization. |
+| Cumulative release performance | Updated shader passes observed road and aerial gates | `street-coverage-skip-report.md`: whole v0.0.30 versus `4e4a19a` plus exact shader, road +7.38%, aerial -2.81%. Earlier road +10.67% failure remains preserved. Timing variance prevents claiming an isolated shader speedup; physical-phone performance is still unverified. |
 | Production release | Pending | Vercel authentication expired. Earlier automatic approval review rejected a default-main push; review-branch pushes remain available. |
 
 Latest verified pushed code/audit head: `4e4a19a` on `codex/release-0.0.31`.

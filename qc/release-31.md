@@ -26,6 +26,11 @@ local changes below have not been deployed.
   tested speckling, with no extra draws or road geometry. Missing/corrupt coverage
   falls back to original materials. Relative frame-time gate passes in aerial
   and near views; physical-phone and moving-camera checks remain outstanding.
+  A further shader fast path skips distant-atlas sampling at zero blend, with
+  derivatives computed outside the conditional. Exact rendered candidate now
+  passes cumulative release gates: +7.38% road and -2.81% aerial versus the
+  repository v0.0.30 snapshot. Earlier +10.67% road failure remains recorded;
+  variability means these runs do not isolate the shader's individual speedup.
 - Revised Knight Rider body, rear hatch, spoiler, lamps and wheels now use the
   reviewed 24,512-triangle Blender reconstruction, with matching picker preview.
   Default black paint matches between clients; saved colour choices remain.

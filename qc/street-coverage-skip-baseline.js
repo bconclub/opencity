@@ -66,20 +66,13 @@ export async function enableStreetCoverage(root,options){
      uniform sampler2D streetCoverageAtlas;
      uniform vec2 streetCoverageMin; uniform vec2 streetCoverageSpan;`)
      .replace('#include <map_fragment>',`#include <map_fragment>
-      // Gradients are evaluated uniformly, before the fragment-dependent branch.
-      vec2 coverageDx=dFdx(vCoverageXY),coverageDy=dFdy(vCoverageXY);
-      vec2 coverageUV=(vCoverageXY-streetCoverageMin)/streetCoverageSpan;
-      vec2 coverageUVDx=coverageDx/streetCoverageSpan,coverageUVDy=coverageDy/streetCoverageSpan;
-      float metricPixel=max(length(coverageDx),length(coverageDy));
-      float coverageBlend=smoothstep(0.18,0.65,metricPixel)*step(0.999,vCoverageGround);
-      if(coverageBlend>0.0){
-       vec4 coverage=textureGrad(streetCoverageAtlas,coverageUV,coverageUVDx,coverageUVDy);
-       coverageBlend*=step(0.0001,coverage.a);
-       diffuseColor.rgb=mix(diffuseColor.rgb,coverage.rgb/max(coverage.a,0.0001),coverageBlend);
-      }`);
+      vec4 coverage=texture2D(streetCoverageAtlas,(vCoverageXY-streetCoverageMin)/streetCoverageSpan);
+      float metricPixel=max(length(dFdx(vCoverageXY)),length(dFdy(vCoverageXY)));
+      float coverageBlend=smoothstep(0.18,0.65,metricPixel)*step(0.999,vCoverageGround)*step(0.0001,coverage.a);
+      diffuseColor.rgb=mix(diffuseColor.rgb,coverage.rgb/max(coverage.a,0.0001),coverageBlend);`);
    };
    const priorKey=cacheKey.call(material);
-   material.customProgramCacheKey=()=>priorKey+'|street-source-coverage-v2-grad-branch-review';material.needsUpdate=true;
+   material.customProgramCacheKey=()=>priorKey+'|street-source-coverage-v1';material.needsUpdate=true;
   }
   status='ready';
  }catch(error){
