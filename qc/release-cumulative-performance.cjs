@@ -33,7 +33,3 @@ const frameSample=()=>new Promise(resolve=>{const layers={},frames=[],npcSamples
  }
  }finally{await browser.close();const comparisons=Object.fromEntries(['road','aerial'].map(pose=>{const mean=mode=>{const r=runs.filter(x=>x.mode===mode&&x.pose===pose);return r.reduce((n,x)=>n+x.meanMs,0)/r.length;},regressionPercent=(mean('candidate')/mean('baseline')-1)*100;return[pose,{baselineMeanMs:mean('baseline'),candidateMeanMs:mean('candidate'),regressionPercent,passed:runs.filter(x=>x.pose===pose).length===4&&regressionPercent<=10}];}));fs.writeFileSync('qc/release-cumulative-performance.json',JSON.stringify({date:new Date().toISOString(),scope:'Complete first-party immutable repository release snapshots; room/cache modules excluded equally. KITT static road and helicopter static aerial,1100x760,Edge SwiftShader,60forced repaint frames/run,ABBA. Relative same software-rendered device gate; not physical mobile FPS or historical live byte identity. First-party bytes are uncompressed fulfilled response bodies; total encoded network includes variable third-party map/CDN content.',snapshotManifest:manifest,comparisons,runs,passed:runs.length===8&&Object.values(comparisons).every(c=>c.passed)},null,2));console.log(JSON.stringify({comparisons,runs:runs.length}));if(runs.length!==8||Object.values(comparisons).some(c=>!c.passed))process.exitCode=1;}
 })().catch(e=>{console.error(e);process.exitCode=1});
-
-
-
-

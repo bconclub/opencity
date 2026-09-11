@@ -13,5 +13,3 @@ for(const [mode,ref]of Object.entries(refs)){
 }
 const manifest={prepared:new Date().toISOString(),baselineJustification:'Immutable repository release f1fd503 version0.0.30. cb70fa3 documents a live0.0.30 audit, but historical production byte identity is not asserted. Candidate is the complete immutable repository source identified below, not a partial module overlay.',excludedForBoth:['multiplayer-client.js is fulfilled empty','local-cache.js is fulfilled empty','service workers blocked; fresh contexts and network cache disabled'],snapshots:result};
 fs.writeFileSync('qc/release-cumulative-snapshots.json',JSON.stringify(manifest,null,2));console.log(Object.fromEntries(Object.entries(result).map(([k,v])=>[k,{commit:v.commit,version:v.packageVersion,files:v.files.length,bytes:v.snapshotBytes,manifestSha256:v.manifestSha256}])));
-
-
