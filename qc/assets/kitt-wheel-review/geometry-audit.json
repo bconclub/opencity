@@ -1,0 +1,195 @@
+{
+  "status": "PENDING_VISUAL_REVIEW",
+  "source_sha256": "b4247a09d36ec41fa1a550374d50e11d7006a124cafc03cc8decc4a83cc4393d",
+  "candidate_sha256": "24093595b5c25dd6f2c343fe98dd422a31a08a3b515f9cac12f838e01496d899",
+  "triangles_after": 20224,
+  "triangle_reduction": 4288,
+  "nodes_and_materials_identical": true,
+  "original_binary_prefix_identical": true,
+  "wheels": [
+    {
+      "node": "Wheel_FL_RubberTrim",
+      "before": 2436,
+      "after": 1364,
+      "removed_tread_tubes": 40,
+      "tyre_segments_before": 48,
+      "tyre_segments_after": 24,
+      "retained_vertex_positions": true,
+      "retained_rim_trim_triangles": 932
+    },
+    {
+      "node": "Wheel_FR_RubberTrim",
+      "before": 2436,
+      "after": 1364,
+      "removed_tread_tubes": 40,
+      "tyre_segments_before": 48,
+      "tyre_segments_after": 24,
+      "retained_vertex_positions": true,
+      "retained_rim_trim_triangles": 932
+    },
+    {
+      "node": "Wheel_RL_RubberTrim",
+      "before": 2436,
+      "after": 1364,
+      "removed_tread_tubes": 40,
+      "tyre_segments_before": 48,
+      "tyre_segments_after": 24,
+      "retained_vertex_positions": true,
+      "retained_rim_trim_triangles": 932
+    },
+    {
+      "node": "Wheel_RR_RubberTrim",
+      "before": 2436,
+      "after": 1364,
+      "removed_tread_tubes": 40,
+      "tyre_segments_before": 48,
+      "tyre_segments_after": 24,
+      "retained_vertex_positions": true,
+      "retained_rim_trim_triangles": 932
+    }
+  ],
+  "unchanged_meshes": [
+    {
+      "node": "Body_BodyPaint",
+      "buffer_view_sha256": {
+        "0:POSITION": "3ea700fa3c4dacff27416fd1392ce1889a608ee0a2af10b820e3b3c1f2e74ae2",
+        "0:NORMAL": "ca4650d7152c20be9b193f0f8b102b3750faa95fd2022319f86285e632d6b1ee",
+        "0:TEXCOORD_0": "75a7f7992f3bd8c8e935494c599cbc04915858c894bb91866df2fc258f9135f8",
+        "0:indices": "4201d09781d1a44fff866d9d1bb6328e280ddb2fae721d9e27ff948d2b1a88b8"
+      }
+    },
+    {
+      "node": "Body_RubberTrim",
+      "buffer_view_sha256": {
+        "0:POSITION": "0654362eb69dd1557ff717fef65a835daf1f51fde162227c4736d030b3b40453",
+        "0:NORMAL": "c74c874b3794afb24f36f8bda328f98289bf8e7e11879acb06d787d07fd11797",
+        "0:TEXCOORD_0": "88b4ff4c28f426c957ca6af4af80e6709584102d1d841c83c0339655ca87fbf9",
+        "0:COLOR_0": "cf9f1e67bfa181851a1b65fe9a1ed1eebac47e4951dc89003d1ff64822ac6b90",
+        "0:indices": "24d8f86b8590b339286c6c1af22b0e2e67f88518baf1a7260c6e2c5c0929decb"
+      }
+    },
+    {
+      "node": "Body_Glass",
+      "buffer_view_sha256": {
+        "0:POSITION": "2fa685933635865d4d0085f9cdf0d30c0f29fc577351e74d001b6a7a8e0acd49",
+        "0:NORMAL": "bd35d28d1ccb98f934c4c4533b8dd6b4422fb3e3db0a4188dccbb7474b7a78b9",
+        "0:TEXCOORD_0": "be4d610df2ee6f796653a26044094586f37593bce73788060c948d7348e5491c",
+        "0:indices": "d9d0bc34cb6609d5ef4bfebce06de53383c02aea4687943738cc2c3109b8d2e2"
+      }
+    },
+    {
+      "node": "Body_Lamps",
+      "buffer_view_sha256": {
+        "0:POSITION": "b5d0f8bb4dd8f690273c488f946e30c0570a62b05c124fccb42a0ed7c77890b6",
+        "0:NORMAL": "31ea9bc7fa592dcfbf8835813c0853e6712ff1ec2ea23c0a76727b735cbc6df9",
+        "0:TEXCOORD_0": "3206a4d93ea944ea42e411ae2d4719b7e43b617b00b139c34321cb64bed94cfc",
+        "0:indices": "45ba5aa236882c7095795c6b669d335b1460beeff66cdb4a1992483a1aeb5370"
+      }
+    },
+    {
+      "node": "Scanner_0",
+      "buffer_view_sha256": {
+        "0:POSITION": "49f822a4bc7797fa877be3c61beb9369d186efe1c32259672e430e99c3f3f63e",
+        "0:NORMAL": "c395bee4fe3ba958be43a7e4d63107b256839f7b26567e164591fee73205543e",
+        "0:TEXCOORD_0": "e8bcefe899c4e2b6a38db7944f7e9b2e97c59d88e9dc8c0b223ab9f28c4c7152",
+        "0:indices": "8a50dc79305b5bd228171dacbbeea1b2fc898edc4e2463ed2da8fc91839d2586"
+      }
+    },
+    {
+      "node": "Scanner_1",
+      "buffer_view_sha256": {
+        "0:POSITION": "49f822a4bc7797fa877be3c61beb9369d186efe1c32259672e430e99c3f3f63e",
+        "0:NORMAL": "c395bee4fe3ba958be43a7e4d63107b256839f7b26567e164591fee73205543e",
+        "0:TEXCOORD_0": "e8bcefe899c4e2b6a38db7944f7e9b2e97c59d88e9dc8c0b223ab9f28c4c7152",
+        "0:indices": "8a50dc79305b5bd228171dacbbeea1b2fc898edc4e2463ed2da8fc91839d2586"
+      }
+    },
+    {
+      "node": "Scanner_2",
+      "buffer_view_sha256": {
+        "0:POSITION": "49f822a4bc7797fa877be3c61beb9369d186efe1c32259672e430e99c3f3f63e",
+        "0:NORMAL": "c395bee4fe3ba958be43a7e4d63107b256839f7b26567e164591fee73205543e",
+        "0:TEXCOORD_0": "e8bcefe899c4e2b6a38db7944f7e9b2e97c59d88e9dc8c0b223ab9f28c4c7152",
+        "0:indices": "8a50dc79305b5bd228171dacbbeea1b2fc898edc4e2463ed2da8fc91839d2586"
+      }
+    },
+    {
+      "node": "Scanner_3",
+      "buffer_view_sha256": {
+        "0:POSITION": "49f822a4bc7797fa877be3c61beb9369d186efe1c32259672e430e99c3f3f63e",
+        "0:NORMAL": "c395bee4fe3ba958be43a7e4d63107b256839f7b26567e164591fee73205543e",
+        "0:TEXCOORD_0": "e8bcefe899c4e2b6a38db7944f7e9b2e97c59d88e9dc8c0b223ab9f28c4c7152",
+        "0:indices": "8a50dc79305b5bd228171dacbbeea1b2fc898edc4e2463ed2da8fc91839d2586"
+      }
+    },
+    {
+      "node": "Scanner_4",
+      "buffer_view_sha256": {
+        "0:POSITION": "49f822a4bc7797fa877be3c61beb9369d186efe1c32259672e430e99c3f3f63e",
+        "0:NORMAL": "c395bee4fe3ba958be43a7e4d63107b256839f7b26567e164591fee73205543e",
+        "0:TEXCOORD_0": "e8bcefe899c4e2b6a38db7944f7e9b2e97c59d88e9dc8c0b223ab9f28c4c7152",
+        "0:indices": "8a50dc79305b5bd228171dacbbeea1b2fc898edc4e2463ed2da8fc91839d2586"
+      }
+    },
+    {
+      "node": "Scanner_5",
+      "buffer_view_sha256": {
+        "0:POSITION": "49f822a4bc7797fa877be3c61beb9369d186efe1c32259672e430e99c3f3f63e",
+        "0:NORMAL": "c395bee4fe3ba958be43a7e4d63107b256839f7b26567e164591fee73205543e",
+        "0:TEXCOORD_0": "e8bcefe899c4e2b6a38db7944f7e9b2e97c59d88e9dc8c0b223ab9f28c4c7152",
+        "0:indices": "8a50dc79305b5bd228171dacbbeea1b2fc898edc4e2463ed2da8fc91839d2586"
+      }
+    },
+    {
+      "node": "Scanner_6",
+      "buffer_view_sha256": {
+        "0:POSITION": "49f822a4bc7797fa877be3c61beb9369d186efe1c32259672e430e99c3f3f63e",
+        "0:NORMAL": "c395bee4fe3ba958be43a7e4d63107b256839f7b26567e164591fee73205543e",
+        "0:TEXCOORD_0": "e8bcefe899c4e2b6a38db7944f7e9b2e97c59d88e9dc8c0b223ab9f28c4c7152",
+        "0:indices": "8a50dc79305b5bd228171dacbbeea1b2fc898edc4e2463ed2da8fc91839d2586"
+      }
+    },
+    {
+      "node": "Scanner_7",
+      "buffer_view_sha256": {
+        "0:POSITION": "49f822a4bc7797fa877be3c61beb9369d186efe1c32259672e430e99c3f3f63e",
+        "0:NORMAL": "c395bee4fe3ba958be43a7e4d63107b256839f7b26567e164591fee73205543e",
+        "0:TEXCOORD_0": "e8bcefe899c4e2b6a38db7944f7e9b2e97c59d88e9dc8c0b223ab9f28c4c7152",
+        "0:indices": "8a50dc79305b5bd228171dacbbeea1b2fc898edc4e2463ed2da8fc91839d2586"
+      }
+    },
+    {
+      "node": "Wheel_FL_BodyPaint",
+      "buffer_view_sha256": {
+        "0:POSITION": "c2676c218e6b1cda91aa1c08217852560d1d58aa80eff6c95ebbf0bc8effe054",
+        "0:NORMAL": "a54f9a9e278046ee17e1769479af504d91cb4a6c0ed47fb50d8e29cd0f1babe3",
+        "0:indices": "9ab332b44d7bc45b9aa81109fc1914681faaba9950857f4a274e26be49207164"
+      }
+    },
+    {
+      "node": "Wheel_FR_BodyPaint",
+      "buffer_view_sha256": {
+        "0:POSITION": "a742f8fd28bb35d5bf22dbdee415069d576c68f7809328bb49345a8451906830",
+        "0:NORMAL": "9f2932c482229c8a7d60ef990baf28b9511a6d0a5dbf24455451dec8039370dc",
+        "0:indices": "2ef82c5cfaf6920c17ab600b5f31f78ce225eddde8bf1b8ae320d34a02a8eeb4"
+      }
+    },
+    {
+      "node": "Wheel_RL_BodyPaint",
+      "buffer_view_sha256": {
+        "0:POSITION": "361689000f1bb7cf7ec86838714ceab83fe8d08a3332b9f8b08307d1e48c84b5",
+        "0:NORMAL": "8f4f578a8896f7214887aaf3b23953d1d8a26700f04560115b6ab3112f371ee1",
+        "0:indices": "9ab332b44d7bc45b9aa81109fc1914681faaba9950857f4a274e26be49207164"
+      }
+    },
+    {
+      "node": "Wheel_RR_BodyPaint",
+      "buffer_view_sha256": {
+        "0:POSITION": "80d6b19913fa112804f8875f7cf265f6ac62fe9500a51e1c516eb059a94bd928",
+        "0:NORMAL": "ad7500e6fcbd818c00c0874ab07f26ab6c53fe6a061dd4db14f4a90c152ed2b1",
+        "0:indices": "2ef82c5cfaf6920c17ab600b5f31f78ce225eddde8bf1b8ae320d34a02a8eeb4"
+      }
+    }
+  ],
+  "limits": "24-sided tyre radius retains 0.321m vertex extrema; tread tubes removed. Maximum polygon sagitta 2.747mm versus 0.687mm at 48 segments. All rim vertices/indices remain unchanged. Original unused indices/vertices remain in binary, so file size is not optimized."
+}
