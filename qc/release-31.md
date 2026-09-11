@@ -13,6 +13,9 @@ the high-fidelity CBD goal or replace the live KITT with the workshop candidate.
 - Blender vehicle wheels bind mesh or empty pivots, spin, steer independently and
   use a radius measured without dependence on remote body tilt.
 - More varied facade materials and two invalid inverted building heights fixed.
+- Vidhana Soudha domes retain smooth primitive normals after batching, with
+  distinct facade treatments across storeys. Footprint and source heights remain
+  unchanged. This is a schematic refinement; the portico and stairs still need work.
 - Fine metric street grain; restrained neutral-gray concrete guided by historical
   frontage photographs. Geometry, routes and mapped crossings remain unchanged.
 - A separate `/kitt-workshop.html` compares the current model and a 24,212-triangle
@@ -52,3 +55,8 @@ The live KITT geometry remains approximate. The separate new candidate also need
 shape refinement. Landmark architecture, street fixtures and foliage require more
 reference-led work; physical-phone performance remains unverified. No Unity
 migration, room-server update, payments, or city-wide expansion is included.
+
+The later Vidhana-only change was checked separately against commit c3f917f:
+250.278 to 250.417 ms (+0.055%) in whole-scene ABBA, unchanged 45 custom draw
+calls, 21,100 fewer triangles and 1,709 additional source bytes. Existing diagonal
+wall stripes remain under investigation. See `vidhana-landmark-performance.md`.
