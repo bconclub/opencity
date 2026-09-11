@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "cpuOnly": true,
+  "productionGetter": 3.6350008501589044,
+  "expectedGeometryDistance": 3.635000859697285,
+  "wheelRadius": 0.43924999237060547,
+  "actualRemoteExpression": "Math.abs(p.speed)>.5&&dt>0?Math.atan(headingDelta*RAD/dt*(m.wheelbase||(e.vehicle===\"cybertruck\"?3.3:2.5654))/p.speed):0",
+  "forwardAndReverseFormula": true
+}

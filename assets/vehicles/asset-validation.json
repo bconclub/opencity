@@ -4,21 +4,32 @@
     "materials": 4,
     "objects": 55,
     "bounds_min": [
-      -1.3000000715255737,
-      -2.865000009536743,
-      0
+      -1.2066500186920166,
+      -3.012099981307983,
+      -4.996003610813204e-16
     ],
     "bounds_max": [
-      1.3000000715255737,
-      2.7750000953674316,
-      1.99220609664917
+      1.2066500186920166,
+      2.670799970626831,
+      1.7937999963760378
     ],
     "glb_up": "+Y",
     "glb_forward": "-Z",
     "source_up": "+Z",
     "source_forward": "+Y",
     "wheel_axle": "local X",
-    "textures": 0
+    "textures": 2,
+    "embeddedImages": 1,
+    "bytes": 623688,
+    "sha256": "e6ad2ff4ffc3b4ee4de73600f28eb264e2fc3b3fac65f31ebb0d4f50cda4fc05",
+    "wheelbase_m": 3.635,
+    "wheel_radius_m": 0.43925,
+    "front_track_m": 1.7769999504089355,
+    "rear_track_m": 1.772,
+    "bounds_frame": "Source Z-up, +Y forward, matching runtime after GLB rotation",
+    "status": "Original reconstruction, revision2 promoted after matched views, full-app two-client checks and relative performance gate. Simplified details remain.",
+    "previous_runtime": "cybertruck-review/runtime-before-promotion.glb",
+    "previous_runtime_sha256": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b"
   },
   "cybercab": {
     "triangles": 5002,

@@ -1,0 +1,10 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),{pathToFileURL}=require('node:url');
+(async()=>{const T=await import(pathToFileURL('D:/CodexTools/OSM2World/three.module.js').href),b=fs.readFileSync('assets/vehicles/cybertruck-review/revision2/cybertruck-reference.glb'),j=JSON.parse(b.subarray(20,20+b.readUInt32LE(12)));
+const root=new T.Group();for(const node of j.nodes.filter(n=>/^Wheel_[FR][LR]$/.test(n.name))){const w=new T.Mesh(new T.BoxGeometry(.285,.8785,.8785),new T.MeshBasicMaterial());w.name=node.name;w.position.fromArray(node.translation);root.add(w);}
+global.__truckLoader=class{async loadAsync(){return{scene:root};}};
+let src=fs.readFileSync('blender-vehicle.js','utf8').replace("import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';","const GLTFLoader=globalThis.__truckLoader;").replace("import {paintHex,selectedVehicleColor} from './vehicle-colors.js';","const paintHex=()=>null,selectedVehicleColor=()=>null;");
+const {createBlenderVehicle}=await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64')),model=createBlenderVehicle(T,'cybertruck');assert.equal(model.wheelbase,undefined);await model.ready;
+const expected=Math.hypot(3.635,.0025);assert(Math.abs(model.wheelbase-expected)<1e-6);assert(Math.abs(model.wheelRadius-.43925)<1e-6);
+const remote=fs.readFileSync('multiplayer-render.js','utf8'),expression=remote.match(/const steer=([^;]+);m.updateDrive/)[1],infer=new Function('m','e','p','headingDelta','dt','RAD','return '+expression);
+for(const speed of [-4,2,15]){const delta=.7,dt=.05,value=infer(model,{vehicle:'cybertruck'},{speed},delta,dt,Math.PI/180);assert(Math.abs(value-Math.atan(delta*Math.PI/180/dt*expected/speed))<1e-7);}
+const report={passed:true,cpuOnly:true,productionGetter:model.wheelbase,expectedGeometryDistance:expected,wheelRadius:model.wheelRadius,actualRemoteExpression:expression,forwardAndReverseFormula:true};fs.writeFileSync('qc/cybertruck-runtime-steering-cpu.json',JSON.stringify(report,null,2));console.log(report);})().catch(e=>{console.error(e);process.exitCode=1});

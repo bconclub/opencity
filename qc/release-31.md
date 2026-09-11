@@ -31,6 +31,10 @@ local changes below have not been deployed.
   Default black paint matches between clients; saved colour choices remain.
   Wheelbase/radius match the model; traffic clearance covers its actual length.
   The original model is preserved for comparisons. This is not manufacturer CAD.
+- Cybertruck dimensions and axle placement match the selected published specs;
+  red rear emission, wheel covers and bed geometry are repaired. Two-client
+  driving/paint tests and the +2.699% relative frame-time gate pass. The picker
+  matches the new model. Remote steering now uses measured model wheelbase.
 - Build validation catches static imports accidentally added to classic scripts.
 
 ## Validation

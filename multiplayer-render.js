@@ -87,7 +87,7 @@ async function installRenderer(map) {
     const headingDelta=(((target.heading-p.heading)%360+540)%360-180)*f;p.heading+=headingDelta;
     e.point.copy(position(p));e.angle+=dt*(e.vehicle!=='helicopter'?p.speed/(e.model?.wheelRadius||.31):21);
     if(e.model){const m=e.model;m.group.position.copy(e.point);m.group.rotation.z=-p.heading*RAD;
-     if(e.vehicle!=='helicopter'){m.body.rotation.set(p.pitch,p.roll,0);if(m.updateDrive){const steer=Math.abs(p.speed)>.5&&dt>0?Math.atan(headingDelta*RAD/dt*(e.vehicle==="cybertruck"?3.3:2.5654)/p.speed):0;m.updateDrive(e.angle,steer,now/1000);}else m.wheels.forEach(wheel=>wheel.rotation.x=-e.angle);if(m.pedals)m.pedals.rotation.x=-e.angle*.4;m.updateRider?.(-e.angle*.4);}
+     if(e.vehicle!=='helicopter'){m.body.rotation.set(p.pitch,p.roll,0);if(m.updateDrive){const steer=Math.abs(p.speed)>.5&&dt>0?Math.atan(headingDelta*RAD/dt*(m.wheelbase||(e.vehicle==="cybertruck"?3.3:2.5654))/p.speed):0;m.updateDrive(e.angle,steer,now/1000);}else m.wheels.forEach(wheel=>wheel.rotation.x=-e.angle);if(m.pedals)m.pedals.rotation.x=-e.angle*.4;m.updateRider?.(-e.angle*.4);}
      else{m.body.rotation.set(p.pitch,p.roll,0,'YXZ');m.rotor.rotation.z=e.angle;m.tailRotor.rotation.x=-e.angle*3.7;m.rotorDisc.material.opacity=.085;}
     }
     // Project vehicle roof/rotor in 3D. Ground-only markers would drift below aircraft.
