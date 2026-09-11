@@ -107,12 +107,10 @@ export async function installDistrict(map){
   // conservative display base, and expose the count instead of inventing height.
   const base=mappedBase>=0&&mappedBase<height?mappedBase:0;if(base!==mappedBase)invalidElevatedBases++;
   const kind=materialFor(feature,height,rings);
-  for(const [ringIndex,ring]of rings.entries()){
+  for(const [ringIndex,ring]of rings.entries())for(let i=0;i<ring.length;i++){
    const signedArea=ring.reduce((sum,a,j)=>{const b=ring[(j+1)%ring.length];return sum+a[0]*b[1]-b[0]*a[1];},0);const flip=ringIndex===0?signedArea<0:signedArea>0;
-   for(let i=0;i<ring.length;i++){
    const a=ring[i],c=ring[(i+1)%ring.length];wall(a,c,base,height,kind,flip);
    const len=Math.hypot(c[0]-a[0],c[1]-a[1]);if(len>1.5)wall(a,c,height,height+.85,5,flip);
-  }
   }
   const contour=rings[0].map(p=>new T.Vector2(...p)),holes=rings.slice(1).map(r=>r.map(p=>new T.Vector2(...p))),all=[...contour,...holes.flat()];
   for(const tri of T.ShapeUtils.triangulateShape(contour,holes)){const points=tri.map(i=>all[i]);triangle(4,...points.map(p=>[p.x,p.y,height+.06]),...points.map(p=>[p.x/8,p.y/8]));}

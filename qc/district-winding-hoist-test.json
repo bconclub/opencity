@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "hashes": {
+    "candidate": "e96864f35666e75bb20d011db0f4ef61e587d45dbc57e506e93c93cb3d3dc276",
+    "hoisted": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b"
+  },
+  "buckets": 18,
+  "materials": 18,
+  "triangles": 54937,
+  "checks": [
+    "All generated bucket position and UV arrays exactly equal",
+    "All material JSON configs and shader hooks equal, excluding random UUID",
+    "Texture generator source unchanged; canvas texture generation omitted equally",
+    "Procedural PRNG state unchanged",
+    "Post-building scene/render source identical"
+  ],
+  "note": "CPU construction equivalence only, no timing measured. Exact steady-frame geometry/material equivalence preserves prior render benchmark applicability; startup performance remains unmeasured."
+}

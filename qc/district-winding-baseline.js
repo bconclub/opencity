@@ -77,16 +77,16 @@ export async function installDistrict(map){
 #endif`);};
   material.customProgramCacheKey=()=> 'district-packed-roughness-v1';return material;
  }
- const materials=[0,1,2,3].map(k=>packedMaterial({...texture(k),roughness:1,metalness:k===0?.18:0,side:T.FrontSide,shadowSide:T.DoubleSide}));
+ const materials=[0,1,2,3].map(k=>packedMaterial({...texture(k),roughness:1,metalness:k===0?.18:0,side:T.DoubleSide}));
  const roofMaps=texture(4);materials.push(packedMaterial({...roofMaps,roughness:1,side:T.DoubleSide}),new T.MeshStandardMaterial({color:0xc6c8bf,roughness:.88}),new T.MeshStandardMaterial({color:0x425054,roughness:.65,metalness:.15}));
  const mappedMaterials=new Map();let mappedColorBuildings=0;
- function materialFor(feature,height,rings){const colour=feature.properties.colour;if(typeof colour==='string'&&/^#[0-9a-f]{6}$/i.test(colour)){mappedColorBuildings++;if(!mappedMaterials.has(colour)){mappedMaterials.set(colour,materials.length);materials.push(packedMaterial({...texture(3,colour),roughness:1,side:T.FrontSide,shadowSide:T.DoubleSide}));buckets.push({p:[],uv:[]});}return mappedMaterials.get(colour);}
+ function materialFor(feature,height,rings){const colour=feature.properties.colour;if(typeof colour==='string'&&/^#[0-9a-f]{6}$/i.test(colour)){mappedColorBuildings++;if(!mappedMaterials.has(colour)){mappedMaterials.set(colour,materials.length);materials.push(packedMaterial({...texture(3,colour),roughness:1,side:T.DoubleSide}));buckets.push({p:[],uv:[]});}return mappedMaterials.get(colour);}
  // Stable per-footprint fallback, explicitly illustrative where material data is absent.
  const hash=rings[0].reduce((n,p)=>(Math.imul(n,31)+Math.round(p[0]*10)+Math.round(p[1]*10))|0,17);
  return height>32?0:1+Math.abs(hash)%3;
  }
  function triangle(bucket,a,b,c,ua=[0,0],ub=[1,0],uc=[1,1]){buckets[bucket].p.push(...a,...b,...c);buckets[bucket].uv.push(...ua,...ub,...uc);}
- function wall(a,b,base,height,kind,flip=false){const len=Math.hypot(b[0]-a[0],b[1]-a[1]),u=Math.max(1,Math.round(len/(kind===0?2.5:4))),v=Math.max(1,Math.round((height-base)/3.4));const p=[a[0],a[1],base],q=[b[0],b[1],base],r=[b[0],b[1],height],s=[a[0],a[1],height];if(flip){triangle(kind,p,r,q,[0,0],[u,v],[u,0]);triangle(kind,p,s,r,[0,0],[0,v],[u,v]);}else{triangle(kind,p,q,r,[0,0],[u,0],[u,v]);triangle(kind,p,r,s,[0,0],[u,v],[0,v]);}}
+ function wall(a,b,base,height,kind){const len=Math.hypot(b[0]-a[0],b[1]-a[1]),u=Math.max(1,Math.round(len/(kind===0?2.5:4))),v=Math.max(1,Math.round((height-base)/3.4));const p=[a[0],a[1],base],q=[b[0],b[1],base],r=[b[0],b[1],height],s=[a[0],a[1],height];triangle(kind,p,q,r,[0,0],[u,0],[u,v]);triangle(kind,p,r,s,[0,0],[u,v],[0,v]);}
  const box=new T.BoxGeometry(1,1,1).toNonIndexed().getAttribute('position');
  function addBox(x,y,z,w,d,h,kind=5,angle=0){const c=Math.cos(angle),s=Math.sin(angle),b=buckets[kind];for(let i=0;i<box.count;i++){const px=box.getX(i)*w,py=box.getY(i)*d;b.p.push(x+px*c-py*s,y+px*s+py*c,z+box.getZ(i)*h);b.uv.push(box.getX(i)+.5,box.getY(i)+.5);}}
  // Each building now has one visible owner; no depth-bias workaround is needed.
@@ -107,12 +107,9 @@ export async function installDistrict(map){
   // conservative display base, and expose the count instead of inventing height.
   const base=mappedBase>=0&&mappedBase<height?mappedBase:0;if(base!==mappedBase)invalidElevatedBases++;
   const kind=materialFor(feature,height,rings);
-  for(const [ringIndex,ring]of rings.entries()){
-   const signedArea=ring.reduce((sum,a,j)=>{const b=ring[(j+1)%ring.length];return sum+a[0]*b[1]-b[0]*a[1];},0);const flip=ringIndex===0?signedArea<0:signedArea>0;
-   for(let i=0;i<ring.length;i++){
-   const a=ring[i],c=ring[(i+1)%ring.length];wall(a,c,base,height,kind,flip);
-   const len=Math.hypot(c[0]-a[0],c[1]-a[1]);if(len>1.5)wall(a,c,height,height+.85,5,flip);
-  }
+  for(const ring of rings)for(let i=0;i<ring.length;i++){
+   const a=ring[i],c=ring[(i+1)%ring.length];wall(a,c,base,height,kind);
+   const len=Math.hypot(c[0]-a[0],c[1]-a[1]);if(len>1.5)wall(a,c,height,height+.85,5);
   }
   const contour=rings[0].map(p=>new T.Vector2(...p)),holes=rings.slice(1).map(r=>r.map(p=>new T.Vector2(...p))),all=[...contour,...holes.flat()];
   for(const tri of T.ShapeUtils.triangulateShape(contour,holes)){const points=tri.map(i=>all[i]);triangle(4,...points.map(p=>[p.x,p.y,height+.06]),...points.map(p=>[p.x/8,p.y/8]));}

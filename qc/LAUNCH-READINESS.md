@@ -9,6 +9,7 @@ verified production version remains 0.0.30.
 | Cybercab wheel repair | Committed and review-branch CI passed | `cybercab-rig-acceptance.md`; moving wheels, local/remote driving verified. Original Meshy body artefacts remain. |
 | Vidhana smooth domes and facade hierarchy | Committed `f6eb2be`, review-branch CI passed | `vidhana-landmark-performance.md`; unchanged frame cost, 21,100 fewer triangles. |
 | Diagonal landmark shadow bands | Runtime correction passes local visual, geometry and performance gates | `landmark-stripe-diagnosis.md`; frame time effectively unchanged, same draw calls. Coverage is local, not all CBD. |
+| Generic facade shading and culling | Integrated locally after independent and visual review | `district-winding-candidate-review.md`; 30,202 inward triangles corrected, position/UV associations retained. Hoisted construction code produces identical geometry/materials; thin parapets remain single sheets. |
 | Portico, stairs and coherent building heights | Review-only architecture candidate, full-scene views captured | `vidhana-architecture-report.md`; foyer closes green void, sourced dimensions separated from estimates. Candidate stair collider preserves nearby roads. Thin-line sampling and integration remain unresolved. |
 | KITT shape | Revised Blender model and matching picker preview promoted locally | `kitt-runtime-acceptance.md`; two-player driving/paint/scanner checks pass. Relative full-scene frame time +7.37%, within 10% gate. Original reconstruction, not manufacturer CAD. |
 | Cybertruck dimensions and lamp export | Reviewed revision2 promoted locally with matching picker preview | `cybertruck-runtime-acceptance.md`; two-client drive/paint/lamp checks and geometry-based remote steering pass. Relative frame time +2.699%. First rejected candidate preserved; details remain schematic. |
@@ -20,12 +21,17 @@ verified production version remains 0.0.30.
 | Historical pedestrian lamp | Model study only | `frontage-placement-assessment.md`; none of 37 mapped lamp nodes can be confidently assigned that fixture from available photos. |
 | Auto driver | Source audited, unsuitable as realistic driver | `auto-driver-source-audit.md`; supplied character is seated astronaut, current auto remains empty. |
 | Physical phone performance | Unverified | Headless relative timings are not actual phone FPS. |
-| Cumulative release performance | Updated shader passes observed road and aerial gates | `street-coverage-skip-report.md`: whole v0.0.30 versus `4e4a19a` plus exact shader, road +7.38%, aerial -2.81%. Earlier road +10.67% failure remains preserved. Timing variance prevents claiming an isolated shader speedup; physical-phone performance is still unverified. |
-| Production release | Pending | Vercel authentication expired. Earlier automatic approval review rejected a default-main push; review-branch pushes remain available. |
+| Cumulative release performance | Shader and facade corrections pass observed road and aerial gates | `district-winding-candidate-review.md`: whole v0.0.30 versus `334a146` plus measured facade correction, road +2.69%, aerial +4.53%. Hoisted integrated version is geometry/material/render-code equivalent. Earlier shader pass and road +10.67% failure are preserved. Timing variance prevents isolated speedup claims; physical-phone performance remains unverified. |
+| Production release | Pending | Vercel authentication expired. Automatic approval review has also blocked the latest review-branch push; explicit approval is pending. |
 
 Latest verified pushed code/audit head: `d170f22` on `codex/release-0.0.31`.
-The accepted shader is committed locally as `334a146`, ready for the next review push.
-The push completed using the existing `bconclub` account explicitly selected;
+The accepted shader is committed locally as `334a146`; local evidence continues
+through `3bc0d85`. The attempted upload of these 43 prepared source, model-review
+and QC files to the same review branch was rejected twice by automatic approval
+review, including after destination and file checks. The reviewer requires explicit
+approval for this exact repository upload. An approval request covering through
+`3bc0d85` is pending. Do not retry or use another route while it remains unanswered.
+The earlier successful push completed using the existing `bconclub` account explicitly selected;
 the earlier credential-manager wait did not require a new account. Last completed
 GitHub CI checked `f6eb2be` successfully. The later code has local verification,
 but a new PR-description update and CI dispatch were rejected by automatic
@@ -45,16 +51,18 @@ Coverage filtering and release staging correction are committed in `27049dd`.
 Cybertruck integration is committed as `1d11f02`; refreshed staging hashes are
 committed as `628bbad`; NPC corner braking is `4e4a19a`. These commits are pushed
 for review, not deployed. `release-31-staging-final.json` confirms all 108 staged
-runtime files match after corner braking and the accepted shader; only those two
-modules differ from the previous complete staging audit.
+runtime files match after corner braking, the accepted shader and facade correction;
+those three modules differ from the previous complete staging audit. The receipt
+records the prior committed base while the newly integrated facade change awaits
+its local commit.
 
 No claim that the full 500 m district, every vehicle, all junctions, or launch
 quality is complete. Payments, city-wide expansion and engine migration remain
 outside this release. Do not substitute experimental models or expanded streets
 only because a file exists or a syntax check passes.
 
-Current team responsibilities: street agent owns the isolated dome refinement;
-traffic agent checks enabled-route deadlocks using production simulation code;
-city agent prepares cumulative release performance verification;
-root owns integration and release checks. Rendering jobs run sequentially
+Current team responsibilities: city agent tests the isolated generic-facade
+winding correction against the full release baseline; review agent independently
+checks geometry and targeting effects; root reviews visuals and owns integration.
+Vehicle and traffic agents have delivered their recorded checks. Rendering jobs run sequentially
 to avoid corrupting performance comparisons; source/data work proceeds concurrently.
