@@ -20,7 +20,9 @@ verified production version remains 0.0.30.
 | Physical phone performance | Unverified | Headless relative timings are not actual phone FPS. |
 | Production release | Pending | Vercel authentication expired. Earlier automatic approval review rejected a default-main push; review-branch pushes remain available. |
 
-Latest pushed review head: `aff70dc` on `codex/release-0.0.31`. Last completed
+Latest verified pushed code/audit head: `628bbad` on `codex/release-0.0.31`.
+The push completed using the existing `bconclub` account explicitly selected;
+the earlier credential-manager wait did not require a new account. Last completed
 GitHub CI checked `f6eb2be` successfully. The later code has local verification,
 but a new PR-description update and CI dispatch were rejected by automatic
 approval review, including after repository/PR identity verification. An explicit
@@ -32,19 +34,20 @@ another route to perform them until approval arrives. Draft text is prepared in
 Additional local commits: `db204f5` corrects classified street export/grounding;
 `f2e2792` adds source routing safeguards and full-scene review;
 `41b5108` records the foyer/stairs/collision candidate; `7e2396f` isolates street
-marking aliasing. These commits are not pushed or deployed. KITT replacement
+marking aliasing. These commits are now pushed for review, not deployed. KITT replacement
 checks passed locally; integration is committed as `302af8b`, followed by measured
 bumper clearance in `15ddec2`. Loop clearance baseline is committed as `c8c4643`.
 Coverage filtering and release staging correction are committed in `27049dd`.
-These commits are local, not deployed.
+Cybertruck integration is committed as `1d11f02`; refreshed staging hashes are
+committed as `628bbad`. These commits are pushed for review, not deployed.
 
 No claim that the full 500 m district, every vehicle, all junctions, or launch
 quality is complete. Payments, city-wide expansion and engine migration remain
 outside this release. Do not substitute experimental models or expanded streets
 only because a file exists or a syntax check passes.
 
-Current team responsibilities: city agent owns architecture and road-depth
-diagnostics; traffic agent owns source eligibility and junction investigation;
-street agent verified export/runtime tests and now audits KITT integration;
-root owns export, integration and release checks. Rendering jobs run sequentially
+Current team responsibilities: street agent owns the isolated dome refinement;
+traffic agent checks enabled-route deadlocks using production simulation code;
+city agent prepares cumulative release performance verification;
+root owns integration and release checks. Rendering jobs run sequentially
 to avoid corrupting performance comparisons; source/data work proceeds concurrently.
