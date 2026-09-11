@@ -1,5 +1,5 @@
 {
-  "runtimeCommit": "4e4a19a",
+  "runtimeCommit": "334a1469d4342f4436a89711c4817e3ce4e6a931",
   "passed": true,
   "sourceFiles": [
     {
@@ -520,9 +520,9 @@
     },
     {
       "path": "street-surface-coverage.js",
-      "sha256": "56fd0770fe9d8067e27d173b9de5c9d727dbda52de6ccc2c2135e97be446ed6e",
-      "bytes": 6634,
-      "changedSinceAudit": false
+      "sha256": "af14ada4dbf36f3b24de72061d3f68bac5fbf8ed04a28c1fdf399b35f2a00c82",
+      "bytes": 7013,
+      "changedSinceAudit": true
     },
     {
       "path": "street-surface-materials.js",
@@ -653,7 +653,8 @@
   ],
   "dependencyPairsChecked": 167,
   "changedSinceAudit": [
+    "street-surface-coverage.js",
     "traffic-simulation.js"
   ],
-  "scope": "Refresh source/staged hashes and existing dependency presence after NPC curve braking. Earlier complete manifest and unexpected-name audit retained separately. No network or rendering test."
+  "scope": "Refresh source/staged hashes and existing dependency presence after accepted runtime changes. Earlier complete manifest and unexpected-name audit retained separately. No network or rendering test."
 }

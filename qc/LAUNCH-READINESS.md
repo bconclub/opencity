@@ -23,7 +23,8 @@ verified production version remains 0.0.30.
 | Cumulative release performance | Updated shader passes observed road and aerial gates | `street-coverage-skip-report.md`: whole v0.0.30 versus `4e4a19a` plus exact shader, road +7.38%, aerial -2.81%. Earlier road +10.67% failure remains preserved. Timing variance prevents claiming an isolated shader speedup; physical-phone performance is still unverified. |
 | Production release | Pending | Vercel authentication expired. Earlier automatic approval review rejected a default-main push; review-branch pushes remain available. |
 
-Latest verified pushed code/audit head: `4e4a19a` on `codex/release-0.0.31`.
+Latest verified pushed code/audit head: `d170f22` on `codex/release-0.0.31`.
+The accepted shader is committed locally as `334a146`, ready for the next review push.
 The push completed using the existing `bconclub` account explicitly selected;
 the earlier credential-manager wait did not require a new account. Last completed
 GitHub CI checked `f6eb2be` successfully. The later code has local verification,
@@ -44,8 +45,8 @@ Coverage filtering and release staging correction are committed in `27049dd`.
 Cybertruck integration is committed as `1d11f02`; refreshed staging hashes are
 committed as `628bbad`; NPC corner braking is `4e4a19a`. These commits are pushed
 for review, not deployed. `release-31-staging-final.json` confirms all 108 staged
-runtime files match after corner braking; only the traffic module differs from
-the previous complete staging audit.
+runtime files match after corner braking and the accepted shader; only those two
+modules differ from the previous complete staging audit.
 
 No claim that the full 500 m district, every vehicle, all junctions, or launch
 quality is complete. Payments, city-wide expansion and engine migration remain
