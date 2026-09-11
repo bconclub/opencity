@@ -72,6 +72,8 @@ all three relative gates pass. P95 is35.51/35.61/36.21ms, so uneven delivery
 remains. The final input-only fix and removal of the rejected AA startup probe
 do not change the measured AA-off geometry path; separate final touch/software
 smoke checks passed. All110 production staging files were refreshed and verified.
+The renderer and input fixes are committed locally as58c4ed4; the refreshed
+staging receipt records that runtime commit. Upload and production remain pending.
 
 The bounded asphalt material candidate is committed as a9ab537 and remains
 review-only. Root accepted its visible7.50m² continuity improvement, not the

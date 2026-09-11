@@ -11,7 +11,7 @@
 | Vehicle physics | Legal one-way spawning and manual/auto-roam transitions | Implemented and tested; documented in release evidence |
 | Street patch | Repair 500 m junction omission and asphalt mismatch | Rebuilt candidate closes measured gap. Matched native-GPU views accept a bounded 7.50 square metre asphalt material repair; native kerb slivers and joins still prevent broad promotion |
 | Street furniture | Match mapped lights to reference fixture shapes | Reference gaps recorded; no unsupported placements added |
-| Root | Visual acceptance, exact-file integration, staging and release | Renderer and mobile input fixes integrated; all110 staged files match. Asphalt material evidence committed a9ab537, AA rejection65e4fc0. Latest pushed review head remains d170f22; production unchanged |
+| Root | Visual acceptance, exact-file integration, staging and release | Renderer and mobile input fixes committed58c4ed4; all110 staged files match that runtime. Asphalt material evidence committed a9ab537, AA rejection65e4fc0. Latest pushed review head remains d170f22; production unchanged |
 
 Rendering and Blender jobs use one resource slot at a time so benchmarks remain comparable. Source review, script preparation and integration planning run concurrently.
 
