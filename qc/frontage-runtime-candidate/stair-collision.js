@@ -1,6 +1,6 @@
 // REVIEW ONLY. Compatible with auto-world.js collide(x,y,headingDegrees).
 // Input must use the same local metre origin as the driving world.
-import {vehicleFootprintCorners,convexFootprintContact} from './vehicle-footprint-candidate.js';
+import {vehicleFootprintCorners,convexFootprintContact} from './vehicle-footprint.js';
 export function createStairCollision(architecture,{radius=.78,halfLength=.7,includeLanding=false,getVehicleFootprint}={}){
  const s=architecture?.stairPlacement,a=architecture;
  if(!Array.isArray(s?.tangent)||s.tangent.length!==2||!Array.isArray(s?.outward)||s.outward.length!==2)throw Error('Stair basis required');

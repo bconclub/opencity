@@ -4,14 +4,14 @@
 
 | Owner | Deliverable | State |
 | --- | --- | --- |
-| City visuals | Vidhana frontage geometry and staircase filtering | Revised dome/columns/stairs preserve other landmarks and pass native four-pose performance gate, worst +3.49%. Stair moire remains visibly unacceptable; isolated filtering diagnosis underway. No geometry promotion |
-| Independent review | Passage clearance, stairs and automatic route access | Found mapped passage under landing blocked by old coarse collider. Isolated candidate opens58 false positives and preserves31,314 other outcomes. Browser drive-through and functional private-route exclusion underway |
+| City visuals | Vidhana frontage geometry and staircase filtering | Analytic stair shading accepted with shadows,45physical steps retained. Final native four-pose gate passes, worst +6.40%; timing drift documented. Independent integration audit found rejected rotation retained by physics, fix underway before promotion |
+| Independent review | Passage clearance, stairs and automatic route access | Actual two-client browser checks pass passage both ways, full-body front/side stair stops, private-route exclusion, pause/resume, remote rendering and real helicopter dwell. New steering-near-stair regression added after independent audit |
 | Blender vehicles | Audit supplied assets and original model links | No overlooked better supplied KITT/Cybertruck found. Original Sketchfab downloads disabled. Existing accepted rigged assets remain; source details in supplied-vehicle-inventory.md and original-sketchfab-availability.md |
 | Traffic behavior | Brake before sharp curves; verify queues and collision handling | Integrated; six fleet scenarios and runtime soak passed |
 | Vehicle physics | Legal one-way spawning and manual/auto-roam transitions | Implemented and tested; documented in release evidence |
-| Street patch | Combine verified street geometry and qualify routes | Internal kerb spear removed without changing road footprint. Single-car island-safe source route fixture passes, not yet qualified for traffic. Final combined asset assembly underway;22 boundary handoffs unverified |
+| Street patch | Combine verified street geometry and qualify routes | Missing source way1091198032 restored, native three-arm junction replaces malformed cap. Basic source-contiguous road arc extends to560.273m including width; detail stays500m.85 overlapping auto-road surfaces clipped, graph unchanged. Idle/active visual checks pass; southern join and cumulative timing remain |
 | Street furniture | Match mapped lights to reference fixture shapes | Reference gaps recorded; no unsupported placements added |
-| Root | Visual acceptance, exact-file integration, staging and release | Runtime remains58c4ed4. Candidate geometry, junction and focus evidence saved locally680fe7a. Focus tests remove hidden source geometry from selection and use measured model heights. Latest pushed review head remains d170f22; production unchanged |
+| Root | Visual acceptance, exact-file integration, staging and release | Frontage, focus, full-body stairs/passage and rejected-heading rollback integrated locally9df5546. Browser two-client checks and578 steering poses pass. Street composition receives final cumulative review next. Latest pushed review head remains d170f22; production unchanged |
 
 Rendering and Blender jobs use one resource slot at a time so benchmarks remain comparable. Source review, script preparation and integration planning run concurrently.
 
