@@ -1,0 +1,66 @@
+{
+  "status": "PASS_CPU_ONLY",
+  "bytes": 623020,
+  "sha256": "fde533618ee28e2a86ec4fb4c9c2d588ff8d6a507aef4afc7682819c11fdad15",
+  "triangles": 9072,
+  "materials": 4,
+  "size": [
+    2.413300037384033,
+    5.6828999519348145,
+    1.7937999963760383
+  ],
+  "bounds": {
+    "min": [
+      -1.2066500186920166,
+      -3.012099981307983,
+      -4.996003610813204e-16
+    ],
+    "max": [
+      1.2066500186920166,
+      2.670799970626831,
+      1.7937999963760378
+    ]
+  },
+  "wheelbaseMeasuredLeftCenters": 3.6350008501589044,
+  "wheelbaseLongitudinal": 3.634999990463257,
+  "frontTrack": 1.7769999504089355,
+  "rearTrack": 1.772,
+  "wheelRadii": [
+    0.43924999237060547,
+    0.43924999237060547,
+    0.43924999237060547,
+    0.43924999237060547
+  ],
+  "pivotDrift": 0,
+  "resetError": 0,
+  "steerAngles": {
+    "FL": -0.32336420134273075,
+    "FR": -0.3811857271691155,
+    "RL": 0,
+    "RR": 0
+  },
+  "archRaySamples": 144,
+  "archTireIntersections": [],
+  "paintGlassRubberIsolation": true,
+  "lampEmissiveTexture": true,
+  "limitation": "CPU texture placeholders; no visual lamp-color/material acceptance. Left center distance includes 2.5mm front/rear lateral offset, longitudinal wheelbase is3.635m.",
+  "decodedLampPalettePNG": {
+    "size": [
+      2,
+      1
+    ],
+    "pixels": [
+      [
+        191,
+        232,
+        255
+      ],
+      [
+        255,
+        5,
+        2
+      ]
+    ],
+    "tailRedFrontWhiteUVVerified": true
+  }
+}
