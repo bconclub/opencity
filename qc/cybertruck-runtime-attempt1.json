@@ -1,0 +1,1074 @@
+{
+  "remoteSteeringKnownMismatch": {
+    "runtimeWheelbase": 3.3,
+    "candidateWheelbase": 3.635,
+    "tangentUnderestimatePercent": 9.215955983493807
+  },
+  "status": "FAIL",
+  "base": "http://127.0.0.1:4173/",
+  "started": "2026-09-11T02:03:14.063Z",
+  "candidatePhysicsOverride": {
+    "wheelbase": 3.635,
+    "wheelRadius": 0.43925
+  },
+  "variants": [
+    {
+      "variant": "before",
+      "assetSHA256": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b",
+      "assetBytes": 429708,
+      "requests": [
+        {
+          "who": "driver",
+          "assetSHA256": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b",
+          "url": "http://127.0.0.1:4173/assets/vehicles/cybertruck.glb"
+        },
+        {
+          "who": "observer",
+          "assetSHA256": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b",
+          "url": "http://127.0.0.1:4173/assets/vehicles/cybertruck.glb"
+        }
+      ],
+      "checks": [
+        "no stored choice: initial local/remote Cybertruck share explicit white palette before paint events"
+      ],
+      "screenshots": [
+        "qc/cybertruck-runtime-before-parked-driver.png",
+        "qc/cybertruck-runtime-before-parked-observer.png",
+        "qc/cybertruck-runtime-before-error-driver.png",
+        "qc/cybertruck-runtime-before-error-observer.png"
+      ],
+      "stage": "manual throttle and local/remote steering",
+      "stageStarted": 1789092264103,
+      "stages": [
+        {
+          "name": "prepare two fresh clients",
+          "time": "2026-09-11T02:03:14.403Z"
+        },
+        {
+          "name": "driver city loading and room creation",
+          "time": "2026-09-11T02:03:14.965Z"
+        },
+        {
+          "name": "observer city loading and room join",
+          "time": "2026-09-11T02:03:26.961Z"
+        },
+        {
+          "name": "Cybertruck departure and parked comparison",
+          "time": "2026-09-11T02:04:15.171Z"
+        },
+        {
+          "name": "record wheel rest poses",
+          "time": "2026-09-11T02:04:24.090Z"
+        },
+        {
+          "name": "manual throttle and local/remote steering",
+          "time": "2026-09-11T02:04:24.103Z"
+        }
+      ],
+      "parkedLocal": {
+        "auto": {
+          "vehicleType": "cybertruck",
+          "visualHeight": 1.9922060966491701,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "speed": 0,
+          "distance": 0,
+          "heading": 167.64748841537732,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": [
+            77.59367788233789,
+            12.973414495969442
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0,
+            "yaw": 0,
+            "roll": 0,
+            "pitch": 0,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "network": {
+          "name": "Cybertruck Driver",
+          "room": "9b72b1b7a5a3fdc5196b471e26859d32",
+          "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+              "name": "Cybertruck Driver",
+              "pose": {
+                "vehicle": "cybertruck",
+                "lng": 77.59367788233789,
+                "lat": 12.973414495969442,
+                "altitude": 0,
+                "heading": 167.64748841537732,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "white"
+              }
+            },
+            {
+              "id": "9c55122a-9ec8-48eb-8615-c25eaab80bdc",
+              "name": "Cybertruck Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "white"
+              }
+            }
+          ],
+          "lastMessage": 1789092260844,
+          "pose": {
+            "vehicle": "cybertruck",
+            "lng": 77.59367788233789,
+            "lat": 12.973414495969442,
+            "altitude": 0,
+            "heading": 167.64748841537732,
+            "pitch": 0,
+            "roll": 0,
+            "speed": 0
+          }
+        },
+        "remote": {
+          "ownId": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+          "remoteCount": 0,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+              "own": true,
+              "vehicle": "cybertruck",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "white",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "Cybertruck Driver · You",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "lights": [
+              {
+                "name": "Front_light_bar",
+                "map": false,
+                "emissiveMap": false,
+                "sample": null
+              },
+              {
+                "name": "Tail_light_bar",
+                "map": false,
+                "emissiveMap": false,
+                "sample": null
+              }
+            ],
+            "role": "local",
+            "remotePlayerId": null,
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "01baf89d-7e99-416e-9156-51d10c545f22",
+                "color": "e8ede7",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "RubberTrim",
+                "uuid": "cd3ed6ba-ad66-4a8e-8a25-ee4a24cdb553",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Glass",
+                "uuid": "cda8549e-4a58-49f4-a25c-ddbd7026b61e",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "b44daaea-99d2-4784-ad2a-15c013a68b70",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "5555c98d-82bc-4fda-b990-42d970ff9e3c",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 3.6100000143051147,
+            "radius": 0.4699999988079071,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [],
+            "visualHeight": 1.9922060966491701
+          }
+        ]
+      },
+      "parkedRemote": {
+        "auto": {
+          "vehicleType": "auto",
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": false,
+          "paused": false,
+          "boost": null,
+          "speed": 0,
+          "distance": 0,
+          "heading": 0,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": null,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "network": {
+          "name": "Cybertruck Observer",
+          "room": "9b72b1b7a5a3fdc5196b471e26859d32",
+          "id": "9c55122a-9ec8-48eb-8615-c25eaab80bdc",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+              "name": "Cybertruck Driver",
+              "pose": {
+                "vehicle": "cybertruck",
+                "lng": 77.59367788233789,
+                "lat": 12.973414495969442,
+                "altitude": 0,
+                "heading": 167.64748841537732,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "white"
+              }
+            },
+            {
+              "id": "9c55122a-9ec8-48eb-8615-c25eaab80bdc",
+              "name": "Cybertruck Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "white"
+              }
+            }
+          ],
+          "lastMessage": 1789092260844,
+          "pose": {
+            "vehicle": "spectator",
+            "lng": 77.5945,
+            "lat": 12.9755,
+            "altitude": 0,
+            "heading": 0,
+            "pitch": 0,
+            "roll": 0,
+            "speed": 0
+          }
+        },
+        "remote": {
+          "ownId": "9c55122a-9ec8-48eb-8615-c25eaab80bdc",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+              "own": false,
+              "vehicle": "cybertruck",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "#e8ede7",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "Cybertruck Driver",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "lights": [
+              {
+                "name": "Front_light_bar",
+                "map": false,
+                "emissiveMap": false,
+                "sample": null
+              },
+              {
+                "name": "Tail_light_bar",
+                "map": false,
+                "emissiveMap": false,
+                "sample": null
+              }
+            ],
+            "role": "remote",
+            "remotePlayerId": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "0be648f8-5ffd-4121-986c-da2694e36295",
+                "color": "e8ede7",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "RubberTrim",
+                "uuid": "eba8268b-2c46-4b21-9863-0220fdc17528",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Glass",
+                "uuid": "83d03b35-baac-420b-a81d-7214306cc064",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "ce35c444-6402-45b8-9b85-6a7ca174c076",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "0cf38c3d-faca-4180-9429-5ebc0ab3bbc6",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 3.6100000143051147,
+            "radius": 0.4699999988079071,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [],
+            "visualHeight": 1.9922060966491701
+          }
+        ]
+      },
+      "parkedPose": {
+        "vehicle": "cybertruck",
+        "lng": 77.59367788233789,
+        "lat": 12.973414495969442,
+        "altitude": 0,
+        "heading": 167.64748841537732,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0
+      },
+      "manualLocal": {
+        "auto": {
+          "vehicleType": "cybertruck",
+          "visualHeight": 1.9922060966491701,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0.24404091969193373,
+            "active": false,
+            "locked": false
+          },
+          "speed": 3.97550286362011,
+          "distance": 1.2202045984596686,
+          "heading": 168.1843076107641,
+          "choice": "straight",
+          "wheelAngle": 2.5961800033075666,
+          "position": [
+            77.59368028337018,
+            12.97340378736272
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0.3069956124264767,
+            "yaw": 0.12119286488893864,
+            "roll": -0.0004390288439172182,
+            "pitch": 0.04704392226641278,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": [
+            "ArrowUp",
+            "ArrowRight"
+          ]
+        },
+        "network": {
+          "name": "Cybertruck Driver",
+          "room": "9b72b1b7a5a3fdc5196b471e26859d32",
+          "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+              "name": "Cybertruck Driver",
+              "pose": {
+                "vehicle": "cybertruck",
+                "lng": 77.59368028337018,
+                "lat": 12.97340378736272,
+                "altitude": 0,
+                "heading": 168.1843076107641,
+                "pitch": 0.04704392226641278,
+                "roll": -0.0004390288439172182,
+                "speed": 3.97550286362011,
+                "color": "white"
+              }
+            },
+            {
+              "id": "9c55122a-9ec8-48eb-8615-c25eaab80bdc",
+              "name": "Cybertruck Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "white"
+              }
+            }
+          ],
+          "lastMessage": 1789092265088,
+          "pose": {
+            "vehicle": "cybertruck",
+            "lng": 77.59368028337018,
+            "lat": 12.97340378736272,
+            "altitude": 0,
+            "heading": 168.1843076107641,
+            "pitch": 0.04704392226641278,
+            "roll": -0.0004390288439172182,
+            "speed": 3.97550286362011
+          }
+        },
+        "remote": {
+          "ownId": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+          "remoteCount": 0,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+              "own": true,
+              "vehicle": "cybertruck",
+              "lng": 77.5936789655762,
+              "lat": 12.973409675875038,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0.045173686653302625,
+              "roll": 0,
+              "speed": 2.675041361404916,
+              "color": "white",
+              "position": [
+                -88.96387754514454,
+                -232.43278188932868,
+                0.01999983188786622
+              ],
+              "name": "Cybertruck Driver · You",
+              "labelVisible": true,
+              "rotorAngle": 1.2981688773993967
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "lights": [
+              {
+                "name": "Front_light_bar",
+                "map": false,
+                "emissiveMap": false,
+                "sample": null
+              },
+              {
+                "name": "Tail_light_bar",
+                "map": false,
+                "emissiveMap": false,
+                "sample": null
+              }
+            ],
+            "role": "local",
+            "remotePlayerId": null,
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "01baf89d-7e99-416e-9156-51d10c545f22",
+                "color": "e8ede7",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "RubberTrim",
+                "uuid": "cd3ed6ba-ad66-4a8e-8a25-ee4a24cdb553",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Glass",
+                "uuid": "cda8549e-4a58-49f4-a25c-ddbd7026b61e",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "b44daaea-99d2-4784-ad2a-15c013a68b70",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "5555c98d-82bc-4fda-b990-42d970ff9e3c",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 3.6100000143051147,
+            "radius": 0.4699999988079071,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  -0.5516573470799654,
+                  0,
+                  0,
+                  0.8340708431618351
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  -0.5516573470799654,
+                  0,
+                  0,
+                  0.8340708431618351
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  -0.5516573470799654,
+                  0,
+                  0,
+                  0.8340708431618351
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  -0.5516573470799654,
+                  0,
+                  0,
+                  0.8340708431618351
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [],
+            "visualHeight": 1.9922060966491701
+          }
+        ]
+      },
+      "manualRemote": {
+        "auto": {
+          "vehicleType": "auto",
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": false,
+          "paused": false,
+          "boost": null,
+          "speed": 0,
+          "distance": 0,
+          "heading": 0,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": null,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "network": {
+          "name": "Cybertruck Observer",
+          "room": "9b72b1b7a5a3fdc5196b471e26859d32",
+          "id": "9c55122a-9ec8-48eb-8615-c25eaab80bdc",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+              "name": "Cybertruck Driver",
+              "pose": {
+                "vehicle": "cybertruck",
+                "lng": 77.59368028337018,
+                "lat": 12.97340378736272,
+                "altitude": 0,
+                "heading": 168.1843076107641,
+                "pitch": 0.04704392226641278,
+                "roll": -0.0004390288439172182,
+                "speed": 3.97550286362011,
+                "color": "white"
+              }
+            },
+            {
+              "id": "9c55122a-9ec8-48eb-8615-c25eaab80bdc",
+              "name": "Cybertruck Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "white"
+              }
+            }
+          ],
+          "lastMessage": 1789092265088,
+          "pose": {
+            "vehicle": "spectator",
+            "lng": 77.5945,
+            "lat": 12.9755,
+            "altitude": 0,
+            "heading": 0,
+            "pitch": 0,
+            "roll": 0,
+            "speed": 0
+          }
+        },
+        "remote": {
+          "ownId": "9c55122a-9ec8-48eb-8615-c25eaab80bdc",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+              "own": false,
+              "vehicle": "cybertruck",
+              "lng": 77.59367975564919,
+              "lat": 12.973406141661423,
+              "altitude": 0,
+              "heading": 168.05192962699616,
+              "pitch": 0.041839370611566624,
+              "roll": -0.00033076566392443876,
+              "speed": 3.3076515468443115,
+              "color": "#e8ede7",
+              "position": [
+                -88.8782685223587,
+                -232.8257657496289,
+                0.01999983160365572
+              ],
+              "name": "Cybertruck Driver",
+              "labelVisible": true,
+              "rotorAngle": 1.189667459944323
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "lights": [
+              {
+                "name": "Front_light_bar",
+                "map": false,
+                "emissiveMap": false,
+                "sample": null
+              },
+              {
+                "name": "Tail_light_bar",
+                "map": false,
+                "emissiveMap": false,
+                "sample": null
+              }
+            ],
+            "role": "remote",
+            "remotePlayerId": "6d2a8471-a541-48f1-8f46-ca27153fee67",
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "0be648f8-5ffd-4121-986c-da2694e36295",
+                "color": "e8ede7",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "RubberTrim",
+                "uuid": "eba8268b-2c46-4b21-9863-0220fdc17528",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Glass",
+                "uuid": "83d03b35-baac-420b-a81d-7214306cc064",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "ce35c444-6402-45b8-9b85-6a7ca174c076",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "0cf38c3d-faca-4180-9429-5ebc0ab3bbc6",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 3.6100000143051147,
+            "radius": 0.4699999988079071,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  -0.5603710504775876,
+                  0,
+                  0,
+                  0.8282416831979932
+                ],
+                "steering": [
+                  0,
+                  -0.03446396058042196,
+                  0,
+                  0.9994059412576609
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  -0.5603710504775876,
+                  0,
+                  0,
+                  0.8282416831979932
+                ],
+                "steering": [
+                  0,
+                  -0.03585807877620237,
+                  0,
+                  0.9993568922994825
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  -0.5603710504775876,
+                  0,
+                  0,
+                  0.8282416831979932
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  -0.5603710504775876,
+                  0,
+                  0,
+                  0.8282416831979932
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [],
+            "visualHeight": 1.9922060966491701
+          }
+        ]
+      },
+      "status": "FAIL",
+      "failure": "AssertionError [ERR_ASSERTION]: local front wheels did not steer\n    at C:\\Users\\user\\Documents\\ChatGPT\\Z\\qc\\cybertruck-runtime-inspection.cjs:102:305"
+    }
+  ],
+  "errors": [],
+  "note": "Full app with local actual room server. Only GLB response/tuning and read-only inspection hooks are intercepted; production files remain untouched. GPU visuals require human review.",
+  "mode": "full",
+  "failure": "AssertionError [ERR_ASSERTION]: local front wheels did not steer\n    at C:\\Users\\user\\Documents\\ChatGPT\\Z\\qc\\cybertruck-runtime-inspection.cjs:102:305",
+  "finished": "2026-09-11T02:04:28.769Z"
+}

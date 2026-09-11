@@ -1,3 +1,5 @@
+import {setMapSceneCamera} from './map-scene-camera.js';
+import {addVehicleContactShadow,disposeVehicleContactShadow} from './vehicle-contact-shadow.js';
 import {installVehicleEnvironment} from './vehicle-environment.js';
 import {createBlenderVehicle} from './blender-vehicle.js';
 import {createSupercar} from './supercar-model.js';
@@ -16,7 +18,7 @@ async function installRenderer(map) {
  if (map.__multiplayerRenderer) return map.__multiplayerRenderer;
  const T=await import('https://unpkg.com/three@0.169.0/build/three.module.js');
  const emotes=new Map();let speaking=new Set();
- const entries=new Map(), scene=new T.Scene(), camera=new T.Camera();
+ const entries=new Map(), scene=new T.Scene(), camera=new T.Camera(),viewProjection=new T.Matrix4();
  const origin=maplibregl.MercatorCoordinate.fromLngLat([77.5945,12.9755],0);
  const scale=origin.meterInMercatorCoordinateUnits();
  const transform=new T.Matrix4().makeTranslation(origin.x,origin.y,origin.z).scale(new T.Vector3(scale,-scale,scale));
@@ -29,6 +31,7 @@ async function installRenderer(map) {
  map.getContainer().append(labels);
  function disposeModel(model) {
   if(!model)return;
+  disposeVehicleContactShadow(model.group);
   const geometries=new Set(),materials=new Set(),textures=new Set();
   model.group.traverse(o=>{if(o.geometry)geometries.add(o.geometry);for(const m of (Array.isArray(o.material)?o.material:[o.material]))if(m){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v);}});
   model.group.removeFromParent();materials.forEach(m=>m.dispose());
@@ -51,7 +54,7 @@ async function installRenderer(map) {
     const label=document.createElement('span');label.className='multiplayer-name-tag';label.dataset.playerId=player.id;
     Object.assign(label.style,{position:'absolute',left:'0',top:'0',display:'none',padding:'4px 9px',borderRadius:'12px',background:own?'#123b30ee':'#102c3fee',color:'#fff',font:'600 12px system-ui,sans-serif',whiteSpace:'nowrap',maxWidth:'180px',overflow:'hidden',textOverflow:'ellipsis',border:'1px solid #ffffff55',boxShadow:'0 2px 8px #0005'});
     labels.append(label);
-    const model=own?null:(['cybertruck','cybercab','kitt'].includes(p.vehicle)?createBlenderVehicle(T,p.vehicle):p.vehicle==='auto'?createAuto(T,{remote:true}):p.vehicle==='helicopter'?createHelicopter(T,{remote:true}):p.vehicle==='supercar'?createSupercar(T,{remote:true}):createTwoWheeler(T,{variant:p.vehicle,remote:true}));if(model)scene.add(model.group);
+    const model=own?null:(['cybertruck','cybercab','kitt'].includes(p.vehicle)?createBlenderVehicle(T,p.vehicle):p.vehicle==='auto'?createAuto(T,{remote:true}):p.vehicle==='helicopter'?createHelicopter(T,{remote:true}):p.vehicle==='supercar'?createSupercar(T,{remote:true}):createTwoWheeler(T,{variant:p.vehicle,remote:true}));if(model){scene.add(model.group);if(p.vehicle!=="helicopter")Promise.resolve(model.ready).then(()=>{if(model.group.parent)addVehicleContactShadow(T,model.group);}).catch(()=>{});}
     e={vehicle:p.vehicle,own,model,label,current:{...p},target:{...p},point:position(p),angle:0,labelVisible:false};entries.set(player.id,e);
    }
    const labelText=String(player.name||'Explorer').slice(0,24)+(own?' · You':'');
@@ -69,7 +72,7 @@ async function installRenderer(map) {
   onAdd(m,gl){renderer=new T.WebGLRenderer({canvas:m.getCanvas(),context:gl,antialias:true});renderer.autoClear=false;disposeEnvironment=installVehicleEnvironment(T,renderer,scene);},
   render(gl,args){
    const now=performance.now(),dt=last?Math.min((now-last)/1000,.1):0;last=now;
-   camera.projectionMatrix.fromArray(args.defaultProjectionData.mainMatrix).multiply(transform);
+   viewProjection.fromArray(args.defaultProjectionData.mainMatrix).multiply(transform);setMapSceneCamera(T,camera,viewProjection);
    const factor=1-Math.exp(-dt*14),w=map.getCanvas().clientWidth,h=map.getCanvas().clientHeight;
    for(const [playerId,e] of entries){
     const emote=emotes.get(playerId),greeting=emote&&emote.until>now?(emote.emote==='wave'?' · 👋':' · 👋 Hi!'):'';
@@ -81,17 +84,18 @@ async function installRenderer(map) {
     const live=e.own?window.multiplayerState?.().pose:null;
     const p=e.current,target=valid(live)&&live.vehicle===e.vehicle?live:e.target,f=e.own?1:factor;
     for(const key of ['lng','lat','altitude','pitch','roll','speed'])p[key]+=(target[key]-p[key])*f;
-    p.heading+=(((target.heading-p.heading)%360+540)%360-180)*f;
+    const headingDelta=(((target.heading-p.heading)%360+540)%360-180)*f;p.heading+=headingDelta;
     e.point.copy(position(p));e.angle+=dt*(e.vehicle!=='helicopter'?p.speed/(e.model?.wheelRadius||.31):21);
     if(e.model){const m=e.model;m.group.position.copy(e.point);m.group.rotation.z=-p.heading*RAD;
-     if(e.vehicle!=='helicopter'){m.body.rotation.set(p.pitch,p.roll,0);m.wheels.forEach(wheel=>wheel.rotation.x=-e.angle);if(m.pedals)m.pedals.rotation.x=-e.angle*.4;m.updateRider?.(-e.angle*.4);}
+     if(e.vehicle!=='helicopter'){m.body.rotation.set(p.pitch,p.roll,0);if(m.updateDrive){const steer=Math.abs(p.speed)>.5&&dt>0?Math.atan(headingDelta*RAD/dt*(m.wheelbase||(e.vehicle==="cybertruck"?3.3:2.5654))/p.speed):0;m.updateDrive(e.angle,steer,now/1000);}else m.wheels.forEach(wheel=>wheel.rotation.x=-e.angle);if(m.pedals)m.pedals.rotation.x=-e.angle*.4;m.updateRider?.(-e.angle*.4);}
      else{m.body.rotation.set(p.pitch,p.roll,0,'YXZ');m.rotor.rotation.z=e.angle;m.tailRotor.rotation.x=-e.angle*3.7;m.rotorDisc.material.opacity=.085;}
     }
     // Project vehicle roof/rotor in 3D. Ground-only markers would drift below aircraft.
-    head.set(0,e.vehicle==='cycle'?.075:0,e.vehicle==='cycle'?1.915:e.vehicle==='helicopter'?6:2.7);
+    const roof=e.own?window.autoState?.().visualHeight:e.model?.group.userData.visualHeight;
+    head.set(0,e.vehicle==='cycle'?.075:0,e.vehicle==='cycle'?1.915:e.vehicle==='helicopter'?6:Number.isFinite(roof)?roof:2.7);
     head.applyEuler(headRotation.set(p.pitch,p.roll,0));
     const hx=head.x,hy=head.y,a=-p.heading*RAD;head.x=hx*Math.cos(a)-hy*Math.sin(a);head.y=hx*Math.sin(a)+hy*Math.cos(a);
-    clip.set(e.point.x+head.x,e.point.y+head.y,e.point.z+head.z,1).applyMatrix4(camera.projectionMatrix);
+    clip.set(e.point.x+head.x,e.point.y+head.y,e.point.z+head.z,1).applyMatrix4(viewProjection);
     const x=clip.x/clip.w,y=clip.y/clip.w,z=clip.z/clip.w;
     e.labelVisible=clip.w>0&&x>=-1&&x<=1&&y>=-1&&y<=1&&z>=-1&&z<=1;
     e.label.style.display=e.labelVisible?'block':'none';

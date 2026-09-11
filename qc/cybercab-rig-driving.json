@@ -1,0 +1,180 @@
+{
+  "samples": [
+    {
+      "phase": "parked",
+      "state": {
+        "vehicleType": "cybercab",
+        "visualHeight": 1.3616750240325932,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 70,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 0,
+          "active": false,
+          "locked": false
+        },
+        "speed": 0,
+        "distance": 0,
+        "heading": 42.971227739444146,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": [
+          77.59201520065348,
+          12.979208045331047
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0,
+          "impacts": 0,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 3410,
+        "from": 3348,
+        "to": 3349,
+        "progress": 44.541434318849205,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      }
+    },
+    {
+      "phase": "moving-turn",
+      "state": {
+        "vehicleType": "cybercab",
+        "visualHeight": 1.3616750240325932,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 70,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 0.9645453733809816,
+          "active": false,
+          "locked": false
+        },
+        "speed": 6.021590542677252,
+        "distance": 3.7097898976191592,
+        "heading": 44.395835159317585,
+        "choice": "straight",
+        "wheelAngle": 10.163807673122019,
+        "position": [
+          77.59203852771913,
+          12.979232414671166
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0.3123590579404327,
+          "yaw": 0.3004513117515795,
+          "roll": -0.0022384798587784535,
+          "pitch": 0.03364111915946337,
+          "impacts": 0,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 3410,
+        "from": 3348,
+        "to": 3349,
+        "progress": 44.541434318849205,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": [
+          "ArrowUp",
+          "ArrowRight"
+        ]
+      }
+    },
+    {
+      "phase": "braked",
+      "state": {
+        "vehicleType": "cybercab",
+        "visualHeight": 1.3616750240325932,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 70,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 1.933292600935364,
+          "active": false,
+          "locked": false
+        },
+        "speed": 0.00005567977702482241,
+        "distance": 7.435740772828324,
+        "heading": 68.96962610749108,
+        "choice": "straight",
+        "wheelAngle": 20.18534889277714,
+        "position": [
+          77.59206434662235,
+          12.979250496952774
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0.14685003533501473,
+          "yaw": 0.0331386602732684,
+          "roll": -0.006418976333360081,
+          "pitch": 0.004216460013245266,
+          "impacts": 4,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 3410,
+        "from": 3348,
+        "to": 3349,
+        "progress": 44.541434318849205,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      }
+    }
+  ],
+  "errors": [],
+  "note": "Real local scene keyboard acceleration, turn and brake. Side-view screenshots verify apparent wheel seating; geometric rig checks live in verify-cybercab-repair.cjs."
+}

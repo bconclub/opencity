@@ -1,0 +1,1092 @@
+{
+  "checks": [
+    "cycle isolated player and spectator render",
+    "auto isolated player and spectator render",
+    "cybertruck isolated player and spectator render",
+    "cybercab isolated player and spectator render",
+    "kitt isolated player and spectator render",
+    "helicopter isolated player and spectator render"
+  ],
+  "vehicles": [
+    {
+      "vehicle": "cycle",
+      "pose": {
+        "vehicle": "cycle",
+        "lng": 77.59367788233789,
+        "lat": 12.973414495969442,
+        "altitude": 0,
+        "heading": 167.64748841537732,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0,
+        "color": "green"
+      },
+      "own": {
+        "auto": {
+          "vehicleType": "cycle",
+          "visualHeight": 1.915,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "speed": 0,
+          "distance": 0,
+          "heading": 167.64748841537732,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": [
+            77.59367788233789,
+            12.973414495969442
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0,
+            "yaw": 0,
+            "roll": 0,
+            "pitch": 0,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "flight": {
+          "roaming": false,
+          "active": false,
+          "paused": false,
+          "phase": "parked",
+          "lng": 77.592,
+          "lat": 12.9745,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "altitude": 0,
+          "heading": 0,
+          "speed": 0,
+          "travel": 0,
+          "cameraMode": "chase",
+          "cameraOrbitYaw": 0,
+          "cameraOrbitLift": 0,
+          "rotorAngle": 0,
+          "rotorPower": 0,
+          "pitch": 0,
+          "roll": 0,
+          "yawRate": 0,
+          "velocity": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cameraPosition": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "mouse": {
+            "turn": 0,
+            "forward": 0,
+            "dragging": false
+          },
+          "keys": []
+        },
+        "tags": [
+          {
+            "text": "QA Driver · You",
+            "rect": {
+              "x": 498.5,
+              "y": 307.2300109863281,
+              "width": 102.8125,
+              "height": 26,
+              "top": 307.2300109863281,
+              "right": 601.3125,
+              "bottom": 333.2300109863281,
+              "left": 498.5
+            }
+          }
+        ]
+      },
+      "remote": {
+        "state": {
+          "ownId": "07d6b222-64c4-4a70-866d-4d9de8a736c8",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "9792a628-79bc-417e-ad8d-b48e86204a19",
+              "own": false,
+              "vehicle": "cycle",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "green",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "QA Driver",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "tags": [
+          {
+            "text": "QA Driver",
+            "rect": {
+              "x": 513.3599853515625,
+              "y": 331.7099914550781,
+              "width": 73.28125,
+              "height": 26,
+              "top": 331.7099914550781,
+              "right": 586.6412353515625,
+              "bottom": 357.7099914550781,
+              "left": 513.3599853515625
+            }
+          }
+        ]
+      }
+    },
+    {
+      "vehicle": "auto",
+      "pose": {
+        "vehicle": "auto",
+        "lng": 77.59367788233789,
+        "lat": 12.973414495969442,
+        "altitude": 0,
+        "heading": 167.64748841537732,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0,
+        "color": "green"
+      },
+      "own": {
+        "auto": {
+          "vehicleType": "auto",
+          "visualHeight": 2.115000009536743,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "speed": 0,
+          "distance": 0,
+          "heading": 167.64748841537732,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": [
+            77.59367788233789,
+            12.973414495969442
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0,
+            "yaw": 0,
+            "roll": 0,
+            "pitch": 0,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "flight": {
+          "roaming": false,
+          "active": false,
+          "paused": false,
+          "phase": "parked",
+          "lng": 77.592,
+          "lat": 12.9745,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "altitude": 0,
+          "heading": 0,
+          "speed": 0,
+          "travel": 0,
+          "cameraMode": "chase",
+          "cameraOrbitYaw": 0,
+          "cameraOrbitLift": 0,
+          "rotorAngle": 0,
+          "rotorPower": 0,
+          "pitch": 0,
+          "roll": 0,
+          "yawRate": 0,
+          "velocity": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cameraPosition": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "mouse": {
+            "turn": 0,
+            "forward": 0,
+            "dragging": false
+          },
+          "keys": []
+        },
+        "tags": [
+          {
+            "text": "QA Driver · You",
+            "rect": {
+              "x": 498.5,
+              "y": 290.9100036621094,
+              "width": 102.8125,
+              "height": 26,
+              "top": 290.9100036621094,
+              "right": 601.3125,
+              "bottom": 316.9100036621094,
+              "left": 498.5
+            }
+          }
+        ]
+      },
+      "remote": {
+        "state": {
+          "ownId": "07d6b222-64c4-4a70-866d-4d9de8a736c8",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "9792a628-79bc-417e-ad8d-b48e86204a19",
+              "own": false,
+              "vehicle": "auto",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "green",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "QA Driver",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "tags": [
+          {
+            "text": "QA Driver",
+            "rect": {
+              "x": 513.5,
+              "y": 329.9100036621094,
+              "width": 73.28125,
+              "height": 26,
+              "top": 329.9100036621094,
+              "right": 586.78125,
+              "bottom": 355.9100036621094,
+              "left": 513.5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "vehicle": "cybertruck",
+      "pose": {
+        "vehicle": "cybertruck",
+        "lng": 77.59367788233789,
+        "lat": 12.973414495969442,
+        "altitude": 0,
+        "heading": 167.64748841537732,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0,
+        "color": "green"
+      },
+      "own": {
+        "auto": {
+          "vehicleType": "cybertruck",
+          "visualHeight": 1.9922060966491701,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "speed": 0,
+          "distance": 0,
+          "heading": 167.64748841537732,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": [
+            77.59367788233789,
+            12.973414495969442
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0,
+            "yaw": 0,
+            "roll": 0,
+            "pitch": 0,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "flight": {
+          "roaming": false,
+          "active": false,
+          "paused": false,
+          "phase": "parked",
+          "lng": 77.592,
+          "lat": 12.9745,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "altitude": 0,
+          "heading": 0,
+          "speed": 0,
+          "travel": 0,
+          "cameraMode": "chase",
+          "cameraOrbitYaw": 0,
+          "cameraOrbitLift": 0,
+          "rotorAngle": 0,
+          "rotorPower": 0,
+          "pitch": 0,
+          "roll": 0,
+          "yawRate": 0,
+          "velocity": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cameraPosition": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "mouse": {
+            "turn": 0,
+            "forward": 0,
+            "dragging": false
+          },
+          "keys": []
+        },
+        "tags": [
+          {
+            "text": "QA Driver · You",
+            "rect": {
+              "x": 498.5,
+              "y": 301.6499938964844,
+              "width": 102.8125,
+              "height": 26,
+              "top": 301.6499938964844,
+              "right": 601.3125,
+              "bottom": 327.6499938964844,
+              "left": 498.5
+            }
+          }
+        ]
+      },
+      "remote": {
+        "state": {
+          "ownId": "07d6b222-64c4-4a70-866d-4d9de8a736c8",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "9792a628-79bc-417e-ad8d-b48e86204a19",
+              "own": false,
+              "vehicle": "cybertruck",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "#16845f",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "QA Driver",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "tags": [
+          {
+            "text": "QA Driver",
+            "rect": {
+              "x": 513.5,
+              "y": 330.8399963378906,
+              "width": 73.28125,
+              "height": 26,
+              "top": 330.8399963378906,
+              "right": 586.78125,
+              "bottom": 356.8399963378906,
+              "left": 513.5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "vehicle": "cybercab",
+      "pose": {
+        "vehicle": "cybercab",
+        "lng": 77.59367788233789,
+        "lat": 12.973414495969442,
+        "altitude": 0,
+        "heading": 167.64748841537732,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0,
+        "color": "green"
+      },
+      "own": {
+        "auto": {
+          "vehicleType": "cybercab",
+          "visualHeight": 1.3616750240325932,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "speed": 0,
+          "distance": 0,
+          "heading": 167.64748841537732,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": [
+            77.59367788233789,
+            12.973414495969442
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0,
+            "yaw": 0,
+            "roll": 0,
+            "pitch": 0,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "flight": {
+          "roaming": false,
+          "active": false,
+          "paused": false,
+          "phase": "parked",
+          "lng": 77.592,
+          "lat": 12.9745,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "altitude": 0,
+          "heading": 0,
+          "speed": 0,
+          "travel": 0,
+          "cameraMode": "chase",
+          "cameraOrbitYaw": 0,
+          "cameraOrbitLift": 0,
+          "rotorAngle": 0,
+          "rotorPower": 0,
+          "pitch": 0,
+          "roll": 0,
+          "yawRate": 0,
+          "velocity": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cameraPosition": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "mouse": {
+            "turn": 0,
+            "forward": 0,
+            "dragging": false
+          },
+          "keys": []
+        },
+        "tags": [
+          {
+            "text": "QA Driver · You",
+            "rect": {
+              "x": 498.5,
+              "y": 356.1400146484375,
+              "width": 102.8125,
+              "height": 26,
+              "top": 356.1400146484375,
+              "right": 601.3125,
+              "bottom": 382.1400146484375,
+              "left": 498.5
+            }
+          }
+        ]
+      },
+      "remote": {
+        "state": {
+          "ownId": "07d6b222-64c4-4a70-866d-4d9de8a736c8",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "9792a628-79bc-417e-ad8d-b48e86204a19",
+              "own": false,
+              "vehicle": "cybercab",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "green",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "QA Driver",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "tags": [
+          {
+            "text": "QA Driver",
+            "rect": {
+              "x": 513.5,
+              "y": 335.6099853515625,
+              "width": 73.28125,
+              "height": 26,
+              "top": 335.6099853515625,
+              "right": 586.78125,
+              "bottom": 361.6099853515625,
+              "left": 513.5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "vehicle": "kitt",
+      "pose": {
+        "vehicle": "kitt",
+        "lng": 77.59367788233789,
+        "lat": 12.973414495969442,
+        "altitude": 0,
+        "heading": 167.64748841537732,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0,
+        "color": "green"
+      },
+      "own": {
+        "auto": {
+          "vehicleType": "kitt",
+          "visualHeight": 1.3385711908340456,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "speed": 0,
+          "distance": 0,
+          "heading": 167.64748841537732,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": [
+            77.59367788233789,
+            12.973414495969442
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0,
+            "yaw": 0,
+            "roll": 0,
+            "pitch": 0,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "flight": {
+          "roaming": false,
+          "active": false,
+          "paused": false,
+          "phase": "parked",
+          "lng": 77.592,
+          "lat": 12.9745,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "altitude": 0,
+          "heading": 0,
+          "speed": 0,
+          "travel": 0,
+          "cameraMode": "chase",
+          "cameraOrbitYaw": 0,
+          "cameraOrbitLift": 0,
+          "rotorAngle": 0,
+          "rotorPower": 0,
+          "pitch": 0,
+          "roll": 0,
+          "yawRate": 0,
+          "velocity": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cameraPosition": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "mouse": {
+            "turn": 0,
+            "forward": 0,
+            "dragging": false
+          },
+          "keys": []
+        },
+        "tags": [
+          {
+            "text": "QA Driver · You",
+            "rect": {
+              "x": 498.5,
+              "y": 358.1199951171875,
+              "width": 102.8125,
+              "height": 26,
+              "top": 358.1199951171875,
+              "right": 601.3125,
+              "bottom": 384.1199951171875,
+              "left": 498.5
+            }
+          }
+        ]
+      },
+      "remote": {
+        "state": {
+          "ownId": "07d6b222-64c4-4a70-866d-4d9de8a736c8",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "9792a628-79bc-417e-ad8d-b48e86204a19",
+              "own": false,
+              "vehicle": "kitt",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "#16845f",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "QA Driver",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "tags": [
+          {
+            "text": "QA Driver",
+            "rect": {
+              "x": 513.5,
+              "y": 335.7900085449219,
+              "width": 73.28125,
+              "height": 26,
+              "top": 335.7900085449219,
+              "right": 586.78125,
+              "bottom": 361.7900085449219,
+              "left": 513.5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "vehicle": "helicopter",
+      "pose": {
+        "vehicle": "helicopter",
+        "lng": 77.592,
+        "lat": 12.9745,
+        "altitude": 0,
+        "heading": 0,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0,
+        "color": "green"
+      },
+      "own": {
+        "auto": {
+          "vehicleType": "kitt",
+          "visualHeight": 1.3385711908340456,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": false,
+          "paused": false,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "speed": 0,
+          "distance": 0,
+          "heading": 167.64748841537732,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": [
+            77.59367788233789,
+            12.973414495969442
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0,
+            "yaw": 0,
+            "roll": 0,
+            "pitch": 0,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "flight": {
+          "roaming": false,
+          "active": true,
+          "paused": false,
+          "phase": "parked",
+          "lng": 77.592,
+          "lat": 12.9745,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "altitude": 0,
+          "heading": 0,
+          "speed": 0,
+          "travel": 0,
+          "cameraMode": "chase",
+          "cameraOrbitYaw": 0,
+          "cameraOrbitLift": 0,
+          "rotorAngle": 3.2528771436549535,
+          "rotorPower": 0.11996937376416753,
+          "pitch": 0,
+          "roll": 0,
+          "yawRate": 0,
+          "velocity": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "cameraPosition": {
+            "x": 12,
+            "y": -48,
+            "z": 25
+          },
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "mouse": {
+            "turn": 0,
+            "forward": 0,
+            "dragging": false
+          },
+          "keys": []
+        },
+        "tags": [
+          {
+            "text": "QA Driver · You",
+            "rect": {
+              "x": 474.44000244140625,
+              "y": 328.739990234375,
+              "width": 102.8125,
+              "height": 26,
+              "top": 328.739990234375,
+              "right": 577.2525024414062,
+              "bottom": 354.739990234375,
+              "left": 474.44000244140625
+            }
+          }
+        ]
+      },
+      "remote": {
+        "state": {
+          "ownId": "07d6b222-64c4-4a70-866d-4d9de8a736c8",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "9792a628-79bc-417e-ad8d-b48e86204a19",
+              "own": false,
+              "vehicle": "helicopter",
+              "lng": 77.592,
+              "lat": 12.9745,
+              "altitude": 0,
+              "heading": 0,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "green",
+              "position": [
+                -270.88960879813203,
+                -111.19485665067205,
+                1.9999919572370881
+              ],
+              "name": "QA Driver",
+              "labelVisible": true,
+              "rotorAngle": 17.406899999968708
+            }
+          ],
+          "disposed": false
+        },
+        "tags": [
+          {
+            "text": "QA Driver",
+            "rect": {
+              "x": 513.5,
+              "y": 284.44000244140625,
+              "width": 73.28125,
+              "height": 26,
+              "top": 284.44000244140625,
+              "right": 586.78125,
+              "bottom": 310.44000244140625,
+              "left": 513.5
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "note": "Two local clients, spectator remains without a vehicle to prevent overlapping same-departure models."
+}

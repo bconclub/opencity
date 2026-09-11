@@ -1,0 +1,160 @@
+{
+  "note": "CPU collision probes use unchanged building collision world and mapped Vidhana road centerlines. These tests do not add stair colliders or change road routes.",
+  "samples": 441,
+  "onRoad": 0,
+  "buildingCollision": 34,
+  "unblocked": 407,
+  "probes": [
+    {
+      "t": 0,
+      "fraction": -0.9,
+      "lng": 77.59108091587052,
+      "lat": 12.978964049883327,
+      "expectedStairHeight": 0,
+      "streetHeight": null,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0,
+      "fraction": 0,
+      "lng": 77.59126130208446,
+      "lat": 12.979143715513187,
+      "expectedStairHeight": 0,
+      "streetHeight": null,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0,
+      "fraction": 0.9,
+      "lng": 77.5914416882984,
+      "lat": 12.979323381143045,
+      "expectedStairHeight": 0,
+      "streetHeight": null,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.25,
+      "fraction": -0.9,
+      "lng": 77.5910695828519,
+      "lat": 12.979021278475779,
+      "expectedStairHeight": 1.6875,
+      "streetHeight": 0,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.25,
+      "fraction": 0,
+      "lng": 77.59122615465185,
+      "lat": 12.97917722482245,
+      "expectedStairHeight": 1.6875,
+      "streetHeight": null,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.25,
+      "fraction": 0.9,
+      "lng": 77.59138272645178,
+      "lat": 12.97933317116912,
+      "expectedStairHeight": 1.6875,
+      "streetHeight": null,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.5,
+      "fraction": -0.9,
+      "lng": 77.5910582498333,
+      "lat": 12.979078507068232,
+      "expectedStairHeight": 3.375,
+      "streetHeight": 0,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.5,
+      "fraction": 0,
+      "lng": 77.59119100721924,
+      "lat": 12.979210734131714,
+      "expectedStairHeight": 3.375,
+      "streetHeight": null,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.5,
+      "fraction": 0.9,
+      "lng": 77.59132376460516,
+      "lat": 12.979342961195197,
+      "expectedStairHeight": 3.375,
+      "streetHeight": 0,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.75,
+      "fraction": -0.9,
+      "lng": 77.59104691681469,
+      "lat": 12.979135735660684,
+      "expectedStairHeight": 5.0625,
+      "streetHeight": 0,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.75,
+      "fraction": 0,
+      "lng": 77.59115585978662,
+      "lat": 12.979244243440977,
+      "expectedStairHeight": 5.0625,
+      "streetHeight": 0.015963035729622693,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 0.75,
+      "fraction": 0.9,
+      "lng": 77.59126480275854,
+      "lat": 12.979352751221272,
+      "expectedStairHeight": 5.0625,
+      "streetHeight": 0,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 1,
+      "fraction": -0.9,
+      "lng": 77.59103558379607,
+      "lat": 12.979192964253135,
+      "expectedStairHeight": 6.75,
+      "streetHeight": 0,
+      "onRoad": false,
+      "buildingCollision": false
+    },
+    {
+      "t": 1,
+      "fraction": 0,
+      "lng": 77.591120712354,
+      "lat": 12.979277752750242,
+      "expectedStairHeight": 6.75,
+      "streetHeight": null,
+      "onRoad": false,
+      "buildingCollision": true
+    },
+    {
+      "t": 1,
+      "fraction": 0.9,
+      "lng": 77.59120584091193,
+      "lat": 12.979362541247347,
+      "expectedStairHeight": 6.75,
+      "streetHeight": 0,
+      "onRoad": false,
+      "buildingCollision": false
+    }
+  ],
+  "roadOverlapSamples": []
+}

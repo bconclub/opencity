@@ -1,0 +1,124 @@
+{
+  "moderate": {
+    "input": {
+      "throttle": 0.3902439024390244,
+      "reverse": 0,
+      "steer": 0
+    },
+    "auto": {
+      "vehicleType": "auto",
+      "visualHeight": 2.115000009536743,
+      "roaming": false,
+      "groundHeight": 0,
+      "cameraOrbit": {
+        "yaw": 0,
+        "elevation": 12,
+        "distance": 13
+      },
+      "active": true,
+      "paused": false,
+      "boost": {
+        "reserve": 0.31480046049738153,
+        "active": false,
+        "locked": false
+      },
+      "speed": 1.994689142781446,
+      "distance": 1.3116685854057566,
+      "heading": 42.971227739444146,
+      "choice": "straight",
+      "wheelAngle": 4.231188985179861,
+      "position": [
+        77.59212398046617,
+        12.979321833331385
+      ],
+      "tilt": {
+        "enabled": false,
+        "steer": 0,
+        "center": null,
+        "lastSample": 0
+      },
+      "gamepad": {
+        "connected": false,
+        "index": null,
+        "armed": false
+      },
+      "physics": {
+        "steer": 0,
+        "yaw": 0,
+        "roll": 0,
+        "pitch": 0.010441874606699477,
+        "impacts": 0,
+        "surface": "road"
+      },
+      "ended": false,
+      "edge": 3410,
+      "from": 3348,
+      "to": 3349,
+      "progress": 60.541434318849205,
+      "roadEdges": 3803,
+      "connectedNodes": 3109,
+      "keys": []
+    }
+  },
+  "full": {
+    "input": {
+      "throttle": 1,
+      "reverse": 0,
+      "steer": 0
+    },
+    "auto": {
+      "vehicleType": "auto",
+      "visualHeight": 2.115000009536743,
+      "roaming": false,
+      "groundHeight": 0,
+      "cameraOrbit": {
+        "yaw": 0,
+        "elevation": 12,
+        "distance": 13
+      },
+      "active": true,
+      "paused": false,
+      "boost": {
+        "reserve": 0.30568358609849566,
+        "active": false,
+        "locked": false
+      },
+      "speed": 3.1817070779306316,
+      "distance": 1.2736816087437317,
+      "heading": 42.971227739444146,
+      "choice": "straight",
+      "wheelAngle": 4.108650350786233,
+      "position": [
+        77.59212374177073,
+        12.979321583646492
+      ],
+      "tilt": {
+        "enabled": false,
+        "steer": 0,
+        "center": null,
+        "lastSample": 0
+      },
+      "gamepad": {
+        "connected": false,
+        "index": null,
+        "armed": false
+      },
+      "physics": {
+        "steer": 0,
+        "yaw": 0,
+        "roll": 0,
+        "pitch": 0.028210622086273486,
+        "impacts": 0,
+        "surface": "road"
+      },
+      "ended": false,
+      "edge": 3410,
+      "from": 3348,
+      "to": 3349,
+      "progress": 60.541434318849205,
+      "roadEdges": 3803,
+      "connectedNodes": 3109,
+      "keys": []
+    }
+  }
+}

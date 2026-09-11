@@ -1,0 +1,1075 @@
+{
+  "projectionCorrectionXY": 0.9988824009162848,
+  "unchangedHeight": true,
+  "missingSamples": [
+    {
+      "osm": "way/52057928",
+      "point": [
+        77.59020226666667,
+        12.975491600004656
+      ],
+      "radius": 483.4268288305466,
+      "distanceToCandidateFootprintM": 1.1195387296758057,
+      "sourceTags": {
+        "access": "yes",
+        "foot": "yes",
+        "highway": "service",
+        "motor_vehicle": "yes",
+        "oneway": "yes"
+      },
+      "motorEligibility": [
+        true,
+        "public-motor-road"
+      ],
+      "nearestSourceNode": "428831252",
+      "distanceToSourceNodeM": 4.541192462006026,
+      "isTerminalNode": false,
+      "measuredFootprintGapM": 1.1207982698291343,
+      "gapAfterProjectionCorrectionM": 0.8262944750528497,
+      "cause": "real junction ground omission remains after projection correction"
+    },
+    {
+      "osm": "way/670210361",
+      "point": [
+        77.59140639999998,
+        12.98180430000001
+      ],
+      "radius": 232.353002249303,
+      "distanceToCandidateFootprintM": 0.2112405038620366,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "6276371313",
+      "distanceToSourceNodeM": 1.831370361394033e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.21147658273405526,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905523",
+      "point": [
+        77.5880841,
+        12.981380600000007
+      ],
+      "radius": 342.76787407614097,
+      "distanceToCandidateFootprintM": 0.32697106823452254,
+      "sourceTags": {
+        "access": "permissive",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        true,
+        "public-motor-road"
+      ],
+      "nearestSourceNode": "10036422030",
+      "distanceToSourceNodeM": 7.909761734481435e-10,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.32733825026930147,
+      "gapAfterProjectionCorrectionM": 5.7130912952062334e-05,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905540",
+      "point": [
+        77.58878520000002,
+        12.978492999999997
+      ],
+      "radius": 262.26168193391237,
+      "distanceToCandidateFootprintM": 0.21794662370472684,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10036422103",
+      "distanceToSourceNodeM": 1.5914603829375455e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.21819164620556766,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905541",
+      "point": [
+        77.58959349999998,
+        12.977762400000003
+      ],
+      "radius": 261.5800132737966,
+      "distanceToCandidateFootprintM": 0.02566779814708684,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10036422105",
+      "distanceToSourceNodeM": 3.1083077180348043e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.02569675952981897,
+      "gapAfterProjectionCorrectionM": 0.00028471716788101603,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905542",
+      "point": [
+        77.58980200000002,
+        12.978006000000008
+      ],
+      "radius": 226.90794804030315,
+      "distanceToCandidateFootprintM": 0.01963642522675644,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10036422106",
+      "distanceToSourceNodeM": 1.7326218948985147e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.019658576469450482,
+      "gapAfterProjectionCorrectionM": 0.00037465808208978,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905548",
+      "point": [
+        77.5935925,
+        12.980165000000001
+      ],
+      "radius": 305.28827697972037,
+      "distanceToCandidateFootprintM": 0.20042440151704827,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10036422122",
+      "distanceToSourceNodeM": 1.9774404336203588e-10,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.20064939034014034,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905549",
+      "point": [
+        77.59365550000001,
+        12.980097699999993
+      ],
+      "radius": 311.1704749275071,
+      "distanceToCandidateFootprintM": 0.1971890002709631,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10036422124",
+      "distanceToSourceNodeM": 1.7326218948985147e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.19741039020405748,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905550",
+      "point": [
+        77.59370160000003,
+        12.980036300000007
+      ],
+      "radius": 315.4958689856959,
+      "distanceToCandidateFootprintM": 0.19949477086010367,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10036422126",
+      "distanceToSourceNodeM": 3.182920765875091e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.1997187810890364,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905551",
+      "point": [
+        77.5937806,
+        12.979981100000007
+      ],
+      "radius": 323.5869845782568,
+      "distanceToCandidateFootprintM": 0.201689016351412,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10036422128",
+      "distanceToSourceNodeM": 7.909761734481435e-10,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.20191551938496044,
+      "gapAfterProjectionCorrectionM": 0.00031323519182698093,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1095905552",
+      "point": [
+        77.59384740000002,
+        12.9799197
+      ],
+      "radius": 330.46597593605446,
+      "distanceToCandidateFootprintM": 0.2005791859609874,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10036422130",
+      "distanceToSourceNodeM": 1.5414798326673917e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.20080447252814837,
+      "gapAfterProjectionCorrectionM": 0.00023888495101141274,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1096187523",
+      "point": [
+        77.58710980000001,
+        12.977467399999993
+      ],
+      "radius": 476.60491950376786,
+      "distanceToCandidateFootprintM": 0.05220573310823045,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10038553704",
+      "distanceToSourceNodeM": 1.7326218948985147e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.0522648033531719,
+      "gapAfterProjectionCorrectionM": 0.00010457116822874917,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1096187524",
+      "point": [
+        77.58771430000002,
+        12.976782799999995
+      ],
+      "radius": 473.65156205063266,
+      "distanceToCandidateFootprintM": 0.18093402529177297,
+      "sourceTags": {
+        "highway": "service"
+      },
+      "motorEligibility": [
+        true,
+        "public-motor-road"
+      ],
+      "nearestSourceNode": "10978625241",
+      "distanceToSourceNodeM": 1.6517393327690283e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.18113919974104417,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1096187566",
+      "point": [
+        77.59208289999998,
+        12.983495499999995
+      ],
+      "radius": 433.7993601253619,
+      "distanceToCandidateFootprintM": 0.45444770482751357,
+      "sourceTags": {
+        "access": "permissive",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        true,
+        "public-motor-road"
+      ],
+      "nearestSourceNode": "10038561355",
+      "distanceToSourceNodeM": 1.6517260700584522e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.4549524746763977,
+      "gapAfterProjectionCorrectionM": 0.0003197715920236672,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1183354865",
+      "point": [
+        77.591834,
+        12.981446000000004
+      ],
+      "radius": 214.59645676436708,
+      "distanceToCandidateFootprintM": 0.20099596907995804,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "10989095125",
+      "distanceToSourceNodeM": 3.9545966501464136e-10,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.20122078863941864,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1257700349",
+      "point": [
+        77.58891399999999,
+        12.978071400000005
+      ],
+      "radius": 280.54643403116285,
+      "distanceToCandidateFootprintM": 0.06632476831915989,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "11693115445",
+      "distanceToSourceNodeM": 1.6517393327690283e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.06639947996577732,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1267185581",
+      "point": [
+        77.588529,
+        12.976696099999996
+      ],
+      "radius": 423.87537117313775,
+      "distanceToCandidateFootprintM": 0.48424651707289884,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "11769497928",
+      "distanceToSourceNodeM": 3.9551650843350217e-10,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.4847918365341807,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1354824979",
+      "point": [
+        77.5883849,
+        12.98025179999999
+      ],
+      "radius": 266.4642927186082,
+      "distanceToCandidateFootprintM": 0.18691790039434075,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service",
+        "service": "parking_aisle"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "12538079631",
+      "distanceToSourceNodeM": 9.887202168101794e-10,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.18712771120604407,
+      "gapAfterProjectionCorrectionM": 0.00014555577151116576,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1354824980",
+      "point": [
+        77.58847739999999,
+        12.979906799999997
+      ],
+      "radius": 251.94292458216825,
+      "distanceToCandidateFootprintM": 0.2105533173595395,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service",
+        "service": "parking_aisle"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "12538079633",
+      "distanceToSourceNodeM": 1.5914603829375455e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.21078983795443137,
+      "gapAfterProjectionCorrectionM": 0.0,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    },
+    {
+      "osm": "way/1371025214",
+      "point": [
+        77.58748330000003,
+        12.982531600000002
+      ],
+      "radius": 470.5438114645892,
+      "distanceToCandidateFootprintM": 0.11200510279006434,
+      "sourceTags": {
+        "access": "private",
+        "highway": "service"
+      },
+      "motorEligibility": [
+        false,
+        "restricted-access:private"
+      ],
+      "nearestSourceNode": "12697912268",
+      "distanceToSourceNodeM": 3.089409267479313e-09,
+      "isTerminalNode": true,
+      "measuredFootprintGapM": 0.11212991732580585,
+      "gapAfterProjectionCorrectionM": 0.00031538662593259776,
+      "cause": "native-to-MapLibre scale mismatch; remainder within native millimetre snapping"
+    }
+  ],
+  "eligibleSourceSegments488m": 391,
+  "excludedMotorSegments": {
+    "conditional-unimplemented": 24,
+    "restricted-access:private": 296,
+    "layer": 12,
+    "restricted-access:no": 3,
+    "restricted-motor_vehicle:private": 31,
+    "tunnel": 2
+  },
+  "boundaryPortals488m": [
+    {
+      "sourceWay": "26807972",
+      "sourceSegment": 6,
+      "sourceNodes": [
+        "665045297",
+        "13462186484"
+      ],
+      "fraction": 0.4881800365113029,
+      "point": [
+        77.59109358626074,
+        12.984174413594637
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5908163,
+          12.9844868
+        ],
+        [
+          77.5913843,
+          12.9838469
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "38542534",
+      "sourceSegment": 6,
+      "sourceNodes": [
+        "254665629",
+        "254665628"
+      ],
+      "fraction": 0.24935524513858146,
+      "point": [
+        77.58856694653333,
+        12.983605571459764
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5885366,
+          12.9837589
+        ],
+        [
+          77.5886583,
+          12.983144
+        ]
+      ],
+      "radiusM": 487.99999999999994
+    },
+    {
+      "sourceWay": "51869441",
+      "sourceSegment": 5,
+      "sourceNodes": [
+        "663556709",
+        "2623395972"
+      ],
+      "fraction": 0.7190119936829154,
+      "point": [
+        77.59529391309103,
+        12.980002250084357
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5950007,
+          12.980225
+        ],
+        [
+          77.5954085,
+          12.9799152
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "152051153",
+      "sourceSegment": 24,
+      "sourceNodes": [
+        "13462217109",
+        "9910013005"
+      ],
+      "fraction": 0.20931880475096942,
+      "point": [
+        77.58981815526705,
+        12.984078078208443
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5899728,
+          12.9840004
+        ],
+        [
+          77.589234,
+          12.9843715
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "161416662",
+      "sourceSegment": 1,
+      "sourceNodes": [
+        "12683578901",
+        "10038561353"
+      ],
+      "fraction": 0.21382231456713566,
+      "point": [
+        77.59257732414879,
+        12.983827135295567
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5925621,
+          12.9837808
+        ],
+        [
+          77.5926333,
+          12.9839975
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "362206700",
+      "sourceSegment": 0,
+      "sourceNodes": [
+        "263155937",
+        "10016225595"
+      ],
+      "fraction": 0.05988510607404919,
+      "point": [
+        77.59477550779876,
+        12.981851828143443
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5947827,
+          12.9818592
+        ],
+        [
+          77.5946626,
+          12.9817361
+        ]
+      ],
+      "radiusM": 487.99999999999994
+    },
+    {
+      "sourceWay": "553253465",
+      "sourceSegment": 0,
+      "sourceNodes": [
+        "10038553694",
+        "663311721"
+      ],
+      "fraction": 0.8842195717718072,
+      "point": [
+        77.58812129767983,
+        12.976278085246616
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5883481,
+          12.9763826
+        ],
+        [
+          77.5880916,
+          12.9762644
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1095905516",
+      "sourceSegment": 0,
+      "sourceNodes": [
+        "10036418000",
+        "461765504"
+      ],
+      "fraction": 0.7449459208380411,
+      "point": [
+        77.5891235346281,
+        12.983867995843188
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5892355,
+          12.9841069
+        ],
+        [
+          77.5890852,
+          12.9837862
+        ]
+      ],
+      "radiusM": 487.99999999999994
+    },
+    {
+      "sourceWay": "1096187524",
+      "sourceSegment": 1,
+      "sourceNodes": [
+        "10038553706",
+        "10038553707"
+      ],
+      "fraction": 0.6490571602358769,
+      "point": [
+        77.58784242159408,
+        12.976496765851321
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5877437,
+          12.9767142
+        ],
+        [
+          77.5878958,
+          12.9763792
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1096187566",
+      "sourceSegment": 0,
+      "sourceNodes": [
+        "10038561354",
+        "10038561355"
+      ],
+      "fraction": 0.2575371388754395,
+      "point": [
+        77.59226688229698,
+        12.983944170306977
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5923307,
+          12.9840998
+        ],
+        [
+          77.5920829,
+          12.9834955
+        ]
+      ],
+      "radiusM": 487.99999999999994
+    },
+    {
+      "sourceWay": "1109946344",
+      "sourceSegment": 2,
+      "sourceNodes": [
+        "10978687876",
+        "3728796366"
+      ],
+      "fraction": 0.6846333781690306,
+      "point": [
+        77.58804915019876,
+        12.976331294600046
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5876611,
+          12.976127
+        ],
+        [
+          77.5882279,
+          12.9764254
+        ]
+      ],
+      "radiusM": 488.00000000000006
+    },
+    {
+      "sourceWay": "1148406432",
+      "sourceSegment": 5,
+      "sourceNodes": [
+        "12697912264",
+        "2190851958"
+      ],
+      "fraction": 0.8958506046857818,
+      "point": [
+        77.58724753942138,
+        12.982489613739581
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.587364,
+          12.9827495
+        ],
+        [
+          77.587234,
+          12.9824594
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1148406432",
+      "sourceSegment": 10,
+      "sourceNodes": [
+        "12114002202",
+        "12673061019"
+      ],
+      "fraction": 0.969890748915693,
+      "point": [
+        77.58674763383982,
+        12.981703711297973
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5867906,
+          12.9817685
+        ],
+        [
+          77.5867463,
+          12.9817017
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1148408385",
+      "sourceSegment": 0,
+      "sourceNodes": [
+        "263155937",
+        "2382044454"
+      ],
+      "fraction": 0.09540558837647749,
+      "point": [
+        77.59476923827148,
+        12.981863321521418
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5947827,
+          12.9818592
+        ],
+        [
+          77.5946416,
+          12.9819024
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1182200630",
+      "sourceSegment": 0,
+      "sourceNodes": [
+        "7436489828",
+        "10036422058"
+      ],
+      "fraction": 0.23086007240394513,
+      "point": [
+        77.58634715941592,
+        12.980424365755493
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5864112,
+          12.9803941
+        ],
+        [
+          77.5861338,
+          12.9805252
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1227532010",
+      "sourceSegment": 0,
+      "sourceNodes": [
+        "461765504",
+        "461765506"
+      ],
+      "fraction": 0.29227811176183016,
+      "point": [
+        77.58900695714948,
+        12.983820513450322
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5890852,
+          12.9837862
+        ],
+        [
+          77.5888175,
+          12.9839036
+        ]
+      ],
+      "radiusM": 488.00000000000006
+    },
+    {
+      "sourceWay": "1267185542",
+      "sourceSegment": 3,
+      "sourceNodes": [
+        "11769490830",
+        "11769490831"
+      ],
+      "fraction": 0.16097493669837953,
+      "point": [
+        77.58849465227226,
+        12.98356441575255
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5885131,
+          12.9834819
+        ],
+        [
+          77.5883985,
+          12.9839945
+        ]
+      ],
+      "radiusM": 488.00000000000006
+    },
+    {
+      "sourceWay": "1314561025",
+      "sourceSegment": 1,
+      "sourceNodes": [
+        "12167450563",
+        "12167450564"
+      ],
+      "fraction": 0.44547998983556303,
+      "point": [
+        77.59424573457599,
+        12.982618373996582
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5942452,
+          12.9826439
+        ],
+        [
+          77.5942464,
+          12.9825866
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1314561025",
+      "sourceSegment": 3,
+      "sourceNodes": [
+        "12167450565",
+        "12167450566"
+      ],
+      "fraction": 0.47529851781452903,
+      "point": [
+        77.59432316459787,
+        12.98252595893254
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.594284,
+          12.9825396
+        ],
+        [
+          77.5943664,
+          12.9825109
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1314561025",
+      "sourceSegment": 4,
+      "sourceNodes": [
+        "12167450566",
+        "12167450567"
+      ],
+      "fraction": 0.07213346309652875,
+      "point": [
+        77.59435876106626,
+        12.982481693160791
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5943664,
+          12.9825109
+        ],
+        [
+          77.5942605,
+          12.982106
+        ]
+      ],
+      "radiusM": 488.00000000000006
+    },
+    {
+      "sourceWay": "1368389076",
+      "sourceSegment": 2,
+      "sourceNodes": [
+        "12704069723",
+        "12704069722"
+      ],
+      "fraction": 0.06720774121537755,
+      "point": [
+        77.58672900707663,
+        12.981665593279226
+      ],
+      "oneway": "no",
+      "sourceEndpoints": [
+        [
+          77.5867273,
+          12.9816656
+        ],
+        [
+          77.5867527,
+          12.9816655
+        ]
+      ],
+      "radiusM": 488.0
+    },
+    {
+      "sourceWay": "1539996891",
+      "sourceSegment": 0,
+      "sourceNodes": [
+        "2382044454",
+        "10016225578"
+      ],
+      "fraction": 0.7281936793249204,
+      "point": [
+        77.59470764716671,
+        12.98197208813511
+      ],
+      "oneway": "yes",
+      "sourceEndpoints": [
+        [
+          77.5946416,
+          12.9819024
+        ],
+        [
+          77.5947323,
+          12.9819981
+        ]
+      ],
+      "radiusM": 488.0
+    }
+  ],
+  "verifiedConverterSourceContiguousPieces": 442,
+  "tests": {
+    "eligibilityCases": 22,
+    "onewayCases": 6,
+    "missingNodeGap": "pass",
+    "outsideEndpointsCrossing": "pass",
+    "sourceIdentityAfterClipping": "pass",
+    "isolatedGeneratorVisibleRestrictedSurfaces": "pass"
+  },
+  "productionSha256": {
+    "vidhana-road-network.json": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9",
+    "vidhana-street-data.json": "3a3af6a93af78dd5d601efa0dea4a172c4e068f6e9c525ad2184519101acebf6"
+  },
+  "productionRegenerated": false,
+  "gpuUsed": false,
+  "eligibleRouteSamples5m": 2191,
+  "eligibleRouteResidualMissesOver1mm": [
+    {
+      "sourceWay": "52057928",
+      "sourceSegment": 0,
+      "distanceM": 0.8262943223894371,
+      "fractionWithinClippedSegment": 0.3333333333333333
+    }
+  ],
+  "sourceGraph": {
+    "nodes": 380,
+    "directedEdges": 543,
+    "deadEndNodes": 10,
+    "boundaryPolicy": "same source pair/fraction only; never radius-snap unrelated district vectors"
+  },
+  "finalClassifiedGround": {
+    "path": "experiments\\osm2world\\coverage-500-classified\\asset",
+    "footprintSha256": "03676f34203016d70b73f7f883d72e8c6897b171e21c28af7cc6035589a7284d",
+    "samples": 2191,
+    "missesOver1mm": [
+      {
+        "sourceWay": "52057928",
+        "sourceSegment": 0,
+        "distanceM": 0.8262921380590068,
+        "fractionWithinClippedSegment": 0.3333333333333333
+      }
+    ],
+    "explicitBlocker": "way/52057928 source segment0 junction ground omission"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "states": [
+    {
+      "mode": "focus900-front",
+      "bias": -0.0004,
+      "normalBias": 1.2,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 100,
+        "far": 2500,
+        "left": -450,
+        "right": 450
+      },
+      "landmarkReceive": true
+    },
+    {
+      "mode": "focus600-front",
+      "bias": -0.0004,
+      "normalBias": 1.2,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 100,
+        "far": 2500,
+        "left": -300,
+        "right": 300
+      },
+      "landmarkReceive": true
+    },
+    {
+      "mode": "focus900-aerial",
+      "bias": -0.0004,
+      "normalBias": 1.2,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 100,
+        "far": 2500,
+        "left": -450,
+        "right": 450
+      },
+      "landmarkReceive": true
+    },
+    {
+      "mode": "focus600-aerial",
+      "bias": -0.0004,
+      "normalBias": 1.2,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 100,
+        "far": 2500,
+        "left": -300,
+        "right": 300
+      },
+      "landmarkReceive": true
+    }
+  ],
+  "errors": []
+}

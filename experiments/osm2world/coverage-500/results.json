@@ -1,0 +1,31 @@
+{
+  "selectionCenter": [
+    77.5908,
+    12.9798
+  ],
+  "selectionRadiusM": 500,
+  "bounds": [
+    77.585721,
+    12.9751756,
+    77.596999,
+    12.9845167
+  ],
+  "projectionOrigin": [
+    77.59136000000001,
+    12.97984615
+  ],
+  "nodes": 1822,
+  "ways": 442,
+  "sourceWays": 441,
+  "preciseCircularClip": false,
+  "sourceSha256": "9d4e23f03a19cf4f819d0ca49e42c8a79f9b28458d7e2f76b57a2c75262c0ac8",
+  "conversionMs": 1260.9000000059605,
+  "meshes": 1163,
+  "triangles": 11874,
+  "jsonBytes": 2511865,
+  "warnings": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "runtimeIntegrated": false,
+  "circularMeshClipping": "Not performed; source endpoints and complete mapped areas are retained"
+}

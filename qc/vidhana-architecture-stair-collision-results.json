@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "footprintVertices": 4,
+  "adjacentPathsClear": true,
+  "landingRoutePreserved": true,
+  "contactNormalsUnit": true,
+  "nearbyRoadSamples": 286,
+  "blockedRoadSamples": 0
+}

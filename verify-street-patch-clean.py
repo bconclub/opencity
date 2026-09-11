@@ -6,20 +6,23 @@ from shapely.geometry import Polygon, GeometryCollection
 from shapely.ops import unary_union
 from shapely import constrained_delaunay_triangles
 
-source=json.loads((Path(__file__).parent/'experiments/osm2world/sample-meshes.json').read_text())
+source_path=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).parent/'experiments/osm2world/sample-meshes.json'
+source=json.loads(source_path.read_text())
+classified=any('surfaceRole' in mesh or 'groundEligible' in mesh for mesh in source)
 groups={};seen=set();duplicates=0;original_flat=[]
 for mesh in source:
-    key=tuple(mesh['color'])
+    color=tuple(mesh['color']);role=mesh.get('surfaceRole');ground=mesh.get('groundEligible',True)
+    key=(color,role,ground)
     group=groups.setdefault(key,{'flat':[],'raised':[]})
     for i in range(0,len(mesh['indices']),3):
         ids=mesh['indices'][i:i+3]
         vertices=[tuple(mesh['positions'][j*3:j*3+3]) for j in ids]
-        identity=tuple(sorted(vertices))
+        identity=(tuple(sorted(vertices)),color,role,ground) if classified else tuple(sorted(vertices))
         if identity in seen:
             duplicates+=1
             continue
         seen.add(identity)
-        if all(abs(v[1])<1e-8 for v in vertices):
+        if ground and all(abs(v[1])<1e-8 for v in vertices):
             polygon=Polygon([(v[0],v[2]) for v in vertices])
             if polygon.area>1e-8:
                 group['flat'].append(polygon)
@@ -30,13 +33,21 @@ for mesh in source:
 # Higher luminance material owns coincident ground pixels: markings, footways,
 # gray paving, dark asphalt. Real raised/curb geometry retains source elevation.
 covered=GeometryCollection();prepared=[];clean_flat=[];original_area_sum=0
-for color,group in sorted(groups.items(),reverse=True):
+def priority(item):
+    color,role,ground=item[0]
+    # Legacy sample keeps its audited colour order. Explicit profiles give
+    # mapped paint precedence and keep distinct source colour above asphalt.
+    rank={'marking':40,'concrete':30,'paving':20,'source':15,'asphalt':10}.get(role,0)
+    return (rank,color)
+for (color,role,ground),group in sorted(groups.items(),key=priority,reverse=True):
     surface=unary_union(group['flat'])
     original_area_sum+=sum(p.area for p in group['flat'])
     clean=surface.difference(covered)
     covered=covered.union(surface)
     clean_flat.append(clean)
     out={'color':list(color),'positions':[],'normals':[],'indices':[],'uvs':[],'texture':None}
+    if role is not None:out['surfaceRole']=role
+    if not ground:out['groundEligible']=False
     def add(vertices,normals):
         a,b,c=vertices
         u=[b[i]-a[i] for i in range(3)];v=[c[i]-a[i] for i in range(3)]

@@ -1,0 +1,1065 @@
+{
+  "asset": "assets/vehicles/cybertruck.glb",
+  "bytes": 429708,
+  "sha256": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b",
+  "frame": "X right, Y forward, Z up; scene transformed with runtime X rotation",
+  "allBounds": {
+    "min": [
+      -1.3000000566244125,
+      -2.864999904297292,
+      -4.996003610813204e-16
+    ],
+    "max": [
+      1.3000000566244125,
+      2.7750000208616257,
+      1.9922060966491701
+    ],
+    "size": [
+      2.600000113248825,
+      5.639999925158918,
+      1.9922060966491706
+    ]
+  },
+  "noMirrorBounds": {
+    "min": [
+      -1.2015000262488733,
+      -2.864999904297292,
+      -4.996003610813204e-16
+    ],
+    "max": [
+      1.2015000262488733,
+      2.7750000208616257,
+      1.9922060966491701
+    ],
+    "size": [
+      2.4030000524977466,
+      5.639999925158918,
+      1.9922060966491706
+    ]
+  },
+  "wheelbase": 3.6100000143051147,
+  "track": 2.0399999618530273,
+  "wheelRadius": 0.4699999988079071,
+  "wheels": [
+    {
+      "name": "Wheel_FL",
+      "center": [
+        -1.0199999809265137,
+        1.7799999713897705,
+        0.4699999988079067
+      ]
+    },
+    {
+      "name": "Wheel_FR",
+      "center": [
+        1.0199999809265137,
+        1.7799999713897705,
+        0.4699999988079067
+      ]
+    },
+    {
+      "name": "Wheel_RL",
+      "center": [
+        -1.0199999809265137,
+        -1.8300000429153442,
+        0.4699999988079075
+      ]
+    },
+    {
+      "name": "Wheel_RR",
+      "center": [
+        1.0199999809265137,
+        -1.8300000429153442,
+        0.4699999988079075
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "BodyPaint",
+      "color": [
+        0.49000000953674316,
+        0.5400000214576721,
+        0.5699999928474426
+      ],
+      "metalness": 0.8199999928474426,
+      "roughness": 0.25999999046325684,
+      "transparent": false,
+      "opacity": 1,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "emissiveIntensity": 1
+    },
+    {
+      "name": "RubberTrim",
+      "color": [
+        0.013000000268220901,
+        0.017000000923871994,
+        0.02199999988079071
+      ],
+      "metalness": 0.05000000074505806,
+      "roughness": 0.47999998927116394,
+      "transparent": false,
+      "opacity": 1,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "emissiveIntensity": 1
+    },
+    {
+      "name": "Glass",
+      "color": [
+        0.02199999988079071,
+        0.05700000002980232,
+        0.07999999821186066
+      ],
+      "metalness": 0.47999998927116394,
+      "roughness": 0.11999999731779099,
+      "transparent": false,
+      "opacity": 1,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "emissiveIntensity": 1
+    },
+    {
+      "name": "Lamps",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "metalness": 0.20000000298023224,
+      "roughness": 0.18000000715255737,
+      "transparent": false,
+      "opacity": 1,
+      "emissive": [
+        1,
+        1,
+        1
+      ],
+      "emissiveIntensity": 3
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Stainless_wedge_body",
+      "min": [
+        -1.0700000524520874,
+        -2.8399999141693115,
+        0.43000125885009705
+      ],
+      "max": [
+        1.0700000524520874,
+        2.72000002861023,
+        1.629999995231629
+      ],
+      "material": "BodyPaint",
+      "triangles": 1080
+    },
+    {
+      "name": "Bed_liner",
+      "min": [
+        -0.8550000190734863,
+        -2.7450000047683716,
+        0.9274999871850016
+      ],
+      "max": [
+        0.8550000190734863,
+        -1.2150000333786009,
+        0.9724999889731414
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib",
+      "min": [
+        -0.732500028796494,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        -0.707500028423965,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib001",
+      "min": [
+        -0.5525000216439366,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        -0.5275000212714076,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib002",
+      "min": [
+        -0.37250001449137926,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        -0.34750001411885023,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib003",
+      "min": [
+        -0.1925000073388219,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        -0.16750000696629286,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib004",
+      "min": [
+        -0.012500000186264515,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        0.012500000186264515,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib005",
+      "min": [
+        0.16750000696629286,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        0.1925000073388219,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib006",
+      "min": [
+        0.34750001411885023,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        0.37250001449137926,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib007",
+      "min": [
+        0.5275000212714076,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        0.5525000216439366,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Bed_rib008",
+      "min": [
+        0.707500028423965,
+        -2.7100000381469727,
+        0.9680000189691785
+      ],
+      "max": [
+        0.732500028796494,
+        -1.2499999999999998,
+        0.992000019177795
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Angular_armored_canopy",
+      "min": [
+        -0.9798015356063843,
+        -1.1499999761581419,
+        1.2899999618530271
+      ],
+      "max": [
+        0.9798015356063843,
+        1.3500000238418584,
+        1.957669258117676
+      ],
+      "material": "Glass",
+      "triangles": 108
+    },
+    {
+      "name": "Canopy_roof_rail",
+      "min": [
+        -0.9648405313491821,
+        -1.1643960475921629,
+        1.2991462945938108
+      ],
+      "max": [
+        -0.7501015663146973,
+        1.358524084091187,
+        1.9922060966491701
+      ],
+      "material": "BodyPaint",
+      "triangles": 24
+    },
+    {
+      "name": "Door_seam",
+      "min": [
+        -1.0820000171661377,
+        -0.46692821383476246,
+        0.5600000023841859
+      ],
+      "max": [
+        -0.7837191820144653,
+        -0.4530718028545375,
+        1.9449549913406372
+      ],
+      "material": "RubberTrim",
+      "triangles": 24
+    },
+    {
+      "name": "Flush_door_handle",
+      "min": [
+        -1.0825000475160778,
+        -0.03999999910593002,
+        1.38299997523427
+      ],
+      "max": [
+        -1.0675000478513539,
+        0.19999999552965195,
+        1.416999977082014
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Side_mirror",
+      "min": [
+        -1.3000000566244125,
+        0.8900000005960467,
+        1.344999976456165
+      ],
+      "max": [
+        -1.0800000578165054,
+        1.1099999994039538,
+        1.4549999758601186
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Canopy_roof_rail001",
+      "min": [
+        0.7501015663146973,
+        -1.1643960475921629,
+        1.2991462945938108
+      ],
+      "max": [
+        0.9648405313491821,
+        1.358524084091187,
+        1.9922060966491701
+      ],
+      "material": "BodyPaint",
+      "triangles": 24
+    },
+    {
+      "name": "Door_seam001",
+      "min": [
+        0.7837191820144653,
+        -0.46692821383476246,
+        0.5600000023841859
+      ],
+      "max": [
+        1.0820000171661377,
+        -0.4530718028545375,
+        1.9449549913406372
+      ],
+      "material": "RubberTrim",
+      "triangles": 24
+    },
+    {
+      "name": "Flush_door_handle001",
+      "min": [
+        1.0675000478513539,
+        -0.03999999910593002,
+        1.38299997523427
+      ],
+      "max": [
+        1.0825000475160778,
+        0.19999999552965195,
+        1.416999977082014
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Side_mirror001",
+      "min": [
+        1.0800000578165054,
+        0.8900000005960467,
+        1.344999976456165
+      ],
+      "max": [
+        1.3000000566244125,
+        1.1099999994039538,
+        1.4549999758601186
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Front_bumper",
+      "min": [
+        -0.9700000286102295,
+        2.685000017285347,
+        0.5449999943375582
+      ],
+      "max": [
+        0.9700000286102295,
+        2.7750000208616257,
+        0.7149999961256975
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Front_light_bar",
+      "min": [
+        -0.9100000262260437,
+        2.7219998948276047,
+        1.0124999657273286
+      ],
+      "max": [
+        0.9100000262260437,
+        2.7479998953640465,
+        1.057499967515468
+      ],
+      "material": "Lamps",
+      "triangles": 108
+    },
+    {
+      "name": "Tail_light_bar",
+      "min": [
+        -0.8999999761581421,
+        -2.864999904297292,
+        1.3075000420212752
+      ],
+      "max": [
+        0.8999999761581421,
+        -2.834999904967844,
+        1.3525000438094146
+      ],
+      "material": "Lamps",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_FL",
+      "min": [
+        -1.2015000262488733,
+        1.3099999725818634,
+        -4.996003610813204e-16
+      ],
+      "max": [
+        -0.879999965429306,
+        2.2499999701976776,
+        0.939999997615814
+      ],
+      "material": "RubberTrim",
+      "triangles": 380
+    },
+    {
+      "name": "AeroCover_FL",
+      "min": [
+        -1.1790000045813285,
+        1.4791999757289886,
+        0.1691999608509573
+      ],
+      "max": [
+        -1.1509999191247262,
+        2.0807999670505524,
+        0.7708000367648562
+      ],
+      "material": "BodyPaint",
+      "triangles": 380
+    },
+    {
+      "name": "Hub_FL",
+      "min": [
+        -1.2015000262488733,
+        1.6765999719500542,
+        0.36659998379599895
+      ],
+      "max": [
+        -1.1764999947319617,
+        1.8833999708294868,
+        0.5734000138198145
+      ],
+      "material": "RubberTrim",
+      "triangles": 188
+    },
+    {
+      "name": "Wheel_spoke",
+      "min": [
+        -1.1970000360161066,
+        1.747099969536066,
+        0.5404999703168865
+      ],
+      "max": [
+        -1.1770000364631414,
+        1.812899973243475,
+        0.7378999739885326
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke001",
+      "min": [
+        -1.1970000360161066,
+        1.836882858446204,
+        0.46049596963944883
+      ],
+      "max": [
+        -1.1770000364631414,
+        2.0449547479838497,
+        0.584075430049271
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke002",
+      "min": [
+        -1.1970000360161066,
+        1.794822240568833,
+        0.23392620510907589
+      ],
+      "max": [
+        -1.1770000364631414,
+        1.964084362290664,
+        0.43230244689135044
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke003",
+      "min": [
+        -1.1970000360161066,
+        1.5959156606269977,
+        0.23392617219185802
+      ],
+      "max": [
+        -1.1770000364631414,
+        1.7651778604911663,
+        0.43230247980856856
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke004",
+      "min": [
+        -1.1970000360161066,
+        1.5150453169057025,
+        0.46049594601664634
+      ],
+      "max": [
+        -1.1770000364631414,
+        1.7231172006419049,
+        0.5840754536720737
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_FR",
+      "min": [
+        0.879999965429306,
+        1.3099999725818634,
+        -4.996003610813204e-16
+      ],
+      "max": [
+        1.2015000262488733,
+        2.2499999701976776,
+        0.939999997615814
+      ],
+      "material": "RubberTrim",
+      "triangles": 380
+    },
+    {
+      "name": "AeroCover_FR",
+      "min": [
+        1.1509999191247262,
+        1.4791999757289886,
+        0.1691999608509573
+      ],
+      "max": [
+        1.1790000045813285,
+        2.0807999670505524,
+        0.7708000367648562
+      ],
+      "material": "BodyPaint",
+      "triangles": 380
+    },
+    {
+      "name": "Hub_FR",
+      "min": [
+        1.1764999947319617,
+        1.6765999719500542,
+        0.36659998379599895
+      ],
+      "max": [
+        1.2015000262488733,
+        1.8833999708294868,
+        0.5734000138198145
+      ],
+      "material": "RubberTrim",
+      "triangles": 188
+    },
+    {
+      "name": "Wheel_spoke005",
+      "min": [
+        1.1770000364631414,
+        1.747099969536066,
+        0.5404999703168865
+      ],
+      "max": [
+        1.1970000360161066,
+        1.812899973243475,
+        0.7378999739885326
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke006",
+      "min": [
+        1.1770000364631414,
+        1.836882858446204,
+        0.46049596963944883
+      ],
+      "max": [
+        1.1970000360161066,
+        2.0449547479838497,
+        0.584075430049271
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke007",
+      "min": [
+        1.1770000364631414,
+        1.794822240568833,
+        0.23392620510907589
+      ],
+      "max": [
+        1.1970000360161066,
+        1.964084362290664,
+        0.43230244689135044
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke008",
+      "min": [
+        1.1770000364631414,
+        1.5959156606269977,
+        0.23392617219185802
+      ],
+      "max": [
+        1.1970000360161066,
+        1.7651778604911663,
+        0.43230247980856856
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke009",
+      "min": [
+        1.1770000364631414,
+        1.5150453169057025,
+        0.46049594601664634
+      ],
+      "max": [
+        1.1970000360161066,
+        1.7231172006419049,
+        0.5840754536720737
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_RL",
+      "min": [
+        -1.2015000262488733,
+        -2.3000000417232513,
+        2.7755575615628914e-16
+      ],
+      "max": [
+        -0.879999965429306,
+        -1.3600000441074371,
+        0.9399999976158147
+      ],
+      "material": "RubberTrim",
+      "triangles": 380
+    },
+    {
+      "name": "AeroCover_RL",
+      "min": [
+        -1.1790000045813285,
+        -2.130800038576126,
+        0.16919996085095806
+      ],
+      "max": [
+        -1.1509999191247262,
+        -1.5292000472545624,
+        0.7708000367648569
+      ],
+      "material": "BodyPaint",
+      "triangles": 380
+    },
+    {
+      "name": "Hub_RL",
+      "min": [
+        -1.2015000262488733,
+        -1.9334000423550606,
+        0.36659998379599973
+      ],
+      "max": [
+        -1.1764999947319617,
+        -1.726600043475628,
+        0.5734000138198153
+      ],
+      "material": "RubberTrim",
+      "triangles": 188
+    },
+    {
+      "name": "Wheel_spoke010",
+      "min": [
+        -1.1970000360161066,
+        -1.8629000447690487,
+        0.5404999703168873
+      ],
+      "max": [
+        -1.1770000364631414,
+        -1.7971000410616398,
+        0.7378999739885335
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke011",
+      "min": [
+        -1.1970000360161066,
+        -1.7731171558589107,
+        0.4604959696394496
+      ],
+      "max": [
+        -1.1770000364631414,
+        -1.565045266321265,
+        0.5840754300492718
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke012",
+      "min": [
+        -1.1970000360161066,
+        -1.8151777737362818,
+        0.23392620510907666
+      ],
+      "max": [
+        -1.1770000364631414,
+        -1.6459156520144507,
+        0.4323024468913512
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke013",
+      "min": [
+        -1.1970000360161066,
+        -2.014084353678117,
+        0.2339261721918588
+      ],
+      "max": [
+        -1.1770000364631414,
+        -1.8448221538139484,
+        0.43230247980856934
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke014",
+      "min": [
+        -1.1970000360161066,
+        -2.094954697399412,
+        0.4604959460166471
+      ],
+      "max": [
+        -1.1770000364631414,
+        -1.8868828136632099,
+        0.5840754536720745
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_RR",
+      "min": [
+        0.879999965429306,
+        -2.3000000417232513,
+        2.7755575615628914e-16
+      ],
+      "max": [
+        1.2015000262488733,
+        -1.3600000441074371,
+        0.9399999976158147
+      ],
+      "material": "RubberTrim",
+      "triangles": 380
+    },
+    {
+      "name": "AeroCover_RR",
+      "min": [
+        1.1509999191247262,
+        -2.130800038576126,
+        0.16919996085095806
+      ],
+      "max": [
+        1.1790000045813285,
+        -1.5292000472545624,
+        0.7708000367648569
+      ],
+      "material": "BodyPaint",
+      "triangles": 380
+    },
+    {
+      "name": "Hub_RR",
+      "min": [
+        1.1764999947319617,
+        -1.9334000423550606,
+        0.36659998379599973
+      ],
+      "max": [
+        1.2015000262488733,
+        -1.726600043475628,
+        0.5734000138198153
+      ],
+      "material": "RubberTrim",
+      "triangles": 188
+    },
+    {
+      "name": "Wheel_spoke015",
+      "min": [
+        1.1770000364631414,
+        -1.8629000447690487,
+        0.5404999703168873
+      ],
+      "max": [
+        1.1970000360161066,
+        -1.7971000410616398,
+        0.7378999739885335
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke016",
+      "min": [
+        1.1770000364631414,
+        -1.7731171558589107,
+        0.4604959696394496
+      ],
+      "max": [
+        1.1970000360161066,
+        -1.565045266321265,
+        0.5840754300492718
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke017",
+      "min": [
+        1.1770000364631414,
+        -1.8151777737362818,
+        0.23392620510907666
+      ],
+      "max": [
+        1.1970000360161066,
+        -1.6459156520144507,
+        0.4323024468913512
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke018",
+      "min": [
+        1.1770000364631414,
+        -2.014084353678117,
+        0.2339261721918588
+      ],
+      "max": [
+        1.1970000360161066,
+        -1.8448221538139484,
+        0.43230247980856934
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    },
+    {
+      "name": "Wheel_spoke019",
+      "min": [
+        1.1770000364631414,
+        -2.094954697399412,
+        0.4604959460166471
+      ],
+      "max": [
+        1.1970000360161066,
+        -1.8868828136632099,
+        0.5840754536720745
+      ],
+      "material": "RubberTrim",
+      "triangles": 108
+    }
+  ],
+  "auditDate": "2026-09-11",
+  "source": "assets-source/vehicles/build-vehicles.py",
+  "blendSource": "D:/CodexTools/Blender/projects/cybertruck.blend",
+  "limitations": [
+    "Blender not launched; procedural source inspected, GLB measured with actual Three169 loader/rig",
+    "Saved release screenshot inspected; no new GPU render",
+    "Source investor deck contains no suitable dimension table; parent authorized official Tesla web verification"
+  ],
+  "references": {
+    "dimensions": "https://www.tesla.com/ownersmanual/cybertruck/en_us/GUID-12A976DD-EB60-431B-AFF1-5A37E95006DB.html",
+    "alignment": "https://service.tesla.com/docs/Cybertruck/ServiceManual/en-us/GUID-AD49F177-08D6-4B6E-BE24-4361D52F44C4.html",
+    "tires": "https://www.tesla.com/ownersmanual/cybertruck/en_us/GUID-9284C9F2-A2F2-4604-83BF-6599F47766B7.html"
+  },
+  "referenceMetres": {
+    "length": 5.6829,
+    "widthMirrors": 2.4133,
+    "widthFoldedMirrors": 2.2007,
+    "widthExcludingMirrors": 2.0316,
+    "heightMediumAir": 1.7938,
+    "heightExtractAir": 1.9438,
+    "wheelbase": 3.635,
+    "trackOwnerApprox": 1.772,
+    "trackServiceFront": 1.777,
+    "trackServiceRear": 1.772,
+    "frontOverhang": 0.8783,
+    "rearOverhang": 1.1696,
+    "nominalTireRadius20Inch28565R20": 0.43925
+  },
+  "deltasMetres": {
+    "length": -0.04290007484108216,
+    "mirrorWidth": 0.18670011324882507,
+    "nonMirrorEnvelope": 0.37140005249774655,
+    "bodyShellWidth": 0.10840010489999985,
+    "heightMedium": 0.19840609664917053,
+    "heightHighest": 0.048406096649170616,
+    "wheelbase": -0.02499998569488504,
+    "trackFront": 0.26299996185302743,
+    "trackRear": 0.2679999618530273,
+    "tireRadius": 0.03074999880790713,
+    "frontOverhang": 0.1167000494718552,
+    "rearOverhang": -0.13460013861805242
+  },
+  "topDefects": [
+    {
+      "priority": 1,
+      "defect": "Wheel assemblies, body and mirrors too wide; tire radius oversized",
+      "confidence": "high",
+      "edit": "build-vehicles.py:86,48-59,87,98. Front centers +/-0.8885, rear +/-0.886; nominal r=.43925 for 285/65R20. Keep wheel parent structure, re-center openings, narrow body target1.0158 halfwidth and separately place mirror outer edges+/-1.20665. Flatten excessive hub protrusion, do not scale complete scene."
+    },
+    {
+      "priority": 2,
+      "defect": "Canopy/roof height and nose/tail proportion errors",
+      "confidence": "high",
+      "edit": "build-vehicles.py:87,93-103. Reprofile existing canopy and rails/body stations to chosen Medium air height1.7938, retain material slots; wheelbase3.635 about existing axle midpoint-.025 gives front1.7925/rear-1.8425. Front endpoint2.6708/rear-3.0121 gives published overhangs. Deform existing panels and move attached fixtures with stations, do not rebuild other cars."
+    },
+    {
+      "priority": 3,
+      "defect": "Red rear lamp becomes white emissive at glTF export",
+      "confidence": "high",
+      "edit": "build-vehicles.py:68-72,84,102. Bake LampColor to tiny emissive/base-color palette UV texture for lamp objects only (reuse KITT solution), or split front/rear fixed lamp materials. Preserve BodyPaint, Glass, RubberTrim bindings."
+    }
+  ],
+  "followupRuntimeMismatch": {
+    "visualWheelbase": 3.6100000143,
+    "profileWheelbase": 3.3,
+    "visualRadius": 0.4699999988,
+    "profileRadius": 0.43,
+    "note": "Outside this read-only task; align tuning and remote steering assumptions only after candidate geometry selected."
+  },
+  "lampExport": {
+    "doubleSided": true,
+    "emissiveFactor": [
+      1,
+      1,
+      1
+    ],
+    "extensions": {
+      "KHR_materials_emissive_strength": {
+        "emissiveStrength": 3
+      }
+    },
+    "name": "Lamps",
+    "pbrMetallicRoughness": {
+      "metallicFactor": 0.20000000298023224,
+      "roughnessFactor": 0.18000000715255737
+    }
+  }
+}

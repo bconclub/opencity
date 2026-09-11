@@ -1,10 +1,10 @@
 {
   "name": "bengaluru-living-city",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "check": "node --check app.js && node --check district.js && node --check flight.js && node --check auto-mode.js && node --check vehicle-shell.js && node --check focus-pointer.js"
+    "check": "node --check app.js && node --check district.js && node --check flight.js && node --check auto-mode.js && node --check vehicle-shell.js && node --check focus-pointer.js && node verify-browser-entry.mjs"
   }
 }

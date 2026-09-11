@@ -1,0 +1,161 @@
+{
+  "initial": {
+    "state": {
+      "ready": true,
+      "visible": true,
+      "origin": [
+        77.5907159,
+        12.9797946
+      ],
+      "bounds": [
+        77.5887816777979,
+        12.977819540905388,
+        77.5926831432082,
+        12.981769855276205
+      ],
+      "meshes": 4,
+      "triangles": 2130,
+      "indexedTriangles": 1416,
+      "indexCells": 930,
+      "groundIndexSource": "mesh",
+      "groundIndexURL": null,
+      "frames": 12,
+      "drawCalls": 4,
+      "renderedTriangles": 2130,
+      "surfaceTextures": 2,
+      "textureSize": 256,
+      "repeatMetres": 2,
+      "geometryAdded": 0,
+      "originalProceduralTextures": true,
+      "surfaceCoverage": {
+        "status": "ready",
+        "reason": null,
+        "atlasSize": 1024,
+        "atlasGpuBytesIncludingMips": 5592404,
+        "totalSurfaceGpuBytes": 6291452,
+        "geometryAdded": 0
+      }
+    },
+    "textures": {
+      "loaded": 1,
+      "disposed": 0
+    }
+  },
+  "fallback": {
+    "ready": true,
+    "visible": true,
+    "origin": [
+      77.5907159,
+      12.9797946
+    ],
+    "bounds": [
+      77.5887816777979,
+      12.977819540905388,
+      77.5926831432082,
+      12.981769855276205
+    ],
+    "meshes": 4,
+    "triangles": 2130,
+    "indexedTriangles": 1416,
+    "indexCells": 930,
+    "groundIndexSource": "mesh",
+    "groundIndexURL": null,
+    "frames": 0,
+    "drawCalls": 0,
+    "renderedTriangles": 0,
+    "surfaceTextures": 2,
+    "textureSize": 256,
+    "repeatMetres": 2,
+    "geometryAdded": 0,
+    "originalProceduralTextures": true,
+    "surfaceCoverage": {
+      "status": "fallback",
+      "reason": "Street coverage atlas unavailable",
+      "atlasSize": 0,
+      "atlasGpuBytesIncludingMips": 0,
+      "totalSurfaceGpuBytes": 699048,
+      "geometryAdded": 0
+    }
+  },
+  "retry": {
+    "state": {
+      "ready": true,
+      "visible": true,
+      "origin": [
+        77.5907159,
+        12.9797946
+      ],
+      "bounds": [
+        77.5887816777979,
+        12.977819540905388,
+        77.5926831432082,
+        12.981769855276205
+      ],
+      "meshes": 4,
+      "triangles": 2130,
+      "indexedTriangles": 1416,
+      "indexCells": 930,
+      "groundIndexSource": "mesh",
+      "groundIndexURL": null,
+      "frames": 0,
+      "drawCalls": 0,
+      "renderedTriangles": 0,
+      "surfaceTextures": 2,
+      "textureSize": 256,
+      "repeatMetres": 2,
+      "geometryAdded": 0,
+      "originalProceduralTextures": true,
+      "surfaceCoverage": {
+        "status": "ready",
+        "reason": null,
+        "atlasSize": 1024,
+        "atlasGpuBytesIncludingMips": 5592404,
+        "totalSurfaceGpuBytes": 6291452,
+        "geometryAdded": 0
+      }
+    },
+    "textures": {
+      "loaded": 2,
+      "disposed": 1
+    }
+  },
+  "render": {
+    "ready": true,
+    "visible": true,
+    "origin": [
+      77.5907159,
+      12.9797946
+    ],
+    "bounds": [
+      77.5887816777979,
+      12.977819540905388,
+      77.5926831432082,
+      12.981769855276205
+    ],
+    "meshes": 4,
+    "triangles": 2130,
+    "indexedTriangles": 1416,
+    "indexCells": 930,
+    "groundIndexSource": "mesh",
+    "groundIndexURL": null,
+    "frames": 7,
+    "drawCalls": 4,
+    "renderedTriangles": 2130,
+    "surfaceTextures": 2,
+    "textureSize": 256,
+    "repeatMetres": 2,
+    "geometryAdded": 0,
+    "originalProceduralTextures": true,
+    "surfaceCoverage": {
+      "status": "ready",
+      "reason": null,
+      "atlasSize": 1024,
+      "atlasGpuBytesIncludingMips": 5592404,
+      "totalSurfaceGpuBytes": 6291452,
+      "geometryAdded": 0
+    }
+  },
+  "glbRequests": 3,
+  "errors": [],
+  "passed": true
+}

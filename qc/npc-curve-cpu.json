@@ -1,0 +1,60 @@
+{
+  "created": "2026-09-11T02:36:51.344Z",
+  "description": "Alternating CPU-only runs,20 NPCs,200 warmup ticks then1400 measured ticks. Actual baseline/candidate motion differs after curve braking. Not a GPU frame-time benchmark.",
+  "runs": [
+    {
+      "name": "baseline",
+      "ticks": 1400,
+      "meanMs": 0.9175770000000003,
+      "medianMs": 0.8451999999999771,
+      "p95Ms": 1.459100000000035
+    },
+    {
+      "name": "candidate",
+      "ticks": 1400,
+      "meanMs": 0.9026002857142826,
+      "medianMs": 0.8386000000000422,
+      "p95Ms": 1.3550000000000182
+    },
+    {
+      "name": "candidate",
+      "ticks": 1400,
+      "meanMs": 0.840012499999997,
+      "medianMs": 0.8097999999999956,
+      "p95Ms": 1.2107999999998356
+    },
+    {
+      "name": "baseline",
+      "ticks": 1400,
+      "meanMs": 0.8387682142857096,
+      "medianMs": 0.801300000000083,
+      "p95Ms": 1.1732999999994718
+    },
+    {
+      "name": "baseline",
+      "ticks": 1400,
+      "meanMs": 0.836186214285719,
+      "medianMs": 0.8007999999999811,
+      "p95Ms": 1.153400000000147
+    },
+    {
+      "name": "candidate",
+      "ticks": 1400,
+      "meanMs": 0.8625052857142873,
+      "medianMs": 0.816899999999805,
+      "p95Ms": 1.3315000000002328
+    }
+  ],
+  "baseline": {
+    "meanMs": 0.8641771428571431,
+    "meanMedianMs": 0.8157666666666804,
+    "meanP95Ms": 1.2619333333332179
+  },
+  "candidate": {
+    "meanMs": 0.868372690476189,
+    "meanMedianMs": 0.8217666666666142,
+    "meanP95Ms": 1.2991000000000288
+  },
+  "meanDeltaMs": 0.004195547619045947,
+  "meanDeltaPercent": 0.48549624966642835
+}

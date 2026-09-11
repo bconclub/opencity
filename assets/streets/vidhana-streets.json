@@ -31,5 +31,24 @@
   "meshes": 4,
   "triangles": 2130,
   "bytes": 182248,
-  "footprintTriangles": 1416
+  "footprintTriangles": 1416,
+  "surfaceCoverage": {
+    "version": 1,
+    "encoding": "premultiplied-linear-rgba8",
+    "geometrySha256": "87fe720941fc52856fd04f8ffa47f16df1bd363c56017530af65e6436a46b0dc",
+    "atlasSha256": "2b72eb8b720b87cb65b4241f5f4789b6398852b79a6134b9e586fccf55f06c8b",
+    "atlasURL": "vidhana-coverage.png",
+    "atlasBytes": 213359,
+    "size": 1024,
+    "origin": [
+      77.5907159,
+      12.9797946
+    ],
+    "bounds": [
+      -218.26858318948464,
+      -220.04578198098855,
+      221.84654034280496,
+      220.06934155130105
+    ]
+  }
 }

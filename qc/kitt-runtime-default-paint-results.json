@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "cpuOnly": true,
+  "defaultLocalPaint": "303b3e",
+  "defaultRemoteWireColor": "black",
+  "defaultVehicleSwitchColors": [
+    {
+      "vehicle": "kitt",
+      "color": "black"
+    },
+    {
+      "vehicle": "cybertruck",
+      "color": "green"
+    },
+    {
+      "vehicle": "auto",
+      "color": "green"
+    },
+    {
+      "vehicle": "cybercab",
+      "color": "green"
+    },
+    {
+      "vehicle": "kitt",
+      "color": "black"
+    }
+  ],
+  "storedNamedPaintPriority": true,
+  "customLocalHexPreserved": "12ab34",
+  "customWireQuantization": "green",
+  "fixedCybercabGold": true,
+  "remotePreloadPaintPriority": true,
+  "perInstanceMaterials": true,
+  "storageWrites": 0,
+  "serverProtocolChanged": false
+}

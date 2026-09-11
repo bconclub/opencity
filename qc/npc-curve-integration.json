@@ -1,0 +1,15 @@
+{
+  "created": "2026-09-11T02:41:00.322Z",
+  "baselineSHA256": "db41f3a64a952ce576bf9ab80f683bec41aaf7d0ff7df185bbb941a45dc03316",
+  "runtimeSHA256": "e261033f9e1fc5c6374e4b3c329d40e8ccaa195adb9b761f4531f5cf6d592d16",
+  "candidateSHA256": "43764fbd99fdd0cd0a721c4fcc6341432dc8fd82cb69a435b7acf4d67c0c5afd",
+  "normalizedEquivalent": true,
+  "baselinePreserved": "qc/npc-curve-baseline.mjs",
+  "status": "Integrated and CPU verification passed",
+  "tests": {
+    "focused": "qc/npc-curve-integrated-fixtures.json, passed against actual production module",
+    "traffic": "verify-traffic-simulation.mjs, passed: signal, stop, four-way, player collision and 600-second 20-NPC soak, 0 overlaps, min 1125.776m, max wait 40s",
+    "autoRoam": "verify-auto-roam.mjs, passed"
+  },
+  "regeneratedCandidateEquivalent": true
+}

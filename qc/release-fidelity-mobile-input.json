@@ -1,0 +1,32 @@
+{
+  "checks": [
+    "neutral and dead zone",
+    "moderate/full throttle differ",
+    "proportional left/right steering",
+    "reverse is independent",
+    "ground movement does not synthesize binary arrows",
+    "release clears input",
+    "cancel and lost capture clear input",
+    "blur clears input",
+    "right touch policy unchanged",
+    "double tap stop/hover preserved",
+    "double swipe boost preserved",
+    "flight controls remain compatible",
+    "existing car physics produces lower acceleration for moderate touch input"
+  ],
+  "moderate": {
+    "throttle": 0.3902439024390244,
+    "reverse": 0,
+    "steer": 0
+  },
+  "full": {
+    "throttle": 1,
+    "reverse": 0,
+    "steer": 0
+  },
+  "speedAfterOneSecond": {
+    "moderate": 1.573233469590057,
+    "full": 4.0216541704430835
+  },
+  "note": "Synthetic pointer events in browser fixture, actual physics module. Does not claim physical-device feel or FPS."
+}

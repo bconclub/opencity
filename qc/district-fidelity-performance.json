@@ -1,0 +1,126 @@
+{
+  "device": "Windows Edge headless SwiftShader, 1100x760, same local scene, A/B/B/A 60 frames",
+  "results": [
+    {
+      "mode": "before",
+      "median": 200.09999999999854,
+      "p95": 216.70000000000437,
+      "mean": 206.6133333334327,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1088,
+        "duplicateBuildings": 0,
+        "contextBuildings": 0,
+        "drawGroups": 21
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309056,
+        "textures": 6
+      }
+    },
+    {
+      "mode": "after",
+      "median": 216.6999999999971,
+      "p95": 233.3000000000029,
+      "mean": 209.83500000007456,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309032,
+        "textures": 18
+      }
+    },
+    {
+      "mode": "after",
+      "median": 216.60000000000582,
+      "p95": 233.40000000000146,
+      "mean": 215.553333333383,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309032,
+        "textures": 18
+      }
+    },
+    {
+      "mode": "before",
+      "median": 216.60000000000218,
+      "p95": 216.79999999999927,
+      "mean": 211.0699999999752,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1088,
+        "duplicateBuildings": 0,
+        "contextBuildings": 0,
+        "drawGroups": 21
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309056,
+        "textures": 6
+      }
+    }
+  ],
+  "comparison": {
+    "baselineMean": 208.84166666670396,
+    "candidateMean": 212.6941666667288,
+    "pooledRegressionPercent": 1.8446989346111442,
+    "uncontendedFinalPairRegressionPercent": 2.124097850669604,
+    "limitPercent": 10,
+    "passed": true,
+    "note": "A lightweight CSS-only browser fixture may overlap the first candidate. Final candidate/baseline pair had no other browser or Blender work and is the decisive comparison."
+  }
+}

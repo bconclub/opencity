@@ -1,0 +1,136 @@
+{
+  "scope": "Isolated street patch, 1100x760 Edge SwiftShader, ABBA, 100 samples per run. Not full-city hardware GPU performance.",
+  "runs": [
+    {
+      "variant": "before",
+      "meanMs": 22.501000000000005,
+      "medianMs": 16.700000000000273,
+      "p95Ms": 33.40000000000009,
+      "frames": 100,
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "frames": 147,
+        "drawCalls": 4,
+        "renderedTriangles": 2130
+      },
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "meanMs": 22.333000000000002,
+      "medianMs": 16.700000000000045,
+      "p95Ms": 33.40000000000009,
+      "frames": 100,
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "frames": 146,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "meanMs": 23.333999999999996,
+      "medianMs": 16.700000000000045,
+      "p95Ms": 33.40000000000009,
+      "frames": 100,
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "frames": 140,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "meanMs": 22,
+      "medianMs": 16.700000000000045,
+      "p95Ms": 33.40000000000009,
+      "frames": 100,
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "frames": 142,
+        "drawCalls": 4,
+        "renderedTriangles": 2130
+      },
+      "errors": []
+    }
+  ],
+  "meanFrameRegressionPercent": 2.6201658389699123,
+  "additionalDrawCalls": 0,
+  "additionalTriangles": 0,
+  "textureBytesUncompressed": 524288,
+  "downloadBytes": 2966
+}

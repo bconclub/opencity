@@ -1,0 +1,65 @@
+{
+  "status": "PASS_ACTUAL_RUNTIME_RIG_CPU",
+  "threeRevision": "169",
+  "cachedModules": "D:/CodexTools/OSM2World/",
+  "actualFunction": "Unmodified bindVehicleWheelRig source extracted from current blender-vehicle.js",
+  "wheelbase": 2.5653998851776123,
+  "track": 1.5240000486373901,
+  "pivotDriftMeters": 0,
+  "spinAngles": [
+    -1.5707963267948963,
+    -1.5707963267948963,
+    -1.5707963267948963,
+    -1.5707963267948963
+  ],
+  "steerAngles": {
+    "FL": -0.31813600654517604,
+    "FR": -0.38860019116613725,
+    "RL": 0,
+    "RR": 0
+  },
+  "resetError": 0,
+  "scanners": [
+    {
+      "name": "Scanner_0",
+      "hasEmissiveMap": true,
+      "emissiveIntensity": 1.7999999523162842
+    },
+    {
+      "name": "Scanner_1",
+      "hasEmissiveMap": true,
+      "emissiveIntensity": 1.7999999523162842
+    },
+    {
+      "name": "Scanner_2",
+      "hasEmissiveMap": true,
+      "emissiveIntensity": 1.7999999523162842
+    },
+    {
+      "name": "Scanner_3",
+      "hasEmissiveMap": true,
+      "emissiveIntensity": 1.7999999523162842
+    },
+    {
+      "name": "Scanner_4",
+      "hasEmissiveMap": true,
+      "emissiveIntensity": 1.7999999523162842
+    },
+    {
+      "name": "Scanner_5",
+      "hasEmissiveMap": true,
+      "emissiveIntensity": 1.7999999523162842
+    },
+    {
+      "name": "Scanner_6",
+      "hasEmissiveMap": true,
+      "emissiveIntensity": 1.7999999523162842
+    },
+    {
+      "name": "Scanner_7",
+      "hasEmissiveMap": true,
+      "emissiveIntensity": 1.7999999523162842
+    }
+  ],
+  "limitation": "Textures represented by CPU placeholders; no WebGL render or time-driven browser scanner sweep claimed. GLB hierarchy and material emissive bindings retained."
+}

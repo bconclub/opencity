@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vidhana Soudha facade review</title>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.169.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.169.0/examples/jsm/"}}</script>
+<style>body{margin:0;background:#182629;color:#e9efeb;font:14px system-ui}header{padding:15px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}h1{font-size:20px;margin:0}button{padding:8px 12px;border:0;border-radius:5px;cursor:pointer}#viewer{height:calc(100vh - 115px);min-height:500px}canvas{display:block;width:100%;height:100%}footer{padding:12px 24px;color:#bfccca;font-size:12px}#status{margin-left:auto}</style>
+<header><h1>Vidhana Soudha</h1><button id="before">Before</button><button id="after">After</button><button id="front">Frontage</button><button id="aerial">Aerial</button><span id="status"></span></header><div id="viewer"></div><footer>Same mapped parts, footprints, heights and roof profiles. Updated facade treatment and curved normals are original illustrative reconstruction, not surveyed architecture. No emblems or monuments added.</footer>
+<script type="module">
+import * as T from 'three';import {OrbitControls} from 'three/addons/controls/OrbitControls.js';import {buildLandmarks as after} from '../landmarks.js';import {buildLandmarks as before} from './vidhana-landmark-before.js';
+const data=await fetch('../landmark-data.json').then(r=>r.json());data.features=data.features.filter(f=>f.properties.site==='Vidhana Soudha');
+const xy=p=>[(p[0]-77.59065)*111320*Math.cos(12.97973*Math.PI/180),(p[1]-12.97973)*111320];
+const host=document.querySelector('#viewer'),renderer=new T.WebGLRenderer({antialias:true});renderer.setPixelRatio(1);renderer.setClearColor(0xc9dadd);host.append(renderer.domElement);renderer.toneMapping=T.ACESFilmicToneMapping;
+const scene=new T.Scene(),camera=new T.PerspectiveCamera(44,1,2,2000);camera.up.set(0,0,1);const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=false;
+const hemi=new T.HemisphereLight(0xe1edf6,0x706a5d,1.2);hemi.position.set(0,0,1);scene.add(hemi);const sun=new T.DirectionalLight(0xfff3e5,2.7);sun.position.set(130,-160,210);scene.add(sun);
+const ground=new T.Mesh(new T.PlaneGeometry(600,600),new T.MeshStandardMaterial({color:0x869b79,roughness:1}));ground.position.z=-.05;scene.add(ground);
+const models={before:before(T,data,xy),after:after(T,data,xy)};for(const v of Object.values(models))scene.add(v.group);let mode='after',pending=false;
+function draw(){if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;renderer.render(scene,camera);});}controls.addEventListener('change',draw);
+function select(value){mode=value;for(const [key,v] of Object.entries(models))v.group.visible=key===mode;const v=models[mode];document.querySelector('#status').textContent=mode+' · '+v.group.children.length+' material draws · '+v.group.children.reduce((s,m)=>s+m.geometry.attributes.position.count/3,0).toLocaleString()+' triangles';draw();}
+function pose(which){camera.position.set(...(which==='front'?[155,-155,39]:[185,-205,195]));controls.target.set(0,0,18);controls.update();draw();}
+for(const id of ['before','after'])document.getElementById(id).onclick=()=>select(id);for(const id of ['front','aerial'])document.getElementById(id).onclick=()=>pose(id);
+new ResizeObserver(()=>{const {width,height}=host.getBoundingClientRect();renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();draw();}).observe(host);
+select('after');pose('front');window.vidhanaLandmarkReviewState=()=>({mode,models:Object.fromEntries(Object.entries(models).map(([key,v])=>[key,{parts:v.parts,domes:v.domes,draws:v.group.children.length,triangles:v.group.children.reduce((s,m)=>s+m.geometry.attributes.position.count/3,0)}]))});window.vidhanaLandmarkReviewReady=true;
+</script></html>

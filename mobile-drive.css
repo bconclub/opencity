@@ -1,4 +1,6 @@
 #mobile-stick,#mobile-ride-actions,.mobile-vehicle-actions{display:none}
+/* Ground rides share flight-active layout, but must never reveal the hidden flight HUD. */
+body.flight-active #flight-hud[hidden],body.auto-active #auto-hud[hidden]{display:none!important}
 @media(max-width:760px),(max-height:550px) and (pointer:coarse){
  body.flight-active #flight-hud,body.auto-active #auto-hud{height:56px!important;min-height:0!important;bottom:calc(25px + env(safe-area-inset-bottom))!important;padding:8px 14px!important;display:block!important;border-radius:16px!important;background:#102b25d9!important;box-shadow:none!important}
  body.flight-active #flight-hud .flight-top,body.auto-active #auto-hud .flight-top,body.flight-active #flight-hud .flight-actions,body.auto-active #auto-hud .flight-actions{display:none!important}

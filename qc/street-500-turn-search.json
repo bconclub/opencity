@@ -1,0 +1,2322 @@
+{
+  "trials": [
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.0,
+      "lengthM": 170.0755160162545,
+      "outsideGroundM2": 0.0,
+      "minimumCircularRadiusM": 3.0,
+      "bodySamples": 681,
+      "failedBodySamples": 16,
+      "maximumBodyOutsideGroundM2": 0.37159922285591485
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.25,
+      "lengthM": 171.6462729017741,
+      "outsideGroundM2": 2.3780916355847546,
+      "minimumCircularRadiusM": 3.25
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.5,
+      "lengthM": 173.2170297872936,
+      "outsideGroundM2": 5.343985092928521,
+      "minimumCircularRadiusM": 3.5
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.75,
+      "lengthM": 174.78778667281304,
+      "outsideGroundM2": 8.334317949609622,
+      "minimumCircularRadiusM": 3.75
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 4.0,
+      "lengthM": 176.35854355833263,
+      "outsideGroundM2": 11.349076846824,
+      "minimumCircularRadiusM": 4.0
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 4.25,
+      "lengthM": 177.92930044385218,
+      "outsideGroundM2": 14.388247538551997,
+      "minimumCircularRadiusM": 4.25
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 4.5,
+      "lengthM": 179.50005732937166,
+      "outsideGroundM2": 17.45182913071972,
+      "minimumCircularRadiusM": 4.5
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 4.75,
+      "lengthM": 181.07081421489113,
+      "outsideGroundM2": 20.539808939184468,
+      "minimumCircularRadiusM": 4.75
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 5.0,
+      "lengthM": 182.6415711004107,
+      "outsideGroundM2": 23.652170390892437,
+      "minimumCircularRadiusM": 5.0
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 5.25,
+      "lengthM": 184.21232798593024,
+      "outsideGroundM2": 25.59041625040337,
+      "minimumCircularRadiusM": 5.25
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 5.5,
+      "lengthM": 185.7830848714497,
+      "outsideGroundM2": 25.794893569105053,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 5.75,
+      "lengthM": 187.3538417569692,
+      "outsideGroundM2": 25.970226274378923,
+      "minimumCircularRadiusM": 5.75
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 6.0,
+      "lengthM": 188.92459864248877,
+      "outsideGroundM2": 26.100652036883652,
+      "minimumCircularRadiusM": 6.0
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 6.25,
+      "lengthM": 190.4953555280081,
+      "outsideGroundM2": 26.18672475074824,
+      "minimumCircularRadiusM": 6.25
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 6.5,
+      "lengthM": 192.06611241352783,
+      "outsideGroundM2": 26.228895185095183,
+      "minimumCircularRadiusM": 6.5
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 6.75,
+      "lengthM": 193.63686929904733,
+      "outsideGroundM2": 26.227526679554376,
+      "minimumCircularRadiusM": 6.75
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 7.0,
+      "lengthM": 195.2076261845669,
+      "outsideGroundM2": 26.182972841405853,
+      "minimumCircularRadiusM": 7.0
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 7.25,
+      "lengthM": 196.7783830700863,
+      "outsideGroundM2": 26.095541186848486,
+      "minimumCircularRadiusM": 7.25
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 7.5,
+      "lengthM": 198.3491399556058,
+      "outsideGroundM2": 25.96541771164791,
+      "minimumCircularRadiusM": 7.5
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 7.75,
+      "lengthM": 199.9198968411255,
+      "outsideGroundM2": 25.805710595273517,
+      "minimumCircularRadiusM": 7.75
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 8.0,
+      "lengthM": 201.4906537266449,
+      "outsideGroundM2": 25.64735846307965,
+      "minimumCircularRadiusM": 8.0
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 8.25,
+      "lengthM": 203.06141061216454,
+      "outsideGroundM2": 25.495197652713756,
+      "minimumCircularRadiusM": 8.25
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 8.5,
+      "lengthM": 204.63216749768395,
+      "outsideGroundM2": 25.351971702107694,
+      "minimumCircularRadiusM": 8.5
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 8.75,
+      "lengthM": 206.2029243832035,
+      "outsideGroundM2": 25.217272690009583,
+      "minimumCircularRadiusM": 8.75
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 9.0,
+      "lengthM": 207.77368126872312,
+      "outsideGroundM2": 25.806100413758685,
+      "minimumCircularRadiusM": 9.0
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 9.25,
+      "lengthM": 209.34443815424257,
+      "outsideGroundM2": 27.070561158964544,
+      "minimumCircularRadiusM": 9.25
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 9.5,
+      "lengthM": 210.91519503976207,
+      "outsideGroundM2": 28.85036248637784,
+      "minimumCircularRadiusM": 9.5
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 9.75,
+      "lengthM": 212.48595192528163,
+      "outsideGroundM2": 44.79201176233003,
+      "minimumCircularRadiusM": 9.75
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 10.0,
+      "lengthM": 214.05670881080124,
+      "outsideGroundM2": 75.17169321130886,
+      "minimumCircularRadiusM": 10.0
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 1.5,
+      "lengthM": 150.02583146559138,
+      "outsideGroundM2": 2.2004878901825102,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 1.5,
+      "lengthM": 144.03904921561636,
+      "outsideGroundM2": 15.547563330466433,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 1.5,
+      "lengthM": 138.05226696564236,
+      "outsideGroundM2": 23.06798589875609,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 1.5,
+      "lengthM": 63.89243997942826,
+      "outsideGroundM2": 35.3694489447814,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 1.75,
+      "lengthM": 153.2154934736313,
+      "outsideGroundM2": 1.7063345962044403,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 1.75,
+      "lengthM": 148.6028842623834,
+      "outsideGroundM2": 3.1854276769943954,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 1.75,
+      "lengthM": 142.61599355527827,
+      "outsideGroundM2": 19.08978973920356,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 1.75,
+      "lengthM": 94.66300973448213,
+      "outsideGroundM2": 30.85036192590872,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.0,
+      "lengthM": 155.5065261204959,
+      "outsideGroundM2": 1.733795698081927,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.0,
+      "lengthM": 153.16682794587075,
+      "outsideGroundM2": 0.9802578332906803,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.0,
+      "lengthM": 147.17982885656363,
+      "outsideGroundM2": 9.504393269639486,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.0,
+      "lengthM": 125.43357948953394,
+      "outsideGroundM2": 26.735987838989917,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.25,
+      "lengthM": 157.78998773864265,
+      "outsideGroundM2": 1.8138039439225255,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.25,
+      "lengthM": 156.35756200995618,
+      "outsideGroundM2": 1.5259778517879306,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.25,
+      "lengthM": 151.74377275672205,
+      "outsideGroundM2": 0.695034829765541,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.25,
+      "lengthM": 139.7695579634064,
+      "outsideGroundM2": 19.943716986521196,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.5,
+      "lengthM": 160.07344935744712,
+      "outsideGroundM2": 1.4083292569157586,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.5,
+      "lengthM": 158.64803989107725,
+      "outsideGroundM2": 1.7440706814265363,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.5,
+      "lengthM": 156.31041219102713,
+      "outsideGroundM2": 0.928445435273819,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.5,
+      "lengthM": 144.3333938846629,
+      "outsideGroundM2": 17.408188272891042,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.5,
+      "lengthM": 70.17546757773411,
+      "outsideGroundM2": 28.1637493083207,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.75,
+      "lengthM": 162.3569130382607,
+      "outsideGroundM2": 0.7495691241277582,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.75,
+      "lengthM": 160.93150150997437,
+      "outsideGroundM2": 1.512208510656852,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.75,
+      "lengthM": 159.49907578526296,
+      "outsideGroundM2": 1.691312545018478,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.75,
+      "lengthM": 148.90197388081148,
+      "outsideGroundM2": 12.647469463768036,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.75,
+      "lengthM": 100.94603733278316,
+      "outsideGroundM2": 25.359131409979522,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.20749099902468002,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.0,
+      "lengthM": 163.21496544860918,
+      "outsideGroundM2": 0.8498918829653606,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.0,
+      "lengthM": 161.7895536625065,
+      "outsideGroundM2": 1.6167894032405299,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.0,
+      "lengthM": 153.46579542911863,
+      "outsideGroundM2": 1.7470695781953798,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.0,
+      "lengthM": 131.71660708783708,
+      "outsideGroundM2": 22.59832208624573,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.25,
+      "lengthM": 166.92383524293083,
+      "outsideGroundM2": 2.0244302932556826,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.25,
+      "lengthM": 165.49842655094432,
+      "outsideGroundM2": 2.1355848028776814,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.25,
+      "lengthM": 164.07301785895748,
+      "outsideGroundM2": 2.6405286443426093,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.25,
+      "lengthM": 158.0296169774256,
+      "outsideGroundM2": 1.3219646390878608,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.25,
+      "lengthM": 146.05735711890244,
+      "outsideGroundM2": 17.622405560173597,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.5,
+      "lengthM": 169.20729634526597,
+      "outsideGroundM2": 4.962923988106227,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.5,
+      "lengthM": 167.78188765327945,
+      "outsideGroundM2": 4.702473464012778,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.5,
+      "lengthM": 166.35647896129257,
+      "outsideGroundM2": 4.7410630782130605,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.5,
+      "lengthM": 162.593438526791,
+      "outsideGroundM2": 5.391446693614064,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.5,
+      "lengthM": 150.62117866720982,
+      "outsideGroundM2": 17.469305340949536,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.75,
+      "lengthM": 171.49075827500832,
+      "outsideGroundM2": 8.060276978790826,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.75,
+      "lengthM": 170.06534875561462,
+      "outsideGroundM2": 7.7978578948076915,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.75,
+      "lengthM": 168.63994006362776,
+      "outsideGroundM2": 7.45860867692661,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.75,
+      "lengthM": 165.78210643085617,
+      "outsideGroundM2": 7.7018231805426325,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.75,
+      "lengthM": 155.18500021551714,
+      "outsideGroundM2": 10.602498253969571,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.0,
+      "lengthM": 173.72212243429192,
+      "outsideGroundM2": 11.161510269187634,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.0,
+      "lengthM": 172.34880985794976,
+      "outsideGroundM2": 10.945075614354588,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.0,
+      "lengthM": 170.92340116596293,
+      "outsideGroundM2": 10.627236275292221,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.0,
+      "lengthM": 168.07258378198947,
+      "outsideGroundM2": 10.176025099029088,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.0,
+      "lengthM": 159.74882176511255,
+      "outsideGroundM2": 8.281706875625634,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 175.95198133564642,
+      "outsideGroundM2": 14.26899888011272,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 174.6322709602851,
+      "outsideGroundM2": 14.094457958093455,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 173.20686226829818,
+      "outsideGroundM2": 13.825383414362737,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 170.35604488432466,
+      "outsideGroundM2": 13.053544229091901,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 164.31264692293834,
+      "outsideGroundM2": 12.606263626238187,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 178.1818402370008,
+      "outsideGroundM2": 17.38504878447535,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 176.8636347971863,
+      "outsideGroundM2": 17.248221324053056,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 175.4903243070242,
+      "outsideGroundM2": 17.024233022243198,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 172.6395059866598,
+      "outsideGroundM2": 16.267120063101867,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 168.87646795543333,
+      "outsideGroundM2": 16.11586358465832,
+      "minimumCircularRadiusM": 8
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.0,
+      "lengthM": 992.9123073610123,
+      "outsideGroundM2": 3.749261519580629,
+      "minimumCircularRadiusM": 3.0
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.25,
+      "lengthM": 994.4830643155758,
+      "outsideGroundM2": 5.412542777627587,
+      "minimumCircularRadiusM": 3.25
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.5,
+      "lengthM": 996.0538212701383,
+      "outsideGroundM2": 7.053738285287513,
+      "minimumCircularRadiusM": 3.5
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.75,
+      "lengthM": 997.624578224702,
+      "outsideGroundM2": 8.672848042560087,
+      "minimumCircularRadiusM": 3.75
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 4.0,
+      "lengthM": 999.1953351792653,
+      "outsideGroundM2": 10.268219051032622,
+      "minimumCircularRadiusM": 4.0
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 4.25,
+      "lengthM": 1000.766092133828,
+      "outsideGroundM2": 11.837577163250579,
+      "minimumCircularRadiusM": 4.25
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 4.5,
+      "lengthM": 1002.3368490883897,
+      "outsideGroundM2": 13.380908315013684,
+      "minimumCircularRadiusM": 4.5
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 4.75,
+      "lengthM": 1003.9076060429512,
+      "outsideGroundM2": 13.514699177015524,
+      "minimumCircularRadiusM": 4.75
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 5.0,
+      "lengthM": 1005.4783629975173,
+      "outsideGroundM2": 13.311779274217075,
+      "minimumCircularRadiusM": 5.0
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 5.25,
+      "lengthM": 1007.0491199520811,
+      "outsideGroundM2": 13.104917934237086,
+      "minimumCircularRadiusM": 5.25
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 5.5,
+      "lengthM": 1008.6198769066425,
+      "outsideGroundM2": 12.894115191334926,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 5.75,
+      "lengthM": 1010.1906338612034,
+      "outsideGroundM2": 12.679371325700354,
+      "minimumCircularRadiusM": 5.75
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 6.0,
+      "lengthM": 1011.7613908157672,
+      "outsideGroundM2": 12.461210846734442,
+      "minimumCircularRadiusM": 6.0
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 6.25,
+      "lengthM": 1013.3321477703332,
+      "outsideGroundM2": 12.242588554675173,
+      "minimumCircularRadiusM": 6.25
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 6.5,
+      "lengthM": 1014.9029047248941,
+      "outsideGroundM2": 12.02396626261526,
+      "minimumCircularRadiusM": 6.5
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 6.75,
+      "lengthM": 1016.4736616794562,
+      "outsideGroundM2": 11.805343970554135,
+      "minimumCircularRadiusM": 6.75
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 7.0,
+      "lengthM": 1018.044418634019,
+      "outsideGroundM2": 11.586721678492001,
+      "minimumCircularRadiusM": 7.0
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 7.25,
+      "lengthM": 1019.6151755885853,
+      "outsideGroundM2": 11.36809938642894,
+      "minimumCircularRadiusM": 7.25
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 7.5,
+      "lengthM": 1021.1859325431465,
+      "outsideGroundM2": 11.149477094364903,
+      "minimumCircularRadiusM": 7.5
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 7.75,
+      "lengthM": 1022.7566894977077,
+      "outsideGroundM2": 10.930854803382248,
+      "minimumCircularRadiusM": 7.75
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 8.0,
+      "lengthM": 1024.3274464522704,
+      "outsideGroundM2": 10.712301993802985,
+      "minimumCircularRadiusM": 8.0
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 8.25,
+      "lengthM": 1025.8982034068363,
+      "outsideGroundM2": 10.49390325497529,
+      "minimumCircularRadiusM": 8.25
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 8.5,
+      "lengthM": 1027.4689603613995,
+      "outsideGroundM2": 10.470046667903322,
+      "minimumCircularRadiusM": 8.5
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 8.75,
+      "lengthM": 1029.0397173159606,
+      "outsideGroundM2": 10.552940962922598,
+      "minimumCircularRadiusM": 8.75
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 9.0,
+      "lengthM": 1030.6104742705218,
+      "outsideGroundM2": 16.641236332838837,
+      "minimumCircularRadiusM": 9.0
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 9.25,
+      "lengthM": 1032.181231225086,
+      "outsideGroundM2": 25.15409030140847,
+      "minimumCircularRadiusM": 9.25
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 9.5,
+      "lengthM": 1033.7519881796522,
+      "outsideGroundM2": 42.774573803823756,
+      "minimumCircularRadiusM": 9.5
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 9.75,
+      "lengthM": 1035.3227451342123,
+      "outsideGroundM2": 75.9329123434066,
+      "minimumCircularRadiusM": 9.75
+    },
+    {
+      "loop": 4,
+      "family": "enclosed-island convex offset",
+      "offsetM": 10.0,
+      "lengthM": 1036.893502088774,
+      "outsideGroundM2": 113.145223208156,
+      "minimumCircularRadiusM": 10.0
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.25,
+      "lengthM": 543.0275583720634,
+      "outsideGroundM2": 21.191825484415197,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.5,
+      "lengthM": 946.5436762331724,
+      "outsideGroundM2": 11.598355623747633,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.75,
+      "lengthM": 983.4680147636333,
+      "outsideGroundM2": 4.179252875263875,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 2.75,
+      "lengthM": 546.5120505270647,
+      "outsideGroundM2": 20.969294994073298,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.0,
+      "lengthM": 989.8863546252101,
+      "outsideGroundM2": 2.944208636308372,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.0,
+      "lengthM": 949.6849137101594,
+      "outsideGroundM2": 10.73767420146567,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.25,
+      "lengthM": 991.8617027894675,
+      "outsideGroundM2": 4.865644709462766,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.25,
+      "lengthM": 986.6089020961281,
+      "outsideGroundM2": 4.3497338947513295,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.25,
+      "lengthM": 549.653281966152,
+      "outsideGroundM2": 20.805182003229966,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.5,
+      "lengthM": 993.8069415007889,
+      "outsideGroundM2": 6.693277425780884,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.5,
+      "lengthM": 993.0278625432347,
+      "outsideGroundM2": 6.297063894025602,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.5,
+      "lengthM": 952.8264262266364,
+      "outsideGroundM2": 10.593918831662188,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.75,
+      "lengthM": 995.7521838283827,
+      "outsideGroundM2": 8.449138573074908,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.75,
+      "lengthM": 995.0032156898932,
+      "outsideGroundM2": 8.155910576138655,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 3.75,
+      "lengthM": 989.7497916729333,
+      "outsideGroundM2": 5.416594308073493,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.0,
+      "lengthM": 997.6974211424549,
+      "outsideGroundM2": 10.139970983932834,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.0,
+      "lengthM": 996.9484581237182,
+      "outsideGroundM2": 9.925279863479565,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.0,
+      "lengthM": 996.1693704818605,
+      "outsideGroundM2": 9.553697274407991,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 999.64265270993,
+      "outsideGroundM2": 11.771700628346439,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 998.8936999487207,
+      "outsideGroundM2": 11.62286431212016,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 998.1447326864644,
+      "outsideGroundM2": 11.346261501276135,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.25,
+      "lengthM": 555.9363094087411,
+      "outsideGroundM2": 20.57958541500318,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 1001.5878842964144,
+      "outsideGroundM2": 13.352302992782928,
+      "minimumCircularRadiusM": 5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 1000.8389315162578,
+      "outsideGroundM2": 13.25630489015985,
+      "minimumCircularRadiusM": 5.5
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 1000.089971834798,
+      "outsideGroundM2": 13.05248746443039,
+      "minimumCircularRadiusM": 6
+    },
+    {
+      "loop": 4,
+      "family": "rolling-disk rounded island offset",
+      "offsetM": 4.5,
+      "lengthM": 959.1094512596986,
+      "outsideGroundM2": 12.146379448089121,
+      "minimumCircularRadiusM": 7
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 7.326384214378715,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.6,
+        -0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 4.936424492302687,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.6,
+        -0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 2.7061074617544683,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.6,
+        -0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.6723733723867562,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.6,
+        0
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.049834879757493164,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.6,
+        0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.007163260340531119,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.6,
+        0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.0,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.6,
+        0.6
+      ],
+      "bodySamples": 659,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 7.043521062544424,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.4,
+        -0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 4.6351117083002915,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.4,
+        -0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 2.38911808873557,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.4,
+        -0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.36287945662858695,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.4,
+        0
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.06232765612401396,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.4,
+        0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.01284546592992894,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.4,
+        0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.0,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.4,
+        0.6
+      ],
+      "bodySamples": 659,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 6.752618568301031,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.2,
+        -0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 4.3269892229134905,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.2,
+        -0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 2.0651367653812636,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.2,
+        -0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.17483118878112078,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.2,
+        0
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.07988518368480303,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.2,
+        0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.02204621934315962,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.2,
+        0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.0002402116880189952,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.2,
+        0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 6.4511980027353975,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0,
+        -0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 4.012057566600335,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0,
+        -0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 1.7353037287646138,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0,
+        -0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.20749099902468002,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0,
+        0
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.10378444885484434,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0,
+        0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.03611596774124783,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0,
+        0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.003496009835740546,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0,
+        0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 6.137563014846106,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.2,
+        -0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 3.689978982307342,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.2,
+        -0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 1.4200199609071416,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.2,
+        -0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.24959152990308184,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.2,
+        0
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.13560862074006555,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.05669607451579438,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.2,
+        0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.011910351932132246,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.2,
+        0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 5.8102261238458786,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.4,
+        -0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 3.356197174573663,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.4,
+        -0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 1.1314339480501046,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.4,
+        -0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.3030158643655235,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.4,
+        0
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.17731087492198536,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.4,
+        0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.08575494926642596,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.027453802275063128,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 5.466101568818709,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.6,
+        -0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 3.0275315696108125,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.6,
+        -0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.8735291240646953,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.6,
+        -0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.37011803695013745,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.6,
+        0
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.23123658204809167,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.6,
+        0.2
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.12564727647464058,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.0525109183538555,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.6,
+        0.6
+      ],
+      "outsideGroundM2": 0.0018406150069809211
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.6,
+        0.8
+      ],
+      "outsideGroundM2": 0.015947475986938443
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.4,
+        0.6
+      ],
+      "outsideGroundM2": 0.005447694239317409
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.4,
+        0.8
+      ],
+      "outsideGroundM2": 0.00018535449788650995,
+      "bodySamples": 658,
+      "failedBodySamples": 2,
+      "maximumBodyOutsideGroundM2": 0.0001653773745232108
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.07060850671286,
+      "minimumCircularRadiusM": 5.2,
+      "adjustmentXYM": [
+        -0.6,
+        0.6
+      ],
+      "outsideGroundM2": 0.020032424332821056
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.0706085067128,
+      "minimumCircularRadiusM": 5.2,
+      "adjustmentXYM": [
+        -0.6,
+        0.8
+      ],
+      "outsideGroundM2": 0.030708830209166562
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.07060850671286,
+      "minimumCircularRadiusM": 5.2,
+      "adjustmentXYM": [
+        -0.4,
+        0.6
+      ],
+      "outsideGroundM2": 0.028759439725628527
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.0706085067128,
+      "minimumCircularRadiusM": 5.2,
+      "adjustmentXYM": [
+        -0.4,
+        0.8
+      ],
+      "outsideGroundM2": 0.005095628013295938
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 163.78553281262242,
+      "minimumCircularRadiusM": 5.3,
+      "adjustmentXYM": [
+        -0.6,
+        0.6
+      ],
+      "outsideGroundM2": 0.06099574201605497
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 163.78553281262245,
+      "minimumCircularRadiusM": 5.3,
+      "adjustmentXYM": [
+        -0.6,
+        0.8
+      ],
+      "outsideGroundM2": 0.05987828833942368
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 163.78553281262242,
+      "minimumCircularRadiusM": 5.3,
+      "adjustmentXYM": [
+        -0.4,
+        0.6
+      ],
+      "outsideGroundM2": 0.07054075001041932
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 163.78553281262245,
+      "minimumCircularRadiusM": 5.3,
+      "adjustmentXYM": [
+        -0.4,
+        0.8
+      ],
+      "outsideGroundM2": 0.029376381630518766
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.65,
+        0.65
+      ],
+      "outsideGroundM2": 0.0021033897961058277
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.65,
+        0.7
+      ],
+      "outsideGroundM2": 0.0067355784152410315
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.3556842008028,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.65,
+        0.75
+      ],
+      "outsideGroundM2": 0.014071356679312341
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.65,
+        0.85
+      ],
+      "outsideGroundM2": 0.037127335324701485
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.55,
+        0.65
+      ],
+      "outsideGroundM2": 0.00025605302809511544
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.55,
+        0.7
+      ],
+      "outsideGroundM2": 0.0005399764970687524
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.3556842008028,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.55,
+        0.75
+      ],
+      "outsideGroundM2": 0.0036246575539893287
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.55,
+        0.85
+      ],
+      "outsideGroundM2": 0.01826105974127797
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.5,
+        0.65
+      ],
+      "outsideGroundM2": 0.0005603988808091892
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.5,
+        0.7
+      ],
+      "outsideGroundM2": 0.0,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0,
+      "denseBodySamples": 1644,
+      "bodyPosesOutsideAsphaltOrMarking": 0,
+      "bodyPosesOutsideOriginalSourceRoadCorridor": 90,
+      "backwardSourceProgressSteps": 0,
+      "minimumMeasuredRadiusM": 5.083246246609864,
+      "sweptBodyOutsideGroundM2": 0.0,
+      "sweptBodyOutsideAsphaltM2": 0.0,
+      "maxLateralAccelerationAt3mps": 1.7705221355353995
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.3556842008028,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.5,
+        0.75
+      ],
+      "outsideGroundM2": 0.0010005275383651586
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.5,
+        0.85
+      ],
+      "outsideGroundM2": 0.011446514485113342
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.45,
+        0.65
+      ],
+      "outsideGroundM2": 0.0010067497631736327
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.45,
+        0.7
+      ],
+      "outsideGroundM2": 0.0,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.3556842008028,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.45,
+        0.75
+      ],
+      "outsideGroundM2": 1.1991285519004382e-05,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.45,
+        0.85
+      ],
+      "outsideGroundM2": 0.006280496927276184
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.35,
+        0.65
+      ],
+      "outsideGroundM2": 0.002400641660507674
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.35,
+        0.7
+      ],
+      "outsideGroundM2": 0.00024177795147200767
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.3556842008028,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.35,
+        0.75
+      ],
+      "outsideGroundM2": 0.0,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.35,
+        0.85
+      ],
+      "outsideGroundM2": 0.0006232304257473758
+    }
+  ],
+  "best": [
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.5,
+        0.7
+      ],
+      "outsideGroundM2": 0.0,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0,
+      "denseBodySamples": 1644,
+      "bodyPosesOutsideAsphaltOrMarking": 0,
+      "bodyPosesOutsideOriginalSourceRoadCorridor": 90,
+      "backwardSourceProgressSteps": 0,
+      "minimumMeasuredRadiusM": 5.083246246609864,
+      "sweptBodyOutsideGroundM2": 0.0,
+      "sweptBodyOutsideAsphaltM2": 0.0,
+      "maxLateralAccelerationAt3mps": 1.7705221355353995
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.45,
+        0.7
+      ],
+      "outsideGroundM2": 0.0,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.3556842008028,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.35,
+        0.75
+      ],
+      "outsideGroundM2": 0.0,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "enclosed-island convex offset",
+      "offsetM": 3.0,
+      "lengthM": 170.0755160162545,
+      "outsideGroundM2": 0.0,
+      "minimumCircularRadiusM": 3.0,
+      "bodySamples": 681,
+      "failedBodySamples": 16,
+      "maximumBodyOutsideGroundM2": 0.37159922285591485
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.0,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.6,
+        0.6
+      ],
+      "bodySamples": 659,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, bounded rigid adjustment",
+      "offsetM": 3.0,
+      "lengthM": 164.64037414059575,
+      "outsideGroundM2": 0.0,
+      "minimumCircularRadiusM": 5,
+      "adjustmentXYM": [
+        -0.4,
+        0.6
+      ],
+      "bodySamples": 659,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.3556842008028,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.45,
+        0.75
+      ],
+      "outsideGroundM2": 1.1991285519004382e-05,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0
+    },
+    {
+      "loop": 2,
+      "family": "rounded island offset, higher-radius refinement",
+      "offsetM": 3,
+      "lengthM": 164.35568420080287,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.4,
+        0.8
+      ],
+      "outsideGroundM2": 0.00018535449788650995,
+      "bodySamples": 658,
+      "failedBodySamples": 2,
+      "maximumBodyOutsideGroundM2": 0.0001653773745232108
+    }
+  ],
+  "denseChecks": [
+    {
+      "loop": 2,
+      "family": "rounded island offset, fine bounded adjustment",
+      "offsetM": 3,
+      "lengthM": 164.35568420080284,
+      "minimumCircularRadiusM": 5.1,
+      "adjustmentXYM": [
+        -0.5,
+        0.7
+      ],
+      "outsideGroundM2": 0.0,
+      "bodySamples": 658,
+      "failedBodySamples": 0,
+      "maximumBodyOutsideGroundM2": 0,
+      "denseBodySamples": 1644,
+      "bodyPosesOutsideAsphaltOrMarking": 0,
+      "bodyPosesOutsideOriginalSourceRoadCorridor": 90,
+      "backwardSourceProgressSteps": 0,
+      "minimumMeasuredRadiusM": 5.083246246609864,
+      "sweptBodyOutsideGroundM2": 0.0,
+      "sweptBodyOutsideAsphaltM2": 0.0,
+      "maxLateralAccelerationAt3mps": 1.7705221355353995
+    }
+  ],
+  "runtimeChanged": false,
+  "priorAuditUnmodified": true,
+  "groundSha256": "03676f34203016d70b73f7f883d72e8c6897b171e21c28af7cc6035589a7284d"
+}

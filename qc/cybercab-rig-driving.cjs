@@ -1,0 +1,12 @@
+const {chromium}=require('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs'),assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});let p;const errors=[],samples=[];try{
+ p=await b.newPage({viewport:{width:1100,height:760},serviceWorkers:'block'});p.setDefaultTimeout(120000);p.on('pageerror',e=>errors.push(e.message));
+ await p.route('**/local-cache.js*',r=>r.fulfill({contentType:'text/javascript',body:''}));await p.route('**/multiplayer-client.js',r=>r.fulfill({contentType:'text/javascript',body:''}));
+ await p.goto('http://127.0.0.1:4173/#14.6/12.9755/77.5945/-25/55');await p.waitForFunction(()=>window.cityBootReady&&window.vidhanaStreetState?.().loaded);
+ await p.locator('[data-ride=cybercab]').click();await p.getByRole('button',{name:/Vidhana Soudha area/}).click();await p.waitForFunction(()=>window.autoState?.().active&&window.autoState?.().position);
+ await p.evaluate(()=>autoCameraControls.orbit(70,0));await p.waitForTimeout(500);samples.push({phase:'parked',state:await p.evaluate(()=>autoState())});await p.screenshot({path:'qc/cybercab-rig-driving-parked.png'});
+ await p.keyboard.down('ArrowUp');await p.waitForFunction(()=>autoState().distance>=2,null,{timeout:25000});await p.keyboard.down('ArrowRight');await p.waitForFunction(()=>Math.abs(autoState().physics.steer)>.12,null,{timeout:15000});
+ samples.push({phase:'moving-turn',state:await p.evaluate(()=>autoState())});await p.screenshot({path:'qc/cybercab-rig-driving-turn.png'});await p.keyboard.up('ArrowRight');await p.keyboard.up('ArrowUp');await p.keyboard.down('Space');await p.waitForFunction(()=>Math.abs(autoState().speed)<.05,null,{timeout:15000});await p.keyboard.up('Space');
+ samples.push({phase:'braked',state:await p.evaluate(()=>autoState())});assert(samples[1].state.distance>2);assert(Math.abs(samples[1].state.wheelAngle)>.1);assert(Math.abs(samples[1].state.physics.steer)>.12);assert.deepEqual(errors,[]);
+ }finally{fs.writeFileSync('qc/cybercab-rig-driving.json',JSON.stringify({samples,errors,note:'Real local scene keyboard acceleration, turn and brake. Side-view screenshots verify apparent wheel seating; geometric rig checks live in verify-cybercab-repair.cjs.'},null,2));await b.close();}})().catch(e=>{console.error(e);process.exit(1)});
