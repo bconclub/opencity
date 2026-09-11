@@ -1,0 +1,72 @@
+{
+  "source": "experiments\\osm2world\\sample-meshes.json",
+  "sourceSha256": "b01a80ad9c87d6df1bb9eca3faf79b4859d1d6c43b0b2a9e0232aba15693c93d",
+  "size": 1024,
+  "bounds": [
+    -218.26858318948464,
+    -220.04578198098855,
+    221.84654034280496,
+    220.06934155130105
+  ],
+  "texelMetres": 0.42979992532450156,
+  "encoding": "RGBA8 premultiplied linear diffuse RGB, geometric coverage in A; sampled opacity remains 1",
+  "atlasGpuBytesIncludingMips": 5592404,
+  "existingGrainGpuBytesIncludingMips": 699048,
+  "totalSurfaceGpuBytes": 6291452,
+  "atlasDownloadBytes": 213359,
+  "sourceUnderPaintM2": {
+    "concrete": 108.02929712449193,
+    "paving": 0.0,
+    "asphalt": 0.0
+  },
+  "unsupportedPaintM2": 1.0981405422902805e-06,
+  "areaChecks": {
+    "marking": {
+      "sourceM2": 108.02929822263104,
+      "atlasIntegratedM2": 108.02929822262855,
+      "errorM2": -2.4868995751603507e-12
+    },
+    "concrete": {
+      "sourceM2": 5671.665117895577,
+      "atlasIntegratedM2": 5671.665117895447,
+      "errorM2": -1.3005774235352874e-10
+    },
+    "paving": {
+      "sourceM2": 2245.68091040543,
+      "atlasIntegratedM2": 2245.6809104054028,
+      "errorM2": -2.7284841053187847e-11
+    },
+    "asphalt": {
+      "sourceM2": 9901.996228852311,
+      "atlasIntegratedM2": 9901.996228852238,
+      "errorM2": -7.275957614183426e-11
+    }
+  },
+  "linearDiffuseColours": {
+    "marking": [
+      0.83879901174074,
+      0.8307698767746546,
+      0.7605245046752924
+    ],
+    "concrete": [
+      0.23075332928839,
+      0.24009007426109083,
+      0.24643489271400545
+    ],
+    "paving": [
+      0.1739402198915187,
+      0.1818692643018835,
+      0.1611808288450788
+    ],
+    "asphalt": [
+      0.04160891846317552,
+      0.05008766202481376,
+      0.05519841862282148
+    ]
+  },
+  "textureMeansLinear": {
+    "asphalt": 0.3406692052295829,
+    "concrete": 0.6051339860648828
+  },
+  "quantizationMaxLinearError": 0.00196078431372549
+}

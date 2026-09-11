@@ -1,0 +1,638 @@
+{
+  "date": "2026-09-11T01:45:01.297Z",
+  "note": "1100x760 Edge SwiftShader full scene, 60 forced-repaint frames per pose, ABBA. Relative gate on software renderer only, not native mobile FPS.",
+  "runs": [
+    {
+      "index": 0,
+      "mode": "baseline",
+      "view": "aerial",
+      "meanMs": 205.55666666666667,
+      "medianMs": 200,
+      "p95Ms": 216.79999999999927,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 84,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "sourceSha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd",
+      "errors": []
+    },
+    {
+      "index": 0,
+      "mode": "baseline",
+      "view": "near",
+      "meanMs": 160.55666666666664,
+      "medianMs": 166.60000000000582,
+      "p95Ms": 166.8000000000029,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 159,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "sourceSha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd",
+      "errors": []
+    },
+    {
+      "index": 1,
+      "mode": "candidate",
+      "view": "aerial",
+      "meanMs": 190.555,
+      "medianMs": 183.39999999999964,
+      "p95Ms": 216.70000000000073,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 3
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 85,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "reviewCoverage": true,
+        "materials": 4,
+        "atlasSize": 1024,
+        "totalSurfaceGpuBytes": 6291452,
+        "atlasDownloadBytes": 213359,
+        "nearExactBelowMetresPerPixel": 0.18,
+        "farCoverageAboveMetresPerPixel": 0.65
+      },
+      "coverage": {
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "reviewCoverage": true,
+        "materials": 4,
+        "atlasSize": 1024,
+        "totalSurfaceGpuBytes": 6291452,
+        "atlasDownloadBytes": 213359,
+        "nearExactBelowMetresPerPixel": 0.18,
+        "farCoverageAboveMetresPerPixel": 0.65
+      },
+      "sourceSha256": "d87a4ee9eb42a581263bf1894199d18b2cb5583f2da4bbe931ca2fd80e253e63",
+      "errors": []
+    },
+    {
+      "index": 1,
+      "mode": "candidate",
+      "view": "near",
+      "meanMs": 170.0016666666667,
+      "medianMs": 166.70000000000073,
+      "p95Ms": 183.40000000000146,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 3
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 160,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "reviewCoverage": true,
+        "materials": 4,
+        "atlasSize": 1024,
+        "totalSurfaceGpuBytes": 6291452,
+        "atlasDownloadBytes": 213359,
+        "nearExactBelowMetresPerPixel": 0.18,
+        "farCoverageAboveMetresPerPixel": 0.65
+      },
+      "coverage": {
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "reviewCoverage": true,
+        "materials": 4,
+        "atlasSize": 1024,
+        "totalSurfaceGpuBytes": 6291452,
+        "atlasDownloadBytes": 213359,
+        "nearExactBelowMetresPerPixel": 0.18,
+        "farCoverageAboveMetresPerPixel": 0.65
+      },
+      "sourceSha256": "d87a4ee9eb42a581263bf1894199d18b2cb5583f2da4bbe931ca2fd80e253e63",
+      "errors": []
+    },
+    {
+      "index": 2,
+      "mode": "candidate",
+      "view": "aerial",
+      "meanMs": 196.10999999999999,
+      "medianMs": 200,
+      "p95Ms": 200.10000000000218,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 3
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 85,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "reviewCoverage": true,
+        "materials": 4,
+        "atlasSize": 1024,
+        "totalSurfaceGpuBytes": 6291452,
+        "atlasDownloadBytes": 213359,
+        "nearExactBelowMetresPerPixel": 0.18,
+        "farCoverageAboveMetresPerPixel": 0.65
+      },
+      "coverage": {
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "reviewCoverage": true,
+        "materials": 4,
+        "atlasSize": 1024,
+        "totalSurfaceGpuBytes": 6291452,
+        "atlasDownloadBytes": 213359,
+        "nearExactBelowMetresPerPixel": 0.18,
+        "farCoverageAboveMetresPerPixel": 0.65
+      },
+      "sourceSha256": "d87a4ee9eb42a581263bf1894199d18b2cb5583f2da4bbe931ca2fd80e253e63",
+      "errors": []
+    },
+    {
+      "index": 2,
+      "mode": "candidate",
+      "view": "near",
+      "meanMs": 152.5016666666667,
+      "medianMs": 150,
+      "p95Ms": 166.70000000000073,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 3
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 160,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "reviewCoverage": true,
+        "materials": 4,
+        "atlasSize": 1024,
+        "totalSurfaceGpuBytes": 6291452,
+        "atlasDownloadBytes": 213359,
+        "nearExactBelowMetresPerPixel": 0.18,
+        "farCoverageAboveMetresPerPixel": 0.65
+      },
+      "coverage": {
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "reviewCoverage": true,
+        "materials": 4,
+        "atlasSize": 1024,
+        "totalSurfaceGpuBytes": 6291452,
+        "atlasDownloadBytes": 213359,
+        "nearExactBelowMetresPerPixel": 0.18,
+        "farCoverageAboveMetresPerPixel": 0.65
+      },
+      "sourceSha256": "d87a4ee9eb42a581263bf1894199d18b2cb5583f2da4bbe931ca2fd80e253e63",
+      "errors": []
+    },
+    {
+      "index": 3,
+      "mode": "baseline",
+      "view": "aerial",
+      "meanMs": 202.77833333333334,
+      "medianMs": 200,
+      "p95Ms": 216.6999999999989,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 86,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "sourceSha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd",
+      "errors": []
+    },
+    {
+      "index": 3,
+      "mode": "baseline",
+      "view": "near",
+      "meanMs": 147.77666666666664,
+      "medianMs": 150,
+      "p95Ms": 166.70000000000437,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 162,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "sourceSha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd",
+      "errors": []
+    }
+  ],
+  "comparisons": {
+    "aerial": {
+      "baselineMeanMs": 204.16750000000002,
+      "candidateMeanMs": 193.33249999999998,
+      "regressionPercent": -5.306917114624044
+    },
+    "near": {
+      "baselineMeanMs": 154.16666666666663,
+      "candidateMeanMs": 161.2516666666667,
+      "regressionPercent": 4.5956756756757144
+    }
+  }
+}

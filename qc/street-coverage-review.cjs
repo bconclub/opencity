@@ -1,0 +1,16 @@
+// Review only: accepted geometry, intercepted material module, no runtime writes.
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const {chromium}=require('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+assert.equal(fs.readFileSync('street-surface-materials.js','utf8'),fs.readFileSync('qc/street-coverage-base.js','utf8'),'Review base snapshot is stale');
+const views={near:{eye:[77.59124,12.97826],height:12,target:[77.59118,12.97834],targetHeight:0},road:{eye:[77.5918,12.97782],height:3,target:[77.59145,12.97855],targetHeight:0},aerial:{eye:[77.594,12.976],height:500,target:[77.5908,12.9798],targetHeight:0}};
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']}),results=[];
+try{for(const mode of ['before','after']){const page=await browser.newPage({viewport:{width:1400,height:900},serviceWorkers:'block'}),errors=[];page.setDefaultTimeout(120000);page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+await page.route('**/local-cache.js*',r=>r.fulfill({contentType:'text/javascript',body:''}));await page.route('**/multiplayer-client.js',r=>r.fulfill({contentType:'text/javascript',body:''}));
+// Keep the historical prototype A/B valid after production integration.
+await page.route('**/assets/streets/vidhana-streets.json',r=>{const metadata=JSON.parse(fs.readFileSync('assets/streets/vidhana-streets.json'));delete metadata.surfaceCoverage;return r.fulfill({contentType:'application/json',body:JSON.stringify(metadata)});});
+if(mode==='after')await page.route('**/street-surface-materials.js',r=>r.fulfill({path:require('node:path').resolve('qc/street-coverage-materials.js'),contentType:'text/javascript'}));
+await page.goto('http://127.0.0.1:4173/#17/12.97973/77.59065/-45/70');await page.waitForFunction(()=>window.cityBootReady&&window.vidhanaStreetPatch?.state().ready);await page.addStyleTag({content:'body > :not(#map){visibility:hidden!important}'});await page.evaluate(()=>window.setDomeOverview?.(false));
+const setup=await page.evaluate(()=>({production:window.vidhanaStreetPatch.state().surfaceCoverage?.status,prototype:!!window.streetCoverageReview}));assert.equal(setup.production??'disabled','disabled','Production coverage contaminated prototype comparison');assert.equal(setup.prototype,mode==='after','Baseline/candidate shader setup is incorrect');
+for(const [view,pose]of Object.entries(views)){await page.evaluate(p=>{map.setMaxPitch(89);map.jumpTo(map.calculateCameraOptionsFromTo(p.eye,p.height,p.target,p.targetHeight));map.triggerRepaint();},pose);await page.waitForTimeout(1300);await page.screenshot({path:`qc/street-coverage-${mode}-${view}.png`});results.push({mode,view,state:await page.evaluate(()=>({patch:window.vidhanaStreetPatch.state(),coverage:window.streetCoverageReview?.state()})),errors:[...errors]});}
+assert.deepEqual(errors,[]);await page.close();}
+}finally{await browser.close();fs.writeFileSync('qc/street-coverage-results.json',JSON.stringify({note:'Visual review only, no timing claim.',results},null,2));}console.log(results.map(r=>({mode:r.mode,view:r.view,coverage:r.state.coverage,errors:r.errors})));})().catch(e=>{console.error(e);process.exitCode=1});

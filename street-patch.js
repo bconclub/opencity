@@ -40,10 +40,17 @@ async function install(map){
  const metadata=await response.json(),anchor=validateOrigin(metadata?.origin,'Street metadata origin');
  // A declared ground index must succeed before any layer is installed. Never
  // silently index sign tops or furniture when the ground-only asset fails.
- const groundIndex=await loadGroundIndex(metadata,anchor),gltf=await new GLTFLoader().loadAsync(ASSET);
+ const groundIndex=await loadGroundIndex(metadata,anchor),loader=new GLTFLoader();
+ let assetBytes,gltf;
+ if(metadata.surfaceCoverage){
+  // Fetch once. These same bytes feed integrity checking and the GLTF parser.
+  const assetResponse=await fetch(ASSET);if(!assetResponse.ok)throw Error('Street patch geometry unavailable');
+  assetBytes=await assetResponse.arrayBuffer();gltf=await loader.parseAsync(assetBytes,new URL('./',ASSET).href);
+ }else gltf=await loader.loadAsync(ASSET);
  const origin=maplibregl.MercatorCoordinate.fromLngLat(anchor,0),scale=origin.meterInMercatorCoordinateUnits();
  const scene=new THREE.Scene(),camera=new THREE.Camera(),cells=new Map(),triangles=[],cellSize=12;
- let disposed=false,visible=true,renderer,surfaces,frames=0,lastCalls=0,lastTriangles=0;
+ let disposed=false,visible=true,renderer,surfaces,coverage,frames=0,lastCalls=0,lastTriangles=0;
+ const classified=gltf.parser?.json?.materials?.some(m=>Object.hasOwn(m.extras??{},'streetSurfaceRole'))??false;
  function indexTriangle(a,b,c){
   if(![a.x,a.y,a.z,b.x,b.y,b.z,c.x,c.y,c.z].every(Number.isFinite))throw Error('Street ground geometry contains nonfinite coordinates');
   const den=(b.y-c.y)*(a.x-c.x)+(c.x-b.x)*(a.y-c.y);
@@ -67,6 +74,10 @@ async function install(map){
  });
  if(groundIndex)for(let i=0;i<groundIndex.positions.length;i+=9)indexTriangle(...[0,3,6].map(offset=>new THREE.Vector3().fromArray(groundIndex.positions,i+offset)));
  surfaces=prepareStreetSurfaces(gltf.scene);
+ if(metadata.surfaceCoverage){
+  try{const {enableStreetCoverage}=await import('./street-surface-coverage.js');coverage=await enableStreetCoverage(gltf.scene,{metadata:metadata.surfaceCoverage,assetBytes,origin:anchor,localBounds:metadata.localBounds,baseURL:METADATA,classified});}
+  catch(error){coverage={state:()=>({status:'fallback',reason:error.message}),dispose(){}};}
+ }
  scene.add(gltf.scene,new THREE.HemisphereLight(0xffffff,0x596568,2.1));
  const sun=new THREE.DirectionalLight(0xfffbf3,2.5);sun.position.set(-20,-30,60);scene.add(sun);
  const matrix=new THREE.Matrix4().makeTranslation(origin.x,origin.y,origin.z).scale(new THREE.Vector3(scale,-scale,scale));
@@ -81,8 +92,8 @@ async function install(map){
   for(const id of cells.get(Math.floor(x/cellSize)+','+Math.floor(y/cellSize))??[]){const {a,b,c,den}=triangles[id],u=((b.y-c.y)*(x-c.x)+(c.x-b.x)*(y-c.y))/den,v=((c.y-a.y)*(x-c.x)+(a.x-c.x)*(y-c.y))/den,w=1-u-v;if(u>=-1e-6&&v>=-1e-6&&w>=-1e-6){const z=u*a.z+v*b.z+w*c.z;height=height===null?z:Math.max(height,z);}}
   return height;
  }
- const api={bounds:metadata.bounds,origin:anchor,footprintURL:STREET_PATCH_FOOTPRINT,heightAt,contains:(lng,lat)=>heightAt(lng,lat)!==null,setVisible(value){visible=!!value;map.triggerRepaint();},state:()=>({ready:!disposed,visible,origin:anchor,bounds:metadata.bounds,meshes:metadata.meshes,triangles:metadata.triangles,indexedTriangles:triangles.length,indexCells:cells.size,groundIndexSource:groundIndex?'sidecar':'mesh',groundIndexURL:groundIndex?.url??null,frames,drawCalls:lastCalls,renderedTriangles:lastTriangles,...surfaces.state()}),dispose(){if(map.getLayer(layer.id))map.removeLayer(layer.id);else disposeResources();}};
+ const api={bounds:metadata.bounds,origin:anchor,footprintURL:STREET_PATCH_FOOTPRINT,heightAt,contains:(lng,lat)=>heightAt(lng,lat)!==null,setVisible(value){visible=!!value;map.triggerRepaint();},state:()=>({ready:!disposed,visible,origin:anchor,bounds:metadata.bounds,meshes:metadata.meshes,triangles:metadata.triangles,indexedTriangles:triangles.length,indexCells:cells.size,groundIndexSource:groundIndex?'sidecar':'mesh',groundIndexURL:groundIndex?.url??null,frames,drawCalls:lastCalls,renderedTriangles:lastTriangles,...surfaces.state(),surfaceCoverage:coverage?.state()??{status:'disabled'}}),dispose(){if(map.getLayer(layer.id))map.removeLayer(layer.id);else disposeResources();}};
  map.addLayer(layer);map.triggerRepaint();return api;
  }catch(error){disposeResources();throw error;}
- function disposeResources(){if(disposed)return;disposed=true;surfaces?.dispose();gltf.scene.traverse(m=>{if(m.isMesh){m.geometry.dispose();for(const mat of Array.isArray(m.material)?m.material:[m.material])mat.dispose();}});renderer?.dispose();cells.clear();triangles.length=0;installed.delete(map);}
+ function disposeResources(){if(disposed)return;disposed=true;coverage?.dispose();surfaces?.dispose();gltf.scene.traverse(m=>{if(m.isMesh){m.geometry.dispose();for(const mat of Array.isArray(m.material)?m.material:[m.material])mat.dispose();}});renderer?.dispose();cells.clear();triangles.length=0;installed.delete(map);}
 }

@@ -34,14 +34,8 @@ For these long thin strip triangles, minimum triangle altitude measures their na
 
 Add screen-space coverage filtering specifically to the marking material, preserving original marking boundaries, widths, positions and kerb geometry. Keep output opaque. At fractional pixel coverage, mix paint with the correct underlying pavement color/material response rather than making the marking fragment transparent into its existing cutout. This likely needs a per-marking triangle attribute identifying its adjacent/underlying pavement material, or an equivalent source-authored coverage representation. The concrete frontage and darker asphalt elsewhere must not share one guessed fallback color.
 
-A bounded next implementation should preserve the current material batching and draw count, avoid shifting world geometry, and compare road-level line shape plus moving aerial stability. Measure frame time only after visual acceptance. Preserve clear close-range zebra crossings and lane paint; apply coverage to boundaries, not an unconditional distance hide.
+Boundary representation matters: naive per-triangle barycentric fading also fades internal triangulation edges and creates artificial seams. Filtering confined to fragments inside the existing paint footprint cannot represent the paint's full pixel coverage outside that footprint. A valid implementation therefore needs explicit true polygon boundaries or a raster coverage/atlas sampled by both pavement and paint. It must be tested without widening actual close-range marking geometry.
 
-Implementation caveat: naive per-triangle barycentric edge fading would expose
-internal triangulation seams. Filtering only inside the current polygon cannot
-provide coverage in neighboring pixels outside its rasterized boundary. A real
-solution needs exterior-boundary data with adequate coverage geometry, or a
-filtered raster coverage representation shared by pavement and paint. Near-view
-marking width and continuous underlying pavement must both be verified; mixing
-everything toward one guessed asphalt colour is not accepted antialiasing.
+A bounded next implementation should preserve the current material batching and draw count, avoid shifting world geometry, and compare road-level line shape plus moving aerial stability. Measure frame time only after visual acceptance. Preserve clear close-range zebra crossings and lane paint; apply coverage to boundaries, not an unconditional distance hide.
 
 Do not ship the diagnostic marking hide, red recolor, global transparency fade, or polygon offset. A global MSAA switch also needs its own performance decision; this investigation did not change it or benchmark a replacement filter. Current diagnosis is complete, but the proposed coverage filter is not implemented or performance-approved.
