@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "cpuOnly": true,
+  "gpuUsed": false,
+  "originShiftM": 70.02577980518609,
+  "sidecarGroundHeight": 0,
+  "legacyGroundHeight": 2,
+  "renderedMeshesWithSidecar": 2,
+  "invalidDataCases": 16,
+  "relativeGroundURL": "https://example.invalid/city/assets/streets/ground/triangles.json",
+  "disposalAndRetry": true,
+  "classifiedCandidate": {
+    "directory": "qc\\street-500-gap-export\\asset",
+    "glbSHA256": "d81156a07079bbcd844b01d2f9bc9287725e1e9526178b73b99f61f086f676e0",
+    "groundSHA256": "685b8201706df9fae34f4dbff814a2b109c71eb9dcc528645077fb10ba2a801f",
+    "metadataOrigin": [
+      77.59136000000001,
+      12.97984615
+    ],
+    "glbBytes": 983456,
+    "groundBytes": 1151437,
+    "renderTriangles": 11634,
+    "renderBatches": 7,
+    "indexedTriangles": 9285,
+    "centroidHits": 9285,
+    "maximumGroundHeight": 0.11999999731779099,
+    "maximumRenderHeight": 2,
+    "maximumGroundRadius": 500.00002795784246,
+    "maximumRenderRadius": 500.00002795784246,
+    "retainedTrianglesAbovePoint3m": 17,
+    "signSamples": [
+      {
+        "point": [
+          77.5943439384244,
+          12.981893777044846
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 2
+      },
+      {
+        "point": [
+          77.59434346563279,
+          12.981893777044846
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 2
+      },
+      {
+        "point": [
+          77.5943437020286,
+          12.981893609676975
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 1.9999999999999998
+      }
+    ]
+  }
+}

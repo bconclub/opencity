@@ -1,0 +1,256 @@
+{
+  "passed": true,
+  "sourceHead": "9e500bb48bccf2de418fdc0f9e12ee73004d7e96",
+  "manifestSHA256": "b2fc22b888b792535e671f6a731acef3b3ef6a308e326e4e82f72405e41b2794",
+  "commonRecovered": 107,
+  "commonTotal": 107,
+  "normalizations": [
+    {
+      "path": "app.js",
+      "method": "CRLF normalization",
+      "sha256": "90392ef610cf0fa4068110569a5926f4c585906f45fffdcf5086110f559262d8"
+    },
+    {
+      "path": "auto-asset.js",
+      "method": "CRLF normalization",
+      "sha256": "381742c66e96de562e7f3172ec5b99dc95df0f3648e8c7ac7c25e003b53a5e15"
+    },
+    {
+      "path": "auto-mode.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "d97c6bb84239a563381924f1ee04f849d7b2a589ee4f48bca6fc6666b599b21d"
+    },
+    {
+      "path": "auto-model.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "6733f0dd27b8326a7bc3990ea620ada9f5bb40a98eb71588aaff9d1e5ee48fc9"
+    },
+    {
+      "path": "auto-roads.js",
+      "method": "CRLF normalization",
+      "sha256": "88976fc0c2e818c44550c44985a679ddc776e1a6cc5c73adc4e37acfe7bb34d4"
+    },
+    {
+      "path": "auto-world.js",
+      "method": "CRLF normalization",
+      "sha256": "d221dadc082f1309a5f69629b3d8463ae520eda1fefe98013a9a0de9f5cdade4"
+    },
+    {
+      "path": "blender-vehicle.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "ddd671c7408099ac1eacc5629d6765a8b5615f32e32a7d726d1445e4bef00dc7"
+    },
+    {
+      "path": "boost-meter.js",
+      "method": "CRLF normalization",
+      "sha256": "3bc0a3ce9a0f7411daa78cb803b0ea1747848e063db140fd46330eaabda4581a"
+    },
+    {
+      "path": "building-context.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "c54588cd80af708148f255d1d44fe53747e1bad8b51e7b1499a7b88967c06220"
+    },
+    {
+      "path": "cbd-dome.js",
+      "method": "CRLF normalization",
+      "sha256": "f6e2d40820c19738404c4cb900813983961ddb44cd3b4d9ee77e6906d0d28bed"
+    },
+    {
+      "path": "controller-monitor.css",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "44c5755da3d12b6fb32dfcacbd5af31b8d0db93b704a8717e247ffb87329cdfb"
+    },
+    {
+      "path": "cycle-model.js",
+      "method": "CRLF normalization",
+      "sha256": "898b2b018d80fececce6b5df0f9c397897ca68834687920562d300acc5165f5f"
+    },
+    {
+      "path": "driving-data.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "bf0f8d28cd4788e3b42ef49ff09afeac61b3f0a8f68646c27ea01af606ca454f"
+    },
+    {
+      "path": "drone-model.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "81ac899cec025f0b48a72b3f81c1b18d9c1902b43f00b7c93fa883b89ba0efd9"
+    },
+    {
+      "path": "flight.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "0ec14faa2d2e3864246e7b44da51a69f3eb7a3170b2c5942675358a4151c95cd"
+    },
+    {
+      "path": "helicopter.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "5cc6e261a1e6272a810ed2b07b9e0dc51a0a7dbe9be1a75ef248a444716dc38b"
+    },
+    {
+      "path": "index.html",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "335c90097715957a752bb3ab6b1f626cd60c6c421e29c3642aa137f003e7253e"
+    },
+    {
+      "path": "local-cache.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "e635fdaee050c6d30e343ab7d489c59986a3dfde2a267ea9ff46417a7f531da9"
+    },
+    {
+      "path": "map-scene-camera.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "81f9795a6522dc171b5a853ea239eefd6467d52fe3998164138bfaf546258a1f"
+    },
+    {
+      "path": "mobile-dashboard.css",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "019eb83d60a9679bc8ffbd851a23172ce11880b8a50a5bee2bd57b1cfc2b0a52"
+    },
+    {
+      "path": "mobile-dashboard.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "9f45d2d1784d7867408ceec688f3df1dfa79cc94ac5af0ca01618a7c1cc7b3f7"
+    },
+    {
+      "path": "mobile-drive.css",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "a30a59e6a495d0c3c873a58c30abdc76faf547ed68eb908c8fea19857f9f9b02"
+    },
+    {
+      "path": "mobile-drive.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "614051bf1b03139f711dee7e1e959fb7fd58683cdc0b01897256ff2eb0ac37ba"
+    },
+    {
+      "path": "mobile-menu.css",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "f8deccca833d14146b6ebe30de0a19b5e3dcd3a3efd156b603aa2df329bbd2c3"
+    },
+    {
+      "path": "mobile-menu.js",
+      "method": "CRLF normalization",
+      "sha256": "5121780188f9499459281be0a70661a3217f2ac0a379e7044c39b18cb41360f7"
+    },
+    {
+      "path": "multiplayer-client.css",
+      "method": "CRLF normalization",
+      "sha256": "f460349de5a1b520a9274738cc80aab3c2332d7679ca23c1c73e45e8b0900678"
+    },
+    {
+      "path": "multiplayer-client.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "102b97afc5b4c45c460b27949f52e1dab70601ace2cbfc9fd470f4dad63abeff"
+    },
+    {
+      "path": "multiplayer-config.json",
+      "method": "CRLF normalization",
+      "sha256": "f21460ff155d3682a443fcb84ed5aa912bfca0fd29c432f20c6745333fa14a08"
+    },
+    {
+      "path": "multiplayer-render.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "fe9adc39f4bea36d63ebb07a48ac4882371a0419260c44436e9a9e322968ddb8"
+    },
+    {
+      "path": "npc-traffic.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "a5d851e257de5d52b94c567cc971144b6ed4ee9c4ca41435c733083991a53e7f"
+    },
+    {
+      "path": "performance-panel.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "9a3eb7babbddad2d2ee74568813197b2d3cde80c635bf8a1ca39632b15f5ca97"
+    },
+    {
+      "path": "player-stats-ui.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "35ed95e895862d7e9127365c5898a07258c13a686641dae8d5534a36eb879957"
+    },
+    {
+      "path": "player-stats.js",
+      "method": "CRLF normalization",
+      "sha256": "6342bbd962ac64f868cee4ac589d4ed8f9813e54af3417c595e6d5cb4245c44a"
+    },
+    {
+      "path": "resume-overlay.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "5c2809ccbb4afe9780ad2af903aa622f33ecae34862b7a1ed53e29df5703d1c4"
+    },
+    {
+      "path": "social-controls.css",
+      "method": "CRLF normalization",
+      "sha256": "a8a78810141c202c627d3428b1953f6f57b7adcc5868ebacdbed296fd9eda85a"
+    },
+    {
+      "path": "social-controls.js",
+      "method": "CRLF normalization",
+      "sha256": "c186cf3795059fa8ad36129cc8f40e9ccfa955fd6c94d16290ed0e5b62de565d"
+    },
+    {
+      "path": "social-entry.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "1d80024cc5d7e716018b8f744d1fe49c53ba865bef8c9206e7b576ce0fa5122f"
+    },
+    {
+      "path": "street-detail.js",
+      "method": "CRLF normalization",
+      "sha256": "2f9e9c9e07d7fb8a3253b01a0d19afa71257a07e6070b98ff071063178b8eed0"
+    },
+    {
+      "path": "street-furniture.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "145d43442d77dc013c9fa930a2fbfcb44ba5677ebfda14b09bcf18cb23bbc79c"
+    },
+    {
+      "path": "street-surface-materials.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd"
+    },
+    {
+      "path": "styles.css",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "278d3c8f2b7300a9596a892d65d5b8675891c97d5de07d56a98774e54ecab3ea"
+    },
+    {
+      "path": "sw.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "94f5245f1a74f5e7ae90d699fba1d0bb9d489271bd1dfa625e645bd168d81612"
+    },
+    {
+      "path": "vehicle-colors.js",
+      "method": "CRLF normalization",
+      "sha256": "5acf2a2367082a01986dd95083a78912fdef966dc0af94ce0fe9ca2952b32f06"
+    },
+    {
+      "path": "vehicle-shell.css",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "545a1c2854c49a2752575604300dade313dbb68674c9aaa4e362b25ff7963a47"
+    },
+    {
+      "path": "vehicle-shell.js",
+      "method": "CRLF normalization",
+      "sha256": "43004e69ae9195a65d8791e51b39e704abab2a52c3f6570bbb0b63f6468c04ee"
+    },
+    {
+      "path": "vidhana-streets.js",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "f556f290403d27a34e69cd769e0156d4d12a675b8ba808ae2757c36b9c5a030e"
+    },
+    {
+      "path": "voice-chat.css",
+      "method": "Recorded mixed LF/CRLF",
+      "sha256": "28151aecd78ad986be3159ead47b67d4dfeedbe722ac12df53cdb44ea8273037"
+    },
+    {
+      "path": "auto-model-v1.js",
+      "method": "Explicit untracked recovery extra",
+      "sha256": "21f53984862658ac2707ecfd1e3a0f39c9672fef40607cb1e26750c9d2883141"
+    },
+    {
+      "path": "auto-model-v2.js",
+      "method": "Explicit untracked recovery extra",
+      "sha256": "a6b082970eef73c88d16cf4e5a8c8d65b8bd4722eccd056d8eb446d2fed0a413"
+    }
+  ],
+  "failures": [],
+  "restoreRequested": false
+}

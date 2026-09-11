@@ -1,0 +1,2465 @@
+{
+  "manifestSHA256": "b2fc22b888b792535e671f6a731acef3b3ef6a308e326e4e82f72405e41b2794",
+  "views": {
+    "road": {
+      "eye": [
+        77.590278,
+        12.975395
+      ],
+      "height": 2.3,
+      "target": [
+        77.59020226666667,
+        12.975491600004656
+      ],
+      "targetHeight": 0.12
+    },
+    "aerial": {
+      "eye": [
+        77.59058,
+        12.97514
+      ],
+      "height": 70,
+      "target": [
+        77.59020226666667,
+        12.975491600004656
+      ],
+      "targetHeight": 0
+    }
+  },
+  "results": [
+    {
+      "mode": "baseline",
+      "view": "road",
+      "pose": {
+        "eye": [
+          77.590278,
+          12.975395
+        ],
+        "height": 2.3,
+        "target": [
+          77.59020226666667,
+          12.975491600004656
+        ],
+        "targetHeight": 0.12
+      },
+      "image": "street-500-gap-scene-baseline-road.png",
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.59136000000001,
+          12.97984615
+        ],
+        "bounds": [
+          77.58618635189106,
+          12.975343678074553,
+          77.59541361100963,
+          12.984295613215803
+        ],
+        "meshes": 7,
+        "triangles": 11629,
+        "indexedTriangles": 9280,
+        "indexCells": 4289,
+        "groundIndexSource": "sidecar",
+        "groundIndexURL": "http://127.0.0.1:4173/assets/streets/vidhana-ground.json",
+        "frames": 20,
+        "drawCalls": 7,
+        "renderedTriangles": 11629,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "surfaceCoverage": {
+          "status": "disabled"
+        }
+      },
+      "heightAtProbe": null,
+      "auto": {
+        "vehicleType": "auto",
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": false,
+        "paused": false,
+        "boost": null,
+        "speed": 0,
+        "distance": 0,
+        "heading": 0,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": null,
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": null,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      },
+      "camera": {
+        "center": [
+          77.59020226666667,
+          12.975491600004673
+        ],
+        "zoom": 22.84074904028607,
+        "bearing": -37.378772990522236,
+        "pitch": 80.83857442706804
+      },
+      "layers": [
+        {
+          "id": "tunnel_motorway_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "tunnel_motorway_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "road_area_pier",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "road_pier",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_path",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_minor",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_subtle",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_subtle",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_transit",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_transit_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_service",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_service_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_bridge_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_bridge_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "auto-road-surface",
+          "type": "fill",
+          "visibility": "none"
+        },
+        {
+          "id": "vidhana-road",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-footpath",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-lane",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-zebra",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-memorials",
+          "type": "circle",
+          "visibility": "visible"
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "requests": [
+        {
+          "path": "index.html",
+          "sha256": "335c90097715957a752bb3ab6b1f626cd60c6c421e29c3642aa137f003e7253e"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "278d3c8f2b7300a9596a892d65d5b8675891c97d5de07d56a98774e54ecab3ea"
+        },
+        {
+          "path": "flight.css",
+          "sha256": "599c725ab838ed2e075b54fef3efbcf3f75df6d8602c91d156ebd1156e9878f3"
+        },
+        {
+          "path": "auto.css",
+          "sha256": "156e67cf7990737ac50355b5dfa0ed74fdcf7756effb3fab0a48aab6abfd47c6"
+        },
+        {
+          "path": "cockpit.css",
+          "sha256": "fe79841c596ab5ba96005b0ff932dfa0de6ddf164cf8c82d3a7cf712b3b4ede9"
+        },
+        {
+          "path": "mobile-controls.css",
+          "sha256": "ca7527dafa5f094be10b1141133432de18ffc1c50f38afc3d7440cb95168dd3e"
+        },
+        {
+          "path": "vehicle-shell.css",
+          "sha256": "545a1c2854c49a2752575604300dade313dbb68674c9aaa4e362b25ff7963a47"
+        },
+        {
+          "path": "focus-pointer.css",
+          "sha256": "ff635633524a7851062472ef2df79ca931e4ba7eaf00c00c9bf7a7688f8fbada"
+        },
+        {
+          "path": "mobile-dashboard.css",
+          "sha256": "019eb83d60a9679bc8ffbd851a23172ce11880b8a50a5bee2bd57b1cfc2b0a52"
+        },
+        {
+          "path": "performance-panel.css",
+          "sha256": "4af10d25756ea42c7e3106ea8f4c00c40cb3e7805791d5e499749e620a672940"
+        },
+        {
+          "path": "controller-monitor.css",
+          "sha256": "44c5755da3d12b6fb32dfcacbd5af31b8d0db93b704a8717e247ffb87329cdfb"
+        },
+        {
+          "path": "controller-monitor.js",
+          "sha256": "aa6ca7a2f2818b0ba3d8e8caab13be123ce9fb6d5ade504eba6803ae273fd1be"
+        },
+        {
+          "path": "resume-overlay.css",
+          "sha256": "153309d188d23de5e0270c196cc9fd6638a935c3343e7576e2cbb8a24ec57e3b"
+        },
+        {
+          "path": "resume-overlay.js",
+          "sha256": "5c2809ccbb4afe9780ad2af903aa622f33ecae34862b7a1ed53e29df5703d1c4"
+        },
+        {
+          "path": "city-loading.css",
+          "sha256": "619b4b2ea6d0cb559ce4d7cac3cd1395363febaf160a8efaa75b1f71125db652"
+        },
+        {
+          "path": "city-loading.js",
+          "sha256": "2a7f7afdc3163c8bfebe3562527b4d1fda1e06a56c14419b0cf635f66ee740b9"
+        },
+        {
+          "path": "multiplayer-client.css",
+          "sha256": "f460349de5a1b520a9274738cc80aab3c2332d7679ca23c1c73e45e8b0900678"
+        },
+        {
+          "path": "mobile-menu.css",
+          "sha256": "f8deccca833d14146b6ebe30de0a19b5e3dcd3a3efd156b603aa2df329bbd2c3"
+        },
+        {
+          "path": "mobile-menu.js",
+          "sha256": "5121780188f9499459281be0a70661a3217f2ac0a379e7044c39b18cb41360f7"
+        },
+        {
+          "path": "mobile-drive.css",
+          "sha256": "a30a59e6a495d0c3c873a58c30abdc76faf547ed68eb908c8fea19857f9f9b02"
+        },
+        {
+          "path": "mobile-drive.js",
+          "sha256": "614051bf1b03139f711dee7e1e959fb7fd58683cdc0b01897256ff2eb0ac37ba"
+        },
+        {
+          "path": "player-stats-ui.js",
+          "sha256": "35ed95e895862d7e9127365c5898a07258c13a686641dae8d5534a36eb879957"
+        },
+        {
+          "path": "voice-chat.css",
+          "sha256": "28151aecd78ad986be3159ead47b67d4dfeedbe722ac12df53cdb44ea8273037"
+        },
+        {
+          "path": "voice-chat.js",
+          "sha256": "5a1e92ffd7c3d0d7cae7afb920cd08e79bee4ba487db885ce20e77d1bf3614c1"
+        },
+        {
+          "path": "social-controls.css",
+          "sha256": "a8a78810141c202c627d3428b1953f6f57b7adcc5868ebacdbed296fd9eda85a"
+        },
+        {
+          "path": "social-entry.js",
+          "sha256": "1d80024cc5d7e716018b8f744d1fe49c53ba865bef8c9206e7b576ce0fa5122f"
+        },
+        {
+          "path": "app.js",
+          "sha256": "90392ef610cf0fa4068110569a5926f4c585906f45fffdcf5086110f559262d8"
+        },
+        {
+          "path": "flight.js",
+          "sha256": "0ec14faa2d2e3864246e7b44da51a69f3eb7a3170b2c5942675358a4151c95cd"
+        },
+        {
+          "path": "vehicle-shell.js",
+          "sha256": "43004e69ae9195a65d8791e51b39e704abab2a52c3f6570bbb0b63f6468c04ee"
+        },
+        {
+          "path": "focus-pointer.js",
+          "sha256": "fc454969bfdd67a2e6846bf462443428bfd877edd0614a221587f94b400d5e68"
+        },
+        {
+          "path": "mobile-dashboard.js",
+          "sha256": "9f45d2d1784d7867408ceec688f3df1dfa79cc94ac5af0ca01618a7c1cc7b3f7"
+        },
+        {
+          "path": "performance-panel.js",
+          "sha256": "9a3eb7babbddad2d2ee74568813197b2d3cde80c635bf8a1ca39632b15f5ca97"
+        },
+        {
+          "path": "social-controls.js",
+          "sha256": "c186cf3795059fa8ad36129cc8f40e9ccfa955fd6c94d16290ed0e5b62de565d"
+        },
+        {
+          "path": "player-stats.js",
+          "sha256": "6342bbd962ac64f868cee4ac589d4ed8f9813e54af3417c595e6d5cb4245c44a"
+        },
+        {
+          "path": "player-cloud.js",
+          "sha256": "3c838937ccd86e970db1c8eacc545e00ae1e90a929501d362b09ee69165c206e"
+        },
+        {
+          "path": "vehicle-colors.js",
+          "sha256": "5acf2a2367082a01986dd95083a78912fdef966dc0af94ce0fe9ca2952b32f06"
+        },
+        {
+          "path": "release.json",
+          "sha256": "f4bc25d221146a11ff2b270e8954df0349078ee790958ba7dcaf1ed1f2f83501"
+        },
+        {
+          "path": "assets/vehicles/previews/cycle.webp",
+          "sha256": "9f0b8952cfdeb7adf5e030057a1d647a947ab98f00537cee24f65ec3f8095393"
+        },
+        {
+          "path": "assets/vehicles/previews/helicopter.webp",
+          "sha256": "bea10b0e7be34887c6db0cc4f5ff3d53ec3fc83ca1bff8bfd92f149fe71c9eee"
+        },
+        {
+          "path": "assets/vehicles/previews/auto.webp",
+          "sha256": "9eb1b2e5755887cffe97801086166959e546f112c82bfec2f33a38d20240cd8f"
+        },
+        {
+          "path": "assets/vehicles/previews/cybertruck.webp",
+          "sha256": "a71955478726639a4fff9e823e697fbce34b2dc8fbc9505e2c7af137801862f6"
+        },
+        {
+          "path": "assets/vehicles/previews/cybercab.webp",
+          "sha256": "f06fa2c3e7a08b33170420898cd3b5067831a56a868912faae18fcf1f5ae56cf"
+        },
+        {
+          "path": "assets/vehicles/previews/kitt.webp",
+          "sha256": "4ad7669f238626febbcab2558e341bac14cd74f7cc69629248c5467994867188"
+        },
+        {
+          "path": "supabase-config.json",
+          "sha256": "9c7791f3d1dd7b57c420125c5ee7edca605e930f264a293869ff27d4b11b8397"
+        },
+        {
+          "path": "cbd-dome.js",
+          "sha256": "f6e2d40820c19738404c4cb900813983961ddb44cd3b4d9ee77e6906d0d28bed"
+        },
+        {
+          "path": "cbd-boundary.js",
+          "sha256": "d62f99dfd373093b5dd68a6c021103e163669b14c9beac0854134d524e8fef28"
+        },
+        {
+          "path": "district.js",
+          "sha256": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b"
+        },
+        {
+          "path": "vehicle-environment.js",
+          "sha256": "546e969b98b4eff1765ded7826bef4e72e150843dc7aed1e11fae9128d4a9567"
+        },
+        {
+          "path": "map-scene-camera.js",
+          "sha256": "81f9795a6522dc171b5a853ea239eefd6467d52fe3998164138bfaf546258a1f"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "building-context.js",
+          "sha256": "c54588cd80af708148f255d1d44fe53747e1bad8b51e7b1499a7b88967c06220"
+        },
+        {
+          "path": "landmarks.js",
+          "sha256": "f4c52aaf50a4c383f6fbc9dd4587fc2f2958765659365d68f3cc54d84136b44e"
+        },
+        {
+          "path": "landmark-data.json",
+          "sha256": "c5ee9dfea757a558d2f96e17802cc6055220ea7dbe8b4becacf26db78996a497"
+        },
+        {
+          "path": "blender-vehicle.js",
+          "sha256": "ddd671c7408099ac1eacc5629d6765a8b5615f32e32a7d726d1445e4bef00dc7"
+        },
+        {
+          "path": "flight-physics.js",
+          "sha256": "e21eb01d2981d1d68032e87c36d50ee5f002068ca47ee414c6746cf3d428640f"
+        },
+        {
+          "path": "helicopter.js",
+          "sha256": "5cc6e261a1e6272a810ed2b07b9e0dc51a0a7dbe9be1a75ef248a444716dc38b"
+        },
+        {
+          "path": "tilt-controls.js",
+          "sha256": "6eafbb332a12712f34e9dd92bae8827fc2b862dbcb1c3aa96377ef2675770055"
+        },
+        {
+          "path": "gamepad-controls.js",
+          "sha256": "f60e1e7d60677e57dfce7fe0e7a844709e2097998ccbdbf43564c61db394bc07"
+        },
+        {
+          "path": "vehicle-boost.js",
+          "sha256": "e148c6d38e65b207b63a81976952c8cb28434ed30f95eab3436999a6314bea91"
+        },
+        {
+          "path": "boost-meter.js",
+          "sha256": "3bc0a3ce9a0f7411daa78cb803b0ea1747848e063db140fd46330eaabda4581a"
+        },
+        {
+          "path": "auto-mode.js",
+          "sha256": "d97c6bb84239a563381924f1ee04f849d7b2a589ee4f48bca6fc6666b599b21d"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "vehicle-tuning.js",
+          "sha256": "94a1079e12f90d2d8f025e4fa31c3df11bb2752facb4f047402d921a6e307d4f"
+        },
+        {
+          "path": "vehicle-contact-shadow.js",
+          "sha256": "ddda8bf366f43229b4d6a07ce554198171fcebcfc62d20772aff6135dd7f6273"
+        },
+        {
+          "path": "driving-data.js",
+          "sha256": "bf0f8d28cd4788e3b42ef49ff09afeac61b3f0a8f68646c27ea01af606ca454f"
+        },
+        {
+          "path": "npc-traffic.js",
+          "sha256": "a5d851e257de5d52b94c567cc971144b6ed4ee9c4ca41435c733083991a53e7f"
+        },
+        {
+          "path": "traffic-simulation.js",
+          "sha256": "e261033f9e1fc5c6374e4b3c329d40e8ccaa195adb9b761f4531f5cf6d592d16"
+        },
+        {
+          "path": "supercar-model.js",
+          "sha256": "73c4db558b2feb534ddc98cad4af1b4d34ef3c15803f96ac867e147617e145e3"
+        },
+        {
+          "path": "vehicle-models.js",
+          "sha256": "2771ed04f12e34dbd108b043f15ab5590628e03cc7c220e550f8d810a156c909"
+        },
+        {
+          "path": "street-detail.js",
+          "sha256": "2f9e9c9e07d7fb8a3253b01a0d19afa71257a07e6070b98ff071063178b8eed0"
+        },
+        {
+          "path": "auto-roads.js",
+          "sha256": "88976fc0c2e818c44550c44985a679ddc776e1a6cc5c73adc4e37acfe7bb34d4"
+        },
+        {
+          "path": "auto-physics.js",
+          "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+        },
+        {
+          "path": "auto-roam-physics.js",
+          "sha256": "18d5632dc8e7deb2af949438a47efcf163a81d5281d1a22feeecfa62fe6853a3"
+        },
+        {
+          "path": "auto-world.js",
+          "sha256": "d221dadc082f1309a5f69629b3d8463ae520eda1fefe98013a9a0de9f5cdade4"
+        },
+        {
+          "path": "cycle-model.js",
+          "sha256": "898b2b018d80fececce6b5df0f9c397897ca68834687920562d300acc5165f5f"
+        },
+        {
+          "path": "vidhana-streets.js",
+          "sha256": "f556f290403d27a34e69cd769e0156d4d12a675b8ba808ae2757c36b9c5a030e"
+        },
+        {
+          "path": "vidhana-street-data.json",
+          "sha256": "ef386e364bbccd76b917aae5fef932ee11eaad7e3e10864e4894f33984994889"
+        },
+        {
+          "path": "assets/vehicles/cybertruck.glb",
+          "sha256": "e6ad2ff4ffc3b4ee4de73600f28eb264e2fc3b3fac65f31ebb0d4f50cda4fc05"
+        },
+        {
+          "path": "assets/vehicles/cybercab-rigged.glb",
+          "sha256": "d22c94990893c5d807248cb7717ac643fccf2d532ad55519f57f3f8de65bbc1a"
+        },
+        {
+          "path": "assets/vehicles/kitt.glb",
+          "sha256": "b4247a09d36ec41fa1a550374d50e11d7006a124cafc03cc8decc4a83cc4393d"
+        },
+        {
+          "path": "auto-model.js",
+          "sha256": "6733f0dd27b8326a7bc3990ea620ada9f5bb40a98eb71588aaff9d1e5ee48fc9"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "vidhana-road-network.json",
+          "sha256": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+        },
+        {
+          "path": "street-patch.js",
+          "sha256": "18580abfc4b45a04391f4467d348b6e739cfea597ecc8cd9296b212786e9e190"
+        },
+        {
+          "path": "auto-asset.js",
+          "sha256": "381742c66e96de562e7f3172ec5b99dc95df0f3648e8c7ac7c25e003b53a5e15"
+        },
+        {
+          "path": "street-surface-materials.js",
+          "sha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.json",
+          "sha256": "9c420bde6f1b9af49e78fbabff272ab3b57a156e65f5c93766b965c6ff3c8718"
+        },
+        {
+          "path": "assets/auto/auto-rickshaw.glb",
+          "sha256": "1382e9c81589dbda33c17b62a0b90d6d766acb910fa6d1362b589ed9805f9e67"
+        },
+        {
+          "path": "assets/streets/vidhana-ground.json",
+          "sha256": "6a26aba9c1bc9c70ad208d4968d3f43780c9d1a5e878931a84a412c445150f9a"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.glb",
+          "sha256": "8ebe5680a10f8a590fab7ffda69b8d5a4ba1a99ab7a049d981a9f580b1b72c73"
+        },
+        {
+          "path": "street-furniture.js",
+          "sha256": "145d43442d77dc013c9fa930a2fbfcb44ba5677ebfda14b09bcf18cb23bbc79c"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "multiplayer-render.js",
+          "sha256": "fe9adc39f4bea36d63ebb07a48ac4882371a0419260c44436e9a9e322968ddb8"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "assets/vehicles/cybercab-meshy-traffic.glb",
+          "sha256": "1a412a23d19b0aca4da0f38cee6ad16c1537776edb5cca7187e7f3c55b2376ec"
+        }
+      ]
+    },
+    {
+      "mode": "baseline",
+      "view": "aerial",
+      "pose": {
+        "eye": [
+          77.59058,
+          12.97514
+        ],
+        "height": 70,
+        "target": [
+          77.59020226666667,
+          12.975491600004656
+        ],
+        "targetHeight": 0
+      },
+      "image": "street-500-gap-scene-baseline-aerial.png",
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.59136000000001,
+          12.97984615
+        ],
+        "bounds": [
+          77.58618635189106,
+          12.975343678074553,
+          77.59541361100963,
+          12.984295613215803
+        ],
+        "meshes": 7,
+        "triangles": 11629,
+        "indexedTriangles": 9280,
+        "indexCells": 4289,
+        "groundIndexSource": "sidecar",
+        "groundIndexURL": "http://127.0.0.1:4173/assets/streets/vidhana-ground.json",
+        "frames": 35,
+        "drawCalls": 7,
+        "renderedTriangles": 11629,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "surfaceCoverage": {
+          "status": "disabled"
+        }
+      },
+      "heightAtProbe": null,
+      "auto": {
+        "vehicleType": "auto",
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": false,
+        "paused": false,
+        "boost": null,
+        "speed": 0,
+        "distance": 0,
+        "heading": 0,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": null,
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": null,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      },
+      "camera": {
+        "center": [
+          77.59020226666667,
+          12.975491600004673
+        ],
+        "zoom": 20.123829116497493,
+        "bearing": -46.31246085583211,
+        "pitch": 38.95885535104268
+      },
+      "layers": [
+        {
+          "id": "tunnel_motorway_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "tunnel_motorway_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "road_area_pier",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "road_pier",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_path",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_minor",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_subtle",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_subtle",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_transit",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_transit_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_service",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_service_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_bridge_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_bridge_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "auto-road-surface",
+          "type": "fill",
+          "visibility": "none"
+        },
+        {
+          "id": "vidhana-road",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-footpath",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-lane",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-zebra",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-memorials",
+          "type": "circle",
+          "visibility": "visible"
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "requests": [
+        {
+          "path": "index.html",
+          "sha256": "335c90097715957a752bb3ab6b1f626cd60c6c421e29c3642aa137f003e7253e"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "278d3c8f2b7300a9596a892d65d5b8675891c97d5de07d56a98774e54ecab3ea"
+        },
+        {
+          "path": "flight.css",
+          "sha256": "599c725ab838ed2e075b54fef3efbcf3f75df6d8602c91d156ebd1156e9878f3"
+        },
+        {
+          "path": "auto.css",
+          "sha256": "156e67cf7990737ac50355b5dfa0ed74fdcf7756effb3fab0a48aab6abfd47c6"
+        },
+        {
+          "path": "cockpit.css",
+          "sha256": "fe79841c596ab5ba96005b0ff932dfa0de6ddf164cf8c82d3a7cf712b3b4ede9"
+        },
+        {
+          "path": "mobile-controls.css",
+          "sha256": "ca7527dafa5f094be10b1141133432de18ffc1c50f38afc3d7440cb95168dd3e"
+        },
+        {
+          "path": "vehicle-shell.css",
+          "sha256": "545a1c2854c49a2752575604300dade313dbb68674c9aaa4e362b25ff7963a47"
+        },
+        {
+          "path": "focus-pointer.css",
+          "sha256": "ff635633524a7851062472ef2df79ca931e4ba7eaf00c00c9bf7a7688f8fbada"
+        },
+        {
+          "path": "mobile-dashboard.css",
+          "sha256": "019eb83d60a9679bc8ffbd851a23172ce11880b8a50a5bee2bd57b1cfc2b0a52"
+        },
+        {
+          "path": "performance-panel.css",
+          "sha256": "4af10d25756ea42c7e3106ea8f4c00c40cb3e7805791d5e499749e620a672940"
+        },
+        {
+          "path": "controller-monitor.css",
+          "sha256": "44c5755da3d12b6fb32dfcacbd5af31b8d0db93b704a8717e247ffb87329cdfb"
+        },
+        {
+          "path": "controller-monitor.js",
+          "sha256": "aa6ca7a2f2818b0ba3d8e8caab13be123ce9fb6d5ade504eba6803ae273fd1be"
+        },
+        {
+          "path": "resume-overlay.css",
+          "sha256": "153309d188d23de5e0270c196cc9fd6638a935c3343e7576e2cbb8a24ec57e3b"
+        },
+        {
+          "path": "resume-overlay.js",
+          "sha256": "5c2809ccbb4afe9780ad2af903aa622f33ecae34862b7a1ed53e29df5703d1c4"
+        },
+        {
+          "path": "city-loading.css",
+          "sha256": "619b4b2ea6d0cb559ce4d7cac3cd1395363febaf160a8efaa75b1f71125db652"
+        },
+        {
+          "path": "city-loading.js",
+          "sha256": "2a7f7afdc3163c8bfebe3562527b4d1fda1e06a56c14419b0cf635f66ee740b9"
+        },
+        {
+          "path": "multiplayer-client.css",
+          "sha256": "f460349de5a1b520a9274738cc80aab3c2332d7679ca23c1c73e45e8b0900678"
+        },
+        {
+          "path": "mobile-menu.css",
+          "sha256": "f8deccca833d14146b6ebe30de0a19b5e3dcd3a3efd156b603aa2df329bbd2c3"
+        },
+        {
+          "path": "mobile-menu.js",
+          "sha256": "5121780188f9499459281be0a70661a3217f2ac0a379e7044c39b18cb41360f7"
+        },
+        {
+          "path": "mobile-drive.css",
+          "sha256": "a30a59e6a495d0c3c873a58c30abdc76faf547ed68eb908c8fea19857f9f9b02"
+        },
+        {
+          "path": "mobile-drive.js",
+          "sha256": "614051bf1b03139f711dee7e1e959fb7fd58683cdc0b01897256ff2eb0ac37ba"
+        },
+        {
+          "path": "player-stats-ui.js",
+          "sha256": "35ed95e895862d7e9127365c5898a07258c13a686641dae8d5534a36eb879957"
+        },
+        {
+          "path": "voice-chat.css",
+          "sha256": "28151aecd78ad986be3159ead47b67d4dfeedbe722ac12df53cdb44ea8273037"
+        },
+        {
+          "path": "voice-chat.js",
+          "sha256": "5a1e92ffd7c3d0d7cae7afb920cd08e79bee4ba487db885ce20e77d1bf3614c1"
+        },
+        {
+          "path": "social-controls.css",
+          "sha256": "a8a78810141c202c627d3428b1953f6f57b7adcc5868ebacdbed296fd9eda85a"
+        },
+        {
+          "path": "social-entry.js",
+          "sha256": "1d80024cc5d7e716018b8f744d1fe49c53ba865bef8c9206e7b576ce0fa5122f"
+        },
+        {
+          "path": "app.js",
+          "sha256": "90392ef610cf0fa4068110569a5926f4c585906f45fffdcf5086110f559262d8"
+        },
+        {
+          "path": "flight.js",
+          "sha256": "0ec14faa2d2e3864246e7b44da51a69f3eb7a3170b2c5942675358a4151c95cd"
+        },
+        {
+          "path": "vehicle-shell.js",
+          "sha256": "43004e69ae9195a65d8791e51b39e704abab2a52c3f6570bbb0b63f6468c04ee"
+        },
+        {
+          "path": "focus-pointer.js",
+          "sha256": "fc454969bfdd67a2e6846bf462443428bfd877edd0614a221587f94b400d5e68"
+        },
+        {
+          "path": "mobile-dashboard.js",
+          "sha256": "9f45d2d1784d7867408ceec688f3df1dfa79cc94ac5af0ca01618a7c1cc7b3f7"
+        },
+        {
+          "path": "performance-panel.js",
+          "sha256": "9a3eb7babbddad2d2ee74568813197b2d3cde80c635bf8a1ca39632b15f5ca97"
+        },
+        {
+          "path": "social-controls.js",
+          "sha256": "c186cf3795059fa8ad36129cc8f40e9ccfa955fd6c94d16290ed0e5b62de565d"
+        },
+        {
+          "path": "player-stats.js",
+          "sha256": "6342bbd962ac64f868cee4ac589d4ed8f9813e54af3417c595e6d5cb4245c44a"
+        },
+        {
+          "path": "player-cloud.js",
+          "sha256": "3c838937ccd86e970db1c8eacc545e00ae1e90a929501d362b09ee69165c206e"
+        },
+        {
+          "path": "vehicle-colors.js",
+          "sha256": "5acf2a2367082a01986dd95083a78912fdef966dc0af94ce0fe9ca2952b32f06"
+        },
+        {
+          "path": "release.json",
+          "sha256": "f4bc25d221146a11ff2b270e8954df0349078ee790958ba7dcaf1ed1f2f83501"
+        },
+        {
+          "path": "assets/vehicles/previews/cycle.webp",
+          "sha256": "9f0b8952cfdeb7adf5e030057a1d647a947ab98f00537cee24f65ec3f8095393"
+        },
+        {
+          "path": "assets/vehicles/previews/helicopter.webp",
+          "sha256": "bea10b0e7be34887c6db0cc4f5ff3d53ec3fc83ca1bff8bfd92f149fe71c9eee"
+        },
+        {
+          "path": "assets/vehicles/previews/auto.webp",
+          "sha256": "9eb1b2e5755887cffe97801086166959e546f112c82bfec2f33a38d20240cd8f"
+        },
+        {
+          "path": "assets/vehicles/previews/cybertruck.webp",
+          "sha256": "a71955478726639a4fff9e823e697fbce34b2dc8fbc9505e2c7af137801862f6"
+        },
+        {
+          "path": "assets/vehicles/previews/cybercab.webp",
+          "sha256": "f06fa2c3e7a08b33170420898cd3b5067831a56a868912faae18fcf1f5ae56cf"
+        },
+        {
+          "path": "assets/vehicles/previews/kitt.webp",
+          "sha256": "4ad7669f238626febbcab2558e341bac14cd74f7cc69629248c5467994867188"
+        },
+        {
+          "path": "supabase-config.json",
+          "sha256": "9c7791f3d1dd7b57c420125c5ee7edca605e930f264a293869ff27d4b11b8397"
+        },
+        {
+          "path": "cbd-dome.js",
+          "sha256": "f6e2d40820c19738404c4cb900813983961ddb44cd3b4d9ee77e6906d0d28bed"
+        },
+        {
+          "path": "cbd-boundary.js",
+          "sha256": "d62f99dfd373093b5dd68a6c021103e163669b14c9beac0854134d524e8fef28"
+        },
+        {
+          "path": "district.js",
+          "sha256": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b"
+        },
+        {
+          "path": "vehicle-environment.js",
+          "sha256": "546e969b98b4eff1765ded7826bef4e72e150843dc7aed1e11fae9128d4a9567"
+        },
+        {
+          "path": "map-scene-camera.js",
+          "sha256": "81f9795a6522dc171b5a853ea239eefd6467d52fe3998164138bfaf546258a1f"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "building-context.js",
+          "sha256": "c54588cd80af708148f255d1d44fe53747e1bad8b51e7b1499a7b88967c06220"
+        },
+        {
+          "path": "landmarks.js",
+          "sha256": "f4c52aaf50a4c383f6fbc9dd4587fc2f2958765659365d68f3cc54d84136b44e"
+        },
+        {
+          "path": "landmark-data.json",
+          "sha256": "c5ee9dfea757a558d2f96e17802cc6055220ea7dbe8b4becacf26db78996a497"
+        },
+        {
+          "path": "blender-vehicle.js",
+          "sha256": "ddd671c7408099ac1eacc5629d6765a8b5615f32e32a7d726d1445e4bef00dc7"
+        },
+        {
+          "path": "flight-physics.js",
+          "sha256": "e21eb01d2981d1d68032e87c36d50ee5f002068ca47ee414c6746cf3d428640f"
+        },
+        {
+          "path": "helicopter.js",
+          "sha256": "5cc6e261a1e6272a810ed2b07b9e0dc51a0a7dbe9be1a75ef248a444716dc38b"
+        },
+        {
+          "path": "tilt-controls.js",
+          "sha256": "6eafbb332a12712f34e9dd92bae8827fc2b862dbcb1c3aa96377ef2675770055"
+        },
+        {
+          "path": "gamepad-controls.js",
+          "sha256": "f60e1e7d60677e57dfce7fe0e7a844709e2097998ccbdbf43564c61db394bc07"
+        },
+        {
+          "path": "vehicle-boost.js",
+          "sha256": "e148c6d38e65b207b63a81976952c8cb28434ed30f95eab3436999a6314bea91"
+        },
+        {
+          "path": "boost-meter.js",
+          "sha256": "3bc0a3ce9a0f7411daa78cb803b0ea1747848e063db140fd46330eaabda4581a"
+        },
+        {
+          "path": "auto-mode.js",
+          "sha256": "d97c6bb84239a563381924f1ee04f849d7b2a589ee4f48bca6fc6666b599b21d"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "vehicle-tuning.js",
+          "sha256": "94a1079e12f90d2d8f025e4fa31c3df11bb2752facb4f047402d921a6e307d4f"
+        },
+        {
+          "path": "vehicle-contact-shadow.js",
+          "sha256": "ddda8bf366f43229b4d6a07ce554198171fcebcfc62d20772aff6135dd7f6273"
+        },
+        {
+          "path": "driving-data.js",
+          "sha256": "bf0f8d28cd4788e3b42ef49ff09afeac61b3f0a8f68646c27ea01af606ca454f"
+        },
+        {
+          "path": "npc-traffic.js",
+          "sha256": "a5d851e257de5d52b94c567cc971144b6ed4ee9c4ca41435c733083991a53e7f"
+        },
+        {
+          "path": "traffic-simulation.js",
+          "sha256": "e261033f9e1fc5c6374e4b3c329d40e8ccaa195adb9b761f4531f5cf6d592d16"
+        },
+        {
+          "path": "supercar-model.js",
+          "sha256": "73c4db558b2feb534ddc98cad4af1b4d34ef3c15803f96ac867e147617e145e3"
+        },
+        {
+          "path": "vehicle-models.js",
+          "sha256": "2771ed04f12e34dbd108b043f15ab5590628e03cc7c220e550f8d810a156c909"
+        },
+        {
+          "path": "street-detail.js",
+          "sha256": "2f9e9c9e07d7fb8a3253b01a0d19afa71257a07e6070b98ff071063178b8eed0"
+        },
+        {
+          "path": "auto-roads.js",
+          "sha256": "88976fc0c2e818c44550c44985a679ddc776e1a6cc5c73adc4e37acfe7bb34d4"
+        },
+        {
+          "path": "auto-physics.js",
+          "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+        },
+        {
+          "path": "auto-roam-physics.js",
+          "sha256": "18d5632dc8e7deb2af949438a47efcf163a81d5281d1a22feeecfa62fe6853a3"
+        },
+        {
+          "path": "auto-world.js",
+          "sha256": "d221dadc082f1309a5f69629b3d8463ae520eda1fefe98013a9a0de9f5cdade4"
+        },
+        {
+          "path": "cycle-model.js",
+          "sha256": "898b2b018d80fececce6b5df0f9c397897ca68834687920562d300acc5165f5f"
+        },
+        {
+          "path": "vidhana-streets.js",
+          "sha256": "f556f290403d27a34e69cd769e0156d4d12a675b8ba808ae2757c36b9c5a030e"
+        },
+        {
+          "path": "vidhana-street-data.json",
+          "sha256": "ef386e364bbccd76b917aae5fef932ee11eaad7e3e10864e4894f33984994889"
+        },
+        {
+          "path": "assets/vehicles/cybertruck.glb",
+          "sha256": "e6ad2ff4ffc3b4ee4de73600f28eb264e2fc3b3fac65f31ebb0d4f50cda4fc05"
+        },
+        {
+          "path": "assets/vehicles/cybercab-rigged.glb",
+          "sha256": "d22c94990893c5d807248cb7717ac643fccf2d532ad55519f57f3f8de65bbc1a"
+        },
+        {
+          "path": "assets/vehicles/kitt.glb",
+          "sha256": "b4247a09d36ec41fa1a550374d50e11d7006a124cafc03cc8decc4a83cc4393d"
+        },
+        {
+          "path": "auto-model.js",
+          "sha256": "6733f0dd27b8326a7bc3990ea620ada9f5bb40a98eb71588aaff9d1e5ee48fc9"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "vidhana-road-network.json",
+          "sha256": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+        },
+        {
+          "path": "street-patch.js",
+          "sha256": "18580abfc4b45a04391f4467d348b6e739cfea597ecc8cd9296b212786e9e190"
+        },
+        {
+          "path": "auto-asset.js",
+          "sha256": "381742c66e96de562e7f3172ec5b99dc95df0f3648e8c7ac7c25e003b53a5e15"
+        },
+        {
+          "path": "street-surface-materials.js",
+          "sha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.json",
+          "sha256": "9c420bde6f1b9af49e78fbabff272ab3b57a156e65f5c93766b965c6ff3c8718"
+        },
+        {
+          "path": "assets/auto/auto-rickshaw.glb",
+          "sha256": "1382e9c81589dbda33c17b62a0b90d6d766acb910fa6d1362b589ed9805f9e67"
+        },
+        {
+          "path": "assets/streets/vidhana-ground.json",
+          "sha256": "6a26aba9c1bc9c70ad208d4968d3f43780c9d1a5e878931a84a412c445150f9a"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.glb",
+          "sha256": "8ebe5680a10f8a590fab7ffda69b8d5a4ba1a99ab7a049d981a9f580b1b72c73"
+        },
+        {
+          "path": "street-furniture.js",
+          "sha256": "145d43442d77dc013c9fa930a2fbfcb44ba5677ebfda14b09bcf18cb23bbc79c"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "multiplayer-render.js",
+          "sha256": "fe9adc39f4bea36d63ebb07a48ac4882371a0419260c44436e9a9e322968ddb8"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "assets/vehicles/cybercab-meshy-traffic.glb",
+          "sha256": "1a412a23d19b0aca4da0f38cee6ad16c1537776edb5cca7187e7f3c55b2376ec"
+        }
+      ]
+    },
+    {
+      "mode": "candidate",
+      "view": "road",
+      "pose": {
+        "eye": [
+          77.590278,
+          12.975395
+        ],
+        "height": 2.3,
+        "target": [
+          77.59020226666667,
+          12.975491600004656
+        ],
+        "targetHeight": 0.12
+      },
+      "image": "street-500-gap-scene-candidate-road.png",
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.59136000000001,
+          12.97984615
+        ],
+        "bounds": [
+          77.58618635189106,
+          12.975343678074553,
+          77.59541361100963,
+          12.984295613215803
+        ],
+        "meshes": 7,
+        "triangles": 11634,
+        "indexedTriangles": 9285,
+        "indexCells": 4289,
+        "groundIndexSource": "sidecar",
+        "groundIndexURL": "http://127.0.0.1:4173/assets/streets/vidhana-ground.json",
+        "frames": 18,
+        "drawCalls": 7,
+        "renderedTriangles": 11634,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "surfaceCoverage": {
+          "status": "disabled"
+        }
+      },
+      "heightAtProbe": 0,
+      "auto": {
+        "vehicleType": "auto",
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": false,
+        "paused": false,
+        "boost": null,
+        "speed": 0,
+        "distance": 0,
+        "heading": 0,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": null,
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": null,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      },
+      "camera": {
+        "center": [
+          77.59020226666667,
+          12.975491600004673
+        ],
+        "zoom": 22.84074904028607,
+        "bearing": -37.378772990522236,
+        "pitch": 80.83857442706804
+      },
+      "layers": [
+        {
+          "id": "tunnel_motorway_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "tunnel_motorway_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "road_area_pier",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "road_pier",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_path",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_minor",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_subtle",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_subtle",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_transit",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_transit_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_service",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_service_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_bridge_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_bridge_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "auto-road-surface",
+          "type": "fill",
+          "visibility": "none"
+        },
+        {
+          "id": "vidhana-road",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-footpath",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-lane",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-zebra",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-memorials",
+          "type": "circle",
+          "visibility": "visible"
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "requests": [
+        {
+          "path": "index.html",
+          "sha256": "335c90097715957a752bb3ab6b1f626cd60c6c421e29c3642aa137f003e7253e"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "278d3c8f2b7300a9596a892d65d5b8675891c97d5de07d56a98774e54ecab3ea"
+        },
+        {
+          "path": "flight.css",
+          "sha256": "599c725ab838ed2e075b54fef3efbcf3f75df6d8602c91d156ebd1156e9878f3"
+        },
+        {
+          "path": "auto.css",
+          "sha256": "156e67cf7990737ac50355b5dfa0ed74fdcf7756effb3fab0a48aab6abfd47c6"
+        },
+        {
+          "path": "cockpit.css",
+          "sha256": "fe79841c596ab5ba96005b0ff932dfa0de6ddf164cf8c82d3a7cf712b3b4ede9"
+        },
+        {
+          "path": "mobile-controls.css",
+          "sha256": "ca7527dafa5f094be10b1141133432de18ffc1c50f38afc3d7440cb95168dd3e"
+        },
+        {
+          "path": "vehicle-shell.css",
+          "sha256": "545a1c2854c49a2752575604300dade313dbb68674c9aaa4e362b25ff7963a47"
+        },
+        {
+          "path": "focus-pointer.css",
+          "sha256": "ff635633524a7851062472ef2df79ca931e4ba7eaf00c00c9bf7a7688f8fbada"
+        },
+        {
+          "path": "mobile-dashboard.css",
+          "sha256": "019eb83d60a9679bc8ffbd851a23172ce11880b8a50a5bee2bd57b1cfc2b0a52"
+        },
+        {
+          "path": "performance-panel.css",
+          "sha256": "4af10d25756ea42c7e3106ea8f4c00c40cb3e7805791d5e499749e620a672940"
+        },
+        {
+          "path": "controller-monitor.css",
+          "sha256": "44c5755da3d12b6fb32dfcacbd5af31b8d0db93b704a8717e247ffb87329cdfb"
+        },
+        {
+          "path": "controller-monitor.js",
+          "sha256": "aa6ca7a2f2818b0ba3d8e8caab13be123ce9fb6d5ade504eba6803ae273fd1be"
+        },
+        {
+          "path": "resume-overlay.css",
+          "sha256": "153309d188d23de5e0270c196cc9fd6638a935c3343e7576e2cbb8a24ec57e3b"
+        },
+        {
+          "path": "resume-overlay.js",
+          "sha256": "5c2809ccbb4afe9780ad2af903aa622f33ecae34862b7a1ed53e29df5703d1c4"
+        },
+        {
+          "path": "city-loading.css",
+          "sha256": "619b4b2ea6d0cb559ce4d7cac3cd1395363febaf160a8efaa75b1f71125db652"
+        },
+        {
+          "path": "city-loading.js",
+          "sha256": "2a7f7afdc3163c8bfebe3562527b4d1fda1e06a56c14419b0cf635f66ee740b9"
+        },
+        {
+          "path": "multiplayer-client.css",
+          "sha256": "f460349de5a1b520a9274738cc80aab3c2332d7679ca23c1c73e45e8b0900678"
+        },
+        {
+          "path": "mobile-menu.css",
+          "sha256": "f8deccca833d14146b6ebe30de0a19b5e3dcd3a3efd156b603aa2df329bbd2c3"
+        },
+        {
+          "path": "mobile-menu.js",
+          "sha256": "5121780188f9499459281be0a70661a3217f2ac0a379e7044c39b18cb41360f7"
+        },
+        {
+          "path": "mobile-drive.css",
+          "sha256": "a30a59e6a495d0c3c873a58c30abdc76faf547ed68eb908c8fea19857f9f9b02"
+        },
+        {
+          "path": "mobile-drive.js",
+          "sha256": "614051bf1b03139f711dee7e1e959fb7fd58683cdc0b01897256ff2eb0ac37ba"
+        },
+        {
+          "path": "player-stats-ui.js",
+          "sha256": "35ed95e895862d7e9127365c5898a07258c13a686641dae8d5534a36eb879957"
+        },
+        {
+          "path": "voice-chat.css",
+          "sha256": "28151aecd78ad986be3159ead47b67d4dfeedbe722ac12df53cdb44ea8273037"
+        },
+        {
+          "path": "voice-chat.js",
+          "sha256": "5a1e92ffd7c3d0d7cae7afb920cd08e79bee4ba487db885ce20e77d1bf3614c1"
+        },
+        {
+          "path": "social-controls.css",
+          "sha256": "a8a78810141c202c627d3428b1953f6f57b7adcc5868ebacdbed296fd9eda85a"
+        },
+        {
+          "path": "social-entry.js",
+          "sha256": "1d80024cc5d7e716018b8f744d1fe49c53ba865bef8c9206e7b576ce0fa5122f"
+        },
+        {
+          "path": "app.js",
+          "sha256": "90392ef610cf0fa4068110569a5926f4c585906f45fffdcf5086110f559262d8"
+        },
+        {
+          "path": "flight.js",
+          "sha256": "0ec14faa2d2e3864246e7b44da51a69f3eb7a3170b2c5942675358a4151c95cd"
+        },
+        {
+          "path": "vehicle-shell.js",
+          "sha256": "43004e69ae9195a65d8791e51b39e704abab2a52c3f6570bbb0b63f6468c04ee"
+        },
+        {
+          "path": "focus-pointer.js",
+          "sha256": "fc454969bfdd67a2e6846bf462443428bfd877edd0614a221587f94b400d5e68"
+        },
+        {
+          "path": "mobile-dashboard.js",
+          "sha256": "9f45d2d1784d7867408ceec688f3df1dfa79cc94ac5af0ca01618a7c1cc7b3f7"
+        },
+        {
+          "path": "performance-panel.js",
+          "sha256": "9a3eb7babbddad2d2ee74568813197b2d3cde80c635bf8a1ca39632b15f5ca97"
+        },
+        {
+          "path": "player-stats.js",
+          "sha256": "6342bbd962ac64f868cee4ac589d4ed8f9813e54af3417c595e6d5cb4245c44a"
+        },
+        {
+          "path": "player-cloud.js",
+          "sha256": "3c838937ccd86e970db1c8eacc545e00ae1e90a929501d362b09ee69165c206e"
+        },
+        {
+          "path": "social-controls.js",
+          "sha256": "c186cf3795059fa8ad36129cc8f40e9ccfa955fd6c94d16290ed0e5b62de565d"
+        },
+        {
+          "path": "vehicle-colors.js",
+          "sha256": "5acf2a2367082a01986dd95083a78912fdef966dc0af94ce0fe9ca2952b32f06"
+        },
+        {
+          "path": "release.json",
+          "sha256": "f4bc25d221146a11ff2b270e8954df0349078ee790958ba7dcaf1ed1f2f83501"
+        },
+        {
+          "path": "assets/vehicles/previews/cycle.webp",
+          "sha256": "9f0b8952cfdeb7adf5e030057a1d647a947ab98f00537cee24f65ec3f8095393"
+        },
+        {
+          "path": "assets/vehicles/previews/helicopter.webp",
+          "sha256": "bea10b0e7be34887c6db0cc4f5ff3d53ec3fc83ca1bff8bfd92f149fe71c9eee"
+        },
+        {
+          "path": "assets/vehicles/previews/auto.webp",
+          "sha256": "9eb1b2e5755887cffe97801086166959e546f112c82bfec2f33a38d20240cd8f"
+        },
+        {
+          "path": "assets/vehicles/previews/cybertruck.webp",
+          "sha256": "a71955478726639a4fff9e823e697fbce34b2dc8fbc9505e2c7af137801862f6"
+        },
+        {
+          "path": "assets/vehicles/previews/cybercab.webp",
+          "sha256": "f06fa2c3e7a08b33170420898cd3b5067831a56a868912faae18fcf1f5ae56cf"
+        },
+        {
+          "path": "assets/vehicles/previews/kitt.webp",
+          "sha256": "4ad7669f238626febbcab2558e341bac14cd74f7cc69629248c5467994867188"
+        },
+        {
+          "path": "supabase-config.json",
+          "sha256": "9c7791f3d1dd7b57c420125c5ee7edca605e930f264a293869ff27d4b11b8397"
+        },
+        {
+          "path": "cbd-dome.js",
+          "sha256": "f6e2d40820c19738404c4cb900813983961ddb44cd3b4d9ee77e6906d0d28bed"
+        },
+        {
+          "path": "cbd-boundary.js",
+          "sha256": "d62f99dfd373093b5dd68a6c021103e163669b14c9beac0854134d524e8fef28"
+        },
+        {
+          "path": "district.js",
+          "sha256": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b"
+        },
+        {
+          "path": "vehicle-environment.js",
+          "sha256": "546e969b98b4eff1765ded7826bef4e72e150843dc7aed1e11fae9128d4a9567"
+        },
+        {
+          "path": "map-scene-camera.js",
+          "sha256": "81f9795a6522dc171b5a853ea239eefd6467d52fe3998164138bfaf546258a1f"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "building-context.js",
+          "sha256": "c54588cd80af708148f255d1d44fe53747e1bad8b51e7b1499a7b88967c06220"
+        },
+        {
+          "path": "landmarks.js",
+          "sha256": "f4c52aaf50a4c383f6fbc9dd4587fc2f2958765659365d68f3cc54d84136b44e"
+        },
+        {
+          "path": "landmark-data.json",
+          "sha256": "c5ee9dfea757a558d2f96e17802cc6055220ea7dbe8b4becacf26db78996a497"
+        },
+        {
+          "path": "blender-vehicle.js",
+          "sha256": "ddd671c7408099ac1eacc5629d6765a8b5615f32e32a7d726d1445e4bef00dc7"
+        },
+        {
+          "path": "flight-physics.js",
+          "sha256": "e21eb01d2981d1d68032e87c36d50ee5f002068ca47ee414c6746cf3d428640f"
+        },
+        {
+          "path": "helicopter.js",
+          "sha256": "5cc6e261a1e6272a810ed2b07b9e0dc51a0a7dbe9be1a75ef248a444716dc38b"
+        },
+        {
+          "path": "tilt-controls.js",
+          "sha256": "6eafbb332a12712f34e9dd92bae8827fc2b862dbcb1c3aa96377ef2675770055"
+        },
+        {
+          "path": "gamepad-controls.js",
+          "sha256": "f60e1e7d60677e57dfce7fe0e7a844709e2097998ccbdbf43564c61db394bc07"
+        },
+        {
+          "path": "vehicle-boost.js",
+          "sha256": "e148c6d38e65b207b63a81976952c8cb28434ed30f95eab3436999a6314bea91"
+        },
+        {
+          "path": "boost-meter.js",
+          "sha256": "3bc0a3ce9a0f7411daa78cb803b0ea1747848e063db140fd46330eaabda4581a"
+        },
+        {
+          "path": "auto-mode.js",
+          "sha256": "d97c6bb84239a563381924f1ee04f849d7b2a589ee4f48bca6fc6666b599b21d"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "vehicle-tuning.js",
+          "sha256": "94a1079e12f90d2d8f025e4fa31c3df11bb2752facb4f047402d921a6e307d4f"
+        },
+        {
+          "path": "vehicle-contact-shadow.js",
+          "sha256": "ddda8bf366f43229b4d6a07ce554198171fcebcfc62d20772aff6135dd7f6273"
+        },
+        {
+          "path": "driving-data.js",
+          "sha256": "bf0f8d28cd4788e3b42ef49ff09afeac61b3f0a8f68646c27ea01af606ca454f"
+        },
+        {
+          "path": "npc-traffic.js",
+          "sha256": "a5d851e257de5d52b94c567cc971144b6ed4ee9c4ca41435c733083991a53e7f"
+        },
+        {
+          "path": "traffic-simulation.js",
+          "sha256": "e261033f9e1fc5c6374e4b3c329d40e8ccaa195adb9b761f4531f5cf6d592d16"
+        },
+        {
+          "path": "supercar-model.js",
+          "sha256": "73c4db558b2feb534ddc98cad4af1b4d34ef3c15803f96ac867e147617e145e3"
+        },
+        {
+          "path": "vehicle-models.js",
+          "sha256": "2771ed04f12e34dbd108b043f15ab5590628e03cc7c220e550f8d810a156c909"
+        },
+        {
+          "path": "street-detail.js",
+          "sha256": "2f9e9c9e07d7fb8a3253b01a0d19afa71257a07e6070b98ff071063178b8eed0"
+        },
+        {
+          "path": "auto-roads.js",
+          "sha256": "88976fc0c2e818c44550c44985a679ddc776e1a6cc5c73adc4e37acfe7bb34d4"
+        },
+        {
+          "path": "auto-physics.js",
+          "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+        },
+        {
+          "path": "auto-roam-physics.js",
+          "sha256": "18d5632dc8e7deb2af949438a47efcf163a81d5281d1a22feeecfa62fe6853a3"
+        },
+        {
+          "path": "auto-world.js",
+          "sha256": "d221dadc082f1309a5f69629b3d8463ae520eda1fefe98013a9a0de9f5cdade4"
+        },
+        {
+          "path": "cycle-model.js",
+          "sha256": "898b2b018d80fececce6b5df0f9c397897ca68834687920562d300acc5165f5f"
+        },
+        {
+          "path": "vidhana-streets.js",
+          "sha256": "f556f290403d27a34e69cd769e0156d4d12a675b8ba808ae2757c36b9c5a030e"
+        },
+        {
+          "path": "vidhana-street-data.json",
+          "sha256": "1c9ba4ec205e14db003566c84527f59fbb1e31af99a8ddcc1587f5a8056d45be"
+        },
+        {
+          "path": "auto-model.js",
+          "sha256": "6733f0dd27b8326a7bc3990ea620ada9f5bb40a98eb71588aaff9d1e5ee48fc9"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "vidhana-road-network.json",
+          "sha256": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+        },
+        {
+          "path": "assets/vehicles/cybertruck.glb",
+          "sha256": "e6ad2ff4ffc3b4ee4de73600f28eb264e2fc3b3fac65f31ebb0d4f50cda4fc05"
+        },
+        {
+          "path": "assets/vehicles/cybercab-rigged.glb",
+          "sha256": "d22c94990893c5d807248cb7717ac643fccf2d532ad55519f57f3f8de65bbc1a"
+        },
+        {
+          "path": "assets/vehicles/kitt.glb",
+          "sha256": "b4247a09d36ec41fa1a550374d50e11d7006a124cafc03cc8decc4a83cc4393d"
+        },
+        {
+          "path": "street-patch.js",
+          "sha256": "18580abfc4b45a04391f4467d348b6e739cfea597ecc8cd9296b212786e9e190"
+        },
+        {
+          "path": "auto-asset.js",
+          "sha256": "381742c66e96de562e7f3172ec5b99dc95df0f3648e8c7ac7c25e003b53a5e15"
+        },
+        {
+          "path": "street-surface-materials.js",
+          "sha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd"
+        },
+        {
+          "path": "assets/auto/auto-rickshaw.glb",
+          "sha256": "1382e9c81589dbda33c17b62a0b90d6d766acb910fa6d1362b589ed9805f9e67"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.json",
+          "sha256": "e48b5a7ec802b0c98314425575ca5853bae284d7506be19fc3c8b4d293807150"
+        },
+        {
+          "path": "assets/streets/vidhana-ground.json",
+          "sha256": "685b8201706df9fae34f4dbff814a2b109c71eb9dcc528645077fb10ba2a801f"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.glb",
+          "sha256": "d81156a07079bbcd844b01d2f9bc9287725e1e9526178b73b99f61f086f676e0"
+        },
+        {
+          "path": "street-furniture.js",
+          "sha256": "145d43442d77dc013c9fa930a2fbfcb44ba5677ebfda14b09bcf18cb23bbc79c"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "multiplayer-render.js",
+          "sha256": "fe9adc39f4bea36d63ebb07a48ac4882371a0419260c44436e9a9e322968ddb8"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "assets/vehicles/cybercab-meshy-traffic.glb",
+          "sha256": "1a412a23d19b0aca4da0f38cee6ad16c1537776edb5cca7187e7f3c55b2376ec"
+        }
+      ]
+    },
+    {
+      "mode": "candidate",
+      "view": "aerial",
+      "pose": {
+        "eye": [
+          77.59058,
+          12.97514
+        ],
+        "height": 70,
+        "target": [
+          77.59020226666667,
+          12.975491600004656
+        ],
+        "targetHeight": 0
+      },
+      "image": "street-500-gap-scene-candidate-aerial.png",
+      "patch": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.59136000000001,
+          12.97984615
+        ],
+        "bounds": [
+          77.58618635189106,
+          12.975343678074553,
+          77.59541361100963,
+          12.984295613215803
+        ],
+        "meshes": 7,
+        "triangles": 11634,
+        "indexedTriangles": 9285,
+        "indexCells": 4289,
+        "groundIndexSource": "sidecar",
+        "groundIndexURL": "http://127.0.0.1:4173/assets/streets/vidhana-ground.json",
+        "frames": 34,
+        "drawCalls": 7,
+        "renderedTriangles": 11634,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true,
+        "surfaceCoverage": {
+          "status": "disabled"
+        }
+      },
+      "heightAtProbe": 0,
+      "auto": {
+        "vehicleType": "auto",
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": false,
+        "paused": false,
+        "boost": null,
+        "speed": 0,
+        "distance": 0,
+        "heading": 0,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": null,
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": null,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      },
+      "camera": {
+        "center": [
+          77.59020226666667,
+          12.975491600004673
+        ],
+        "zoom": 20.123829116497493,
+        "bearing": -46.31246085583211,
+        "pitch": 38.95885535104268
+      },
+      "layers": [
+        {
+          "id": "tunnel_motorway_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "tunnel_motorway_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "road_area_pier",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "road_pier",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_path",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_minor",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_major_subtle",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_subtle",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_transit",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_transit_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_service",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_service_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "railway_dashline",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_bridge_casing",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "highway_motorway_bridge_inner",
+          "type": "line",
+          "visibility": "visible"
+        },
+        {
+          "id": "auto-road-surface",
+          "type": "fill",
+          "visibility": "none"
+        },
+        {
+          "id": "vidhana-road",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-footpath",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-lane",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-zebra",
+          "type": "fill",
+          "visibility": "visible"
+        },
+        {
+          "id": "vidhana-memorials",
+          "type": "circle",
+          "visibility": "visible"
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "requests": [
+        {
+          "path": "index.html",
+          "sha256": "335c90097715957a752bb3ab6b1f626cd60c6c421e29c3642aa137f003e7253e"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "278d3c8f2b7300a9596a892d65d5b8675891c97d5de07d56a98774e54ecab3ea"
+        },
+        {
+          "path": "flight.css",
+          "sha256": "599c725ab838ed2e075b54fef3efbcf3f75df6d8602c91d156ebd1156e9878f3"
+        },
+        {
+          "path": "auto.css",
+          "sha256": "156e67cf7990737ac50355b5dfa0ed74fdcf7756effb3fab0a48aab6abfd47c6"
+        },
+        {
+          "path": "cockpit.css",
+          "sha256": "fe79841c596ab5ba96005b0ff932dfa0de6ddf164cf8c82d3a7cf712b3b4ede9"
+        },
+        {
+          "path": "mobile-controls.css",
+          "sha256": "ca7527dafa5f094be10b1141133432de18ffc1c50f38afc3d7440cb95168dd3e"
+        },
+        {
+          "path": "vehicle-shell.css",
+          "sha256": "545a1c2854c49a2752575604300dade313dbb68674c9aaa4e362b25ff7963a47"
+        },
+        {
+          "path": "focus-pointer.css",
+          "sha256": "ff635633524a7851062472ef2df79ca931e4ba7eaf00c00c9bf7a7688f8fbada"
+        },
+        {
+          "path": "mobile-dashboard.css",
+          "sha256": "019eb83d60a9679bc8ffbd851a23172ce11880b8a50a5bee2bd57b1cfc2b0a52"
+        },
+        {
+          "path": "performance-panel.css",
+          "sha256": "4af10d25756ea42c7e3106ea8f4c00c40cb3e7805791d5e499749e620a672940"
+        },
+        {
+          "path": "controller-monitor.css",
+          "sha256": "44c5755da3d12b6fb32dfcacbd5af31b8d0db93b704a8717e247ffb87329cdfb"
+        },
+        {
+          "path": "controller-monitor.js",
+          "sha256": "aa6ca7a2f2818b0ba3d8e8caab13be123ce9fb6d5ade504eba6803ae273fd1be"
+        },
+        {
+          "path": "resume-overlay.css",
+          "sha256": "153309d188d23de5e0270c196cc9fd6638a935c3343e7576e2cbb8a24ec57e3b"
+        },
+        {
+          "path": "resume-overlay.js",
+          "sha256": "5c2809ccbb4afe9780ad2af903aa622f33ecae34862b7a1ed53e29df5703d1c4"
+        },
+        {
+          "path": "city-loading.css",
+          "sha256": "619b4b2ea6d0cb559ce4d7cac3cd1395363febaf160a8efaa75b1f71125db652"
+        },
+        {
+          "path": "city-loading.js",
+          "sha256": "2a7f7afdc3163c8bfebe3562527b4d1fda1e06a56c14419b0cf635f66ee740b9"
+        },
+        {
+          "path": "multiplayer-client.css",
+          "sha256": "f460349de5a1b520a9274738cc80aab3c2332d7679ca23c1c73e45e8b0900678"
+        },
+        {
+          "path": "mobile-menu.css",
+          "sha256": "f8deccca833d14146b6ebe30de0a19b5e3dcd3a3efd156b603aa2df329bbd2c3"
+        },
+        {
+          "path": "mobile-menu.js",
+          "sha256": "5121780188f9499459281be0a70661a3217f2ac0a379e7044c39b18cb41360f7"
+        },
+        {
+          "path": "mobile-drive.css",
+          "sha256": "a30a59e6a495d0c3c873a58c30abdc76faf547ed68eb908c8fea19857f9f9b02"
+        },
+        {
+          "path": "mobile-drive.js",
+          "sha256": "614051bf1b03139f711dee7e1e959fb7fd58683cdc0b01897256ff2eb0ac37ba"
+        },
+        {
+          "path": "player-stats-ui.js",
+          "sha256": "35ed95e895862d7e9127365c5898a07258c13a686641dae8d5534a36eb879957"
+        },
+        {
+          "path": "voice-chat.css",
+          "sha256": "28151aecd78ad986be3159ead47b67d4dfeedbe722ac12df53cdb44ea8273037"
+        },
+        {
+          "path": "voice-chat.js",
+          "sha256": "5a1e92ffd7c3d0d7cae7afb920cd08e79bee4ba487db885ce20e77d1bf3614c1"
+        },
+        {
+          "path": "social-controls.css",
+          "sha256": "a8a78810141c202c627d3428b1953f6f57b7adcc5868ebacdbed296fd9eda85a"
+        },
+        {
+          "path": "social-entry.js",
+          "sha256": "1d80024cc5d7e716018b8f744d1fe49c53ba865bef8c9206e7b576ce0fa5122f"
+        },
+        {
+          "path": "app.js",
+          "sha256": "90392ef610cf0fa4068110569a5926f4c585906f45fffdcf5086110f559262d8"
+        },
+        {
+          "path": "flight.js",
+          "sha256": "0ec14faa2d2e3864246e7b44da51a69f3eb7a3170b2c5942675358a4151c95cd"
+        },
+        {
+          "path": "vehicle-shell.js",
+          "sha256": "43004e69ae9195a65d8791e51b39e704abab2a52c3f6570bbb0b63f6468c04ee"
+        },
+        {
+          "path": "focus-pointer.js",
+          "sha256": "fc454969bfdd67a2e6846bf462443428bfd877edd0614a221587f94b400d5e68"
+        },
+        {
+          "path": "mobile-dashboard.js",
+          "sha256": "9f45d2d1784d7867408ceec688f3df1dfa79cc94ac5af0ca01618a7c1cc7b3f7"
+        },
+        {
+          "path": "performance-panel.js",
+          "sha256": "9a3eb7babbddad2d2ee74568813197b2d3cde80c635bf8a1ca39632b15f5ca97"
+        },
+        {
+          "path": "player-stats.js",
+          "sha256": "6342bbd962ac64f868cee4ac589d4ed8f9813e54af3417c595e6d5cb4245c44a"
+        },
+        {
+          "path": "player-cloud.js",
+          "sha256": "3c838937ccd86e970db1c8eacc545e00ae1e90a929501d362b09ee69165c206e"
+        },
+        {
+          "path": "social-controls.js",
+          "sha256": "c186cf3795059fa8ad36129cc8f40e9ccfa955fd6c94d16290ed0e5b62de565d"
+        },
+        {
+          "path": "vehicle-colors.js",
+          "sha256": "5acf2a2367082a01986dd95083a78912fdef966dc0af94ce0fe9ca2952b32f06"
+        },
+        {
+          "path": "release.json",
+          "sha256": "f4bc25d221146a11ff2b270e8954df0349078ee790958ba7dcaf1ed1f2f83501"
+        },
+        {
+          "path": "assets/vehicles/previews/cycle.webp",
+          "sha256": "9f0b8952cfdeb7adf5e030057a1d647a947ab98f00537cee24f65ec3f8095393"
+        },
+        {
+          "path": "assets/vehicles/previews/helicopter.webp",
+          "sha256": "bea10b0e7be34887c6db0cc4f5ff3d53ec3fc83ca1bff8bfd92f149fe71c9eee"
+        },
+        {
+          "path": "assets/vehicles/previews/auto.webp",
+          "sha256": "9eb1b2e5755887cffe97801086166959e546f112c82bfec2f33a38d20240cd8f"
+        },
+        {
+          "path": "assets/vehicles/previews/cybertruck.webp",
+          "sha256": "a71955478726639a4fff9e823e697fbce34b2dc8fbc9505e2c7af137801862f6"
+        },
+        {
+          "path": "assets/vehicles/previews/cybercab.webp",
+          "sha256": "f06fa2c3e7a08b33170420898cd3b5067831a56a868912faae18fcf1f5ae56cf"
+        },
+        {
+          "path": "assets/vehicles/previews/kitt.webp",
+          "sha256": "4ad7669f238626febbcab2558e341bac14cd74f7cc69629248c5467994867188"
+        },
+        {
+          "path": "supabase-config.json",
+          "sha256": "9c7791f3d1dd7b57c420125c5ee7edca605e930f264a293869ff27d4b11b8397"
+        },
+        {
+          "path": "cbd-dome.js",
+          "sha256": "f6e2d40820c19738404c4cb900813983961ddb44cd3b4d9ee77e6906d0d28bed"
+        },
+        {
+          "path": "cbd-boundary.js",
+          "sha256": "d62f99dfd373093b5dd68a6c021103e163669b14c9beac0854134d524e8fef28"
+        },
+        {
+          "path": "district.js",
+          "sha256": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b"
+        },
+        {
+          "path": "vehicle-environment.js",
+          "sha256": "546e969b98b4eff1765ded7826bef4e72e150843dc7aed1e11fae9128d4a9567"
+        },
+        {
+          "path": "map-scene-camera.js",
+          "sha256": "81f9795a6522dc171b5a853ea239eefd6467d52fe3998164138bfaf546258a1f"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "building-context.js",
+          "sha256": "c54588cd80af708148f255d1d44fe53747e1bad8b51e7b1499a7b88967c06220"
+        },
+        {
+          "path": "landmarks.js",
+          "sha256": "f4c52aaf50a4c383f6fbc9dd4587fc2f2958765659365d68f3cc54d84136b44e"
+        },
+        {
+          "path": "landmark-data.json",
+          "sha256": "c5ee9dfea757a558d2f96e17802cc6055220ea7dbe8b4becacf26db78996a497"
+        },
+        {
+          "path": "blender-vehicle.js",
+          "sha256": "ddd671c7408099ac1eacc5629d6765a8b5615f32e32a7d726d1445e4bef00dc7"
+        },
+        {
+          "path": "flight-physics.js",
+          "sha256": "e21eb01d2981d1d68032e87c36d50ee5f002068ca47ee414c6746cf3d428640f"
+        },
+        {
+          "path": "helicopter.js",
+          "sha256": "5cc6e261a1e6272a810ed2b07b9e0dc51a0a7dbe9be1a75ef248a444716dc38b"
+        },
+        {
+          "path": "tilt-controls.js",
+          "sha256": "6eafbb332a12712f34e9dd92bae8827fc2b862dbcb1c3aa96377ef2675770055"
+        },
+        {
+          "path": "gamepad-controls.js",
+          "sha256": "f60e1e7d60677e57dfce7fe0e7a844709e2097998ccbdbf43564c61db394bc07"
+        },
+        {
+          "path": "vehicle-boost.js",
+          "sha256": "e148c6d38e65b207b63a81976952c8cb28434ed30f95eab3436999a6314bea91"
+        },
+        {
+          "path": "boost-meter.js",
+          "sha256": "3bc0a3ce9a0f7411daa78cb803b0ea1747848e063db140fd46330eaabda4581a"
+        },
+        {
+          "path": "auto-mode.js",
+          "sha256": "d97c6bb84239a563381924f1ee04f849d7b2a589ee4f48bca6fc6666b599b21d"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "vehicle-tuning.js",
+          "sha256": "94a1079e12f90d2d8f025e4fa31c3df11bb2752facb4f047402d921a6e307d4f"
+        },
+        {
+          "path": "vehicle-contact-shadow.js",
+          "sha256": "ddda8bf366f43229b4d6a07ce554198171fcebcfc62d20772aff6135dd7f6273"
+        },
+        {
+          "path": "driving-data.js",
+          "sha256": "bf0f8d28cd4788e3b42ef49ff09afeac61b3f0a8f68646c27ea01af606ca454f"
+        },
+        {
+          "path": "npc-traffic.js",
+          "sha256": "a5d851e257de5d52b94c567cc971144b6ed4ee9c4ca41435c733083991a53e7f"
+        },
+        {
+          "path": "traffic-simulation.js",
+          "sha256": "e261033f9e1fc5c6374e4b3c329d40e8ccaa195adb9b761f4531f5cf6d592d16"
+        },
+        {
+          "path": "supercar-model.js",
+          "sha256": "73c4db558b2feb534ddc98cad4af1b4d34ef3c15803f96ac867e147617e145e3"
+        },
+        {
+          "path": "vehicle-models.js",
+          "sha256": "2771ed04f12e34dbd108b043f15ab5590628e03cc7c220e550f8d810a156c909"
+        },
+        {
+          "path": "street-detail.js",
+          "sha256": "2f9e9c9e07d7fb8a3253b01a0d19afa71257a07e6070b98ff071063178b8eed0"
+        },
+        {
+          "path": "auto-roads.js",
+          "sha256": "88976fc0c2e818c44550c44985a679ddc776e1a6cc5c73adc4e37acfe7bb34d4"
+        },
+        {
+          "path": "auto-physics.js",
+          "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+        },
+        {
+          "path": "auto-roam-physics.js",
+          "sha256": "18d5632dc8e7deb2af949438a47efcf163a81d5281d1a22feeecfa62fe6853a3"
+        },
+        {
+          "path": "auto-world.js",
+          "sha256": "d221dadc082f1309a5f69629b3d8463ae520eda1fefe98013a9a0de9f5cdade4"
+        },
+        {
+          "path": "cycle-model.js",
+          "sha256": "898b2b018d80fececce6b5df0f9c397897ca68834687920562d300acc5165f5f"
+        },
+        {
+          "path": "vidhana-streets.js",
+          "sha256": "f556f290403d27a34e69cd769e0156d4d12a675b8ba808ae2757c36b9c5a030e"
+        },
+        {
+          "path": "vidhana-street-data.json",
+          "sha256": "1c9ba4ec205e14db003566c84527f59fbb1e31af99a8ddcc1587f5a8056d45be"
+        },
+        {
+          "path": "auto-model.js",
+          "sha256": "6733f0dd27b8326a7bc3990ea620ada9f5bb40a98eb71588aaff9d1e5ee48fc9"
+        },
+        {
+          "path": "district-data.json",
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "vidhana-road-network.json",
+          "sha256": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+        },
+        {
+          "path": "assets/vehicles/cybertruck.glb",
+          "sha256": "e6ad2ff4ffc3b4ee4de73600f28eb264e2fc3b3fac65f31ebb0d4f50cda4fc05"
+        },
+        {
+          "path": "assets/vehicles/cybercab-rigged.glb",
+          "sha256": "d22c94990893c5d807248cb7717ac643fccf2d532ad55519f57f3f8de65bbc1a"
+        },
+        {
+          "path": "assets/vehicles/kitt.glb",
+          "sha256": "b4247a09d36ec41fa1a550374d50e11d7006a124cafc03cc8decc4a83cc4393d"
+        },
+        {
+          "path": "street-patch.js",
+          "sha256": "18580abfc4b45a04391f4467d348b6e739cfea597ecc8cd9296b212786e9e190"
+        },
+        {
+          "path": "auto-asset.js",
+          "sha256": "381742c66e96de562e7f3172ec5b99dc95df0f3648e8c7ac7c25e003b53a5e15"
+        },
+        {
+          "path": "street-surface-materials.js",
+          "sha256": "708cefca52a812e5d0f94f12e45f5c3ed75b1753f0699d49f5df8818991637cd"
+        },
+        {
+          "path": "assets/auto/auto-rickshaw.glb",
+          "sha256": "1382e9c81589dbda33c17b62a0b90d6d766acb910fa6d1362b589ed9805f9e67"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.json",
+          "sha256": "e48b5a7ec802b0c98314425575ca5853bae284d7506be19fc3c8b4d293807150"
+        },
+        {
+          "path": "assets/streets/vidhana-ground.json",
+          "sha256": "685b8201706df9fae34f4dbff814a2b109c71eb9dcc528645077fb10ba2a801f"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.glb",
+          "sha256": "d81156a07079bbcd844b01d2f9bc9287725e1e9526178b73b99f61f086f676e0"
+        },
+        {
+          "path": "street-furniture.js",
+          "sha256": "145d43442d77dc013c9fa930a2fbfcb44ba5677ebfda14b09bcf18cb23bbc79c"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "multiplayer-render.js",
+          "sha256": "fe9adc39f4bea36d63ebb07a48ac4882371a0419260c44436e9a9e322968ddb8"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "assets/vehicles/cybercab-meshy-traffic.glb",
+          "sha256": "1a412a23d19b0aca4da0f38cee6ad16c1537776edb5cca7187e7f3c55b2376ec"
+        }
+      ]
+    }
+  ],
+  "completed": true,
+  "scope": "Classified500m before versus repaired500m after, source-generated flat roads clipped per footprint; base-map transportation and district shadow receiver remain shared; no auto-mode or route qualification"
+}

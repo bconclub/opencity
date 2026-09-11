@@ -1,0 +1,30 @@
+{
+  "sourceSHA256": "253e796773dce6be36291b2715a86d38f80177ecc867ae68e06b1b12af3d424a",
+  "repairSHA256": "6116f9b18ccd7f006093fe54f968c721e58a62631cecfbab09b07a0fe3554774",
+  "projectionScaleApplied": 1,
+  "repairAppends": 1,
+  "baselinePreserved": {
+    "vidhana-streets.glb": "8ebe5680a10f8a590fab7ffda69b8d5a4ba1a99ab7a049d981a9f580b1b72c73",
+    "vidhana-streets.json": "9c420bde6f1b9af49e78fbabff272ab3b57a156e65f5c93766b965c6ff3c8718",
+    "vidhana-ground.json": "6a26aba9c1bc9c70ad208d4968d3f43780c9d1a5e878931a84a412c445150f9a",
+    "vidhana-footprint.geojson": "03676f34203016d70b73f7f883d72e8c6897b171e21c28af7cc6035589a7284d"
+  },
+  "output": {
+    "vidhana-streets.glb": {
+      "bytes": 983456,
+      "sha256": "d81156a07079bbcd844b01d2f9bc9287725e1e9526178b73b99f61f086f676e0"
+    },
+    "vidhana-streets.json": {
+      "bytes": 858,
+      "sha256": "e48b5a7ec802b0c98314425575ca5853bae284d7506be19fc3c8b4d293807150"
+    },
+    "vidhana-ground.json": {
+      "bytes": 1151437,
+      "sha256": "685b8201706df9fae34f4dbff814a2b109c71eb9dcc528645077fb10ba2a801f"
+    },
+    "vidhana-footprint.geojson": {
+      "bytes": 2205585,
+      "sha256": "04ebee30ab7b0e2765851f8b3cccbfa8aa7f059ce91d2bf6f646880f46ac5a71"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "baselineSurfaceSHA256": "ef386e364bbccd76b917aae5fef932ee11eaad7e3e10864e4894f33984994889",
+  "baselineFootprintSHA256": "03676f34203016d70b73f7f883d72e8c6897b171e21c28af7cc6035589a7284d",
+  "candidateFootprintSHA256": "04ebee30ab7b0e2765851f8b3cccbfa8aa7f059ce91d2bf6f646880f46ac5a71",
+  "changedFeatureIndices": [
+    417,
+    418,
+    419,
+    420,
+    1198,
+    1199
+  ],
+  "legacyProbeBefore": [
+    {
+      "index": 417,
+      "properties": {
+        "kind": "road",
+        "osm": "way/52057928",
+        "name": "",
+        "surface": "unknown",
+        "width": 4,
+        "widthEstimated": true,
+        "lanes": 0,
+        "note": "",
+        "oneway": "yes"
+      }
+    },
+    {
+      "index": 1198,
+      "properties": {
+        "kind": "road",
+        "osm": "way/1091198031",
+        "name": "",
+        "surface": "asphalt",
+        "width": 6.4,
+        "widthEstimated": true,
+        "lanes": 2,
+        "note": "Vehicular Traffic Allowed only between - 8AM to 9PM from Monday to Saturday. Sunday Vehicles not permitted.",
+        "oneway": "yes"
+      }
+    }
+  ],
+  "legacyProbeAfter": [],
+  "baselineClippingProvenance": {
+    "productionUnchanged": true,
+    "productionSHA256": {
+      "vidhana-street-data.json": "3a3af6a93af78dd5d601efa0dea4a172c4e068f6e9c525ad2184519101acebf6",
+      "vidhana-road-network.json": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+    },
+    "candidateFootprintSHA256": "03676f34203016d70b73f7f883d72e8c6897b171e21c28af7cc6035589a7284d",
+    "zebraLocations": 21,
+    "zebraPolygons": 165,
+    "note": "Browser preview intercepts surfaces only. New motor graph is isolated pending junction and boundary checks."
+  },
+  "ownershipLimit": "Only source-generated road/footpath/lane surfaces are subtracted. Base-map transportation lines and common district shadow receiver remain unchanged. Auto-mode surfaces are never activated. Scene is not proof of surveyed kerb or external map-tile ownership."
+}
