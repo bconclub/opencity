@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "triangles": 18,
+  "float32RegionDifferenceM2": 7.496495355012772e-05,
+  "maxHeight": 0.0,
+  "newGroundTriangles": 0
+}

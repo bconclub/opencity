@@ -1,0 +1,44 @@
+{
+  "recommended": true,
+  "areaM2": 7.504034460766528,
+  "triangles": 18,
+  "changedFeatures": [
+    {
+      "index": 417,
+      "osm": "way/52057928",
+      "areaM2": 1.170553006519241
+    },
+    {
+      "index": 1198,
+      "osm": "way/1091198031",
+      "areaM2": 5.095831959526913
+    },
+    {
+      "index": 1199,
+      "osm": "way/1091198031",
+      "areaM2": 2.4253815742997578
+    }
+  ],
+  "sourceTags": {
+    "access": "permissive",
+    "bicycle": "no",
+    "bicycle:conditional": "yes @ (Mo-Su 08:00-21:00)",
+    "cycleway": "no",
+    "foot": "yes",
+    "highway": "unclassified",
+    "junction": "circular",
+    "lanes": "2",
+    "maxspeed": "25",
+    "motor_vehicle:conditional": "yes @ (Mo-Sa 08:00-21:00)",
+    "note": "Vehicular Traffic Allowed only between - 8AM to 9PM from Monday to Saturday. Sunday Vehicles not permitted.",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  },
+  "coverageSymmetricDifferenceM2": 7.456720416992668e-15,
+  "overlapNativeGroundM2": 6.086715823428805e-14,
+  "groundIndexChanged": false,
+  "nativeKerbsChanged": false,
+  "unknownSurfaceOutsideCircleUnchanged": true,
+  "visualTestPending": true
+}
