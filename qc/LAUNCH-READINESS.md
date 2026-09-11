@@ -16,7 +16,7 @@ verified production version remains 0.0.30.
 | 500 m street coverage | Classified candidate passes ground/material CPU tests and loads in full scene | 7 batches, 11,629 triangles, 983,036-byte GLB plus ground sidecar. Corrected projection scale, sign-top grounding and concrete ownership. One 0.826 m junction gap and road speckling remain. Keep isolated. |
 | Source road routing | Generator safeguards tested; production graph unchanged | `street-500-route-audit.md`; private/conditional/raised routes withheld, source identities retained. 2,191 eligible samples, one gap; boundary handoffs need source verification. |
 | Ambient traffic cornering | Integrated and review-pushed in `4e4a19a` | `npc-curve-candidate-review.md`; advance braking reduces the reproduced bend entry from 7 to 1.93 m/s. Six fleet scenarios and actual-runtime soak pass without overlaps; ordinary maximum queue wait increases from 34.45 to 40 s. |
-| Ambient traffic wheels | Still fused/static; separate from animated player wheels | `npc-wheel-animation-audit.md`; existing traffic LOD has no wheel pivots. A separated 6,000-triangle target is proposed, not yet exported or accepted. |
+| Ambient traffic wheels | Still fused/static; separate from animated player wheels | `npc-wheel-animation-audit.md`; Blender exported a separated 5,996-triangle candidate with four pivots and unchanged image payloads. Root rejected visible windshield/body degradation. Existing runtime asset retained. |
 | Pale road speckling | Coverage filtering integrated into accepted small patch, locally verified | `street-coverage-report.md`; four batches unchanged, near geometry retained. Relative frame time -5.31% aerial / +4.60% near. Missing-atlas fallback and reload pass; no moving-camera or physical-phone claim. |
 | Historical pedestrian lamp | Model study only | `frontage-placement-assessment.md`; none of 37 mapped lamp nodes can be confidently assigned that fixture from available photos. |
 | Auto driver | Source audited, unsuitable as realistic driver | `auto-driver-source-audit.md`; supplied character is seated astronaut, current auto remains empty. |
@@ -25,8 +25,8 @@ verified production version remains 0.0.30.
 | Production release | Pending | Vercel authentication expired. Automatic approval review has also blocked the latest review-branch push; explicit approval is pending. |
 
 Latest verified pushed code/audit head: `d170f22` on `codex/release-0.0.31`.
-The accepted shader is committed locally as `334a146`; local evidence continues
-through `3bc0d85`. The attempted upload of these 43 prepared source, model-review
+The accepted shader is committed locally as `334a146`; the facade correction is
+committed locally as `14d7fbf`. The attempted upload through `3bc0d85` of 43 prepared source, model-review
 and QC files to the same review branch was rejected twice by automatic approval
 review, including after destination and file checks. The reviewer requires explicit
 approval for this exact repository upload. An approval request covering through
@@ -53,8 +53,8 @@ committed as `628bbad`; NPC corner braking is `4e4a19a`. These commits are pushe
 for review, not deployed. `release-31-staging-final.json` confirms all 108 staged
 runtime files match after corner braking, the accepted shader and facade correction;
 those three modules differ from the previous complete staging audit. The receipt
-records the prior committed base while the newly integrated facade change awaits
-its local commit.
+records the prior committed base; the integrated facade change is now committed
+as `14d7fbf`.
 
 No claim that the full 500 m district, every vehicle, all junctions, or launch
 quality is complete. Payments, city-wide expansion and engine migration remain

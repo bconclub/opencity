@@ -1,0 +1,21 @@
+{
+  "status": "PASS_RUNTIME_RIG_CPU",
+  "names": [
+    "Wheel_FL",
+    "Wheel_FR",
+    "Wheel_RL",
+    "Wheel_RR"
+  ],
+  "wheelRadius": 0.3650000212076834,
+  "wheelbase": 2.771999955177307,
+  "track": 1.559999942779541,
+  "pivotDriftMetres": 0,
+  "steeringRadians": {
+    "FL": -0.31967383337364086,
+    "FR": -0.38636652803073834,
+    "RL": 0,
+    "RR": 0
+  },
+  "reset": true,
+  "limitation": "No WebGL, CPU placeholder textures; actual runtime rig function and cached Three169."
+}
