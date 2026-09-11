@@ -1,0 +1,119 @@
+[
+  {
+    "variant": "accepted-baseline",
+    "hidden": [],
+    "patch": {
+      "ready": true,
+      "visible": true,
+      "origin": [
+        77.5907159,
+        12.9797946
+      ],
+      "bounds": [
+        77.5887816777979,
+        12.977819540905388,
+        77.5926831432082,
+        12.981769855276205
+      ],
+      "meshes": 4,
+      "triangles": 2130,
+      "indexedTriangles": 1416,
+      "indexCells": 930,
+      "groundIndexSource": "mesh",
+      "groundIndexURL": null,
+      "frames": 13,
+      "drawCalls": 4,
+      "renderedTriangles": 2130,
+      "surfaceTextures": 2,
+      "textureSize": 256,
+      "repeatMetres": 2,
+      "geometryAdded": 0,
+      "originalProceduralTextures": true
+    },
+    "materialRoles": [
+      "marking",
+      "concrete",
+      "paving",
+      "asphalt"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "accepted-markings-red",
+    "hidden": [],
+    "patch": {
+      "ready": true,
+      "visible": true,
+      "origin": [
+        77.5907159,
+        12.9797946
+      ],
+      "bounds": [
+        77.5887816777979,
+        12.977819540905388,
+        77.5926831432082,
+        12.981769855276205
+      ],
+      "meshes": 4,
+      "triangles": 2130,
+      "indexedTriangles": 1416,
+      "indexCells": 930,
+      "groundIndexSource": "mesh",
+      "groundIndexURL": null,
+      "frames": 24,
+      "drawCalls": 4,
+      "renderedTriangles": 2130,
+      "surfaceTextures": 2,
+      "textureSize": 256,
+      "repeatMetres": 2,
+      "geometryAdded": 0,
+      "originalProceduralTextures": true
+    },
+    "materialRoles": [
+      "marking",
+      "concrete",
+      "paving",
+      "asphalt"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "accepted-markings-hidden",
+    "hidden": [],
+    "patch": {
+      "ready": true,
+      "visible": true,
+      "origin": [
+        77.5907159,
+        12.9797946
+      ],
+      "bounds": [
+        77.5887816777979,
+        12.977819540905388,
+        77.5926831432082,
+        12.981769855276205
+      ],
+      "meshes": 4,
+      "triangles": 2130,
+      "indexedTriangles": 1416,
+      "indexCells": 930,
+      "groundIndexSource": "mesh",
+      "groundIndexURL": null,
+      "frames": 32,
+      "drawCalls": 4,
+      "renderedTriangles": 2130,
+      "surfaceTextures": 2,
+      "textureSize": 256,
+      "repeatMetres": 2,
+      "geometryAdded": 0,
+      "originalProceduralTextures": true
+    },
+    "materialRoles": [
+      "marking",
+      "concrete",
+      "paving",
+      "asphalt"
+    ],
+    "errors": []
+  }
+]
