@@ -1,0 +1,17 @@
+{
+  "reviewOnly": true,
+  "baseline": {
+    "path": "district.js",
+    "sha256": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b"
+  },
+  "candidate": {
+    "path": "qc/landmark-focus-district-candidate.js",
+    "sha256": "565e31b655e14a3962d0b6118bd256440cb1478dd0eff7b1296bd6fda1b4e668"
+  },
+  "helper": {
+    "path": "qc/landmark-focus-candidate.js",
+    "sha256": "a99c7727b1cc4026335b6507acec5c299851bcc6aee99c0d013ff7362490f55f"
+  },
+  "futureRuntimeImport": "landmark-focus.js",
+  "deployment": "Requires helper in preload/cache manifest. No runtime files changed."
+}

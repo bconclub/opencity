@@ -1,0 +1,119 @@
+{
+  "sourceSHA256": "1ec53fe76590c0177390970a788b59c0b220c122320105d0fdea105acac4dad3",
+  "origin": [
+    77.59136000000001,
+    12.97984615
+  ],
+  "sourceNode": "428831252",
+  "sourceWays": [
+    "52057928",
+    "1091198031"
+  ],
+  "measuredCircleCarriagewayWidthM": 7.092066459758045,
+  "measuredServiceWidthM": 3.496095939278281,
+  "widthProvenance": "Native converter cross-sections, not surveyed widths",
+  "interiorMarginM": 0.05,
+  "removedRaisedAreaM2": 5.523477796440159,
+  "changedRaisedTriangles": [
+    {
+      "sourceMesh": 80,
+      "triangle": 0,
+      "removedTopAreaM2": 1.194967629215582,
+      "resultTriangles": 1
+    },
+    {
+      "sourceMesh": 80,
+      "triangle": 1,
+      "removedTopAreaM2": 3.277144460981649,
+      "resultTriangles": 2
+    },
+    {
+      "sourceMesh": 80,
+      "triangle": 6,
+      "removedTopAreaM2": 0.6957079350595956,
+      "resultTriangles": 4
+    },
+    {
+      "sourceMesh": 80,
+      "triangle": 9,
+      "removedTopAreaM2": 0,
+      "resultTriangles": 2
+    },
+    {
+      "sourceMesh": 80,
+      "triangle": 32,
+      "removedTopAreaM2": 0,
+      "resultTriangles": 2
+    },
+    {
+      "sourceMesh": 80,
+      "triangle": 44,
+      "removedTopAreaM2": 0,
+      "resultTriangles": 2
+    },
+    {
+      "sourceMesh": 80,
+      "triangle": 46,
+      "removedTopAreaM2": 0,
+      "resultTriangles": 2
+    },
+    {
+      "sourceMesh": 81,
+      "triangle": 0,
+      "removedTopAreaM2": 0.11856133993377571,
+      "resultTriangles": 1
+    },
+    {
+      "sourceMesh": 81,
+      "triangle": 1,
+      "removedTopAreaM2": 0.6233737634323475,
+      "resultTriangles": 3
+    },
+    {
+      "sourceMesh": 81,
+      "triangle": 3,
+      "removedTopAreaM2": 0,
+      "resultTriangles": 2
+    },
+    {
+      "sourceMesh": 81,
+      "triangle": 4,
+      "removedTopAreaM2": 0.25442438555543534,
+      "resultTriangles": 3
+    },
+    {
+      "sourceMesh": 81,
+      "triangle": 5,
+      "removedTopAreaM2": 0.5834900483622008,
+      "resultTriangles": 3
+    },
+    {
+      "sourceMesh": 81,
+      "triangle": 6,
+      "removedTopAreaM2": 0,
+      "resultTriangles": 3
+    },
+    {
+      "sourceMesh": 81,
+      "triangle": 7,
+      "removedTopAreaM2": 0,
+      "resultTriangles": 3
+    },
+    {
+      "sourceMesh": 81,
+      "triangle": 30,
+      "removedTopAreaM2": 0,
+      "resultTriangles": 2
+    }
+  ],
+  "oldFirstMarkingAreaM2": 0.6980511569544097,
+  "newFirstMarkingAreaM2": 0.8591817910460746,
+  "coverageDifferenceM2": 0.0,
+  "exteriorRaisedDifferenceM2": 3.8797774138325516e-14,
+  "mappedIsland338941369OverlapM2": 0,
+  "mappedIsland338941369DistanceM": 634.7563373763551,
+  "mappedGarden38318887OverlapM2": 0,
+  "newGroundAreaAddedM2": 0.0,
+  "conditionalAccessUnchanged": true,
+  "runtimePromoted": false
+}

@@ -1,0 +1,18 @@
+{
+  "vidhana-footprint.geojson": {
+    "bytes": 2209394,
+    "sha256": "d16c4ea7436c3ab3957203dcf945ae25f2694a3cc90b33cbd8f2b505dd1a7e94"
+  },
+  "vidhana-ground.json": {
+    "bytes": 1153955,
+    "sha256": "adf4bbb84f7244386514f22ecfe2a883dcdafe6ca8fe518287d1b48f26750723"
+  },
+  "vidhana-streets.glb": {
+    "bytes": 985472,
+    "sha256": "8eac82a3acc76fd2836a83cdd6327a3a8edd9207518fb6e11bded4bacdef4c4d"
+  },
+  "vidhana-streets.json": {
+    "bytes": 858,
+    "sha256": "3910cb95065caff601abd7a539f5b336f0023cc272beec0d4bf3ecee7508315f"
+  }
+}

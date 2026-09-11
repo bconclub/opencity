@@ -1,0 +1,312 @@
+{
+  "passed": true,
+  "baseline": {
+    "draws": 12,
+    "triangles": 53793,
+    "domes": 7,
+    "parts": 74
+  },
+  "candidate": {
+    "draws": 11,
+    "triangles": 69391,
+    "domes": 7,
+    "parts": 74
+  },
+  "otherLandmarks": {
+    "draws": 6,
+    "triangles": 761,
+    "domes": 0,
+    "parts": 27
+  },
+  "selectedVidhana": {
+    "draws": 5,
+    "triangles": 68630,
+    "domes": 7,
+    "parts": 47
+  },
+  "triangleDelta": 15598,
+  "drawDelta": -1,
+  "geometry": "Exact ordered position/normal concatenation; other landmarks unmodified; compatible materials only; measurement instrumentation exact-equal to original dome revision2 builder",
+  "architecture": {
+    "columnCount": 12,
+    "columnHeight": 12.192,
+    "steps": 45,
+    "stairWidth": 62.1792,
+    "stairDepth": 21.336,
+    "landingZ": 6.75,
+    "canopyBottom": 18.942,
+    "canopyTop": 20.742,
+    "wingRoofZ": 19.3548,
+    "centralWingRoofZ": 34.1376,
+    "centralDomeTopZ": 45.72,
+    "northSouthGradeDifference": 3.048,
+    "datum": "Estimated north-side ground datum shared across flat review ground; south cellar/terrain unresolved",
+    "columns": 12,
+    "columnCenters": [
+      [
+        -383.0343123969441,
+        421.7128602499882
+      ],
+      [
+        -377.5250076274866,
+        416.1698199999852
+      ],
+      [
+        -375.72427990570964,
+        414.3921787499746
+      ],
+      [
+        -373.92762009289385,
+        416.23661199997474
+      ],
+      [
+        -371.53162168584674,
+        418.7260054999853
+      ],
+      [
+        -368.9674830398676,
+        421.2738419999743
+      ],
+      [
+        -366.48809249805294,
+        423.7319267499899
+      ],
+      [
+        -364.25955634533585,
+        426.0960852499705
+      ],
+      [
+        -362.2445854156914,
+        428.26752099997304
+      ],
+      [
+        -360.5699628730653,
+        429.91296974997135
+      ],
+      [
+        -362.51510136470483,
+        431.77131799996107
+      ],
+      [
+        -367.7667718969241,
+        436.88090599997827
+      ]
+    ],
+    "stairPlacement": {
+      "tangent": [
+        0.6993356406560726,
+        0.7147934398888677
+      ],
+      "outward": [
+        0.7147934398888677,
+        -0.6993356406560726
+      ],
+      "centerAlong": 44.23852194037802,
+      "topV": -556.1249967450274,
+      "bottomV": -534.7889967450274,
+      "landingRearV": -571.832961257508,
+      "topWidth": 29.34384792119843,
+      "estimated": true
+    },
+    "foyer": {
+      "backV": -571.832961257508,
+      "width": 25.34384792119843,
+      "entryWidth": 5.2,
+      "entryHeight": 6.8,
+      "recessDepth": 0.35,
+      "baseZ": 6.75,
+      "topZ": 18.942,
+      "estimated": true
+    },
+    "reviewOnly": true,
+    "domeUpdate": {
+      "drumBase": 19.3548,
+      "lowerCourseTop": 21.65,
+      "galleryTop": 25.6,
+      "corniceTop": 28.1,
+      "crownSpringline": 31.4,
+      "crownTop": 38,
+      "collarTop": 39.8,
+      "publishedOverallTop": 45.72,
+      "publishedDiameter": 18.288,
+      "intermediateHeightsEstimated": true,
+      "missingTop": "Upper pedestal and lion emblem not reconstructed; do not equate collar summit with published overall height",
+      "mappedCenter": [
+        -384.44994473226075,
+        438.2835379999568
+      ],
+      "mappedDiameter": [
+        18.061516004242833,
+        18.0672360001426
+      ],
+      "drumCorners": 8,
+      "bays": 24,
+      "brackets": 24,
+      "addedTriangles": 6246,
+      "revision": 2,
+      "galleryOpeningHeight": 1.22,
+      "lowerPilasters": 24,
+      "railingBalusters": 32,
+      "otherSixDomesUnchanged": true,
+      "coreRemoved": true,
+      "reviewOnly": true
+    },
+    "actualCentralTopZ": 39.8,
+    "publishedOverallTopZ": 45.72,
+    "upperPedestalAndEmblemMissing": true
+  },
+  "displayParts": {
+    "way/363474989": {
+      "base": 22.354799270629883,
+      "height": 27.354799270629883
+    },
+    "way/363474991": {
+      "base": 22.354799270629883,
+      "height": 27.354799270629883
+    },
+    "way/363474993": {
+      "base": 22.354799270629883,
+      "height": 29.354799270629883
+    },
+    "way/363474994": {
+      "base": 22.354799270629883,
+      "height": 29.354799270629883
+    },
+    "way/363474995": {
+      "base": 22.354799270629883,
+      "height": 29.354799270629883
+    },
+    "way/363474997": {
+      "base": 22.354799270629883,
+      "height": 29.354799270629883
+    },
+    "way/363474999": {
+      "base": 19.354799270629883,
+      "height": 22.354799270629883
+    },
+    "way/363475000": {
+      "base": 19.354799270629883,
+      "height": 22.354799270629883
+    },
+    "way/363475001": {
+      "base": 19.354799270629883,
+      "height": 22.354799270629883
+    },
+    "way/363475002": {
+      "base": 19.354799270629883,
+      "height": 22.354799270629883
+    },
+    "way/363475003": {
+      "base": 19.354799270629883,
+      "height": 22.354799270629883
+    },
+    "way/363475004": {
+      "base": 19.354799270629883,
+      "height": 22.354799270629883
+    },
+    "way/371511888": {
+      "base": 22.354799270629883,
+      "height": 23.354799270629883
+    },
+    "way/371511889": {
+      "base": 19.354799270629883,
+      "height": 22.354799270629883
+    },
+    "way/371511890": {
+      "base": 19.354799270629883,
+      "height": 20.354799270629883
+    },
+    "way/371511891": {
+      "base": 19.354799270629883,
+      "height": 20.354799270629883
+    },
+    "way/372683865": {
+      "base": 0.5161280035972595,
+      "height": 0.8387079834938049
+    },
+    "way/372683866": {
+      "base": 0,
+      "height": 0.5161280035972595
+    },
+    "relation/5284317": {
+      "base": 0,
+      "height": 19.354799270629883
+    },
+    "relation/5518183": null,
+    "relation/5518184": {
+      "base": 6.75,
+      "height": 18.942001342773438
+    },
+    "relation/5519270": {
+      "base": 0,
+      "height": 20.742000579833984
+    },
+    "way/363474998": {
+      "base": 19.354799270629883,
+      "height": 28.100000381469727
+    },
+    "way/371511885": {
+      "base": 28.100000381469727,
+      "height": 39.79999923706055
+    },
+    "way/371511883": null
+  },
+  "siteDisplayBounds": {
+    "min": [
+      -526.5390625,
+      360.21881103515625,
+      0
+    ],
+    "max": [
+      -311.3742980957031,
+      580.32421875,
+      39.79999923706055
+    ]
+  },
+  "extraFocusTargets": [
+    {
+      "id": "vidhana-front-stairs",
+      "name": "Vidhana Soudha entrance stairs",
+      "rings": [
+        [
+          [
+            -376.8375236913543,
+            410.0520411593173
+          ],
+          [
+            -373.0681568489836,
+            383.39576879909504
+          ],
+          [
+            -329.58402618150154,
+            427.8410530566329
+          ],
+          [
+            -356.31632500606867,
+            431.02683115448656
+          ]
+        ]
+      ],
+      "base": 0,
+      "height": 6.75,
+      "note": "Estimated flared stair footprint aligned to mapped canopy; not a driving heightfield. Under-canopy passage remains provisional."
+    }
+  ],
+  "coordinateOrigin": [
+    77.5945,
+    12.9755
+  ],
+  "units": "metres, x east,y north,z up",
+  "bounds": {
+    "min": [
+      -526.5390625,
+      360.21881103515625,
+      0
+    ],
+    "max": [
+      -311.3742980957031,
+      580.32421875,
+      39.79999923706055
+    ]
+  }
+}
