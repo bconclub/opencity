@@ -1,0 +1,32 @@
+{
+  "status": "rejected",
+  "runtimeIntegration": false,
+  "reason": "Actual Intel cumulative AA regression exceeded10%: FullHD45.7/68.43/45.99%;1100x760 close17.6156%.",
+  "note": "Raw downloaded upstream files kept locally; .ts downloads were saved by PowerShell Set-Content, so byte hashes include local newline/encoding conventions. Preserved policy bytes unchanged when moved out of runtime root.",
+  "archives": [
+    {
+      "path": "qc/maplibre-5.7.2-map.ts",
+      "url": "https://raw.githubusercontent.com/maplibre/maplibre-gl-js/v5.7.2/src/ui/map.ts",
+      "bytes": 154018,
+      "sha256": "219a030be961cb3293a9ea7ad4b687ddcb6db68d0347aec6908dc8f319d06b81"
+    },
+    {
+      "path": "qc/maplibre-5.7.2-source-cache.ts",
+      "url": "https://raw.githubusercontent.com/maplibre/maplibre-gl-js/v5.7.2/src/source/source_cache.ts",
+      "bytes": 44593,
+      "sha256": "ae631f2b1727cf8d16c5a1fb60eec0bb46d3261d311fcd5f01ad2945d2111298"
+    },
+    {
+      "path": "qc/maplibre-retained-tiles-upstream.patch",
+      "url": "https://github.com/maplibre/maplibre-gl-js/pull/6388.patch",
+      "bytes": 3645,
+      "sha256": "b3914ea57918e4e17e6e6f48212b02d42749cc22294f51d017440c8ef20c67ac"
+    },
+    {
+      "path": "qc/render-quality-rejected.js",
+      "url": null,
+      "bytes": 3443,
+      "sha256": "2456136bf331f91c794665a88ec138dbb10d6a6a7213cad8a1979b3cc7840e23"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+From b4254f9f809ac0a3ac26da9449811101062dcdc7 Mon Sep 17 00:00:00 2001
+From: Nathan <nathanmolson@gmail.com>
+Date: Wed, 10 Sep 2025 08:49:54 -0700
+Subject: [PATCH 1/3] Add failing unit test demonstrating #5616
+
+---
+ src/source/source_cache.test.ts | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+diff --git a/src/source/source_cache.test.ts b/src/source/source_cache.test.ts
+index 9204913ac98..f5673cbcaf4 100644
+--- a/src/source/source_cache.test.ts
++++ b/src/source/source_cache.test.ts
+@@ -965,6 +965,32 @@ describe('SourceCache._updateRetainedTiles', () => {
+ 
+     });
+ 
++    test('retains overscaled loaded children with coveringZoom < maxzoom', () => {
++        const sourceCache = createSourceCache({maxzoom: 3});
++        sourceCache._source.loadTile = async (tile) => {
++            tile.state = 'errored';
++        };
++
++        const idealTile = new OverscaledTileID(3, 0, 3, 1, 2);
++        sourceCache._tiles[idealTile.key] = new Tile(idealTile, undefined);
++        sourceCache._tiles[idealTile.key].state = 'errored';
++
++        const loadedChildren = [
++            new OverscaledTileID(4, 0, 3, 1, 2)
++        ];
++
++        for (const t of loadedChildren) {
++            sourceCache._tiles[t.key] = new Tile(t, undefined);
++            sourceCache._tiles[t.key].state = 'loaded';
++        }
++
++        const retained = sourceCache._updateRetainedTiles([idealTile], 2);
++        expect(Object.keys(retained).sort()).toEqual([
++            idealTile
++        ].concat(loadedChildren).map(t => t.key).sort());
++
++    });
++
+     test('adds parent tile if ideal tile errors and no child tiles are loaded', () => {
+         const stateCache = {};
+         const sourceCache = createSourceCache();
+
+From db7bbe4da01edeabd002ace3680b0ad74abb1d72 Mon Sep 17 00:00:00 2001
+From: Nathan <nathanmolson@gmail.com>
+Date: Wed, 10 Sep 2025 08:50:53 -0700
+Subject: [PATCH 2/3] fix 5616
+
+---
+ src/source/source_cache.ts | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/src/source/source_cache.ts b/src/source/source_cache.ts
+index df3736591db..2503af0c82d 100644
+--- a/src/source/source_cache.ts
++++ b/src/source/source_cache.ts
+@@ -751,10 +751,14 @@ export class SourceCache extends Evented {
+                 // check if all 4 immediate children are loaded (i.e. the missing ideal tile is covered)
+                 const children = tileID.children(this._source.maxzoom);
+ 
+-                if (retain[children[0].key] &&
++                if (children.length === 4 &&
++                    retain[children[0].key] &&
+                     retain[children[1].key] &&
+                     retain[children[2].key] &&
+                     retain[children[3].key]) continue; // tile is covered by children
++
++                if (children.length === 1 &&
++                    retain[children[0].key]) continue; // tile is covered by overscaled child
+             }
+ 
+             // We couldn't find child tiles that entirely cover the ideal tile; look for parents now.
+
+From 80657faf448e91782d8198a90d8555a3b3bc658d Mon Sep 17 00:00:00 2001
+From: Nathan <nathanmolson@gmail.com>
+Date: Wed, 10 Sep 2025 08:57:18 -0700
+Subject: [PATCH 3/3] update changelog
+
+---
+ CHANGELOG.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 0e316bb0834..29ed6a972bc 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -4,6 +4,7 @@
+ - _...Add new stuff here..._
+ 
+ ### 🐞 Bug fixes
++- Fix `_updateRetainedTiles` checking for children when children length is 1 overscaled tile "child" ([#6388](https://github.com/maplibre/maplibre-gl-js/pull/6388))
+ - _...Add new stuff here..._
+ 
+ ## 5.7.1
+

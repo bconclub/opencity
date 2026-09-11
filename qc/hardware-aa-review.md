@@ -1,5 +1,8 @@
 # Hardware anti-aliasing experiment
 
+**REJECTED FOR RELEASE.** Later cumulative Intel checks failed: FullHD4xAA increased frame time45.7/68.43/45.99%;1100x760 close view increased17.6156%, exceeding10% gate. Root removed app/sw integration. Policy preserved only as `qc/render-quality-rejected.js`; original test receipts and archived source hashes remain unchanged. No AA runtime promotion.
+
+
 2026-09-11. **Passes the requested <=10% delivered-frame-time regression gate on tested Intel UHD Graphics630 / D3D11 hardware.** No runtime changes or deployment. Earlier SwiftShader failure evidence retained unchanged.
 
 ## Controlled result
