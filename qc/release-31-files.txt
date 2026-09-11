@@ -30,10 +30,16 @@ assets/vehicles/kitt-review/validation.json
 auto-mode.js
 blender-vehicle.js
 district.js
+experiments/osm2world/clip-coverage.cjs
 experiments/osm2world/coverage-500/asset/vidhana-footprint.geojson
 experiments/osm2world/coverage-500/asset/vidhana-streets.glb
 experiments/osm2world/coverage-500/asset/vidhana-streets.json
+experiments/osm2world/coverage-500/clip-report.json
+experiments/osm2world/coverage-500/clipped-asset/vidhana-footprint.geojson
+experiments/osm2world/coverage-500/clipped-asset/vidhana-streets.glb
+experiments/osm2world/coverage-500/clipped-asset/vidhana-streets.json
 experiments/osm2world/coverage-500/input.json
+experiments/osm2world/coverage-500/meshes-clipped.json
 experiments/osm2world/coverage-500/meshes.json
 experiments/osm2world/coverage-500/provenance.json
 experiments/osm2world/coverage-500/README.md

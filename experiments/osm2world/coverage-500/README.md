@@ -17,10 +17,11 @@ is fabricated between selected nodes. `provenance.json` maps converter way IDs
 back to original source ways and node ranges. Selection regression tests cover
 these cases and missing node references.
 
-This is **not an exact circular mesh clip**. Adjacent source endpoints and whole
-mapped pedestrian areas extend outside 500 m. Geometry bounds are approximately
-1,226 by 1,041 m. Exact boundary clipping and review of joins at the boundary
-remain required before integration.
+The original conversion under `asset/` is not circularly clipped: neighboring
+source endpoints extend beyond 500 m. The follow-up under `clipped-asset/` clips
+both flat and raised triangles against a 256-sided, inscribed 500 m boundary.
+Its largest boundary inset is 3.8 cm. No emitted source vertex lies beyond 500 m;
+the final GLB uses Float32 positions. Boundary joins still need visual review.
 
 ## Conversion and batching
 
@@ -28,7 +29,8 @@ remain required before integration.
 - Verified input-bounds projection origin: `[77.59136, 12.97984615]`.
   Do not reuse the smaller patch's different origin.
 - Converter: 1,163 meshes / 11,874 triangles, no external texture pack.
-- Prepared candidate: **7 material batches / 11,615 triangles / 981,492 GLB bytes**.
+- Unclipped candidate: 7 batches / 11,615 triangles / 981,492 GLB bytes.
+- Clipped candidate: **7 batches / 11,673 triangles / 986,300 GLB bytes**.
 - Eight duplicate faces removed. Coplanar cleanup removes redundant overlaps
   while preserving the source footprint union (zero area difference).
 - Remaining coplanar cross-material overlap: about `1.1e-12` square metres.
@@ -43,6 +45,8 @@ remain required before integration.
 node experiments/osm2world/verify-select-coverage.cjs
 node experiments/osm2world/coverage-probe.cjs
 node verify-street-patch-build.cjs --source experiments/osm2world/coverage-500/meshes.json --output experiments/osm2world/coverage-500/asset --origin 77.59136,12.97984615
+node experiments/osm2world/clip-coverage.cjs
+node verify-street-patch-build.cjs --source experiments/osm2world/coverage-500/meshes-clipped.json --output experiments/osm2world/coverage-500/clipped-asset --origin 77.59136,12.97984615
 ```
 
 The first conversion capture reports one generic HTTP 404 warning, caused by the
@@ -52,3 +56,8 @@ capture rather than silently deleting its warning.
 
 Map data: OpenStreetMap contributors, ODbL 1.0. OSM2World: MIT, see the existing
 converter provenance and license under `assets/streets/`. Preserve attribution.
+
+The optional preparation flags were also checked against the original small
+patch. Rebuilding that original input into a separate QC directory reproduced
+the accepted runtime GLB byte-for-byte (SHA256
+`87FE720941FC52856FD04F8FFA47F16DF1BD363C56017530AF65E6436A46B0DC`).
