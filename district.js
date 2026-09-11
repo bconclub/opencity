@@ -1,3 +1,6 @@
+let districtArchitecture;
+export function getDistrictArchitecture(){if(!districtArchitecture)throw new Error("City landmarks are not ready for driving");return districtArchitecture;}
+import {buildFocusTargets,findFocusTarget} from './landmark-focus.js';
 import {polygonTouchesCBD} from './cbd-dome.js';
 import {CBD_DOME} from './cbd-boundary.js';
 import {installVehicleEnvironment} from './vehicle-environment.js';
@@ -90,6 +93,7 @@ export async function installDistrict(map){
  const box=new T.BoxGeometry(1,1,1).toNonIndexed().getAttribute('position');
  function addBox(x,y,z,w,d,h,kind=5,angle=0){const c=Math.cos(angle),s=Math.sin(angle),b=buckets[kind];for(let i=0;i<box.count;i++){const px=box.getX(i)*w,py=box.getY(i)*d;b.p.push(x+px*c-py*s,y+px*s+py*c,z+box.getZ(i)*h);b.uv.push(box.getX(i)+.5,box.getY(i)+.5);}}
  // Each building now has one visible owner; no depth-bias workaround is needed.
+ const visibleFocusFeatures=new Set(landmarkData.features);
  const buildingPolygons=[],spatial=new Map(),roads=new Map(),seenBuildings=new Set();let duplicateBuildings=0;
  function index(map,bounds,item){for(let x=Math.floor(bounds[0]/40);x<=Math.floor(bounds[2]/40);x++)for(let y=Math.floor(bounds[1]/40);y<=Math.floor(bounds[3]/40);y++){const key=x+','+y;if(!map.has(key))map.set(key,[]);map.get(key).push(item);}}
  function boundsOf(r){return[Math.min(...r.map(p=>p[0])),Math.min(...r.map(p=>p[1])),Math.max(...r.map(p=>p[0])),Math.max(...r.map(p=>p[1]))];}
@@ -106,6 +110,7 @@ export async function installDistrict(map){
   // reports a 120 m base and a 5 m top). Keep the stated top, use ground as the
   // conservative display base, and expose the count instead of inventing height.
   const base=mappedBase>=0&&mappedBase<height?mappedBase:0;if(base!==mappedBase)invalidElevatedBases++;
+  visibleFocusFeatures.add(feature);
   const kind=materialFor(feature,height,rings);
   for(const [ringIndex,ring]of rings.entries()){
    const signedArea=ring.reduce((sum,a,j)=>{const b=ring[(j+1)%ring.length];return sum+a[0]*b[1]-b[0]*a[1];},0);const flip=ringIndex===0?signedArea<0:signedArea>0;
@@ -131,7 +136,7 @@ export async function installDistrict(map){
   if((roads.get(cell)||[]).some(r=>distanceSegment([x,y],r)<r.clearance))continue;
   const key=Math.floor(x/9)+','+Math.floor(y/9);if(treeGrid.has(key))continue;treeGrid.add(key);treePositions.push({x,y,r:3+rand()*2.8,h:6+rand()*7});if(treePositions.length>=2800)break;
  }}
- const structure=new T.Group(),vegetation=new T.Group();scene.add(structure,vegetation);const landmarks=landmarkModule.buildLandmarks(T,landmarkData,xy);structure.add(landmarks.group);
+ const structure=new T.Group(),vegetation=new T.Group();scene.add(structure,vegetation);const landmarks=landmarkModule.buildLandmarks(T,landmarkData,xy);districtArchitecture=landmarks.architecture;structure.add(landmarks.group);
  for(let i=0;i<buckets.length;i++){const b=buckets[i];if(!b.p.length)continue;const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(b.p,3));g.setAttribute('uv',new T.Float32BufferAttribute(b.uv,2));g.computeVertexNormals();g.computeBoundingSphere();const mesh=new T.Mesh(g,materials[i]);mesh.castShadow=mesh.receiveShadow=true;mesh.frustumCulled=false;structure.add(mesh);}
  const trunk=new T.InstancedMesh(new T.CylinderGeometry(.3,.55,1,6),new T.MeshStandardMaterial({color:0x665341,roughness:1}),treePositions.length);
  const crowns=new T.InstancedMesh(new T.IcosahedronGeometry(1,0),new T.MeshStandardMaterial({color:0xffffff,roughness:1,flatShading:true}),treePositions.length*2);
@@ -163,7 +168,7 @@ export async function installDistrict(map){
  document.querySelector('#buildings').addEventListener('change',e=>{buildingsVisible=e.target.checked;map.setLayoutProperty('city-buildings','visibility',shown?'none':buildingsVisible?'visible':'none');context.setVisible(shown&&buildingsVisible);map.setLayoutProperty('district-pick','visibility',shown&&buildingsVisible?'visible':'none');renderer.shadowMap.needsUpdate=true;map.triggerRepaint();});
  document.querySelector('#nature').addEventListener('change',e=>{treesVisible=e.target.checked;renderer.shadowMap.needsUpdate=true;map.triggerRepaint();});
  map.on('move',visibility);map.on('click','district-pick',e=>{const f=e.features?.[0];if(!f)return;document.querySelector('#building-name').textContent=f.properties.name||'Mapped building · illustrative facade';document.querySelector('#building-height').textContent=`Display height: ${Math.max(3,Number(f.properties.render_height)||8)} m (schematic)`;document.querySelector('#inspector').hidden=false;});
- const pickTargets=[...data.features.filter(f=>f.properties._layer==='building'),...landmarkData.features].map((f,i)=>({id:'building-'+i,properties:f.properties,rings:f.geometry.coordinates.map(r=>r.map(xy))}));
+ const pickTargets=buildFocusTargets([...data.features.filter(f=>f.properties._layer==='building'),...landmarkData.features],xy,landmarks,visibleFocusFeatures);
  const raycaster=new T.Raycaster(),inverse=new T.Matrix4();
  window.pickDistrictFocus=()=>{
   if(!shown||!buildingsVisible)return null;
@@ -172,9 +177,9 @@ export async function installDistrict(map){
   raycaster.set(near,far.sub(near).normalize());
   const hit=raycaster.intersectObject(structure,true)[0];if(!hit)return null;
   const point=[hit.point.x,hit.point.y],z=hit.point.z;
-  const candidates=pickTargets.filter(f=>{const top=Number(f.properties.height??f.properties.render_height)||8,mappedBase=Number(f.properties.min_height??f.properties.render_min_height)||0,base=mappedBase>=0&&mappedBase<top?mappedBase:0;return inPoly(point,f.rings)&&z>=base-1&&z<=top+2;});
-  candidates.sort((a,b)=>area(a.rings[0])-area(b.rings[0]));const target=candidates[0];if(!target)return null;
-  const p=target.properties;return{id:target.id,name:p.name||p.site||'Unnamed mapped building',height:Number(p.height??p.render_height)||8,source:'OpenStreetMap',note:'Model height is schematic',lng:origin[0]+point[0]/(metres*cos),lat:origin[1]+point[1]/metres};
+  const target=findFocusTarget(pickTargets,point,z,inPoly,area);
+  if(!target)return null;
+  return{id:target.id,name:target.name,height:target.height,source:target.source,note:target.note,lng:origin[0]+point[0]/(metres*cos),lat:origin[1]+point[1]/metres};
  };
  renderer.compile(scene,camera);
  visibility();map.triggerRepaint();window.districtState=()=>({loaded:true,landmarkParts:landmarks.parts,landmarkDomes:landmarks.domes,replacedParts,mappedColorBuildings,enabled,shown,buildings:buildingPolygons.length,trees:treePositions.length,roofDetails,duplicateBuildings,invalidElevatedBases,contextBuildings:context.count,drawGroups:structure.children.length+2,facadeAtlasSize:512,facadeVariants:16,materialDetail:'packed roughness and baked recess shading; illustrative facades'});

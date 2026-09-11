@@ -1,3 +1,4 @@
+import {publicTrafficFeature} from './vidhana-building-passage.js';
 import {chooseDetailedCars,npcWheelPose} from './npc-detail-state.js';
 import {createDetailedTraffic} from './npc-detailed-batches.js';
 import {setMapSceneCamera} from './map-scene-camera.js';
@@ -7,7 +8,7 @@ import {loadDrivingData} from './driving-data.js';
 import {installVehicleEnvironment} from './vehicle-environment.js';
 import {advanceTrafficRoute,routeState,tickTraffic,mappedControls,vehicleContact,retainTrafficLoops,applyTrafficDirections,trafficSpawnSafe} from './traffic-simulation.js';
 import {buildRoadGraph,toLocal,toLngLat} from './auto-roads.js';
-export function cbdRoadGraph(data){return applyTrafficDirections(buildRoadGraph({...data,features:data.features.filter(f=>f.geometry.type==='LineString'&&f.geometry.coordinates.every(p=>{const q=toLocal(p);return(q[0]/900)**2+(q[1]/930)**2<1;}))}),data);}
+export function cbdRoadGraph(data){return applyTrafficDirections(buildRoadGraph({...data,features:data.features.filter(f=>publicTrafficFeature(f)&&f.geometry.type==='LineString'&&f.geometry.coordinates.every(p=>{const q=toLocal(p);return(q[0]/900)**2+(q[1]/930)**2<1;}))}),data);}
 export function nearestRoute(graph,p){let best,dist=Infinity;graph.edges.forEach((e,i)=>{if(!graph.connected.has(e.a))return;const a=graph.nodes[e.a].p,b=graph.nodes[e.b].p,dx=b[0]-a[0],dy=b[1]-a[1],t=Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/(e.length*e.length)));const d=Math.hypot(p[0]-a[0]-dx*t,p[1]-a[1]-dy*t);if(d<dist){dist=d;const from=e.allowedFrom??e.a;best={edge:i,from,to:from===e.a?e.b:e.a,progress:e.length*(from===e.a?t:1-t),ended:false};}});return {path:best,distance:dist};}
 export function stepRoute(graph,path,metres){return advanceTrafficRoute(graph,path,metres);}
 export async function installTraffic(map){
