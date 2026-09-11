@@ -1,0 +1,85 @@
+{
+  "states": [
+    {
+      "mode": "baseline",
+      "bias": -0.0004,
+      "normalBias": 1.2,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 1,
+        "far": 5000,
+        "left": -1900,
+        "right": 1900
+      },
+      "landmarkReceive": true
+    },
+    {
+      "mode": "landmark-no-receive",
+      "bias": -0.0004,
+      "normalBias": 1.2,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 1,
+        "far": 5000,
+        "left": -1900,
+        "right": 1900
+      },
+      "landmarkReceive": false
+    },
+    {
+      "mode": "bias-negative",
+      "bias": -0.002,
+      "normalBias": 1.2,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 1,
+        "far": 5000,
+        "left": -1900,
+        "right": 1900
+      },
+      "landmarkReceive": true
+    },
+    {
+      "mode": "normal-bias-zero",
+      "bias": -0.0004,
+      "normalBias": 0,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 1,
+        "far": 5000,
+        "left": -1900,
+        "right": 1900
+      },
+      "landmarkReceive": true
+    },
+    {
+      "mode": "bias-zero",
+      "bias": 0,
+      "normalBias": 1.2,
+      "mapSize": [
+        2048,
+        2048
+      ],
+      "camera": {
+        "near": 1,
+        "far": 5000,
+        "left": -1900,
+        "right": 1900
+      },
+      "landmarkReceive": true
+    }
+  ],
+  "errors": []
+}

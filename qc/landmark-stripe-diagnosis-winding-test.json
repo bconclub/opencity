@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "summary": [
+    {
+      "reversed": false,
+      "walls": 16,
+      "roofs": 8
+    },
+    {
+      "reversed": true,
+      "walls": 16,
+      "roofs": 8
+    }
+  ],
+  "real": {
+    "triangles": 53793,
+    "draws": 12,
+    "min": [
+      -108.89855194091797,
+      -933.1621704101562,
+      0
+    ],
+    "max": [
+      658.8164672851562,
+      109.44059753417969,
+      90
+    ]
+  },
+  "checks": [
+    "Outer walls face outward",
+    "Courtyard walls face courtyard",
+    "Flat roof normals up",
+    "Courtyard stays open",
+    "Real scene counts and bounds unchanged",
+    "Curved roof normals unchanged"
+  ]
+}

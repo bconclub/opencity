@@ -135,11 +135,7 @@ export async function installDistrict(map){
  const dummy=new T.Object3D(),color=new T.Color();let n=0;
  treePositions.forEach((p,i)=>{dummy.position.set(p.x,p.y,p.h/2);dummy.rotation.set(Math.PI/2,0,0);dummy.scale.set(1, p.h,1);dummy.updateMatrix();trunk.setMatrixAt(i,dummy.matrix);for(let j=0;j<2;j++){dummy.position.set(p.x+(rand()-.5)*p.r,p.y+(rand()-.5)*p.r,p.h+(j===0?1:-1));dummy.rotation.set(rand(),rand(),rand());dummy.scale.set(p.r*(.8+rand()*.35),p.r*(.8+rand()*.35),p.r*.85);dummy.updateMatrix();crowns.setMatrixAt(n,dummy.matrix);color.setHSL(.24+rand()*.08,.22+rand()*.15,.22+rand()*.13);crowns.setColorAt(n++,color);}});
  for(const mesh of [trunk,crowns]){mesh.castShadow=mesh.receiveShadow=true;mesh.frustumCulled=false;vegetation.add(mesh);}
- // Concentrate the existing shadow texture on the Vidhana frontage. Outside
- // this fixed light-space volume, direct lighting remains but shadows do not.
- const shadowCenter=xy([77.59065,12.97973]);
- const sun=new T.DirectionalLight(0xfff3e5,2.8);sun.target.position.set(shadowCenter[0],shadowCenter[1],0);sun.position.set(shadowCenter[0]-600,shadowCenter[1]-800,1200);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-450,right:450,top:450,bottom:-450,near:100,far:2500});sun.shadow.bias=-.0004;sun.shadow.normalBias=1.2;scene.add(sun,sun.target,new T.HemisphereLight(0xd8e7f5,0x716957,.95));
- sun.shadow.camera.updateProjectionMatrix();
+ const sun=new T.DirectionalLight(0xfff3e5,2.8);sun.position.set(-900,-1200,1800);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-1900,right:1900,top:1900,bottom:-1900,near:1,far:5000});sun.shadow.bias=-.0004;sun.shadow.normalBias=1.2;scene.add(sun,sun.target,new T.HemisphereLight(0xd8e7f5,0x716957,.95));
  const ground=new T.Mesh(new T.PlaneGeometry(5000,5000),new T.ShadowMaterial({opacity:.25,depthWrite:false}));ground.position.z=.12;ground.receiveShadow=true;ground.frustumCulled=false;scene.add(ground);
  const bbox=data.bbox,mask={type:'Polygon',coordinates:[[[bbox[0],bbox[1]],[bbox[2],bbox[1]],[bbox[2],bbox[3]],[bbox[0],bbox[3]],[bbox[0],bbox[1]]]]};
  const geo={type:'FeatureCollection',features:data.features.filter(f=>f.properties._layer==='building')};
@@ -177,6 +173,3 @@ export async function installDistrict(map){
  visibility();map.triggerRepaint();window.districtState=()=>({loaded:true,landmarkParts:landmarks.parts,landmarkDomes:landmarks.domes,replacedParts,mappedColorBuildings,enabled,shown,buildings:buildingPolygons.length,trees:treePositions.length,roofDetails,duplicateBuildings,invalidElevatedBases,contextBuildings:context.count,drawGroups:structure.children.length+2,facadeAtlasSize:512,facadeVariants:16,materialDetail:'packed roughness and baked recess shading; illustrative facades'});
  document.querySelector('#view-caption').textContent='Central district preview. Facades, roof details and planting are illustrative.';
 }
-
-
-
