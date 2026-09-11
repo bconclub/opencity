@@ -21,12 +21,15 @@ verified production version remains 0.0.30.
 | Historical pedestrian lamp | Model study only | `frontage-placement-assessment.md`; none of 37 mapped lamp nodes can be confidently assigned that fixture from available photos. |
 | Auto driver | Source audited, unsuitable as realistic driver | `auto-driver-source-audit.md`; supplied character is seated astronaut, current auto remains empty. |
 | Physical phone performance | Unverified | Headless relative timings are not actual phone FPS. |
+| Actual desktop GPU | Verified Intel UHD 630 D3D11 | `npc-detail-hardware-report.md`; candidate road/aerial around 16.68 ms per frame, close 21.41 ms mean / 34.23 ms p95. Relative regressions pass, but close-view stutter remains and 60 Hz cadence does not reveal GPU headroom. |
+| Edge anti-aliasing | Hardware experiment passes; not integrated | `hardware-aa-review.md`; actual 4x MSAA improves edges, road +0.415%, aerial unchanged on Intel. Earlier software-renderer rejection remains valid. Hardware-aware integration, fallback/mobile checks and final cumulative verification remain. |
 | Cumulative release performance | Nearby cab detail included; all three observed gates pass | `npc-detail-cumulative-report.md`: whole v0.0.30 versus `9e500bb` plus exact NPC modules, road +5.69%, aerial +2.12%, frozen max-detail close +5.86%. Earlier passes and road +10.67% failure remain preserved. Physical-phone performance remains unverified. |
 | Production release | Pending | Vercel authentication expired. Automatic approval review has also blocked the latest review-branch push; explicit approval is pending. |
 
 Latest verified pushed code/audit head: `d170f22` on `codex/release-0.0.31`.
 The accepted shader is committed locally as `334a146`; the facade correction is
-committed locally as `14d7fbf`. The attempted upload through `3bc0d85` of 43 prepared source, model-review
+`14d7fbf`, nearby animated traffic is `004e1ca`, and isolated street-gap evidence
+is `daf95fd`. The attempted upload through `3bc0d85` of 43 prepared source, model-review
 and QC files to the same review branch was rejected twice by automatic approval
 review, including after destination and file checks. The reviewer requires explicit
 approval for this exact repository upload. An approval request covering through
@@ -52,8 +55,8 @@ Cybertruck integration is committed as `1d11f02`; refreshed staging hashes are
 committed as `628bbad`; NPC corner braking is `4e4a19a`. These commits are pushed
 for review, not deployed. `release-31-staging-final.json` and `npc-detail-stage.json`
 confirm all 110 staged runtime files match, including both new NPC helper modules.
-The receipt records the prior committed base while the nearby-NPC integration
-awaits its local commit. The facade change is committed as `14d7fbf`.
+The receipt records the prior committed base; the nearby-NPC integration is
+committed as `004e1ca`. The facade change is committed as `14d7fbf`.
 
 No claim that the full 500 m district, every vehicle, all junctions, or launch
 quality is complete. Payments, city-wide expansion and engine migration remain

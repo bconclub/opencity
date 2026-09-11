@@ -4,14 +4,14 @@
 
 | Owner | Deliverable | State |
 | --- | --- | --- |
-| City visuals | Verify whole-release performance with nearby detailed traffic | All three cumulative gates pass: road +5.69%, aerial +2.12%, close +5.86% |
-| Independent review | Check nearby traffic state, geometry sharing and lifecycle | No blocking defects found; per-ID poses, exact source geometry and resource ownership verified |
+| City visuals | Verify whole-release performance with nearby detailed traffic | Software and actual Intel GPU comparisons pass. Hardware road/aerial around 60 Hz; close traffic still has slower tail frames |
+| Independent review | Check traffic integration and actual-hardware anti-aliasing | Traffic checks pass. 4x MSAA experiment improves edges on Intel; hardware-aware integration remains pending |
 | Blender vehicles | Preserve accepted Cybercab detail and animate nearby NPC wheels | Five shared near batches integrated locally; max two desktop / one mobile. Rejected decimated model excluded |
 | Traffic behavior | Brake before sharp curves; verify queues and collision handling | Integrated; six fleet scenarios and runtime soak passed |
 | Vehicle physics | Legal one-way spawning and manual/auto-roam transitions | Implemented and tested; documented in release evidence |
 | Street patch | Repair 500 m junction omission without removing mapped obstacles | Rebuilt candidate closes measured gap; scene confirms local improvement. Adjacent grey geometry and kerb slivers still prevent broad promotion |
 | Street furniture | Match mapped lights to reference fixture shapes | Reference gaps recorded; no unsupported placements added |
-| Root | Visual acceptance, exact-file integration, staging and release | Facade integration committed locally as 14d7fbf; pushed review head d170f22; production unchanged |
+| Root | Visual acceptance, exact-file integration, staging and release | Nearby traffic committed locally as 004e1ca; isolated street-gap evidence daf95fd; pushed review head d170f22; production unchanged |
 
 Rendering and Blender jobs use one resource slot at a time so benchmarks remain comparable. Source review, script preparation and integration planning run concurrently.
 
