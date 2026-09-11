@@ -1,9 +1,10 @@
 # KITT workshop candidate
 
 Original, reference-led Blender reconstruction. Not manufacturer CAD, a scan,
-or a downloaded licensed replica. It is **not the vehicle currently used by the
-game**. The custom nose and body contours remain estimates and need visual
-refinement before replacing the live model.
+or a downloaded licensed replica. This candidate is now copied into the local
+game's `assets/vehicles/kitt.glb` after full-app and two-client visual review.
+It is an improvement, not a photorealism claim. Custom nose and body contours
+remain estimates. Public deployment is a separate release action.
 
 - Builder: `assets-source/vehicles/build-kitt-reference.py`.
 - Editable source: `D:/CodexTools/Blender/projects/kitt-reference/kitt-reference.blend`.
@@ -30,7 +31,7 @@ It does not certify shape fidelity.
 
 The second framing pass replaces round roof/A-pillar tubes with thin sheet
 sections and flat roof headers. Body contours still require refinement. This
-change is confined to the workshop candidate; the live vehicle is unchanged.
+change is included in the locally promoted vehicle.
 
 The shape-correction pass adds a wrapped rear hatch with contoured sail panels,
 a lower swept spoiler, and a smaller visible turbocast rim radius (.200m versus
@@ -43,3 +44,12 @@ Before-pass GLB, source and matched camera renders are preserved in
 same cameras and lighting. Proposed changes and evidence limits are in
 `qc/kitt-shape-correction-plan.md`. Editable before/after Blender files remain
 on D in `projects/kitt-reference/`.
+
+The former runtime GLB is preserved as `runtime-before-promotion.glb`
+(SHA256 `498f019da73b071b7cacf54f06daa5a5ad0536a14bd27739a3df97f368ecd339`).
+Promoted bytes exactly match `kitt-reference.glb`
+(SHA256 `b4247a09d36ec41fa1a550374d50e11d7006a124cafc03cc8decc4a83cc4393d`).
+Runtime wheelbase is 2.5654 m and effective wheel radius is 0.324 m, including
+3 mm tread beyond the source tyre radius. Other handling remains unchanged.
+The picker preview was regenerated from the promoted runtime path and visually
+reviewed. No public deployment is claimed by this local promotion.

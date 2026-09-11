@@ -1,6 +1,6 @@
 # Workshop shape pass for visual review
 
-This pass changes only the workshop reconstruction. Live `assets/vehicles/kitt.glb` is untouched. It is not a downloaded model, Pontiac CAD or a claim of screen-car dimensional accuracy.
+This reconstruction is now promoted to local `assets/vehicles/kitt.glb` after full-app and two-client review. The previous runtime is preserved as `runtime-before-promotion.glb`. Public deployment is separate. It is not a downloaded model, Pontiac CAD, photorealism claim or claim of screen-car dimensional accuracy.
 
 | Change | Before | Revised |
 |---|---|---|
@@ -40,3 +40,17 @@ that retry. The earlier timeout's cause was not isolated.
 Source: `assets-source/vehicles/build-kitt-reference.py`. Revised editable file: `D:/CodexTools/Blender/projects/kitt-reference/kitt-reference.blend`. Prior editable file: `D:/CodexTools/Blender/projects/kitt-reference/kitt-before-shape-corrections.blend`. The previous builder and GLB are also in `before-corrections/`.
 
 Reference basis, proposed targets and uncertainty: `qc/kitt-shape-correction-plan.md`.
+
+## Local promotion validation
+
+Exact candidate bytes were copied to the stable runtime path; both candidate and
+backup SHA256 values are recorded in `../asset-validation.json`. CPU validation
+then parsed the promoted runtime GLB with Three 169 and the current rig function:
+wheelbase 2.565399885 m, effective wheel radius 0.323999991 m, four independent
+wheels, zero pivot drift and neutral-reset error, eight scanner emissive maps.
+Recorded runtime bounds match the parsed geometry within 0.000001 m.
+Vehicle physics and default/stored/custom paint regression checks passed.
+Only KITT wheelbase and wheel radius changed in handling configuration; the
+pre-load radius fallback now matches the geometry. Promotion itself did not
+rerun GPU checks or refresh previews. Earlier full-app and focused default-paint
+browser evidence was reviewed before promotion; public deployment remains separate.
