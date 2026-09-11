@@ -1,7 +1,8 @@
 # OpenCity 0.0.31
 
-This is an incremental quality and playability release. It does not complete
-the high-fidelity CBD goal or replace the live KITT with the workshop candidate.
+This is an incremental quality and playability review release. It does not
+complete the high-fidelity CBD goal. Latest verified production remains 0.0.30;
+local changes below have not been deployed.
 
 ## Changes prepared for release
 
@@ -21,8 +22,15 @@ the high-fidelity CBD goal or replace the live KITT with the workshop candidate.
   shadows. Outside the fixed local light volume, shadow coverage is reduced.
 - Fine metric street grain; restrained neutral-gray concrete guided by historical
   frontage photographs. Geometry, routes and mapped crossings remain unchanged.
-- A separate `/kitt-workshop.html` compares the current model and a 24,212-triangle
-  original Blender reconstruction. It is a work in progress, not manufacturer CAD.
+- Distant street markings use shared opaque surface coverage to reduce the
+  tested speckling, with no extra draws or road geometry. Missing/corrupt coverage
+  falls back to original materials. Relative frame-time gate passes in aerial
+  and near views; physical-phone and moving-camera checks remain outstanding.
+- Revised Knight Rider body, rear hatch, spoiler, lamps and wheels now use the
+  reviewed 24,512-triangle Blender reconstruction, with matching picker preview.
+  Default black paint matches between clients; saved colour choices remain.
+  Wheelbase/radius match the model; traffic clearance covers its actual length.
+  The original model is preserved for comparisons. This is not manufacturer CAD.
 - Build validation catches static imports accidentally added to classic scripts.
 
 ## Validation
@@ -54,8 +62,8 @@ Matched whole-scene Cybercab ABBA measured 246.82 to 243.40 ms (-1.39%); this
 passes the 10% regression gate but is not evidence of a reliable speedup or a
 physical-phone FPS result. Custom draw calls increase from 47 to 59 because
 the wheels move independently. See the separate Cybercab rig acceptance evidence.
-The live KITT geometry remains approximate. The separate new candidate also needs
-shape refinement. Landmark architecture, street fixtures and foliage require more
+The revised KITT geometry remains approximate and needs further surface/shape
+refinement. Landmark architecture, street fixtures and foliage require more
 reference-led work; physical-phone performance remains unverified. No Unity
 migration, room-server update, payments, or city-wide expansion is included.
 
@@ -69,10 +77,13 @@ The subsequent shadow repair passes its own full-scene ABBA against f6eb2be:
 419,822 triangles, +836 source bytes. Actual post-render shadow projection was
 recorded. See `landmark-stripe-diagnosis.md` for the local-coverage tradeoff.
 
-Workshop KITT now has a wrapped rear hatch, lower swept spoiler and revised rim
-proportions. It remains a separate original reconstruction: 24,512 triangles,
-four materials, four tested wheel pivots and animated scanner. Browser retry
-passes with zero errors. The original live KITT asset remains unchanged.
+The promoted KITT has four materials, four tested wheel pivots and an animated
+scanner. Full-app two-client driving, reverse, auto-roam, pause/resume and named
+paint replication pass; a separate focused run verifies default-black matching.
+Whole-scene static chase ABBA measures +7.37% frame time, 113 to 67 custom calls,
+and +601,212 GLB bytes. This is below the 10% gate, not physical-phone evidence.
+Four boosted contact approaches stop before the measured bumpers overlap.
+See `kitt-runtime-acceptance.md` for actual checks and limits.
 
 Review-only architecture and 500 m street candidates are stored with measured
 dimensions and remaining integration limits. They are not loaded by the game.
