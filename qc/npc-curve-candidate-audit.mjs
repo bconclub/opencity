@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {buildRoadGraph,toLocal,angleGap} from '../auto-roads.js';
-import {retainTrafficLoops,applyTrafficDirections,routeState,advanceTrafficRoute,clonePath,tickTraffic,mappedControls,trafficSpawnSafe,vehicleContact} from './npc-curve-baseline.mjs';
+import {retainTrafficLoops,applyTrafficDirections,routeState,advanceTrafficRoute,clonePath,tickTraffic,mappedControls,trafficSpawnSafe,vehicleContact} from './npc-curve-candidate.mjs';
 const root=new URL('../',import.meta.url), read=p=>fs.readFileSync(new URL(p,root));
 globalThis.fetch=async path=>({ok:true,json:async()=>JSON.parse(read(path))});
 const {loadDrivingData}=await import('../driving-data.js'),source=await loadDrivingData();
@@ -18,7 +18,7 @@ function setup(limit){
  return {graph,cars};
 }
 function run(limit,blocked,phase=0,dt=.05){
- const {graph,cars}=setup(limit),seconds=600,result={limit,blocked,phase,dt,spawned:cars.length,seconds,overlapFrames:0,playerOverlapFrames:0,illegalDirections:0,endedFrames:0,maxHeadingStep:0,headingJumps:[],windows:[],blocker:null};
+ const {graph,cars}=setup(limit),seconds=600,result={limit,blocked,phase,dt,spawned:cars.length,seconds,overlapFrames:0,playerOverlapFrames:0,illegalDirections:0,endedFrames:0,maxHeadingStep:0,maxEdge511HeadingStep:0,edge511MaxSpeed:0,headingJumps:[],windows:[],blocker:null};
  let player=null,target=null,targetAtRelease=0,lastWindow=cars.map(()=>0);
  for(let i=0;i<seconds/dt;i++){
   const time=i*dt;
@@ -34,6 +34,7 @@ function run(limit,blocked,phase=0,dt=.05){
   for(let a=0;a<cars.length;a++){
    const c=cars[a],gap=Math.abs(angleGap(c.heading,headings[a]));if(gap>result.maxHeadingStep){result.maxHeadingStep=gap;result.maxHeadingDetail={time,id:c.id,speed:c.speed,edge:c.path.edge,turn:!!c.path.turn,x:c.x,y:c.y};}
    if(gap>25&&result.headingJumps.length<30)result.headingJumps.push({time,id:c.id,gap,speed:c.speed,edge:c.path.edge,x:c.x,y:c.y});
+   if(c.path.edge===511&&c.path.turn){result.maxEdge511HeadingStep=Math.max(result.maxEdge511HeadingStep,gap);result.edge511MaxSpeed=Math.max(result.edge511MaxSpeed,c.speed);}
    const e=graph.edges[c.path.edge];if(e.allowedFrom!==undefined&&e.allowedFrom!==c.path.from)result.illegalDirections++;
    if(c.path.ended)result.endedFrames++;if(player&&vehicleContact(c,player))result.playerOverlapFrames++;
    for(let b=a+1;b<cars.length;b++)if(vehicleContact(c,cars[b]))result.overlapFrames++;
@@ -44,9 +45,9 @@ function run(limit,blocked,phase=0,dt=.05){
  if(target)result.blocker.targetMovementAfterRelease=target.totalMoved-targetAtRelease;
  return result;
 }
-const report={created:new Date().toISOString(),sourceHashes:Object.fromEntries(['qc/npc-curve-baseline.mjs','npc-traffic.js','auto-roads.js','driving-data.js','district-data.json','vidhana-road-network.json','assets/streets/furniture.json'].map(p=>[p,crypto.createHash('sha256').update(read(p)).digest('hex')])),sourceFeatureCount:source.features.length,verifiedFeatureCount:data.features.length,scenarios:[]};
+const report={created:new Date().toISOString(),sourceHashes:Object.fromEntries(['qc/npc-curve-candidate.mjs','qc/npc-curve-baseline.mjs','npc-traffic.js','auto-roads.js','driving-data.js','district-data.json','vidhana-road-network.json','assets/streets/furniture.json'].map(p=>[p,crypto.createHash('sha256').update(read(p)).digest('hex')])),sourceFeatureCount:source.features.length,verifiedFeatureCount:data.features.length,scenarios:[]};
 for(const [limit,blocked,phase,dt] of [[20,false,0,.05],[8,false,0,.05],[20,true,0,.05],[8,true,0,.05],[20,true,23,.1],[8,true,23,.1]]){
- const result=run(limit,blocked,phase,dt);report.scenarios.push(result);fs.writeFileSync(new URL('qc/traffic-production-audit.json',root),JSON.stringify(report,null,2)+'\n');
+ const result=run(limit,blocked,phase,dt);report.scenarios.push(result);fs.writeFileSync(new URL('qc/npc-curve-candidate-audit.json',root),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({limit,blocked,overlaps:result.overlapFrames,playerOverlaps:result.playerOverlapFrames,maxHeadingStep:result.maxHeadingStep,maxWait:Math.max(...result.cars.map(c=>c.maxWait)),minMovement:Math.min(...result.cars.map(c=>c.totalMoved)),stuck:result.cars.filter(c=>c.waitTime>90),blocker:result.blocker}));
 }
 for(const s of report.scenarios){
@@ -54,4 +55,4 @@ for(const s of report.scenarios){
  assert.ok(s.maxHeadingStep<45,'No near-instant reversal');assert.ok(s.cars.every(c=>c.totalMoved>300&&c.maxWait<90),'Every NPC progresses without starvation');
  if(s.blocked){assert.ok(s.blocker?.stoppedFrames>10,'Player obstruction exercised');assert.ok(s.blocker.resumeDelay<30,'Queue resumes after player leaves');assert.ok(s.blocker.targetMovementAfterRelease>300);}
 }
-report.passed=true;fs.writeFileSync(new URL('qc/traffic-production-audit.json',root),JSON.stringify(report,null,2)+'\n');
+report.passed=true;fs.writeFileSync(new URL('qc/npc-curve-candidate-audit.json',root),JSON.stringify(report,null,2)+'\n');

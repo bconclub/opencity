@@ -2,6 +2,8 @@
 
 Confidence high for these deterministic local-code scenarios. No persistent deadlock, immediate reversal, vehicle overlap, illegal one-way traversal or route termination reproduced. No runtime change made.
 
+This report describes the production-code snapshot before the subsequent bend-speed fix. Its reproduction script is now pinned to `qc/npc-curve-baseline.mjs` so later runtime changes cannot silently replace the measured baseline. Current fix and integration checks are recorded in `qc/npc-curve-candidate-review.md`.
+
 ## Reproduction
 
 Run `node qc/traffic-production-audit.mjs` from the project directory. The script imports current `traffic-simulation.js`, `auto-roads.js` and `loadDrivingData()`, replacing fetch with local file reads only. It uses the production verified-OSM filter, CBD ellipse, directed-loop pruning and spawn ordering from `npc-traffic.js`. Current merged data contains 9,197 features, of which 746 pass the verified filter. These are currently enabled routes, not the isolated/rejected 500 m candidates.

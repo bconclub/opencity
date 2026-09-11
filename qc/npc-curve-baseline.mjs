@@ -1,4 +1,4 @@
-import {bearing,angleGap,toLocal} from './auto-roads.js';
+import {bearing,angleGap,toLocal} from '../auto-roads.js';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const headingVector=h=>[Math.sin(h*Math.PI/180),Math.cos(h*Math.PI/180)];
 const distance=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
@@ -160,40 +160,10 @@ export function tickTraffic(graph,cars,controls,dt,now,player){
  dt=clamp(dt,0,.1);for(const car of cars){const state=routeState(graph,car.path);car.x=state.point[0];car.y=state.point[1];car.heading=state.heading;car.clearingJunction=false;}
  const reservations=reserveJunctions(graph,cars,controls,dt,now,player);
  for(const car of cars){const look=Math.max(12,car.speed*car.speed/5+8),gap=Math.min(obstacleGap(graph,car,cars,player,look),car.clearingJunction?look:controlGap(graph,car,controls,now,look,dt),reservations.get(car)??Infinity);
-  const target=car.path.ended?0:Math.min(npcCurveSpeed(graph,car),Math.sqrt(Math.max(0,gap-.8)*5));
+  const target=car.path.ended?0:Math.min(car.cruise||6,Math.sqrt(Math.max(0,gap-.8)*5));
   car.speed=Math.max(0,car.speed+clamp(target-car.speed,-4*dt,1.8*dt));
   const path=clonePath(car.path),next=advanceTrafficRoute(graph,path,Math.min(car.speed*dt,Math.max(0,gap-.25))),body={x:next.point[0],y:next.point[1],heading:next.heading};
   if(cars.some(o=>o!==car&&vehicleContact(body,o,.08))||(player&&vehicleContact(body,player,.1))){car.speed=0;car.stopped='vehicle';car.waitTime=(car.waitTime||0)+dt;car.maxWait=Math.max(car.maxWait||0,car.waitTime);continue;}
   car.path=path;Object.assign(car,body);car.totalMoved=(car.totalMoved||0)+next.moved;car.waitTime=next.moved<.005?(car.waitTime||0)+dt:0;car.maxWait=Math.max(car.maxWait||0,car.waitTime);car.stopped=path.ended?'route end':target<.2?'queue or signal':null;
  }
-}
-
-// Simulation tuning, not surveyed vehicle limits: 2.5 m/s² lateral comfort,
-// 2.8 m/s² preview braking, inside the existing 4 m/s² deceleration bound.
-const npcCurveLimits=new WeakMap();
-export function npcCurveSpeed(graph,car){
- let cache=npcCurveLimits.get(graph);if(!cache){cache=new Map();npcCurveLimits.set(graph,cache);}
- const cruise=car.cruise||6,path=clonePath(car.path),horizon=Math.max(12,cruise*cruise/5.6+3);let ahead=0,limit=cruise;
- for(let step=0;step<32&&ahead<=horizon&&!path.ended;step++){
-  if(path.turn){
-   const c=path.turn,key=path.edge+':'+path.from+'>'+c.next.edge+':'+c.next.from;let bendSpeed=cache.get(key);
-   if(bendSpeed===undefined){
-    const dx=2*(c.b[0]-c.a[0]),dy=2*(c.b[1]-c.a[1]),ddx=2*(c.c[0]-2*c.b[0]+c.a[0]),ddy=2*(c.c[1]-2*c.b[1]+c.a[1]);
-    const denominator=ddx*ddx+ddy*ddy,t=denominator?clamp(-(dx*ddx+dy*ddy)/denominator,0,1):0;
-    const tangent=Math.hypot(dx+ddx*t,dy+ddy*t),cross=Math.abs(dx*ddy-dy*ddx),curvature=cross/Math.max(1e-9,tangent*tangent*tangent);
-    bendSpeed=curvature>1e-6?Math.sqrt(2.5/curvature):Infinity;cache.set(key,bendSpeed);
-   }
-   const brakingDistance=Math.max(0,ahead-1.5);limit=Math.min(limit,Math.sqrt(bendSpeed*bendSpeed+5.6*brakingDistance));
-   const span=Math.max(0,c.length-c.at)+1e-5;if(ahead+span>horizon)break;
-   ahead+=advanceTrafficRoute(graph,path,span).moved;
-  }else{
-   // Initialize the same next edge the route walker will choose. Never mutate
-   // the live path, its visit counts, or its pending turn while previewing.
-   ahead+=advanceTrafficRoute(graph,path,1e-5).moved;if(path.turn)continue;
-   if(!path.next||path.ended)break;
-   const edge=graph.edges[path.edge],trim=Math.min(7,edge.length*.3,graph.edges[path.next.edge].length*.3),span=Math.max(0,edge.length-trim-path.progress)+1e-5;
-   if(ahead+span>horizon)break;ahead+=advanceTrafficRoute(graph,path,span).moved;
-  }
- }
- return limit;
 }

@@ -1,4 +1,4 @@
-import {bearing,angleGap,toLocal} from './auto-roads.js';
+import {bearing,angleGap,toLocal} from '../auto-roads.js';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const headingVector=h=>[Math.sin(h*Math.PI/180),Math.cos(h*Math.PI/180)];
 const distance=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);

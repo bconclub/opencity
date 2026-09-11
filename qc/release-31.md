@@ -35,6 +35,10 @@ local changes below have not been deployed.
   red rear emission, wheel covers and bed geometry are repaired. Two-client
   driving/paint tests and the +2.699% relative frame-time gate pass. The picker
   matches the new model. Remote steering now uses measured model wheelbase.
+- Ambient cabs preview existing road curvature and brake before tight bends.
+  Straight cruise, route selection and signal/collision priority are preserved.
+  Six deterministic fleet scenarios retain queue recovery without overlaps;
+  whole-release rendering verification remains a separate acceptance check.
 - Build validation catches static imports accidentally added to classic scripts.
 
 ## Validation
