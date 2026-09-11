@@ -6,7 +6,8 @@ from shapely.geometry import Polygon, GeometryCollection
 from shapely.ops import unary_union
 from shapely import constrained_delaunay_triangles
 
-source=json.loads((Path(__file__).parent/'experiments/osm2world/sample-meshes.json').read_text())
+source_path=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).parent/'experiments/osm2world/sample-meshes.json'
+source=json.loads(source_path.read_text())
 groups={};seen=set();duplicates=0;original_flat=[]
 for mesh in source:
     key=tuple(mesh['color'])

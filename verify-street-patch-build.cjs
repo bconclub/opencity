@@ -1,9 +1,18 @@
 // Reproducible offline preparation from the audited OSM2World sample.
 const fs=require('node:fs'),path=require('node:path');
-const dir=path.join(__dirname,'assets/streets');fs.mkdirSync(dir,{recursive:true});
-const prepared=JSON.parse(require('node:child_process').execFileSync('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe',[path.join(__dirname,'verify-street-patch-clean.py')],{maxBuffer:10*1024*1024}));const source=prepared.meshes;
+// Optional source/output/origin flags prepare isolated candidates without
+// replacing the accepted runtime patch. No flags preserves the audited sample.
+const args=process.argv.slice(2),allowed=new Set(['--source','--output','--origin']);
+if(args.length%2||args.some((a,i)=>i%2===0&&!allowed.has(a)))throw Error('Use --source file --output directory --origin longitude,latitude');
+const options=Object.fromEntries(Array.from({length:args.length/2},(_,i)=>[args[i*2],args[i*2+1]]));
+if(options['--source']&&(!options['--output']||!options['--origin']))throw Error('Custom source requires explicit output and verified projection origin');
+const dir=options['--output']?path.resolve(options['--output']):path.join(__dirname,'assets/streets');fs.mkdirSync(dir,{recursive:true});
+const cleanArgs=[path.join(__dirname,'verify-street-patch-clean.py'),...(options['--source']?[path.resolve(options['--source'])]:[])];
+const prepared=JSON.parse(require('node:child_process').execFileSync('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe',cleanArgs,{maxBuffer:40*1024*1024}));const source=prepared.meshes;
 // Match MapLibre 5.6.1 meterInMercatorCoordinateUnits(), including its mean Earth radius.
-const groups=new Map(),origin=[77.5907159,12.9797946],circ=2*Math.PI*6371008.8*Math.cos(origin[1]*Math.PI/180);
+const groups=new Map(),origin=options['--origin']?options['--origin'].split(',').map(Number):[77.5907159,12.9797946];
+if(origin.length!==2||!origin.every(Number.isFinite)||Math.abs(origin[0])>180||Math.abs(origin[1])>=90)throw Error('Invalid projection origin');
+const circ=2*Math.PI*6371008.8*Math.cos(origin[1]*Math.PI/180);
 const ox=(origin[0]+180)/360,oy=(1-Math.asinh(Math.tan(origin[1]*Math.PI/180))/Math.PI)/2;
 const lnglat=(x,y)=>[(ox+x/circ)*360-180,Math.atan(Math.sinh(Math.PI*(1-2*(oy-y/circ))))*180/Math.PI];
 const seenTriangles=new Set();let duplicatesRemoved=0;const footprint={type:'FeatureCollection',features:[]};let min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];

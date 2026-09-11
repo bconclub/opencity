@@ -30,6 +30,17 @@ assets/vehicles/kitt-review/validation.json
 auto-mode.js
 blender-vehicle.js
 district.js
+experiments/osm2world/coverage-500/asset/vidhana-footprint.geojson
+experiments/osm2world/coverage-500/asset/vidhana-streets.glb
+experiments/osm2world/coverage-500/asset/vidhana-streets.json
+experiments/osm2world/coverage-500/input.json
+experiments/osm2world/coverage-500/meshes.json
+experiments/osm2world/coverage-500/provenance.json
+experiments/osm2world/coverage-500/README.md
+experiments/osm2world/coverage-500/results.json
+experiments/osm2world/coverage-probe.cjs
+experiments/osm2world/select-coverage.cjs
+experiments/osm2world/verify-select-coverage.cjs
 flight.js
 kitt-workshop.html
 map-scene-camera.js
@@ -196,3 +207,5 @@ street-surface-materials.js
 sw.js
 vehicle-contact-shadow.js
 verify-browser-entry.mjs
+verify-street-patch-build.cjs
+verify-street-patch-clean.py
