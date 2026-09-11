@@ -1,0 +1,145 @@
+{
+  "commit": "9e500bb48bccf2de418fdc0f9e12ee73004d7e96",
+  "mobileEmulation": true,
+  "passed": true,
+  "hashes": {
+    "npc-traffic.js": "124fefd1754f228068286519a106848dbfd47caa9622e55f33beccf37e4b824c",
+    "npc-detail-state.js": "ee05258f9d3346a166c2d05009d03877f395ed46e4e3901e8d44c5aea431c1c2",
+    "npc-detailed-batches.js": "372e581926a24f20b2c200ced252bf29858fe9cee50a4e4d8ef48614580bf8a3"
+  },
+  "runs": [
+    {
+      "mode": "candidate",
+      "close": {
+        "vehicles": 8,
+        "visible": 7,
+        "drawCalls": 6,
+        "trianglesPerVehicle": 6000,
+        "farVisible": 6,
+        "nearVisible": 1,
+        "nearIds": [
+          0
+        ],
+        "detailReady": true,
+        "detailError": null,
+        "submittedTriangles": 60667,
+        "submitMs": 0.29999999701976776,
+        "simulationMs": 0,
+        "mobile": true,
+        "stopped": 8,
+        "mappedSignals": 7,
+        "mappedStops": 0,
+        "mode": "Local ambient traffic; simulated signals; verified OSM routes",
+        "cars": [
+          {
+            "id": 0,
+            "wheelPose": {
+              "angle": 0,
+              "steer": 0,
+              "travelled": 0,
+              "heading": 222.5606594266317
+            },
+            "x": -101.8902202341581,
+            "y": 565.1037269354783,
+            "heading": 222.5606594266317,
+            "speed": 0
+          },
+          {
+            "id": 1,
+            "wheelPose": {
+              "angle": 0,
+              "steer": 0,
+              "travelled": 0,
+              "heading": 223.3785256774407
+            },
+            "x": -209.882904823941,
+            "y": 449.6586476409524,
+            "heading": 223.3785256774407,
+            "speed": 0
+          },
+          {
+            "id": 2,
+            "wheelPose": {
+              "angle": 0,
+              "steer": 0,
+              "travelled": 0,
+              "heading": 223.1890153058562
+            },
+            "x": -289.2537420175431,
+            "y": 365.37842736248723,
+            "heading": 223.1890153058562,
+            "speed": 0
+          },
+          {
+            "id": 3,
+            "wheelPose": {
+              "angle": 0,
+              "steer": 0,
+              "travelled": 0,
+              "heading": 43.59661425945211
+            },
+            "x": -367.7585458557072,
+            "y": 308.0427102868545,
+            "heading": 43.59661425945211,
+            "speed": 0
+          },
+          {
+            "id": 4,
+            "wheelPose": {
+              "angle": 0,
+              "steer": 0,
+              "travelled": 0,
+              "heading": 42.971227739444146
+            },
+            "x": -264.09195592591414,
+            "y": 418.6331749639855,
+            "heading": 42.971227739444146,
+            "speed": 0
+          },
+          {
+            "id": 5,
+            "wheelPose": {
+              "angle": 0,
+              "steer": 0,
+              "travelled": 0,
+              "heading": 45.603644903469956
+            },
+            "x": -200.5589425816174,
+            "y": 485.57416112203623,
+            "heading": 45.603644903469956,
+            "speed": 0
+          },
+          {
+            "id": 6,
+            "wheelPose": {
+              "angle": 0,
+              "steer": 0,
+              "travelled": 0,
+              "heading": 41.71152855193259
+            },
+            "x": -171.29784632708026,
+            "y": 517.1378306310236,
+            "heading": 41.71152855193259,
+            "speed": 0
+          },
+          {
+            "id": 7,
+            "wheelPose": {
+              "angle": 0,
+              "steer": 0,
+              "travelled": 0,
+              "heading": 43.34494956827871
+            },
+            "x": -145.39908856130356,
+            "y": 545.1251977842007,
+            "heading": 43.34494956827871,
+            "speed": 0
+          }
+        ]
+      },
+      "errors": [],
+      "missing": []
+    }
+  ],
+  "scope": "Isolated immutable runtime with deterministic frozen traffic for matched views. Near/far partition, quarter-turn phase and aerial fallback checked; desktop additionally tests optional-model failure. No performance or physical-phone claim."
+}

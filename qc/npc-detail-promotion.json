@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "before": "a5d851e257de5d52b94c567cc971144b6ed4ee9c4ca41435c733083991a53e7f",
+  "runtimeHashes": {
+    "npc-traffic.js": "124fefd1754f228068286519a106848dbfd47caa9622e55f33beccf37e4b824c",
+    "npc-detail-state.js": "ee05258f9d3346a166c2d05009d03877f395ed46e4e3901e8d44c5aea431c1c2",
+    "npc-detailed-batches.js": "372e581926a24f20b2c200ced252bf29858fe9cee50a4e4d8ef48614580bf8a3"
+  },
+  "comparisons": {
+    "road": {
+      "baselineMeanMs": 329.4458333333333,
+      "candidateMeanMs": 348.19416666666666,
+      "regressionPercent": 5.690869768677209,
+      "passed": true
+    },
+    "aerial": {
+      "baselineMeanMs": 301.11250000000007,
+      "candidateMeanMs": 307.5,
+      "regressionPercent": 2.1213001785046925,
+      "passed": true
+    },
+    "close": {
+      "baselineMeanMs": 315.13833333333326,
+      "candidateMeanMs": 333.61166666666674,
+      "regressionPercent": 5.86197595764828,
+      "passed": true
+    }
+  },
+  "mobileEmulation": true,
+  "scope": "Root desktop/mobile visual acceptance; identical reviewed runtime modules. Added two helpers to local cache/staging manifest. No asset changes, push or deployment."
+}

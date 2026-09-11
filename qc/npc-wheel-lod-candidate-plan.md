@@ -1,6 +1,6 @@
 # Separated NPC Cybercab candidate plan
 
-Status: CPU preparation only. Blender has not run; no candidate exported. No runtime changes. Confidence: high for source measurements; candidate appearance unverified.
+Status: executed after explicit slot release; candidate rejected by root for visible body/UV degradation. See `qc/npc-cybercab-lod-review.md`. D outputs retained, runtime unchanged, no further variants. The plan below records the original bounded proposal.
 
 Prepared script: `assets-source/vehicles/build-npc-cybercab-lod.py`.
 

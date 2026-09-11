@@ -13,15 +13,15 @@ verified production version remains 0.0.30.
 | Portico, stairs and coherent building heights | Review-only architecture candidate, full-scene views captured | `vidhana-architecture-report.md`; foyer closes green void, sourced dimensions separated from estimates. Candidate stair collider preserves nearby roads. Thin-line sampling and integration remain unresolved. |
 | KITT shape | Revised Blender model and matching picker preview promoted locally | `kitt-runtime-acceptance.md`; two-player driving/paint/scanner checks pass. Relative full-scene frame time +7.37%, within 10% gate. Original reconstruction, not manufacturer CAD. |
 | Cybertruck dimensions and lamp export | Reviewed revision2 promoted locally with matching picker preview | `cybertruck-runtime-acceptance.md`; two-client drive/paint/lamp checks and geometry-based remote steering pass. Relative frame time +2.699%. First rejected candidate preserved; details remain schematic. |
-| 500 m street coverage | Classified candidate passes ground/material CPU tests and loads in full scene | 7 batches, 11,629 triangles, 983,036-byte GLB plus ground sidecar. Corrected projection scale, sign-top grounding and concrete ownership. One 0.826 m junction gap and road speckling remain. Keep isolated. |
+| 500 m street coverage | Repaired candidate passes CPU checks and locally improves scene; broad scene not accepted | `street-500-gap-export/README.md`; 7 batches, 11,634 triangles, 983,456-byte GLB. Known gap closed; 2,187 route samples within 1 mm. Adjacent grey remnants, kerb/marking slivers, boundary handoffs and turns remain. Keep isolated. |
 | Source road routing | Generator safeguards tested; production graph unchanged | `street-500-route-audit.md`; private/conditional/raised routes withheld, source identities retained. 2,191 eligible samples, one gap; boundary handoffs need source verification. |
 | Ambient traffic cornering | Integrated and review-pushed in `4e4a19a` | `npc-curve-candidate-review.md`; advance braking reduces the reproduced bend entry from 7 to 1.93 m/s. Six fleet scenarios and actual-runtime soak pass without overlaps; ordinary maximum queue wait increases from 34.45 to 40 s. |
-| Ambient traffic wheels | Still fused/static; separate from animated player wheels | `npc-wheel-animation-audit.md`; Blender exported a separated 5,996-triangle candidate with four pivots and unchanged image payloads. Root rejected visible windshield/body degradation. Existing runtime asset retained. |
+| Ambient traffic wheels | Animated detailed cabs nearby, lightweight static wheels farther away; integrated locally | `npc-detail-review.md`; unchanged accepted source, max two detailed desktop / one mobile. Rejected 5,996-triangle rebuild stays excluded. Five shared near batches plus one far batch preserve all fleet members. |
 | Pale road speckling | Coverage filtering integrated into accepted small patch, locally verified | `street-coverage-report.md`; four batches unchanged, near geometry retained. Relative frame time -5.31% aerial / +4.60% near. Missing-atlas fallback and reload pass; no moving-camera or physical-phone claim. |
 | Historical pedestrian lamp | Model study only | `frontage-placement-assessment.md`; none of 37 mapped lamp nodes can be confidently assigned that fixture from available photos. |
 | Auto driver | Source audited, unsuitable as realistic driver | `auto-driver-source-audit.md`; supplied character is seated astronaut, current auto remains empty. |
 | Physical phone performance | Unverified | Headless relative timings are not actual phone FPS. |
-| Cumulative release performance | Shader and facade corrections pass observed road and aerial gates | `district-winding-candidate-review.md`: whole v0.0.30 versus `334a146` plus measured facade correction, road +2.69%, aerial +4.53%. Hoisted integrated version is geometry/material/render-code equivalent. Earlier shader pass and road +10.67% failure are preserved. Timing variance prevents isolated speedup claims; physical-phone performance remains unverified. |
+| Cumulative release performance | Nearby cab detail included; all three observed gates pass | `npc-detail-cumulative-report.md`: whole v0.0.30 versus `9e500bb` plus exact NPC modules, road +5.69%, aerial +2.12%, frozen max-detail close +5.86%. Earlier passes and road +10.67% failure remain preserved. Physical-phone performance remains unverified. |
 | Production release | Pending | Vercel authentication expired. Automatic approval review has also blocked the latest review-branch push; explicit approval is pending. |
 
 Latest verified pushed code/audit head: `d170f22` on `codex/release-0.0.31`.
@@ -50,11 +50,10 @@ bumper clearance in `15ddec2`. Loop clearance baseline is committed as `c8c4643`
 Coverage filtering and release staging correction are committed in `27049dd`.
 Cybertruck integration is committed as `1d11f02`; refreshed staging hashes are
 committed as `628bbad`; NPC corner braking is `4e4a19a`. These commits are pushed
-for review, not deployed. `release-31-staging-final.json` confirms all 108 staged
-runtime files match after corner braking, the accepted shader and facade correction;
-those three modules differ from the previous complete staging audit. The receipt
-records the prior committed base; the integrated facade change is now committed
-as `14d7fbf`.
+for review, not deployed. `release-31-staging-final.json` and `npc-detail-stage.json`
+confirm all 110 staged runtime files match, including both new NPC helper modules.
+The receipt records the prior committed base while the nearby-NPC integration
+awaits its local commit. The facade change is committed as `14d7fbf`.
 
 No claim that the full 500 m district, every vehicle, all junctions, or launch
 quality is complete. Payments, city-wide expansion and engine migration remain

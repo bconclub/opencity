@@ -1,5 +1,5 @@
 {
-  "runtimeCommit": "3bc0d85e06c449b96785382029877afd2225f77b",
+  "runtimeCommit": "9e500bb48bccf2de418fdc0f9e12ee73004d7e96",
   "passed": true,
   "sourceFiles": [
     {
@@ -430,9 +430,9 @@
     },
     {
       "path": "npc-traffic.js",
-      "sha256": "a5d851e257de5d52b94c567cc971144b6ed4ee9c4ca41435c733083991a53e7f",
-      "bytes": 6637,
-      "changedSinceAudit": false
+      "sha256": "124fefd1754f228068286519a106848dbfd47caa9622e55f33beccf37e4b824c",
+      "bytes": 8158,
+      "changedSinceAudit": true
     },
     {
       "path": "performance-panel.css",
@@ -550,9 +550,9 @@
     },
     {
       "path": "sw.js",
-      "sha256": "94f5245f1a74f5e7ae90d699fba1d0bb9d489271bd1dfa625e645bd168d81612",
-      "bytes": 3659,
-      "changedSinceAudit": false
+      "sha256": "4c75da87b4e4b924f319ccd4da6c89ac63b46af27254f52bec2f86922078fb71",
+      "bytes": 3720,
+      "changedSinceAudit": true
     },
     {
       "path": "tilt-controls.js",
@@ -649,13 +649,29 @@
       "sha256": "5a1e92ffd7c3d0d7cae7afb920cd08e79bee4ba487db885ce20e77d1bf3614c1",
       "bytes": 5318,
       "changedSinceAudit": false
+    },
+    {
+      "path": "npc-detail-state.js",
+      "sha256": "ee05258f9d3346a166c2d05009d03877f395ed46e4e3901e8d44c5aea431c1c2",
+      "bytes": 1336,
+      "changedSinceAudit": true
+    },
+    {
+      "path": "npc-detailed-batches.js",
+      "sha256": "372e581926a24f20b2c200ced252bf29858fe9cee50a4e4d8ef48614580bf8a3",
+      "bytes": 4359,
+      "changedSinceAudit": true
     }
   ],
   "dependencyPairsChecked": 167,
   "changedSinceAudit": [
     "district.js",
+    "npc-traffic.js",
     "street-surface-coverage.js",
-    "traffic-simulation.js"
+    "sw.js",
+    "traffic-simulation.js",
+    "npc-detail-state.js",
+    "npc-detailed-batches.js"
   ],
   "scope": "Refresh source/staged hashes and existing dependency presence after accepted runtime changes. Earlier complete manifest and unexpected-name audit retained separately. No network or rendering test."
 }

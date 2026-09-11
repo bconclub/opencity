@@ -1,0 +1,19 @@
+{
+  "status": "PASS_CPU_HELPER",
+  "batches": 5,
+  "materials": 3,
+  "trianglesPerVehicle": 24667,
+  "desktopCapacity": 2,
+  "mobileCapacity": 1,
+  "statesTested": [
+    "empty",
+    "rest",
+    "two independently posed/steered/spinning cars",
+    "empty reset"
+  ],
+  "maxInstanceMatrixError": 7.457998165705249e-7,
+  "positiveDeterminants": true,
+  "sourceResourceDisposals": 0,
+  "sourceTyreAttributesUnchanged": true,
+  "limitation": "CPU matrix/geometry/disposal checks, no WebGL frame or performance claim."
+}

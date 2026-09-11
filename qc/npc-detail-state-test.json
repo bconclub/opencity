@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "2 desktop / 1 mobile detail caps",
+    "3D distance excludes aerial mesh cost",
+    "Entry/exit hysteresis and nearer-car replacement",
+    "Finite eye guard",
+    "Rolling phase uses accepted travel and freezes on stop",
+    "Heading wrap and culling re-entry"
+  ],
+  "scope": "Pure state tests only; no runtime integration or performance claim"
+}
