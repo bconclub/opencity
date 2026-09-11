@@ -3,7 +3,7 @@
   "wheel_radius_m": 0.321,
   "track_m": 1.524,
   "track_status": "photo estimate; confirm exact Trans Am option",
-  "triangles": 24512,
+  "triangles": 24212,
   "materials": 4,
   "wheels": {
     "FL": [
@@ -37,11 +37,5 @@
     "track",
     "tyre rolling radius"
   ],
-  "source": "Original Blender reconstruction from Pontiac brochure and KITT photographic references; not CAD",
-  "shape_revision": {
-    "hatch": "Wrapped shoulders and contoured sail panels; centreline heights retained",
-    "spoiler_top_m": 0.9,
-    "rim_outer_radius_m": 0.2,
-    "status": "Workshop review only; all revised contour targets are estimates"
-  }
+  "source": "Original Blender reconstruction from Pontiac brochure and KITT photographic references; not CAD"
 }

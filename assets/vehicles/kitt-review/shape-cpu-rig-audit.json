@@ -1,0 +1,32 @@
+{
+  "status": "PASS_CPU_GLB_RIG",
+  "wheelbase": 2.5653998551451127,
+  "track": 1.5240000150885793,
+  "wheelCount": 4,
+  "pivotDriftMeters": 0.0,
+  "vertexTravelDuringSpinAndSteerMeters": {
+    "FL": 0.47445418033925324,
+    "FR": 0.47739462628178325,
+    "RL": 0.4582053858448393,
+    "RR": 0.4582053858448393
+  },
+  "steerAngles": {
+    "FL": -0.31813600684471427,
+    "FR": -0.388600190726634,
+    "RL": 0,
+    "RR": 0
+  },
+  "neutralResetMaxVertexErrorMeters": 0.0,
+  "scannerNodes": [
+    "Scanner_0",
+    "Scanner_1",
+    "Scanner_2",
+    "Scanner_3",
+    "Scanner_4",
+    "Scanner_5",
+    "Scanner_6",
+    "Scanner_7"
+  ],
+  "browserVerification": "Existing qc/verify-kitt-rig.cjs timed out waiting for window.kittWorkshop; browser closed. No new browser rig result claimed.",
+  "rendering": "None; CPU Blender import/matrix evaluation only."
+}

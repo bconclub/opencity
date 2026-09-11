@@ -137,20 +137,7 @@ for s in [-1,1]:
 # Cabin is constructed from individual panels, not a solid blob behind glass.
 surface('Roof spine',[(-.89,.07,1.232),(-.62,.07,1.258),(-.20,.065,1.253),(-.055,.06,1.232)],paint,.007)
 surface('Windshield',[(-.055,.638,1.23),(.06,.665,1.172),(.24,.704,1.065),(.45,.751,.923),(.595,.77,.839)],glass,.025)
-# Photo-led wraparound hatch. Centreline height stays fixed; the shoulders roll
-# down toward the quarters instead of ending at a flat triangular sail panel.
-hatch_rows=[(-.91,.675,1.242,.022),(-1.12,.745,1.178,.080),(-1.42,.805,1.077,.130),(-1.7,.822,.970,.090),(-1.97,.795,.869,.022)]
-hatch_dense=[]
-for a,b in zip(hatch_rows,hatch_rows[1:]):
- for k in range(4):
-  t=k/4;hatch_dense.append(tuple(a[i]*(1-t)+b[i]*t for i in range(4)))
-hatch_dense.append(hatch_rows[-1]);hv=[];hf=[];hc=16
-for y,w,z,drop in hatch_dense:
- for i in range(hc+1):
-  t=-1+2*i/hc;hv.append((w*t,y,z-drop*abs(t)**6))
-for j in range(len(hatch_dense)-1):
- for i in range(hc):a=j*(hc+1)+i;hf.append((a,a+1,a+hc+2,a+hc+1))
-mesh('Wraparound rear hatch',hv,hf,glass,True)
+surface('Rear panoramic hatch',[(-.91,.675,1.22),(-1.12,.705,1.156),(-1.42,.735,1.055),(-1.7,.758,.948),(-1.97,.765,.847)],glass,.022)
 for s in [-1,1]:
  # Glass T tops, windscreen and rear pillars have physically distinct edges.
  mesh('T top glass',[(s*.079,-.86,1.238),(s*.61,-.86,1.229),(s*.635,-.16,1.235),(s*.075,-.16,1.257)],[(0,1,2,3)],glass)
@@ -159,10 +146,8 @@ for s in [-1,1]:
  window=[(s*.66,-.87,1.204),(s*.642,-.09,1.207),(s*.772,.552,.86),(s*.868,-.87,.849)]
  mesh('Door glass',window,[(0,1,2,3)],glass)
  line('Window weather seal',window+[window[0]],.009,trim,(.01,.012,.014))
- sail=[];shoulders=[(.873,.854),(.902,.855),(.910,.855),(.897,.850),(.795,.847)]
- for (y,w,z,drop),(outer,low) in zip(hatch_rows,shoulders):sail.extend([(s*w,y,z-drop),(s*outer,y,low)])
- mesh('Contoured rear sail',sail,[(2*i,2*i+1,2*i+3,2*i+2) for i in range(4)],paint,True)
- line('Hatch trim',[(s*(w+.003),y,z-drop+.003) for y,w,z,drop in hatch_rows],.008,paint)
+ mesh('Rear sail pillar',[(s*.681,-.93,1.222),(s*.774,-1.97,.85),(s*.906,-1.65,.85),(s*.873,-.97,.854)],[(0,1,2,3)],paint)
+ line('Hatch trim',[(s*.68,-.93,1.224),(s*.71,-1.12,1.159),(s*.741,-1.42,1.058),(s*.764,-1.7,.951),(s*.771,-1.97,.85)],.012,paint)
  # Door perimeter stays on the smooth side shell.
  line('Door shut line',[(s*.90,-.93,.817),(s*.906,-.95,.59),(s*.893,-.93,.26),(s*.883,.78,.26),(s*.907,.85,.72),(s*.899,.61,.804)],.0026,trim,(.006,.007,.009))
  line('Rocker moulding',[(s*.879,-.88,.242),(s*.889,.80,.242)],.013,trim,(.013,.016,.020))
@@ -195,18 +180,8 @@ for s in [-1,1]:
 box('Lower air opening',(0,2.345,.338),(1.39,.026,.043),trim,.007,(.005,.006,.007))
 # Low rear spoiler, smoked full-width tail panel, inset plate.
 surface('Rear deck',[(-1.98,.79,.84),(-2.17,.835,.83),(-2.36,.8,.803)],paint,.012)
-# Low swept aerofoil, not a high rectangular plank. Heights are visual estimates.
-sv=[];sf=[];foil=[(-1,-.004),(-.85,.007),(-.15,.017),(.75,.013),(1,.003),(.75,-.006),(-.2,-.009),(-.85,-.007)]
-for x in [-.855,-.74,-.50,0,.50,.74,.855]:
- u=abs(x)/.855;base=.883-.030*u**5;chord=.245-.105*u**6;cy=-2.17+.025*u*u
- for q,dz in foil:sv.append((x,cy+q*chord/2,base+dz))
-sf.append(tuple(range(7,-1,-1)))
-for j in range(6):
- for i in range(8):sf.append((j*8+i,j*8+(i+1)%8,(j+1)*8+(i+1)%8,(j+1)*8+i))
-sf.append(tuple(48+i for i in range(8)));mesh('Swept low rear aerofoil',sv,sf,paint,True)
-for s in [-1,1]:
- x=s*.67;verts=[(x+dx,-2.155+dy,z) for z,wx,wy in [(.839,.043,.081),(.870,.029,.064)] for dx,dy in [(-wx,-wy),(-wx,wy),(wx,wy),(wx,-wy)]]
- bevel(mesh('Tapered spoiler support',verts,[(3,2,1,0),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)],paint),.003,1)
+box('Rear spoiler',(0,-2.16,.921),(1.71,.25,.048),paint,.023)
+for s in [-1,1]:box('Spoiler foot',(s*.72,-2.15,.865),(.085,.19,.086),paint,.018)
 box('Smoked rear lamp panel',(0,-2.413,.658),(1.55,.020,.15),glass,.02)
 for s in [-1,1]:
  box('Tail light',(s*.51,-2.428,.683),(.45,.01,.034),lamps,.003,(.24,.002,.001))
@@ -217,7 +192,7 @@ line('Rear bumper seam',[(-.78,-2.406,.537),(0,-2.43,.537),(.78,-2.406,.537)],.0
 box('Underbody',(0,-.03,.19),(1.25,3.70,.045),trim,.01,(.016,.018,.019))
 
 # Four proper independent rigs. Wheel rotation local X; steering source local Z.
-wheel_positions={};RIM_SCALE=.200/.219 # Estimated 15in-style visible flange; not bead-seat CAD.
+wheel_positions={}
 for axle,y in [('F',FRONT),('R',REAR)]:
  for side,s in [('L',-1),('R',1)]:
   tag=axle+side;loc=(s*TRACK/2,y,R);steer=empty('Steer_'+tag,loc);pivot=empty('Wheel_'+tag,loc);parent(pivot,steer);wheel_positions[tag]=list(loc)
@@ -236,18 +211,18 @@ for axle,y in [('F',FRONT),('R',REAR)]:
    pts=[(loc[0]+dx,y+math.sin(a+dx*.30)*.322,R+math.cos(a+dx*.30)*.322) for dx in [-.07,0,.07]]
    parent(line('Tread groove',pts,.002,trim,(.003,.004,.005)),pivot)
   x=loc[0]+s*.117
-  parent(cylinder('Rim barrel',(x,y,R),.219*RIM_SCALE,.024,trim,(.22,.25,.28),64),pivot)
+  parent(cylinder('Rim barrel',(x,y,R),.219,.024,trim,(.22,.25,.28),64),pivot)
   # Turbocast dish: rounded black centre and silver outer ventilation slots.
   verts=[]
   for rad,depth in [(0,.027),(.075,.027),(.16,.023),(.202,.014),(.216,.004)]:
-   for k in range(64):a=k*math.tau/64;verts.append((x+s*depth,y+math.sin(a)*rad*RIM_SCALE,R+math.cos(a)*rad*RIM_SCALE))
+   for k in range(64):a=k*math.tau/64;verts.append((x+s*depth,y+math.sin(a)*rad,R+math.cos(a)*rad))
   faces=[(j*64+k,j*64+(k+1)%64,(j+1)*64+(k+1)%64,(j+1)*64+k) for j in range(4) for k in range(64)]
   parent(mesh('Turbocast black dish',verts,faces,paint,True),pivot)
   for k in range(24):
-   a=k*math.tau/24;o=box('Rim vent',(x+s*.013,y+math.sin(a)*.208*RIM_SCALE,R+math.cos(a)*.208*RIM_SCALE),(.007,.013*RIM_SCALE,.023*RIM_SCALE),trim,0,(.31,.34,.37));o.rotation_euler.x=-a;parent(o,pivot)
+   a=k*math.tau/24;o=box('Rim vent',(x+s*.013,y+math.sin(a)*.208,R+math.cos(a)*.208),(.007,.013,.023),trim,0,(.31,.34,.37));o.rotation_euler.x=-a;parent(o,pivot)
   for k in range(5):
-   a=k*math.tau/5;parent(cylinder('Lug well',(x+s*.029,y+math.sin(a)*.061*RIM_SCALE,R+math.cos(a)*.061*RIM_SCALE),.016*RIM_SCALE,.005,trim,(.005,.006,.008),16),pivot)
-  parent(cylinder('Centre cap',(x+s*.03,y,R),.029*RIM_SCALE,.007,trim,(.026,.029,.035),24),pivot)
+   a=k*math.tau/5;parent(cylinder('Lug well',(x+s*.029,y+math.sin(a)*.061,R+math.cos(a)*.061),.016,.005,trim,(.005,.006,.008),16),pivot)
+  parent(cylinder('Centre cap',(x+s*.03,y,R),.029,.007,trim,(.026,.029,.035),24),pivot)
 
 # Apply modifiers; merge only same-material geometry with the same rigid parent.
 for o in list(bpy.context.scene.objects):
@@ -292,11 +267,10 @@ lamps.node_tree.links.new(tex.outputs['Color'],p.inputs['Base Color']);lamps.nod
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.export_scene.gltf(filepath=str(OUT/'kitt-reference.glb'),export_format='GLB',use_selection=True,export_yup=True,export_extras=True)
 report={'wheelbase_m':WB,'wheel_radius_m':R,'track_m':TRACK,'track_status':'photo estimate; confirm exact Trans Am option','triangles':tri,'materials':4,'wheels':wheel_positions,'rig':'Steer parent around source Z, Wheel child around source X','verified':['base wheelbase 101 inches'], 'estimated':['custom KITT nose dimensions','surface station profiles','track','tyre rolling radius'], 'source':'Original Blender reconstruction from Pontiac brochure and KITT photographic references; not CAD'}
-report['shape_revision']={'hatch':'Wrapped shoulders and contoured sail panels; centreline heights retained','spoiler_top_m':.900,'rim_outer_radius_m':.200,'status':'Workshop review only; all revised contour targets are estimates'}
 assert tri<=25000, f'Geometry budget exceeded: {tri}'
 (OUT/'validation.json').write_text(json.dumps(report,indent=2))
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.samples=32;scene.cycles.use_denoising=True;scene.render.resolution_x=1440;scene.render.resolution_y=900;scene.render.resolution_percentage=100
-scene.render.threads_mode='FIXED';scene.render.threads=int(os.environ.get('KITT_RENDER_THREADS','3'))
+scene.render.threads_mode='FIXED';scene.render.threads=4
 scene.world.use_nodes=True;scene.world.node_tree.nodes.get('Background').inputs[0].default_value=(.32,.37,.45,1);scene.world.node_tree.nodes.get('Background').inputs[1].default_value=.35
 floor=material('Studio',(.14,.16,.18),.0,.65);box('Studio floor',(0,0,-.055),(200,200,.1),floor,0)
 for name,pos,power,size in [('Key',(3,2,5),1450,5),('Long softbox',(-3,0,3),1900,4),('Rear rim',(1,-5,4),1300,4)]:

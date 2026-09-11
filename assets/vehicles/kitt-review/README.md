@@ -9,7 +9,7 @@ refinement before replacing the live model.
 - Editable source: `D:/CodexTools/Blender/projects/kitt-reference/kitt-reference.blend`.
 - Browser comparison: `/kitt-workshop.html`.
 - Platform wheelbase: 101 inches, 2.5654 metres.
-- 24,212 source triangles, four materials, one tiny embedded lamp palette.
+- 24,512 source triangles, four materials, one tiny embedded lamp palette.
 - Separate `Steer_FL/FR/RL/RR` and `Wheel_FL/FR/RL/RR` nodes.
 - Source axes Z-up / +Y forward; exported GLB Y-up / -Z forward.
 - Paint, glass, trim and lamps remain separate. Scanner segments animate independently.
@@ -31,3 +31,15 @@ It does not certify shape fidelity.
 The second framing pass replaces round roof/A-pillar tubes with thin sheet
 sections and flat roof headers. Body contours still require refinement. This
 change is confined to the workshop candidate; the live vehicle is unchanged.
+
+The shape-correction pass adds a wrapped rear hatch with contoured sail panels,
+a lower swept spoiler, and a smaller visible turbocast rim radius (.200m versus
+.219m) while keeping tyre size and all wheel pivots fixed. These contour/rim
+targets are photo-led estimates, not certified KITT dimensions. The source
+brochure dimensions describe the base Firebird and exclude optional equipment.
+
+Before-pass GLB, source and matched camera renders are preserved in
+`before-corrections/`. Current front, side and rear-three-quarter PNGs use the
+same cameras and lighting. Proposed changes and evidence limits are in
+`qc/kitt-shape-correction-plan.md`. Editable before/after Blender files remain
+on D in `projects/kitt-reference/`.

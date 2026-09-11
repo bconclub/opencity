@@ -16,6 +16,9 @@ the high-fidelity CBD goal or replace the live KITT with the workshop candidate.
 - Vidhana Soudha domes retain smooth primitive normals after batching, with
   distinct facade treatments across storeys. Footprint and source heights remain
   unchanged. This is a schematic refinement; the portico and stairs still need work.
+- Landmark exterior/courtyard normals corrected and shadow map focused on the
+  Vidhana frontage. This removes tested diagonal wall bands while retaining
+  shadows. Outside the fixed local light volume, shadow coverage is reduced.
 - Fine metric street grain; restrained neutral-gray concrete guided by historical
   frontage photographs. Geometry, routes and mapped crossings remain unchanged.
 - A separate `/kitt-workshop.html` compares the current model and a 24,212-triangle
@@ -58,5 +61,19 @@ migration, room-server update, payments, or city-wide expansion is included.
 
 The later Vidhana-only change was checked separately against commit c3f917f:
 250.278 to 250.417 ms (+0.055%) in whole-scene ABBA, unchanged 45 custom draw
-calls, 21,100 fewer triangles and 1,709 additional source bytes. Existing diagonal
-wall stripes remain under investigation. See `vidhana-landmark-performance.md`.
+calls, 21,100 fewer triangles and 1,709 additional source bytes. See
+`vidhana-landmark-performance.md`.
+
+The subsequent shadow repair passes its own full-scene ABBA against f6eb2be:
+249.446 to 248.473 ms (-0.39%, within variability), unchanged 45 custom calls and
+419,822 triangles, +836 source bytes. Actual post-render shadow projection was
+recorded. See `landmark-stripe-diagnosis.md` for the local-coverage tradeoff.
+
+Workshop KITT now has a wrapped rear hatch, lower swept spoiler and revised rim
+proportions. It remains a separate original reconstruction: 24,512 triangles,
+four materials, four tested wheel pivots and animated scanner. Browser retry
+passes with zero errors. The original live KITT asset remains unchanged.
+
+Review-only architecture and 500 m street candidates are stored with measured
+dimensions and remaining integration limits. They are not loaded by the game.
+Current launch status and pending work are in `LAUNCH-READINESS.md`.
