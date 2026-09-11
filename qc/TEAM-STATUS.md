@@ -4,14 +4,14 @@
 
 | Owner | Deliverable | State |
 | --- | --- | --- |
-| City visuals | Verify renderer repair and mobile input | Complete. MapLibre5.7.2 fixes reproduced transition; full-HD AA-off comparison passes. Both AA-on tiers rejected. Actual touch tests pass at330/390/430 after pause-input correction |
-| Independent review | Trace renderer error and pause lifecycle | Exact upstream tile fix identified; input reset candidate reviewed. Root integrated the three verified pause files; AA policy archived and removed from runtime |
+| City visuals | Vidhana frontage geometry and staircase filtering | Revised dome/columns/stairs preserve other landmarks and pass native four-pose performance gate, worst +3.49%. Stair moire remains visibly unacceptable; isolated filtering diagnosis underway. No geometry promotion |
+| Independent review | Passage clearance, stairs and automatic route access | Found mapped passage under landing blocked by old coarse collider. Isolated candidate opens58 false positives and preserves31,314 other outcomes. Browser drive-through and functional private-route exclusion underway |
 | Blender vehicles | Audit supplied assets and original model links | No overlooked better supplied KITT/Cybertruck found. Original Sketchfab downloads disabled. Existing accepted rigged assets remain; source details in supplied-vehicle-inventory.md and original-sketchfab-availability.md |
 | Traffic behavior | Brake before sharp curves; verify queues and collision handling | Integrated; six fleet scenarios and runtime soak passed |
 | Vehicle physics | Legal one-way spawning and manual/auto-roam transitions | Implemented and tested; documented in release evidence |
-| Street patch | Repair 500 m junction omission and asphalt mismatch | Rebuilt candidate closes measured gap. Matched native-GPU views accept a bounded 7.50 square metre asphalt material repair; native kerb slivers and joins still prevent broad promotion |
+| Street patch | Combine verified street geometry and qualify routes | Internal kerb spear removed without changing road footprint. Single-car island-safe source route fixture passes, not yet qualified for traffic. Final combined asset assembly underway;22 boundary handoffs unverified |
 | Street furniture | Match mapped lights to reference fixture shapes | Reference gaps recorded; no unsupported placements added |
-| Root | Visual acceptance, exact-file integration, staging and release | Renderer and mobile input fixes committed58c4ed4; all110 staged files match that runtime. Asphalt material evidence committed a9ab537, AA rejection65e4fc0. Latest pushed review head remains d170f22; production unchanged |
+| Root | Visual acceptance, exact-file integration, staging and release | Runtime remains58c4ed4. Candidate geometry, junction and focus evidence saved locally680fe7a. Focus tests remove hidden source geometry from selection and use measured model heights. Latest pushed review head remains d170f22; production unchanged |
 
 Rendering and Blender jobs use one resource slot at a time so benchmarks remain comparable. Source review, script preparation and integration planning run concurrently.
 
