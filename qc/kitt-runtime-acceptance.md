@@ -21,6 +21,10 @@ Root inspected the old and candidate driver/observer images and the final `kitt-
 
 This is a bounded improvement suitable for the review build. Broad glossy surfaces, simplified details and the surrounding city still fall short of the user's high-fidelity target. No physical-phone visual acceptance is claimed.
 
+## Bumper clearance
+
+The player-to-NPC collision helper now uses 4.89 m for KITT, enclosing the measured 4.8845 m body length instead of the previous 4.6 m proxy. Width remains the conservative existing 1.9 m body proxy, excluding mirrors. `kitt-contact-test.mjs` demonstrates a bumper overlap missed by the old length and caught by the replacement, then checks boosted approaches at four headings using actual KITT physics and the runtime contact function. All stop before the measured bumpers overlap. This is not a mesh-exact collision system or a fix for every road/junction issue.
+
 ## Relative performance
 
 `kitt-runtime-performance.json`: actual full-city static chase view, 1100 x 800, Edge SwiftShader, 60 frames per run in baseline/candidate/candidate/baseline order. NPC traffic retained; multiplayer disabled for this timing comparison.
