@@ -1,0 +1,28 @@
+{
+  "errors": [],
+  "screenshots": [
+    "qc/vidhana-dome-detail-before-front.png",
+    "qc/vidhana-dome-detail-after-front.png",
+    "qc/vidhana-dome-detail-before-oblique.png",
+    "qc/vidhana-dome-detail-after-oblique.png"
+  ],
+  "scope": "Architecture candidate versus dome-only candidate; same scene/cameras, no runtime mutation",
+  "state": {
+    "mode": "after",
+    "models": {
+      "before": {
+        "parts": 47,
+        "domes": 7,
+        "draws": 6,
+        "triangles": 64276
+      },
+      "after": {
+        "parts": 47,
+        "domes": 7,
+        "draws": 5,
+        "triangles": 68246
+      }
+    }
+  },
+  "status": "CAPTURED_REQUIRES_VISUAL_REVIEW"
+}
