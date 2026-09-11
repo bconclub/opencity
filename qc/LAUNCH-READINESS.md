@@ -22,7 +22,9 @@ verified production version remains 0.0.30.
 | Auto driver | Source audited, unsuitable as realistic driver | `auto-driver-source-audit.md`; supplied character is seated astronaut, current auto remains empty. |
 | Physical phone performance | Unverified | Headless relative timings are not actual phone FPS. |
 | Actual desktop GPU | Verified Intel UHD 630 D3D11 | `npc-detail-hardware-report.md`; candidate road/aerial around 16.68 ms per frame, close 21.41 ms mean / 34.23 ms p95. Relative regressions pass, but close-view stutter remains and 60 Hz cadence does not reveal GPU headroom. |
-| Edge anti-aliasing | Hardware experiment passes; not integrated | `hardware-aa-review.md`; actual 4x MSAA improves edges, road +0.415%, aerial unchanged on Intel. Earlier software-renderer rejection remains valid. Hardware-aware integration, fallback/mobile checks and final cumulative verification remain. |
+| Edge anti-aliasing | Rejected; runtime keeps AA off | `final-aa-integration-report.md`; full-HD AA-on costs +45.70%/+68.43%/+45.99% across road/aerial/close.1100x760 close costs +17.62%. Earlier road/aerial-only success did not cover close traffic. Policy/import removed, failed evidence preserved. |
+| Map renderer transition | MapLibre JS and CSS pinned to5.7.2; reproduced crash no longer occurs | `maplibre-retained-tiles-review.md` and `final-aa-repair-transition-receipt.json`; exact upstream overscaled-child fix, original failing road-to-helicopter sequence now passes. Camera zoom preserved. |
+| Mobile pause and resume | Verified input reset integrated locally | `mobile-pause-promotion.json`; actual CDP touch at330/390/430 verifies analog and helicopter keys clear on pause, paused touches stay ignored, fresh resume works. Compact unhidden screenshots visually reviewed; physical-phone performance remains untested. |
 | Cumulative release performance | Nearby cab detail included; all three observed gates pass | `npc-detail-cumulative-report.md`: whole v0.0.30 versus `9e500bb` plus exact NPC modules, road +5.69%, aerial +2.12%, frozen max-detail close +5.86%. Earlier passes and road +10.67% failure remain preserved. Physical-phone performance remains unverified. |
 | Production release | Pending | Vercel authentication expired. Automatic approval review has also blocked the latest review-branch push; explicit approval is pending. |
 
@@ -62,6 +64,20 @@ No claim that the full 500 m district, every vehicle, all junctions, or launch
 quality is complete. Payments, city-wide expansion and engine migration remain
 outside this release. Do not substitute experimental models or expanded streets
 only because a file exists or a syntax check passes.
+
+Latest full-HD evidence is `final-aa-integration-report.md`. Reference is
+f1fd503 with the same mandatory5.7.2 renderer repair, not unchanged historical
+production. AA-off candidate means are19.21/19.39/24.38ms for road/aerial/close;
+all three relative gates pass. P95 is35.51/35.61/36.21ms, so uneven delivery
+remains. The final input-only fix and removal of the rejected AA startup probe
+do not change the measured AA-off geometry path; separate final touch/software
+smoke checks passed. All110 production staging files were refreshed and verified.
+
+The bounded asphalt material candidate is committed as a9ab537 and remains
+review-only. Root accepted its visible7.50m² continuity improvement, not the
+entire500m street scene. Native kerb slivers and road joins remain unresolved.
+Supplied asset audit found no overlooked cleaner KITT/Cybertruck; original
+Sketchfab reference downloads are disabled. See the source/availability reports.
 
 Current team responsibilities: city agent tests the isolated generic-facade
 winding correction against the full release baseline; review agent independently

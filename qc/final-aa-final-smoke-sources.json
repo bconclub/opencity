@@ -1,0 +1,38 @@
+{
+  "base": "final-aa-snapshots.json",
+  "changes": [
+    {
+      "file": "app.js",
+      "path": "qc\\final-aa-final-smoke-sources\\app.js",
+      "sha256": "59756eb8db4c773b43d044ad7e48d435e44c0c6955d91191bcf5d32f283ef654",
+      "baseSha256": "58e0d69a5256f6fd06dfea8eba3774e347a40e936c29c78c8facbcc6f9f17569",
+      "originalNormalizedEqual": true
+    },
+    {
+      "file": "sw.js",
+      "path": "qc\\final-aa-final-smoke-sources\\sw.js",
+      "sha256": "4c75da87b4e4b924f319ccd4da6c89ac63b46af27254f52bec2f86922078fb71",
+      "baseSha256": "2b6d016ec4839b66ae347f72757065e599cf3622614934e37180a2c7acea4501",
+      "originalNormalizedEqual": true
+    },
+    {
+      "file": "mobile-drive.js",
+      "path": "qc\\final-aa-final-smoke-sources\\mobile-drive.js",
+      "sha256": "0653e653f2723a22682dea48d4ac638d6164d0daa31b4b0af087c88cff93a7ab",
+      "originalSha256": "614051bf1b03139f711dee7e1e959fb7fd58683cdc0b01897256ff2eb0ac37ba"
+    },
+    {
+      "file": "auto-mode.js",
+      "path": "qc\\final-aa-final-smoke-sources\\auto-mode.js",
+      "sha256": "cb7dab896b4b61c741f5fbb8f62039c84680eab6bccc9417c9a4ee3ffa3c32d4",
+      "originalSha256": "d97c6bb84239a563381924f1ee04f849d7b2a589ee4f48bca6fc6666b599b21d"
+    },
+    {
+      "file": "flight.js",
+      "path": "qc\\final-aa-final-smoke-sources\\flight.js",
+      "sha256": "a3c7d018f522861e4f276e757d956c10becfb8fdbfb4c0cea38ebf58534dfb14",
+      "originalSha256": "0ec14faa2d2e3864246e7b44da51a69f3eb7a3170b2c5942675358a4151c95cd"
+    }
+  ],
+  "scope": "Accepted frozen geometry plus original app/sw restored without AA probe and exact isolated pause-input candidate files. No graphics changes."
+}

@@ -1,0 +1,1110 @@
+{
+  "prepared": "2026-09-11T04:47:00.515Z",
+  "scope": "Repaired reference f1fd503 with JS/CSS5.7.2 only versus4b79104 plus exact app.js/sw.js/render-quality.js/index.html overrides. Shared renderer repair mandatory after captured FullHD baseline crash. Not unmodified historical baseline. Equal room/cache exclusions.",
+  "excludedForBoth": [
+    "Room client and cache bootstrap empty",
+    "Service workers blocked; fresh contexts/network cache disabled"
+  ],
+  "snapshots": {
+    "baseline": {
+      "commit": "f1fd503054927bde060315c7af3121391c839956",
+      "packageVersion": "0.0.30",
+      "release": {
+        "version": "0.0.30",
+        "date": "2026-09-11",
+        "name": "Prepared city loading and complete ride onboarding",
+        "versionScheme": "base-100-release-counter"
+      },
+      "rendererRepair": {
+        "originalIndexSha256": "8255543f49852e94d37fe4e204ffcfac812e83295ccfc14c7e3ac62edb7422e4",
+        "finalIndexSha256": "4aed0d2f51ae447676af1fcc9c8b47a72bba38af9a9133f85db47c1148a97d55",
+        "substitution": "Both maplibre-gl@5.6.1 JS/CSS URLs become maplibre-gl@5.7.2",
+        "historicalBaselineUnmodified": false
+      },
+      "sourceOverrides": [
+        {
+          "path": "index.html",
+          "bytes": 6426,
+          "sha256": "4aed0d2f51ae447676af1fcc9c8b47a72bba38af9a9133f85db47c1148a97d55",
+          "reason": "Mandatory shared renderer repair after captured FullHD baseline crash"
+        }
+      ],
+      "files": [
+        {
+          "path": "app.js",
+          "bytes": 8386,
+          "sha256": "58e0d69a5256f6fd06dfea8eba3774e347a40e936c29c78c8facbcc6f9f17569"
+        },
+        {
+          "path": "assets/auto/auto-rickshaw.glb",
+          "bytes": 1463888,
+          "sha256": "1382e9c81589dbda33c17b62a0b90d6d766acb910fa6d1362b589ed9805f9e67"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "bytes": 13882,
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "assets/streets/vidhana-footprint.geojson",
+          "bytes": 336410,
+          "sha256": "408d934a5ebe5aa6103e7967155f9d486ed9369cd0e0112912d40261a7418941"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.glb",
+          "bytes": 182248,
+          "sha256": "87fe720941fc52856fd04f8ffa47f16df1bd363c56017530af65e6436a46b0dc"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.json",
+          "bytes": 762,
+          "sha256": "340aa4b6ad829816333e6c2d97e3481c67f0ea414c1a1ac8826f8b6a232cb90d"
+        },
+        {
+          "path": "assets/vehicles/cybercab-meshy-approved.glb",
+          "bytes": 4535896,
+          "sha256": "d7ebcc4b2753e5ce51e2b432ad294ee8c32148fbeda999f9fed54f59b469869b"
+        },
+        {
+          "path": "assets/vehicles/cybercab-meshy-traffic.glb",
+          "bytes": 3864428,
+          "sha256": "1a412a23d19b0aca4da0f38cee6ad16c1537776edb5cca7187e7f3c55b2376ec"
+        },
+        {
+          "path": "assets/vehicles/cybertruck.glb",
+          "bytes": 429708,
+          "sha256": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b"
+        },
+        {
+          "path": "assets/vehicles/kitt.glb",
+          "bytes": 473028,
+          "sha256": "498f019da73b071b7cacf54f06daa5a5ad0536a14bd27739a3df97f368ecd339"
+        },
+        {
+          "path": "assets/vehicles/previews/auto.webp",
+          "bytes": 19266,
+          "sha256": "9eb1b2e5755887cffe97801086166959e546f112c82bfec2f33a38d20240cd8f"
+        },
+        {
+          "path": "assets/vehicles/previews/cybercab.webp",
+          "bytes": 21588,
+          "sha256": "f06fa2c3e7a08b33170420898cd3b5067831a56a868912faae18fcf1f5ae56cf"
+        },
+        {
+          "path": "assets/vehicles/previews/cybertruck.webp",
+          "bytes": 14690,
+          "sha256": "0aac078686eb638fbac7481a4e9119491c253afd9b607506c9abca64a141efc1"
+        },
+        {
+          "path": "assets/vehicles/previews/cycle.webp",
+          "bytes": 15306,
+          "sha256": "9f0b8952cfdeb7adf5e030057a1d647a947ab98f00537cee24f65ec3f8095393"
+        },
+        {
+          "path": "assets/vehicles/previews/helicopter.webp",
+          "bytes": 11776,
+          "sha256": "bea10b0e7be34887c6db0cc4f5ff3d53ec3fc83ca1bff8bfd92f149fe71c9eee"
+        },
+        {
+          "path": "assets/vehicles/previews/kitt.webp",
+          "bytes": 16982,
+          "sha256": "0d6eca98d008d422b27cdd81bcae82c146327708432556c228e6cb7760ee407a"
+        },
+        {
+          "path": "auto-asset.js",
+          "bytes": 3075,
+          "sha256": "47fe1df75444482ae7a71914e41a951589eff9071cfcfb83dd6df14dc9aa09fa"
+        },
+        {
+          "path": "auto-mode.js",
+          "bytes": 17326,
+          "sha256": "32b4f836b8307141f15db208d15f048d081212590c4f995b84cb10ddcf63c711"
+        },
+        {
+          "path": "auto-model.js",
+          "bytes": 8774,
+          "sha256": "55913bd4871c531b6ab3f986c65af2f3456d91eba5efaf70c0d2eaaa546b1364"
+        },
+        {
+          "path": "auto-physics.js",
+          "bytes": 3423,
+          "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+        },
+        {
+          "path": "auto-roads.js",
+          "bytes": 5758,
+          "sha256": "9d2cad470e468a6294e21d9c17eb2b8f468ffc7ccf7c7faca24b1e6450e5af86"
+        },
+        {
+          "path": "auto-roam-physics.js",
+          "bytes": 4106,
+          "sha256": "18d5632dc8e7deb2af949438a47efcf163a81d5281d1a22feeecfa62fe6853a3"
+        },
+        {
+          "path": "auto-world.js",
+          "bytes": 2253,
+          "sha256": "3526bfc3f4b21634b6991d331b6cf49fbeb6f57d8c9f8783d9bdb28c6019353a"
+        },
+        {
+          "path": "auto.css",
+          "bytes": 1407,
+          "sha256": "156e67cf7990737ac50355b5dfa0ed74fdcf7756effb3fab0a48aab6abfd47c6"
+        },
+        {
+          "path": "blender-vehicle.js",
+          "bytes": 1799,
+          "sha256": "b3fe72cc1f1d2cda7c66a12eebf4557bc7e0308e511ae388bb89ce0a38884053"
+        },
+        {
+          "path": "boost-meter.js",
+          "bytes": 1741,
+          "sha256": "4b1b4109397664d7772414db7f2bde0dbe06f0118d2728b6637b42dedaded0a0"
+        },
+        {
+          "path": "building-context.js",
+          "bytes": 3104,
+          "sha256": "f6860e87fb733b66ef699e56932e796eb3aec95fff7f7ea831610344a0754f85"
+        },
+        {
+          "path": "cbd-boundary.js",
+          "bytes": 594,
+          "sha256": "d62f99dfd373093b5dd68a6c021103e163669b14c9beac0854134d524e8fef28"
+        },
+        {
+          "path": "cbd-dome.js",
+          "bytes": 6527,
+          "sha256": "5816f7e4a382e8fe6ed4c744a7ed23b3c432bf2796c7488cc03a2a6af942cb64"
+        },
+        {
+          "path": "city-loading.css",
+          "bytes": 1623,
+          "sha256": "619b4b2ea6d0cb559ce4d7cac3cd1395363febaf160a8efaa75b1f71125db652"
+        },
+        {
+          "path": "city-loading.js",
+          "bytes": 2128,
+          "sha256": "2a7f7afdc3163c8bfebe3562527b4d1fda1e06a56c14419b0cf635f66ee740b9"
+        },
+        {
+          "path": "cockpit.css",
+          "bytes": 2293,
+          "sha256": "fe79841c596ab5ba96005b0ff932dfa0de6ddf164cf8c82d3a7cf712b3b4ede9"
+        },
+        {
+          "path": "controller-monitor.css",
+          "bytes": 1422,
+          "sha256": "68257fdd728b89424e8676296bfcdaf2df1e087429aa1181816c3287411ce135"
+        },
+        {
+          "path": "controller-monitor.js",
+          "bytes": 2592,
+          "sha256": "aa6ca7a2f2818b0ba3d8e8caab13be123ce9fb6d5ade504eba6803ae273fd1be"
+        },
+        {
+          "path": "controller-test.html",
+          "bytes": 1353,
+          "sha256": "6cf7d546531b590fbcdda5b7eb9a7d17db2f6d37f4ddb1eefed7781122540773"
+        },
+        {
+          "path": "cycle-model.js",
+          "bytes": 5416,
+          "sha256": "cf1747c36a80dc79d87977a1de066e5310457c36d2db3d0dd628199f50ceac45"
+        },
+        {
+          "path": "district-data.json",
+          "bytes": 2018576,
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "district.js",
+          "bytes": 17815,
+          "sha256": "227628a94340ea9ac2b4ef106b46595ceae60da7efdb721ab68074ce9768dd8c"
+        },
+        {
+          "path": "driving-data.js",
+          "bytes": 1349,
+          "sha256": "b5808754b464e3e1eca88f3df4a09b1bb0a94238f0db719a9e0cb7d8116b2f35"
+        },
+        {
+          "path": "drone-model.js",
+          "bytes": 3542,
+          "sha256": "d1543c39785c302c538c0ca3d93b438df8da8627aa110b5e0e0cb16c5d22004b"
+        },
+        {
+          "path": "flight-physics.js",
+          "bytes": 3292,
+          "sha256": "e21eb01d2981d1d68032e87c36d50ee5f002068ca47ee414c6746cf3d428640f"
+        },
+        {
+          "path": "flight.css",
+          "bytes": 3176,
+          "sha256": "599c725ab838ed2e075b54fef3efbcf3f75df6d8602c91d156ebd1156e9878f3"
+        },
+        {
+          "path": "flight.js",
+          "bytes": 23451,
+          "sha256": "5a2b35638f00b6baeb9de9fd0c45caf679573a15672d7afa12fb881e8ac7aaaf"
+        },
+        {
+          "path": "focus-pointer.css",
+          "bytes": 1489,
+          "sha256": "ff635633524a7851062472ef2df79ca931e4ba7eaf00c00c9bf7a7688f8fbada"
+        },
+        {
+          "path": "focus-pointer.js",
+          "bytes": 1640,
+          "sha256": "fc454969bfdd67a2e6846bf462443428bfd877edd0614a221587f94b400d5e68"
+        },
+        {
+          "path": "gamepad-controls.js",
+          "bytes": 2787,
+          "sha256": "f60e1e7d60677e57dfce7fe0e7a844709e2097998ccbdbf43564c61db394bc07"
+        },
+        {
+          "path": "helicopter.js",
+          "bytes": 5098,
+          "sha256": "362926901054cc3516097c1cdd55d52ba75b8133afbcb7481851b78653d4e6e0"
+        },
+        {
+          "path": "index.html",
+          "bytes": 6426,
+          "sha256": "4aed0d2f51ae447676af1fcc9c8b47a72bba38af9a9133f85db47c1148a97d55"
+        },
+        {
+          "path": "landmark-data.json",
+          "bytes": 43804,
+          "sha256": "c5ee9dfea757a558d2f96e17802cc6055220ea7dbe8b4becacf26db78996a497"
+        },
+        {
+          "path": "landmarks.js",
+          "bytes": 5208,
+          "sha256": "a845ee3ffe98aba63f6709ca6e295709af2be92af64f3da2ed7862b88f20a8e5"
+        },
+        {
+          "path": "local-cache.js",
+          "bytes": 1342,
+          "sha256": "b11d66bb6d392aed85642d7ecb48a054ede4faaf5d9168c6dcc096e96d599251"
+        },
+        {
+          "path": "mobile-controls.css",
+          "bytes": 1865,
+          "sha256": "ca7527dafa5f094be10b1141133432de18ffc1c50f38afc3d7440cb95168dd3e"
+        },
+        {
+          "path": "mobile-dashboard.css",
+          "bytes": 6524,
+          "sha256": "f885a5008a5824cc37655b85510f0d0ccfef79ef1845fa749c2a7c983af367a2"
+        },
+        {
+          "path": "mobile-dashboard.js",
+          "bytes": 1305,
+          "sha256": "a7f0f8389650db0d21d6009828d888392528b5a81d48efb845422ca48df6ac8a"
+        },
+        {
+          "path": "mobile-drive.css",
+          "bytes": 2779,
+          "sha256": "e9fab4c64a897430ef814fc1d5dcdb5a3a2742e9b99aaa4e2e82aa884036fe42"
+        },
+        {
+          "path": "mobile-drive.js",
+          "bytes": 5621,
+          "sha256": "15743e3f78610fb0aa8a4c1acf07e3f8845afbe00eb2d9359541233121218d92"
+        },
+        {
+          "path": "mobile-menu.css",
+          "bytes": 7607,
+          "sha256": "60a53413e799e5409f9c0120f210af0a3490be085ea1354e3192d81f08bd995a"
+        },
+        {
+          "path": "mobile-menu.js",
+          "bytes": 5142,
+          "sha256": "372d8f1a637112b85fbcbf934b3fb91e9fb5779ceddf8cafecfd31419f935bd0"
+        },
+        {
+          "path": "multiplayer-client.css",
+          "bytes": 8432,
+          "sha256": "0acc979fb93ac498a25a2ee1ba525b66a746ae977b7f111d5622af8dee2ae6b8"
+        },
+        {
+          "path": "multiplayer-client.js",
+          "bytes": 24323,
+          "sha256": "f6aa22238833a520496aa47fb884e5f4b7bb68195a9ba570bd0560a8622bf0d4"
+        },
+        {
+          "path": "multiplayer-config.json",
+          "bytes": 47,
+          "sha256": "fa1f6ab648dc0f6b27211ddffc9e9c26a5e8d062f597e81e89b5e47a1dc7a4f4"
+        },
+        {
+          "path": "multiplayer-render.js",
+          "bytes": 10681,
+          "sha256": "abca4dcb01d1c0661c98a0ea87ae0bc5a52c55b5f5ca3c82cfa216dc4770cf55"
+        },
+        {
+          "path": "npc-traffic.js",
+          "bytes": 6484,
+          "sha256": "a39d7611545a8af67c0b5b8a8f4050e0fa845480721c875e4c26b71bd174781a"
+        },
+        {
+          "path": "package.json",
+          "bytes": 336,
+          "sha256": "bceb55b1575e2845df5bce65f3cd5757b0a60097f60a83e996890800fa3bdddf"
+        },
+        {
+          "path": "performance-panel.css",
+          "bytes": 1388,
+          "sha256": "4af10d25756ea42c7e3106ea8f4c00c40cb3e7805791d5e499749e620a672940"
+        },
+        {
+          "path": "performance-panel.js",
+          "bytes": 2950,
+          "sha256": "a9c3686327d585d811a479179f56691f207803f42b1776e5fa6703f097253ac7"
+        },
+        {
+          "path": "player-cloud.js",
+          "bytes": 733,
+          "sha256": "3c838937ccd86e970db1c8eacc545e00ae1e90a929501d362b09ee69165c206e"
+        },
+        {
+          "path": "player-stats-ui.js",
+          "bytes": 1660,
+          "sha256": "78faf07dbf6fe6bc3b53319f0d8b28279c8105745ed97835980c41a0ba94b94f"
+        },
+        {
+          "path": "player-stats.js",
+          "bytes": 11506,
+          "sha256": "02da3609a7b42c37a508fa7d014d518d0a540b96442b96ed08639bb7eafaeb97"
+        },
+        {
+          "path": "release.json",
+          "bytes": 144,
+          "sha256": "cc5bab6408f95450ddee3c55ab4725caac1694b6a78d2c62c907c937fbcf60e7"
+        },
+        {
+          "path": "resume-overlay.css",
+          "bytes": 795,
+          "sha256": "153309d188d23de5e0270c196cc9fd6638a935c3343e7576e2cbb8a24ec57e3b"
+        },
+        {
+          "path": "resume-overlay.js",
+          "bytes": 1420,
+          "sha256": "51409f9b18e4af009ada5cf8c067af2c8be9c8333cc30467414e2f3582eaa793"
+        },
+        {
+          "path": "social-controls.css",
+          "bytes": 3602,
+          "sha256": "85a74734d985c740013d2b6a01eb8a1ecd1e570142e612542b07108bb889032b"
+        },
+        {
+          "path": "social-controls.js",
+          "bytes": 3415,
+          "sha256": "3e39bfe0d896824b79d842fbc0f886e61bb1dc12f22ea3ae0cca668625f29286"
+        },
+        {
+          "path": "social-entry.js",
+          "bytes": 85,
+          "sha256": "517018e8656597bf2fe13ea2168883280d0d6c44ff60d91c3460a8c3a440b06c"
+        },
+        {
+          "path": "street-detail.js",
+          "bytes": 4621,
+          "sha256": "44868698b2da722ba951ae08c2f62b6d48161c537dfb8b2c0ef2aa38c9b11ca0"
+        },
+        {
+          "path": "street-furniture.js",
+          "bytes": 6697,
+          "sha256": "de96b87d63196a7cf076b53f8c34d2da8f41916e62b8fe0d5fa7d620824836f8"
+        },
+        {
+          "path": "street-patch.js",
+          "bytes": 4505,
+          "sha256": "aec933a8044909180707523f4e43c6a523c2dd164a564ead2f85751b7c8bd2f1"
+        },
+        {
+          "path": "styles.css",
+          "bytes": 4914,
+          "sha256": "4ffb0f7388a57afadc11a7d3bf0ee0c60cd00cca19ee34799474653c90fb9766"
+        },
+        {
+          "path": "supabase-config.json",
+          "bytes": 126,
+          "sha256": "9c7791f3d1dd7b57c420125c5ee7edca605e930f264a293869ff27d4b11b8397"
+        },
+        {
+          "path": "supercar-model.js",
+          "bytes": 3446,
+          "sha256": "73c4db558b2feb534ddc98cad4af1b4d34ef3c15803f96ac867e147617e145e3"
+        },
+        {
+          "path": "sw.js",
+          "bytes": 3492,
+          "sha256": "b07dca944542657a91c393379a293157a7b05f480737c2fecf1c59b9d2096274"
+        },
+        {
+          "path": "tilt-controls.js",
+          "bytes": 3471,
+          "sha256": "6eafbb332a12712f34e9dd92bae8827fc2b862dbcb1c3aa96377ef2675770055"
+        },
+        {
+          "path": "traffic-simulation.js",
+          "bytes": 15744,
+          "sha256": "db41f3a64a952ce576bf9ab80f683bec41aaf7d0ff7df185bbb941a45dc03316"
+        },
+        {
+          "path": "vehicle-boost.js",
+          "bytes": 943,
+          "sha256": "e148c6d38e65b207b63a81976952c8cb28434ed30f95eab3436999a6314bea91"
+        },
+        {
+          "path": "vehicle-colors.js",
+          "bytes": 1524,
+          "sha256": "f44be62559f82194ee91d1307ada188802b4ce9b754c4965f39225bcfa6243be"
+        },
+        {
+          "path": "vehicle-environment.js",
+          "bytes": 1363,
+          "sha256": "546e969b98b4eff1765ded7826bef4e72e150843dc7aed1e11fae9128d4a9567"
+        },
+        {
+          "path": "vehicle-models.js",
+          "bytes": 5982,
+          "sha256": "2771ed04f12e34dbd108b043f15ab5590628e03cc7c220e550f8d810a156c909"
+        },
+        {
+          "path": "vehicle-review.html",
+          "bytes": 5276,
+          "sha256": "655c1debc824964c368626306d96f418a68d91658eb4ccc9b2b79249be538893"
+        },
+        {
+          "path": "vehicle-shell.css",
+          "bytes": 5154,
+          "sha256": "f4c64c1d2efc93c2989dd7ea121f7634b7db655960cf1c22be4d202d9448212a"
+        },
+        {
+          "path": "vehicle-shell.js",
+          "bytes": 4953,
+          "sha256": "312692c3c3d9cff7f674e09d12d13d1d4b6446afe3b5a431681e63cf77de5bbc"
+        },
+        {
+          "path": "vehicle-tuning.js",
+          "bytes": 2251,
+          "sha256": "19b3114b62403b3b758e242f80a6a07c2ccf4f0e07e76e61af86be1e89440efd"
+        },
+        {
+          "path": "verify-street-patch.html",
+          "bytes": 1173,
+          "sha256": "2790f5ed2a38bbd0ad504fbfcbaba9a10e20d6afbc3a568868b4593305fe3e19"
+        },
+        {
+          "path": "vidhana-road-network.json",
+          "bytes": 229346,
+          "sha256": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+        },
+        {
+          "path": "vidhana-street-data.json",
+          "bytes": 2293554,
+          "sha256": "3a3af6a93af78dd5d601efa0dea4a172c4e068f6e9c525ad2184519101acebf6"
+        },
+        {
+          "path": "vidhana-streets.js",
+          "bytes": 2110,
+          "sha256": "5edd582829635c1375f2a2284ee9c21dad5f324e2ba039643a69061119166396"
+        },
+        {
+          "path": "voice-chat.css",
+          "bytes": 1317,
+          "sha256": "6ab57703708ebb7f0bb9424916c2311283c8eee53cec7059b5b08ec1938abfde"
+        },
+        {
+          "path": "voice-chat.js",
+          "bytes": 5318,
+          "sha256": "5a1e92ffd7c3d0d7cae7afb920cd08e79bee4ba487db885ce20e77d1bf3614c1"
+        }
+      ],
+      "snapshotBytes": 16340077,
+      "manifestSha256": "843ca4f68b895918e61bc3cf994ea3ddc62be3764ae154f806e1ae3b62fb9172"
+    },
+    "candidate": {
+      "commit": "4b791041ebf0bd62f479c3ea06cd22f44a51c15c",
+      "packageVersion": "0.0.31",
+      "release": {
+        "version": "0.0.31",
+        "date": "2026-09-11",
+        "name": "Ground driving, materials and vehicle workshop",
+        "versionScheme": "base-100-release-counter"
+      },
+      "rendererRepair": {
+        "originalIndexSha256": "8255543f49852e94d37fe4e204ffcfac812e83295ccfc14c7e3ac62edb7422e4",
+        "finalIndexSha256": "e9145350323178ac77d4099d6de8357ff87ab697ef451160b53c2d1714ef7b35",
+        "substitution": "Both maplibre-gl@5.6.1 JS/CSS URLs become maplibre-gl@5.7.2",
+        "historicalBaselineUnmodified": false
+      },
+      "sourceOverrides": [
+        {
+          "path": "app.js",
+          "bytes": 8792,
+          "sha256": "3a8b356506db642bac925f10f33cba2053b9fb64e013ae6796cf3f0d60b9c1c6"
+        },
+        {
+          "path": "sw.js",
+          "bytes": 3753,
+          "sha256": "80b3d25506c217e21fa24696fb6859cc8818e81b1da885c8fd0759a48b9e92b6"
+        },
+        {
+          "path": "render-quality.js",
+          "bytes": 3452,
+          "sha256": "f9637c8e4dde3c580288abd95f3785f6df5ad13c4ac72e631e223f1e39e09379"
+        },
+        {
+          "path": "index.html",
+          "bytes": 6462,
+          "sha256": "e9145350323178ac77d4099d6de8357ff87ab697ef451160b53c2d1714ef7b35"
+        }
+      ],
+      "files": [
+        {
+          "path": "app.js",
+          "bytes": 8792,
+          "sha256": "3a8b356506db642bac925f10f33cba2053b9fb64e013ae6796cf3f0d60b9c1c6"
+        },
+        {
+          "path": "assets/auto/auto-rickshaw.glb",
+          "bytes": 1463888,
+          "sha256": "1382e9c81589dbda33c17b62a0b90d6d766acb910fa6d1362b589ed9805f9e67"
+        },
+        {
+          "path": "assets/streets/furniture.json",
+          "bytes": 13882,
+          "sha256": "86f0da5a8cb32a205d51656ff2763986c1da7334c15c66c71c2cd425a1447b1d"
+        },
+        {
+          "path": "assets/streets/vidhana-coverage.png",
+          "bytes": 213359,
+          "sha256": "2b72eb8b720b87cb65b4241f5f4789b6398852b79a6134b9e586fccf55f06c8b"
+        },
+        {
+          "path": "assets/streets/vidhana-footprint.geojson",
+          "bytes": 336410,
+          "sha256": "408d934a5ebe5aa6103e7967155f9d486ed9369cd0e0112912d40261a7418941"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.glb",
+          "bytes": 182248,
+          "sha256": "87fe720941fc52856fd04f8ffa47f16df1bd363c56017530af65e6436a46b0dc"
+        },
+        {
+          "path": "assets/streets/vidhana-streets.json",
+          "bytes": 1301,
+          "sha256": "d8b892011296db393def50b437c01fba2248708f11cc1fa83c1e173d409f5bc0"
+        },
+        {
+          "path": "assets/vehicles/cybercab-meshy-traffic.glb",
+          "bytes": 3864428,
+          "sha256": "1a412a23d19b0aca4da0f38cee6ad16c1537776edb5cca7187e7f3c55b2376ec"
+        },
+        {
+          "path": "assets/vehicles/cybercab-rigged.glb",
+          "bytes": 4437428,
+          "sha256": "d22c94990893c5d807248cb7717ac643fccf2d532ad55519f57f3f8de65bbc1a"
+        },
+        {
+          "path": "assets/vehicles/cybertruck.glb",
+          "bytes": 623688,
+          "sha256": "e6ad2ff4ffc3b4ee4de73600f28eb264e2fc3b3fac65f31ebb0d4f50cda4fc05"
+        },
+        {
+          "path": "assets/vehicles/kitt.glb",
+          "bytes": 1074240,
+          "sha256": "b4247a09d36ec41fa1a550374d50e11d7006a124cafc03cc8decc4a83cc4393d"
+        },
+        {
+          "path": "assets/vehicles/previews/auto.webp",
+          "bytes": 19266,
+          "sha256": "9eb1b2e5755887cffe97801086166959e546f112c82bfec2f33a38d20240cd8f"
+        },
+        {
+          "path": "assets/vehicles/previews/cybercab.webp",
+          "bytes": 21588,
+          "sha256": "f06fa2c3e7a08b33170420898cd3b5067831a56a868912faae18fcf1f5ae56cf"
+        },
+        {
+          "path": "assets/vehicles/previews/cybertruck.webp",
+          "bytes": 15402,
+          "sha256": "a71955478726639a4fff9e823e697fbce34b2dc8fbc9505e2c7af137801862f6"
+        },
+        {
+          "path": "assets/vehicles/previews/cycle.webp",
+          "bytes": 15306,
+          "sha256": "9f0b8952cfdeb7adf5e030057a1d647a947ab98f00537cee24f65ec3f8095393"
+        },
+        {
+          "path": "assets/vehicles/previews/helicopter.webp",
+          "bytes": 11776,
+          "sha256": "bea10b0e7be34887c6db0cc4f5ff3d53ec3fc83ca1bff8bfd92f149fe71c9eee"
+        },
+        {
+          "path": "assets/vehicles/previews/kitt.webp",
+          "bytes": 19984,
+          "sha256": "4ad7669f238626febbcab2558e341bac14cd74f7cc69629248c5467994867188"
+        },
+        {
+          "path": "auto-asset.js",
+          "bytes": 3075,
+          "sha256": "47fe1df75444482ae7a71914e41a951589eff9071cfcfb83dd6df14dc9aa09fa"
+        },
+        {
+          "path": "auto-mode.js",
+          "bytes": 18034,
+          "sha256": "c9e14a97f649babb086773e9bba78163f733f94e7cb97643aaff4e0531a78a1d"
+        },
+        {
+          "path": "auto-model.js",
+          "bytes": 8774,
+          "sha256": "55913bd4871c531b6ab3f986c65af2f3456d91eba5efaf70c0d2eaaa546b1364"
+        },
+        {
+          "path": "auto-physics.js",
+          "bytes": 3423,
+          "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+        },
+        {
+          "path": "auto-roads.js",
+          "bytes": 5758,
+          "sha256": "9d2cad470e468a6294e21d9c17eb2b8f468ffc7ccf7c7faca24b1e6450e5af86"
+        },
+        {
+          "path": "auto-roam-physics.js",
+          "bytes": 4106,
+          "sha256": "18d5632dc8e7deb2af949438a47efcf163a81d5281d1a22feeecfa62fe6853a3"
+        },
+        {
+          "path": "auto-world.js",
+          "bytes": 2253,
+          "sha256": "3526bfc3f4b21634b6991d331b6cf49fbeb6f57d8c9f8783d9bdb28c6019353a"
+        },
+        {
+          "path": "auto.css",
+          "bytes": 1407,
+          "sha256": "156e67cf7990737ac50355b5dfa0ed74fdcf7756effb3fab0a48aab6abfd47c6"
+        },
+        {
+          "path": "blender-vehicle.js",
+          "bytes": 4466,
+          "sha256": "220049970dffca1049d3aaa785d62dda7a140d50a95626b1a67db2cb7d556b95"
+        },
+        {
+          "path": "boost-meter.js",
+          "bytes": 1741,
+          "sha256": "4b1b4109397664d7772414db7f2bde0dbe06f0118d2728b6637b42dedaded0a0"
+        },
+        {
+          "path": "building-context.js",
+          "bytes": 3104,
+          "sha256": "f6860e87fb733b66ef699e56932e796eb3aec95fff7f7ea831610344a0754f85"
+        },
+        {
+          "path": "cbd-boundary.js",
+          "bytes": 594,
+          "sha256": "d62f99dfd373093b5dd68a6c021103e163669b14c9beac0854134d524e8fef28"
+        },
+        {
+          "path": "cbd-dome.js",
+          "bytes": 6527,
+          "sha256": "5816f7e4a382e8fe6ed4c744a7ed23b3c432bf2796c7488cc03a2a6af942cb64"
+        },
+        {
+          "path": "city-loading.css",
+          "bytes": 1623,
+          "sha256": "619b4b2ea6d0cb559ce4d7cac3cd1395363febaf160a8efaa75b1f71125db652"
+        },
+        {
+          "path": "city-loading.js",
+          "bytes": 2128,
+          "sha256": "2a7f7afdc3163c8bfebe3562527b4d1fda1e06a56c14419b0cf635f66ee740b9"
+        },
+        {
+          "path": "cockpit.css",
+          "bytes": 2293,
+          "sha256": "fe79841c596ab5ba96005b0ff932dfa0de6ddf164cf8c82d3a7cf712b3b4ede9"
+        },
+        {
+          "path": "controller-monitor.css",
+          "bytes": 1422,
+          "sha256": "68257fdd728b89424e8676296bfcdaf2df1e087429aa1181816c3287411ce135"
+        },
+        {
+          "path": "controller-monitor.js",
+          "bytes": 2592,
+          "sha256": "aa6ca7a2f2818b0ba3d8e8caab13be123ce9fb6d5ade504eba6803ae273fd1be"
+        },
+        {
+          "path": "controller-test.html",
+          "bytes": 1353,
+          "sha256": "6cf7d546531b590fbcdda5b7eb9a7d17db2f6d37f4ddb1eefed7781122540773"
+        },
+        {
+          "path": "cycle-model.js",
+          "bytes": 5416,
+          "sha256": "cf1747c36a80dc79d87977a1de066e5310457c36d2db3d0dd628199f50ceac45"
+        },
+        {
+          "path": "district-data.json",
+          "bytes": 2018576,
+          "sha256": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5"
+        },
+        {
+          "path": "district.js",
+          "bytes": 23171,
+          "sha256": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b"
+        },
+        {
+          "path": "driving-data.js",
+          "bytes": 1349,
+          "sha256": "b5808754b464e3e1eca88f3df4a09b1bb0a94238f0db719a9e0cb7d8116b2f35"
+        },
+        {
+          "path": "drone-model.js",
+          "bytes": 3542,
+          "sha256": "d1543c39785c302c538c0ca3d93b438df8da8627aa110b5e0e0cb16c5d22004b"
+        },
+        {
+          "path": "flight-physics.js",
+          "bytes": 3292,
+          "sha256": "e21eb01d2981d1d68032e87c36d50ee5f002068ca47ee414c6746cf3d428640f"
+        },
+        {
+          "path": "flight.css",
+          "bytes": 3176,
+          "sha256": "599c725ab838ed2e075b54fef3efbcf3f75df6d8602c91d156ebd1156e9878f3"
+        },
+        {
+          "path": "flight.js",
+          "bytes": 23617,
+          "sha256": "83f652e4ff57ef4577b5a491bee3eac48931f38de909e26c583afaa665a9ffb3"
+        },
+        {
+          "path": "focus-pointer.css",
+          "bytes": 1489,
+          "sha256": "ff635633524a7851062472ef2df79ca931e4ba7eaf00c00c9bf7a7688f8fbada"
+        },
+        {
+          "path": "focus-pointer.js",
+          "bytes": 1640,
+          "sha256": "fc454969bfdd67a2e6846bf462443428bfd877edd0614a221587f94b400d5e68"
+        },
+        {
+          "path": "gamepad-controls.js",
+          "bytes": 2787,
+          "sha256": "f60e1e7d60677e57dfce7fe0e7a844709e2097998ccbdbf43564c61db394bc07"
+        },
+        {
+          "path": "helicopter.js",
+          "bytes": 5098,
+          "sha256": "362926901054cc3516097c1cdd55d52ba75b8133afbcb7481851b78653d4e6e0"
+        },
+        {
+          "path": "index.html",
+          "bytes": 6462,
+          "sha256": "e9145350323178ac77d4099d6de8357ff87ab697ef451160b53c2d1714ef7b35"
+        },
+        {
+          "path": "kitt-workshop.html",
+          "bytes": 5684,
+          "sha256": "6d6995c61bb1332e7ca16730dee4550f6796080a101a661a7cf32033dd95227f"
+        },
+        {
+          "path": "landmark-data.json",
+          "bytes": 43804,
+          "sha256": "c5ee9dfea757a558d2f96e17802cc6055220ea7dbe8b4becacf26db78996a497"
+        },
+        {
+          "path": "landmarks.js",
+          "bytes": 7266,
+          "sha256": "f4c52aaf50a4c383f6fbc9dd4587fc2f2958765659365d68f3cc54d84136b44e"
+        },
+        {
+          "path": "local-cache.js",
+          "bytes": 1342,
+          "sha256": "b11d66bb6d392aed85642d7ecb48a054ede4faaf5d9168c6dcc096e96d599251"
+        },
+        {
+          "path": "map-scene-camera.js",
+          "bytes": 1414,
+          "sha256": "388da19eaa7ba52b3e45502cd11cd7e43d0a96964d5abfb9834d13ff9edb3f70"
+        },
+        {
+          "path": "mobile-controls.css",
+          "bytes": 1865,
+          "sha256": "ca7527dafa5f094be10b1141133432de18ffc1c50f38afc3d7440cb95168dd3e"
+        },
+        {
+          "path": "mobile-dashboard.css",
+          "bytes": 6524,
+          "sha256": "f885a5008a5824cc37655b85510f0d0ccfef79ef1845fa749c2a7c983af367a2"
+        },
+        {
+          "path": "mobile-dashboard.js",
+          "bytes": 1305,
+          "sha256": "a7f0f8389650db0d21d6009828d888392528b5a81d48efb845422ca48df6ac8a"
+        },
+        {
+          "path": "mobile-drive.css",
+          "bytes": 2969,
+          "sha256": "0187dca22ad3d370cf11ad6817a7d0bfbe25ff8d951f095f97a6c07c848c8cf6"
+        },
+        {
+          "path": "mobile-drive.js",
+          "bytes": 6128,
+          "sha256": "338e44f2fc4325c324266a2ced1148a11b8b65c7210dcb3b2f5f5e61e43c75c1"
+        },
+        {
+          "path": "mobile-menu.css",
+          "bytes": 7607,
+          "sha256": "60a53413e799e5409f9c0120f210af0a3490be085ea1354e3192d81f08bd995a"
+        },
+        {
+          "path": "mobile-menu.js",
+          "bytes": 5142,
+          "sha256": "372d8f1a637112b85fbcbf934b3fb91e9fb5779ceddf8cafecfd31419f935bd0"
+        },
+        {
+          "path": "multiplayer-client.css",
+          "bytes": 8432,
+          "sha256": "0acc979fb93ac498a25a2ee1ba525b66a746ae977b7f111d5622af8dee2ae6b8"
+        },
+        {
+          "path": "multiplayer-client.js",
+          "bytes": 24368,
+          "sha256": "966c19f14b04c657cfbff03fdd08a3efacc21afd64f2e91c2a0ca905efeae3c2"
+        },
+        {
+          "path": "multiplayer-config.json",
+          "bytes": 47,
+          "sha256": "fa1f6ab648dc0f6b27211ddffc9e9c26a5e8d062f597e81e89b5e47a1dc7a4f4"
+        },
+        {
+          "path": "multiplayer-render.js",
+          "bytes": 11429,
+          "sha256": "f99183782e919f5fc22d702844d79118c3c884a1ff4609a609eba4fcd34d7ff4"
+        },
+        {
+          "path": "nearby-tree-lod.js",
+          "bytes": 6245,
+          "sha256": "a94f14df9a7fc6d03538084b04a95a44c03b26285942bcb5f990b1c7e910fabb"
+        },
+        {
+          "path": "npc-detail-state.js",
+          "bytes": 1336,
+          "sha256": "ee05258f9d3346a166c2d05009d03877f395ed46e4e3901e8d44c5aea431c1c2"
+        },
+        {
+          "path": "npc-detailed-batches.js",
+          "bytes": 4359,
+          "sha256": "372e581926a24f20b2c200ced252bf29858fe9cee50a4e4d8ef48614580bf8a3"
+        },
+        {
+          "path": "npc-traffic.js",
+          "bytes": 8152,
+          "sha256": "e2277331c9596d4ce2e70273a2e6aab880dea6cbfcf4a654403f465afef87f40"
+        },
+        {
+          "path": "package.json",
+          "bytes": 369,
+          "sha256": "d49132c930c24ee619101813ef282ea2c644cad65acbdb92228ab6578958b64a"
+        },
+        {
+          "path": "performance-panel.css",
+          "bytes": 1388,
+          "sha256": "4af10d25756ea42c7e3106ea8f4c00c40cb3e7805791d5e499749e620a672940"
+        },
+        {
+          "path": "performance-panel.js",
+          "bytes": 2950,
+          "sha256": "a9c3686327d585d811a479179f56691f207803f42b1776e5fa6703f097253ac7"
+        },
+        {
+          "path": "player-cloud.js",
+          "bytes": 733,
+          "sha256": "3c838937ccd86e970db1c8eacc545e00ae1e90a929501d362b09ee69165c206e"
+        },
+        {
+          "path": "player-stats-ui.js",
+          "bytes": 1660,
+          "sha256": "78faf07dbf6fe6bc3b53319f0d8b28279c8105745ed97835980c41a0ba94b94f"
+        },
+        {
+          "path": "player-stats.js",
+          "bytes": 11506,
+          "sha256": "02da3609a7b42c37a508fa7d014d518d0a540b96442b96ed08639bb7eafaeb97"
+        },
+        {
+          "path": "release.json",
+          "bytes": 140,
+          "sha256": "f4bc25d221146a11ff2b270e8954df0349078ee790958ba7dcaf1ed1f2f83501"
+        },
+        {
+          "path": "render-quality.js",
+          "bytes": 3452,
+          "sha256": "f9637c8e4dde3c580288abd95f3785f6df5ad13c4ac72e631e223f1e39e09379"
+        },
+        {
+          "path": "resume-overlay.css",
+          "bytes": 795,
+          "sha256": "153309d188d23de5e0270c196cc9fd6638a935c3343e7576e2cbb8a24ec57e3b"
+        },
+        {
+          "path": "resume-overlay.js",
+          "bytes": 1420,
+          "sha256": "51409f9b18e4af009ada5cf8c067af2c8be9c8333cc30467414e2f3582eaa793"
+        },
+        {
+          "path": "social-controls.css",
+          "bytes": 3602,
+          "sha256": "85a74734d985c740013d2b6a01eb8a1ecd1e570142e612542b07108bb889032b"
+        },
+        {
+          "path": "social-controls.js",
+          "bytes": 3415,
+          "sha256": "3e39bfe0d896824b79d842fbc0f886e61bb1dc12f22ea3ae0cca668625f29286"
+        },
+        {
+          "path": "social-entry.js",
+          "bytes": 85,
+          "sha256": "517018e8656597bf2fe13ea2168883280d0d6c44ff60d91c3460a8c3a440b06c"
+        },
+        {
+          "path": "street-detail.js",
+          "bytes": 4621,
+          "sha256": "44868698b2da722ba951ae08c2f62b6d48161c537dfb8b2c0ef2aa38c9b11ca0"
+        },
+        {
+          "path": "street-furniture.js",
+          "bytes": 6697,
+          "sha256": "de96b87d63196a7cf076b53f8c34d2da8f41916e62b8fe0d5fa7d620824836f8"
+        },
+        {
+          "path": "street-patch.js",
+          "bytes": 7970,
+          "sha256": "18580abfc4b45a04391f4467d348b6e739cfea597ecc8cd9296b212786e9e190"
+        },
+        {
+          "path": "street-surface-coverage.js",
+          "bytes": 7013,
+          "sha256": "af14ada4dbf36f3b24de72061d3f68bac5fbf8ed04a28c1fdf399b35f2a00c82"
+        },
+        {
+          "path": "street-surface-materials.js",
+          "bytes": 3583,
+          "sha256": "e47b0424f178ed63563620ccd93a2a88a3afa6145386ea25b81a40d13f4a74a4"
+        },
+        {
+          "path": "styles.css",
+          "bytes": 4914,
+          "sha256": "4ffb0f7388a57afadc11a7d3bf0ee0c60cd00cca19ee34799474653c90fb9766"
+        },
+        {
+          "path": "supabase-config.json",
+          "bytes": 126,
+          "sha256": "9c7791f3d1dd7b57c420125c5ee7edca605e930f264a293869ff27d4b11b8397"
+        },
+        {
+          "path": "supercar-model.js",
+          "bytes": 3446,
+          "sha256": "73c4db558b2feb534ddc98cad4af1b4d34ef3c15803f96ac867e147617e145e3"
+        },
+        {
+          "path": "sw.js",
+          "bytes": 3753,
+          "sha256": "80b3d25506c217e21fa24696fb6859cc8818e81b1da885c8fd0759a48b9e92b6"
+        },
+        {
+          "path": "tilt-controls.js",
+          "bytes": 3471,
+          "sha256": "6eafbb332a12712f34e9dd92bae8827fc2b862dbcb1c3aa96377ef2675770055"
+        },
+        {
+          "path": "traffic-simulation.js",
+          "bytes": 17659,
+          "sha256": "e261033f9e1fc5c6374e4b3c329d40e8ccaa195adb9b761f4531f5cf6d592d16"
+        },
+        {
+          "path": "vehicle-boost.js",
+          "bytes": 943,
+          "sha256": "e148c6d38e65b207b63a81976952c8cb28434ed30f95eab3436999a6314bea91"
+        },
+        {
+          "path": "vehicle-colors.js",
+          "bytes": 1524,
+          "sha256": "f44be62559f82194ee91d1307ada188802b4ce9b754c4965f39225bcfa6243be"
+        },
+        {
+          "path": "vehicle-contact-shadow.js",
+          "bytes": 1742,
+          "sha256": "ddda8bf366f43229b4d6a07ce554198171fcebcfc62d20772aff6135dd7f6273"
+        },
+        {
+          "path": "vehicle-environment.js",
+          "bytes": 1363,
+          "sha256": "546e969b98b4eff1765ded7826bef4e72e150843dc7aed1e11fae9128d4a9567"
+        },
+        {
+          "path": "vehicle-models.js",
+          "bytes": 5982,
+          "sha256": "2771ed04f12e34dbd108b043f15ab5590628e03cc7c220e550f8d810a156c909"
+        },
+        {
+          "path": "vehicle-review.html",
+          "bytes": 5276,
+          "sha256": "655c1debc824964c368626306d96f418a68d91658eb4ccc9b2b79249be538893"
+        },
+        {
+          "path": "vehicle-shell.css",
+          "bytes": 5154,
+          "sha256": "f4c64c1d2efc93c2989dd7ea121f7634b7db655960cf1c22be4d202d9448212a"
+        },
+        {
+          "path": "vehicle-shell.js",
+          "bytes": 4953,
+          "sha256": "312692c3c3d9cff7f674e09d12d13d1d4b6446afe3b5a431681e63cf77de5bbc"
+        },
+        {
+          "path": "vehicle-tuning.js",
+          "bytes": 2259,
+          "sha256": "94a1079e12f90d2d8f025e4fa31c3df11bb2752facb4f047402d921a6e307d4f"
+        },
+        {
+          "path": "verify-street-patch.html",
+          "bytes": 1173,
+          "sha256": "2790f5ed2a38bbd0ad504fbfcbaba9a10e20d6afbc3a568868b4593305fe3e19"
+        },
+        {
+          "path": "vidhana-road-network.json",
+          "bytes": 229346,
+          "sha256": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+        },
+        {
+          "path": "vidhana-street-data.json",
+          "bytes": 2293554,
+          "sha256": "3a3af6a93af78dd5d601efa0dea4a172c4e068f6e9c525ad2184519101acebf6"
+        },
+        {
+          "path": "vidhana-streets.js",
+          "bytes": 2110,
+          "sha256": "5edd582829635c1375f2a2284ee9c21dad5f324e2ba039643a69061119166396"
+        },
+        {
+          "path": "voice-chat.css",
+          "bytes": 1317,
+          "sha256": "6ab57703708ebb7f0bb9424916c2311283c8eee53cec7059b5b08ec1938abfde"
+        },
+        {
+          "path": "voice-chat.js",
+          "bytes": 5318,
+          "sha256": "5a1e92ffd7c3d0d7cae7afb920cd08e79bee4ba487db885ce20e77d1bf3614c1"
+        }
+      ],
+      "snapshotBytes": 17309474,
+      "manifestSha256": "1a89428052145f997aeab523a8b41fed1c67d0bb54de51f9b51b5a7587056ce2"
+    }
+  }
+}

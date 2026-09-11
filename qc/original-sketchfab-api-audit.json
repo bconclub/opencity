@@ -1,0 +1,47 @@
+[
+  {
+    "uid": "e6c147a0d2c54bdbb101b56fa61646fe",
+    "name": "Knight Rider KITT (Supercar)",
+    "user": "FG",
+    "username": "FGraphic",
+    "license": {},
+    "isDownloadable": false,
+    "isPurchasable": null,
+    "faceCount": 988509,
+    "vertexCount": 503467,
+    "publishedAt": "2022-11-28T15:51:17.711931",
+    "description": "KITT is a fictional automobile featured in the television series Knight Rider (Supercar); it is a black car equipped with Artificial Intelligence. The name is an acronym meaning Knight Industries Two Thousand; Car model is a 1982 Pontiac Firebird Trans Am.\n\nModel purchased on Hum-3d with Royalty Free License and edited by me in the internal and external parts. \n\nhttps://hum3d.com/it/3d-models/pontiac-firebird-knight-rider/\n\nThis model is not for sale but for illustrative purposes only.",
+    "archives": null,
+    "viewerUrl": "https://sketchfab.com/3d-models/knight-rider-kitt-supercar-e6c147a0d2c54bdbb101b56fa61646fe",
+    "status": {
+      "warning": {},
+      "processing": "SUCCEEDED"
+    }
+  },
+  {
+    "uid": "5a86defda4b24836a504fe5e597fdb17",
+    "name": "Tesla - Cybertruck",
+    "user": "bubelrobert",
+    "username": "bubelrobert",
+    "license": {
+      "uri": "https://api.sketchfab.com/v3/licenses/5b54cf13b1a4422ca439696eb152070d",
+      "label": "Editorial",
+      "fullName": "Editorial",
+      "requirements": "Use only in connection with events that are newsworthy or of public interest",
+      "url": "https://sketchfab.com/licenses",
+      "slug": "ed"
+    },
+    "isDownloadable": false,
+    "isPurchasable": null,
+    "faceCount": 121332,
+    "vertexCount": 64469,
+    "publishedAt": "2019-11-23T21:27:31.646776",
+    "description": "Cyberquad ATV: https://skfb.ly/6P6zS\n\nThe Tesla Cybertruck (stylised as Cybrtrk) is an upcoming all-electric battery-powered light commercial vehicle in development by Tesla, Inc. Three models have been announced, with range estimates of 250–500 miles (400–800 km) and an estimated 0–60 mph time of 2.9–6.5 seconds, depending on the model.\n\nIn additional download there is a file with back cover.\n\nThis model is my interpretation and may not represent the original product fully, some angles and proportions may be different, please remember that this is a fanart and not an official product.",
+    "archives": null,
+    "viewerUrl": "https://sketchfab.com/3d-models/tesla-cybertruck-5a86defda4b24836a504fe5e597fdb17",
+    "status": {
+      "warning": {},
+      "processing": "SUCCEEDED"
+    }
+  }
+]
