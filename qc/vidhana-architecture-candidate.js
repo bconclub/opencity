@@ -64,7 +64,7 @@ export function buildLandmarks(T,data,xy){
   const H=D.columnHeight,profile=[[0,0],[1.03,0],[1.03,.18],[.88,.30],[.80,.46],[.70,.56],[.63,.75],[.59,1.05],[.57,H-2.0],[.67,H-1.9],[.67,H-1.72],[.59,H-1.62],[.68,H-1.45],[.68,H-1.22],[.76,H-1.08],[.76,H-.83],[.87,H-.62],[.98,H-.42],[1.02,H-.24],[1.02,H],[0,H]];
   const g=new T.LatheGeometry(profile.map(([r,z])=>new T.Vector2(r,z)),24);g.rotateX(Math.PI/2);append(g,stone,new T.Matrix4().makeTranslation(center[0],center[1],D.landingZ));
  }
- let stairPlacement=null;
+ let stairPlacement=null,foyer=null;
  if(portico.length){
   const ring=portico.slice(0,-1),shape=new T.Shape(ring.map(p=>new T.Vector2(...p)));
   const canopy=new T.ExtrudeGeometry(shape,{depth:D.canopyTop-D.canopyBottom,bevelEnabled:false});append(canopy,stone,new T.Matrix4().makeTranslation(0,0,D.canopyBottom));
@@ -87,8 +87,23 @@ export function buildLandmarks(T,data,xy){
   // Landing reaches behind all mapped columns. Its new footprint is estimated.
   const rearV=Math.min(...outward),landingFront=topV;quad(position(-topHalfWidth,rearV,D.landingZ),position(-topHalfWidth,landingFront,D.landingZ),position(topHalfWidth,landingFront,D.landingZ),position(topHalfWidth,rearV,D.landingZ));
   const stairGeometry=new T.BufferGeometry();stairGeometry.setAttribute('position',new T.Float32BufferAttribute(vertices,3));stairGeometry.computeVertexNormals();append(stairGeometry,stone,new T.Matrix4());
+  // Photo-supported closed foyer behind the columns. The mapped canopy rear
+  // supplies alignment only; opening size and recess depth are estimates.
+  const back=rearV,half=(Math.max(...along)-Math.min(...along))/2,doorHalf=2.6,doorTop=D.landingZ+6.8,recess=.35;
+  function face(batch,a,b,c,d){for(const p of [a,b,c,a,c,d])batch.p.push(...p);}
+  function panel(batch,left,right,bottom,top,y){face(batch,position(left,y,bottom),position(right,y,bottom),position(right,y,top),position(left,y,top));}
+  panel(stone,-half,-doorHalf,D.landingZ,D.canopyBottom,back);
+  panel(stone,doorHalf,half,D.landingZ,D.canopyBottom,back);
+  panel(stone,-doorHalf,doorHalf,doorTop,D.canopyBottom,back);
+  face(stone,position(-doorHalf,back,D.landingZ),position(-doorHalf,back-recess,D.landingZ),position(-doorHalf,back-recess,doorTop),position(-doorHalf,back,doorTop));
+  face(stone,position(doorHalf,back-recess,D.landingZ),position(doorHalf,back,D.landingZ),position(doorHalf,back,doorTop),position(doorHalf,back-recess,doorTop));
+  face(stone,position(-doorHalf,back,doorTop),position(-doorHalf,back-recess,doorTop),position(doorHalf,back-recess,doorTop),position(doorHalf,back,doorTop));
+  panel(material('#253b39'),-doorHalf,doorHalf,D.landingZ,doorTop,back-recess);
+  // Stone threshold closes the short recess floor behind the mapped landing.
+  face(stone,position(-doorHalf,back-recess,D.landingZ),position(-doorHalf,back,D.landingZ),position(doorHalf,back,D.landingZ),position(doorHalf,back-recess,D.landingZ));
+  foyer={backV:back,width:half*2,entryWidth:doorHalf*2,entryHeight:6.8,recessDepth:recess,baseZ:D.landingZ,topZ:D.canopyBottom,estimated:true};
   stairPlacement={tangent:u,outward:v,centerAlong:cx,topV,bottomV,landingRearV:rearV,topWidth:topHalfWidth*2,estimated:true};
  }
  for(const b of batches.values()){if(!b.p.length)continue;const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(b.p,3));g.computeVertexNormals();const normals=g.getAttribute('normal');for(const part of b.preservedNormals)normals.array.set(part.values,part.start);g.computeBoundingSphere();const mesh=new T.Mesh(g,b.material);mesh.castShadow=mesh.receiveShadow=true;mesh.frustumCulled=false;group.add(mesh);}
- return{group,domes,parts:data.features.length,architecture:{...D,columns:columns.length,columnCenters,stairPlacement,reviewOnly:true}};
+ return{group,domes,parts:data.features.length,architecture:{...D,columns:columns.length,columnCenters,stairPlacement,foyer,reviewOnly:true}};
 }
