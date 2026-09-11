@@ -1,0 +1,11 @@
+{
+  "productionUnchanged": true,
+  "productionSHA256": {
+    "vidhana-street-data.json": "3a3af6a93af78dd5d601efa0dea4a172c4e068f6e9c525ad2184519101acebf6",
+    "vidhana-road-network.json": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+  },
+  "candidateFootprintSHA256": "03676f34203016d70b73f7f883d72e8c6897b171e21c28af7cc6035589a7284d",
+  "zebraLocations": 21,
+  "zebraPolygons": 165,
+  "note": "Browser preview intercepts surfaces only. New motor graph is isolated pending junction and boundary checks."
+}

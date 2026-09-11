@@ -1,0 +1,243 @@
+{
+  "probe": [
+    77.59020226666667,
+    12.975491600004656
+  ],
+  "rawConverterGroundGapM": 0.8253658794658216,
+  "finalGroundGapM": 0.8253636943441265,
+  "rawVsFinalCoverageDifferenceWithin44mSquareM2": 1.1347007932277788,
+  "uncoveredOriginalFirstSegmentM": 4.675313087092377,
+  "nearbyWays": [
+    {
+      "id": "22895320",
+      "tags": {
+        "dog": "leashed",
+        "historic:name": "Meade's Park",
+        "leisure": "park",
+        "name": "Cubbon Park",
+        "name:etymology:wikidata": "Q6767214",
+        "name:hi": "\u0915\u092c\u094d\u092c\u0928 \u092a\u093e\u0930\u094d\u0915",
+        "name:kn": "\u0c95\u0cac\u0ccd\u0cac\u0ca8\u0ccd \u0c89\u0ca6\u0ccd\u0caf\u0cbe\u0ca8",
+        "name:ml": "\u0d15\u0d2c\u0d4d\u0d2c\u0d7a \u0d2a\u0d3e\u0d7c\u0d15\u0d4d\u0d15\u0d4d",
+        "name:te": "\u0c15\u0c2c\u0c4d\u0c2c\u0c28\u0c4d \u0c2a\u0c3e\u0c30\u0c4d\u0c15\u0c4d",
+        "official_name": "Sri Chamarajendra Park",
+        "official_name:kn": "\u0cb6\u0ccd\u0cb0\u0cc0 \u0c9a\u0cbe\u0cae\u0cb0\u0cbe\u0c9c\u0cc7\u0c82\u0ca6\u0ccd\u0cb0 \u0c89\u0ca6\u0ccd\u0caf\u0cbe\u0ca8",
+        "pets": "yes",
+        "start_date": "1864",
+        "website": "https://cubbonpark.in/",
+        "wikidata": "Q3633776",
+        "wikimedia_commons": "Category:Cubbon Park",
+        "wikipedia": "en:Cubbon Park"
+      },
+      "distanceM": 7.137558833703005,
+      "closed": true,
+      "containsProbe": true
+    },
+    {
+      "id": "38318887",
+      "tags": {
+        "alt_name": "Ringwood Circle",
+        "leisure": "garden",
+        "name": "Cubbon Park Circle",
+        "name:kn": "\u0c95\u0cac\u0ccd\u0cac\u0ca8\u0ccd \u0caa\u0cbe\u0cb0\u0ccd\u0c95\u0ccd \u0cb5\u0cc3\u0ca4\u0ccd\u0ca4"
+      },
+      "distanceM": 10.713446688708485,
+      "closed": true,
+      "containsProbe": false
+    },
+    {
+      "id": "52057928",
+      "tags": {
+        "access": "yes",
+        "foot": "yes",
+        "highway": "service",
+        "motor_vehicle": "yes",
+        "oneway": "yes"
+      },
+      "distanceM": 9.762289975783116e-10,
+      "closed": false,
+      "containsProbe": false
+    },
+    {
+      "id": "52059625",
+      "tags": {
+        "highway": "footway"
+      },
+      "distanceM": 9.072082149938863,
+      "closed": false,
+      "containsProbe": false
+    },
+    {
+      "id": "403473924",
+      "tags": {
+        "landuse": "commercial",
+        "name": "Karnataka Wine Board"
+      },
+      "distanceM": 7.137460650249322,
+      "closed": true,
+      "containsProbe": false
+    },
+    {
+      "id": "1091198031",
+      "tags": {
+        "access": "permissive",
+        "bicycle": "no",
+        "bicycle:conditional": "yes @ (Mo-Su 08:00-21:00)",
+        "cycleway": "no",
+        "foot": "yes",
+        "highway": "unclassified",
+        "junction": "circular",
+        "lanes": "2",
+        "maxspeed": "25",
+        "motor_vehicle:conditional": "yes @ (Mo-Sa 08:00-21:00)",
+        "note": "Vehicular Traffic Allowed only between - 8AM to 9PM from Monday to Saturday. Sunday Vehicles not permitted.",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "surface": "asphalt"
+      },
+      "distanceM": 2.6686393893521125,
+      "closed": false,
+      "containsProbe": false
+    },
+    {
+      "id": "1317160300",
+      "tags": {
+        "area": "yes",
+        "junction": "yes",
+        "name": "Ringwood Circle"
+      },
+      "distanceM": 0.15709335216222323,
+      "closed": true,
+      "containsProbe": true
+    },
+    {
+      "id": "1370351127",
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway",
+        "smoothness": "good",
+        "surface": "paving_stones",
+        "tactile_paving": "yes"
+      },
+      "distanceM": 5.867177873365708,
+      "closed": false,
+      "containsProbe": false
+    }
+  ],
+  "nearestSourceTriangles": [
+    {
+      "sourceMeshIndex": 323,
+      "triangle": 1,
+      "gapM": 0.8253658794658214,
+      "color": [
+        77,
+        77,
+        77
+      ]
+    },
+    {
+      "sourceMeshIndex": 323,
+      "triangle": 0,
+      "gapM": 1.5593941192156906,
+      "color": [
+        77,
+        77,
+        77
+      ]
+    },
+    {
+      "sourceMeshIndex": 1074,
+      "triangle": 1,
+      "gapM": 1.6930874908326956,
+      "color": [
+        77,
+        77,
+        77
+      ]
+    },
+    {
+      "sourceMeshIndex": 1075,
+      "triangle": 0,
+      "gapM": 2.077912068668729,
+      "color": [
+        77,
+        77,
+        77
+      ]
+    },
+    {
+      "sourceMeshIndex": 78,
+      "triangle": 1,
+      "gapM": 2.3345167335927046,
+      "color": [
+        77,
+        77,
+        77
+      ]
+    },
+    {
+      "sourceMeshIndex": 78,
+      "triangle": 0,
+      "gapM": 2.334516733592705,
+      "color": [
+        77,
+        77,
+        77
+      ]
+    },
+    {
+      "sourceMeshIndex": 1074,
+      "triangle": 0,
+      "gapM": 2.7469516604154456,
+      "color": [
+        77,
+        77,
+        77
+      ]
+    },
+    {
+      "sourceMeshIndex": 80,
+      "triangle": 3,
+      "gapM": 3.09113071098514,
+      "color": [
+        77,
+        77,
+        77
+      ]
+    }
+  ],
+  "rawVsFinalDifferenceWithin10mOfProbeM2": 0.00038367721405266114,
+  "clearanceTests": [
+    {
+      "vehicleHalfWidthM": 0,
+      "startCovered": true,
+      "endCovered": true,
+      "sameConnectedSurface": true
+    },
+    {
+      "vehicleHalfWidthM": 0.1,
+      "startCovered": true,
+      "endCovered": true,
+      "sameConnectedSurface": true
+    },
+    {
+      "vehicleHalfWidthM": 0.25,
+      "startCovered": true,
+      "endCovered": true,
+      "sameConnectedSurface": true
+    },
+    {
+      "vehicleHalfWidthM": 0.5,
+      "startCovered": true,
+      "endCovered": true,
+      "sameConnectedSurface": false
+    },
+    {
+      "vehicleHalfWidthM": 1,
+      "startCovered": true,
+      "endCovered": true,
+      "sameConnectedSurface": false
+    }
+  ],
+  "interpretation": "Not introduced by clipping or cleanup. Raw converter leaves a narrow/degenerate acute-angle junction join; no mapped garden island covers this sample. Real-world island/kerb layout remains unverified."
+}
