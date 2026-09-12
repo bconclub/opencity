@@ -20,3 +20,9 @@ body.touch-ride-input.auto-active #auto-controls,
 body.touch-ride-input #mobile-stick,
 body.touch-ride-input #mobile-ride-actions{display:none!important}
 body.mobile-tools-open .floating-ride-stick{display:none!important}
+
+/* Dedicated hold controls remain next to the compact meter at every screen size. */
+#flight-hud .flight-quick-controls{position:absolute;bottom:calc(100% + 8px);right:0;display:flex;gap:6px;pointer-events:auto}
+#flight-hud .flight-quick-controls button{min-width:72px;min-height:44px;padding:8px 10px;border:1px solid #8ab6a580;border-radius:12px;background:#14372fee;color:#effff6;font:600 12px system-ui;touch-action:none;user-select:none}
+#flight-hud .flight-quick-controls button.held{background:#427f69;border-color:#d3ffea}
+body.mobile-tools-open #flight-hud .flight-quick-controls{display:none}
