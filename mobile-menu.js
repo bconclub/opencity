@@ -16,9 +16,9 @@ function show(key){if(active===key){shut();return;}shut();const auto=window.auto
 }
 bar.addEventListener('click',e=>{const b=e.target.closest('[data-tool]');if(b)show(b.dataset.tool);});close.onclick=shut;
 document.addEventListener('keydown',e=>{if((active||bar.classList.contains('expanded'))&&e.key==='Escape'){e.stopImmediatePropagation();shut();}},true);
-document.getElementById('vehicle-picker').addEventListener('click',e=>{if(e.target.closest('[data-ride]'))shut();});
+document.getElementById('vehicle-picker').addEventListener('click',e=>{if(e.target.closest('#ride-now'))shut();});
 mobile.addEventListener('change',shut);
-window.addEventListener('multiplayer-ready',()=>{if(mobile.matches)show('rides');});
+window.addEventListener('multiplayer-ready',shut);
 // Late controller settings are created by the vehicle dashboard, retaining their handlers.
 document.addEventListener('click',e=>{if(mobile.matches&&e.target.closest('.controller-options > summary')){e.preventDefault();show('settings');}},true);
 
