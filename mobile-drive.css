@@ -13,7 +13,7 @@ body.flight-active #flight-hud[hidden],body.auto-active #auto-hud[hidden]{displa
 .floating-ride-stick{position:fixed;z-index:30;width:96px;height:96px;transform:translate(-50%,-50%);border:1px solid #d0efdc88;border-radius:50%;background:#143b3030;pointer-events:none;display:grid;place-items:center;box-sizing:border-box}.floating-ride-stick[hidden]{display:none}.floating-ride-stick span{width:38px;height:38px;border-radius:50%;border:1px solid #eefff3b0;background:#ccebd570;box-sizing:border-box}
 #mobile-drive-demo{position:fixed;z-index:35;left:50%;top:90px;transform:translateX(-50%);width:min(310px,85vw);padding:16px;background:#12382ff2;border:1px solid #b5ddc966;border-radius:16px;color:#effff6;text-align:center}#mobile-drive-demo[hidden]{display:none}#mobile-drive-demo p{font-size:13px;line-height:1.6;margin:8px 0}#mobile-drive-demo button{min-height:40px;padding:8px 24px;border:1px solid #d3eade66;background:#315947;color:white;border-radius:10px}
 @media(max-width:760px){.mobile-vehicle-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}.mobile-vehicle-actions button{min-height:44px!important}body.mobile-tools-open .floating-ride-stick{display:none}}
-/* Touch devices use only the floating left pad, including wide landscape/tablets.
+/* Touch devices use only the floating movement pad, including wide landscape/tablets.
    Stronger than the old landscape rules, regardless of stylesheet load order. */
 body.touch-ride-input.flight-active #flight-controls,
 body.touch-ride-input.auto-active #auto-controls,
