@@ -8,8 +8,9 @@ files.push('tyre-effects.js','driving-hud.js','driving-hud.css');
 files.push('street-detail.js','street-surface-coverage.js','assets/streets/vidhana-coverage.png');
 files.push('npc-detail-state.js','npc-detailed-batches.js');
 files.push('landmark-focus.js','stair-collision.js','vidhana-driving-world.js','vidhana-building-passage.js','vehicle-footprint.js');
+files.push('assets/vehicles/cybercab-original.glb','assets/vehicles/cybertruck-original.glb');
 const allowed=new Set(files.map(f=>new URL(f,root).href));
-self.addEventListener('install',event=>event.waitUntil(caches.open(cacheName).then(cache=>cache.addAll([...allowed]))));
+self.addEventListener('install',event=>event.waitUntil(caches.open(cacheName).then(cache=>cache.addAll([...allowed].filter(url=>!url.endsWith('-original.glb'))))));
 // Old tabs retain their old worker until closed, so releases cannot mix assets.
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('opencity-assets-')&&k!==cacheName).map(k=>caches.delete(k))))));
 self.addEventListener('fetch',event=>{

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cybercab",
+    "bytes": 60552920,
+    "sha256": "558c39dea82ece80095e56667a2d0a2dc5c4d74cb98df919cc530817ed290f5f",
+    "triangles": 1942948,
+    "dimensions": [
+      1.8765968986519836,
+      4.449999999999999,
+      1.4278218270279448
+    ],
+    "ground": 0,
+    "sourceIdentical": true,
+    "wheelRig": "Not separated in supplied mesh"
+  },
+  {
+    "id": "cybertruck",
+    "bytes": 61516784,
+    "sha256": "5165690281d01d4715259696b99404bc5076a982a92b1954e3ac2d78dd14c881",
+    "triangles": 1986389,
+    "dimensions": [
+      2.2622509598572913,
+      5.683,
+      1.9351793618733555
+    ],
+    "ground": 0,
+    "sourceIdentical": true,
+    "wheelRig": "Not separated in supplied mesh"
+  }
+]

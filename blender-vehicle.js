@@ -47,7 +47,7 @@ export function bindVehicleWheelRig(T,root){
 export function loadVehicleAsset(id,lod=false){
  if(!['cybertruck','cybercab','kitt'].includes(id))throw Error('Unknown vehicle asset');
  // User chose the original Meshy appearance after the three-way comparison.
- const file=id==='cybercab'?(lod?'cybercab-meshy-traffic':'cybercab-rigged'):id;
+ const file=id==='cybercab'?(lod==='detail'?'cybercab-rigged':lod?'cybercab-meshy-traffic':'cybercab-original'):id==='cybertruck'?'cybertruck-original':id;
  if(!templates.has(file))templates.set(file,new GLTFLoader().loadAsync('./assets/vehicles/'+file+'.glb').then(g=>g.scene).catch(e=>{templates.delete(file);throw e;}));
  return templates.get(file);
 }
@@ -55,11 +55,11 @@ export function createBlenderVehicle(T,id){
  const group=new T.Group(),body=new T.Group(),wheels=[],front=new T.Group(),paint=[],scanners=[];body.add(front);group.add(body);let rig;
  // A model-local default must not become a stored choice for other vehicles.
  let selected=selectedVehicleColor()||(id==='kitt'?'black':null);
- const setPaint=color=>{if(id==='cybercab')return;const hex=paintHex(color);if(!hex)return;selected=color;paint.forEach(m=>m.color.set(hex));group.userData.paintColor=hex;};
- group.userData.originalReconstruction=id!=='cybercab';group.userData.vehicle=id;
+ const setPaint=color=>{if(['cybercab','cybertruck'].includes(id))return;const hex=paintHex(color);if(!hex)return;selected=color;paint.forEach(m=>m.color.set(hex));group.userData.paintColor=hex;};
+ group.userData.originalReconstruction=id==='kitt';group.userData.vehicle=id;
  group.userData.sharedAssetResources=true;
- group.userData.assetSource=id==='cybercab'?'User-selected Meshy body with Blender wheel repair':'Original Blender reconstruction';
- const ready=loadVehicleAsset(id).then(source=>{const root=source.clone(true),materials=new Map();root.rotation.x=Math.PI/2;body.add(root);root.traverse(o=>{if(!o.isMesh)return;const original=o.material;if(!materials.has(original)){const copy=original.clone();materials.set(original,copy);if(copy.name==='BodyPaint')paint.push(copy);}o.material=materials.get(original);if(/^Scanner_\d+$/.test(o.name)){o.material=o.material.clone();scanners.push(o);}});rig=bindVehicleWheelRig(T,root);wheels.push(...rig.wheels);setPaint(selected);});
+ group.userData.assetSource=id==='kitt'?'Original Blender reconstruction':'Unmodified user-supplied GLB; runtime orientation and uniform scale only';
+ const ready=loadVehicleAsset(id).then(source=>{const root=source.clone(true),materials=new Map();root.rotation.x=Math.PI/2;body.add(root);root.traverse(o=>{if(!o.isMesh)return;const original=o.material;if(!materials.has(original)){const copy=original.clone();materials.set(original,copy);if(copy.name==='BodyPaint')paint.push(copy);}o.material=materials.get(original);if(/^Scanner_\d+$/.test(o.name)){o.material=o.material.clone();scanners.push(o);}});if(['cybercab','cybertruck'].includes(id)){root.quaternion.premultiply(new T.Quaternion().setFromAxisAngle(new T.Vector3(0,0,1),id==='cybercab'?Math.PI/2:-Math.PI/2));root.updateWorldMatrix(true,true);let box=new T.Box3().setFromObject(root);root.scale.multiplyScalar((id==='cybercab'?4.45:5.683)/(box.max.y-box.min.y));root.updateWorldMatrix(true,true);box=new T.Box3().setFromObject(root);root.position.add(new T.Vector3(-(box.min.x+box.max.x)/2,-(box.min.y+box.max.y)/2,-box.min.z));root.updateWorldMatrix(true,true);group.userData.visualHeight=new T.Box3().setFromObject(root).max.z;group.userData.wheelAnimation='Pending source mesh rigging';}else{rig=bindVehicleWheelRig(T,root);wheels.push(...rig.wheels);}setPaint(selected);});
  const updateDrive=(angle,steer=0,time=0,slipAngle=0)=>{rig?.update(angle,steer,slipAngle);const at=(Math.sin(time*3.4)+1)*3.5;scanners.forEach(o=>{o.material.emissiveIntensity=.08+2.8*Math.exp(-Math.pow((Number(o.name.split('_')[1])-at)/.9,2));});};
  return{group,body,front,wheels,get wheelRadius(){return rig?.wheelRadius||(id==='cybertruck'?.43925:id==='kitt'?.324:.35);},get wheelbase(){return rig?.wheelbase;},getWheelContacts:()=>rig?.getWheelContacts(group)||[],setPaint,ready,updateDrive};
 }
