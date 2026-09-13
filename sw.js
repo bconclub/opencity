@@ -9,6 +9,7 @@ files.push('street-detail.js','street-surface-coverage.js','assets/streets/vidha
 files.push('npc-detail-state.js','npc-detailed-batches.js');
 files.push('landmark-focus.js','stair-collision.js','vidhana-driving-world.js','vidhana-building-passage.js','vehicle-footprint.js');
 files.push('assets/vehicles/cybercab-original.glb','assets/vehicles/cybertruck-original.glb');
+files.push('assets/vehicles/kitt-original.glb','assets/vehicles/yulu-original.glb','assets/vehicles/delivery-original.glb','assets/vehicles/previews/yulu.webp','assets/vehicles/previews/delivery.webp');
 const allowed=new Set(files.map(f=>new URL(f,root).href));
 self.addEventListener('install',event=>event.waitUntil(caches.open(cacheName).then(cache=>cache.addAll([...allowed].filter(url=>!url.endsWith('-original.glb'))))));
 // Old tabs retain their old worker until closed, so releases cannot mix assets.

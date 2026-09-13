@@ -1,0 +1,114 @@
+{
+  "kitt": {
+    "source": "D:\\Brands BCON\\OpenCity\\Models\\kNIGHT rIDER.glb",
+    "sha256": "8e18087a2c4b2663017edbf7444ac72b4848497388669eb2f597277884efd074",
+    "bytes": 71402328,
+    "triangles": 1940188,
+    "materials": 1,
+    "blenderBoundsMin": [
+      -0.9522380232810974,
+      -0.40601301193237305,
+      -0.2576940059661865
+    ],
+    "blenderBoundsMax": [
+      0.9508200287818909,
+      0.40697601437568665,
+      0.2568880021572113
+    ],
+    "blenderDimensions": [
+      1.9030580520629883,
+      0.8129889965057373,
+      0.5145820379257202
+    ],
+    "suggestedRotationZ": -1.5707963267948966,
+    "targetLength": 4.8,
+    "uniformScale": 2.5222562153564443,
+    "meshNames": [
+      "Mesh_0"
+    ]
+  },
+  "yulu": {
+    "source": "D:\\Brands BCON\\OpenCity\\Models\\Yulu.glb",
+    "sha256": "ec5f40766ee4c2b7cb48195789103a5f623e24fd77db3b8cd77d1dfad3626d04",
+    "bytes": 63323368,
+    "triangles": 1951358,
+    "materials": 1,
+    "blenderBoundsMin": [
+      -0.9522920250892639,
+      -0.35932400822639465,
+      -0.5892419815063477
+    ],
+    "blenderBoundsMax": [
+      0.9507619738578796,
+      0.3601270020008087,
+      0.5806609988212585
+    ],
+    "blenderDimensions": [
+      1.9030539989471436,
+      0.7194510102272034,
+      1.169903039932251
+    ],
+    "suggestedRotationZ": -1.5707963267948966,
+    "targetLength": 1.9,
+    "uniformScale": 0.9983952116183601,
+    "meshNames": [
+      "Mesh_0"
+    ]
+  },
+  "delivery": {
+    "source": "D:\\Brands BCON\\OpenCity\\Models\\Delivery Rider.glb",
+    "sha256": "12bcd34b29681051be15e0fc90343863d683f21b07a5f0e5b7322b4e2fa6311c",
+    "bytes": 63620220,
+    "triangles": 1960246,
+    "materials": 1,
+    "blenderBoundsMin": [
+      -0.9518070220947266,
+      -0.4088590145111084,
+      -0.8723419904708862
+    ],
+    "blenderBoundsMax": [
+      0.9502829909324646,
+      0.4092020094394684,
+      0.8733369708061218
+    ],
+    "blenderDimensions": [
+      1.902090072631836,
+      0.8180609941482544,
+      1.7456789016723633
+    ],
+    "suggestedRotationZ": -1.5707963267948966,
+    "targetLength": 1.9,
+    "uniformScale": 0.9989012018291054,
+    "meshNames": [
+      "Mesh_0"
+    ]
+  },
+  "driver": {
+    "source": "D:\\Brands BCON\\OpenCity\\Models\\Auto Driver.glb",
+    "sha256": "d70a7e554177acb342ec5db9914b0994d09498283854f9e4a2ea0c148ea35840",
+    "bytes": 28595672,
+    "triangles": 498494,
+    "materials": 1,
+    "blenderBoundsMin": [
+      -0.2980720102787018,
+      -0.27317818999290466,
+      -3.6703884376265705e-08
+    ],
+    "blenderBoundsMax": [
+      0.2980720102787018,
+      0.2770690321922302,
+      1.029218077659607
+    ],
+    "blenderDimensions": [
+      0.5961440205574036,
+      0.5502471923828125,
+      1.029218077659607
+    ],
+    "suggestedRotationZ": 3.141592653589793,
+    "targetLength": null,
+    "uniformScale": 1,
+    "meshNames": [
+      "texture_pbr_v128"
+    ]
+  }
+}

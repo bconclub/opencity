@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cybercab",
+    "bytes": 60552920,
+    "sha256": "558c39dea82ece80095e56667a2d0a2dc5c4d74cb98df919cc530817ed290f5f",
+    "triangles": 1942948,
+    "dimensions": [
+      1.8765968986519836,
+      4.449999999999999,
+      1.4278218270279448
+    ],
+    "ground": 0,
+    "sourceIdentical": true,
+    "wheelRig": "Not separated in supplied mesh"
+  },
+  {
+    "id": "cybertruck",
+    "bytes": 61516784,
+    "sha256": "5165690281d01d4715259696b99404bc5076a982a92b1954e3ac2d78dd14c881",
+    "triangles": 1986389,
+    "dimensions": [
+      2.2622509598572913,
+      5.683,
+      1.9351793618733555
+    ],
+    "ground": 0,
+    "sourceIdentical": true,
+    "wheelRig": "Not separated in supplied mesh"
+  },
+  {
+    "id": "kitt",
+    "bytes": 71402328,
+    "sha256": "8e18087a2c4b2663017edbf7444ac72b4848497388669eb2f597277884efd074",
+    "triangles": 1940188,
+    "dimensions": [
+      2.050566624622088,
+      4.8,
+      1.2979076682998407
+    ],
+    "ground": 0,
+    "sourceIdentical": true,
+    "wheelRig": "Not separated in supplied mesh"
+  },
+  {
+    "id": "yulu",
+    "bytes": 63323368,
+    "sha256": "ec5f40766ee4c2b7cb48195789103a5f623e24fd77db3b8cd77d1dfad3626d04",
+    "triangles": 1951358,
+    "dimensions": [
+      0.7182964436048322,
+      1.9,
+      1.1680255336171306
+    ],
+    "ground": 0,
+    "sourceIdentical": true,
+    "wheelRig": "Not separated in supplied mesh"
+  },
+  {
+    "id": "delivery",
+    "bytes": 63620220,
+    "sha256": "12bcd34b29681051be15e0fc90343863d683f21b07a5f0e5b7322b4e2fa6311c",
+    "triangles": 1960246,
+    "dimensions": [
+      0.8171621399937804,
+      1.9,
+      1.7437608124273876
+    ],
+    "ground": 0,
+    "sourceIdentical": true,
+    "wheelRig": "Not separated in supplied mesh"
+  }
+]
