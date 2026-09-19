@@ -122,6 +122,24 @@ if devaraj_segments:
   pt=(mid_q[0]+ux*along,mid_q[1]+uy*along)
   edge=(pt[0]-mid_nx*(mid_w/2+.25),pt[1]-mid_ny*(mid_w/2+.25))
   g=geo(edge);add_point('barrier_cone',g[0],g[1],mid_h,'OBS-06-cone-'+str(i))
+# Southern ~200 m toward Ambedkar Veedhi: OSM connector ways lack the Devaraj Urs name but
+# carry the institutional carriageway to the Dr Ambedkar junction (map topology; OBS gaps).
+south_ways=[('1193542609',6.4,2),('1109946347',6.4,2),('553253465',6.4,2)]
+for wid,width,lanes in south_ways:
+ for w in r.findall('way'):
+  if w.get('id')!=wid:continue
+  props={'osm':'way/'+wid,'name':'Devaraj Urs Road','surface':'asphalt','width':width,'widthEstimated':True,'lanes':lanes,'note':'Ambedkar connector; southern kerbs per OSM sidewalk=separate reference','oneway':'no','ref':'OBS-south-ambedkar'}
+  refs=[n.get('ref') for n in w.findall('nd')];p=[local(nodes[n]) for n in refs if n in nodes]
+  for a,b in zip(p,p[1:]):
+   segment=clip(a,b)
+   if not segment:continue
+   a,b=segment;kerb_w=.28;walk_w=1.9;seg=len(features)
+   for side in (-1,1):
+    inner=side*(width/2)
+    strip_offset(a,b,inner+side*(kerb_w/2),kerb_w,'kerb',{**props,'kerbTone':(seg+int(side>0))%2})
+    outer=inner+side*kerb_w
+    strip_offset(a,b,outer+side*(walk_w/2),walk_w,'footpath',{**props,'surface':'paving_stones'})
+   devaraj_segments.append((a,b,width,props))
 from shapely.geometry import shape,mapping
 from shapely.ops import unary_union
 road_union=unary_union([shape(f['geometry']) for f in features if f['properties']['kind']=='road'])
