@@ -13,9 +13,17 @@ async function fetchGzJson(url){
  const bytes=Uint8Array.from(raw,c=>c.charCodeAt(0));
  return JSON.parse(await gunzipText(new Blob([bytes]).stream()));
 }
+function isRoadNetworkStub(data){
+ const routes=(data.features||[]).filter(f=>f.properties?.osm&&f.geometry?.type==='LineString');
+ return routes.length<50;
+}
 async function fetchJson(url){
  const r=await fetch(url);
- if(r.ok)return r.json();
+ if(r.ok){
+  const data=await r.json();
+  if(url.endsWith('vidhana-road-network.json')&&isRoadNetworkStub(data))return fetchGzJson(url);
+  return data;
+ }
  if(!url.endsWith('.json'))throw Error('Road data unavailable');
  return fetchGzJson(url);
 }
