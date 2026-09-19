@@ -1,1 +1,1 @@
-REQUIRE_FROM:/tmp/mcp-args-batch5.json:content
+LOAD_FROM_FILE:/tmp/args5-full.json:content
