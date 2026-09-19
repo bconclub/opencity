@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/cdt-content-only.txt
+REQUIRE_FROM_FILE:/tmp/cdt-content-only.txt
