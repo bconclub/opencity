@@ -1,21 +1,38 @@
-export async function loadVidhanaStreetData() {
-  async function parseResponse(response) {
-    const contentType = response.headers.get('content-type') || '';
-    const isGzip = response.url.endsWith('.json.gz') || contentType.includes('gzip');
-    const text = isGzip
-      ? await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).text()
-      : await response.text();
-    if (text.length < 1000 || text.startsWith('LOAD_FROM') || text.startsWith('@file')) {
-      throw Error('Vidhana street data unavailable');
-    }
-    return JSON.parse(text);
+async function gunzipText(stream) {
+  return new Response(stream.pipeThrough(new DecompressionStream('gzip'))).text();
+}
+
+async function fetchAscii(path) {
+  const res = await fetch(path);
+  if (!res.ok) return null;
+  const text = await res.text();
+  if (!text || text.length < 100 || text.startsWith('LOAD_FROM') || text.startsWith('REQUIRE_FROM')) return null;
+  return text;
+}
+
+async function loadGzipB64Parts() {
+  const single = await fetchAscii('./vidhana-street-data.json.gz.b64');
+  if (single) return single;
+  const parts = [];
+  for (let i = 1; i <= 32; i += 1) {
+    const chunk = await fetchAscii(`./vidhana-street-data.json.gz.b64.part${i}`);
+    if (!chunk) break;
+    parts.push(chunk);
   }
+  return parts.length ? parts.join('') : null;
+}
 
-  // Prefer gzip on reconcile branch — full JSON may lag GitHub MCP push limits.
-  let response = await fetch('./vidhana-street-data.json.gz');
-  if (response.ok) return parseResponse(response);
-
-  response = await fetch('./vidhana-street-data.json');
-  if (!response.ok) throw Error('Vidhana street data unavailable');
-  return parseResponse(response);
+export async function loadVidhanaStreetData() {
+  const json = await fetch('./vidhana-street-data.json');
+  if (json.ok) {
+    const text = await json.text();
+    if (text.length > 1000 && !text.startsWith('LOAD_FROM') && !text.startsWith('@file')) {
+      return JSON.parse(text);
+    }
+  }
+  const b64 = await loadGzipB64Parts();
+  if (!b64) throw Error('Vidhana street data unavailable');
+  const raw = atob(b64);
+  const bytes = Uint8Array.from(raw, (c) => c.charCodeAt(0));
+  return JSON.parse(await gunzipText(new Blob([bytes]).stream()));
 }
