@@ -2,7 +2,7 @@ import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 
-const base='http://127.0.0.1:4173';
+const base=process.env.QC_BASE||process.env.QC_URL||'http://127.0.0.1:4174';
 const outDir='qc/drive-orientation';
 await mkdir(outDir,{recursive:true});
 
@@ -10,11 +10,11 @@ const browser=await chromium.launch({headless:true});
 const context=await browser.newContext({viewport:{width:1280,height:800}});
 await context.addInitScript(()=>{localStorage.setItem('opencity-player-name','QC Agent');});
 const page=await context.newPage();
+await page.route('**/multiplayer-client.js',route=>route.fulfill({contentType:'text/javascript',body:''}));
+await page.route('**/local-cache.js*',route=>route.fulfill({contentType:'text/javascript',body:''}));
 await page.goto(base,{waitUntil:'domcontentloaded'});
 await page.waitForFunction(()=>window.cityBootReady,{timeout:120000});
 await page.waitForSelector('#vehicle-picker [data-ride]:not([disabled])',{timeout:120000});
-if(await page.locator('.multiplayer-name-dialog[open]').count())await page.getByRole('button',{name:'Free room'}).click();
-await page.waitForFunction(()=>!document.querySelector('.multiplayer-name-dialog[open]'),{timeout:30000});
 
 async function driveVehicle(ride,departure='Vidhana Soudha area'){
  await page.evaluate(()=>{localStorage.removeItem('opencity-default-ride');});
