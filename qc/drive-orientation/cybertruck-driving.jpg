@@ -1,1 +1,1 @@
-LOAD_FROM_/tmp/cdt-call-09.json
+LOAD_FROM:/tmp/mcp-args-09.json:files[0].content
