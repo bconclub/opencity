@@ -1,1 +1,1 @@
-LOAD_FROM_FILE:/tmp/push-args-1.json:files[0].content
+LOAD_FROM_/tmp/mcp-args-batch-1.json
