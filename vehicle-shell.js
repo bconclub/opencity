@@ -1,6 +1,19 @@
 (() => {
+ const PREF_KEY='opencity-preferred-vehicle',FLEET=['helicopter','cybercab','cybertruck','auto','kitt','yulu','delivery'],AUTO_RIDES=new Set(['cybertruck','cybercab','kitt','auto','supercar','yulu','bike','delivery']);
  const picker=document.getElementById('vehicle-picker'),message=document.getElementById('vehicle-entry-status');
- picker.querySelectorAll(':scope > button').forEach((button,i)=>{const key=button.dataset.ride||['auto','helicopter','supercar','cab','yulu','bike','delivery','cycle'][i],name=({cybertruck:'Cybertruck',cybercab:'Cybercab',kitt:'Knight Rider',auto:'Auto',helicopter:'Helicopter',supercar:'Supercar',cab:'Cab',yulu:'Yulu-style e-bike',bike:'Rapido-style bike',delivery:'Delivery bike',cycle:'Cycle'})[key];button.innerHTML='<span class="vehicle-art"><img src="./assets/vehicles/previews/'+key+'.webp" alt="" width="640" height="420" decoding="async"></span><span class="vehicle-card-label"><strong>'+name+'</strong><small>'+(button.dataset.ride?(key==='helicopter'?'Fly ↗':key==='cycle'?'Pedal ↗':'Ride ↗'):'Coming soon')+'</small></span>';button.setAttribute('aria-label',name+(button.dataset.ride?' · Enter vehicle':' · Coming soon'));});
+ const names={cybertruck:'Cybertruck',cybercab:'Cybercab',kitt:'Knight Rider',auto:'Auto',helicopter:'Helicopter',supercar:'Supercar',cab:'Cab',yulu:'Yulu',bike:'Rapido-style bike',delivery:'Delivery scooter',cycle:'Cycle'};
+ function readPreference(){try{const saved=localStorage.getItem(PREF_KEY);return FLEET.includes(saved)?saved:null;}catch{return null;}}
+ function writePreference(ride){try{localStorage.setItem(PREF_KEY,ride);}catch{}}
+ function highlightPreference(){
+  const selected=readPreference()||'helicopter';
+  picker.querySelectorAll('[data-ride]').forEach(button=>{
+   const on=button.dataset.ride===selected;
+   button.classList.toggle('vehicle-picker-selected',on);
+   button.setAttribute('aria-pressed',on?'true':'false');
+  });
+ }
+ picker.querySelectorAll(':scope > button').forEach((button,i)=>{const key=button.dataset.ride||FLEET[i],name=names[key]||key;button.innerHTML='<span class="vehicle-art"><img src="./assets/vehicles/previews/'+key+'.webp" alt="" width="640" height="420" decoding="async"></span><span class="vehicle-card-label"><strong>'+name+'</strong><small>'+(button.dataset.ride?(key==='helicopter'?'Fly ↗':'Ride ↗'):'Coming soon')+'</small></span>';button.setAttribute('aria-label',name+(button.dataset.ride?' · Enter vehicle':' · Coming soon'));}); 
+ highlightPreference();
 
  const departureDialog=document.createElement('dialog');departureDialog.id='departure-choice';departureDialog.setAttribute('aria-labelledby','departure-title');document.body.append(departureDialog);
  const roads=[{name:'Cubbon Park · South',detail:'Park-side roads',point:[77.5935,12.974]},{name:'UB City area',detail:'Southern CBD streets',point:[77.5963,12.9708]},{name:'Vidhana Soudha area',detail:'Northern CBD streets',point:[77.5921,12.9792]},{name:'MG Road area',detail:'Eastern CBD streets',point:[77.600,12.976]},{name:'Kasturba Road area',detail:'Southern park edge',point:[77.592,12.9705]}];
@@ -9,14 +22,20 @@
  let entering=false,preparing=false,prepared=false;
  fetch('./release.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(r=>document.getElementById('build-version').textContent='v'+r.version).catch(()=>document.getElementById('build-version').textContent='Version unavailable');
  function available(){return typeof ready!=='undefined'&&ready&&window.districtState?.().loaded&&prepared;}
- const timer=setInterval(async()=>{if(entering||preparing)return;const cityReady=typeof ready!=='undefined'&&ready&&window.districtState?.().loaded;if(cityReady&&!prepared){preparing=true;message.textContent='Preparing city vehicles…';try{await Promise.all([window.prepareHelicopter?.(),import('./auto-mode.js').then(m=>m.prepareAuto(map))]);prepared=true;}catch(error){console.warn('Vehicle preload will retry on entry:',error);prepared=true;}finally{preparing=false;}}const loaded=available();picker.querySelectorAll('[data-ride]').forEach(b=>b.disabled=!loaded);if(loaded){message.textContent='Choose your ride';clearInterval(timer);}},300);
+ const timer=setInterval(async()=>{if(entering||preparing)return;const cityReady=typeof ready!=='undefined'&&ready&&window.districtState?.().loaded;if(cityReady&&!prepared){preparing=true;message.textContent='Preparing city vehicles…';try{await Promise.all([window.prepareHelicopter?.(),import('./auto-mode.js').then(m=>m.prepareAuto(map))]);prepared=true;}catch(error){console.warn('Vehicle preload will retry on entry:',error);prepared=true;}finally{preparing=false;}}const loaded=available();picker.querySelectorAll('[data-ride]').forEach(b=>b.disabled=!loaded);if(loaded){message.textContent='Choose your ride';highlightPreference();(picker.querySelector('[data-ride="'+((readPreference()||'helicopter'))+'"]')||picker.querySelector('[data-ride="helicopter"]'))?.focus({preventScroll:true});clearInterval(timer);}},300);
  picker.addEventListener('click',async e=>{
   const button=e.target.closest('[data-ride]');if(!button||entering||!available())return;
   entering=true;const departure=await chooseDeparture(button.dataset.ride);if(!departure){entering=false;return;}picker.querySelectorAll('[data-ride]').forEach(b=>b.disabled=true);message.textContent='Preparing '+button.dataset.ride+'…';
-  try{if(['cybertruck','cybercab','kitt','auto','supercar','cycle'].includes(button.dataset.ride)){await (await import('./auto-mode.js')).startAuto(map,button.dataset.ride,departure.point);}else{const select=document.getElementById('vehicle');select.value=button.dataset.ride;document.getElementById('departure-pad').value=String(departure.pad);select.onchange();await document.getElementById('start-flight').onclick();}
+  try{writePreference(button.dataset.ride);highlightPreference();if(AUTO_RIDES.has(button.dataset.ride)){await (await import('./auto-mode.js')).startAuto(map,button.dataset.ride,departure.point);}else{const select=document.getElementById('vehicle');select.value=button.dataset.ride;document.getElementById('departure-pad').value=String(departure.pad);select.onchange();await document.getElementById('start-flight').onclick();}
    if(!window.flightState?.().active&&!window.autoState?.().active)throw Error(document.getElementById('hangar-error').textContent||'Vehicle could not start. Try again.');
    message.textContent='Choose your ride';
   }catch(error){message.textContent=error.message;}finally{entering=false;picker.querySelectorAll('[data-ride]').forEach(b=>b.disabled=!available());}
  });
 })();
+
+
+
+
+
+
 

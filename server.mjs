@@ -11,5 +11,5 @@ http.createServer(async(req,res)=>{
     if(!Object.hasOwn(types,extname(file))){res.writeHead(404).end();return;}
     res.writeHead(200,{'Content-Type':types[extname(file)],'Cache-Control':'no-cache'});
     res.end(await readFile(file));
-  } catch {res.writeHead(404).end('Not found');}
-}).listen(4173,'127.0.0.1',()=>console.log('Bengaluru: http://127.0.0.1:4173'));
+  } catch {if(!res.headersSent)res.writeHead(404).end('Not found');else res.end();}
+}).listen(Number(process.env.PORT)||4173,'127.0.0.1',()=>console.log(`Bengaluru: http://127.0.0.1:${Number(process.env.PORT)||4173}`));
