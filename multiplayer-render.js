@@ -125,8 +125,3 @@ async function installRenderer(map) {
  window.multiplayerRenderState=()=>({ownId,remoteCount:[...entries.values()].filter(e=>!e.own).length,tagCount:entries.size,players:[...entries].map(([id,e])=>({id,own:e.own,vehicle:e.vehicle,...e.current,position:e.point.toArray(),name:e.label.textContent,labelVisible:e.labelVisible,rotorAngle:e.angle,color:e.model?.group.userData.paintColor||e.target.color||null})),disposed});
  const api={destroy};map.__multiplayerRenderer=api;return api;
 }
-
-
-
-
-
