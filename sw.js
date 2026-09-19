@@ -11,6 +11,8 @@ files.push('landmark-focus.js','stair-collision.js','vidhana-driving-world.js','
 files.push('assets/vehicles/cybercab-original.glb','assets/vehicles/cybertruck-original.glb');
 files.push('vidhana-road-network.json.gz.b64');
 for(let i=1;i<=24;i++)files.push('vidhana-street-data.json.gz.b64.part'+i);
+files.push('vehicle-glb-loader.js','assets/vehicles/cybercab-rigged.glb.b64.manifest.json');
+for(let i=1;i<=349;i++)files.push('assets/vehicles/cybercab-rigged.glb.b64.part'+i);
 const allowed=new Set(files.map(f=>new URL(f,root).href));
 self.addEventListener('install',event=>event.waitUntil(caches.open(cacheName).then(cache=>cache.addAll([...allowed].filter(url=>!url.endsWith('-original.glb'))))));
 // Old tabs retain their old worker until closed, so releases cannot mix assets.
@@ -20,7 +22,6 @@ self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);if(url.origin!==root.origin||!allowed.has(url.href))return;
  event.respondWith(caches.open(cacheName).then(async cache=>{const stored=await cache.match(event.request);if(stored&&!url.pathname.endsWith('-config.json'))return stored;try{const response=await fetch(event.request);if(response.ok)await cache.put(event.request,response.clone());return response;}catch(error){if(stored)return stored;throw error;}}));
 });
-
 
 
 
