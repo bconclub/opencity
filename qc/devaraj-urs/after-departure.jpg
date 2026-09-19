@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/qc-push-args/pushfiles-01.json:files[0].content
+LOAD_FROM_FILE
