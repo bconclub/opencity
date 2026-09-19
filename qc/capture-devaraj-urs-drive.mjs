@@ -6,18 +6,19 @@ const base = process.env.QC_BASE || 'http://127.0.0.1:4173';
 const outDir = join(import.meta.dirname, 'devaraj-urs');
 await mkdir(outDir, { recursive: true });
 
-const browser = await chromium.launch({ headless: true });
-const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+const browser = await chromium.launch({
+  headless: true,
+  args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'],
+});
+const page = await browser.newPage({ viewport: { width: 1280, height: 800 }, serviceWorkers: 'block' });
+await page.route('**/multiplayer-client.js', (route) => route.fulfill({ contentType: 'text/javascript', body: '' }));
+await page.route('**/local-cache.js*', (route) => route.fulfill({ contentType: 'text/javascript', body: '' }));
 await page.addInitScript(() => {
   localStorage.setItem('opencity-player-name', 'QC Agent');
 });
 await page.goto(base, { waitUntil: 'domcontentloaded' });
 await page.waitForFunction(() => window.cityBootReady, { timeout: 120000 });
 await page.waitForSelector('#vehicle-picker [data-ride]:not([disabled])', { timeout: 120000 });
-if (await page.locator('.multiplayer-name-dialog[open]').count()) {
-  await page.getByRole('button', { name: 'Free room' }).click();
-}
-await page.waitForFunction(() => !document.querySelector('.multiplayer-name-dialog[open]'), { timeout: 30000 });
 
 await page.click('#vehicle-picker [data-ride="auto"]');
 await page.getByRole('button', { name: /Vidhana Soudha area/ }).click();
