@@ -12,7 +12,7 @@ async function fetchAscii(path) {
 
 async function loadGzipB64Parts() {
   const single = await fetchAscii('./vidhana-street-data.json.gz.b64');
-  if (single) return single;
+  if (single && !single.startsWith('#')) return single;
   const parts = [];
   for (let i = 1; i <= 32; i += 1) {
     const chunk = await fetchAscii(`./vidhana-street-data.json.gz.b64.part${i}`);
