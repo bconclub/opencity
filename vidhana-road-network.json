@@ -1,1 +1,1 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"osm":"way/26807972","name":"Musical Fountain Road","surface":"asphalt","width":9.600000000000001,"widthEstimated":true,"lanes":3,"note":"","oneway":"yes","_layer":"transportation","class":"primary"},"geometry":{"type":"LineString","coordinates":[[77.59109358626074,12.984174413594637],[77.5913843,12.9838469]]}}]}
+__LOAD_FROM_FILE__/workspace/opencity/vidhana-road-network.json
