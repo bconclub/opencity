@@ -11,8 +11,8 @@
   const canvas=document.querySelector('#map canvas'),memory=performance.memory;
   while(network.length&&network[0].time<now-5000)network.shift();const rate=network.reduce((sum,r)=>sum+r.bytes,0)/5/1024;
   const rows=[['Download (5 s avg)',format(rate)+' KB/s'],['Measured transfer',format(transferred/1048576)+' MB'],['Resources observed',requests],['Unmeasured sizes',unmeasured],['Map FPS (1 s)',fps],['Frame interval avg',format(mean)+' ms'],['Frame interval p95',format(times[Math.floor(times.length*.95)]||0)+' ms'],['Map frames total',renders],['Custom draw calls',sum('calls')],['Custom triangles',sum('triangles')],['Custom CPU submit',format(sum('cpu'))+' ms'],['Custom geometries',sum('geometries')],['Custom textures',sum('textures')],['Canvas pixels',canvas?canvas.width+' × '+canvas.height:'Loading'],['JS heap',memory?format(memory.usedJSHeapSize/1048576)+' MB':'Unavailable']];
-  document.getElementById('perf-summary').textContent=fps+' FPS';panel.querySelector('dl').replaceChildren(...rows.flatMap(([label,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=String(value);return[dt,dd];}));
+  const draws=sum('calls');
+  document.getElementById('perf-summary').textContent=fps+' FPS · '+format(mean)+' ms · '+draws+' draws';
+  panel.querySelector('dl').replaceChildren(...rows.flatMap(([label,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=String(value);return[dt,dd];}));
  },500);
 })();
-
-
