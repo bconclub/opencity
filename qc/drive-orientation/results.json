@@ -1,17 +1,17 @@
 {
-  "captured": "2026-09-19T00:20:41.563Z",
+  "captured": "2026-09-19T00:35:40.714Z",
   "cybertruck": {
-    "wheel": 21.56082267746746,
-    "speed": -0.0026984983736966514,
+    "wheel": 30.07224170192242,
+    "speed": -0.0026984983736966584,
     "heading": 42.971227739444146,
     "vehicle": "cybertruck",
     "active": true,
     "paused": false,
-    "maxSpeed": 8.898099633775065
+    "maxSpeed": 12.266792116579953
   },
   "cybercab": {
-    "wheel": 62.96565305527652,
-    "speed": -0.002103241378008376,
+    "wheel": 75.53648758046977,
+    "speed": -0.0021032413780083747,
     "heading": 42.971227739444146,
     "vehicle": "cybercab",
     "active": true,

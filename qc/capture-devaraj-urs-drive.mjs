@@ -1,0 +1,44 @@
+import { chromium } from 'playwright';
+import { mkdir } from 'node:fs/promises';
+import { join } from 'node:path';
+
+const base = 'http://127.0.0.1:4173';
+const outDir = join(import.meta.dirname, 'devaraj-urs');
+await mkdir(outDir, { recursive: true });
+
+const browser = await chromium.launch({ headless: true });
+const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+await page.addInitScript(() => {
+  localStorage.setItem('opencity-player-name', 'QC Agent');
+});
+await page.goto(base, { waitUntil: 'domcontentloaded' });
+await page.waitForFunction(() => window.cityBootReady, { timeout: 120000 });
+await page.waitForSelector('#vehicle-picker [data-ride]:not([disabled])', { timeout: 120000 });
+if (await page.locator('.multiplayer-name-dialog[open]').count()) {
+  await page.getByRole('button', { name: 'Free room' }).click();
+}
+await page.waitForFunction(() => !document.querySelector('.multiplayer-name-dialog[open]'), { timeout: 30000 });
+
+await page.click('#vehicle-picker [data-ride="auto"]');
+await page.getByRole('button', { name: /Vidhana Soudha area/ }).click();
+await page.waitForFunction(() => window.autoState?.().active, { timeout: 60000 });
+await page.waitForTimeout(800);
+await page.screenshot({ path: join(outDir, 'after-departure.png'), fullPage: true });
+
+// Drive along Devaraj Urs corridor (NE toward Gate 1 / KPSC).
+for (let i = 0; i < 4; i++) {
+  await page.keyboard.down('ArrowUp');
+  await page.waitForTimeout(1200);
+  await page.keyboard.up('ArrowUp');
+  await page.keyboard.down('ArrowRight');
+  await page.waitForTimeout(400);
+  await page.keyboard.up('ArrowRight');
+  await page.screenshot({ path: join(outDir, `after-drive-${i + 1}.png`), fullPage: true });
+}
+
+const laneCount = await page.evaluate(async () => {
+  const d = await fetch('./vidhana-street-data.json').then((r) => r.json());
+  return d.features.filter((f) => f.properties?.name === 'Devaraj Urs Road' && f.properties?.kind === 'lane').length;
+});
+console.log(JSON.stringify({ outDir, laneCount }, null, 2));
+await browser.close();

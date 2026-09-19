@@ -41,7 +41,9 @@ for w in r.findall('way'):
    network.append({'type':'Feature','properties':{**props,'_layer':'transportation','class':{'residential':'minor','unclassified':'minor','primary_link':'primary','secondary_link':'secondary'}.get(h,h)},'geometry':{'type':'LineString','coordinates':[geo(a),geo(b)]}});roads.append((a,b,width,props,refs));dx,dy=b[0]-a[0],b[1]-a[1];L=math.hypot(dx,dy)
    # Round joins keep road ribbons continuous at mapped junctions.
    for q in [a,b]:poly([(q[0]+math.cos(k*math.pi/8)*width/2,q[1]+math.sin(k*math.pi/8)*width/2) for k in range(16)],'road',props)
-   if lanes>1:
+   # Lane dashes only when OSM tags them; Devaraj Urs at Vidhana is undivided per street reference.
+   paint_lanes=lanes>1 and t.get('lane_markings') not in ('no','none') and t.get('name')!='Devaraj Urs Road'
+   if paint_lanes:
     for lane in range(1,lanes):
      off=-width/2+lane*width/lanes
      for d in range(10,int(L)-10,9):
@@ -67,8 +69,6 @@ for n in r.findall('node'):
 
 # Clip separately mapped paths against carriageways. A crossing is painted only
 # when explicitly mapped, rather than a solid pavement ribbon across traffic.
-import sys
-sys.path.insert(0,'D:/CodexTools/python-libs')
 from shapely.geometry import shape,mapping
 from shapely.ops import unary_union
 road_union=unary_union([shape(f['geometry']) for f in features if f['properties']['kind']=='road'])
