@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/push-batch-4.json:content
+LOAD_FROM_FILE:/tmp/cdt-ready-04.json:arguments.content
