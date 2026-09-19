@@ -1,10 +1,11 @@
 // Mapped positions; fixture dimensions are original simplified reconstructions.
 import {signalPhase} from './traffic-simulation.js';
+import {loadVidhanaStreetData} from './street-data.js';
 export async function installStreetFurniture(map) {
   const [T, data, barrierData] = await Promise.all([
     import('https://unpkg.com/three@0.169.0/build/three.module.js'),
     fetch('./assets/streets/furniture.json').then(r => { if (!r.ok) throw Error('Street furniture unavailable'); return r.json(); }),
-    fetch('./vidhana-street-data.json').then(r => r.ok ? r.json() : {features:[]}).catch(() => ({features:[]}))
+    loadVidhanaStreetData().catch(() => ({features:[]}))
   ]);
   if (map.getLayer('street-furniture')) return;
   const scene = new T.Scene(), camera = new T.Camera();
@@ -34,7 +35,6 @@ export async function installStreetFurniture(map) {
       rod([0,0,.2],[0,0,3.65],.065,metal);
       box(.43,.27,1.14,0,0,3.26,0x172524);
       box(.53,.08,1.27,0,-.15,3.26,0x303d37);
-      // Dark lens housings; active lens is batched separately below.
       for(const [z,c] of [[3.59,0x922e27],[3.26,0x92702a],[2.93,0x236341]]) {
         rod([0,.137,z],[0,.17,z],.116,c);
         box(.30,.27,.045,0,.2,z+.145,0x172524);
@@ -73,14 +73,15 @@ export async function installStreetFurniture(map) {
       g.translate(...start.add(end).multiplyScalar(.5).toArray());add(g,c);
     }
     const metal=0x6b6458, yellow=0xd4a017, blue=0x1e56a0, white=0xf0f0ea;
+    const s=1.6;
     if(type==='barrier_police') {
-      box(.95,.08,.62,0,0,.31,yellow);box(.08,.42,.48,-.38,0,.24,yellow);box(.08,.42,.48,.38,0,.24,yellow);
-      rod([-.38,-.15,.62],[-.38,-.15,.95],.03,metal);rod([.38,-.15,.62],[.38,-.15,.95],.03,metal);
+      box(.95*s,.08*s,.62*s,0,0,.31*s,yellow);box(.08*s,.42*s,.48*s,-.38*s,0,.24*s,yellow);box(.08*s,.42*s,.48*s,.38*s,0,.24*s,yellow);
+      rod([-.38*s,-.15*s,.62*s],[-.38*s,-.15*s,.95*s],.03*s,metal);rod([.38*s,-.15*s,.62*s],[.38*s,-.15*s,.95*s],.03*s,metal);
     } else if(type==='barrier_cone') {
-      rod([0,0,0],[0,0,.42],.16,blue,.03);box(.34,.34,.04,0,0,.02,white);
+      rod([0,0,0],[0,0,.42*s],.16*s,blue,.03*s);box(.34*s,.34*s,.04*s,0,0,.02*s,white);
     } else {
-      rod([0,0,0],[0,0,.95],.04,metal,.035);
-      for(const z of [.22,.42,.62,.82]) box(.95,.05,.04,0,0,z,metal);
+      rod([0,0,0],[0,0,.95*s],.04*s,metal,.035*s);
+      for(const z of [.22,.42,.62,.82]) box(.95*s,.05*s,.04*s,0,0,z*s,metal);
     }
     const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('normal',new T.Float32BufferAttribute(normals,3));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));return g;
   }
@@ -117,7 +118,7 @@ export async function installStreetFurniture(map) {
         group.mesh.count=count;group.mesh.instanceMatrix.needsUpdate=true;visible+=count;if(count)drawCalls++;
       }
       for(const group of barrierGroups){let count=0;
-        for(const item of group.items){if(Math.hypot(item.x-cx,item.y-cy)>850)continue;
+        for(const item of group.items){if(Math.hypot(item.x-cx,item.y-cy)>1200)continue;
           dummy.position.set(item.x,item.y,.12);dummy.rotation.set(0,0,-(item.heading||0)*Math.PI/180);dummy.updateMatrix();group.mesh.setMatrixAt(count++,dummy.matrix);
         }
         group.mesh.count=count;group.mesh.instanceMatrix.needsUpdate=true;visible+=count;if(count)drawCalls++;
