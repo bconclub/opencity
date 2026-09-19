@@ -1,9 +1,11 @@
 // Mapped positions; fixture dimensions are original simplified reconstructions.
 import {signalPhase} from './traffic-simulation.js';
+import {loadVidhanaStreetData} from './street-data.js';
 export async function installStreetFurniture(map) {
-  const [T, data] = await Promise.all([
+  const [T, data, barrierData] = await Promise.all([
     import('https://unpkg.com/three@0.169.0/build/three.module.js'),
-    fetch('./assets/streets/furniture.json').then(r => { if (!r.ok) throw Error('Street furniture unavailable'); return r.json(); })
+    fetch('./assets/streets/furniture.json').then(r => { if (!r.ok) throw Error('Street furniture unavailable'); return r.json(); }),
+    loadVidhanaStreetData().catch(() => ({features:[]}))
   ]);
   if (map.getLayer('street-furniture')) return;
   const scene = new T.Scene(), camera = new T.Camera();
@@ -33,7 +35,6 @@ export async function installStreetFurniture(map) {
       rod([0,0,.2],[0,0,3.65],.065,metal);
       box(.43,.27,1.14,0,0,3.26,0x172524);
       box(.53,.08,1.27,0,-.15,3.26,0x303d37);
-      // Dark lens housings; active lens is batched separately below.
       for(const [z,c] of [[3.59,0x922e27],[3.26,0x92702a],[2.93,0x236341]]) {
         rod([0,.137,z],[0,.17,z],.116,c);
         box(.30,.27,.045,0,.2,z+.145,0x172524);
@@ -56,12 +57,49 @@ export async function installStreetFurniture(map) {
     }
     const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('normal',new T.Float32BufferAttribute(normals,3));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));return g;
   }
+  function barrierFixture(type) {
+    const positions=[], normals=[], colors=[];
+    function add(g, color) {
+      const flat=g.index?g.toNonIndexed():g, c=new T.Color(color);
+      positions.push(...flat.attributes.position.array);normals.push(...flat.attributes.normal.array);
+      for(let i=0;i<flat.attributes.position.count;i++) colors.push(c.r,c.g,c.b);
+      if(flat!==g)flat.dispose();g.dispose();
+    }
+    function box(w,d,h,x,y,z,c) { const g=new T.BoxGeometry(w,d,h);g.translate(x,y,z);add(g,c); }
+    function rod(a,b,r,c,top=r) {
+      const start=new T.Vector3(...a), end=new T.Vector3(...b),delta=end.clone().sub(start);
+      const g=new T.CylinderGeometry(top,r,delta.length(),8,1);
+      g.applyQuaternion(new T.Quaternion().setFromUnitVectors(new T.Vector3(0,1,0),delta.normalize()));
+      g.translate(...start.add(end).multiplyScalar(.5).toArray());add(g,c);
+    }
+    const metal=0x6b6458, yellow=0xd4a017, blue=0x1e56a0, white=0xf0f0ea;
+    const s=1.6;
+    if(type==='barrier_police') {
+      box(.95*s,.08*s,.62*s,0,0,.31*s,yellow);box(.08*s,.42*s,.48*s,-.38*s,0,.24*s,yellow);box(.08*s,.42*s,.48*s,.38*s,0,.24*s,yellow);
+      rod([-.38*s,-.15*s,.62*s],[-.38*s,-.15*s,.95*s],.03*s,metal);rod([.38*s,-.15*s,.62*s],[.38*s,-.15*s,.95*s],.03*s,metal);
+    } else if(type==='barrier_cone') {
+      rod([0,0,0],[0,0,.42*s],.16*s,blue,.03*s);box(.34*s,.34*s,.04*s,0,0,.02*s,white);
+    } else {
+      rod([0,0,0],[0,0,.95*s],.04*s,metal,.035*s);
+      for(const z of [.22,.42,.62,.82]) box(.95*s,.05*s,.04*s,0,0,z*s,metal);
+    }
+    const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('normal',new T.Float32BufferAttribute(normals,3));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));return g;
+  }
   const groups=['straight','bent','signal'].map(type=>{
     const items=data.items.filter(item=>(item.kind==='signal'?'signal':item.mount==='bent_mast'?'bent':'straight')===type).map(item=>{
       const p=maplibregl.MercatorCoordinate.fromLngLat(item.coordinates);
       return {...item,x:(p.x-origin.x)/s,y:(origin.y-p.y)/s};
     });
     const geometry=fixture(type), mesh=new T.InstancedMesh(geometry,material,items.length);
+    mesh.frustumCulled=false;scene.add(mesh);return {items,mesh,geometry};
+  });
+  const barrierKinds=['barrier_police','barrier_cone','barrier_post'];
+  const barrierGroups=barrierKinds.map(type=>{
+    const items=barrierData.features.filter(f=>f.properties?.kind===type&&f.geometry?.type==='Point').map(f=>{
+      const p=maplibregl.MercatorCoordinate.fromLngLat(f.geometry.coordinates);
+      return {...f.properties,x:(p.x-origin.x)/s,y:(origin.y-p.y)/s};
+    });
+    const geometry=barrierFixture(type), mesh=new T.InstancedMesh(geometry,material,Math.max(items.length,1));
     mesh.frustumCulled=false;scene.add(mesh);return {items,mesh,geometry};
   });
   const signals=groups[2].items,activeLensGeometry=new T.SphereGeometry(.119,10,6),activeLensMaterial=new T.MeshBasicMaterial({color:0xffffff});
@@ -79,6 +117,12 @@ export async function installStreetFurniture(map) {
         }
         group.mesh.count=count;group.mesh.instanceMatrix.needsUpdate=true;visible+=count;if(count)drawCalls++;
       }
+      for(const group of barrierGroups){let count=0;
+        for(const item of group.items){if(Math.hypot(item.x-cx,item.y-cy)>1200)continue;
+          dummy.position.set(item.x,item.y,.12);dummy.rotation.set(0,0,-(item.heading||0)*Math.PI/180);dummy.updateMatrix();group.mesh.setMatrixAt(count++,dummy.matrix);
+        }
+        group.mesh.count=count;group.mesh.instanceMatrix.needsUpdate=true;visible+=count;if(count)drawCalls++;
+      }
       let lenses=0;const now=Date.now()/1000;
       for(const item of signals){if(Math.hypot(item.x-cx,item.y-cy)>850)continue;const phase=signalPhase(item,now),a=item.heading*Math.PI/180;
         dummy.position.set(item.x+Math.sin(a)*.185,item.y+Math.cos(a)*.185,.12+phaseHeights[phase]);dummy.rotation.set(0,0,-a);dummy.scale.set(1,.35,1);dummy.updateMatrix();activeLenses.setMatrixAt(lenses,dummy.matrix);activeLenses.setColorAt(lenses++,phaseColours[phase]);
@@ -88,8 +132,9 @@ export async function installStreetFurniture(map) {
       renderer.resetState();const start=performance.now();renderer.render(scene,camera);submitMs=performance.now()-start;
       window.recordCityRender?.('Street furniture',renderer,submitMs);renderer.resetState();
     },
-    onRemove(){for(const group of groups)group.geometry.dispose();activeLensGeometry.dispose();activeLensMaterial.dispose();material.dispose();renderer.dispose();}
+    onRemove(){for(const group of groups)group.geometry.dispose();for(const group of barrierGroups)group.geometry.dispose();activeLensGeometry.dispose();activeLensMaterial.dispose();material.dispose();renderer.dispose();}
   });
-  window.streetFurnitureState=()=>({loaded:true,...data.counts,visible,drawCalls,submitMs,positionSource:'OSM nodes',signalTiming:'Simulated game cycle, not live traffic data',signalPhases:signals.map(s=>({id:s.id,phase:signalPhase(s,Date.now()/1000)})),shapeAccuracy:'Simplified original reconstruction, dimensions unverified',triangles:groups.reduce((sum,g)=>sum+g.geometry.attributes.position.count/3*g.mesh.count,0)+activeLensGeometry.index.count/3*activeLenses.count});
+  const barrierCounts=Object.fromEntries(barrierKinds.map(k=>[k,barrierData.features.filter(f=>f.properties?.kind===k).length]));
+  window.streetFurnitureState=()=>({loaded:true,...data.counts,barriers:barrierCounts,visible,drawCalls,submitMs,positionSource:'OSM nodes + Devaraj Urs reference barriers',signalTiming:'Simulated game cycle, not live traffic data',signalPhases:signals.map(s=>({id:s.id,phase:signalPhase(s,Date.now()/1000)})),shapeAccuracy:'Simplified original reconstruction, dimensions unverified',triangles:groups.reduce((sum,g)=>sum+g.geometry.attributes.position.count/3*g.mesh.count,0)+barrierGroups.reduce((sum,g)=>sum+g.geometry.attributes.position.count/3*g.mesh.count,0)+activeLensGeometry.index.count/3*activeLenses.count});
   return {counts:data.counts};
 }
