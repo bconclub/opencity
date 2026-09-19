@@ -11,10 +11,11 @@ export async function loadVidhanaStreetData() {
     return JSON.parse(text);
   }
 
-  let response = await fetch('./vidhana-street-data.json');
+  // Prefer gzip on reconcile branch — full JSON may lag GitHub MCP push limits.
+  let response = await fetch('./vidhana-street-data.json.gz');
   if (response.ok) return parseResponse(response);
 
-  response = await fetch('./vidhana-street-data.json.gz');
+  response = await fetch('./vidhana-street-data.json');
   if (!response.ok) throw Error('Vidhana street data unavailable');
   return parseResponse(response);
 }
