@@ -67,28 +67,41 @@ function alignMeshyCybercab(T,root){
 }
 function attachCybercabAuthoredDetails(T,root,{wheels,lampMeshes}){
  // Meshy body stays fused; add proxy spinners + tail bar so drive QC can see motion/lamps.
+ // Counter-scale a detail group so authored sizes stay in world metres after alignMeshyCybercab().
  root.updateWorldMatrix(true,true);
+ const scale=root.scale.x||1,inv=1/scale;
+ const details=new T.Group();details.scale.set(inv,inv,inv);root.add(details);
  const box=new T.Box3().setFromObject(root);
- const span=box.max.y-box.min.y,width=box.max.x-box.min.x;
- const wheelRadius=.35,halfTrack=width*.38;
- const rubber=new T.MeshStandardMaterial({color:0x141414,roughness:.92,metalness:.04,name:'RubberTrim'});
- const wheelGeo=new T.CylinderGeometry(wheelRadius,wheelRadius,.22,18);
- wheelGeo.rotateZ(Math.PI/2);
- const axle=[[halfTrack,box.max.y-span*.14],[-halfTrack,box.max.y-span*.14],[halfTrack,box.min.y+span*.14],[-halfTrack,box.min.y+span*.14]];
- for(const [x,y] of axle){
+ const size=box.getSize(new T.Vector3());
+ const length=Math.max(size.x,size.z),width=Math.min(size.x,size.z);
+ const lengthOnX=size.x>=size.z;
+ const wheelRadius=.38,tireWidth=.24,halfTrack=width*.44,inset=length*.12;
+ const rubber=new T.MeshStandardMaterial({color:0x1a1a1a,roughness:.96,metalness:0,name:'RubberTrim'});
+ const wheelGeo=new T.CylinderGeometry(wheelRadius,wheelRadius,tireWidth,20);
+ wheelGeo.rotateX(Math.PI/2);
+ const groundY=box.min.y+wheelRadius;
+ const axle=[];
+ for(const side of [-1,1]){
+  for(const along of [-1,1]){
+   const lateral=side*halfTrack;
+   const longitudinal=along>0?(lengthOnX?box.max.x:box.max.z)-inset:(lengthOnX?box.min.x:box.min.z)+inset;
+   axle.push(lengthOnX?[longitudinal,groundY,lateral]:[lateral,groundY,longitudinal]);
+  }
+ }
+ for(const [x,y,z] of axle){
   const wheel=new T.Mesh(wheelGeo,rubber.clone());
   wheel.name='Cybercab_proxy_wheel';
-  wheel.position.set(x,y,wheelRadius);
-  root.add(wheel);
+  wheel.position.set(x,y,z);
+  details.add(wheel);
   wheels.push(wheel);
  }
  const lampMat=new T.MeshStandardMaterial({name:'Lamps',color:0xff2a18,emissive:0xff2a18,emissiveIntensity:2.5,toneMapped:false});
- const tail=new T.Mesh(new T.BoxGeometry(width*.72,.06,.12),lampMat);
+ const tail=new T.Mesh(new T.BoxGeometry(lengthOnX?length*.72:.12,.08,lengthOnX?.12:width*.72),lampMat);
  tail.name='Tail light bar';
- tail.position.set(0,box.min.y+.08,box.max.z*.22);
- root.add(tail);
+ tail.position.set(lengthOnX?box.min.x+length*.06:0,box.min.y+size.y*.18,lengthOnX?0:box.min.z+width*.06);
+ details.add(tail);
  lampMeshes.push(tail);
- const front=axle[0][1],rear=axle[2][1];
+ const front=lengthOnX?axle[2][0]:axle[2][2],rear=lengthOnX?axle[0][0]:axle[0][2];
  return {wheelRadius,wheelbase:Math.abs(front-rear),track:halfTrack*2};
 }
 export function loadVehicleAsset(id,lod=false){
@@ -126,7 +139,7 @@ export function createBlenderVehicle(T,id){
   setPaint(selected);
  });
  const updateDrive=(angle,steer=0,time=0)=>{
-  if(id==='cybercab')wheels.forEach(w=>{w.rotation.x=-Number(angle)||0;});
+  if(id==='cybercab')wheels.forEach(w=>{w.rotation.z=-Number(angle)||0;});
   else rig?.update(angle,steer);
   const at=(Math.sin(time*3.4)+1)*3.5;
   scanners.forEach(o=>{o.material.emissiveIntensity=.08+2.8*Math.exp(-Math.pow((Number(o.name.split('_')[1])-at)/.9,2));});
