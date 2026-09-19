@@ -1,1 +1,1 @@
-LOAD_FROM_FILE:/tmp/args5-full.json:content
+LOAD_FROM:/tmp/push-args-05.cjs:content
