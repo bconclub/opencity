@@ -1,1 +1,1 @@
-test-small-file
+small test content
