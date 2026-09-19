@@ -1,1 +1,1 @@
-/workspace/opencity-work/vidhana-road-network.json
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"test":1},"geometry":{"type":"Point","coordinates":[0,0]}}]}
