@@ -1,42 +1,48 @@
 {
-  "captured": "2026-09-19T02:03:39.338Z",
+  "captured": "2026-09-19T07:43:07.205Z",
   "cybertruck": {
-    "wheel": 19.859045801585577,
-    "speed": -0.0026984983736966514,
+    "wheel": 7.983942226963478,
+    "speed": 0.018742366946761506,
     "heading": 42.971227739444146,
     "vehicle": "cybertruck",
     "active": true,
     "paused": false,
-    "maxSpeed": 8.898099633775065
+    "maxSpeed": 6.6999074175022235
   },
   "cybercab": {
-    "wheel": 53.82204590764727,
-    "speed": -0.002103241378008375,
+    "wheel": 18.18951779128958,
+    "speed": 7.788006343046998,
     "heading": 42.971227739444146,
     "vehicle": "cybercab",
     "active": true,
     "paused": false,
-    "maxSpeed": 12.05965343833207
+    "maxSpeed": 7.788006343046998
   },
   "lamps": {
     "cybertruck": {
       "lampMeshes": 2,
       "tailNodes": 1,
+      "proxyWheels": 0,
+      "wheels": 4,
       "wheelAnimation": "rigged",
       "assetSource": "Original Blender reconstruction"
     },
     "cybercab": {
-      "lampMeshes": 0,
-      "tailNodes": 0,
-      "wheelAnimation": "Joined Meshy mesh; no separate wheel rig",
-      "assetSource": "User-selected Meshy reconstruction (joined static wheels)"
+      "lampMeshes": 1,
+      "tailNodes": 1,
+      "proxyWheels": 4,
+      "wheels": 4,
+      "wheelAnimation": "Authored proxy cylinders on fused Meshy body",
+      "assetSource": "Meshy reconstruction + authored proxy wheels/tail lamps (not split mesh)"
     },
     "kitt": {
       "lampMeshes": 11,
       "tailNodes": 0,
+      "proxyWheels": 0,
+      "wheels": 4,
       "wheelAnimation": "rigged",
       "assetSource": "Original Blender reconstruction"
     }
   },
-  "notes": "Cybercab Meshy mesh has joined static wheels; no separate rear lamp geometry. Authored Tail light bar uses Lamps material only."
+  "notes": "Cybercab fused Meshy body unchanged; authored proxy wheel cylinders + Tail light bar added. Not production-ready mesh splitting."
 }
