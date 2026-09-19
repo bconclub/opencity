@@ -1,12 +1,14 @@
 {
+  "test": "validate-npc-cybercab-runtime-rig",
   "status": "PASS_RUNTIME_RIG_CPU",
+  "asset": "assets/vehicles/cybercab-rigged.glb",
   "names": [
     "Wheel_FL",
     "Wheel_FR",
     "Wheel_RL",
     "Wheel_RR"
   ],
-  "wheelRadius": 0.3650000212076834,
+  "wheelRadius": 0.36500000953674316,
   "wheelbase": 2.771999955177307,
   "track": 1.559999942779541,
   "pivotDriftMetres": 0,
@@ -16,6 +18,5 @@
     "RL": 0,
     "RR": 0
   },
-  "reset": true,
-  "limitation": "No WebGL, CPU placeholder textures; actual runtime rig function and cached Three169."
+  "reset": true
 }
