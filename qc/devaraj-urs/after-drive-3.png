@@ -1,1 +1,1 @@
-REQUIRE_FROM:/tmp/cdt-args-module.js:content
+REQUIRE_FROM:/tmp/drive3-cdt-args.json:$.content
