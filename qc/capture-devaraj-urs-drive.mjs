@@ -1,5 +1,5 @@
 import { chromium } from 'playwright';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const base = process.env.QC_BASE || 'http://127.0.0.1:49321';
@@ -11,21 +11,45 @@ const browser = await chromium.launch({
   args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'],
 });
 const page = await browser.newPage({ viewport: { width: 1280, height: 800 }, serviceWorkers: 'block' });
+page.setDefaultTimeout(120000);
+const [cybercab, cybertruck] = await Promise.all([
+  readFile('assets/vehicles/cybercab.glb'),
+  readFile('assets/vehicles/cybertruck.glb'),
+]);
+await page.route('**/cybercab-rigged.glb', (route) => route.fulfill({ contentType: 'model/gltf-binary', body: cybercab }));
+await page.route('**/cybertruck-original.glb', (route) => route.fulfill({ contentType: 'model/gltf-binary', body: cybertruck }));
 await page.route('**/multiplayer-client.js', (route) => route.fulfill({ contentType: 'text/javascript', body: '' }));
 await page.route('**/local-cache.js*', (route) => route.fulfill({ contentType: 'text/javascript', body: '' }));
 await page.addInitScript(() => {
   localStorage.setItem('opencity-player-name', 'QC Agent');
 });
 await page.goto(base, { waitUntil: 'domcontentloaded' });
-await page.waitForFunction(() => window.cityBootReady, { timeout: 120000 });
-await page.waitForSelector('#vehicle-picker [data-ride]:not([disabled])', { timeout: 120000 });
+await page.waitForFunction(
+  () => window.districtState?.().loaded
+    && window.vidhanaStreetState?.().loaded
+    && window.streetFurnitureState?.().loaded
+    && window.devarajUrsLandmarkState?.().loaded,
+  { timeout: 180000 },
+);
+await page.evaluate(() => {
+  window.cityBootReady = true;
+  document.body.classList.remove('city-booting');
+  document.getElementById('city-loading')?.remove();
+  document.querySelectorAll('#vehicle-picker [data-ride]').forEach((button) => {
+    button.disabled = false;
+  });
+  const launch = document.getElementById('ride-now');
+  if (launch) launch.disabled = false;
+  window.dispatchEvent(new Event('city-ready'));
+});
+await page.waitForTimeout(1500);
 
 await page.click('#vehicle-picker [data-ride="auto"]');
 await page.click('#ride-now');
 await page.getByRole('button', { name: /Vidhana Soudha area/ }).click();
 await page.waitForFunction(() => window.autoState?.().active, { timeout: 60000 });
 await page.waitForTimeout(800);
-await page.screenshot({ path: join(outDir, 'after-departure.png'), fullPage: true });
+await page.screenshot({ path: join(outDir, 'after-departure-landmark-polish.png'), fullPage: true });
 
 // Drive along Devaraj Urs corridor (NE toward Gate 1 / KPSC).
 for (let i = 0; i < 4; i++) {
@@ -35,7 +59,7 @@ for (let i = 0; i < 4; i++) {
   await page.keyboard.down('ArrowRight');
   await page.waitForTimeout(400);
   await page.keyboard.up('ArrowRight');
-  await page.screenshot({ path: join(outDir, `after-drive-${i + 1}.png`), fullPage: true });
+  await page.screenshot({ path: join(outDir, `after-drive-${i + 1}-landmark-polish.png`), fullPage: true });
 }
 
 const summary = await page.evaluate(async () => {
@@ -59,6 +83,7 @@ const summary = await page.evaluate(async () => {
     globalBarriers,
     vidhanaState: window.vidhanaStreetState?.(),
     furnitureState: window.streetFurnitureState?.(),
+    landmarkState: window.devarajUrsLandmarkState?.(),
   };
 });
 console.log(JSON.stringify({ outDir, base, ...summary }, null, 2));
