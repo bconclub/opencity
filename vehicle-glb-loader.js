@@ -42,8 +42,7 @@ export async function loadGlbScene(path) {
       return gltf.scene;
     }
   }
-  const basePath = path.replace(/\.glb$/, '');
-  const b64 = await loadGlbB64Parts(basePath);
+  const b64 = await loadGlbB64Parts(path);
   if (!b64) throw new Error(`Vehicle GLB unavailable: ${path}`);
   const gltf = await new GLTFLoader().parseAsync(b64ToArrayBuffer(b64), '');
   return gltf.scene;
