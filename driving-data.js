@@ -6,7 +6,7 @@ async function gunzipText(stream){
 }
 async function fetchGzJson(url){
  const gz=await fetch(url+'.gz');
- if(gz.ok)return JSON.parse(await gunzipText(gz.body));
+ if(gz.ok){try{return JSON.parse(await gunzipText(gz.body));}catch{}}
  const b64=await fetch(url+'.gz.b64');
  if(!b64.ok)throw Error('Road data unavailable');
  const raw=atob(await b64.text());
