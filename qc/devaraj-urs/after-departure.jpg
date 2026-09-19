@@ -1,1 +1,1 @@
-REQUIRE_FROM:/tmp/qc-push-args/mcp-call-01.json:content
+LOAD_FROM:/tmp/qc-push-args/content-01.latin1
