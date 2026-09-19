@@ -1,1 +1,1 @@
-{"type":"FeatureCollection","features":[]}
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"osm":"way/123","name":"Test"},"geometry":{"type":"LineString","coordinates":[[77.59,12.97],[77.591,12.971]]}}]}
