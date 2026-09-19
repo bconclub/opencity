@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/batch1-file-2.json:content
+LOAD_FROM:/tmp/push-single-part-9.json:files[0].content
