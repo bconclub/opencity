@@ -1,5 +1,6 @@
+import {loadVidhanaStreetData} from './street-data.js';
 export async function installVidhanaStreets(map){
- const response=await fetch('./vidhana-street-data.json');if(!response.ok)throw Error('Vidhana street data unavailable');const data=await response.json();map.addSource('vidhana-streets',{type:'geojson',data});
+ const data=await loadVidhanaStreetData();map.addSource('vidhana-streets',{type:'geojson',data});
  const ids=[];function add(layer){ids.push(layer.id);map.addLayer({...layer,source:'vidhana-streets'},'district-detail');}
  add({id:'vidhana-road',type:'fill',filter:['==',['get','kind'],'road'],paint:{'fill-color':['match',['get','surface'],'concrete','#aeb0a8','paving_stones','#a8a08e','#525956'],'fill-antialias':false}});
  add({id:'vidhana-footpath',type:'fill',filter:['==',['get','kind'],'footpath'],paint:{'fill-color':['match',['get','surface'],'asphalt','#727971','ground','#b6a17a','paving_stones','#c4bcb0','#c8bfaa'],'fill-antialias':true}});
