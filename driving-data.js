@@ -1,7 +1,16 @@
 // Rendered Vidhana carriageways and driving routes use the same OSM centre lines.
 import {toLocal,toLngLat} from './auto-roads.js';
 let pending;
-export function loadDrivingData(){return pending??=Promise.all(['district-data.json','vidhana-road-network.json'].map(url=>fetch(url).then(r=>{if(!r.ok)throw Error('Road data unavailable');return r.json();}))).then(([district,roads])=>{
+async function fetchJson(url){
+ const r=await fetch(url);
+ if(r.ok)return r.json();
+ if(!url.endsWith('.json'))throw Error('Road data unavailable');
+ const gz=await fetch(url+'.gz');
+ if(!gz.ok)throw Error('Road data unavailable');
+ const text=await new Response(gz.body.pipeThrough(new DecompressionStream('gzip'))).text();
+ return JSON.parse(text);
+}
+export function loadDrivingData(){return pending??=Promise.all(['district-data.json','vidhana-road-network.json'].map(fetchJson)).then(([district,roads])=>{
  const centre=toLocal([77.5908,12.9798]),radius=488,features=[];
  for(const f of district.features){
   if(f.properties?._layer!=='transportation'||f.geometry.type!=='LineString'){features.push(f);continue;}
