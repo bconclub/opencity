@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/qc-push-args/push-p2-after-departure.json
+REQUIRE_FROM:/tmp/cou-arg-1.json:content
