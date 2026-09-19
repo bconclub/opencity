@@ -12,7 +12,8 @@
    button.setAttribute('aria-pressed',on?'true':'false');
   });
  }
- picker.querySelectorAll(':scope > button').forEach((button,i)=>{const key=button.dataset.ride||FLEET[i],name=names[key]||key;button.innerHTML='<span class="vehicle-art"><img src="./assets/vehicles/previews/'+key+'.webp" alt="" width="640" height="420" decoding="async"></span><span class="vehicle-card-label"><strong>'+name+'</strong><small>'+(button.dataset.ride?(key==='helicopter'?'Fly ↗':'Ride ↗'):'Coming soon')+'</small></span>';button.setAttribute('aria-label',name+(button.dataset.ride?' · Enter vehicle':' · Coming soon'));});highlightPreference();
+ picker.querySelectorAll(':scope > button').forEach((button,i)=>{const key=button.dataset.ride||FLEET[i],name=names[key]||key;button.innerHTML='<span class="vehicle-art"><img src="./assets/vehicles/previews/'+key+'.webp" alt="" width="640" height="420" decoding="async"></span><span class="vehicle-card-label"><strong>'+name+'</strong><small>'+(button.dataset.ride?(key==='helicopter'?'Fly ↗':'Ride ↗'):'Coming soon')+'</small></span>';button.setAttribute('aria-label',name+(button.dataset.ride?' · Enter vehicle':' · Coming soon'));});
+ highlightPreference();
 
  const departureDialog=document.createElement('dialog');departureDialog.id='departure-choice';departureDialog.setAttribute('aria-labelledby','departure-title');document.body.append(departureDialog);
  const roads=[{name:'Cubbon Park · South',detail:'Park-side roads',point:[77.5935,12.974]},{name:'UB City area',detail:'Southern CBD streets',point:[77.5963,12.9708]},{name:'Vidhana Soudha area',detail:'Northern CBD streets',point:[77.5921,12.9792]},{name:'MG Road area',detail:'Eastern CBD streets',point:[77.600,12.976]},{name:'Kasturba Road area',detail:'Southern park edge',point:[77.592,12.9705]}];
@@ -31,4 +32,3 @@
   }catch(error){message.textContent=error.message;}finally{entering=false;picker.querySelectorAll('[data-ride]').forEach(b=>b.disabled=!available());}
  });
 })();
-
