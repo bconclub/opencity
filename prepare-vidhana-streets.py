@@ -21,6 +21,12 @@ def strip(a,b,width,kind,props):
  if L<.01:return
  nx,ny=-dy/L*width/2,dx/L*width/2
  poly([(a[0]+nx,a[1]+ny),(b[0]+nx,b[1]+ny),(b[0]-nx,b[1]-ny),(a[0]-nx,a[1]-ny)],kind,props)
+def strip_offset(a,b,offset,strip_width,kind,props):
+ dx,dy=b[0]-a[0],b[1]-a[1];L=math.hypot(dx,dy)
+ if L<.01:return
+ nx,ny=-dy/L,dx/L
+ ca=(a[0]+nx*offset,a[1]+ny*offset);cb=(b[0]+nx*offset,b[1]+ny*offset)
+ strip(ca,cb,strip_width,kind,props)
 for w in r.findall('way'):
  t=tags(w);h=t.get('highway');foot=h in ('footway','path','pedestrian','cycleway');road=h in ('primary','primary_link','secondary','secondary_link','tertiary','residential','unclassified','service')
  if not(foot or road) or t.get('bridge')=='yes' or t.get('tunnel')=='yes' or t.get('layer','0')!='0':continue
@@ -49,6 +55,15 @@ for w in r.findall('way'):
      for d in range(10,int(L)-10,9):
       def at(s):return(a[0]+dx/L*s-dy/L*off,a[1]+dy/L*s+dx/L*off)
       strip(at(d),at(min(d+3,L-10)),.12,'lane',props)
+   # Devaraj Urs: green/white painted kerbs + separate stone sidewalks (Street View ref).
+   if t.get('name')=='Devaraj Urs Road':
+    kerb_w=.28;walk_w=1.9;seg=len(features)
+    for side in (-1,1):
+     inner=side*(width/2)
+     strip_offset(a,b,inner+side*(kerb_w/2),kerb_w,'kerb',{**props,'kerbTone':(seg+int(side>0))%2})
+     if t.get('sidewalk')=='separate':
+      outer=inner+side*kerb_w
+      strip_offset(a,b,outer+side*(walk_w/2),walk_w,'footpath',{**props,'surface':'paving_stones'})
  if used:counts['roadWays' if road else 'footpathWays']+=1
 for n in r.findall('node'):
  t=tags(n);p=local(nodes[n.get('id')]);h=t.get('highway')
@@ -85,7 +100,7 @@ if patch_file.exists():
  patch=unary_union([shape(f['geometry']) for f in json.loads(patch_file.read_text())['features']])
  clipped=[]
  for f in features:
-  if f['properties']['kind'] in ('road','footpath','lane'):
+  if f['properties']['kind'] in ('road','footpath','lane','kerb'):
    geom=shape(f['geometry']).difference(patch)
    if geom.is_empty:continue
    f={**f,'geometry':mapping(geom)}
