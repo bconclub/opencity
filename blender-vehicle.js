@@ -65,6 +65,32 @@ function alignMeshyCybercab(T,root){
  root.updateWorldMatrix(true,true);
  return new T.Box3().setFromObject(root).max.z;
 }
+function attachCybercabAuthoredDetails(T,root,{wheels,lampMeshes}){
+ // Meshy body stays fused; add proxy spinners + tail bar so drive QC can see motion/lamps.
+ root.updateWorldMatrix(true,true);
+ const box=new T.Box3().setFromObject(root);
+ const span=box.max.y-box.min.y,width=box.max.x-box.min.x;
+ const wheelRadius=.35,halfTrack=width*.38;
+ const rubber=new T.MeshStandardMaterial({color:0x141414,roughness:.92,metalness:.04,name:'RubberTrim'});
+ const wheelGeo=new T.CylinderGeometry(wheelRadius,wheelRadius,.22,18);
+ wheelGeo.rotateZ(Math.PI/2);
+ const axle=[[halfTrack,box.max.y-span*.14],[-halfTrack,box.max.y-span*.14],[halfTrack,box.min.y+span*.14],[-halfTrack,box.min.y+span*.14]];
+ for(const [x,y] of axle){
+  const wheel=new T.Mesh(wheelGeo,rubber.clone());
+  wheel.name='Cybercab_proxy_wheel';
+  wheel.position.set(x,y,wheelRadius);
+  root.add(wheel);
+  wheels.push(wheel);
+ }
+ const lampMat=new T.MeshStandardMaterial({name:'Lamps',color:0xff2a18,emissive:0xff2a18,emissiveIntensity:2.5,toneMapped:false});
+ const tail=new T.Mesh(new T.BoxGeometry(width*.72,.06,.12),lampMat);
+ tail.name='Tail light bar';
+ tail.position.set(0,box.min.y+.08,box.max.z*.22);
+ root.add(tail);
+ lampMeshes.push(tail);
+ const front=axle[0][1],rear=axle[2][1];
+ return {wheelRadius,wheelbase:Math.abs(front-rear),track:halfTrack*2};
+}
 export function loadVehicleAsset(id,lod=false){
  if(!['cybertruck','cybercab','kitt'].includes(id))throw Error('Unknown vehicle asset');
  const file=id==='cybercab'?(lod?'cybercab-meshy-traffic':'cybercab-meshy-approved'):id;
@@ -72,25 +98,26 @@ export function loadVehicleAsset(id,lod=false){
  return templates.get(file);
 }
 export function createBlenderVehicle(T,id){
- const group=new T.Group(),body=new T.Group(),wheels=[],front=new T.Group(),paint=[],scanners=[];body.add(front);group.add(body);let rig;
+ const group=new T.Group(),body=new T.Group(),wheels=[],front=new T.Group(),paint=[],scanners=[],lampMeshes=[];body.add(front);group.add(body);let rig,cybercabMetrics;
  let selected=selectedVehicleColor()||(id==='kitt'?'black':null);
  const setPaint=color=>{if(id==='cybercab')return;const hex=paintHex(color);if(!hex)return;selected=color;paint.forEach(m=>m.color.set(hex));group.userData.paintColor=hex;};
  group.userData.originalReconstruction=id!=='cybercab';group.userData.vehicle=id;
  group.userData.sharedAssetResources=true;
- group.userData.assetSource=id==='cybercab'?'User-selected Meshy reconstruction (joined static wheels)':'Original Blender reconstruction';
+ group.userData.assetSource=id==='cybercab'?'Meshy reconstruction + authored proxy wheels/tail lamps (not split mesh)':'Original Blender reconstruction';
  const ready=loadVehicleAsset(id).then(source=>{
   const root=source.clone(true),materials=new Map();
   body.add(root);
   root.traverse(o=>{
    if(!o.isMesh)return;
    const original=o.material;
-   if(!materials.has(original)){const copy=original.clone();materials.set(original,copy);if(copy.name==='BodyPaint')paint.push(copy);if(copy.name==='Lamps'){copy.emissiveIntensity=Math.max(copy.emissiveIntensity||0,2.5);copy.toneMapped=false;}}
+   if(!materials.has(original)){const copy=original.clone();materials.set(original,copy);if(copy.name==='BodyPaint')paint.push(copy);if(copy.name==='Lamps'){copy.emissiveIntensity=Math.max(copy.emissiveIntensity||0,2.5);copy.toneMapped=false;lampMeshes.push(o);}}
    o.material=materials.get(original);
    if(/^Scanner_\d+$/.test(o.name)){o.material=o.material.clone();scanners.push(o);}
   });
   if(id==='cybercab'){
    group.userData.visualHeight=alignMeshyCybercab(T,root);
-   group.userData.wheelAnimation='Joined Meshy mesh; no separate wheel rig';
+   cybercabMetrics=attachCybercabAuthoredDetails(T,root,{wheels,lampMeshes});
+   group.userData.wheelAnimation='Authored proxy cylinders on fused Meshy body';
   }else{
    group.userData.visualHeight=alignAuthoredVehicle(T,root,id);
    rig=bindVehicleWheelRig(T,root);
@@ -98,6 +125,11 @@ export function createBlenderVehicle(T,id){
   }
   setPaint(selected);
  });
- const updateDrive=(angle,steer=0,time=0)=>{rig?.update(angle,steer);const at=(Math.sin(time*3.4)+1)*3.5;scanners.forEach(o=>{o.material.emissiveIntensity=.08+2.8*Math.exp(-Math.pow((Number(o.name.split('_')[1])-at)/.9,2));});};
- return{group,body,front,wheels,get wheelRadius(){return rig?.wheelRadius||(id==='cybertruck'?.43:id==='kitt'?.324:.35);},get wheelbase(){return rig?.wheelbase;},setPaint,ready,updateDrive};
+ const updateDrive=(angle,steer=0,time=0)=>{
+  if(id==='cybercab')wheels.forEach(w=>{w.rotation.x=-Number(angle)||0;});
+  else rig?.update(angle,steer);
+  const at=(Math.sin(time*3.4)+1)*3.5;
+  scanners.forEach(o=>{o.material.emissiveIntensity=.08+2.8*Math.exp(-Math.pow((Number(o.name.split('_')[1])-at)/.9,2));});
+ };
+ return{group,body,front,wheels,get wheelRadius(){return rig?.wheelRadius||cybercabMetrics?.wheelRadius||(id==='cybertruck'?.43:id==='kitt'?.324:.35);},get wheelbase(){return rig?.wheelbase||cybercabMetrics?.wheelbase;},setPaint,ready,updateDrive};
 }
