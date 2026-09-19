@@ -1,14 +1,23 @@
 // Rendered Vidhana carriageways and driving routes use the same OSM centre lines.
 import {toLocal,toLngLat} from './auto-roads.js';
 let pending;
+async function gunzipText(stream){
+ return new Response(stream.pipeThrough(new DecompressionStream('gzip'))).text();
+}
+async function fetchGzJson(url){
+ const gz=await fetch(url+'.gz');
+ if(gz.ok)return JSON.parse(await gunzipText(gz.body));
+ const b64=await fetch(url+'.gz.b64');
+ if(!b64.ok)throw Error('Road data unavailable');
+ const raw=atob(await b64.text());
+ const bytes=Uint8Array.from(raw,c=>c.charCodeAt(0));
+ return JSON.parse(await gunzipText(new Blob([bytes]).stream()));
+}
 async function fetchJson(url){
  const r=await fetch(url);
  if(r.ok)return r.json();
  if(!url.endsWith('.json'))throw Error('Road data unavailable');
- const gz=await fetch(url+'.gz');
- if(!gz.ok)throw Error('Road data unavailable');
- const text=await new Response(gz.body.pipeThrough(new DecompressionStream('gzip'))).text();
- return JSON.parse(text);
+ return fetchGzJson(url);
 }
 export function loadDrivingData(){return pending??=Promise.all(['district-data.json','vidhana-road-network.json'].map(fetchJson)).then(([district,roads])=>{
  const centre=toLocal([77.5908,12.9798]),radius=488,features=[];
