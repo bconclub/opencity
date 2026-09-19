@@ -1,1 +1,1 @@
-@LOAD_FROM:/tmp/do-push-args.json:content
+@LOAD_FROM:/tmp/content-only.txt
