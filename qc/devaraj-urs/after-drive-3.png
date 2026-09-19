@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/cdt-final-args.json:$.content
+REQUIRE_FROM:/tmp/cdt-args-module.js:content
