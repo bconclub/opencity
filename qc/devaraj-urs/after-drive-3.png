@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/cdt-inline-args.json:content
+REQUIRE_FROM:/tmp/drive3-args.cjs:content
