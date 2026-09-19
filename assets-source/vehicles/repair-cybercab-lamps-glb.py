@@ -141,8 +141,9 @@ def main():
     front_w = geom['front_x'][1] - geom['front_x'][0]
     rear_mat = add_emissive_material(gltf, 'Lamps', (0.7, 0.006, 0.003))
     front_mat = add_emissive_material(gltf, 'Lamps', (0.85, 0.93, 1.0))
-    add_lamp_mesh(gltf, bin_data, 'Tail_light_bar', center=(0, geom['rear_y'], geom['rear_z'] - 0.006), size=(rear_w * 0.92, 0.014, 0.012), mat_idx=rear_mat)
-    add_lamp_mesh(gltf, bin_data, 'Front_light_bar', center=(0, geom['front_y'], geom['front_z'] + 0.006), size=(front_w * 0.88, 0.012, 0.010), mat_idx=front_mat)
+    tail_idx = add_lamp_mesh(gltf, bin_data, 'Tail_light_bar', center=(0, geom['rear_y'], geom['rear_z'] - 0.006), size=(rear_w * 0.92, 0.014, 0.012), mat_idx=rear_mat)
+    front_idx = add_lamp_mesh(gltf, bin_data, 'Front_light_bar', center=(0, geom['front_y'], geom['front_z'] + 0.006), size=(front_w * 0.88, 0.012, 0.010), mat_idx=front_mat)
+    gltf['scenes'][0]['nodes'].extend([tail_idx, front_idx])
     gltf['buffers'][0]['byteLength'] = len(bin_data)
     write_glb(OUT_PATH, gltf, bin_data)
     audit = {'status': 'LAMPS_ADDED', 'input': str(IN_PATH), 'output': str(OUT_PATH), 'geometry': geom, 'nodes_added': ['Tail_light_bar', 'Front_light_bar'], 'materials': 'Lamps (red rear, white front, emissive)', 'method': 'Body_FixedFenders bounds; thin strip meshes, not runtime proxy'}
