@@ -84,7 +84,7 @@ async function installRenderer(map) {
     p.heading+=(((target.heading-p.heading)%360+540)%360-180)*f;
     e.point.copy(position(p));e.angle+=dt*(e.vehicle!=='helicopter'?p.speed/(e.model?.wheelRadius||.31):21);
     if(e.model){const m=e.model;m.group.position.copy(e.point);m.group.rotation.z=-p.heading*RAD;
-     if(e.vehicle!=='helicopter'){m.body.rotation.set(p.pitch,p.roll,0);m.wheels.forEach(wheel=>wheel.rotation.x=-e.angle);if(m.pedals)m.pedals.rotation.x=-e.angle*.4;m.updateRider?.(-e.angle*.4);}
+     if(e.vehicle!=='helicopter'){m.body.rotation.set(p.pitch,p.roll,0);if(m.updateDrive)m.updateDrive(e.angle,0,performance.now()/1000);else m.wheels.forEach(wheel=>wheel.rotation.x=-e.angle);if(m.pedals)m.pedals.rotation.x=-e.angle*.4;m.updateRider?.(-e.angle*.4);}
      else{m.body.rotation.set(p.pitch,p.roll,0,'YXZ');m.rotor.rotation.z=e.angle;m.tailRotor.rotation.x=-e.angle*3.7;m.rotorDisc.material.opacity=.085;}
     }
     // Project vehicle roof/rotor in 3D. Ground-only markers would drift below aircraft.
@@ -125,8 +125,3 @@ async function installRenderer(map) {
  window.multiplayerRenderState=()=>({ownId,remoteCount:[...entries.values()].filter(e=>!e.own).length,tagCount:entries.size,players:[...entries].map(([id,e])=>({id,own:e.own,vehicle:e.vehicle,...e.current,position:e.point.toArray(),name:e.label.textContent,labelVisible:e.labelVisible,rotorAngle:e.angle,color:e.model?.group.userData.paintColor||e.target.color||null})),disposed});
  const api={destroy};map.__multiplayerRenderer=api;return api;
 }
-
-
-
-
-
