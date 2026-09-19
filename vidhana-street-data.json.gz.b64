@@ -1,1 +1,1 @@
-@LOAD_FROM:/tmp/cou-content-only.txt
+@LOAD_FROM:/tmp/do-push-args.json:content
