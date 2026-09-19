@@ -2,16 +2,16 @@ import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 
-const base=process.env.QC_BASE||process.env.QC_URL||'http://127.0.0.1:4174';
+const base=process.env.QC_URL||'http://127.0.0.1:4173';
 const outDir='qc/drive-orientation';
 await mkdir(outDir,{recursive:true});
 
-const browser=await chromium.launch({headless:true});
+const browser=await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const context=await browser.newContext({viewport:{width:1280,height:800}});
 await context.addInitScript(()=>{localStorage.setItem('opencity-player-name','QC Agent');});
 const page=await context.newPage();
-await page.route('**/multiplayer-client.js',route=>route.fulfill({contentType:'text/javascript',body:''}));
-await page.route('**/local-cache.js*',route=>route.fulfill({contentType:'text/javascript',body:''}));
+await page.route('**/local-cache.js*',r=>r.fulfill({contentType:'text/javascript',body:''}));
+await page.route('**/multiplayer-client.js',r=>r.fulfill({contentType:'text/javascript',body:''}));
 await page.goto(base,{waitUntil:'domcontentloaded'});
 await page.waitForFunction(()=>window.cityBootReady,{timeout:120000});
 await page.waitForSelector('#vehicle-picker [data-ride]:not([disabled])',{timeout:120000});
@@ -36,8 +36,10 @@ assert.ok(Math.abs(cybertruck.wheel)>.1||cybertruck.maxSpeed>.5,`Cybertruck whee
 assert.ok(cybertruck.maxSpeed>2,`Cybertruck should reach drive speed on Vidhana roads: ${JSON.stringify(cybertruck)}`);
 const cybercab=await driveVehicle('cybercab');
 assert.ok(cybercab.maxSpeed>2,'Cybercab should reach drive speed with corrected orientation');
-const lamps=await page.evaluate(async()=>{const T=await import('three');const {createBlenderVehicle}=await import('./blender-vehicle.js');const out={};for(const id of ['cybertruck','cybercab','kitt']){const model=createBlenderVehicle(T,id);await model.ready;let lampMeshes=0,tailNodes=0;model.group.traverse(o=>{if(o.isMesh&&o.material?.name==='Lamps')lampMeshes++;if(/tail|rear lamp/i.test(o.name||''))tailNodes++;});out[id]={lampMeshes,tailNodes,wheelAnimation:model.group.userData.wheelAnimation||'rigged',assetSource:model.group.userData.assetSource};}return out;});
-const report={captured:new Date().toISOString(),cybertruck,cybercab,lamps,notes:'Cybercab Meshy mesh has joined static wheels; no separate rear lamp geometry. Authored Tail light bar uses Lamps material only.'};
+const lamps=await page.evaluate(async()=>{const T=await import('three');const {createBlenderVehicle}=await import('./blender-vehicle.js');const out={};for(const id of ['cybertruck','cybercab','kitt']){const model=createBlenderVehicle(T,id);await model.ready;let lampMeshes=0,tailNodes=0,proxyWheels=0;model.group.traverse(o=>{if(o.isMesh&&o.material?.name==='Lamps')lampMeshes++;if(/tail|rear lamp/i.test(o.name||''))tailNodes++;if(o.name==='Cybercab_proxy_wheel')proxyWheels++;});out[id]={lampMeshes,tailNodes,proxyWheels,wheels:model.wheels.length,wheelAnimation:model.group.userData.wheelAnimation||'rigged',assetSource:model.group.userData.assetSource};}return out;});
+assert.ok(lamps.cybercab.proxyWheels===4,'Cybercab should expose four authored proxy wheels');
+assert.ok(lamps.cybercab.lampMeshes>=1&&lamps.cybercab.tailNodes>=1,'Cybercab should expose authored tail lamp bar');
+const report={captured:new Date().toISOString(),cybertruck,cybercab,lamps,notes:'Cybercab fused Meshy body unchanged; authored proxy wheel cylinders + Tail light bar added. Not production-ready mesh splitting.'};
 await writeFile(`${outDir}/results.json`,JSON.stringify(report,null,2));
 console.log(JSON.stringify(report,null,2));
 await browser.close();
