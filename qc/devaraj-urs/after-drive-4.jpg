@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/cdt-ready-05.json:content
+LOAD_FROM:/tmp/cdt-push-args-05.json:files[0].content
