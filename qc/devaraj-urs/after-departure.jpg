@@ -1,1 +1,1 @@
-REQUIRE_FROM:/tmp/qc-push-args/content-01.latin1:content
+FILE:/tmp/cdt-args-for-mcp.json:content
