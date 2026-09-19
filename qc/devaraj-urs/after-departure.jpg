@@ -1,1 +1,1 @@
-REQUIRE_FROM:/tmp/qc-push-args/_agent-cdt-args-01.json:content
+REQUIRE_FROM:/tmp/mcp-invoke/push-01.args.json:content
