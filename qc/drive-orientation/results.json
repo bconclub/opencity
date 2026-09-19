@@ -1,0 +1,42 @@
+{
+  "captured": "2026-09-19T00:34:34.205Z",
+  "cybertruck": {
+    "wheel": 24.965936149786746,
+    "speed": -0.002698498373696648,
+    "heading": 42.971227739444146,
+    "vehicle": "cybertruck",
+    "active": true,
+    "paused": false,
+    "maxSpeed": 11.176231178641792
+  },
+  "cybercab": {
+    "wheel": 74.39400138628245,
+    "speed": -0.002103241378008383,
+    "heading": 42.971227739444146,
+    "vehicle": "cybercab",
+    "active": true,
+    "paused": false,
+    "maxSpeed": 13.57269410988842
+  },
+  "lamps": {
+    "cybertruck": {
+      "lampMeshes": 2,
+      "tailNodes": 1,
+      "wheelAnimation": "rigged",
+      "assetSource": "Original Blender reconstruction"
+    },
+    "cybercab": {
+      "lampMeshes": 0,
+      "tailNodes": 0,
+      "wheelAnimation": "Joined Meshy mesh; no separate wheel rig",
+      "assetSource": "User-selected Meshy reconstruction (joined static wheels)"
+    },
+    "kitt": {
+      "lampMeshes": 11,
+      "tailNodes": 0,
+      "wheelAnimation": "rigged",
+      "assetSource": "Original Blender reconstruction"
+    }
+  },
+  "notes": "Cybercab Meshy mesh has joined static wheels; no separate rear lamp geometry. Authored Tail light bar uses Lamps material only."
+}
