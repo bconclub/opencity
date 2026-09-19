@@ -23,6 +23,12 @@ async function loadGzipB64Parts() {
 }
 
 export async function loadVidhanaStreetData() {
+  const b64 = await loadGzipB64Parts();
+  if (b64) {
+    const raw = atob(b64);
+    const bytes = Uint8Array.from(raw, (c) => c.charCodeAt(0));
+    return JSON.parse(await gunzipText(new Blob([bytes]).stream()));
+  }
   const json = await fetch('./vidhana-street-data.json');
   if (json.ok) {
     const text = await json.text();
@@ -30,9 +36,5 @@ export async function loadVidhanaStreetData() {
       return JSON.parse(text);
     }
   }
-  const b64 = await loadGzipB64Parts();
-  if (!b64) throw Error('Vidhana street data unavailable');
-  const raw = atob(b64);
-  const bytes = Uint8Array.from(raw, (c) => c.charCodeAt(0));
-  return JSON.parse(await gunzipText(new Blob([bytes]).stream()));
+  throw Error('Vidhana street data unavailable');
 }
