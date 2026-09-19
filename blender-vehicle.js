@@ -1,5 +1,5 @@
-import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {paintHex,selectedVehicleColor} from './vehicle-colors.js';
+import {loadGlbScene} from './vehicle-glb-loader.js';
 const templates=new Map();
 // glTF is Y-up here. Keep steering above the wheel's independent spin pivot.
 export function bindVehicleWheelRig(T,root){
@@ -48,7 +48,7 @@ export function loadVehicleAsset(id,lod=false){
  if(!['cybertruck','cybercab','kitt'].includes(id))throw Error('Unknown vehicle asset');
  // User chose the original Meshy appearance after the three-way comparison.
  const file=id==='cybercab'?(lod==='detail'?'cybercab-rigged':lod?'cybercab-meshy-traffic':'cybercab-rigged'):id==='cybertruck'?'cybertruck-original':id;
- if(!templates.has(file))templates.set(file,new GLTFLoader().loadAsync('./assets/vehicles/'+file+'.glb').then(g=>g.scene).catch(e=>{templates.delete(file);throw e;}));
+ if(!templates.has(file))templates.set(file,loadGlbScene('./assets/vehicles/'+file+'.glb').catch(e=>{templates.delete(file);throw e;}));
  return templates.get(file);
 }
 export function createBlenderVehicle(T,id){
