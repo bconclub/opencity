@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/cdt-live-args-01.cjs:content
+REQUIRE_FROM:/tmp/qc-push-args/cdt-mod-01.cjs:content
