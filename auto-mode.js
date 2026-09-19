@@ -68,9 +68,3 @@ async function setup(map){
  window.autoState=()=>({vehicleType,roaming,groundHeight:groundHeight(),cameraOrbit:{yaw:orbitYaw,elevation:orbitElevation,distance:orbitDistance},active,paused,boost:car?{...car.boost}:null,speed,distance,heading,choice,wheelAngle,position:car?toLngLat([car.x,car.y]):null,tilt:tilt.state(),gamepad:gamepad.state(),physics:car?{steer:car.steer,yaw:car.yaw,roll:car.roll,pitch:car.pitch,impacts:car.impacts,surface:car.surface}:null,ended:path?.ended,edge:path?.edge,from:path?.from,to:path?.to,progress:path?.progress,roadEdges:graph.edges.length,connectedNodes:graph.connected.size,keys:[...keys]});
  return{start};
 }
-
-
-
-
-
-
