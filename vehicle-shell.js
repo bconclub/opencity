@@ -32,3 +32,4 @@
   }catch(error){message.textContent=error.message;}finally{entering=false;picker.querySelectorAll('[data-ride]').forEach(b=>b.disabled=!available());}
  });
 })();
+
