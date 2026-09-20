@@ -35,6 +35,8 @@ async function installRenderer(map) {
   const geometries=new Set(),materials=new Set(),textures=new Set();
   model.group.traverse(o=>{if(o.geometry)geometries.add(o.geometry);for(const m of (Array.isArray(o.material)?o.material:[o.material]))if(m){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v);}});
   model.group.removeFromParent();materials.forEach(m=>m.dispose());
+  // GLB clones own their materials, but geometry and textures remain cached and
+  // shared with other players, the local car and traffic.
   if(!model.group.userData.sharedAssetResources){geometries.forEach(g=>g.dispose());textures.forEach(t=>t.dispose());}
  }
  function remove(id){const e=entries.get(id);if(!e)return;disposeModel(e.model);e.label.remove();entries.delete(id);emotes.delete(id);}
@@ -59,6 +61,7 @@ async function installRenderer(map) {
    e.name=labelText;
    if(e.label.textContent!==labelText)e.label.textContent=labelText;
    if(e.model&&p.color)e.model.setPaint?.(p.color);
+   // Spawn/reset jumps snap, ordinary packet updates converge without heading wrap spins.
    if(e.point.distanceTo(position(p))>120){e.current={...p};e.point.copy(position(p));}
    e.target={...p};
   }
@@ -76,6 +79,8 @@ async function installRenderer(map) {
     if(emote&&!greeting)emotes.delete(playerId);
     const text=e.name+greeting;if(e.label.textContent!==text)e.label.textContent=text;
     e.label.dataset.emote=String(!!greeting);e.label.dataset.speaking=String(speaking.has(playerId));
+    // Own camera advances every frame; a network echo is already out of date.
+    // Anchor our tag to the same live pose instead of the 10 Hz server snapshot.
     const live=e.own?window.multiplayerState?.().pose:null;
     const p=e.current,target=valid(live)&&live.vehicle===e.vehicle?live:e.target,f=e.own?1:factor;
     for(const key of ['lng','lat','altitude','pitch','roll','speed'])p[key]+=(target[key]-p[key])*f;
@@ -85,6 +90,7 @@ async function installRenderer(map) {
      if(e.vehicle!=='helicopter'){m.body.rotation.set(p.pitch,p.roll,0);if(m.updateDrive){const steer=Math.abs(p.speed)>.5&&dt>0?Math.atan(headingDelta*RAD/dt*(m.wheelbase||(e.vehicle==="cybertruck"?3.3:2.5654))/p.speed):0;m.updateDrive(e.angle,steer,now/1000);}else m.wheels.forEach(wheel=>wheel.rotation.x=-e.angle);if(m.pedals)m.pedals.rotation.x=-e.angle*.4;m.updateRider?.(-e.angle*.4);}
      else{m.body.rotation.set(p.pitch,p.roll,0,'YXZ');m.rotor.rotation.z=e.angle;m.tailRotor.rotation.x=-e.angle*3.7;m.rotorDisc.material.opacity=.085;}
     }
+    // Project vehicle roof/rotor in 3D. Ground-only markers would drift below aircraft.
     const roof=e.own?window.autoState?.().visualHeight:e.model?.group.userData.visualHeight;
     head.set(0,e.vehicle==='cycle'?.075:0,e.vehicle==='cycle'?1.915:e.vehicle==='helicopter'?6:Number.isFinite(roof)?roof:2.7);
     head.applyEuler(headRotation.set(p.pitch,p.roll,0));
@@ -95,6 +101,8 @@ async function installRenderer(map) {
     e.label.style.display=e.labelVisible?'block':'none';
     if(e.labelVisible)e.screenAnchor={x:(x+1)*w/2,y:(1-y)*h/2};
    }
+   // Keep labels anchored to their projected vehicle, stacking nearby names above
+   // or below that point. Stable player IDs prevent ordering flicker between packets.
    const placed=[],margin=6,gap=4;
    for(const [id,e] of [...entries].sort(([a],[b])=>String(a).localeCompare(String(b)))){
     if(!e.labelVisible)continue;
@@ -121,3 +129,8 @@ async function installRenderer(map) {
  window.multiplayerRenderState=()=>({ownId,remoteCount:[...entries.values()].filter(e=>!e.own).length,tagCount:entries.size,players:[...entries].map(([id,e])=>({id,own:e.own,vehicle:e.vehicle,...e.current,position:e.point.toArray(),name:e.label.textContent,labelVisible:e.labelVisible,rotorAngle:e.angle,color:e.model?.group.userData.paintColor||e.target.color||null})),disposed});
  const api={destroy};map.__multiplayerRenderer=api;return api;
 }
+
+
+
+
+
