@@ -1,0 +1,22 @@
+// Single-browser ABBA, accepted road geometry in both modes. Review only.
+const {chromium}=require('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+assert.equal(fs.readFileSync('street-surface-materials.js','utf8'),fs.readFileSync('qc/street-coverage-base.js','utf8'),'Benchmark base snapshot is stale');
+const sources={baseline:fs.readFileSync('street-surface-materials.js','utf8'),candidate:fs.readFileSync('qc/street-coverage-materials.js','utf8')};
+const poses={aerial:{eye:[77.594,12.976],height:500,target:[77.5908,12.9798]},near:{eye:[77.59124,12.97826],height:12,target:[77.59118,12.97834]}};
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']}),runs=[];
+try{for(const [index,mode]of ['baseline','candidate','candidate','baseline'].entries()){
+ const p=await browser.newPage({viewport:{width:1100,height:760},serviceWorkers:'block'});p.setDefaultTimeout(120000);const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.route('**/street-surface-materials.js',r=>r.fulfill({contentType:'text/javascript',body:sources[mode]}));
+ await p.route('**/assets/streets/vidhana-streets.json',r=>{const metadata=JSON.parse(fs.readFileSync('assets/streets/vidhana-streets.json'));delete metadata.surfaceCoverage;return r.fulfill({contentType:'application/json',body:JSON.stringify(metadata)});});
+ await p.route('**/local-cache.js*',r=>r.fulfill({contentType:'text/javascript',body:''}));await p.route('**/multiplayer-client.js',r=>r.fulfill({contentType:'text/javascript',body:''}));
+ await p.goto('http://127.0.0.1:4173/#17/12.97973/77.59065/-45/70');await p.waitForFunction(()=>window.cityBootReady&&window.vidhanaStreetPatch?.state().ready&&window.districtState?.().loaded);
+ const setup=await p.evaluate(()=>({production:window.vidhanaStreetPatch.state().surfaceCoverage?.status,prototype:!!window.streetCoverageReview}));assert.equal(setup.production??'disabled','disabled','Production coverage contaminated benchmark');assert.equal(setup.prototype,mode==='candidate','Baseline/candidate shader setup is incorrect');
+ for(const [view,pose]of Object.entries(poses)){
+  await p.evaluate(v=>{window.setDomeOverview?.(false);map.setMaxPitch(89);map.jumpTo(map.calculateCameraOptionsFromTo(v.eye,v.height,v.target,0));},pose);await p.waitForTimeout(2500);
+  const result=await p.evaluate(()=>new Promise(resolve=>{const layers={},frames=[],original=window.recordCityRender;window.recordCityRender=(name,r,ms)=>{original(name,r,ms);layers[name]={calls:r.info.render.calls,triangles:r.info.render.triangles,textures:r.info.memory.textures};};let last;
+   function step(t){if(last!==undefined)frames.push(t-last);last=t;if(frames.length<60){map.triggerRepaint();requestAnimationFrame(step);}else{window.recordCityRender=original;const sorted=[...frames].sort((a,b)=>a-b);resolve({meanMs:frames.reduce((a,b)=>a+b)/frames.length,medianMs:sorted[30],p95Ms:sorted[57],layers,customCalls:Object.values(layers).reduce((n,v)=>n+v.calls,0),customTriangles:Object.values(layers).reduce((n,v)=>n+v.triangles,0),patch:window.vidhanaStreetPatch.state(),coverage:window.streetCoverageReview?.state()});}}map.triggerRepaint();requestAnimationFrame(step);}));
+  const row={index,mode,view,...result,sourceSha256:crypto.createHash('sha256').update(sources[mode]).digest('hex'),errors:[...errors]};runs.push(row);console.log(JSON.stringify({index,mode,view,meanMs:row.meanMs,calls:row.customCalls,triangles:row.customTriangles,errors}));
+ }
+ await p.close();
+}}finally{await browser.close();const comparisons={};for(const view of Object.keys(poses)){const avg=mode=>{const rows=runs.filter(r=>r.mode===mode&&r.view===view);return rows.reduce((n,r)=>n+r.meanMs,0)/rows.length;};comparisons[view]={baselineMeanMs:avg('baseline'),candidateMeanMs:avg('candidate'),regressionPercent:(avg('candidate')/avg('baseline')-1)*100};}fs.writeFileSync('qc/street-coverage-performance.json',JSON.stringify({date:new Date().toISOString(),note:'1100x760 Edge SwiftShader full scene, 60 forced-repaint frames per pose, ABBA. Relative gate on software renderer only, not native mobile FPS.',runs,comparisons},null,2));console.log(comparisons);}})().catch(e=>{console.error(e);process.exitCode=1});
