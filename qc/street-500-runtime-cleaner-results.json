@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "cpuOnly": true,
+  "sourceOrdersTested": 10,
+  "duplicateWithinMaterialRemoved": true,
+  "groundEligibilityPreserved": true,
+  "repairedConcreteAreaM2": 1.0012245385373653,
+  "actualGlbOwnership": [
+    {
+      "pointLocalXY": [
+        -511.48126173249835,
+        210.6466776249628
+      ],
+      "roles": [
+        "concrete"
+      ]
+    },
+    {
+      "pointLocalXY": [
+        -510.9821830640437,
+        211.7014147485853
+      ],
+      "roles": [
+        "concrete"
+      ]
+    }
+  ],
+  "candidateGlbSHA256": "8ebe5680a10f8a590fab7ffda69b8d5a4ba1a99ab7a049d981a9f580b1b72c73",
+  "legacyGlbSHA256": "87fe720941fc52856fd04f8ffa47f16df1bd363c56017530af65e6436a46b0dc",
+  "legacyByteIdentity": true
+}
