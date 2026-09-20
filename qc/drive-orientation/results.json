@@ -1,0 +1,48 @@
+{
+  "captured": "2026-09-19T13:10:38.523Z",
+  "cybertruck": {
+    "wheel": 8.034570486286698,
+    "speed": 6.903688004911476,
+    "heading": 42.971227739444146,
+    "vehicle": "cybertruck",
+    "active": true,
+    "paused": false,
+    "maxSpeed": 6.903688004911476
+  },
+  "cybercab": {
+    "wheel": 9.494896713630764,
+    "speed": 5.943109995399714,
+    "heading": 42.971227739444146,
+    "vehicle": "cybercab",
+    "active": true,
+    "paused": false,
+    "maxSpeed": 5.943109995399714
+  },
+  "lamps": {
+    "cybertruck": {
+      "lampMeshes": 2,
+      "tailNodes": 1,
+      "proxyWheels": 0,
+      "wheels": 4,
+      "wheelAnimation": "rigged",
+      "assetSource": "Original Blender reconstruction"
+    },
+    "cybercab": {
+      "lampMeshes": 1,
+      "tailNodes": 1,
+      "proxyWheels": 4,
+      "wheels": 4,
+      "wheelAnimation": "Authored proxy cylinders on fused Meshy body",
+      "assetSource": "Meshy reconstruction + authored proxy wheels/tail lamps (not split mesh)"
+    },
+    "kitt": {
+      "lampMeshes": 11,
+      "tailNodes": 0,
+      "proxyWheels": 0,
+      "wheels": 4,
+      "wheelAnimation": "rigged",
+      "assetSource": "Original Blender reconstruction"
+    }
+  },
+  "notes": "Cybercab fused Meshy body unchanged; authored proxy wheel cylinders + Tail light bar added. Not production-ready mesh splitting."
+}
