@@ -1,0 +1,9 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {chromium}=require('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});try{const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const vendor='D:/CodexTools/OSM2World';for(const name of ['three.module.js','GLTFLoader.js','BufferGeometryUtils.js'])await page.route('**/'+name,r=>r.fulfill({contentType:'text/javascript',body:fs.readFileSync(path.join(vendor,name))}));
+ await page.goto('http://127.0.0.1:4173/qc/tree-review.html');await page.waitForFunction(()=>window.treeReviewReady);await page.screenshot({path:path.join(__dirname,'tree-review-desktop.png')});
+ const desktop=await page.evaluate(()=>treeReview.state());assert.equal(desktop.stats.length,3);assert(desktop.stats[2].calls<desktop.stats[1].calls,'Cutout should avoid double-sided transparent second pass');
+ await page.evaluate(()=>treeReview.setAngle(1.57));await page.screenshot({path:path.join(__dirname,'tree-review-side.png')});
+ await page.setViewportSize({width:390,height:844});await page.evaluate(()=>{treeReview.setMode(2);treeReview.setAngle(.8);});await page.screenshot({path:path.join(__dirname,'tree-review-mobile.png')});const mobile=await page.evaluate(()=>treeReview.state());assert.deepEqual(errors,[]);const report={desktop,mobile,errors,note:'Functional/visual capture only; no frame-time measurement. Draw counts include one ground draw per panel.'};fs.writeFileSync(path.join(__dirname,'tree-review-audit.json'),JSON.stringify(report,null,2));console.log(report);
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
