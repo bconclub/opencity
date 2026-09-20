@@ -1,8 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f4f7f3"><title>Bengaluru | Living City</title>
-<link href="https://unpkg.com/maplibre-gl@5.7.2/dist/maplibre-gl.css" rel="stylesheet"><link href="styles.css" rel="stylesheet"><link href="flight.css" rel="stylesheet"><link href="auto.css" rel="stylesheet"><link href="cockpit.css" rel="stylesheet"><link href="mobile-controls.css" rel="stylesheet">
-<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.169.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.169.0/examples/jsm/"}}</script><script defer src="https://unpkg.com/maplibre-gl@5.7.2/dist/maplibre-gl.js"></script><script defer src="app.js"></script><script defer src="flight.js"></script><link href="vehicle-shell.css" rel="stylesheet"><script defer src="vehicle-shell.js"></script><link href="focus-pointer.css" rel="stylesheet"><script defer src="focus-pointer.js"></script><link href="mobile-dashboard.css" rel="stylesheet"><script defer src="mobile-dashboard.js"></script><script defer src="local-cache.js?v=2"></script><link href="performance-panel.css" rel="stylesheet"><script defer src="performance-panel.js"></script><link href="controller-monitor.css" rel="stylesheet"><script type="module" src="controller-monitor.js"></script><link href="resume-overlay.css" rel="stylesheet"><script type="module" src="resume-overlay.js"></script><link href="city-loading.css" rel="stylesheet"><script type="module" src="city-loading.js"></script><link href="multiplayer-client.css" rel="stylesheet"><script type="module" src="multiplayer-client.js"></script><link href="mobile-menu.css" rel="stylesheet"><script type="module" src="mobile-menu.js"></script><link href="mobile-drive.css" rel="stylesheet"><script type="module" src="mobile-drive.js"></script><script type="module" src="player-stats-ui.js"></script><link href="voice-chat.css" rel="stylesheet"><script type="module" src="voice-chat.js"></script><link href="social-controls.css" rel="stylesheet"><script type="module" src="social-entry.js"></script><link href="driving-hud.css" rel="stylesheet"><script type="module" src="driving-hud.js"></script></head>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d1a14"><title>OpenCity</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="city-loading.css"><link rel="stylesheet" href="vehicle-shell.css"><link rel="stylesheet" href="cockpit.css"><link rel="stylesheet" href="mobile-controls.css"><link rel="stylesheet" href="flight.css"><link rel="stylesheet" href="auto.css"><link rel="stylesheet" href="driving-hud.css"><link rel="stylesheet" href="multiplayer-client.css"><link rel="stylesheet" href="resume-overlay.css"><link rel="stylesheet" href="controller-monitor.css"><link rel="stylesheet" href="performance-panel.css"><link rel="stylesheet" href="voice-chat.css"><link rel="stylesheet" href="social-controls.css"><link rel="stylesheet" href="mobile-drive.css"><link rel="stylesheet" href="mobile-menu.css"><link rel="stylesheet" href="focus-pointer.css"><link rel="stylesheet" href="mobile-dashboard.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
 <body class="city-booting">
 <section id="city-loading" aria-label="Loading OpenCity"><div class="loading-card"><div class="loading-orbit" aria-hidden="true"></div><h1>OpenCity</h1><p class="loading-place">Bengaluru. Your city to explore.</p><progress max="4" value="0" aria-label="City preparation"></progress><p role="status" aria-live="polite">Building Bengaluru…</p><button type="button" hidden>Retry loading</button></div></section>
 <div id="ride-brand"><strong>Bengaluru</strong><span id="build-version">Loading version…</span></div>
@@ -10,28 +12,12 @@
 <main id="map" aria-label="Interactive three-dimensional map of Bengaluru"></main>
 <aside inert aria-hidden="true" class="rail" aria-label="City explorer">
  <header><span class="brandmark" aria-hidden="true">ಬ</span><div><strong>Bengaluru</strong><span class="sub">Living City · CBD study</span></div><button id="collapse" aria-label="Toggle explorer controls" aria-expanded="true">−</button></header>
- <div id="controls">
- <p class="intro">Central Bengaluru. Building by building.</p>
- <label for="place">Explore a place</label><select id="place"></select>
- <div class="pair"><button id="overview">CBD overview</button><button id="home">CBD centre</button></div>
- <fieldset><legend>View</legend><div class="segmented"><button id="three" aria-pressed="true">3D model</button><button id="flat" aria-pressed="false">Plan view</button></div></fieldset>
- <label class="range-label" for="pitch">Camera tilt <output id="pitch-value">60°</output></label><input id="pitch" type="range" min="0" max="70" value="60">
- <fieldset><legend>Map layers</legend><label class="toggle"><span>Buildings</span><input id="buildings" type="checkbox" checked></label><label class="toggle"><span>Place labels</span><input id="labels" type="checkbox" checked></label><label class="toggle"><span>Parks & water emphasis</span><input id="nature" type="checkbox" checked></label></fieldset>
- <div class="pair"><button id="orbit">Start orbit</button><button id="copy">Copy view link</button></div>
- <details><summary>About this model</summary><p>Real mapped roads, water bodies, parks and building footprints from OpenStreetMap via OpenFreeMap. Coverage varies by neighbourhood.</p><p>Building heights are schematic: provider render heights may include estimates or defaults. This is not a survey, photorealistic replica or simulation. Terrain is flat.</p><p>Tiles load as you explore. Internet and WebGL are required.</p><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Map data & attribution ↗</a></details>
- </div>
+ <nav aria-label="Explorer sections"><button type="button" data-panel="districts" aria-current="page">Districts</button><button type="button" data-panel="landmarks">Landmarks</button><button type="button" data-panel="routes">Routes</button></nav>
+ <section id="districts" aria-labelledby="districts-heading"><h2 id="districts-heading">Districts</h2><ul id="district-list"></ul></section>
+ <section id="landmarks" hidden aria-labelledby="landmarks-heading"><h2 id="landmarks-heading">Landmarks</h2><ul id="landmark-list"></ul></section>
+ <section id="routes" hidden aria-labelledby="routes-heading"><h2 id="routes-heading">Routes</h2><p>Drive or fly preset routes through the CBD.</p></section>
 </aside>
-<div id="status" role="status" aria-live="polite">Loading Bengaluru map…</div>
-<section class="caption" aria-label="Current view"><span>EXPLORE BENGALURU</span><h1 id="district">Central Bengaluru</h1><p id="view-caption">Drag to explore. Scroll to descend. Click a building to inspect.</p></section>
-<div class="readout"><span id="coordinates">12.9716° N · 77.5960° E</span><span id="zoom">Building scale</span></div>
-<section id="inspector" hidden aria-label="Building details"><button id="close-inspector" aria-label="Close building details">×</button><span class="sub">BUILDING FOOTPRINT</span><h2 id="building-name">Mapped building</h2><p id="building-height"></p><p class="note">Geometry follows the mapped footprint. Display height is schematic and may be a provider default.</p></section>
-<section id="failure" hidden role="alert"><h2>Map could not load</h2><p id="failure-text">Check your internet connection and enable WebGL in your browser.</p><button onclick="location.reload()">Reload map</button></section>
-<noscript>This interactive city requires JavaScript.</noscript>
-</body></html>
-
-
-
-
-
-
-
+<script type="module" src="app.js"></script>
+<script>navigator.serviceWorker?.register('sw.js?v='+Date.now()).catch(()=>{});</script>
+</body>
+</html>
