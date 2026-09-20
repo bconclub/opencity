@@ -1,0 +1,269 @@
+{
+  "note": "Full-app visual candidate only. Existing traffic graph and landmark geometry unchanged; no runtime asset replacement or performance claim.",
+  "results": [
+    {
+      "mode": "before",
+      "view": "front",
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 20,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "mode": "before",
+      "view": "road",
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 29,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "mode": "before",
+      "view": "boundary",
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 39,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "mode": "before",
+      "view": "aerial",
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.5907159,
+          12.9797946
+        ],
+        "bounds": [
+          77.5887816777979,
+          12.977819540905388,
+          77.5926831432082,
+          12.981769855276205
+        ],
+        "meshes": 4,
+        "triangles": 2130,
+        "indexedTriangles": 1416,
+        "indexCells": 930,
+        "groundIndexSource": "mesh",
+        "groundIndexURL": null,
+        "frames": 51,
+        "drawCalls": 4,
+        "renderedTriangles": 2130,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "mode": "after",
+      "view": "front",
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.59136000000001,
+          12.97984615
+        ],
+        "bounds": [
+          77.58618635189106,
+          12.975343678074553,
+          77.59541361100963,
+          12.984295613215803
+        ],
+        "meshes": 7,
+        "triangles": 11629,
+        "indexedTriangles": 9280,
+        "indexCells": 4289,
+        "groundIndexSource": "sidecar",
+        "groundIndexURL": "http://127.0.0.1:4173/assets/streets/vidhana-ground.json",
+        "frames": 20,
+        "drawCalls": 7,
+        "renderedTriangles": 11629,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "mode": "after",
+      "view": "road",
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.59136000000001,
+          12.97984615
+        ],
+        "bounds": [
+          77.58618635189106,
+          12.975343678074553,
+          77.59541361100963,
+          12.984295613215803
+        ],
+        "meshes": 7,
+        "triangles": 11629,
+        "indexedTriangles": 9280,
+        "indexCells": 4289,
+        "groundIndexSource": "sidecar",
+        "groundIndexURL": "http://127.0.0.1:4173/assets/streets/vidhana-ground.json",
+        "frames": 27,
+        "drawCalls": 7,
+        "renderedTriangles": 11629,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "mode": "after",
+      "view": "boundary",
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.59136000000001,
+          12.97984615
+        ],
+        "bounds": [
+          77.58618635189106,
+          12.975343678074553,
+          77.59541361100963,
+          12.984295613215803
+        ],
+        "meshes": 7,
+        "triangles": 11629,
+        "indexedTriangles": 9280,
+        "indexCells": 4289,
+        "groundIndexSource": "sidecar",
+        "groundIndexURL": "http://127.0.0.1:4173/assets/streets/vidhana-ground.json",
+        "frames": 37,
+        "drawCalls": 7,
+        "renderedTriangles": 11629,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    },
+    {
+      "mode": "after",
+      "view": "aerial",
+      "state": {
+        "ready": true,
+        "visible": true,
+        "origin": [
+          77.59136000000001,
+          12.97984615
+        ],
+        "bounds": [
+          77.58618635189106,
+          12.975343678074553,
+          77.59541361100963,
+          12.984295613215803
+        ],
+        "meshes": 7,
+        "triangles": 11629,
+        "indexedTriangles": 9280,
+        "indexCells": 4289,
+        "groundIndexSource": "sidecar",
+        "groundIndexURL": "http://127.0.0.1:4173/assets/streets/vidhana-ground.json",
+        "frames": 47,
+        "drawCalls": 7,
+        "renderedTriangles": 11629,
+        "surfaceTextures": 2,
+        "textureSize": 256,
+        "repeatMetres": 2,
+        "geometryAdded": 0,
+        "originalProceduralTextures": true
+      },
+      "errors": []
+    }
+  ]
+}
