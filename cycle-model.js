@@ -31,7 +31,7 @@ export function createCycle(T) {
  const pedals=new T.Group();pedals.name='Crank';pedals.position.set(...crank);body.add(pedals);
  tube([-.13,0,0],[.13,0,0],.02,steel,pedals);
  for(const s of [-1,1]){tube([s*.10,0,0],[s*.10,s*.15,0],.012,silver,pedals);box(.105,.07,.025,[s*.15,s*.15,0],dark,pedals);}
- const chainring=mesh(new T.TorusGeometry(.095,.009,6,32),silver,[.08,-.10,.30]);chainring.rotation.y=Math.PI/2;
+ const chainring=mesh(new T.TorusGeometry(.095,.009,6,32),silver,[.085,-.10,.30]);chainring.rotation.y=Math.PI/2;
  tube([.085,-.55,.38],[.085,-.10,.395],.005,dark);tube([.085,-.55,.30],[.085,-.10,.205],.005,dark);
  tube([-.065,-.08,.31],[-.14,-.24,.07],.008,silver);
  // Brake cable curve, rear reflector and front lamp.
