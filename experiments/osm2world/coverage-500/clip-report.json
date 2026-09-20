@@ -1,0 +1,14 @@
+{
+  "center": [
+    -60.678211628541604,
+    -5.131652477286858
+  ],
+  "radiusM": 500,
+  "clipSides": 256,
+  "maximumBoundaryInsetM": 0.037649080427748505,
+  "maximumVertexRadiusM": 500.0000000000001,
+  "sourceTriangles": 11874,
+  "clippedTriangles": 11970,
+  "testsPassed": true,
+  "runtimeIntegrated": false
+}
