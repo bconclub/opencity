@@ -17,7 +17,7 @@
  <fieldset><legend>View</legend><div class="segmented"><button id="three" aria-pressed="true">3D model</button><button id="flat" aria-pressed="false">Plan view</button></div></fieldset>
  <label class="range-label" for="pitch">Camera tilt <output id="pitch-value">60°</output></label><input id="pitch" type="range" min="0" max="70" value="60">
  <fieldset><legend>Map layers</legend><label class="toggle"><span>Buildings</span><input id="buildings" type="checkbox" checked></label><label class="toggle"><span>Place labels</span><input id="labels" type="checkbox" checked></label><label class="toggle"><span>Parks & water emphasis</span><input id="nature" type="checkbox" checked></label></fieldset>
- <div class="pair"><button id="overview">CBD overview</button><button id="home">CBD centre</button></div>
+ <div class="pair"><button id="orbit">Start orbit</button><button id="copy">Copy view link</button></div>
  <details><summary>About this model</summary><p>Real mapped roads, water bodies, parks and building footprints from OpenStreetMap via OpenFreeMap. Coverage varies by neighbourhood.</p><p>Building heights are schematic: provider render heights may include estimates or defaults. This is not a survey, photorealistic replica or simulation. Terrain is flat.</p><p>Tiles load as you explore. Internet and WebGL are required.</p><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Map data & attribution ↗</a></details>
  </div>
 </aside>
@@ -28,3 +28,10 @@
 <section id="failure" hidden role="alert"><h2>Map could not load</h2><p id="failure-text">Check your internet connection and enable WebGL in your browser.</p><button onclick="location.reload()">Reload map</button></section>
 <noscript>This interactive city requires JavaScript.</noscript>
 </body></html>
+
+
+
+
+
+
+
