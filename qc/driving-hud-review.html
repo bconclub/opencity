@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8"><title>Driving HUD behavior checks</title>
+<link rel="stylesheet" href="../driving-hud.css">
+<style>body{background:#42594d;color:white;font:16px system-ui}#tests{position:relative;z-index:3000;max-width:500px}#originals{display:none}</style>
+<section id="tests"><h1>Driving HUD checks</h1><button id="run">Run behavior checks</button><pre id="result">Ready</pre></section>
+<section id="originals"><button id="pause-auto"></button><button id="auto-camera"></button><button id="exit-auto"></button><button id="pause-flight"></button><button id="camera-flight"></button><button id="exit-flight"></button><button id="takeoff"></button><button data-tool="room"></button></section>
+<script type="module">
+const auto={active:false,paused:false,vehicleType:'cybertruck',speed:0,heading:0,position:[77.592,12.979],distance:0,boost:{reserve:62}},flight={active:false,paused:false,speed:0,heading:270,lng:77.592,lat:12.979,velocity:{x:3,y:4},altitude:90,phase:'flying',boost:{reserve:40}};
+window.autoState=()=>auto;window.flightState=()=>flight;window.multiplayerState=()=>({connected:true,players:[{},{}]});
+let camera=0,room=0,held=false;
+for(const mode of ['auto','flight']){document.getElementById('pause-'+mode).onclick=()=>{const state=mode==='auto'?auto:flight;state.paused=!state.paused};document.getElementById('exit-'+mode).onclick=()=>{(mode==='auto'?auto:flight).active=false};}
+document.getElementById('camera-flight').onclick=()=>camera++;
+document.querySelector('[data-tool="room"]').onclick=()=>room++;
+document.addEventListener('keydown',e=>{if(e.code==='ShiftLeft')held=true});document.addEventListener('keyup',e=>{if(e.code==='ShiftLeft')held=false});
+await import('../driving-hud.js');
+const delay=()=>new Promise(r=>setTimeout(r,240)),q=s=>document.querySelector(s),results=[];
+function check(label,value){results.push(`${value?'PASS':'FAIL'} ${label}`);q('#result').textContent=results.join('\n');if(!value)throw Error(label);}
+q('#run').onclick=async()=>{try{
+auto.active=true;auto.speed=10;auto.heading=361;auto.distance=1250;await delay();
+check('Live speed converts m/s to km/h',q('#drive-speed').textContent==='36');
+check('Forward gear, normalized heading and distance',q('#drive-gear').textContent==='D'&&q('#drive-heading').textContent==='001°'&&q('#drive-trip').textContent==='1.25 km travelled');
+check('Real room count',q('#drive-online').textContent==='2 online');
+auto.speed=-2;await delay();check('Reverse speed stays positive, gear R',q('#drive-speed').textContent==='7'&&q('#drive-gear').textContent==='R');
+q('[data-action="pause"]').click();await delay();check('Pause action and disabled boost',auto.paused&&q('.drive-boost').disabled);q('[data-action="pause"]').click();await delay();
+q('.drive-boost').dispatchEvent(new KeyboardEvent('keydown',{code:'Enter',bubbles:true}));check('Boost key press reaches input',held);window.dispatchEvent(new Event('opencity:release-input'));check('Input release clears boost',!held);
+q('.drive-boost').dispatchEvent(new KeyboardEvent('keydown',{code:'Enter',bubbles:true}));q('.drive-boost').dispatchEvent(new Event('pointercancel'));check('Pointer cancellation clears boost',!held);
+q('.drive-boost').dispatchEvent(new KeyboardEvent('keydown',{code:'Enter',bubbles:true}));window.dispatchEvent(new Event('blur'));check('Focus loss clears boost',!held);
+q('.drive-room').click();check('Room opens existing control',room===1);
+auto.active=false;flight.active=true;await delay();check('Flight vector speed and altitude',q('#drive-speed').textContent==='18'&&q('#drive-gear').textContent==='90 m');
+q('[data-action="camera"]').click();check('Flight camera wired to existing handler',camera===1);
+q('[data-action="exit"]').click();await delay();check('Exit removes HUD',!flight.active&&q('#driving-hud').hidden);
+q('#result').textContent+='\nAll 13 checks passed';
+}catch(e){q('#result').textContent+='\n'+e.message;}};
+</script>
