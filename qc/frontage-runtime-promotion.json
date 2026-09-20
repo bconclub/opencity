@@ -1,0 +1,260 @@
+{
+  "passed": true,
+  "localOnly": true,
+  "files": [
+    {
+      "path": "district.js",
+      "bytes": 23107,
+      "sha256": "5dfda2e1d59777fea0894bca2991b81390c364c08d8b1a6ddfa9713a31b5813b"
+    },
+    {
+      "path": "auto-mode.js",
+      "bytes": 18927,
+      "sha256": "d1691d8edf1536d5eb1e448766f9676d04e0fbbb1a90cbfb084af71bdf80b37b"
+    },
+    {
+      "path": "npc-traffic.js",
+      "bytes": 8251,
+      "sha256": "64258975a26444ce6fd80f201c11d5b4e7be7f8473bf2d9dbbbb3638320e6df2"
+    },
+    {
+      "path": "auto-world.js",
+      "bytes": 2361,
+      "sha256": "dad8afc99c7728efeae60b3dfcb680b1c2b73e614f3322e3c088085025c33447"
+    },
+    {
+      "path": "auto-physics.js",
+      "bytes": 3478,
+      "sha256": "7995ed841e7ae9295867326f54146d04bbca277b91c02335a85ab09797789c65"
+    },
+    {
+      "path": "landmark-focus.js",
+      "bytes": 2786,
+      "sha256": "a99c7727b1cc4026335b6507acec5c299851bcc6aee99c0d013ff7362490f55f"
+    },
+    {
+      "path": "stair-collision.js",
+      "bytes": 2933,
+      "sha256": "f0c6ca5eaabe72d2fc5a3367394e07e95e4cb8ea2c70daf6856764dd386425a3"
+    },
+    {
+      "path": "vidhana-driving-world.js",
+      "bytes": 712,
+      "sha256": "386d43e80447d700c1d39ed2181ef84382fc6c0ee547ffadbd0bc0cf5146597a"
+    },
+    {
+      "path": "vidhana-building-passage.js",
+      "bytes": 2213,
+      "sha256": "0970c3a519ea5e3c5af96359ab2b851ad158a71539ac840fbbcc2406d14d1419"
+    },
+    {
+      "path": "vehicle-footprint.js",
+      "bytes": 3279,
+      "sha256": "ce6848ec6d5e6a7cf6ecd9ae09df3f0433567759ca6a563ca4b22c60df99adfd"
+    },
+    {
+      "path": "landmarks.js",
+      "bytes": 37865,
+      "sha256": "74ef4d3e12c737a70361386e7db9f83455b395befae5cf6ab2b4d93b9bccc110"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 3854,
+      "sha256": "0e99aa09c5f523d64403aa9ee6f8f300ae288b6f6ffc1908350ffd426c33e7e0"
+    }
+  ],
+  "dependencies": [
+    {
+      "file": "district.js",
+      "dependency": "landmark-focus.js"
+    },
+    {
+      "file": "district.js",
+      "dependency": "cbd-dome.js"
+    },
+    {
+      "file": "district.js",
+      "dependency": "cbd-boundary.js"
+    },
+    {
+      "file": "district.js",
+      "dependency": "vehicle-environment.js"
+    },
+    {
+      "file": "district.js",
+      "dependency": "map-scene-camera.js"
+    },
+    {
+      "file": "district.js",
+      "dependency": "building-context.js"
+    },
+    {
+      "file": "district.js",
+      "dependency": "landmarks.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "vehicle-footprint.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "district.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "vidhana-driving-world.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "vidhana-building-passage.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "map-scene-camera.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "vehicle-contact-shadow.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "vehicle-environment.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "blender-vehicle.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "driving-data.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "npc-traffic.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "traffic-simulation.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "supercar-model.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "vehicle-models.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "street-detail.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "gamepad-controls.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "tilt-controls.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "auto-roads.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "auto-physics.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "vehicle-tuning.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "auto-roam-physics.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "boost-meter.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "auto-world.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "flight-physics.js"
+    },
+    {
+      "file": "auto-mode.js",
+      "dependency": "auto-model.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "vidhana-building-passage.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "npc-detail-state.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "npc-detailed-batches.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "map-scene-camera.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "blender-vehicle.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "driving-data.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "vehicle-environment.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "traffic-simulation.js"
+    },
+    {
+      "file": "npc-traffic.js",
+      "dependency": "auto-roads.js"
+    },
+    {
+      "file": "auto-world.js",
+      "dependency": "auto-roads.js"
+    },
+    {
+      "file": "auto-physics.js",
+      "dependency": "vehicle-boost.js"
+    },
+    {
+      "file": "auto-physics.js",
+      "dependency": "vehicle-tuning.js"
+    },
+    {
+      "file": "stair-collision.js",
+      "dependency": "vehicle-footprint.js"
+    },
+    {
+      "file": "vidhana-driving-world.js",
+      "dependency": "stair-collision.js"
+    },
+    {
+      "file": "vidhana-building-passage.js",
+      "dependency": "auto-roads.js"
+    },
+    {
+      "file": "vidhana-building-passage.js",
+      "dependency": "vehicle-footprint.js"
+    }
+  ],
+  "browserReceiptSha256": "14178c0885b840ea57a69c01675b0db0c3423e3d40bcb49be01d9196b05f0510",
+  "rotationReceiptSha256": "6b67635158bc3c7d6dac7b68de8fd34c775eef6a01a73e28db8025cdf432d16a",
+  "performanceReceiptSha256": "5b54e8ab1de62ed7f4570e4b9b9760682a1bcb1e88d9c6661d44c3ed8586a655",
+  "scope": "Exact browser-tested frontage, measured focus targets, full-body stair clearance and mapped passage. Automatic private routes excluded; generic collision and room protocol unchanged. No production publication."
+}
