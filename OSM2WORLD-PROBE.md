@@ -44,7 +44,7 @@ mapZ = origin.z + meshY * s
 
 Apply the equivalent matrix in the existing Three custom layer; do not add a second arbitrary 90-degree rotation afterward. Terrain elevation, winding/culling and z-fighting still need integration checks. Exact alignment on the live MapLibre view has not been tested.
 
-Source audit confirms converter chooses `osmData.getCenter()`, node bounds determine that center, and `MetricMapProjection` uses locally scaled Mercator snapped to millimeters. Audit files downloaded under `D:/CodexTools/OSM2World/`; current upstream sources were read to corroborate behavior, with explicit projection set to avoid depending on changing defaults.
+Source audit confirms converter chooses `osmData.getCenter()`, node bounds determine that center, and `MetricMapProjection` uses locally scaled Mercator snapped to millimeters. Audit files downloaded under `D:/CodexTools/OSM2World/`, current upstream sources were read to corroborate behavior, with explicit projection set to avoid depending on changing defaults.
 
 ## Reproduce
 
