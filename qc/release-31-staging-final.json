@@ -1,0 +1,15 @@
+{
+  "runtimeCommit": "9df554628363bb31a8c1c8bafc0cfcee9156cc14",
+  "passed": true,
+  "sourceFiles": [
+    {
+      "path": "app.js",
+      "sha256": "59756eb8db4c773b43d044ad7e48d435e44c0c6955d91191bcf5d32f283ef654",
+      "bytes": 8450,
+      "changedSinceAudit": true
+    }
+  ],
+  "dependencyPairsChecked": 167,
+  "changedSinceAudit": ["app.js"],
+  "scope": "Refresh source/staged hashes and existing dependency presence after accepted runtime changes."
+}
