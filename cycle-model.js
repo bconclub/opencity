@@ -13,6 +13,7 @@ export function createCycle(T) {
  for(const s of [-1,1]){tube([s*.055,...rear.slice(1)],crank,.013);tube([s*.055,...rear.slice(1)],seat,.014);}
  tube(seat,[0,-.26,.99],.014,steel);const saddle=mesh(new T.SphereGeometry(1,16,8),dark,[0,-.29,1.015]);saddle.scale.set(.105,.18,.038);
  const steering=new T.Group();steering.name='Steering';steering.position.set(0,.42,.82);body.add(steering);
+ // Entire fork, front wheel and handlebar turn together around the steering pivot.
  for(const s of [-1,1])tube([s*.045,0,0],[s*.055,.13,-.48],.015,silver,steering);
  tube([0,0,-.06],[0,-.045,.23],.019,steel,steering);tube([0,-.045,.23],[0,.02,.27],.019,steel,steering);
  tube([-.32,.02,.27],[.32,.02,.27],.014,steel,steering);
@@ -33,10 +34,12 @@ export function createCycle(T) {
  const chainring=mesh(new T.TorusGeometry(.095,.009,6,32),silver,[.085,-.10,.30]);chainring.rotation.y=Math.PI/2;
  tube([.085,-.55,.38],[.085,-.10,.395],.005,dark);tube([.085,-.55,.30],[.085,-.10,.205],.005,dark);
  tube([-.065,-.08,.31],[-.14,-.24,.07],.008,silver);
+ // Brake cable curve, rear reflector and front lamp.
  const cable=new T.CatmullRomCurve3([[.2,.45,1.065],[.17,.62,.96],[.08,.55,.65]].map(p=>new T.Vector3(...p)));
  mesh(new T.TubeGeometry(cable,12,.003,4,false),dark,[0,0,0]);
  box(.055,.025,.045,[0,-.32,.94],new T.MeshStandardMaterial({color:0xb82925}));
  box(.065,.06,.045,[0,.47,1.05],new T.MeshStandardMaterial({color:0xebf4da,emissive:0x353d25}));
+
  const shirt=new T.MeshStandardMaterial({color:0x428ca1,roughness:.9}),skin=new T.MeshStandardMaterial({color:0x986846,roughness:.85});
  const rider=new T.Group();rider.name='Helmeted cyclist';body.add(rider);
  function oval(p,scale,material){const o=mesh(new T.SphereGeometry(1,12,8),material,p,rider);o.scale.set(...scale);return o;}
