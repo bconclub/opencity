@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/mcp-push-290.json:files[0].content
+LOAD_FROM:/tmp/args290-v2.json:content
