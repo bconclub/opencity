@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "browserResultSha256": "6b67635158bc3c7d6dac7b68de8fd34c775eef6a01a73e28db8025cdf432d16a",
+  "samples": [
+    {
+      "case": "held steering ArrowRight",
+      "poses": 300,
+      "maxBodyOverlapSquareMetres": 0,
+      "maxEnvelopeOverlapSquareMetres": 0
+    },
+    {
+      "case": "held steering ArrowLeft",
+      "poses": 278,
+      "maxBodyOverlapSquareMetres": 0,
+      "maxEnvelopeOverlapSquareMetres": 0
+    }
+  ],
+  "scope": "Independent polygon clipping for every rendered steering pose. Both actual pitch/lean-projected model bounds and conservative collision rectangle must remain outside stairs."
+}

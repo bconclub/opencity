@@ -1,0 +1,599 @@
+{
+  "date": "2026-09-11",
+  "scope": "All 37 mapped lamps in current 500 m furniture dataset",
+  "decision": "No automatic assignments justified by current evidence",
+  "confidence": "high that tags alone are insufficient; unknown exact fixture identity at each candidate node",
+  "counts": {
+    "straight_mast": 6,
+    "bent_mast": 28,
+    "unknown": 3
+  },
+  "runtimeChanged": false,
+  "coordinatesChanged": false,
+  "newCoordinates": 0,
+  "references": [
+    "qc/VIDHANA-FRONTAGE-REFERENCES.md",
+    "qc/ambedkar-road-2008.jpg",
+    "qc/ambedkar-veedhi-moheen-2019.jpg",
+    "qc/vidhana-gate3-moheen-2019.jpg"
+  ],
+  "items": [
+    {
+      "osmId": "12150936425",
+      "coordinates": [
+        77.5908217,
+        12.9779953
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "straight_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Straight mast tag does not distinguish tall road mast from short pedestrian fixture; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12150936427",
+      "coordinates": [
+        77.5910083,
+        12.9778336
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "straight_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Straight mast tag does not distinguish tall road mast from short pedestrian fixture; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12538083770",
+      "coordinates": [
+        77.5927549,
+        12.9802302
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "straight_mast"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Straight mast tag does not distinguish tall road mast from short pedestrian fixture; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12669311886",
+      "coordinates": [
+        77.5948741,
+        12.9792724
+      ],
+      "tags": {
+        "direction": "139",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669311887",
+      "coordinates": [
+        77.5950106,
+        12.9793979
+      ],
+      "tags": {
+        "direction": "138",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669311888",
+      "coordinates": [
+        77.5950404,
+        12.9795339
+      ],
+      "tags": {
+        "direction": "321",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669324560",
+      "coordinates": [
+        77.5932428,
+        12.9769897
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "lamp_type": "led",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669354174",
+      "coordinates": [
+        77.5936858,
+        12.9774769
+      ],
+      "tags": {
+        "direction": "109",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669354175",
+      "coordinates": [
+        77.5937397,
+        12.9776814
+      ],
+      "tags": {
+        "direction": "108",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669354176",
+      "coordinates": [
+        77.5938088,
+        12.9778126
+      ],
+      "tags": {
+        "direction": "110",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669355564",
+      "coordinates": [
+        77.5931603,
+        12.9768278
+      ],
+      "tags": {
+        "highway": "street_lamp"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Mount unspecified; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12669362474",
+      "coordinates": [
+        77.5933693,
+        12.9771178
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "lamp_type": "led",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669368155",
+      "coordinates": [
+        77.593301,
+        12.976963
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "straight_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Straight mast tag does not distinguish tall road mast from short pedestrian fixture; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12669377888",
+      "coordinates": [
+        77.5951551,
+        12.9795311
+      ],
+      "tags": {
+        "direction": "141",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669378342",
+      "coordinates": [
+        77.5936141,
+        12.9773937
+      ],
+      "tags": {
+        "direction": "127",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669381144",
+      "coordinates": [
+        77.5940584,
+        12.9783296
+      ],
+      "tags": {
+        "direction": "96",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669381146",
+      "coordinates": [
+        77.5940911,
+        12.9785049
+      ],
+      "tags": {
+        "direction": "102",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669381147",
+      "coordinates": [
+        77.5941397,
+        12.9786619
+      ],
+      "tags": {
+        "direction": "112",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669383756",
+      "coordinates": [
+        77.5934827,
+        12.9772423
+      ],
+      "tags": {
+        "direction": "136",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669384656",
+      "coordinates": [
+        77.593472,
+        12.9770595
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "straight_mast",
+        "lamp_type": "electric",
+        "ref": "217",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Straight mast tag does not distinguish tall road mast from short pedestrian fixture; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12669387890",
+      "coordinates": [
+        77.5943002,
+        12.9788215
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669387891",
+      "coordinates": [
+        77.5942574,
+        12.9788714
+      ],
+      "tags": {
+        "direction": "321",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669388951",
+      "coordinates": [
+        77.5946141,
+        12.9791657
+      ],
+      "tags": {
+        "direction": "319",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669389811",
+      "coordinates": [
+        77.5932627,
+        12.9769179
+      ],
+      "tags": {
+        "highway": "street_lamp"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Mount unspecified; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12669394874",
+      "coordinates": [
+        77.5937881,
+        12.9783893
+      ],
+      "tags": {
+        "highway": "street_lamp"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Mount unspecified; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12669395178",
+      "coordinates": [
+        77.5935447,
+        12.9771356
+      ],
+      "tags": {
+        "highway": "street_lamp",
+        "lamp_mount": "straight_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Straight mast tag does not distinguish tall road mast from short pedestrian fixture; no height, luminaire form or photo-to-node match."
+    },
+    {
+      "osmId": "12669409316",
+      "coordinates": [
+        77.593879,
+        12.9779767
+      ],
+      "tags": {
+        "direction": "113",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669409318",
+      "coordinates": [
+        77.5939805,
+        12.9781448
+      ],
+      "tags": {
+        "direction": "117",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669409586",
+      "coordinates": [
+        77.5943708,
+        12.9789699
+      ],
+      "tags": {
+        "direction": "318",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669409587",
+      "coordinates": [
+        77.5944344,
+        12.9789509
+      ],
+      "tags": {
+        "direction": "140",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669409588",
+      "coordinates": [
+        77.5946084,
+        12.9790738
+      ],
+      "tags": {
+        "direction": "141",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669415926",
+      "coordinates": [
+        77.5947711,
+        12.9791917
+      ],
+      "tags": {
+        "direction": "138",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669415927",
+      "coordinates": [
+        77.5947539,
+        12.9792723
+      ],
+      "tags": {
+        "direction": "319",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669415934",
+      "coordinates": [
+        77.5953488,
+        12.9799039
+      ],
+      "tags": {
+        "direction": "128",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669417287",
+      "coordinates": [
+        77.5951956,
+        12.9796379
+      ],
+      "tags": {
+        "direction": "320",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669417288",
+      "coordinates": [
+        77.5952758,
+        12.9796408
+      ],
+      "tags": {
+        "direction": "139",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    },
+    {
+      "osmId": "12669431846",
+      "coordinates": [
+        77.5953963,
+        12.9798007
+      ],
+      "tags": {
+        "direction": "316",
+        "highway": "street_lamp",
+        "lamp_mount": "bent_mast",
+        "support": "pole"
+      },
+      "decision": "retain existing fixture",
+      "assignFrontagePedestrianLamp": false,
+      "reason": "Tagged bent road mast; incompatible with reconstructed short straight pedestrian lamp."
+    }
+  ]
+}
