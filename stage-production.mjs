@@ -25,7 +25,7 @@ await mkdir(output,{recursive:true});
 let staged=0;
 for(const file of new Set(files)){
  const src=join(root,file);
- try{await access(src);}catch{continue;}
+ await access(src);
  await mkdir(dirname(join(output,file)),{recursive:true});
  await copyFile(src,join(output,file));
  staged++;

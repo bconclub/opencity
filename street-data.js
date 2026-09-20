@@ -12,7 +12,7 @@ async function fetchAscii(path) {
 
 async function loadGzipB64Parts() {
   const single = await fetchAscii('./vidhana-street-data.json.gz.b64');
-  if (single && !single.startsWith('#')) return single;
+  if (single) return single;
   const parts = [];
   for (let i = 1; i <= 32; i += 1) {
     const chunk = await fetchAscii(`./vidhana-street-data.json.gz.b64.part${i}`);
@@ -22,15 +22,7 @@ async function loadGzipB64Parts() {
   return parts.length ? parts.join('') : null;
 }
 
-async function decodeGzipB64(b64) {
-  const raw = atob(b64);
-  const bytes = Uint8Array.from(raw, (c) => c.charCodeAt(0));
-  return JSON.parse(await gunzipText(new Blob([bytes]).stream()));
-}
-
 export async function loadVidhanaStreetData() {
-  const b64 = await loadGzipB64Parts();
-  if (b64) return decodeGzipB64(b64);
   const json = await fetch('./vidhana-street-data.json');
   if (json.ok) {
     const text = await json.text();
@@ -38,5 +30,9 @@ export async function loadVidhanaStreetData() {
       return JSON.parse(text);
     }
   }
-  throw Error('Vidhana street data unavailable');
+  const b64 = await loadGzipB64Parts();
+  if (!b64) throw Error('Vidhana street data unavailable');
+  const raw = atob(b64);
+  const bytes = Uint8Array.from(raw, (c) => c.charCodeAt(0));
+  return JSON.parse(await gunzipText(new Blob([bytes]).stream()));
 }

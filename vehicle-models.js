@@ -1,9 +1,11 @@
+import {createBlenderVehicle} from './blender-vehicle.js';
 import {createCycle} from './cycle-model.js';
 import {bindVehiclePaint} from './vehicle-colors.js';
 
-// Original fallback assets, inspired by Bengaluru vehicle types, without brand logos.
+// Supplied Yulu and delivery GLBs; procedural cycle/bike retained for legacy rooms.
 export function createTwoWheeler(T,{variant='yulu',remote=false}={}){
  if(!['yulu','bike','delivery','cycle'].includes(variant))throw Error('Unsupported two-wheeler.');
+ if(['yulu','delivery'].includes(variant))return createBlenderVehicle(T,variant);
  if(variant==='cycle'){
   const model=createCycle(T);model.group.traverse(o=>{if(o.material?.color?.getHex()===0xdb5939)o.material.userData.vehiclePaint=true;});
   return{...model,...bindVehiclePaint(model.group,remote)};
