@@ -9,3 +9,7 @@ Validation: npm check; car physics; flight dynamics; dome; gamepad noise; vehicl
 Limits: source vehicle meshes still have fused wheels. Wheel animation, authentic rear-light geometry and higher world fidelity are not completed by this release. Physical mobile/gamepad and multi-device production voice have not been retested. Source vehicles are approximately 60-71 MB each; no fidelity reduction was applied. This is a reconciled test release, not completion of the full world plan.
 
 Deployment must use the staged `public-release` folder and verified OpenCity Vercel project prj_4ADxALOAmBxNJTKqOJ0ZhOPIerRA. Do not deploy the Jamaican Kitchen folder into this project. No room-server deployment is included.
+
+Published to `https://opencity-caznf94c9-bconclub.vercel.app`, deployment `dpl_CTaN9aY76YbN4biASXPquBnTskNw`. Concurrent GitHub main batch pushes immediately replaced production with incomplete 0.0.41. Used Vercel rollback to restore this 0.0.42 deployment; project `autoAssignCustomDomains` is now false. Leave that protection in place until a complete staged build passes browser checks. Future production updates require explicit promotion. The custom domain is `https://www.opencity.world`.
+
+Source release commit: 5f06a9ffc2a949100f831ea282524ca9604a8dda, branch `codex/verify-latest-release`. Not merged into the actively changing main branch.
