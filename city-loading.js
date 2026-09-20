@@ -11,8 +11,6 @@ const timer=setInterval(async()=>{
  const count=Number(!!district)+Number(!!streets)+Number(!!world)+Number(assetsReady);progress.value=count;
  if(retry.hidden)status.textContent=!district?'Building Bengaluru…':!streets?'Laying out streets and landmarks…':!world?'Preparing traffic and streetlights…':'Getting your rides ready…';
  if(district&&!preparing){preparing=true;try{
-  const {loadVehicleAsset}=await import('./blender-vehicle.js');
-  await Promise.all(['cybertruck','cybercab','kitt'].map(id=>loadVehicleAsset(id)));
   await Promise.all([window.prepareHelicopter?.(),import('./auto-mode.js').then(m=>m.prepareAuto(map))]);
   assetsReady=true;
  }catch(error){failure(error);}}

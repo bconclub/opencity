@@ -40,7 +40,7 @@ async function installRenderer(map) {
   if(!model.group.userData.sharedAssetResources){geometries.forEach(g=>g.dispose());textures.forEach(t=>t.dispose());}
  }
  function remove(id){const e=entries.get(id);if(!e)return;disposeModel(e.model);e.label.remove();entries.delete(id);emotes.delete(id);}
- function valid(p){return p&&['cybertruck','cybercab','kitt','auto','helicopter','supercar','yulu','bike','delivery','cycle'].includes(p.vehicle)&&['lng','lat','altitude','heading','pitch','roll','speed'].every(k=>Number.isFinite(p[k]))&&Math.abs(p.lng)<=180&&Math.abs(p.lat)<85&&p.altitude>=-10&&p.altitude<10000;}
+ function valid(p){return p&&['auto','helicopter','yulu','delivery'].includes(p.vehicle)&&['lng','lat','altitude','heading','pitch','roll','speed'].every(k=>Number.isFinite(p[k]))&&Math.abs(p.lng)<=180&&Math.abs(p.lat)<85&&p.altitude>=-10&&p.altitude<10000;}
  function position(p){const c=maplibregl.MercatorCoordinate.fromLngLat([p.lng,p.lat],p.vehicle==='helicopter'?p.altitude+2:(p.altitude||0)+.02);return new T.Vector3((c.x-origin.x)/scale,(origin.y-c.y)/scale,c.z/scale);}
  function receive(event){
   const detail=event.detail||{};ownId=detail.id||null;

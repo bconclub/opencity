@@ -1,5 +1,5 @@
 (() => {
- const PREF_KEY='opencity-preferred-vehicle',FLEET=['helicopter','cybercab','cybertruck','auto','kitt','yulu','delivery'],AUTO_RIDES=new Set(['cybertruck','cybercab','kitt','auto','supercar','yulu','bike','delivery']);
+ const PREF_KEY='opencity-preferred-vehicle',FLEET=['helicopter','auto','yulu','delivery'],AUTO_RIDES=new Set(['auto','yulu','delivery']);
  const picker=document.getElementById('vehicle-picker'),message=document.getElementById('vehicle-entry-status');
  function readPreference(){try{const saved=localStorage.getItem(PREF_KEY)||localStorage.getItem('opencity-selected-ride');return FLEET.includes(saved)?saved:null;}catch{return null;}}
  function writePreference(ride){try{localStorage.setItem(PREF_KEY,ride);localStorage.setItem('opencity-selected-ride',ride);}catch{}}
