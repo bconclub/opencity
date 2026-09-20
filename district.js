@@ -89,7 +89,7 @@ export async function installDistrict(map){
  return height>32?0:1+Math.abs(hash)%3;
  }
  function triangle(bucket,a,b,c,ua=[0,0],ub=[1,0],uc=[1,1]){buckets[bucket].p.push(...a,...b,...c);buckets[bucket].uv.push(...ua,...ub,...uc);}
- function wall(a,b,base,height,kind,flip=false){const len=Math.hypot(b[0]-a[0],b[1]-a[1]),u=Math.max(1,Math.round(len/(kind===0?2.5:4))),v=Math.max(1,Math.round((height-base)/3.4));const p=[a[0],a[1],base],q=[b[0],b[1],base],r=[b[0],b[1],height],s=[a[0],a[1],height];if(flip){triangle(kind,p,r,q,[0,0],[u,v],[u,0]);triangle(kind,p,s,r,[0,0],[0,v],[u,v]);}else{triangle(kind,p,q,r,[0,0],[u,0],[u,v]);triangle(kind,p,r,s,[0,0],[u,v],[0,v]);}}
+ function wall(a,b,base,height,kind,flip=false){const len=Math.hypot(b[0]-a[0],b[1]-a[1]),u=Math.max(1,Math.round(len/(kind===0?2.5:4))),v=Math.max(1,Math.round((height-base)/3.4));const p=[a[0],a[1],base],q=[b[0],b[1],base],r=[b[0],b[1],height],s=[a[0],a[1],height];if(flip){triangle(kind,p,r,q,[0,0],[u,v],[u,0]);triangle(kind,p,s,r,[0,0],[u,v],[u,v]);}else{triangle(kind,p,q,r,[0,0],[u,0],[u,v]);triangle(kind,p,r,s,[0,0],[u,v],[0,v]);}}
  const box=new T.BoxGeometry(1,1,1).toNonIndexed().getAttribute('position');
  function addBox(x,y,z,w,d,h,kind=5,angle=0){const c=Math.cos(angle),s=Math.sin(angle),b=buckets[kind];for(let i=0;i<box.count;i++){const px=box.getX(i)*w,py=box.getY(i)*d;b.p.push(x+px*c-py*s,y+px*s+py*c,z+box.getZ(i)*h);b.uv.push(box.getX(i)+.5,box.getY(i)+.5);}}
  // Each building now has one visible owner; no depth-bias workaround is needed.
