@@ -1,0 +1,7 @@
+{
+  "index": 0,
+  "mode": "candidate",
+  "errors": [
+    "Uncaught TypeError: Cannot read properties of undefined (reading 'key')"
+  ]
+}

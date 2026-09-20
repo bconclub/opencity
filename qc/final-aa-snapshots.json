@@ -1,0 +1,43 @@
+{
+  "prepared": "2026-09-11T04:56:36.479Z",
+  "scope": "Repaired reference f1fd503 with JS/CSS5.7.2 only versus4b79104 plus exact app.js/sw.js/render-quality.js/index.html overrides. Shared renderer repair mandatory after captured FullHD baseline crash. Not unmodified historical baseline. Equal room/cache exclusions.",
+  "excludedForBoth": [
+    "Room client and cache bootstrap empty",
+    "Service workers blocked; fresh contexts/network cache disabled"
+  ],
+  "snapshots": {
+    "baseline": {
+      "commit": "f1fd503054927bde060315c7af3121391c839956",
+      "packageVersion": "0.0.30",
+      "release": {
+        "version": "0.0.30",
+        "date": "2026-09-11",
+        "name": "Prepared city loading and complete ride onboarding",
+        "versionScheme": "base-100-release-counter"
+      },
+      "rendererRepair": {
+        "originalIndexSha256": "8255543f49852e94d37fe4e204ffcfac812e83295ccfc14c7e3ac62edb7422e4",
+        "finalIndexSha256": "4aed0d2f51ae447676af1fcc9c8b47a72bba38af9a9133f85db47c1148a97d55",
+        "substitution": "Both maplibre-gl@5.6.1 JS/CSS URLs become maplibre-gl@5.7.2",
+        "historicalBaselineUnmodified": false
+      },
+      "sourceOverrides": [
+        {
+          "path": "index.html",
+          "bytes": 6426,
+          "sha256": "4aed0d2f51ae447676af1fcc9c8b47a72bba38af9a9133f85db47c1148a97d55",
+          "reason": "Mandatory shared renderer repair after captured FullHD baseline crash"
+        }
+      ],
+      "files": [
+        {
+          "path": "app.js",
+          "bytes": 8386,
+          "sha256": "58e0d69a5256f6fd06dfea8eba3774e347a40e936c29c78c8facbcc6f9f17569"
+        }
+      ],
+      "snapshotBytes": 16340077,
+      "manifestSha256": "843ca4f68b895918e61bc3cf994ea3ddc62be3764ae154f806e1ae3b62fb9172"
+    }
+  }
+}
