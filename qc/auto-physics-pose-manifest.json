@@ -1,0 +1,11 @@
+{
+  "source": {
+    "file": "auto-physics.js",
+    "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+  },
+  "candidate": {
+    "file": "qc/auto-physics-pose-candidate.js",
+    "sha256": "7995ed841e7ae9295867326f54146d04bbca277b91c02335a85ab09797789c65"
+  },
+  "scope": "Rollback proposed heading together with rejected translation; preserve collision response, yaw damping and all accepted movement. Review only."
+}

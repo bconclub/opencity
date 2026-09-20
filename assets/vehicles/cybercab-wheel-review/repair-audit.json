@@ -1,0 +1,82 @@
+{
+  "status": "PASS_BOUNDED_SPIN_REVIEW",
+  "originalFaces": 24848,
+  "fixedOriginalFaces": 19867,
+  "removedWheelCoreFaces": 4981,
+  "maxRetainedBodyPositionError": 0.0,
+  "maxRetainedUVError": 0.0,
+  "materials": 3,
+  "wheelPivots": {
+    "Wheel_FL": [
+      -0.78,
+      1.405,
+      0.365
+    ],
+    "Wheel_FR": [
+      0.78,
+      1.405,
+      0.365
+    ],
+    "Wheel_RL": [
+      -0.78,
+      -1.367,
+      0.365
+    ],
+    "Wheel_RR": [
+      0.78,
+      -1.367,
+      0.365
+    ]
+  },
+  "wheelRadius": 0.365,
+  "rimRadius": 0.322,
+  "method": "Original wheel cores removed inside radius 0.345m; all peripheral scan faces static. New circular tyres and discs, separate clean gold/rubber materials, dark fixed liners. No smoothing or recoloring of source exterior.",
+  "triangles": 24667,
+  "visualReview": "Static and 90-degree front/side/rear render review: no fender cuts, holes, rim artifacts or visible drift. Source body appearance retained. Steering not tested.",
+  "rotationProof": {
+    "Wheel_FL": {
+      "pivot": [
+        -0.7799999713897705,
+        1.4049999713897705,
+        0.36500000953674316
+      ],
+      "pivotDriftMeters": 0.0,
+      "maxNearestSurfaceVertexDriftAt90Degrees": 1.3328003944934608e-07,
+      "maxIndexedVertexTravelMeters": 0.516188054005152,
+      "movingVertices": 529
+    },
+    "Wheel_FR": {
+      "pivot": [
+        0.7799999713897705,
+        1.4049999713897705,
+        0.36500000953674316
+      ],
+      "pivotDriftMeters": 0.0,
+      "maxNearestSurfaceVertexDriftAt90Degrees": 1.3328003944934608e-07,
+      "maxIndexedVertexTravelMeters": 0.516188054005152,
+      "movingVertices": 529
+    },
+    "Wheel_RL": {
+      "pivot": [
+        -0.7799999713897705,
+        -1.3669999837875366,
+        0.36500000953674316
+      ],
+      "pivotDriftMeters": 0.0,
+      "maxNearestSurfaceVertexDriftAt90Degrees": 1.3328003944934608e-07,
+      "maxIndexedVertexTravelMeters": 0.516188054005152,
+      "movingVertices": 529
+    },
+    "Wheel_RR": {
+      "pivot": [
+        0.7799999713897705,
+        -1.3669999837875366,
+        0.36500000953674316
+      ],
+      "pivotDriftMeters": 0.0,
+      "maxNearestSurfaceVertexDriftAt90Degrees": 1.3328003944934608e-07,
+      "maxIndexedVertexTravelMeters": 0.516188054005152,
+      "movingVertices": 529
+    }
+  }
+}

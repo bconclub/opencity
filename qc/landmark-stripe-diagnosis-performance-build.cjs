@@ -1,0 +1,10 @@
+const fs=require('node:fs'),cp=require('node:child_process');
+for(const file of ['landmarks.js','district.js'])fs.writeFileSync('qc/landmark-stripe-diagnosis-baseline-'+file,cp.execFileSync('git',['show','f6eb2be:'+file]));
+let s=fs.readFileSync('qc/vidhana-landmark-performance.cjs','utf8');s=s.replace("'qc/vidhana-landmark-performance-baseline.js'","'qc/landmark-stripe-diagnosis-baseline-landmarks.js'");
+s=s.replace("const modes=['baseline'","const districtSource={baseline:fs.readFileSync('qc/landmark-stripe-diagnosis-baseline-district.js','utf8'),candidate:fs.readFileSync('district.js','utf8')};\nconst modes=['baseline'");
+s=s.replace("const modes=['baseline'","for(const mode of ['baseline','candidate'])districtSource[mode]=districtSource[mode].replace('visibility();map.triggerRepaint();window.districtState','window.__shadowAudit={sun,renderer};visibility();map.triggerRepaint();window.districtState');\nconst modes=['baseline'");
+s=s.replace("await p.route('**/landmarks.js'","await p.route('**/district.js',r=>r.fulfill({contentType:'text/javascript',body:districtSource[mode]}));await p.route('**/landmarks.js'");
+s=s.replaceAll('qc/vidhana-landmark-performance-','qc/landmark-stripe-diagnosis-performance-').replaceAll('qc/vidhana-landmark-performance.json','qc/landmark-stripe-diagnosis-performance.json');
+s=s.replace("sourceBytes:Buffer.byteLength(source[mode])","sourceBytes:Buffer.byteLength(source[mode])+Buffer.byteLength(districtSource[mode])");
+s=s.replace('district:districtState(),resources:',"shadow:{configured:{left:__shadowAudit.sun.shadow.camera.left,right:__shadowAudit.sun.shadow.camera.right,near:__shadowAudit.sun.shadow.camera.near,far:__shadowAudit.sun.shadow.camera.far},projection:__shadowAudit.sun.shadow.camera.projectionMatrix.toArray(),actualWidth:2/__shadowAudit.sun.shadow.camera.projectionMatrix.elements[0],mapSize:__shadowAudit.sun.shadow.mapSize.toArray()},district:districtState(),resources:");
+fs.writeFileSync('qc/landmark-stripe-diagnosis-performance.cjs',s);

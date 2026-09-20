@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "originalPenetration": {
+    "x": -1.079589130953226,
+    "y": 5.1625573006230265,
+    "heading": 2.2908048388426323,
+    "impacts": 15,
+    "contact": {
+      "x": -1,
+      "y": 0
+    }
+  },
+  "fixedSteeringRecovery": {
+    "x": -3.790701909347077,
+    "y": 21.812729192470226,
+    "heading": 332.25713904780037,
+    "impacts": 217
+  },
+  "tangentialTravel": 11.561710064376253,
+  "unobstructedEquivalentFrames": 600,
+  "manifest": {
+    "source": {
+      "file": "auto-physics.js",
+      "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+    },
+    "candidate": {
+      "file": "qc/auto-physics-pose-candidate.js",
+      "sha256": "7995ed841e7ae9295867326f54146d04bbca277b91c02335a85ab09797789c65"
+    },
+    "scope": "Rollback proposed heading together with rejected translation; preserve collision response, yaw damping and all accepted movement. Review only."
+  }
+}

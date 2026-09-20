@@ -1,0 +1,9 @@
+# Only frozen QC inputs: preserve original bytes for SHA-256 replay checks.
+qc/frontage-runtime-candidate/*.js -text
+qc/vidhana-stair-analytic-v2-shadow-on-bundle.js -text
+qc/auto-physics-pose-candidate.js -text
+qc/frontage-runtime-browser-snapshot.json -text
+qc/frontage-runtime-browser-results.json -text
+qc/frontage-rotation-browser-snapshot.json -text
+qc/frontage-rotation-browser-results.json -text
+qc/vidhana-passage-browser-v2-snapshot.json -text

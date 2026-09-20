@@ -1,0 +1,58 @@
+[
+  {
+    "path": "assets/vehicles/kitt-review/before-corrections/kitt-reference.glb",
+    "bytes": 1068352,
+    "triangles": 24212,
+    "materials": 4,
+    "wheelNodes": [
+      "Wheel_FL",
+      "Wheel_FR",
+      "Wheel_RL",
+      "Wheel_RR"
+    ],
+    "steeringNodes": [
+      "Steer_FL",
+      "Steer_FR",
+      "Steer_RL",
+      "Steer_RR"
+    ],
+    "scannerNodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "path": "assets/vehicles/kitt-review/kitt-reference.glb",
+    "bytes": 1074240,
+    "triangles": 24512,
+    "materials": 4,
+    "wheelNodes": [
+      "Wheel_FL",
+      "Wheel_FR",
+      "Wheel_RL",
+      "Wheel_RR"
+    ],
+    "steeringNodes": [
+      "Steer_FL",
+      "Steer_FR",
+      "Steer_RL",
+      "Steer_RR"
+    ],
+    "scannerNodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+]

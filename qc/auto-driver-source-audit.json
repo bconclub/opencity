@@ -1,0 +1,171 @@
+{
+  "auditedAt": "2026-09-11",
+  "mode": "Read-only GLB binary JSON/accessor inspection, runtime source inspection, existing rendered evidence; no new Blender render, mesh edit or asset export",
+  "assets": [
+    {
+      "file": "D:/Brands BCON/OpenCity/Models/Auto Driver.glb",
+      "sha256": "D70A7E554177ACB342EC5DB9914B0994D09498283854F9E4A2EA0C148EA35840",
+      "bytes": 28595672,
+      "triangles": 498494,
+      "meshes": 1,
+      "materials": 1,
+      "skins": 0,
+      "animations": 0,
+      "nodes": [
+        {
+          "mesh": 0,
+          "name": "texture_pbr_v128",
+          "rotation": [
+            0.7071068286895752,
+            0,
+            0,
+            0.7071068286895752
+          ]
+        }
+      ],
+      "images": [
+        {
+          "name": "texture_pbr_v128_normal",
+          "width": 2048,
+          "height": 2048,
+          "mime": "image/png"
+        },
+        {
+          "name": "texture_pbr_v128",
+          "width": 2048,
+          "height": 2048,
+          "mime": "image/png"
+        },
+        {
+          "name": "texture_pbr_v128_metallic-texture_pbr_v128_roughness",
+          "width": 2048,
+          "height": 2048,
+          "mime": "image/png"
+        }
+      ],
+      "primitives": [
+        {
+          "meshName": "texture_pbr_v128",
+          "positionCount": 326689,
+          "rawLocalMin": [
+            -0.2980720102787018,
+            -0.27706900238990784,
+            -1.0292179584503174
+          ],
+          "rawLocalMax": [
+            0.2980720102787018,
+            0.27317801117897034,
+            0
+          ],
+          "materialIndex": 0,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "C:/Users/user/Documents/ChatGPT/Z/assets/auto/auto-rickshaw.glb",
+      "sha256": "1382E9C81589DBDA33C17B62A0B90D6D766ACB910FA6D1362B589ED9805F9E67",
+      "bytes": 1463888,
+      "triangles": 12604,
+      "meshes": 1,
+      "materials": 2,
+      "skins": 0,
+      "animations": 0,
+      "nodes": [
+        {
+          "mesh": 0,
+          "name": "User_Auto_Rickshaw"
+        }
+      ],
+      "images": [
+        {
+          "name": "auto_normals",
+          "width": 1024,
+          "height": 1024,
+          "mime": "image/png"
+        },
+        {
+          "name": "Auto_textures",
+          "width": 1024,
+          "height": 1024,
+          "mime": "image/png"
+        },
+        {
+          "name": "auto_roughness",
+          "width": 1024,
+          "height": 1024,
+          "mime": "image/png"
+        }
+      ],
+      "primitives": [
+        {
+          "meshName": "Mesh",
+          "positionCount": 11925,
+          "rawLocalMin": [
+            -0.7507027387619019,
+            0,
+            -1.3591935634613037
+          ],
+          "rawLocalMax": [
+            0.7507026195526123,
+            1.7436110973358154,
+            1.3591935634613037
+          ],
+          "materialIndex": 0,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        },
+        {
+          "meshName": "Mesh",
+          "positionCount": 170,
+          "rawLocalMin": [
+            -0.7450575828552246,
+            1.1210658550262451,
+            -0.970753014087677
+          ],
+          "rawLocalMax": [
+            0.7450574636459351,
+            1.587543249130249,
+            1.2644646167755127
+          ],
+          "materialIndex": 1,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    }
+  ],
+  "findings": {
+    "suppliedFile": "Standalone seated stylized astronaut/robot character. Not a realistic human auto driver and not a vehicle+driver combination.",
+    "suppliedDriverSeparatelyRigged": false,
+    "currentPlayableAutoHasDriver": false,
+    "currentAutoConfidence": "high: active model/loader inspection and existing source-asset studio preview",
+    "existingLegacyDriver": "auto-model-v1.js contains a primitive driver silhouette but active auto-mode.js imports auto-model.js, not v1",
+    "existingOptimizedCandidate": "assets/vehicles/auto-driver-candidate.glb: 12000 triangles, 1 material, 3x1024 textures, 4337840 bytes, review-only and not loaded by current auto-asset.js",
+    "extractionVerdict": "No character extraction required: supplied file is already the complete character. No anatomical separation or rig success claimed. Hands do not grip handlebars.",
+    "nextStep": "If astronaut styling is wanted: review-place the existing optimized whole character into current auto seat, align pelvis and head clearance, then inspect hands/handlebar gaps. A realistic human driver requires a suitable separate supplied model; this astronaut cannot be made realistic by segmentation."
+  },
+  "runtimeEvidence": [
+    "auto-mode.js:24 imports ./auto-model.js",
+    "auto-model.js:50-51 creates seats, no human geometry",
+    "auto-model.js:70 invokes upgradeAuto",
+    "auto-asset.js:4 loads assets/auto/auto-rickshaw.glb",
+    "auto-asset.js:24 hides existing fallback body children",
+    "auto-asset.js:25 adds imported auto only; no character load"
+  ],
+  "visualEvidence": [
+    "D:/CodexTools/Blender/user-auto-preview.png",
+    "assets/vehicles/auto-driver-candidate-preview.png"
+  ],
+  "mutatedAssets": []
+}
