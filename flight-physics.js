@@ -15,7 +15,7 @@ export function advanceDynamics(s,input,dt,{automatic=false}={}){
   const forward=s.vx*Math.sin(angle)+s.vy*Math.cos(angle);
   const lateral=s.vx*Math.cos(angle)-s.vy*Math.sin(angle);
   const velocity=Math.hypot(s.vx,s.vy);
-  const boost=automatic?1:useBoost(s.boost,!!input.boost,!input.brake&&input.forward>=0&&(input.forward>0||forward>1),h,HELICOPTER_PROFILE);result.boosted ||= boost>0;if(automatic)s.boost.active=false;
+  const boost=automatic?1:useBoost(s.boost,!!input.boost,!input.brake&&input.forward>=0&&(input.forward>0||forward>1),h,HELICOPTER_PROFILE);result.boosted ||=boost>0;if(automatic)s.boost.active=false;
   const cruiseAcceleration=clamp(((input.cruiseSpeed??HELICOPTER_PROFILE.boostSpeed)-forward)*1.4,-18,18);
   const targetYaw=(input.brake?0:input.turn)*(70-Math.min(velocity*.3,24));
   s.yawRate+=(targetYaw-s.yawRate)*(1-Math.exp(-h*6));
