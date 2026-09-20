@@ -1,1 +1,1 @@
-LOAD_FROM_/tmp/b116-mobile-pause-auto-mode.js
+LOAD_FROM_/tmp/qc_mobile-pause-auto-mode.js
