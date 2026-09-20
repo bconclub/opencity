@@ -1,5 +1,4 @@
 // Original photographic reconstruction. Z-up, metres, base exactly at z=0.
-// Estimated dimensions, not surveyed hardware. No placement inference occurs here.
 export const FRONTAGE_LAMP_REFERENCE = Object.freeze({
   title:'Dr Ambedkar Veedhi, Bengaluru (01)',author:'Moheen Reeyad',date:'2019-06-22',
   url:'https://commons.wikimedia.org/wiki/File:Dr_Ambedkar_Veedhi,_Bengaluru_(01).jpg',
@@ -26,10 +25,8 @@ export function createFrontageLampGeometry(T){
     g.applyQuaternion(new T.Quaternion().setFromUnitVectors(new T.Vector3(0,1,0),delta.normalize()));
     g.translate(...start.add(end).multiplyScalar(.5).toArray());add(g,color,name);
   }
-  // Rounded stepped foot and bell-shaped shaft transition are visible in the reference.
   lathe([[0,0],[.255,0],[.255,.07],[.225,.10],[.225,.16],[.19,.19],[.16,.22],[.125,.32],[.10,.46],[.09,.52]],TRIM,'stepped-foot');
   lathe([[.105,.43],[.115,.47],[.115,.51],[.097,.55],[.084,.62]],WHITE,'lower-collar');
-  // Twelve restrained ribs model the white fluted shaft without extra objects.
   const p=[],indices=[],segments=48,rings=[[.080,.51],[.076,.65],[.066,1.2],[.061,2.5],[.057,3.82]];
   for(const [radius,z] of rings)for(let i=0;i<=segments;i++){
     const a=i/segments*Math.PI*2,r=radius+.0045*Math.cos(a*12);p.push(Math.cos(a)*r,Math.sin(a)*r,z);
@@ -40,8 +37,6 @@ export function createFrontageLampGeometry(T){
   const shaft=new T.BufferGeometry();shaft.setAttribute('position',new T.Float32BufferAttribute(p,3));shaft.setIndex(indices);shaft.computeVertexNormals();add(shaft,WHITE,'fluted-shaft');
   lathe([[.057,3.75],[.077,3.77],[.077,3.84],[.064,3.88],[.064,3.94]],TRIM,'upper-collar');
   lathe([[.058,3.87],[.093,3.93],[.106,4.00],[.106,4.04]],DARK,'dark-neck',12);
-  // Faceted translucent-looking panels remain opaque for cheap daylight instancing.
-  // Broad top, narrow bottom: the previous game's pointed lantern silhouette was wrong.
   lathe([[.106,4.00],[.492,4.48]],DIFFUSER,'six-diffuser-panels',6);
   for(let i=0;i<6;i++){
     const a=i/6*Math.PI*2;rod([Math.sin(a)*.11,-Math.cos(a)*.11,4.00],[Math.sin(a)*.496,-Math.cos(a)*.496,4.48],.014,DARK,'head-rib-'+i);
@@ -53,8 +48,6 @@ export function createFrontageLampGeometry(T){
   geometry.computeBoundingBox();geometry.computeBoundingSphere();geometry.userData={reference:FRONTAGE_LAMP_REFERENCE,parts,triangles:positions.length/9};return geometry;
 }
 
-// Input positions are caller-owned Cartesian scene coordinates; copied without offsets.
-// No OSM nodes are fetched, modified or assigned this fixture automatically.
 export function createFrontageLampBatch(T,placements){
   for(const p of placements)if(![p.x,p.y,p.z,p.heading??0].every(Number.isFinite))throw new TypeError('Finite x, y, z and optional heading radians required');
   const geometry=createFrontageLampGeometry(T),material=new T.MeshLambertMaterial({vertexColors:true});

@@ -47,7 +47,6 @@ for i,(x,y) in enumerate([(-.49,.44),(.49,.44),(.49,-.44),(-.49,-.44)]):
     bpy.ops.object.empty_add(type='PLAIN_AXES',location=(x,y,.425));rotor=bpy.context.object;rotor.name='Propeller %s'%(i+1)
     for j in range(2):
         angle=j*math.pi
-        # Swept, tapered blade with solid thickness. Local coordinates retain rotor pivot.
         vertices=[(.025,-.013,0),(.19,-.033,0),(.275,0,0),(.17,.027,0),(.025,.015,0)]
         mesh=bpy.data.meshes.new('Blade mesh');mesh.from_pydata(vertices,[],[(0,1,2,3,4)]);mesh.update()
         o=bpy.data.objects.new('Swept blade',mesh);scene.collection.objects.link(o);o.parent=rotor;o.rotation_euler.z=angle;o.data.materials.append(carbon)
@@ -67,7 +66,6 @@ tube('Camera lens',(0,.22,.145),(0,.255,.145),.035,glass)
 scene.frame_end=25;scene.frame_set(1)
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'opencity-drone.blend'))
 bpy.ops.export_scene.gltf(filepath=str(WEB/'opencity-drone.glb'),export_format='GLB',export_apply=True,export_animations=True)
-# Studio camera and lights are render-only, not exported into the vehicle GLB.
 bpy.ops.object.camera_add(location=(1.55,1.85,1.35));camera=bpy.context.object
 camera.rotation_euler=(Vector((0,0,.23))-camera.location).to_track_quat('-Z','Y').to_euler();camera.data.type='ORTHO';camera.data.ortho_scale=2.05;scene.camera=camera
 for name,loc,power,size in [('Key',(1,1,3),180,3),('Fill',(-2,0,1),90,2)]:
