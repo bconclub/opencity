@@ -1,0 +1,82 @@
+{
+  "sourceSha256": "ca8789d4181bc435398ac6edbab468e6c489e37eaffbef4155dc11c5912c1f3e",
+  "horizontalScale": 0.9988824009162848,
+  "sourceEquatorialCircumferenceM": 40075016.686,
+  "targetEarthRadiusM": 6371008.8,
+  "heightScale": 1,
+  "sourceFurnitureMeshIndices": [
+    970,
+    971
+  ],
+  "furnitureTrianglesBefore": 17,
+  "furnitureTrianglesAfter": 17,
+  "materialProfiles": [
+    {
+      "color": [
+        0.30196078431372547,
+        0.30196078431372547,
+        0.30196078431372547
+      ],
+      "role": "asphalt"
+    },
+    {
+      "color": [
+        0.5490196078431373,
+        0.5490196078431373,
+        0.5490196078431373
+      ],
+      "role": "concrete"
+    },
+    {
+      "color": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "role": "paving"
+    },
+    {
+      "color": [
+        0.8980392156862745,
+        0.8980392156862745,
+        0.8980392156862745
+      ],
+      "role": "marking"
+    },
+    {
+      "color": [
+        0.30196078431372547,
+        0,
+        0
+      ],
+      "role": "source"
+    },
+    {
+      "color": [
+        0.7843137254901961,
+        0.7843137254901961,
+        0.7843137254901961
+      ],
+      "role": "source"
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "role": "source"
+    }
+  ],
+  "sourceMetadataAvailable": false,
+  "classification": "Hash-guarded reviewed snapshot. Material roles describe existing visual treatments; no claim of source OSM semantic identity.",
+  "selectionCenter": [
+    77.5908,
+    12.9798
+  ],
+  "radiusM": 500,
+  "origin": [
+    77.59136000000001,
+    12.97984615
+  ]
+}
