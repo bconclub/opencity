@@ -1,0 +1,62 @@
+{
+  "sourceSha256": "1382e9c81589dbda33c17b62a0b90d6d766acb910fa6d1362b589ed9805f9e67",
+  "candidateSha256": "c0f480943bf5597822e09f06a0c0abd46d3d85f4772fcf1be33bab63ef78d866",
+  "bytes": 1626016,
+  "sourceTriangles": 12604,
+  "candidateTriangles": 12604,
+  "wheels": [
+    {
+      "name": "Wheel_F",
+      "faces": 1160,
+      "centerYUp": [
+        -0.004420580342411995,
+        0.22460909187793732,
+        -1.1220633685588837
+      ],
+      "radius": 0.22460909187793732
+    },
+    {
+      "name": "Wheel_RL",
+      "faces": 680,
+      "centerYUp": [
+        -0.63902947306633,
+        0.24152201786637306,
+        0.9311840832233429
+      ],
+      "radius": 0.2246091030538082
+    },
+    {
+      "name": "Wheel_RR",
+      "faces": 680,
+      "centerYUp": [
+        0.6237642765045166,
+        0.24152201786637306,
+        0.9311865866184235
+      ],
+      "radius": 0.2246091030538082
+    },
+    {
+      "name": "FrontFender",
+      "faces": 244,
+      "centerYUp": [
+        -0.004420580342411995,
+        0.22460909187793732,
+        -1.1220633685588837
+      ],
+      "radius": 0.1306724101305008
+    },
+    {
+      "name": "FrontLamp",
+      "faces": 200,
+      "centerYUp": [
+        -0.004420580342411995,
+        0.22460909187793732,
+        -1.1220633685588837
+      ],
+      "radius": 0.07731297612190247
+    }
+  ],
+  "maxRestPositionErrorMetres": 1.4901161193847656e-08,
+  "sourceBinaryPrefixPreserved": true,
+  "preservation": "Connectivity-isolated wheels plus front mudguard/lamp reparented to independent spin/steer nodes. Every source triangle retained; fixed body, UVs, normals and texture bytes preserved. No remesh/decimation."
+}
