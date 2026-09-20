@@ -1,0 +1,225 @@
+{
+  "assetHashes": {
+    "baseline": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b",
+    "candidate": "e6ad2ff4ffc3b4ee4de73600f28eb264e2fc3b3fac65f31ebb0d4f50cda4fc05"
+  },
+  "scope": "Full city static Cybertruck chase view,1100x800,Edge SwiftShader,60frames/run,ABBA. Relative single-device gate, not physical phone FPS or multiplayer cost.",
+  "runs": [
+    {
+      "index": 0,
+      "mode": "baseline",
+      "meanMs": 200,
+      "medianMs": 200,
+      "p95Ms": 216.60000000000036,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 3
+        },
+        "Auto": {
+          "calls": 56,
+          "triangles": 9074,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 7280,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 42000,
+          "textures": 4
+        }
+      },
+      "calls": 101,
+      "triangles": 349184,
+      "camera": {
+        "center": [
+          77.59367788233789,
+          12.973414495969436
+        ],
+        "zoom": 22.747210490045482,
+        "pitch": 77.98690911424053,
+        "bearing": 167.64739066936966
+      },
+      "vehicle": "cybertruck",
+      "assetBytes": 429708,
+      "errors": []
+    },
+    {
+      "index": 1,
+      "mode": "candidate",
+      "meanMs": 211.66666666666666,
+      "medianMs": 216.59999999999854,
+      "p95Ms": 233.39999999999782,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "Auto": {
+          "calls": 56,
+          "triangles": 9074,
+          "textures": 3
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 3
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 7280,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 42000,
+          "textures": 4
+        }
+      },
+      "calls": 101,
+      "triangles": 349184,
+      "camera": {
+        "center": [
+          77.59367788233789,
+          12.973414495969436
+        ],
+        "zoom": 22.747210490045482,
+        "pitch": 77.98690911424053,
+        "bearing": 167.64739066936966
+      },
+      "vehicle": "cybertruck",
+      "assetBytes": 623688,
+      "errors": []
+    },
+    {
+      "index": 2,
+      "mode": "candidate",
+      "meanMs": 200.55499999999998,
+      "medianMs": 200,
+      "p95Ms": 216.70000000000073,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "Auto": {
+          "calls": 56,
+          "triangles": 9074,
+          "textures": 3
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 3
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 7280,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 42000,
+          "textures": 4
+        }
+      },
+      "calls": 101,
+      "triangles": 349184,
+      "camera": {
+        "center": [
+          77.59367788233789,
+          12.973414495969436
+        ],
+        "zoom": 22.747210490045482,
+        "pitch": 77.98690911424053,
+        "bearing": 167.64739066936966
+      },
+      "vehicle": "cybertruck",
+      "assetBytes": 623688,
+      "errors": []
+    },
+    {
+      "index": 3,
+      "mode": "baseline",
+      "meanMs": 201.38833333333335,
+      "medianMs": 200,
+      "p95Ms": 216.70000000000073,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "Auto": {
+          "calls": 56,
+          "triangles": 9074,
+          "textures": 2
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 3
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 7280,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 42000,
+          "textures": 4
+        }
+      },
+      "calls": 101,
+      "triangles": 349184,
+      "camera": {
+        "center": [
+          77.59367788233789,
+          12.973414495969436
+        ],
+        "zoom": 22.747210490045482,
+        "pitch": 77.98690911424053,
+        "bearing": 167.64739066936966
+      },
+      "vehicle": "cybertruck",
+      "assetBytes": 429708,
+      "errors": []
+    }
+  ],
+  "baselineMeanMs": 200.69416666666666,
+  "candidateMeanMs": 206.11083333333332,
+  "regressionPercent": 2.698965673308895,
+  "passed": true
+}
