@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "Immutable candidate boots with shared actual architecture and local two-client room",
+    "Actual auto-roam graph excludes passage and private approaches; manual graph byte-equivalent",
+    "Manual steering takes over public auto-roam",
+    "Real manual passage drive 1 clears both portals without collision",
+    "Real manual passage drive -1 clears both portals without collision",
+    "Manual stair front approach stops",
+    "Manual stair side approach stops",
+    "Pause holds pose and resumes without held keyboard input",
+    "Unchanged remote renderer receives Cybertruck and current passage pose",
+    "Real helicopter hover fills dwell circle and shows measured dome height through unchanged focus UI"
+  ],
+  "scope": "Functional browser and two-client local room test, no performance claim. Placement hooks establish test start only; keyboard drives real physics. Browser favicon probe receives204; all application requests must exist in immutable manifest."
+}
