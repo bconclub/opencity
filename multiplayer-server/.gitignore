@@ -1,1 +1,2 @@
-LOAD_FROM_SHELL
+node_modules/
+.env
