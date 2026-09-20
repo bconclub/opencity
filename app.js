@@ -33,7 +33,7 @@ async function boot(){
   if(attribution){
    const collapse=()=>{attribution.open=false;attribution.classList.remove('maplibregl-compact-show');};
    const initialState=new MutationObserver(()=>{if(attribution.open)collapse();});
-   initialState.observe(attribution,{attributes:true,attributeFilter:['open']}); 
+   initialState.observe(attribution,{attributes:true,attributeFilter:['open']});
    attribution.querySelector('summary').addEventListener('click',()=>initialState.disconnect(),{once:true});
    map.once('remove',()=>initialState.disconnect());collapse();
   }
@@ -59,3 +59,7 @@ $('close-inspector').onclick=()=>$('inspector').hidden=true;
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){stopOrbit();$('inspector').hidden=true;}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopOrbit();});
 boot();
+
+
+
+
