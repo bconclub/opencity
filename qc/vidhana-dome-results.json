@@ -1,0 +1,55 @@
+{
+  "status": "PASS_CPU_REQUIRES_VISUAL_REVIEW",
+  "before": {
+    "draws": 6,
+    "triangles": 64276
+  },
+  "candidate": {
+    "draws": 5,
+    "triangles": 68630,
+    "mainAddedTriangles": 6246,
+    "mainBounds": [
+      19.354799270629883,
+      39.79999923706055
+    ],
+    "domeCount": 7
+  },
+  "triangleDelta": 4354,
+  "unchangedNoncentralGeometryAndNormals": true,
+  "degenerateAddedTriangles": 0,
+  "nonUnitAddedNormals": 0,
+  "sourceArchitectureSHA256": "22e56ab2e00646cd73012769cd4040688d503fb1e277220a8b2f70785eaf1f0f",
+  "architecture": {
+    "drumBase": 19.3548,
+    "lowerCourseTop": 21.65,
+    "galleryTop": 25.6,
+    "corniceTop": 28.1,
+    "crownSpringline": 31.4,
+    "crownTop": 38,
+    "collarTop": 39.8,
+    "publishedOverallTop": 45.72,
+    "publishedDiameter": 18.288,
+    "intermediateHeightsEstimated": true,
+    "missingTop": "Upper pedestal and lion emblem not reconstructed; do not equate collar summit with published overall height",
+    "mappedCenter": [
+      33.18814897596718,
+      -32.6000620000136
+    ],
+    "mappedDiameter": [
+      18.061208707750534,
+      18.067236000142586
+    ],
+    "drumCorners": 8,
+    "bays": 24,
+    "brackets": 24,
+    "addedTriangles": 6246,
+    "revision": 2,
+    "galleryOpeningHeight": 1.22,
+    "lowerPilasters": 24,
+    "railingBalusters": 32,
+    "otherSixDomesUnchanged": true,
+    "coreRemoved": true,
+    "reviewOnly": true
+  },
+  "limitation": "No GPU rendering; upper pedestal/lion emblem missing, actual collar top39.8 is not published overall top45.72."
+}
