@@ -29,7 +29,6 @@ async function decodeGzipB64(b64) {
 }
 
 export async function loadVidhanaStreetData() {
-  // Prefer regen b64 shards when present; plain JSON is legacy fallback only.
   const b64 = await loadGzipB64Parts();
   if (b64) return decodeGzipB64(b64);
   const json = await fetch('./vidhana-street-data.json');
