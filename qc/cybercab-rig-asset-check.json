@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "assets/vehicles/cybercab-meshy-approved.glb",
+    "Bytes": 4535896,
+    "SHA256": "D7EBCC4B2753E5CE51E2B432AD294EE8C32148FBEDA999F9FED54F59B469869B"
+  },
+  {
+    "Path": "assets/vehicles/cybercab-rigged.glb",
+    "Bytes": 4437428,
+    "SHA256": "D22C94990893C5D807248CB7717AC643FCCF2D532AD55519F57F3F8DE65BBC1A"
+  },
+  {
+    "Path": "assets/vehicles/cybercab-meshy-traffic.glb",
+    "Bytes": 3864428,
+    "SHA256": "1A412A23D19B0ACA4DA0F38CEE6AD16C1537776EDB5CCA7187E7F3C55B2376EC"
+  },
+  {
+    "Path": "qc/cybercab-rig-baseline-loader.js",
+    "Bytes": 4313,
+    "SHA256": "96225CD85EE30FD6D000B0471DA3CC363CD29234FE364B756980C36057D91B2B"
+  }
+]
