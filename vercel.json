@@ -1,0 +1,16 @@
+{
+  "framework": null,
+  "buildCommand": "node stage-production.mjs",
+  "outputDirectory": "public-release",
+  "installCommand": null,
+  "headers": [
+    {
+      "source": "/release.json",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+    }
+  ]
+}
