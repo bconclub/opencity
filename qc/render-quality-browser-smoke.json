@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "sourceSha256": "f9637c8e4dde3c580288abd95f3785f6df5ad13c4ac72e631e223f1e39e09379",
+  "runs": [
+    {
+      "mode": "native",
+      "quality": {
+        "antialias": true,
+        "reason": "verified-desktop-tier",
+        "pixels": 2073600,
+        "renderer": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00009BC8) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "probeLost": true,
+      "actual": {
+        "renderer": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00009BC8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "attributes": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        },
+        "samples": 4
+      },
+      "contexts": 2,
+      "errors": []
+    },
+    {
+      "mode": "software",
+      "quality": {
+        "antialias": false,
+        "reason": "software-renderer",
+        "pixels": 2073600,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+      },
+      "probeLost": true,
+      "actual": {
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "attributes": {
+          "alpha": true,
+          "antialias": false,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "high-performance",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": true,
+          "xrCompatible": false
+        },
+        "samples": 0
+      },
+      "contexts": 2,
+      "errors": []
+    }
+  ],
+  "scope": "Real native and forced-software context policy/lifecycle smoke at FullHD; no game performance claim, FullHD gate owned by city agent"
+}

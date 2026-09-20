@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": [
+    "Verified renderer enables within 836000 physical pixels; FullHD explicitly falls back",
+    "Mobile, coarse, unknown, unsupported and software tiers stay off",
+    "Probe paths release context once, discard canvas, fail closed",
+    "Ineligible environments including FullHD skip context allocation; absent browser cannot break boot"
+  ],
+  "pixelBudget": 836000,
+  "scope": "Pure policy and fake-context lifecycle tests; no GPU context created. FullHD AA rejected; current policy capped at last verified 1100x760 pixel tier."
+}

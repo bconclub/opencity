@@ -1,0 +1,204 @@
+{
+  "base": "https://www.opencity.world/",
+  "sourceSha256": "58e0d69a5256f6fd06dfea8eba3774e347a40e936c29c78c8facbcc6f9f17569",
+  "viewport": [
+    1100,
+    760
+  ],
+  "date": "2026-09-10T22:29:17.501Z",
+  "notes": "ABBA single-page sequential SwiftShader; no other renderer jobs allowed. Changes only intercepted map context creation. Custom draw counts exclude basemap.",
+  "runs": [
+    {
+      "index": 0,
+      "requestedAntialias": false,
+      "meanMs": 241.14666666666665,
+      "medianMs": 233.40000000000146,
+      "p95Ms": 266.7000000000007,
+      "context": {
+        "alpha": true,
+        "antialias": false,
+        "depth": true,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "high-performance",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": false,
+        "stencil": true,
+        "xrCompatible": false
+      },
+      "samples": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 309056
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130
+        },
+        "Auto": {
+          "calls": 3,
+          "triangles": 12800
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000
+        }
+      },
+      "errors": []
+    },
+    {
+      "index": 1,
+      "requestedAntialias": true,
+      "meanMs": 462.83166666661697,
+      "medianMs": 466.6999999999971,
+      "p95Ms": 483.3999999999978,
+      "context": {
+        "alpha": true,
+        "antialias": true,
+        "depth": true,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "high-performance",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": false,
+        "stencil": true,
+        "xrCompatible": false
+      },
+      "samples": 4,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 309056
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130
+        },
+        "Auto": {
+          "calls": 3,
+          "triangles": 12800
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000
+        }
+      },
+      "errors": []
+    },
+    {
+      "index": 2,
+      "requestedAntialias": true,
+      "meanMs": 462.45500000000004,
+      "medianMs": 466.6999999999971,
+      "p95Ms": 500,
+      "context": {
+        "alpha": true,
+        "antialias": true,
+        "depth": true,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "high-performance",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": false,
+        "stencil": true,
+        "xrCompatible": false
+      },
+      "samples": 4,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 309056
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130
+        },
+        "Auto": {
+          "calls": 3,
+          "triangles": 12800
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000
+        }
+      },
+      "errors": []
+    },
+    {
+      "index": 3,
+      "requestedAntialias": false,
+      "meanMs": 227.19666666669153,
+      "medianMs": 233.29999999999927,
+      "p95Ms": 433.40000000000146,
+      "context": {
+        "alpha": true,
+        "antialias": false,
+        "depth": true,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "high-performance",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": false,
+        "stencil": true,
+        "xrCompatible": false
+      },
+      "samples": 0,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 309056
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130
+        },
+        "Auto": {
+          "calls": 3,
+          "triangles": 12800
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000
+        }
+      },
+      "errors": []
+    }
+  ]
+}

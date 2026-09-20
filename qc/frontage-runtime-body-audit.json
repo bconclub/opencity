@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "browserResultSha256": "14178c0885b840ea57a69c01675b0db0c3423e3d40bcb49be01d9196b05f0510",
+  "actualRenderedModelBounds": {
+    "minX": -1.3685653049401216,
+    "maxX": 1.3685653049401216,
+    "minY": -3.24942238309192,
+    "maxY": 2.9081223724107685,
+    "margin": 0.08,
+    "paddingX": 0.08191528624810503,
+    "paddingY": 0.1573224017839372,
+    "maxPitch": 0.08,
+    "maxRoll": 0.045,
+    "neutralBounds": {
+      "minX": -1.2066500186920166,
+      "maxX": 1.2066500186920166,
+      "minY": -3.012099981307983,
+      "maxY": 2.670799970626831,
+      "minZ": -4.996003610813204e-16,
+      "maxZ": 1.7937999963760378
+    }
+  },
+  "samples": [
+    {
+      "case": "stair front",
+      "position": [
+        77.59128046495981,
+        12.979125445765755
+      ],
+      "heading": 314.37372663049314,
+      "pitch": 0.0477143432990706,
+      "roll": 0,
+      "impacts": 59,
+      "projectedBody": [
+        [
+          -351.99810021780786,
+          404.58777698301606
+        ],
+        [
+          -347.9406237423246,
+          400.6180456563405
+        ],
+        [
+          -347.879467791152,
+          400.5582122360732
+        ],
+        [
+          -346.19176106341274,
+          402.2832232712788
+        ],
+        [
+          -350.249237538896,
+          406.2529545979544
+        ],
+        [
+          -350.3103934900686,
+          406.3127880182217
+        ]
+      ],
+      "stairOverlapSquareMetres": 0,
+      "unpaused": true
+    },
+    {
+      "case": "stair side",
+      "position": [
+        77.59136192918464,
+        12.979383335084295
+      ],
+      "heading": 224.37372663049314,
+      "pitch": 0.038428672903900514,
+      "roll": 0,
+      "impacts": 64,
+      "projectedBody": [
+        [
+          -343.13922000602656,
+          431.22905409791815
+        ],
+        [
+          -341.41420897082094,
+          429.54134737017887
+        ],
+        [
+          -337.4428886468229,
+          433.6004479654639
+        ],
+        [
+          -337.3946929603303,
+          433.6497089476492
+        ],
+        [
+          -339.11970399553593,
+          435.33741567538846
+        ],
+        [
+          -343.0910243195339,
+          431.2783150801034
+        ]
+      ],
+      "stairOverlapSquareMetres": 0,
+      "unpaused": true
+    }
+  ],
+  "scope": "Browser-selected visible Cybertruck bounds projected using recorded suspension pitch, roll, heading and position, independently polygon-clipped against stair footprint. Not a claim about unrelated building/NPC colliders."
+}

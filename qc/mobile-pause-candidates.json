@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "file": "mobile-drive.js",
+      "candidate": "qc/mobile-pause-mobile-drive.js",
+      "sourceSha256": "614051bf1b03139f711dee7e1e959fb7fd58683cdc0b01897256ff2eb0ac37ba",
+      "candidateSha256": "0653e653f2723a22682dea48d4ac638d6164d0daa31b4b0af087c88cff93a7ab"
+    },
+    {
+      "file": "auto-mode.js",
+      "candidate": "qc/mobile-pause-auto-mode.js",
+      "sourceSha256": "d97c6bb84239a563381924f1ee04f849d7b2a589ee4f48bca6fc6666b599b21d",
+      "candidateSha256": "cb7dab896b4b61c741f5fbb8f62039c84680eab6bccc9417c9a4ee3ffa3c32d4"
+    },
+    {
+      "file": "flight.js",
+      "candidate": "qc/mobile-pause-flight.js",
+      "sourceSha256": "0ec14faa2d2e3864246e7b44da51a69f3eb7a3170b2c5942675358a4151c95cd",
+      "candidateSha256": "a3c7d018f522861e4f276e757d956c10becfb8fdbfb4c0cea38ebf58534dfb14"
+    }
+  ],
+  "api": "window event opencity:release-input, synchronous, no payload",
+  "runtimeChanged": false
+}

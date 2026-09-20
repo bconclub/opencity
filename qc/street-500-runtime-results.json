@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "cpuOnly": true,
+  "gpuUsed": false,
+  "originShiftM": 70.02577980518609,
+  "sidecarGroundHeight": 0,
+  "legacyGroundHeight": 2,
+  "renderedMeshesWithSidecar": 2,
+  "invalidDataCases": 16,
+  "relativeGroundURL": "https://example.invalid/city/assets/streets/ground/triangles.json",
+  "disposalAndRetry": true,
+  "classifiedCandidate": {
+    "directory": "experiments\\osm2world\\coverage-500-classified\\asset",
+    "glbSHA256": "8ebe5680a10f8a590fab7ffda69b8d5a4ba1a99ab7a049d981a9f580b1b72c73",
+    "groundSHA256": "6a26aba9c1bc9c70ad208d4968d3f43780c9d1a5e878931a84a412c445150f9a",
+    "metadataOrigin": [
+      77.59136000000001,
+      12.97984615
+    ],
+    "glbBytes": 983036,
+    "groundBytes": 1150824,
+    "renderTriangles": 11629,
+    "renderBatches": 7,
+    "indexedTriangles": 9280,
+    "centroidHits": 9280,
+    "maximumGroundHeight": 0.11999999731779099,
+    "maximumRenderHeight": 2,
+    "maximumGroundRadius": 500.00002795784246,
+    "maximumRenderRadius": 500.00002795784246,
+    "retainedTrianglesAbovePoint3m": 17,
+    "signSamples": [
+      {
+        "point": [
+          77.5943439384244,
+          12.981893777044846
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 2
+      },
+      {
+        "point": [
+          77.59434346563279,
+          12.981893777044846
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 2
+      },
+      {
+        "point": [
+          77.5943437020286,
+          12.981893609676975
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 1.9999999999999998
+      }
+    ]
+  }
+}

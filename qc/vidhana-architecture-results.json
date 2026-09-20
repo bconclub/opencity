@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "summary": {
+    "current": {
+      "draws": 6,
+      "triangles": 53032,
+      "domes": 7,
+      "zBounds": [
+        0,
+        47
+      ]
+    },
+    "candidate": {
+      "draws": 6,
+      "triangles": 64276,
+      "domes": 7,
+      "zBounds": [
+        0,
+        45.720001220703125
+      ]
+    }
+  },
+  "foyerSightlines": "center hits recessed entry; side hits stone",
+  "foyer": {
+    "backV": 55.9976092830845,
+    "width": 25.343616094002183,
+    "entryWidth": 5.2,
+    "entryHeight": 6.8,
+    "recessDepth": 0.35,
+    "baseZ": 6.75,
+    "topZ": 18.942,
+    "estimated": true
+  },
+  "centralDrumZ": [
+    19.354799270629883,
+    34.13759994506836
+  ],
+  "centralDomeZ": [
+    34.13759994506836,
+    45.720001220703125
+  ],
+  "enclosedCoreTop": 34.13759994506836,
+  "columnHeight": 12.192,
+  "columnBase": 6.75,
+  "columns": 12,
+  "mappedColumnCentersPreserved": true,
+  "measuredTreadLevels": 45,
+  "measuredStairWidth": 62.17919889446719,
+  "measuredStairDepth": 21.33600162502826,
+  "inputUnmodified": true
+}

@@ -1,0 +1,123 @@
+{
+  "status": "MATCHED_RENDERS_COMPLETE_REVIEW_REQUIRED",
+  "scope": "Matched views using actual createBlenderVehicle and installVehicleEnvironment; GLB response interception only",
+  "runs": [
+    {
+      "variant": "original",
+      "asset": "assets/vehicles/cybertruck.glb",
+      "sha256": "0c7a5c0c48b0e5aa2df89029a6ca889b4e3dc0e1f540843affab3bd79b5b556b",
+      "views": [
+        {
+          "view": "front",
+          "camera": [
+            0,
+            10,
+            1.15
+          ],
+          "target": [
+            0,
+            0,
+            0.95
+          ],
+          "orthoHalf": 3.7,
+          "drawCalls": 56,
+          "triangles": 9074,
+          "image": "qc/cybertruck-candidate-original-front.png"
+        },
+        {
+          "view": "side",
+          "camera": [
+            10,
+            0,
+            1.15
+          ],
+          "target": [
+            0,
+            0,
+            0.95
+          ],
+          "orthoHalf": 3.7,
+          "drawCalls": 56,
+          "triangles": 9074,
+          "image": "qc/cybertruck-candidate-original-side.png"
+        },
+        {
+          "view": "rear3",
+          "camera": [
+            7,
+            -10,
+            5
+          ],
+          "target": [
+            0,
+            0,
+            0.95
+          ],
+          "orthoHalf": 3.7,
+          "drawCalls": 56,
+          "triangles": 9074,
+          "image": "qc/cybertruck-candidate-original-rear3.png"
+        }
+      ]
+    },
+    {
+      "variant": "candidate",
+      "asset": "assets/vehicles/cybertruck-review/cybertruck-reference.glb",
+      "sha256": "fde533618ee28e2a86ec4fb4c9c2d588ff8d6a507aef4afc7682819c11fdad15",
+      "views": [
+        {
+          "view": "front",
+          "camera": [
+            0,
+            10,
+            1.15
+          ],
+          "target": [
+            0,
+            0,
+            0.95
+          ],
+          "orthoHalf": 3.7,
+          "drawCalls": 56,
+          "triangles": 9074,
+          "image": "qc/cybertruck-candidate-candidate-front.png"
+        },
+        {
+          "view": "side",
+          "camera": [
+            10,
+            0,
+            1.15
+          ],
+          "target": [
+            0,
+            0,
+            0.95
+          ],
+          "orthoHalf": 3.7,
+          "drawCalls": 56,
+          "triangles": 9074,
+          "image": "qc/cybertruck-candidate-candidate-side.png"
+        },
+        {
+          "view": "rear3",
+          "camera": [
+            7,
+            -10,
+            5
+          ],
+          "target": [
+            0,
+            0,
+            0.95
+          ],
+          "orthoHalf": 3.7,
+          "drawCalls": 56,
+          "triangles": 9074,
+          "image": "qc/cybertruck-candidate-candidate-rear3.png"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "cpuOnly": true,
+  "gpuUsed": false,
+  "originShiftM": 70.02577980518609,
+  "sidecarGroundHeight": 0,
+  "legacyGroundHeight": 2,
+  "renderedMeshesWithSidecar": 2,
+  "invalidDataCases": 16,
+  "relativeGroundURL": "https://example.invalid/city/assets/streets/ground/triangles.json",
+  "disposalAndRetry": true,
+  "classifiedCandidate": {
+    "directory": "qc\\street-500-junction-kerb\\asset",
+    "glbSHA256": "8eac82a3acc76fd2836a83cdd6327a3a8edd9207518fb6e11bded4bacdef4c4d",
+    "groundSHA256": "adf4bbb84f7244386514f22ecfe2a883dcdafe6ca8fe518287d1b48f26750723",
+    "metadataOrigin": [
+      77.59136000000001,
+      12.97984615
+    ],
+    "glbBytes": 985472,
+    "groundBytes": 1153955,
+    "renderTriangles": 11658,
+    "renderBatches": 7,
+    "indexedTriangles": 9301,
+    "centroidHits": 9301,
+    "maximumGroundHeight": 0.11999999731779099,
+    "maximumRenderHeight": 2,
+    "maximumGroundRadius": 500.00002795784246,
+    "maximumRenderRadius": 500.00002795784246,
+    "retainedTrianglesAbovePoint3m": 17,
+    "signSamples": [
+      {
+        "point": [
+          77.5943439384244,
+          12.981893777044846
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 2
+      },
+      {
+        "point": [
+          77.59434346563279,
+          12.981893777044846
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 2
+      },
+      {
+        "point": [
+          77.5943437020286,
+          12.981893609676975
+        ],
+        "sidecarHeight": null,
+        "legacyHeight": 1.9999999999999998
+      }
+    ]
+  }
+}

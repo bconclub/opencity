@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "before": "79d575ea972bf4441bff0ee564dcab7e66195189691fdd910c77180a9300f5a0",
+  "baseline": "6d9274e80b60a23b5bd8fa23af64b98333b23a9f1daf3407814faabac348a121",
+  "baselineEquivalentAfterCRLF": true,
+  "benchmarkCandidate": "e96864f35666e75bb20d011db0f4ef61e587d45dbc57e506e93c93cb3d3dc276",
+  "after": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b",
+  "comparisons": {
+    "road": {
+      "baselineMeanMs": 340.8333333333333,
+      "candidateMeanMs": 350.00083333333333,
+      "regressionPercent": 2.689731051344757,
+      "passed": true
+    },
+    "aerial": {
+      "baselineMeanMs": 306.3891666666667,
+      "candidateMeanMs": 320.27750000000003,
+      "regressionPercent": 4.532906135171233,
+      "passed": true
+    }
+  },
+  "scope": "Root reviewed ground, facade and aerial images. Hoisted ring-area calculation preserves exact generated geometry/materials and render code; startup timing not measured. No deployment."
+}

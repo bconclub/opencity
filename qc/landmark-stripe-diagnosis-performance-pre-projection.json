@@ -1,0 +1,2253 @@
+{
+  "date": "2026-09-11T00:29:31.735Z",
+  "note": "Full scene static Vidhana frontage,1100x760,60frames/run,Edge SwiftShader; forced scene repaint each sampled frame. Both landmark versions request-intercepted; no concurrent renderer. Relative regression gate only, not physical mobile performance.",
+  "runs": [
+    {
+      "index": 0,
+      "mode": "baseline",
+      "meanMs": 239.725,
+      "medianMs": 233.39999999999782,
+      "p95Ms": 266.6000000000022,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "camera": {
+        "center": [
+          77.59064999999998,
+          12.97972999999999
+        ],
+        "zoom": 18.591098406597563,
+        "pitch": 84.52107412193836,
+        "bearing": -45.01013112444139
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "resources": [
+        {
+          "path": "/styles.css",
+          "decoded": 4915,
+          "encoded": 4915
+        },
+        {
+          "path": "/flight.css",
+          "decoded": 3176,
+          "encoded": 3176
+        },
+        {
+          "path": "/auto.css",
+          "decoded": 1407,
+          "encoded": 1407
+        },
+        {
+          "path": "/cockpit.css",
+          "decoded": 2293,
+          "encoded": 2293
+        },
+        {
+          "path": "/mobile-controls.css",
+          "decoded": 1865,
+          "encoded": 1865
+        },
+        {
+          "path": "/app.js",
+          "decoded": 8451,
+          "encoded": 8451
+        },
+        {
+          "path": "/flight.js",
+          "decoded": 23720,
+          "encoded": 23720
+        },
+        {
+          "path": "/vehicle-shell.css",
+          "decoded": 5158,
+          "encoded": 5158
+        },
+        {
+          "path": "/vehicle-shell.js",
+          "decoded": 4975,
+          "encoded": 4975
+        },
+        {
+          "path": "/focus-pointer.css",
+          "decoded": 1489,
+          "encoded": 1489
+        },
+        {
+          "path": "/focus-pointer.js",
+          "decoded": 1640,
+          "encoded": 1640
+        },
+        {
+          "path": "/mobile-dashboard.css",
+          "decoded": 6525,
+          "encoded": 6525
+        },
+        {
+          "path": "/mobile-dashboard.js",
+          "decoded": 1306,
+          "encoded": 1306
+        },
+        {
+          "path": "/local-cache.js",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/performance-panel.css",
+          "decoded": 1388,
+          "encoded": 1388
+        },
+        {
+          "path": "/performance-panel.js",
+          "decoded": 2952,
+          "encoded": 2952
+        },
+        {
+          "path": "/controller-monitor.css",
+          "decoded": 1423,
+          "encoded": 1423
+        },
+        {
+          "path": "/controller-monitor.js",
+          "decoded": 2592,
+          "encoded": 2592
+        },
+        {
+          "path": "/resume-overlay.css",
+          "decoded": 795,
+          "encoded": 795
+        },
+        {
+          "path": "/resume-overlay.js",
+          "decoded": 1421,
+          "encoded": 1421
+        },
+        {
+          "path": "/city-loading.css",
+          "decoded": 1623,
+          "encoded": 1623
+        },
+        {
+          "path": "/city-loading.js",
+          "decoded": 2128,
+          "encoded": 2128
+        },
+        {
+          "path": "/multiplayer-client.css",
+          "decoded": 8468,
+          "encoded": 8468
+        },
+        {
+          "path": "/multiplayer-client.js",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/mobile-menu.css",
+          "decoded": 7611,
+          "encoded": 7611
+        },
+        {
+          "path": "/mobile-menu.js",
+          "decoded": 5174,
+          "encoded": 5174
+        },
+        {
+          "path": "/mobile-drive.css",
+          "decoded": 2979,
+          "encoded": 2979
+        },
+        {
+          "path": "/mobile-drive.js",
+          "decoded": 6144,
+          "encoded": 6144
+        },
+        {
+          "path": "/player-stats-ui.js",
+          "decoded": 1661,
+          "encoded": 1661
+        },
+        {
+          "path": "/voice-chat.css",
+          "decoded": 1318,
+          "encoded": 1318
+        },
+        {
+          "path": "/voice-chat.js",
+          "decoded": 5318,
+          "encoded": 5318
+        },
+        {
+          "path": "/social-controls.css",
+          "decoded": 3620,
+          "encoded": 3620
+        },
+        {
+          "path": "/social-entry.js",
+          "decoded": 86,
+          "encoded": 86
+        },
+        {
+          "path": "/social-controls.js",
+          "decoded": 3438,
+          "encoded": 3438
+        },
+        {
+          "path": "/player-stats.js",
+          "decoded": 11634,
+          "encoded": 11634
+        },
+        {
+          "path": "/player-cloud.js",
+          "decoded": 733,
+          "encoded": 733
+        },
+        {
+          "path": "/vehicle-colors.js",
+          "decoded": 1539,
+          "encoded": 1539
+        },
+        {
+          "path": "/release.json",
+          "decoded": 140,
+          "encoded": 140
+        },
+        {
+          "path": "/assets/vehicles/previews/cycle.webp",
+          "decoded": 15306,
+          "encoded": 15306
+        },
+        {
+          "path": "/assets/vehicles/previews/helicopter.webp",
+          "decoded": 11776,
+          "encoded": 11776
+        },
+        {
+          "path": "/assets/vehicles/previews/auto.webp",
+          "decoded": 19266,
+          "encoded": 19266
+        },
+        {
+          "path": "/assets/vehicles/previews/cybertruck.webp",
+          "decoded": 14690,
+          "encoded": 14690
+        },
+        {
+          "path": "/assets/vehicles/previews/cybercab.webp",
+          "decoded": 21588,
+          "encoded": 21588
+        },
+        {
+          "path": "/assets/vehicles/previews/kitt.webp",
+          "decoded": 16982,
+          "encoded": 16982
+        },
+        {
+          "path": "/supabase-config.json",
+          "decoded": 126,
+          "encoded": 126
+        },
+        {
+          "path": "/cbd-dome.js",
+          "decoded": 6610,
+          "encoded": 6610
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/cbd-boundary.js",
+          "decoded": 594,
+          "encoded": 594
+        },
+        {
+          "path": "/district.js",
+          "decoded": 22484,
+          "encoded": 22484
+        },
+        {
+          "path": "/vehicle-environment.js",
+          "decoded": 1363,
+          "encoded": 1363
+        },
+        {
+          "path": "/map-scene-camera.js",
+          "decoded": 1415,
+          "encoded": 1415
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/building-context.js",
+          "decoded": 3105,
+          "encoded": 3105
+        },
+        {
+          "path": "/landmarks.js",
+          "decoded": 6917,
+          "encoded": 6917
+        },
+        {
+          "path": "/landmark-data.json",
+          "decoded": 43804,
+          "encoded": 43804
+        },
+        {
+          "path": "/flight-physics.js",
+          "decoded": 3292,
+          "encoded": 3292
+        },
+        {
+          "path": "/helicopter.js",
+          "decoded": 5099,
+          "encoded": 5099
+        },
+        {
+          "path": "/tilt-controls.js",
+          "decoded": 3471,
+          "encoded": 3471
+        },
+        {
+          "path": "/gamepad-controls.js",
+          "decoded": 2787,
+          "encoded": 2787
+        },
+        {
+          "path": "/vehicle-boost.js",
+          "decoded": 943,
+          "encoded": 943
+        },
+        {
+          "path": "/boost-meter.js",
+          "decoded": 1750,
+          "encoded": 1750
+        },
+        {
+          "path": "/auto-mode.js",
+          "decoded": 18109,
+          "encoded": 18109
+        },
+        {
+          "path": "/blender-vehicle.js",
+          "decoded": 4321,
+          "encoded": 4321
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/vehicle-tuning.js",
+          "decoded": 2251,
+          "encoded": 2251
+        },
+        {
+          "path": "/vehicle-contact-shadow.js",
+          "decoded": 1742,
+          "encoded": 1742
+        },
+        {
+          "path": "/driving-data.js",
+          "decoded": 1350,
+          "encoded": 1350
+        },
+        {
+          "path": "/npc-traffic.js",
+          "decoded": 6599,
+          "encoded": 6599
+        },
+        {
+          "path": "/supercar-model.js",
+          "decoded": 3446,
+          "encoded": 3446
+        },
+        {
+          "path": "/traffic-simulation.js",
+          "decoded": 15744,
+          "encoded": 15744
+        },
+        {
+          "path": "/vehicle-models.js",
+          "decoded": 5982,
+          "encoded": 5982
+        },
+        {
+          "path": "/street-detail.js",
+          "decoded": 4667,
+          "encoded": 4667
+        },
+        {
+          "path": "/auto-roads.js",
+          "decoded": 5790,
+          "encoded": 5790
+        },
+        {
+          "path": "/auto-physics.js",
+          "decoded": 3423,
+          "encoded": 3423
+        },
+        {
+          "path": "/auto-roam-physics.js",
+          "decoded": 4106,
+          "encoded": 4106
+        },
+        {
+          "path": "/auto-world.js",
+          "decoded": 2266,
+          "encoded": 2266
+        },
+        {
+          "path": "/cycle-model.js",
+          "decoded": 5471,
+          "encoded": 5471
+        },
+        {
+          "path": "/vidhana-streets.js",
+          "decoded": 2111,
+          "encoded": 2111
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/vidhana-street-data.json",
+          "decoded": 2293554,
+          "encoded": 2293554
+        },
+        {
+          "path": "/auto-model.js",
+          "decoded": 8777,
+          "encoded": 8777
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/vidhana-road-network.json",
+          "decoded": 229346,
+          "encoded": 229346
+        },
+        {
+          "path": "/assets/vehicles/cybertruck.glb",
+          "decoded": 429708,
+          "encoded": 429708
+        },
+        {
+          "path": "/assets/vehicles/cybercab-rigged.glb",
+          "decoded": 4437428,
+          "encoded": 4437428
+        },
+        {
+          "path": "/assets/vehicles/kitt.glb",
+          "decoded": 473028,
+          "encoded": 473028
+        },
+        {
+          "path": "/street-patch.js",
+          "decoded": 4664,
+          "encoded": 4664
+        },
+        {
+          "path": "/auto-asset.js",
+          "decoded": 3103,
+          "encoded": 3103
+        },
+        {
+          "path": "/street-surface-materials.js",
+          "decoded": 3087,
+          "encoded": 3087
+        },
+        {
+          "path": "/assets/streets/vidhana-streets.glb",
+          "decoded": 182248,
+          "encoded": 182248
+        },
+        {
+          "path": "/assets/streets/vidhana-streets.json",
+          "decoded": 762,
+          "encoded": 762
+        },
+        {
+          "path": "/assets/auto/auto-rickshaw.glb",
+          "decoded": 1463888,
+          "encoded": 1463888
+        },
+        {
+          "path": "/street-furniture.js",
+          "decoded": 6698,
+          "encoded": 6698
+        },
+        {
+          "path": "/assets/streets/furniture.json",
+          "decoded": 13882,
+          "encoded": 13882
+        },
+        {
+          "path": "/multiplayer-render.js",
+          "decoded": 11538,
+          "encoded": 11538
+        },
+        {
+          "path": "/assets/streets/furniture.json",
+          "decoded": 13882,
+          "encoded": 13882
+        },
+        {
+          "path": "/assets/vehicles/cybercab-meshy-traffic.glb",
+          "decoded": 3864428,
+          "encoded": 3864428
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        }
+      ],
+      "version": "v0.0.31",
+      "encodedNetworkBytes": 20727716,
+      "sourceBytes": 29401,
+      "sourceSha256": "279c0abf19a04527418ed375954e54326752a62dbf6549601a33bd8179e2dbe1",
+      "errors": []
+    },
+    {
+      "index": 1,
+      "mode": "candidate",
+      "meanMs": 248.33333333333334,
+      "medianMs": 250,
+      "p95Ms": 283.2000000000007,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "camera": {
+        "center": [
+          77.59064999999998,
+          12.97972999999999
+        ],
+        "zoom": 18.591098406597563,
+        "pitch": 84.52107412193836,
+        "bearing": -45.01013112444139
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "resources": [
+        {
+          "path": "/styles.css",
+          "decoded": 4915,
+          "encoded": 4915
+        },
+        {
+          "path": "/flight.css",
+          "decoded": 3176,
+          "encoded": 3176
+        },
+        {
+          "path": "/auto.css",
+          "decoded": 1407,
+          "encoded": 1407
+        },
+        {
+          "path": "/cockpit.css",
+          "decoded": 2293,
+          "encoded": 2293
+        },
+        {
+          "path": "/mobile-controls.css",
+          "decoded": 1865,
+          "encoded": 1865
+        },
+        {
+          "path": "/app.js",
+          "decoded": 8451,
+          "encoded": 8451
+        },
+        {
+          "path": "/flight.js",
+          "decoded": 23720,
+          "encoded": 23720
+        },
+        {
+          "path": "/vehicle-shell.css",
+          "decoded": 5158,
+          "encoded": 5158
+        },
+        {
+          "path": "/vehicle-shell.js",
+          "decoded": 4975,
+          "encoded": 4975
+        },
+        {
+          "path": "/focus-pointer.css",
+          "decoded": 1489,
+          "encoded": 1489
+        },
+        {
+          "path": "/focus-pointer.js",
+          "decoded": 1640,
+          "encoded": 1640
+        },
+        {
+          "path": "/mobile-dashboard.css",
+          "decoded": 6525,
+          "encoded": 6525
+        },
+        {
+          "path": "/mobile-dashboard.js",
+          "decoded": 1306,
+          "encoded": 1306
+        },
+        {
+          "path": "/local-cache.js",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/performance-panel.css",
+          "decoded": 1388,
+          "encoded": 1388
+        },
+        {
+          "path": "/performance-panel.js",
+          "decoded": 2952,
+          "encoded": 2952
+        },
+        {
+          "path": "/controller-monitor.css",
+          "decoded": 1423,
+          "encoded": 1423
+        },
+        {
+          "path": "/controller-monitor.js",
+          "decoded": 2592,
+          "encoded": 2592
+        },
+        {
+          "path": "/resume-overlay.css",
+          "decoded": 795,
+          "encoded": 795
+        },
+        {
+          "path": "/resume-overlay.js",
+          "decoded": 1421,
+          "encoded": 1421
+        },
+        {
+          "path": "/city-loading.css",
+          "decoded": 1623,
+          "encoded": 1623
+        },
+        {
+          "path": "/city-loading.js",
+          "decoded": 2128,
+          "encoded": 2128
+        },
+        {
+          "path": "/multiplayer-client.css",
+          "decoded": 8468,
+          "encoded": 8468
+        },
+        {
+          "path": "/multiplayer-client.js",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/mobile-menu.css",
+          "decoded": 7611,
+          "encoded": 7611
+        },
+        {
+          "path": "/mobile-menu.js",
+          "decoded": 5174,
+          "encoded": 5174
+        },
+        {
+          "path": "/mobile-drive.css",
+          "decoded": 2979,
+          "encoded": 2979
+        },
+        {
+          "path": "/mobile-drive.js",
+          "decoded": 6144,
+          "encoded": 6144
+        },
+        {
+          "path": "/player-stats-ui.js",
+          "decoded": 1661,
+          "encoded": 1661
+        },
+        {
+          "path": "/voice-chat.css",
+          "decoded": 1318,
+          "encoded": 1318
+        },
+        {
+          "path": "/voice-chat.js",
+          "decoded": 5318,
+          "encoded": 5318
+        },
+        {
+          "path": "/social-controls.css",
+          "decoded": 3620,
+          "encoded": 3620
+        },
+        {
+          "path": "/social-entry.js",
+          "decoded": 86,
+          "encoded": 86
+        },
+        {
+          "path": "/player-stats.js",
+          "decoded": 11634,
+          "encoded": 11634
+        },
+        {
+          "path": "/player-cloud.js",
+          "decoded": 733,
+          "encoded": 733
+        },
+        {
+          "path": "/social-controls.js",
+          "decoded": 3438,
+          "encoded": 3438
+        },
+        {
+          "path": "/vehicle-colors.js",
+          "decoded": 1539,
+          "encoded": 1539
+        },
+        {
+          "path": "/release.json",
+          "decoded": 140,
+          "encoded": 140
+        },
+        {
+          "path": "/assets/vehicles/previews/cycle.webp",
+          "decoded": 15306,
+          "encoded": 15306
+        },
+        {
+          "path": "/assets/vehicles/previews/helicopter.webp",
+          "decoded": 11776,
+          "encoded": 11776
+        },
+        {
+          "path": "/assets/vehicles/previews/auto.webp",
+          "decoded": 19266,
+          "encoded": 19266
+        },
+        {
+          "path": "/assets/vehicles/previews/cybertruck.webp",
+          "decoded": 14690,
+          "encoded": 14690
+        },
+        {
+          "path": "/assets/vehicles/previews/cybercab.webp",
+          "decoded": 21588,
+          "encoded": 21588
+        },
+        {
+          "path": "/assets/vehicles/previews/kitt.webp",
+          "decoded": 16982,
+          "encoded": 16982
+        },
+        {
+          "path": "/supabase-config.json",
+          "decoded": 126,
+          "encoded": 126
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/cbd-dome.js",
+          "decoded": 6610,
+          "encoded": 6610
+        },
+        {
+          "path": "/cbd-boundary.js",
+          "decoded": 594,
+          "encoded": 594
+        },
+        {
+          "path": "/district.js",
+          "decoded": 22927,
+          "encoded": 22927
+        },
+        {
+          "path": "/vehicle-environment.js",
+          "decoded": 1363,
+          "encoded": 1363
+        },
+        {
+          "path": "/map-scene-camera.js",
+          "decoded": 1415,
+          "encoded": 1415
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/building-context.js",
+          "decoded": 3105,
+          "encoded": 3105
+        },
+        {
+          "path": "/landmarks.js",
+          "decoded": 7266,
+          "encoded": 7266
+        },
+        {
+          "path": "/landmark-data.json",
+          "decoded": 43804,
+          "encoded": 43804
+        },
+        {
+          "path": "/blender-vehicle.js",
+          "decoded": 4321,
+          "encoded": 4321
+        },
+        {
+          "path": "/flight-physics.js",
+          "decoded": 3292,
+          "encoded": 3292
+        },
+        {
+          "path": "/helicopter.js",
+          "decoded": 5099,
+          "encoded": 5099
+        },
+        {
+          "path": "/tilt-controls.js",
+          "decoded": 3471,
+          "encoded": 3471
+        },
+        {
+          "path": "/gamepad-controls.js",
+          "decoded": 2787,
+          "encoded": 2787
+        },
+        {
+          "path": "/vehicle-boost.js",
+          "decoded": 943,
+          "encoded": 943
+        },
+        {
+          "path": "/boost-meter.js",
+          "decoded": 1750,
+          "encoded": 1750
+        },
+        {
+          "path": "/auto-mode.js",
+          "decoded": 18109,
+          "encoded": 18109
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/vehicle-tuning.js",
+          "decoded": 2251,
+          "encoded": 2251
+        },
+        {
+          "path": "/vehicle-contact-shadow.js",
+          "decoded": 1742,
+          "encoded": 1742
+        },
+        {
+          "path": "/driving-data.js",
+          "decoded": 1350,
+          "encoded": 1350
+        },
+        {
+          "path": "/npc-traffic.js",
+          "decoded": 6599,
+          "encoded": 6599
+        },
+        {
+          "path": "/traffic-simulation.js",
+          "decoded": 15744,
+          "encoded": 15744
+        },
+        {
+          "path": "/supercar-model.js",
+          "decoded": 3446,
+          "encoded": 3446
+        },
+        {
+          "path": "/vehicle-models.js",
+          "decoded": 5982,
+          "encoded": 5982
+        },
+        {
+          "path": "/street-detail.js",
+          "decoded": 4667,
+          "encoded": 4667
+        },
+        {
+          "path": "/auto-roads.js",
+          "decoded": 5790,
+          "encoded": 5790
+        },
+        {
+          "path": "/auto-physics.js",
+          "decoded": 3423,
+          "encoded": 3423
+        },
+        {
+          "path": "/auto-roam-physics.js",
+          "decoded": 4106,
+          "encoded": 4106
+        },
+        {
+          "path": "/auto-world.js",
+          "decoded": 2266,
+          "encoded": 2266
+        },
+        {
+          "path": "/cycle-model.js",
+          "decoded": 5471,
+          "encoded": 5471
+        },
+        {
+          "path": "/vidhana-streets.js",
+          "decoded": 2111,
+          "encoded": 2111
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/vidhana-street-data.json",
+          "decoded": 2293554,
+          "encoded": 2293554
+        },
+        {
+          "path": "/assets/vehicles/cybertruck.glb",
+          "decoded": 429708,
+          "encoded": 429708
+        },
+        {
+          "path": "/assets/vehicles/cybercab-rigged.glb",
+          "decoded": 4437428,
+          "encoded": 4437428
+        },
+        {
+          "path": "/assets/vehicles/kitt.glb",
+          "decoded": 473028,
+          "encoded": 473028
+        },
+        {
+          "path": "/auto-model.js",
+          "decoded": 8777,
+          "encoded": 8777
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/vidhana-road-network.json",
+          "decoded": 229346,
+          "encoded": 229346
+        },
+        {
+          "path": "/auto-asset.js",
+          "decoded": 3103,
+          "encoded": 3103
+        },
+        {
+          "path": "/street-patch.js",
+          "decoded": 4664,
+          "encoded": 4664
+        },
+        {
+          "path": "/assets/auto/auto-rickshaw.glb",
+          "decoded": 1463888,
+          "encoded": 1463888
+        },
+        {
+          "path": "/street-surface-materials.js",
+          "decoded": 3087,
+          "encoded": 3087
+        },
+        {
+          "path": "/assets/streets/vidhana-streets.glb",
+          "decoded": 182248,
+          "encoded": 182248
+        },
+        {
+          "path": "/assets/streets/vidhana-streets.json",
+          "decoded": 762,
+          "encoded": 762
+        },
+        {
+          "path": "/street-furniture.js",
+          "decoded": 6698,
+          "encoded": 6698
+        },
+        {
+          "path": "/assets/streets/furniture.json",
+          "decoded": 13882,
+          "encoded": 13882
+        },
+        {
+          "path": "/multiplayer-render.js",
+          "decoded": 11538,
+          "encoded": 11538
+        },
+        {
+          "path": "/assets/streets/furniture.json",
+          "decoded": 13882,
+          "encoded": 13882
+        },
+        {
+          "path": "/assets/vehicles/cybercab-meshy-traffic.glb",
+          "decoded": 3864428,
+          "encoded": 3864428
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        }
+      ],
+      "version": "v0.0.31",
+      "encodedNetworkBytes": 20728480,
+      "sourceBytes": 30193,
+      "sourceSha256": "f4c52aaf50a4c383f6fbc9dd4587fc2f2958765659365d68f3cc54d84136b44e",
+      "errors": []
+    },
+    {
+      "index": 2,
+      "mode": "candidate",
+      "meanMs": 249.16666666666666,
+      "medianMs": 250,
+      "p95Ms": 266.7000000000007,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "camera": {
+        "center": [
+          77.59064999999998,
+          12.97972999999999
+        ],
+        "zoom": 18.591098406597563,
+        "pitch": 84.52107412193836,
+        "bearing": -45.01013112444139
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "resources": [
+        {
+          "path": "/styles.css",
+          "decoded": 4915,
+          "encoded": 4915
+        },
+        {
+          "path": "/flight.css",
+          "decoded": 3176,
+          "encoded": 3176
+        },
+        {
+          "path": "/auto.css",
+          "decoded": 1407,
+          "encoded": 1407
+        },
+        {
+          "path": "/cockpit.css",
+          "decoded": 2293,
+          "encoded": 2293
+        },
+        {
+          "path": "/mobile-controls.css",
+          "decoded": 1865,
+          "encoded": 1865
+        },
+        {
+          "path": "/app.js",
+          "decoded": 8451,
+          "encoded": 8451
+        },
+        {
+          "path": "/vehicle-shell.css",
+          "decoded": 5158,
+          "encoded": 5158
+        },
+        {
+          "path": "/flight.js",
+          "decoded": 23720,
+          "encoded": 23720
+        },
+        {
+          "path": "/vehicle-shell.js",
+          "decoded": 4975,
+          "encoded": 4975
+        },
+        {
+          "path": "/focus-pointer.css",
+          "decoded": 1489,
+          "encoded": 1489
+        },
+        {
+          "path": "/focus-pointer.js",
+          "decoded": 1640,
+          "encoded": 1640
+        },
+        {
+          "path": "/mobile-dashboard.css",
+          "decoded": 6525,
+          "encoded": 6525
+        },
+        {
+          "path": "/mobile-dashboard.js",
+          "decoded": 1306,
+          "encoded": 1306
+        },
+        {
+          "path": "/local-cache.js",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/performance-panel.css",
+          "decoded": 1388,
+          "encoded": 1388
+        },
+        {
+          "path": "/performance-panel.js",
+          "decoded": 2952,
+          "encoded": 2952
+        },
+        {
+          "path": "/controller-monitor.css",
+          "decoded": 1423,
+          "encoded": 1423
+        },
+        {
+          "path": "/controller-monitor.js",
+          "decoded": 2592,
+          "encoded": 2592
+        },
+        {
+          "path": "/resume-overlay.css",
+          "decoded": 795,
+          "encoded": 795
+        },
+        {
+          "path": "/resume-overlay.js",
+          "decoded": 1421,
+          "encoded": 1421
+        },
+        {
+          "path": "/city-loading.css",
+          "decoded": 1623,
+          "encoded": 1623
+        },
+        {
+          "path": "/city-loading.js",
+          "decoded": 2128,
+          "encoded": 2128
+        },
+        {
+          "path": "/multiplayer-client.css",
+          "decoded": 8468,
+          "encoded": 8468
+        },
+        {
+          "path": "/multiplayer-client.js",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/mobile-menu.css",
+          "decoded": 7611,
+          "encoded": 7611
+        },
+        {
+          "path": "/mobile-menu.js",
+          "decoded": 5174,
+          "encoded": 5174
+        },
+        {
+          "path": "/mobile-drive.css",
+          "decoded": 2979,
+          "encoded": 2979
+        },
+        {
+          "path": "/mobile-drive.js",
+          "decoded": 6144,
+          "encoded": 6144
+        },
+        {
+          "path": "/player-stats-ui.js",
+          "decoded": 1661,
+          "encoded": 1661
+        },
+        {
+          "path": "/voice-chat.css",
+          "decoded": 1318,
+          "encoded": 1318
+        },
+        {
+          "path": "/voice-chat.js",
+          "decoded": 5318,
+          "encoded": 5318
+        },
+        {
+          "path": "/social-controls.css",
+          "decoded": 3620,
+          "encoded": 3620
+        },
+        {
+          "path": "/social-entry.js",
+          "decoded": 86,
+          "encoded": 86
+        },
+        {
+          "path": "/player-cloud.js",
+          "decoded": 733,
+          "encoded": 733
+        },
+        {
+          "path": "/player-stats.js",
+          "decoded": 11634,
+          "encoded": 11634
+        },
+        {
+          "path": "/social-controls.js",
+          "decoded": 3438,
+          "encoded": 3438
+        },
+        {
+          "path": "/vehicle-colors.js",
+          "decoded": 1539,
+          "encoded": 1539
+        },
+        {
+          "path": "/release.json",
+          "decoded": 140,
+          "encoded": 140
+        },
+        {
+          "path": "/assets/vehicles/previews/cycle.webp",
+          "decoded": 15306,
+          "encoded": 15306
+        },
+        {
+          "path": "/assets/vehicles/previews/helicopter.webp",
+          "decoded": 11776,
+          "encoded": 11776
+        },
+        {
+          "path": "/assets/vehicles/previews/auto.webp",
+          "decoded": 19266,
+          "encoded": 19266
+        },
+        {
+          "path": "/assets/vehicles/previews/cybertruck.webp",
+          "decoded": 14690,
+          "encoded": 14690
+        },
+        {
+          "path": "/assets/vehicles/previews/cybercab.webp",
+          "decoded": 21588,
+          "encoded": 21588
+        },
+        {
+          "path": "/assets/vehicles/previews/kitt.webp",
+          "decoded": 16982,
+          "encoded": 16982
+        },
+        {
+          "path": "/supabase-config.json",
+          "decoded": 126,
+          "encoded": 126
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/cbd-dome.js",
+          "decoded": 6610,
+          "encoded": 6610
+        },
+        {
+          "path": "/cbd-boundary.js",
+          "decoded": 594,
+          "encoded": 594
+        },
+        {
+          "path": "/district.js",
+          "decoded": 22927,
+          "encoded": 22927
+        },
+        {
+          "path": "/vehicle-environment.js",
+          "decoded": 1363,
+          "encoded": 1363
+        },
+        {
+          "path": "/map-scene-camera.js",
+          "decoded": 1415,
+          "encoded": 1415
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/building-context.js",
+          "decoded": 3105,
+          "encoded": 3105
+        },
+        {
+          "path": "/landmarks.js",
+          "decoded": 7266,
+          "encoded": 7266
+        },
+        {
+          "path": "/landmark-data.json",
+          "decoded": 43804,
+          "encoded": 43804
+        },
+        {
+          "path": "/blender-vehicle.js",
+          "decoded": 4321,
+          "encoded": 4321
+        },
+        {
+          "path": "/flight-physics.js",
+          "decoded": 3292,
+          "encoded": 3292
+        },
+        {
+          "path": "/helicopter.js",
+          "decoded": 5099,
+          "encoded": 5099
+        },
+        {
+          "path": "/tilt-controls.js",
+          "decoded": 3471,
+          "encoded": 3471
+        },
+        {
+          "path": "/gamepad-controls.js",
+          "decoded": 2787,
+          "encoded": 2787
+        },
+        {
+          "path": "/vehicle-boost.js",
+          "decoded": 943,
+          "encoded": 943
+        },
+        {
+          "path": "/boost-meter.js",
+          "decoded": 1750,
+          "encoded": 1750
+        },
+        {
+          "path": "/auto-mode.js",
+          "decoded": 18109,
+          "encoded": 18109
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/vehicle-tuning.js",
+          "decoded": 2251,
+          "encoded": 2251
+        },
+        {
+          "path": "/vehicle-contact-shadow.js",
+          "decoded": 1742,
+          "encoded": 1742
+        },
+        {
+          "path": "/driving-data.js",
+          "decoded": 1350,
+          "encoded": 1350
+        },
+        {
+          "path": "/npc-traffic.js",
+          "decoded": 6599,
+          "encoded": 6599
+        },
+        {
+          "path": "/traffic-simulation.js",
+          "decoded": 15744,
+          "encoded": 15744
+        },
+        {
+          "path": "/supercar-model.js",
+          "decoded": 3446,
+          "encoded": 3446
+        },
+        {
+          "path": "/street-detail.js",
+          "decoded": 4667,
+          "encoded": 4667
+        },
+        {
+          "path": "/vehicle-models.js",
+          "decoded": 5982,
+          "encoded": 5982
+        },
+        {
+          "path": "/auto-roads.js",
+          "decoded": 5790,
+          "encoded": 5790
+        },
+        {
+          "path": "/auto-physics.js",
+          "decoded": 3423,
+          "encoded": 3423
+        },
+        {
+          "path": "/auto-roam-physics.js",
+          "decoded": 4106,
+          "encoded": 4106
+        },
+        {
+          "path": "/auto-world.js",
+          "decoded": 2266,
+          "encoded": 2266
+        },
+        {
+          "path": "/cycle-model.js",
+          "decoded": 5471,
+          "encoded": 5471
+        },
+        {
+          "path": "/vidhana-streets.js",
+          "decoded": 2111,
+          "encoded": 2111
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/auto-model.js",
+          "decoded": 8777,
+          "encoded": 8777
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/vidhana-road-network.json",
+          "decoded": 229346,
+          "encoded": 229346
+        },
+        {
+          "path": "/assets/vehicles/cybertruck.glb",
+          "decoded": 429708,
+          "encoded": 429708
+        },
+        {
+          "path": "/assets/vehicles/cybercab-rigged.glb",
+          "decoded": 4437428,
+          "encoded": 4437428
+        },
+        {
+          "path": "/assets/vehicles/kitt.glb",
+          "decoded": 473028,
+          "encoded": 473028
+        },
+        {
+          "path": "/vidhana-street-data.json",
+          "decoded": 2293554,
+          "encoded": 2293554
+        },
+        {
+          "path": "/auto-asset.js",
+          "decoded": 3103,
+          "encoded": 3103
+        },
+        {
+          "path": "/assets/auto/auto-rickshaw.glb",
+          "decoded": 1463888,
+          "encoded": 1463888
+        },
+        {
+          "path": "/street-patch.js",
+          "decoded": 4664,
+          "encoded": 4664
+        },
+        {
+          "path": "/street-surface-materials.js",
+          "decoded": 3087,
+          "encoded": 3087
+        },
+        {
+          "path": "/assets/streets/vidhana-streets.glb",
+          "decoded": 182248,
+          "encoded": 182248
+        },
+        {
+          "path": "/assets/streets/vidhana-streets.json",
+          "decoded": 762,
+          "encoded": 762
+        },
+        {
+          "path": "/street-furniture.js",
+          "decoded": 6698,
+          "encoded": 6698
+        },
+        {
+          "path": "/assets/streets/furniture.json",
+          "decoded": 13882,
+          "encoded": 13882
+        },
+        {
+          "path": "/multiplayer-render.js",
+          "decoded": 11538,
+          "encoded": 11538
+        },
+        {
+          "path": "/assets/streets/furniture.json",
+          "decoded": 13882,
+          "encoded": 13882
+        },
+        {
+          "path": "/assets/vehicles/cybercab-meshy-traffic.glb",
+          "decoded": 3864428,
+          "encoded": 3864428
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        }
+      ],
+      "version": "v0.0.31",
+      "encodedNetworkBytes": 20728324,
+      "sourceBytes": 30193,
+      "sourceSha256": "f4c52aaf50a4c383f6fbc9dd4587fc2f2958765659365d68f3cc54d84136b44e",
+      "errors": []
+    },
+    {
+      "index": 3,
+      "mode": "baseline",
+      "meanMs": 238.33333333333334,
+      "medianMs": 233.40000000000146,
+      "p95Ms": 250.09999999999854,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 8992,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 120000,
+          "textures": 4
+        }
+      },
+      "customCalls": 45,
+      "customTriangles": 419822,
+      "camera": {
+        "center": [
+          77.59064999999998,
+          12.97972999999999
+        ],
+        "zoom": 18.591098406597563,
+        "pitch": 84.52107412193836,
+        "bearing": -45.01013112444139
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "resources": [
+        {
+          "path": "/styles.css",
+          "decoded": 4915,
+          "encoded": 4915
+        },
+        {
+          "path": "/flight.css",
+          "decoded": 3176,
+          "encoded": 3176
+        },
+        {
+          "path": "/auto.css",
+          "decoded": 1407,
+          "encoded": 1407
+        },
+        {
+          "path": "/cockpit.css",
+          "decoded": 2293,
+          "encoded": 2293
+        },
+        {
+          "path": "/mobile-controls.css",
+          "decoded": 1865,
+          "encoded": 1865
+        },
+        {
+          "path": "/app.js",
+          "decoded": 8451,
+          "encoded": 8451
+        },
+        {
+          "path": "/vehicle-shell.css",
+          "decoded": 5158,
+          "encoded": 5158
+        },
+        {
+          "path": "/flight.js",
+          "decoded": 23720,
+          "encoded": 23720
+        },
+        {
+          "path": "/vehicle-shell.js",
+          "decoded": 4975,
+          "encoded": 4975
+        },
+        {
+          "path": "/focus-pointer.css",
+          "decoded": 1489,
+          "encoded": 1489
+        },
+        {
+          "path": "/focus-pointer.js",
+          "decoded": 1640,
+          "encoded": 1640
+        },
+        {
+          "path": "/mobile-dashboard.css",
+          "decoded": 6525,
+          "encoded": 6525
+        },
+        {
+          "path": "/mobile-dashboard.js",
+          "decoded": 1306,
+          "encoded": 1306
+        },
+        {
+          "path": "/local-cache.js",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/performance-panel.css",
+          "decoded": 1388,
+          "encoded": 1388
+        },
+        {
+          "path": "/performance-panel.js",
+          "decoded": 2952,
+          "encoded": 2952
+        },
+        {
+          "path": "/controller-monitor.css",
+          "decoded": 1423,
+          "encoded": 1423
+        },
+        {
+          "path": "/controller-monitor.js",
+          "decoded": 2592,
+          "encoded": 2592
+        },
+        {
+          "path": "/resume-overlay.css",
+          "decoded": 795,
+          "encoded": 795
+        },
+        {
+          "path": "/resume-overlay.js",
+          "decoded": 1421,
+          "encoded": 1421
+        },
+        {
+          "path": "/city-loading.css",
+          "decoded": 1623,
+          "encoded": 1623
+        },
+        {
+          "path": "/city-loading.js",
+          "decoded": 2128,
+          "encoded": 2128
+        },
+        {
+          "path": "/multiplayer-client.css",
+          "decoded": 8468,
+          "encoded": 8468
+        },
+        {
+          "path": "/multiplayer-client.js",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/mobile-menu.css",
+          "decoded": 7611,
+          "encoded": 7611
+        },
+        {
+          "path": "/mobile-menu.js",
+          "decoded": 5174,
+          "encoded": 5174
+        },
+        {
+          "path": "/mobile-drive.css",
+          "decoded": 2979,
+          "encoded": 2979
+        },
+        {
+          "path": "/mobile-drive.js",
+          "decoded": 6144,
+          "encoded": 6144
+        },
+        {
+          "path": "/voice-chat.css",
+          "decoded": 1318,
+          "encoded": 1318
+        },
+        {
+          "path": "/player-stats-ui.js",
+          "decoded": 1661,
+          "encoded": 1661
+        },
+        {
+          "path": "/voice-chat.js",
+          "decoded": 5318,
+          "encoded": 5318
+        },
+        {
+          "path": "/social-controls.css",
+          "decoded": 3620,
+          "encoded": 3620
+        },
+        {
+          "path": "/social-entry.js",
+          "decoded": 86,
+          "encoded": 86
+        },
+        {
+          "path": "/player-stats.js",
+          "decoded": 11634,
+          "encoded": 11634
+        },
+        {
+          "path": "/player-cloud.js",
+          "decoded": 733,
+          "encoded": 733
+        },
+        {
+          "path": "/social-controls.js",
+          "decoded": 3438,
+          "encoded": 3438
+        },
+        {
+          "path": "/vehicle-colors.js",
+          "decoded": 1539,
+          "encoded": 1539
+        },
+        {
+          "path": "/release.json",
+          "decoded": 140,
+          "encoded": 140
+        },
+        {
+          "path": "/assets/vehicles/previews/cycle.webp",
+          "decoded": 15306,
+          "encoded": 15306
+        },
+        {
+          "path": "/assets/vehicles/previews/helicopter.webp",
+          "decoded": 11776,
+          "encoded": 11776
+        },
+        {
+          "path": "/assets/vehicles/previews/auto.webp",
+          "decoded": 19266,
+          "encoded": 19266
+        },
+        {
+          "path": "/assets/vehicles/previews/cybertruck.webp",
+          "decoded": 14690,
+          "encoded": 14690
+        },
+        {
+          "path": "/assets/vehicles/previews/cybercab.webp",
+          "decoded": 21588,
+          "encoded": 21588
+        },
+        {
+          "path": "/assets/vehicles/previews/kitt.webp",
+          "decoded": 16982,
+          "encoded": 16982
+        },
+        {
+          "path": "/supabase-config.json",
+          "decoded": 126,
+          "encoded": 126
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/cbd-dome.js",
+          "decoded": 6610,
+          "encoded": 6610
+        },
+        {
+          "path": "/cbd-boundary.js",
+          "decoded": 594,
+          "encoded": 594
+        },
+        {
+          "path": "/district.js",
+          "decoded": 22484,
+          "encoded": 22484
+        },
+        {
+          "path": "/vehicle-environment.js",
+          "decoded": 1363,
+          "encoded": 1363
+        },
+        {
+          "path": "/map-scene-camera.js",
+          "decoded": 1415,
+          "encoded": 1415
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/building-context.js",
+          "decoded": 3105,
+          "encoded": 3105
+        },
+        {
+          "path": "/landmarks.js",
+          "decoded": 6917,
+          "encoded": 6917
+        },
+        {
+          "path": "/landmark-data.json",
+          "decoded": 43804,
+          "encoded": 43804
+        },
+        {
+          "path": "/flight-physics.js",
+          "decoded": 3292,
+          "encoded": 3292
+        },
+        {
+          "path": "/helicopter.js",
+          "decoded": 5099,
+          "encoded": 5099
+        },
+        {
+          "path": "/tilt-controls.js",
+          "decoded": 3471,
+          "encoded": 3471
+        },
+        {
+          "path": "/gamepad-controls.js",
+          "decoded": 2787,
+          "encoded": 2787
+        },
+        {
+          "path": "/vehicle-boost.js",
+          "decoded": 943,
+          "encoded": 943
+        },
+        {
+          "path": "/boost-meter.js",
+          "decoded": 1750,
+          "encoded": 1750
+        },
+        {
+          "path": "/auto-mode.js",
+          "decoded": 18109,
+          "encoded": 18109
+        },
+        {
+          "path": "/blender-vehicle.js",
+          "decoded": 4321,
+          "encoded": 4321
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/vehicle-tuning.js",
+          "decoded": 2251,
+          "encoded": 2251
+        },
+        {
+          "path": "/driving-data.js",
+          "decoded": 1350,
+          "encoded": 1350
+        },
+        {
+          "path": "/vehicle-contact-shadow.js",
+          "decoded": 1742,
+          "encoded": 1742
+        },
+        {
+          "path": "/npc-traffic.js",
+          "decoded": 6599,
+          "encoded": 6599
+        },
+        {
+          "path": "/traffic-simulation.js",
+          "decoded": 15744,
+          "encoded": 15744
+        },
+        {
+          "path": "/supercar-model.js",
+          "decoded": 3446,
+          "encoded": 3446
+        },
+        {
+          "path": "/vehicle-models.js",
+          "decoded": 5982,
+          "encoded": 5982
+        },
+        {
+          "path": "/street-detail.js",
+          "decoded": 4667,
+          "encoded": 4667
+        },
+        {
+          "path": "/auto-roads.js",
+          "decoded": 5790,
+          "encoded": 5790
+        },
+        {
+          "path": "/auto-physics.js",
+          "decoded": 3423,
+          "encoded": 3423
+        },
+        {
+          "path": "/auto-roam-physics.js",
+          "decoded": 4106,
+          "encoded": 4106
+        },
+        {
+          "path": "/auto-world.js",
+          "decoded": 2266,
+          "encoded": 2266
+        },
+        {
+          "path": "/vidhana-streets.js",
+          "decoded": 2111,
+          "encoded": 2111
+        },
+        {
+          "path": "/cycle-model.js",
+          "decoded": 5471,
+          "encoded": 5471
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        },
+        {
+          "path": "/vidhana-street-data.json",
+          "decoded": 2293554,
+          "encoded": 2293554
+        },
+        {
+          "path": "/auto-model.js",
+          "decoded": 8777,
+          "encoded": 8777
+        },
+        {
+          "path": "/district-data.json",
+          "decoded": 2018576,
+          "encoded": 2018576
+        },
+        {
+          "path": "/vidhana-road-network.json",
+          "decoded": 229346,
+          "encoded": 229346
+        },
+        {
+          "path": "/assets/vehicles/cybertruck.glb",
+          "decoded": 429708,
+          "encoded": 429708
+        },
+        {
+          "path": "/assets/vehicles/cybercab-rigged.glb",
+          "decoded": 4437428,
+          "encoded": 4437428
+        },
+        {
+          "path": "/assets/vehicles/kitt.glb",
+          "decoded": 473028,
+          "encoded": 473028
+        },
+        {
+          "path": "/auto-asset.js",
+          "decoded": 3103,
+          "encoded": 3103
+        },
+        {
+          "path": "/street-patch.js",
+          "decoded": 4664,
+          "encoded": 4664
+        },
+        {
+          "path": "/street-surface-materials.js",
+          "decoded": 3087,
+          "encoded": 3087
+        },
+        {
+          "path": "/assets/auto/auto-rickshaw.glb",
+          "decoded": 1463888,
+          "encoded": 1463888
+        },
+        {
+          "path": "/assets/streets/vidhana-streets.glb",
+          "decoded": 182248,
+          "encoded": 182248
+        },
+        {
+          "path": "/assets/streets/vidhana-streets.json",
+          "decoded": 762,
+          "encoded": 762
+        },
+        {
+          "path": "/street-furniture.js",
+          "decoded": 6698,
+          "encoded": 6698
+        },
+        {
+          "path": "/assets/streets/furniture.json",
+          "decoded": 13882,
+          "encoded": 13882
+        },
+        {
+          "path": "/multiplayer-render.js",
+          "decoded": 11538,
+          "encoded": 11538
+        },
+        {
+          "path": "/assets/streets/furniture.json",
+          "decoded": 13882,
+          "encoded": 13882
+        },
+        {
+          "path": "/assets/vehicles/cybercab-meshy-traffic.glb",
+          "decoded": 3864428,
+          "encoded": 3864428
+        },
+        {
+          "path": "/favicon.ico",
+          "decoded": 0,
+          "encoded": 0
+        }
+      ],
+      "version": "v0.0.31",
+      "encodedNetworkBytes": 20725987,
+      "sourceBytes": 29401,
+      "sourceSha256": "279c0abf19a04527418ed375954e54326752a62dbf6549601a33bd8179e2dbe1",
+      "errors": []
+    }
+  ],
+  "baselineMeanMs": 239.02916666666667,
+  "candidateMeanMs": 248.75,
+  "regressionPercent": 4.0667979849042135
+}

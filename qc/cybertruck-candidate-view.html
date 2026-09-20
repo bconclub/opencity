@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><base href="/"><style>body{margin:0;background:#28312f}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.169.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.169.0/examples/jsm/"}}</script>
+<script type="module">
+import * as T from 'three';import {createBlenderVehicle} from '/blender-vehicle.js';import {installVehicleEnvironment} from '/vehicle-environment.js';
+const renderer=new T.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setSize(1200,850);renderer.setPixelRatio(1);renderer.setClearColor(0x28312f);renderer.outputColorSpace=T.SRGBColorSpace;document.body.append(renderer.domElement);
+const scene=new T.Scene(),disposeEnvironment=installVehicleEnvironment(T,renderer,scene);scene.add(new T.HemisphereLight(0xffffff,0x60756b,2.4));for(const [color,power,pos] of [[0xffffff,3,[-5,4,10]],[0xcce8ff,1,[4,-6,4]]]){const light=new T.DirectionalLight(color,power);light.position.fromArray(pos);scene.add(light);}
+const floor=new T.Mesh(new T.PlaneGeometry(200,200),new T.MeshStandardMaterial({color:0x3c4641,roughness:1}));floor.position.z=-.008;scene.add(floor);
+const model=createBlenderVehicle(T,'cybertruck');await model.ready;scene.add(model.group);model.updateDrive(0,0,0);model.group.updateMatrixWorld(true);
+const camera=new T.OrthographicCamera(-3.7*1200/850,3.7*1200/850,3.7,-3.7,.01,200);camera.up.set(0,0,1);
+window.drawCybertruck=view=>{const positions={front:[0,10,1.15],side:[10,0,1.15],rear3:[7,-10,5]};camera.position.fromArray(positions[view]);camera.lookAt(0,0,.95);camera.updateMatrixWorld();renderer.render(scene,camera);return{view,camera:camera.position.toArray(),target:[0,0,.95],orthoHalf:3.7,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles};};window.cybertruckReady=true;
+</script>

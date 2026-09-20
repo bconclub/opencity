@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "displayTriangles": 18,
+  "groundIndexInputUnchanged": true,
+  "injectionAfterGroundIndex": true,
+  "sourcePatchSHA256": "18580abfc4b45a04391f4467d348b6e739cfea597ecc8cd9296b212786e9e190",
+  "candidatePatchSHA256": "2831d8a12eb6a79927d6d50586c37e3840c1e599ccfc8d3330e4adc4349debcc",
+  "manifestSHA256": "087faecb236fa71a2ac67b2ac625fc73ac8b7334754b7f6280ad79a737a3c3d8"
+}

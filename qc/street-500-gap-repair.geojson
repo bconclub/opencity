@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "sourceWay": "52057928",
+        "sourceSegment": 0,
+        "role": "asphalt",
+        "heightM": 0,
+        "reviewOnly": true,
+        "widthProvenance": "O2W measured cross-section"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.59017070784458,
+              12.97556643231162
+            ],
+            [
+              77.59020188026653,
+              12.975467547889629
+            ],
+            [
+              77.59022210337493,
+              12.975490894456545
+            ],
+            [
+              77.59017070784458,
+              12.97556643231162
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "routeSamples": 2187,
+  "missesOver1mm": [],
+  "maximumSampleGapM": 0.0004935633317464433,
+  "conditionalCircularWayExcluded": true,
+  "materialChangedAreaM2": {
+    "marking": 0.0,
+    "concrete": 0.0,
+    "paving": 0.0,
+    "source": 0.0,
+    "asphalt": 16.430942104622297
+  },
+  "addedGroundAreaM2": 16.430918706209322,
+  "removedGroundAreaM2": 2.3398409516317553e-05,
+  "remoteRetriangulationAddedAreaM2": 8.75552527867356e-06,
+  "remoteRetriangulationMaxBoundaryDistanceM": 0.0001,
+  "footprintGroundDifferenceM2": 1.189669045160822e-11,
+  "allGroundFacesExistInGLB": true,
+  "actualExportCorridors": [
+    {
+      "halfWidthIncludingMarginM": 1.05,
+      "uncoveredM2": 5.4369956757073296e-06
+    },
+    {
+      "halfWidthIncludingMarginM": 1.30665,
+      "uncoveredM2": 6.929849339961778e-06
+    }
+  ],
+  "raisedSidewalkAddedOverlapM2": 0.0,
+  "baselineHashesPreserved": true,
+  "turnQualified": false
+}

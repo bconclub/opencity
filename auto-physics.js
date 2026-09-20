@@ -28,9 +28,10 @@ export function advanceCar(s,input,dt,world={}){
   s.yaw+=(clamp(targetYaw,-limit,limit)-s.yaw)*(1-Math.exp(-h*(p.yawResponse??5)));
   lateral*=Math.exp(-h*(onRoad?8:3.5));
   s.vx=fx*forward+rx*lateral;s.vy=fy*forward+ry*lateral;
+  const priorHeading=s.heading;
   s.heading=(s.heading+s.yaw*h*180/Math.PI+360)%360;
   const nx=s.x+s.vx*h,ny=s.y+s.vy*h,hit=world.collide?.(nx,ny,s.heading);
-  if(hit){const vn=s.vx*hit.x+s.vy*hit.y;if(vn<0){s.vx-=vn*1.05*hit.x;s.vy-=vn*1.05*hit.y;}s.yaw*=.6;s.impacts++;}
+  if(hit){s.heading=priorHeading;const vn=s.vx*hit.x+s.vy*hit.y;if(vn<0){s.vx-=vn*1.05*hit.x;s.vy-=vn*1.05*hit.y;}s.yaw*=.6;s.impacts++;}
   else{const moved=Math.hypot(nx-s.x,ny-s.y);s.distance+=moved;earnBoost(s.boost,moved,p);s.wheel+=Math.sign(forward)*moved/(p.wheelRadius??.31);s.x=nx;s.y=ny;}
   const pitchTarget=clamp((forward-oldForward)/Math.max(h,.0001)*.007,-.08,.08),rollTarget=clamp(-forward*s.yaw*(p.rollGain??.018),-(p.maxLean??.14),p.maxLean??.14);
   s.pitchRate+=(65*(pitchTarget-s.pitch)-12*s.pitchRate)*h;s.pitch+=s.pitchRate*h;

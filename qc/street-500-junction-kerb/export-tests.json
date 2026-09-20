@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "actualFloat32FootprintDifferenceM2": 0.0,
+  "interiorFormerRaisedSamples": 133,
+  "maximumNewHeightM": 0,
+  "routeSamples": 2187,
+  "routeMissesOver1mm": 0,
+  "conditionalCircleExcluded": true,
+  "turnQualified": false
+}

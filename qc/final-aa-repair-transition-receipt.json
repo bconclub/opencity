@@ -1,0 +1,9 @@
+{
+  "diagnosticPassed": true,
+  "comparisonApplicable": false,
+  "reason": "Two candidate-only road-to-helicopter diagnostic poses passed all assertions and exited0. Raw JSON retains inherited false comparative gate because no baseline/twelve-sample comparison was requested.",
+  "rawSource": "final-aa-repair-transition-performance.json",
+  "renderer": "MapLibre5.7.2",
+  "priorFailure": "MapLibre5.6.1 undefined.key in _updateRetainedTiles",
+  "sourceManifest": "1a89428052145f997aeab523a8b41fed1c67d0bb54de51f9b51b5a7587056ce2"
+}

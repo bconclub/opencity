@@ -1,0 +1,108 @@
+{
+  "status": "PENDING_VISUAL_AND_EXPORTED_RIG_REVIEW",
+  "source": "C:\\Users\\user\\Documents\\ChatGPT\\Z\\assets\\vehicles\\cybercab-rigged.glb",
+  "source_sha256": "d22c94990893c5d807248cb7717ac643fccf2d532ad55519f57f3f8de65bbc1a",
+  "triangles": 5996,
+  "materials": 3,
+  "planned_shared_draws": 4,
+  "source_body_triangles": 19867,
+  "body_triangles": 4556,
+  "body_bounds_before": [
+    [
+      -0.9009333848953247,
+      -2.22499942779541,
+      0.0
+    ],
+    [
+      0.9013230800628662,
+      2.22499942779541,
+      1.3616750240325928
+    ]
+  ],
+  "body_bounds_after": [
+    [
+      -0.9114577770233154,
+      -2.2246923446655273,
+      -0.012747966684401035
+    ],
+    [
+      0.9120357632637024,
+      2.230224370956421,
+      1.363006353378296
+    ]
+  ],
+  "uv_layers": [
+    "UVMap"
+  ],
+  "source_image_sizes": {
+    "Image_0": [
+      1024,
+      1024
+    ],
+    "Image_1": [
+      1024,
+      1024
+    ],
+    "Image_2": [
+      1024,
+      1024
+    ]
+  },
+  "source_image_payload_sha256": [
+    "2f14f688dc0f608edc9830b91762b5abeb94234ce131fade2a66f3af0a404c07",
+    "ec00a3702a4b1bc3394afdd34559f41fec35301ef19cad848c2ff125ed623ce6",
+    "f8a3f7dee7f1e1c2ecc4ba277e648954968b9bb4e40f9dce7e1b8e28d079ce5f"
+  ],
+  "candidate_image_payload_sha256": [
+    "2f14f688dc0f608edc9830b91762b5abeb94234ce131fade2a66f3af0a404c07",
+    "ec00a3702a4b1bc3394afdd34559f41fec35301ef19cad848c2ff125ed623ce6",
+    "f8a3f7dee7f1e1c2ecc4ba277e648954968b9bb4e40f9dce7e1b8e28d079ce5f"
+  ],
+  "export_transform_validation": {
+    "wheel_names": [
+      "Wheel_FL",
+      "Wheel_FR",
+      "Wheel_RL",
+      "Wheel_RR"
+    ],
+    "bounds_blender_axes": [
+      [
+        -0.9289999604225159,
+        -2.2246923446655273,
+        -0.017999976873397827
+      ],
+      [
+        0.9289999604225159,
+        2.230224370956421,
+        1.363006353378296
+      ]
+    ],
+    "max_bound_error_metres": 0.0,
+    "max_pivot_error_metres": 0.0
+  },
+  "image_payloads_identical": true,
+  "blender_pivots": {
+    "Wheel_FL": [
+      -0.7799999713897705,
+      1.4049999713897705,
+      0.36500000953674316
+    ],
+    "Wheel_FR": [
+      0.7799999713897705,
+      1.4049999713897705,
+      0.36500000953674316
+    ],
+    "Wheel_RL": [
+      -0.7799999713897705,
+      -1.3669999837875366,
+      0.36500000953674316
+    ],
+    "Wheel_RR": [
+      0.7799999713897705,
+      -1.3669999837875366,
+      0.36500000953674316
+    ]
+  },
+  "wheel_radius_metres": 0.365,
+  "limitations": "Body decimation alters vertices and interpolates UVs. No texture edits requested; exported image payload identity and visual fidelity require independent validation."
+}

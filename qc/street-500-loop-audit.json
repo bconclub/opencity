@@ -1,0 +1,324 @@
+{
+  "inputSourceFeatures": 391,
+  "withheld": {
+    "unsupported-boundary-portal": 22,
+    "narrow-carriageway": 97,
+    "known-junction-gap": 1
+  },
+  "sourceIdDirectedStates": 316,
+  "topologyOnlyCyclicComponents": [
+    68,
+    42,
+    32
+  ],
+  "widthEligibleCyclicComponents": [
+    32,
+    30
+  ],
+  "meaningfulCycleMinimumM": 100,
+  "enumerationCalls": 678,
+  "enumerationCapped": false,
+  "cycleCount": 5,
+  "groundCorridorPassCount": 0,
+  "vehicleEnvelope": {
+    "lengthM": 4.6,
+    "widthIncludingMarginM": 2.1,
+    "sampleSpacingAtMostM": 0.5,
+    "numericSeamToleranceM": 0.002
+  },
+  "loops": [
+    {
+      "id": 0,
+      "sourceSegments": 27,
+      "sourceLengthM": 562.4877585872782,
+      "smoothLengthM": 566.9975301747522,
+      "sourceWays": [
+        "1368389074",
+        "1368389075",
+        "338941361",
+        "338941365",
+        "358318638",
+        "38542543",
+        "52245576",
+        "763048421"
+      ],
+      "maxSourceTurnDeg": 124.98096081395833,
+      "corridorOutsideGroundM2": 227.95125545991456,
+      "bodySamples": 1134,
+      "failedBodySamples": 831,
+      "maxBodyOutsideGroundM2": 4.9308165141618385,
+      "firstFailure": {
+        "distanceAlongLoopM": 0.0,
+        "lngLat": [
+          77.58844967361536,
+          12.981027233910323
+        ],
+        "bodyOutsideGroundM2": 2.679505084554751
+      },
+      "failureRuns": [
+        {
+          "startDistanceM": 0.0,
+          "lngLat": [
+            77.58844967361536,
+            12.981027233910323
+          ],
+          "nearestSourceWay": "38542543",
+          "nearestSourceSegment": 0
+        },
+        {
+          "startDistanceM": 203.49911356360153,
+          "lngLat": [
+            77.58676483383475,
+            12.981685727885608
+          ],
+          "nearestSourceWay": "1368389075",
+          "nearestSourceSegment": 4
+        },
+        {
+          "startDistanceM": 541.497641251549,
+          "lngLat": [
+            77.5886758016076,
+            12.9809679591987
+          ],
+          "nearestSourceWay": "358318638",
+          "nearestSourceSegment": 0
+        },
+        {
+          "startDistanceM": 563.4975454205871,
+          "lngLat": [
+            77.5884787412089,
+            12.981013526774628
+          ],
+          "nearestSourceWay": "38542543",
+          "nearestSourceSegment": 0
+        }
+      ],
+      "groundCorridorPass": false
+    },
+    {
+      "id": 1,
+      "sourceSegments": 28,
+      "sourceLengthM": 531.2718209074104,
+      "smoothLengthM": 537.2617436415374,
+      "sourceWays": [
+        "1092049622",
+        "1368389074",
+        "1368389075",
+        "338941361",
+        "338941365",
+        "358318638",
+        "38542543",
+        "52245576",
+        "763048421"
+      ],
+      "maxSourceTurnDeg": 99.75919480702846,
+      "corridorOutsideGroundM2": 228.54359590901902,
+      "bodySamples": 1075,
+      "failedBodySamples": 844,
+      "maxBodyOutsideGroundM2": 4.929790767294043,
+      "firstFailure": {
+        "distanceAlongLoopM": 0.0,
+        "lngLat": [
+          77.58844967361536,
+          12.981027233910323
+        ],
+        "bodyOutsideGroundM2": 2.679505084554751
+      },
+      "failureRuns": [
+        {
+          "startDistanceM": 0.0,
+          "lngLat": [
+            77.58844967361536,
+            12.981027233910323
+          ],
+          "nearestSourceWay": "38542543",
+          "nearestSourceSegment": 0
+        },
+        {
+          "startDistanceM": 203.40979503451692,
+          "lngLat": [
+            77.58676409215214,
+            12.981685377339113
+          ],
+          "nearestSourceWay": "1368389075",
+          "nearestSourceSegment": 4
+        },
+        {
+          "startDistanceM": 425.81116798380447,
+          "lngLat": [
+            77.58852110684337,
+            12.981596608154451
+          ],
+          "nearestSourceWay": "1092049622",
+          "nearestSourceSegment": 2
+        },
+        {
+          "startDistanceM": 511.77304696645047,
+          "lngLat": [
+            77.5886757000589,
+            12.98096797762035
+          ],
+          "nearestSourceWay": "358318638",
+          "nearestSourceSegment": 0
+        },
+        {
+          "startDistanceM": 533.7632950782902,
+          "lngLat": [
+            77.58847872819918,
+            12.981013532265292
+          ],
+          "nearestSourceWay": "38542543",
+          "nearestSourceSegment": 0
+        }
+      ],
+      "groundCorridorPass": false
+    },
+    {
+      "id": 2,
+      "sourceSegments": 9,
+      "sourceLengthM": 198.65119975837,
+      "smoothLengthM": 203.28647467263463,
+      "sourceWays": [
+        "338941361",
+        "358318638",
+        "763048421"
+      ],
+      "maxSourceTurnDeg": 124.98096081395833,
+      "corridorOutsideGroundM2": 5.2856591178944905,
+      "bodySamples": 407,
+      "failedBodySamples": 33,
+      "maxBodyOutsideGroundM2": 2.072014776836734,
+      "firstFailure": {
+        "distanceAlongLoopM": 177.31375554984103,
+        "lngLat": [
+          77.58867965712855,
+          12.980967259780002
+        ],
+        "bodyOutsideGroundM2": 0.00026302575675713196
+      },
+      "failureRuns": [
+        {
+          "startDistanceM": 177.31375554984103,
+          "lngLat": [
+            77.58867965712855,
+            12.980967259780002
+          ],
+          "nearestSourceWay": "358318638",
+          "nearestSourceSegment": 0
+        }
+      ],
+      "groundCorridorPass": false
+    },
+    {
+      "id": 3,
+      "sourceSegments": 10,
+      "sourceLengthM": 167.4352620785021,
+      "smoothLengthM": 173.5506881394198,
+      "sourceWays": [
+        "1092049622",
+        "338941361",
+        "358318638",
+        "763048421"
+      ],
+      "maxSourceTurnDeg": 97.90920055549334,
+      "corridorOutsideGroundM2": 5.877999566998934,
+      "bodySamples": 348,
+      "failedBodySamples": 45,
+      "maxBodyOutsideGroundM2": 2.0720159872873203,
+      "firstFailure": {
+        "distanceAlongLoopM": 61.83990037151741,
+        "lngLat": [
+          77.58851936094284,
+          12.98159574139005
+        ],
+        "bodyOutsideGroundM2": 0.0008651319923430765
+      },
+      "failureRuns": [
+        {
+          "startDistanceM": 61.83990037151741,
+          "lngLat": [
+            77.58851936094284,
+            12.98159574139005
+          ],
+          "nearestSourceWay": "1092049622",
+          "nearestSourceSegment": 2
+        },
+        {
+          "startDistanceM": 147.6178266932996,
+          "lngLat": [
+            77.58867929549479,
+            12.980967325382922
+          ],
+          "nearestSourceWay": "358318638",
+          "nearestSourceSegment": 0
+        }
+      ],
+      "groundCorridorPass": false
+    },
+    {
+      "id": 4,
+      "sourceSegments": 28,
+      "sourceLengthM": 1002.3853208684623,
+      "smoothLengthM": 1007.3252893110188,
+      "sourceWays": [
+        "1249434050",
+        "1276833545",
+        "362206700",
+        "362206701",
+        "991536562"
+      ],
+      "maxSourceTurnDeg": 94.38174857062197,
+      "corridorOutsideGroundM2": 3.7367609039684844,
+      "bodySamples": 2015,
+      "failedBodySamples": 33,
+      "maxBodyOutsideGroundM2": 2.381604848765259,
+      "firstFailure": {
+        "distanceAlongLoopM": 490.41494233950834,
+        "lngLat": [
+          77.59075845347611,
+          12.977720137647903
+        ],
+        "bodyOutsideGroundM2": 0.0333809788333517
+      },
+      "failureRuns": [
+        {
+          "startDistanceM": 490.41494233950834,
+          "lngLat": [
+            77.59075845347611,
+            12.977720137647903
+          ],
+          "nearestSourceWay": "991536562",
+          "nearestSourceSegment": 5
+        },
+        {
+          "startDistanceM": 991.8279771677724,
+          "lngLat": [
+            77.5937890958909,
+            12.980986323657401
+          ],
+          "nearestSourceWay": "1276833545",
+          "nearestSourceSegment": 0
+        }
+      ],
+      "groundCorridorPass": false
+    }
+  ],
+  "sourceSha256": "18c2f95fd77003391804327d8c85de2daa92d3fb5fcd7c3013c14c035b9e718d",
+  "groundSha256": "03676f34203016d70b73f7f883d72e8c6897b171e21c28af7cc6035589a7284d",
+  "runtimeChanged": false,
+  "gpuUsed": false,
+  "fixtureTests": [
+    "wide legal square accepted",
+    "wrong-way edge breaks loop",
+    "nearby unrelated node never merged",
+    "boundary portal withheld",
+    "known gap withheld",
+    "narrow two-way removed",
+    "immediate reversal rejected"
+  ],
+  "limitations": [
+    "Ground includes pavement; passing ground coverage alone is not verified asphalt/kerb clearance.",
+    "No multi-car interactions or stop/signal timing acceptance in this isolated geometry test.",
+    "Current width estimates retained; no source geometry or connectors invented."
+  ]
+}

@@ -1,0 +1,5527 @@
+{
+  "candidatePoses": 1644,
+  "outsideOriginalLoop2RibbonPoses": 90,
+  "outsideAlternativeLoop3RibbonPoses": 201,
+  "nearestRoadAtOriginalRibbonFailures": {
+    "338941361": 33,
+    "1092049622": 57
+  },
+  "loops": {
+    "2": [
+      {
+        "way": "338941361",
+        "segment": 11,
+        "from": "3461278332",
+        "to": "3461278359",
+        "oneway": "yes"
+      },
+      {
+        "way": "338941361",
+        "segment": 12,
+        "from": "3461278359",
+        "to": "3461278360",
+        "oneway": "yes"
+      },
+      {
+        "way": "338941361",
+        "segment": 13,
+        "from": "3461278360",
+        "to": "10001492588",
+        "oneway": "yes"
+      },
+      {
+        "way": "338941361",
+        "segment": 14,
+        "from": "10001492588",
+        "to": "3461278371",
+        "oneway": "yes"
+      },
+      {
+        "way": "338941361",
+        "segment": 15,
+        "from": "3461278371",
+        "to": "3461288196",
+        "oneway": "yes"
+      },
+      {
+        "way": "763048421",
+        "segment": 0,
+        "from": "3461288196",
+        "to": "3461278368",
+        "oneway": "yes"
+      },
+      {
+        "way": "763048421",
+        "segment": 1,
+        "from": "3461278368",
+        "to": "12174568386",
+        "oneway": "yes"
+      },
+      {
+        "way": "763048421",
+        "segment": 2,
+        "from": "12174568386",
+        "to": "3461278331",
+        "oneway": "yes"
+      },
+      {
+        "way": "358318638",
+        "segment": 0,
+        "from": "3461278331",
+        "to": "3461278332",
+        "oneway": "no"
+      }
+    ],
+    "3": [
+      {
+        "way": "338941361",
+        "segment": 11,
+        "from": "3461278332",
+        "to": "3461278359",
+        "oneway": "yes"
+      },
+      {
+        "way": "338941361",
+        "segment": 12,
+        "from": "3461278359",
+        "to": "3461278360",
+        "oneway": "yes"
+      },
+      {
+        "way": "338941361",
+        "segment": 13,
+        "from": "3461278360",
+        "to": "10001492588",
+        "oneway": "yes"
+      },
+      {
+        "way": "1092049622",
+        "segment": 3,
+        "from": "10001492588",
+        "to": "12113879974",
+        "oneway": "no"
+      },
+      {
+        "way": "1092049622",
+        "segment": 2,
+        "from": "12113879974",
+        "to": "12113879975",
+        "oneway": "no"
+      },
+      {
+        "way": "1092049622",
+        "segment": 1,
+        "from": "12113879975",
+        "to": "12113879976",
+        "oneway": "no"
+      },
+      {
+        "way": "1092049622",
+        "segment": 0,
+        "from": "12113879976",
+        "to": "3461278368",
+        "oneway": "no"
+      },
+      {
+        "way": "763048421",
+        "segment": 1,
+        "from": "3461278368",
+        "to": "12174568386",
+        "oneway": "yes"
+      },
+      {
+        "way": "763048421",
+        "segment": 2,
+        "from": "12174568386",
+        "to": "3461278331",
+        "oneway": "yes"
+      },
+      {
+        "way": "358318638",
+        "segment": 0,
+        "from": "3461278331",
+        "to": "3461278332",
+        "oneway": "no"
+      }
+    ]
+  },
+  "relevantWays": [
+    {
+      "id": "1092049622",
+      "tags": {
+        "highway": "tertiary"
+      },
+      "refs": [
+        "3461278368",
+        "12113879976",
+        "12113879975",
+        "12113879974",
+        "10001492588"
+      ]
+    },
+    {
+      "id": "338941361",
+      "tags": {
+        "alt_name": "Race Course Road",
+        "highway": "tertiary",
+        "lanes": "3",
+        "name": "Devaraj Urs Road",
+        "name:etymology:wikidata": "Q5203561",
+        "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "refs": [
+        "456204184",
+        "11769490857",
+        "294081912",
+        "3702257805",
+        "294081983",
+        "294081910",
+        "10036422092",
+        "294081909",
+        "294081980",
+        "12538083606",
+        "294081908",
+        "3461278332",
+        "3461278359",
+        "3461278360",
+        "10001492588",
+        "3461278371",
+        "3461288196"
+      ]
+    },
+    {
+      "id": "358318638",
+      "tags": {
+        "highway": "tertiary",
+        "surface": "asphalt"
+      },
+      "refs": [
+        "3461278331",
+        "3461278332"
+      ]
+    },
+    {
+      "id": "763048421",
+      "tags": {
+        "alt_name": "Race Course Road",
+        "highway": "tertiary",
+        "lanes": "3",
+        "name": "Devaraj Urs Road",
+        "name:etymology:wikidata": "Q5203561",
+        "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+        "oneway": "yes",
+        "parking:both:restriction": "no_stopping",
+        "surface": "asphalt"
+      },
+      "refs": [
+        "3461288196",
+        "3461278368",
+        "12174568386",
+        "3461278331",
+        "11760270690",
+        "3461278326",
+        "3461278302",
+        "2571056005",
+        "7130428392",
+        "11769490862",
+        "7130428391",
+        "11508687639",
+        "456204184"
+      ]
+    }
+  ],
+  "mappedAreas": [
+    {
+      "id": "38871254",
+      "tags": {
+        "leisure": "garden"
+      },
+      "sweptBodyOverlapM2": 0.0
+    },
+    {
+      "id": "38871258",
+      "tags": {
+        "leisure": "park"
+      },
+      "sweptBodyOverlapM2": 0.0
+    },
+    {
+      "id": "208686730",
+      "tags": {
+        "landuse": "residential",
+        "tourism": "guest_house"
+      },
+      "sweptBodyOverlapM2": 0.0
+    },
+    {
+      "id": "338941369",
+      "tags": {
+        "barrier": "kerb",
+        "landuse": "grass"
+      },
+      "sweptBodyOverlapM2": 0.008809805240748762
+    },
+    {
+      "id": "366246823",
+      "tags": {
+        "landuse": "grass"
+      },
+      "sweptBodyOverlapM2": 0.0
+    },
+    {
+      "id": "373266001",
+      "tags": {
+        "building": "yes"
+      },
+      "sweptBodyOverlapM2": 0.0
+    },
+    {
+      "id": "670210359",
+      "tags": {
+        "landuse": "commercial"
+      },
+      "sweptBodyOverlapM2": 0.0
+    },
+    {
+      "id": "670210360",
+      "tags": {
+        "landuse": "commercial"
+      },
+      "sweptBodyOverlapM2": 0.0
+    },
+    {
+      "id": "1354824983",
+      "tags": {
+        "leisure": "garden"
+      },
+      "sweptBodyOverlapM2": 0.0
+    }
+  ],
+  "nearbyMappedControls": [
+    {
+      "id": "3461278326",
+      "tags": {
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      },
+      "distanceToCandidateM": 21.34160436615687,
+      "distanceToSweptBodyM": 19.875110720254256
+    },
+    {
+      "id": "11760270700",
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      },
+      "distanceToCandidateM": 25.320840315539076,
+      "distanceToSweptBodyM": 24.270840315534976
+    },
+    {
+      "id": "12538083606",
+      "tags": {
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      },
+      "distanceToCandidateM": 14.54082452984438,
+      "distanceToSweptBodyM": 13.068870748156957
+    }
+  ],
+  "cachedRestrictions": [
+    {
+      "id": "15515601",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "type": "way",
+          "ref": "1110178942",
+          "role": "from"
+        },
+        {
+          "type": "way",
+          "ref": "1110178940",
+          "role": "via"
+        },
+        {
+          "type": "way",
+          "ref": "1148194090",
+          "role": "to"
+        }
+      ]
+    },
+    {
+      "id": "15515602",
+      "tags": {
+        "restriction": "no_right_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "type": "way",
+          "ref": "1110178942",
+          "role": "from"
+        },
+        {
+          "type": "node",
+          "ref": "10121050217",
+          "role": "via"
+        },
+        {
+          "type": "way",
+          "ref": "1110178940",
+          "role": "to"
+        }
+      ]
+    },
+    {
+      "id": "15519215",
+      "tags": {
+        "restriction": "no_u_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "type": "way",
+          "ref": "1539996892",
+          "role": "from"
+        },
+        {
+          "type": "way",
+          "ref": "1148408385",
+          "role": "via"
+        },
+        {
+          "type": "way",
+          "ref": "1539996891",
+          "role": "to"
+        }
+      ]
+    },
+    {
+      "id": "21110637",
+      "tags": {
+        "restriction": "no_right_turn",
+        "type": "restriction"
+      },
+      "members": [
+        {
+          "type": "way",
+          "ref": "1539996892",
+          "role": "from"
+        },
+        {
+          "type": "way",
+          "ref": "1148408385",
+          "role": "via"
+        },
+        {
+          "type": "way",
+          "ref": "1539996893",
+          "role": "to"
+        }
+      ]
+    }
+  ],
+  "restrictionsTouchingEitherLoop": [],
+  "failurePoses": [
+    {
+      "index": 174,
+      "distanceAlongM": 17.395309641693363,
+      "lngLat": [
+        77.5885067673748,
+        12.981623548988297
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.0012475625230524636,
+        "3": 9.659999999999846
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 2.645321233492895,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 4.689389036675536,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 7.774358798111197,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 175,
+      "distanceAlongM": 17.49528268561114,
+      "lngLat": [
+        77.58850741185317,
+        12.981624192340972
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.01286397415349299,
+        "3": 9.660000000000073
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 2.7037585644672943,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 4.731299894648009,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 7.837253235372967,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 176,
+      "distanceAlongM": 17.59525572952892,
+      "lngLat": [
+        77.58850806832724,
+        12.981624824067264
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.0414859112989769,
+        "3": 9.65999999999974
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 2.7636732048376556,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 4.773286984216191,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 7.90156177752215,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 177,
+      "distanceAlongM": 17.695228773446697,
+      "lngLat": [
+        77.58850873790638,
+        12.981625442603605
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.07953191041485194,
+        "3": 9.659999999999819
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 2.8252098364820846,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 4.81514665099037,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 7.9674202367671665,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 178,
+      "distanceAlongM": 17.795201817364475,
+      "lngLat": [
+        77.58850941965255,
+        12.981626048375988
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.13685337985896573,
+        "3": 9.660000000000004
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 2.8882609138587605,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 4.856623013757676,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.034723017747092,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 179,
+      "distanceAlongM": 17.89517486128225,
+      "lngLat": [
+        77.58851011306764,
+        12.981626641451765
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.20848230897440784,
+        "3": 9.659999999999812
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 2.9527719512879753,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 4.896487662645528,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.103415686536941,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 180,
+      "distanceAlongM": 17.99514790520003,
+      "lngLat": [
+        77.58851081901211,
+        12.981627220316012
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.2893215567209745,
+        "3": 9.65999999999986
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.018860160747968,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 4.934433054071802,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.173606704154334,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 181,
+      "distanceAlongM": 18.09512094911781,
+      "lngLat": [
+        77.58851153572995,
+        12.981627786468067
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.39495751840274074,
+        "3": 9.660000000000192
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.08631262531077,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 4.970676033244196,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.245091151166971,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 182,
+      "distanceAlongM": 18.195093993035584,
+      "lngLat": [
+        77.58851226427707,
+        12.981628338104798
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.5032913402529187,
+        "3": 9.660000000000032
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.1552722563321036,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.00499074415383,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.318001546458774,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 183,
+      "distanceAlongM": 18.295067036953366,
+      "lngLat": [
+        77.5885130035408,
+        12.981628876018776
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.6412887815910715,
+        "3": 9.660000000000105
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.2256067456604236,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.037497912569785,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.392209674199359,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 184,
+      "distanceAlongM": 18.39504008087114,
+      "lngLat": [
+        77.58851375324912,
+        12.981629400041689
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.7928110989613729,
+        "3": 9.66000000000001
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.2972897211385543,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.0681887141286515,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.467687920286851,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 185,
+      "distanceAlongM": 18.49501312478892,
+      "lngLat": [
+        77.58851451389432,
+        12.981629908870307
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.9560753759493968,
+        "3": 9.66
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.370395451306616,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.0969088682658,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.544502843367187,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 186,
+      "distanceAlongM": 18.594986168706697,
+      "lngLat": [
+        77.58851528398759,
+        12.981630404022411
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.1528577444241597,
+        "3": 9.660000000000194
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.444739344419927,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.123868335169739,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.62247815936047,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 187,
+      "distanceAlongM": 18.694959212624475,
+      "lngLat": [
+        77.58851606449277,
+        12.981630883451786
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.347079316643009,
+        "3": 9.660000000000124
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.5204584627452604,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.148818563430457,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.701738965114954,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 188,
+      "distanceAlongM": 18.794932256542253,
+      "lngLat": [
+        77.58851685418955,
+        12.98163134835241
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.5882074116905696,
+        "3": 9.660000000000009
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.597402333155657,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.171926344879309,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "1308079433",
+          "distanceM": 8.782141286803046,
+          "tags": {
+            "footway": "sidewalk",
+            "highway": "footway",
+            "smoothness": "good",
+            "surface": "paving_stones"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 189,
+      "distanceAlongM": 18.89490530046003,
+      "lngLat": [
+        77.58851765297753,
+        12.981631798280445
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.840278732726703,
+        "3": 9.659999999999938
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.6755675265764296,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.1931480019680905,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 8.75021296180247,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 190,
+      "distanceAlongM": 18.99487834437781,
+      "lngLat": [
+        77.58851846103393,
+        12.98163223219739
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 2.0879904318939357,
+        "3": 9.660000000000135
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.7549901732818074,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.21236770940585,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 8.651230609473856,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 191,
+      "distanceAlongM": 19.094851388295588,
+      "lngLat": [
+        77.58851927712276,
+        12.9816326516042
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 2.3442935839571994,
+        "3": 9.660000000000005
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.835513058103796,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.229785280741035,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 8.552007436358654,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 192,
+      "distanceAlongM": 19.194824432213366,
+      "lngLat": [
+        77.58852010207619,
+        12.981633054213228
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 2.5745338820814334,
+        "3": 9.660000000000043
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 3.9172631134467646,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.245130957059152,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 8.452549460487115,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 193,
+      "distanceAlongM": 19.294797476131144,
+      "lngLat": [
+        77.58852093463818,
+        12.981633441645242
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 2.819773437944033,
+        "3": 9.660000000000107
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.000078996088687,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.258617902606051,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 8.352919927409873,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 194,
+      "distanceAlongM": 19.394770520048922,
+      "lngLat": [
+        77.58852177482008,
+        12.981633813149307
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.051963333517584,
+        "3": 9.65999999999996
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.083974317950768,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.270166226878995,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 8.253147333438942,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 195,
+      "distanceAlongM": 19.4947435639667,
+      "lngLat": [
+        77.58852262254378,
+        12.981634167996411
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.2806475360812066,
+        "3": 9.65999999999989
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.168952744799058,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.279701319652206,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 8.15326836946103,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 196,
+      "distanceAlongM": 19.594716607884475,
+      "lngLat": [
+        77.58852347680755,
+        12.981634507638432
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.510865230752018,
+        "3": 9.660000000000018
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.254882969477095,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.287410050942798,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 8.053327189974368,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 197,
+      "distanceAlongM": 19.694689651802257,
+      "lngLat": [
+        77.58852433827171,
+        12.981634829553265
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.7290489784743266,
+        "3": 9.659999999999972
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.341877383356686,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.2930035180212744,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.953356474203522,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 198,
+      "distanceAlongM": 19.79466269572003,
+      "lngLat": [
+        77.58852520572032,
+        12.98163513580378
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.9520166994160464,
+        "3": 9.660000000000114
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.429771638478581,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.29674037383734,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.8533979553806805,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 199,
+      "distanceAlongM": 19.894635739637813,
+      "lngLat": [
+        77.58852607921206,
+        12.981635425309353
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 4.168635232830353,
+        "3": 9.659999999999846
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.5185898654802985,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.298504251460952,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.7534883461551445,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 200,
+      "distanceAlongM": 19.994608783555588,
+      "lngLat": [
+        77.5885269584791,
+        12.981635697686178
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 4.383740821565739,
+        "3": 9.659999999999942
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.608309696618995,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.298263369171528,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.653669933506031,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 201,
+      "distanceAlongM": 20.094581827473366,
+      "lngLat": [
+        77.58852784273131,
+        12.981635954308295
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 4.597128022042161,
+        "3": 9.659999999999926
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.698823788329347,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.296189355571707,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.553968505376882,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 202,
+      "distanceAlongM": 20.194554871391144,
+      "lngLat": [
+        77.5885287324174,
+        12.981636192431498
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 4.80762428265612,
+        "3": 9.659999999999897
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.790225521853262,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.29197678955857,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.454446946059667,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 203,
+      "distanceAlongM": 20.294527915308922,
+      "lngLat": [
+        77.5885296264397,
+        12.98163641456556
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.016595007727264,
+        "3": 9.65999999999984
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.882355844210862,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.285927734378441,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.355117366237443,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 204,
+      "distanceAlongM": 20.394500959226704,
+      "lngLat": [
+        77.58853052483676,
+        12.981636619287103
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.2244558714559535,
+        "3": 9.65999999999989
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 4.97524238652097,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.277890194460084,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.256032050063021,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 205,
+      "distanceAlongM": 20.49447400314448,
+      "lngLat": [
+        77.58853142722086,
+        12.981636806583516
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.409008483955949,
+        "3": 9.660000000000105
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 5.068843810875843,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.267875659208463,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.157230769979484,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 206,
+      "distanceAlongM": 20.594447047062257,
+      "lngLat": [
+        77.58853233301069,
+        12.981636977603017
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.528676540115302,
+        "3": 9.65999999999981
+      },
+      "nearestSourceWays": [
+        {
+          "id": "338941361",
+          "distanceM": 5.1630788722156185,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "1092049622",
+          "distanceM": 5.256024938842683,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 7.058727081874573,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 207,
+      "distanceAlongM": 20.694420090980035,
+      "lngLat": [
+        77.5885332423353,
+        12.981637129766513
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.606061472925242,
+        "3": 9.660000000000199
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.242060668765174,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 5.258003976002585,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.960609729013737,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 208,
+      "distanceAlongM": 20.79439313489781,
+      "lngLat": [
+        77.5885341543637,
+        12.981637265655268
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.649055064341748,
+        "3": 9.660000000000128
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.226283660608698,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 5.353487464703023,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.862860986901756,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 209,
+      "distanceAlongM": 20.89436617881559,
+      "lngLat": [
+        77.58853506902189,
+        12.981637383622989
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.666229888153834,
+        "3": 9.660000000000174
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.208522038827845,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 5.449548588365458,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.765553340851724,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 210,
+      "distanceAlongM": 20.99433922273337,
+      "lngLat": [
+        77.5885359858753,
+        12.981637484044187
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.680309443951291,
+        "3": 9.660000000000133
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.188829833174871,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 5.546134598871912,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.668716026170683,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 211,
+      "distanceAlongM": 21.094312266651148,
+      "lngLat": [
+        77.58853690450195,
+        12.981637567766198
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.695853585842588,
+        "3": 9.660000000000053
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.167310724369019,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 5.643186290177417,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.572358338098729,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 212,
+      "distanceAlongM": 21.194285310568922,
+      "lngLat": [
+        77.58853782473625,
+        12.98163763256148
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.705602694587975,
+        "3": 9.660000000000055
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.143734317739778,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 5.740722694188283,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.47658498578423,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 213,
+      "distanceAlongM": 21.2942583544867,
+      "lngLat": [
+        77.5885387460306,
+        12.981637680902537
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.723194860534071,
+        "3": 9.660000000000153
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.118380536578611,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 5.83864431418922,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.381353832325282,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 214,
+      "distanceAlongM": 21.39423139840448,
+      "lngLat": [
+        77.58853966814928,
+        12.981637710981365
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.733921113891256,
+        "3": 9.659999999999945
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.091065729491556,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 5.936955740674911,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.28676012965637,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 215,
+      "distanceAlongM": 21.49420444232226,
+      "lngLat": [
+        77.58854059068558,
+        12.98163772356506
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.750759178554181,
+        "3": 9.660000000000105
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.061884575670126,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.035600730305889,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.192814791845228,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 216,
+      "distanceAlongM": 21.59417748624004,
+      "lngLat": [
+        77.5885415133102,
+        12.981637719184066
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.7678155921067535,
+        "3": 9.659999999999833
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 5.030904135088123,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.099530235110245,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.134535240382895,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 217,
+      "distanceAlongM": 21.694150530157813,
+      "lngLat": [
+        77.58854243563538,
+        12.981637695990456
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.779794509559491,
+        "3": 9.660000000000002
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.997941559478684,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 6.007018691959203,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.233748224859475,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 218,
+      "distanceAlongM": 21.79412357407559,
+      "lngLat": [
+        77.58854335736672,
+        12.981637656320403
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.799982398546604,
+        "3": 9.660000000000204
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.963253959264611,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.915217753669354,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.333169575162908,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 219,
+      "distanceAlongM": 21.89409661799337,
+      "lngLat": [
+        77.58854427807346,
+        12.98163759822091
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.811445164715026,
+        "3": 9.659999999999869
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.926648782514395,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.824248154798004,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.432785373695535,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 220,
+      "distanceAlongM": 21.99406966191115,
+      "lngLat": [
+        77.5885451974518,
+        12.98163752284655
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.83149766050766,
+        "3": 9.659999999999975
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.888258334289284,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.734095091218834,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.532544005007451,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 221,
+      "distanceAlongM": 22.094042705828926,
+      "lngLat": [
+        77.5885461151971,
+        12.981637430404739
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.850000710059019,
+        "3": 9.659999999999895
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.848114652400825,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.644781228104117,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.632409407131708,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 222,
+      "distanceAlongM": 22.194015749746704,
+      "lngLat": [
+        77.5885470307743,
+        12.981637319444756
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.86443295229768,
+        "3": 9.655923305560952
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.806081821695287,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.5564180421841325,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.732348188667787,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 223,
+      "distanceAlongM": 22.293988793664482,
+      "lngLat": [
+        77.58854794410946,
+        12.981637192143564
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.8871203540834145,
+        "3": 9.634178508514154
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.762392800985097,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.46892707640718,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.832316494723007,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 224,
+      "distanceAlongM": 22.39396183758226,
+      "lngLat": [
+        77.58854885454544,
+        12.981637046424746
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.898996403999568,
+        "3": 9.609402968253455
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.71684945937477,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.382456871889982,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 6.932278184083455,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 225,
+      "distanceAlongM": 22.493934881500035,
+      "lngLat": [
+        77.58854976195518,
+        12.981636883814673
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.922112603880918,
+        "3": 9.56334005005846
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.669617622273131,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.296960038611757,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.032194447985278,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 226,
+      "distanceAlongM": 22.593907925417817,
+      "lngLat": [
+        77.58855066599085,
+        12.981636704201529
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.856036742397576,
+        "3": 9.512076973013722
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.620696955956151,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.2124762260117325,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.132029858956206,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 227,
+      "distanceAlongM": 22.693880969335595,
+      "lngLat": [
+        77.58855156604591,
+        12.981636506538738
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.664076368304699,
+        "3": 9.456294716802002
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.569996701263414,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.1291081903765114,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.231736701491491,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 228,
+      "distanceAlongM": 22.793854013253373,
+      "lngLat": [
+        77.58855246223219,
+        12.981636292826146
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.466147335456332,
+        "3": 9.380744303845688
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.517724920467013,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 5.046765653832643,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.331293945007921,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 229,
+      "distanceAlongM": 22.893827057171148,
+      "lngLat": [
+        77.58855335363737,
+        12.98163606089006
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.260778604131804,
+        "3": 9.317237952437178
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.463681619399372,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.965626842521415,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.430639715686453,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 230,
+      "distanceAlongM": 22.993800101088926,
+      "lngLat": [
+        77.58855424038262,
+        12.98163581260258
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 5.056793201088423,
+        "3": 9.22563167853587
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.408061025154178,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.885605575417255,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.529756092486045,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 231,
+      "distanceAlongM": 23.093773145006708,
+      "lngLat": [
+        77.5885551220102,
+        12.981635547546327
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 4.848190338690509,
+        "3": 9.136575298325388
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.350834080558485,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.806764696709221,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.628600917983855,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 232,
+      "distanceAlongM": 23.193746188924486,
+      "lngLat": [
+        77.58855599791775,
+        12.981635265075157
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 4.636797212768886,
+        "3": 9.04296335899068
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.291952292139145,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.729190733880596,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.727120310309684,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 233,
+      "distanceAlongM": 23.29371923284226,
+      "lngLat": [
+        77.58855686836672,
+        12.981634966998989
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 4.4198396800497095,
+        "3": 8.930164140898665
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.23161097249603,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.6527857487402455,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.825312409685983,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 234,
+      "distanceAlongM": 23.39369227676004,
+      "lngLat": [
+        77.58855773216419,
+        12.98163465107723
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 4.204049212341109,
+        "3": 8.8347650698601
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.170516897737125,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.577759032791813,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 7.923086378016072,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 235,
+      "distanceAlongM": 23.493665320677817,
+      "lngLat": [
+        77.58855858974707,
+        12.981634319491707
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.9772570694808813,
+        "3": 8.709427031978732
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.109446935404588,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.50398019599733,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.020453012987955,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 236,
+      "distanceAlongM": 23.593638364595595,
+      "lngLat": [
+        77.58855944048376,
+        12.981633971542667
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.750160714372004,
+        "3": 8.591506035199519
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 4.048344974680678,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.431540839570151,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.11735619011361,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 237,
+      "distanceAlongM": 23.693611408513377,
+      "lngLat": [
+        77.58856028384982,
+        12.98163360697025
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.517626346522553,
+        "3": 8.46608308202626
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.9871959306351017,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.360504347251128,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.213744001937851,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 238,
+      "distanceAlongM": 23.79358445243115,
+      "lngLat": [
+        77.58856112021968,
+        12.981633227386778
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.270161678081962,
+        "3": 8.323961365696572
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.9261659249087852,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.290769138627523,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.309629954915309,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 239,
+      "distanceAlongM": 23.89355749634893,
+      "lngLat": [
+        77.58856194809816,
+        12.98163283051903
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 3.0377525027213683,
+        "3": 8.201979213254452
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.865044414856844,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.222576412218247,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.40489136004767,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 240,
+      "distanceAlongM": 23.993530540266708,
+      "lngLat": [
+        77.58856276830022,
+        12.981632418813055
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 2.7747199247275933,
+        "3": 8.049516933060866
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.80408194604409,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.1557470498925415,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.499575165425057,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 241,
+      "distanceAlongM": 24.093503584184482,
+      "lngLat": [
+        77.58856357996041,
+        12.981631991319126
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 2.521771233826977,
+        "3": 7.907913932200614
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.7431970397513643,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.0904062108623815,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.593604313239787,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 242,
+      "distanceAlongM": 24.19347662810226,
+      "lngLat": [
+        77.58856438270288,
+        12.98163154813937
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 2.2721754826110634,
+        "3": 7.755241731363318
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.6824116532915037,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 4.026587935937552,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.686936843170665,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 243,
+      "distanceAlongM": 24.293449672020042,
+      "lngLat": [
+        77.58856517695386,
+        12.981631090646495
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 2.028150397452282,
+        "3": 7.588367471846151
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.6218792976914487,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.9641948583399156,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.779595766868272,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 244,
+      "distanceAlongM": 24.39342271593782,
+      "lngLat": [
+        77.58856596097219,
+        12.981630616690756
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.8274998100500155,
+        "3": 7.440272743816943
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.561391880651455,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.903488217804297,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.87143000004631,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 245,
+      "distanceAlongM": 24.493395759855595,
+      "lngLat": [
+        77.58856673593321,
+        12.981630128809707
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.6136065950823106,
+        "3": 7.261949653788942
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.5012275906518333,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.8442487781166816,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 8.962523596690874,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 246,
+      "distanceAlongM": 24.593368803773373,
+      "lngLat": [
+        77.5885675007073,
+        12.981629625884137
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.432488499684058,
+        "3": 7.095512366281122
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.441285021709991,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.786635152017647,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.052773987195412,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 247,
+      "distanceAlongM": 24.69334184769115,
+      "lngLat": [
+        77.58856825513338,
+        12.981629108344222
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.25420581361561,
+        "3": 6.913181179646005
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.381625893585161,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.7306466704386194,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.142156813033312,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 248,
+      "distanceAlongM": 24.793314891608933,
+      "lngLat": [
+        77.58856899956562,
+        12.981628577226216
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 1.083455446254677,
+        "3": 6.719891663390291
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.3223827545197837,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.6762065495341982,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.230692916955258,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 249,
+      "distanceAlongM": 24.89328793552671,
+      "lngLat": [
+        77.58856973226831,
+        12.98162803084243
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.9446338320804775,
+        "3": 6.539742212184927
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.2633859266318583,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.623557235322526,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.3182241725875,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 250,
+      "distanceAlongM": 24.993260979444486,
+      "lngLat": [
+        77.58857045456162,
+        12.981627471461682
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.7956474689032319,
+        "3": 6.330835167949661
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.204911424543538,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.5724754336342537,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.404854584964946,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 251,
+      "distanceAlongM": 25.093234023362264,
+      "lngLat": [
+        77.5885711650911,
+        12.981626897943507
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.6761671434805419,
+        "3": 6.134038424183342
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.146851091063899,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.5231433659989873,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.490457848751062,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 252,
+      "distanceAlongM": 25.193207067280042,
+      "lngLat": [
+        77.588571863971,
+        12.981626311003193
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.5551389465169175,
+        "3": 5.916317475745184
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.089310755579965,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.4755212203557155,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.57503439910402,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 253,
+      "distanceAlongM": 25.293180111197817,
+      "lngLat": [
+        77.58857255142176,
+        12.981625711370397
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.44422741439971913,
+        "3": 5.690136436590457
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 3.0324054702645364,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.42955786315834,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.65859581042435,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 254,
+      "distanceAlongM": 25.3931531551156,
+      "lngLat": [
+        77.58857322578736,
+        12.9816250977949
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.3574029436003937,
+        "3": 5.4713291002785835
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.976006846039685,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.385470398194395,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.74098527244129,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 255,
+      "distanceAlongM": 25.493126199033377,
+      "lngLat": [
+        77.58857388849094,
+        12.981624472275001
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.26489764465135224,
+        "3": 5.2242407190432605
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.9203942048086167,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.3430357771707806,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.822322293770027,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 256,
+      "distanceAlongM": 25.593099242951155,
+      "lngLat": [
+        77.58857453793925,
+        12.981623833682475
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.19909419732298772,
+        "3": 4.98940316079495
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.8654545556073576,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.30245993198592,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.902454774020045,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 257,
+      "distanceAlongM": 25.693072286868933,
+      "lngLat": [
+        77.5885751745755,
+        12.98162318296658
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.1318482157155007,
+        "3": 4.7415278735178426
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.811343848719174,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.2636604907339066,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 9.981414536178434,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 258,
+      "distanceAlongM": 25.793045330786708,
+      "lngLat": [
+        77.5885757984303,
+        12.981622520588548
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.07854504380001556,
+        "3": 4.509005028995236
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.7581629858525227,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.226616142746707,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 10.059197247675963,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 259,
+      "distanceAlongM": 25.89301837470449,
+      "lngLat": [
+        77.58857640936928,
+        12.98162184686504
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.047957031707237294,
+        "3": 4.292771182320219
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.7059978880796813,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.191328001504557,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 10.135783279618606,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 260,
+      "distanceAlongM": 25.992991418622267,
+      "lngLat": [
+        77.58857701697842,
+        12.981621170277354
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.030936554227082313,
+        "3": 4.0828277900929075
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.656150011499159,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.1564902277165547,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "338941361",
+          "distanceM": 10.212059791861444,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 261,
+      "distanceAlongM": 26.092964462540046,
+      "lngLat": [
+        77.58857762458757,
+        12.98162049368966
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.01763182040176501,
+        "3": 3.8728843978654313
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.6091819438097423,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.1216524539285433,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "38542535",
+          "distanceM": 10.236355006215327,
+          "tags": {
+            "access": "private",
+            "highway": "service"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 262,
+      "distanceAlongM": 26.19293750645782,
+      "lngLat": [
+        77.58857823219672,
+        12.981619817101969
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.008042830232074711,
+        "3": 3.662941005637963
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.565251872085655,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.086814680140532,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "38542535",
+          "distanceM": 10.136488972889302,
+          "tags": {
+            "access": "private",
+            "highway": "service"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    },
+    {
+      "index": 263,
+      "distanceAlongM": 26.2929105503756,
+      "lngLat": [
+        77.58857883980586,
+        12.981619140514272
+      ],
+      "outsideEstimatedCorridorM2": {
+        "2": 0.0021695837180065276,
+        "3": 3.4529976134105023
+      },
+      "nearestSourceWays": [
+        {
+          "id": "1092049622",
+          "distanceM": 2.5245183971592486,
+          "tags": {
+            "highway": "tertiary"
+          }
+        },
+        {
+          "id": "763048421",
+          "distanceM": 3.0519769063525217,
+          "tags": {
+            "alt_name": "Race Course Road",
+            "highway": "tertiary",
+            "lanes": "3",
+            "name": "Devaraj Urs Road",
+            "name:etymology:wikidata": "Q5203561",
+            "name:kn": "\u0ca6\u0cc7\u0cb5\u0cb0\u0cbe\u0c9c \u0c85\u0cb0\u0cb8\u0cc1 \u0cb0\u0cb8\u0ccd\u0ca4\u0cc6",
+            "oneway": "yes",
+            "parking:both:restriction": "no_stopping",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": "38542535",
+          "distanceM": 10.036625070249643,
+          "tags": {
+            "access": "private",
+            "highway": "service"
+          }
+        }
+      ],
+      "mappedAreaOverlaps": []
+    }
+  ],
+  "osmSha256": "9d4e23f03a19cf4f819d0ca49e42c8a79f9b28458d7e2f76b57a2c75262c0ac8",
+  "runtimeChanged": false,
+  "geometryChanged": false,
+  "limitations": "OSM snapshot only; absence of a restriction is not proof no real-world restriction exists.",
+  "islandClearanceFailure": {
+    "responsibleWay": "338941369",
+    "tags": {
+      "barrier": "kerb",
+      "landuse": "grass"
+    },
+    "sourceNodes": [
+      "3461278340",
+      "3461278335",
+      "3461278336",
+      "3461278338",
+      "3461278345",
+      "3461278361",
+      "3461278365",
+      "3461278367",
+      "3461278366",
+      "3461278362",
+      "3461278340"
+    ],
+    "contactPoses": [
+      {
+        "pose": 788,
+        "lngLat": [
+          77.58866730401644,
+          12.98116018999624
+        ],
+        "overlapM2": 5.326010152661489e-05,
+        "maxVertexPenetrationM": 0.0012386809417563752
+      },
+      {
+        "pose": 789,
+        "lngLat": [
+          77.5886674331831,
+          12.981159299776923
+        ],
+        "overlapM2": 0.00024910440631395014,
+        "maxVertexPenetrationM": 0.002678854744075575
+      },
+      {
+        "pose": 790,
+        "lngLat": [
+          77.58866756234977,
+          12.981158409557603
+        ],
+        "overlapM2": 0.0005889422144749434,
+        "maxVertexPenetrationM": 0.0041190285591987865
+      },
+      {
+        "pose": 791,
+        "lngLat": [
+          77.58866769151643,
+          12.981157519338279
+        ],
+        "overlapM2": 0.0010727735203255651,
+        "maxVertexPenetrationM": 0.005559202361521612
+      },
+      {
+        "pose": 792,
+        "lngLat": [
+          77.5886678206831,
+          12.981156629118951
+        ],
+        "overlapM2": 0.0017005983315685712,
+        "maxVertexPenetrationM": 0.006999376176166277
+      },
+      {
+        "pose": 793,
+        "lngLat": [
+          77.58866794984975,
+          12.98115573889962
+        ],
+        "overlapM2": 0.0024724166385560534,
+        "maxVertexPenetrationM": 0.008439549978488376
+      },
+      {
+        "pose": 794,
+        "lngLat": [
+          77.58866807901641,
+          12.981154848680287
+        ],
+        "overlapM2": 0.0033882284494603813,
+        "maxVertexPenetrationM": 0.009879723787239673
+      },
+      {
+        "pose": 795,
+        "lngLat": [
+          77.58866820818308,
+          12.98115395846095
+        ],
+        "overlapM2": 0.004448033761447064,
+        "maxVertexPenetrationM": 0.011319897595935139
+      },
+      {
+        "pose": 796,
+        "lngLat": [
+          77.58866833734974,
+          12.98115306824161
+        ],
+        "overlapM2": 0.00565183257460048,
+        "maxVertexPenetrationM": 0.01276007140468571
+      },
+      {
+        "pose": 797,
+        "lngLat": [
+          77.58866846651641,
+          12.981152178022267
+        ],
+        "overlapM2": 0.006999624889186778,
+        "maxVertexPenetrationM": 0.014200245213856096
+      },
+      {
+        "pose": 798,
+        "lngLat": [
+          77.58866859568306,
+          12.981151287802922
+        ],
+        "overlapM2": 0.008476445805983283,
+        "maxVertexPenetrationM": 0.012467013709821747
+      },
+      {
+        "pose": 799,
+        "lngLat": [
+          77.58866872484973,
+          12.981150397583571
+        ],
+        "overlapM2": 0.008809805235324084,
+        "maxVertexPenetrationM": 2.0254523041894376e-14
+      },
+      {
+        "pose": 800,
+        "lngLat": [
+          77.58866885401639,
+          12.981149507364217
+        ],
+        "overlapM2": 0.008809805235471868,
+        "maxVertexPenetrationM": 2.1783166290339235e-14
+      },
+      {
+        "pose": 801,
+        "lngLat": [
+          77.58866898318306,
+          12.981148617144862
+        ],
+        "overlapM2": 0.008809805239924959,
+        "maxVertexPenetrationM": 1.0803033688704825e-15
+      },
+      {
+        "pose": 802,
+        "lngLat": [
+          77.58866911234972,
+          12.981147726925503
+        ],
+        "overlapM2": 0.008809805235690832,
+        "maxVertexPenetrationM": 1.5951540414899195e-14
+      },
+      {
+        "pose": 803,
+        "lngLat": [
+          77.58866924151639,
+          12.98114683670614
+        ],
+        "overlapM2": 0.008809805239893817,
+        "maxVertexPenetrationM": 2.361380979030613e-14
+      },
+      {
+        "pose": 804,
+        "lngLat": [
+          77.58866937068304,
+          12.981145946486775
+        ],
+        "overlapM2": 0.008809805235639984,
+        "maxVertexPenetrationM": 4.407898732863254e-15
+      },
+      {
+        "pose": 805,
+        "lngLat": [
+          77.5886694998497,
+          12.981145056267406
+        ],
+        "overlapM2": 0.008809805239478496,
+        "maxVertexPenetrationM": 2.1027030546912578e-14
+      },
+      {
+        "pose": 806,
+        "lngLat": [
+          77.58866962901637,
+          12.981144166048034
+        ],
+        "overlapM2": 0.008809805235926838,
+        "maxVertexPenetrationM": 1.4501400377181086e-14
+      },
+      {
+        "pose": 807,
+        "lngLat": [
+          77.58866975818303,
+          12.981143275828659
+        ],
+        "overlapM2": 0.008809805238847876,
+        "maxVertexPenetrationM": 2.7040207705722775e-15
+      },
+      {
+        "pose": 808,
+        "lngLat": [
+          77.5886698873497,
+          12.98114238560928
+        ],
+        "overlapM2": 0.008809805236213789,
+        "maxVertexPenetrationM": 2.3927310622348796e-14
+      },
+      {
+        "pose": 809,
+        "lngLat": [
+          77.58867001651636,
+          12.981141495389899
+        ],
+        "overlapM2": 0.008809805238677026,
+        "maxVertexPenetrationM": 2.2974389504676147e-14
+      },
+      {
+        "pose": 810,
+        "lngLat": [
+          77.58867014568301,
+          12.981140605170514
+        ],
+        "overlapM2": 0.008809805236630747,
+        "maxVertexPenetrationM": 1.9645862041141637e-14
+      },
+      {
+        "pose": 811,
+        "lngLat": [
+          77.58867027484968,
+          12.981139714951127
+        ],
+        "overlapM2": 0.008809805238115878,
+        "maxVertexPenetrationM": 2.3927310622348796e-14
+      },
+      {
+        "pose": 812,
+        "lngLat": [
+          77.58867040401634,
+          12.981138824731735
+        ],
+        "overlapM2": 0.008809805236882268,
+        "maxVertexPenetrationM": 7.250700188590543e-15
+      },
+      {
+        "pose": 813,
+        "lngLat": [
+          77.588670533183,
+          12.981137934512342
+        ],
+        "overlapM2": 0.008809805237848758,
+        "maxVertexPenetrationM": 1.8046379227524945e-14
+      },
+      {
+        "pose": 814,
+        "lngLat": [
+          77.58867066234967,
+          12.981137044292943
+        ],
+        "overlapM2": 0.008809805237101342,
+        "maxVertexPenetrationM": 2.664592959956901e-14
+      },
+      {
+        "pose": 815,
+        "lngLat": [
+          77.58867079151634,
+          12.981136154073543
+        ],
+        "overlapM2": 0.008809805237421003,
+        "maxVertexPenetrationM": 2.949349369956843e-14
+      },
+      {
+        "pose": 816,
+        "lngLat": [
+          77.58867092068299,
+          12.98113526385414
+        ],
+        "overlapM2": 0.00880980523735242,
+        "maxVertexPenetrationM": 1.0876050282885815e-14
+      },
+      {
+        "pose": 817,
+        "lngLat": [
+          77.58867104984965,
+          12.981134373634733
+        ],
+        "overlapM2": 0.008809805237045554,
+        "maxVertexPenetrationM": 2.0301960528053525e-14
+      },
+      {
+        "pose": 818,
+        "lngLat": [
+          77.58867117901632,
+          12.98113348341532
+        ],
+        "overlapM2": 0.008809805237611032,
+        "maxVertexPenetrationM": 1.0876050282885815e-14
+      },
+      {
+        "pose": 819,
+        "lngLat": [
+          77.58867130818298,
+          12.981132593195907
+        ],
+        "overlapM2": 0.008809805236630233,
+        "maxVertexPenetrationM": 2.6827590697785013e-14
+      },
+      {
+        "pose": 820,
+        "lngLat": [
+          77.58867143734965,
+          12.981131702976493
+        ],
+        "overlapM2": 0.008809805237900328,
+        "maxVertexPenetrationM": 1.5743161259898578e-14
+      },
+      {
+        "pose": 821,
+        "lngLat": [
+          77.58867156651631,
+          12.98113081275707
+        ],
+        "overlapM2": 0.00880980523806961,
+        "maxVertexPenetrationM": 1.4501400377181086e-14
+      },
+      {
+        "pose": 822,
+        "lngLat": [
+          77.58867169568296,
+          12.981129922537647
+        ],
+        "overlapM2": 0.00880980523818728,
+        "maxVertexPenetrationM": 2.4590650110044063e-14
+      },
+      {
+        "pose": 823,
+        "lngLat": [
+          77.58867182484963,
+          12.98112903231822
+        ],
+        "overlapM2": 0.00880980523835656,
+        "maxVertexPenetrationM": 2.3927310622348796e-14
+      },
+      {
+        "pose": 824,
+        "lngLat": [
+          77.58867195401629,
+          12.981128142098793
+        ],
+        "overlapM2": 0.008809805238289475,
+        "maxVertexPenetrationM": 2.6827590697785013e-14
+      },
+      {
+        "pose": 825,
+        "lngLat": [
+          77.58867208318296,
+          12.98112725187936
+        ],
+        "overlapM2": 0.00880980523864075,
+        "maxVertexPenetrationM": 2.6278682380125552e-14
+      },
+      {
+        "pose": 826,
+        "lngLat": [
+          77.58867221234962,
+          12.981126361659925
+        ],
+        "overlapM2": 0.008809805235246729,
+        "maxVertexPenetrationM": 1.2166695318262646e-14
+      },
+      {
+        "pose": 827,
+        "lngLat": [
+          77.58867234151627,
+          12.981125471440487
+        ],
+        "overlapM2": 0.008809805238686408,
+        "maxVertexPenetrationM": 1.622319252389193e-14
+      },
+      {
+        "pose": 828,
+        "lngLat": [
+          77.58867247068294,
+          12.98112458122104
+        ],
+        "overlapM2": 0.008809805235086982,
+        "maxVertexPenetrationM": 2.10132520688664e-14
+      },
+      {
+        "pose": 829,
+        "lngLat": [
+          77.5886725998496,
+          12.9811236910016
+        ],
+        "overlapM2": 0.008809805238907842,
+        "maxVertexPenetrationM": 2.2477170584630687e-14
+      },
+      {
+        "pose": 830,
+        "lngLat": [
+          77.58867272901627,
+          12.981122800782147
+        ],
+        "overlapM2": 0.008809805234443538,
+        "maxVertexPenetrationM": 1.4501400377181086e-14
+      },
+      {
+        "pose": 831,
+        "lngLat": [
+          77.58867285818293,
+          12.981121910562697
+        ],
+        "overlapM2": 0.00880980523946684,
+        "maxVertexPenetrationM": 2.0301960528053525e-14
+      },
+      {
+        "pose": 832,
+        "lngLat": [
+          77.5886729873496,
+          12.981121020343243
+        ],
+        "overlapM2": 0.008809805234386986,
+        "maxVertexPenetrationM": 2.210287643315423e-14
+      },
+      {
+        "pose": 833,
+        "lngLat": [
+          77.58867311651625,
+          12.981120130123783
+        ],
+        "overlapM2": 0.00880980523975379,
+        "maxVertexPenetrationM": 1.0876050282885815e-14
+      },
+      {
+        "pose": 834,
+        "lngLat": [
+          77.58867324568291,
+          12.981119239904325
+        ],
+        "overlapM2": 0.00875807015603032,
+        "maxVertexPenetrationM": 0.0012208182549142785
+      },
+      {
+        "pose": 835,
+        "lngLat": [
+          77.58867337484958,
+          12.98111834968486
+        ],
+        "overlapM2": 0.008564011827367136,
+        "maxVertexPenetrationM": 0.0026609920702107817
+      },
+      {
+        "pose": 836,
+        "lngLat": [
+          77.58867350401624,
+          12.981117459465391
+        ],
+        "overlapM2": 0.008225959987726732,
+        "maxVertexPenetrationM": 0.004101165872361766
+      },
+      {
+        "pose": 837,
+        "lngLat": [
+          77.5886736331829,
+          12.98111656924592
+        ],
+        "overlapM2": 0.007743914656040067,
+        "maxVertexPenetrationM": 0.005541339687657543
+      },
+      {
+        "pose": 838,
+        "lngLat": [
+          77.58867376234957,
+          12.981115679026448
+        ],
+        "overlapM2": 0.0071178758147898945,
+        "maxVertexPenetrationM": 0.006981513489366234
+      },
+      {
+        "pose": 839,
+        "lngLat": [
+          77.58867389151622,
+          12.981114788806972
+        ],
+        "overlapM2": 0.00634784348019642,
+        "maxVertexPenetrationM": 0.008421687305104305
+      },
+      {
+        "pose": 840,
+        "lngLat": [
+          77.58867402068289,
+          12.981113898587488
+        ],
+        "overlapM2": 0.005433817637812557,
+        "maxVertexPenetrationM": 0.009861861106812995
+      },
+      {
+        "pose": 841,
+        "lngLat": [
+          77.58867414984955,
+          12.981113008368007
+        ],
+        "overlapM2": 0.004375798299905843,
+        "maxVertexPenetrationM": 0.011302034922545992
+      },
+      {
+        "pose": 842,
+        "lngLat": [
+          77.58867427901622,
+          12.981112118148516
+        ],
+        "overlapM2": 0.003173785456556434,
+        "maxVertexPenetrationM": 0.01274220872469625
+      },
+      {
+        "pose": 843,
+        "lngLat": [
+          77.58867440818288,
+          12.981111227929029
+        ],
+        "overlapM2": 0.001827779115069568,
+        "maxVertexPenetrationM": 0.014182382539551185
+      },
+      {
+        "pose": 844,
+        "lngLat": [
+          77.58867453734955,
+          12.981110337709538
+        ],
+        "overlapM2": 0.0003494744852073727,
+        "maxVertexPenetrationM": 0.01276479375960017
+      }
+    ],
+    "totalSweptOverlapM2": 0.008809805240748762,
+    "bareVehicleOverlapMaxM2": 0.0,
+    "classification": "Required0.1m lateral margin violates mapped kerbed island; reject current candidate."
+  },
+  "crossingWays": [
+    {
+      "id": "1266011217",
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "zebra",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      },
+      "distanceToSweptBodyM": 20.002863991571818
+    },
+    {
+      "id": "1354824989",
+      "tags": {
+        "footway": "crossing",
+        "highway": "footway"
+      },
+      "distanceToSweptBodyM": 13.061049619403889
+    }
+  ],
+  "ownershipGroups": [
+    {
+      "nearestWay": "1092049622",
+      "poseCount": 57,
+      "firstPose": 207,
+      "lastPose": 263,
+      "firstLngLat": [
+        77.5885332423353,
+        12.981637129766513
+      ],
+      "lastLngLat": [
+        77.58857883980586,
+        12.981619140514272
+      ],
+      "maxCenterDistanceToSourceLineM": 5.242060668765174,
+      "classification": "Unverified widened junction ownership; nearest-way proximity alone is not a source assignment."
+    },
+    {
+      "nearestWay": "338941361",
+      "poseCount": 33,
+      "firstPose": 174,
+      "lastPose": 206,
+      "firstLngLat": [
+        77.5885067673748,
+        12.981623548988297
+      ],
+      "lastLngLat": [
+        77.58853233301069,
+        12.981636977603017
+      ],
+      "maxCenterDistanceToSourceLineM": 5.1630788722156185,
+      "classification": "Unverified widened junction ownership; nearest-way proximity alone is not a source assignment."
+    }
+  ],
+  "qualification": "REJECTED for current required clearance; junction ownership additionally unverified. No runtime integration."
+}

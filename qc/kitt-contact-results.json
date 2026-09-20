@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "measuredLength": 4.884499984741211,
+  "collisionLength": 4.89,
+  "widthPolicy": "1.9m body proxy, mirrors excluded",
+  "runs": [
+    {
+      "heading": 0,
+      "progress": 35.13496155712576,
+      "impacts": 550
+    },
+    {
+      "heading": 90,
+      "progress": 35.13496155712576,
+      "impacts": 550
+    },
+    {
+      "heading": 180,
+      "progress": 35.13496155712576,
+      "impacts": 550
+    },
+    {
+      "heading": 270,
+      "progress": 35.13496155712576,
+      "impacts": 550
+    }
+  ]
+}

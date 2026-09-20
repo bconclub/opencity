@@ -1,0 +1,221 @@
+{
+  "scope": "Full city static KITT chase view,1100x800,Edge SwiftShader,60frames/run,ABBA. Relative single-device gate, not physical phone FPS or multiplayer cost.",
+  "runs": [
+    {
+      "index": 0,
+      "mode": "baseline",
+      "meanMs": 193.60999999999999,
+      "medianMs": 199.89999999999782,
+      "p95Ms": 216.6999999999971,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Auto": {
+          "calls": 68,
+          "triangles": 9972,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 7280,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 42000,
+          "textures": 4
+        }
+      },
+      "calls": 113,
+      "triangles": 350082,
+      "camera": {
+        "center": [
+          77.59367788233789,
+          12.973414495969436
+        ],
+        "zoom": 22.747210490045482,
+        "pitch": 77.98690911424053,
+        "bearing": 167.64739066936966
+      },
+      "vehicle": "kitt",
+      "assetBytes": 473028,
+      "errors": []
+    },
+    {
+      "index": 1,
+      "mode": "candidate",
+      "meanMs": 221.66666666666663,
+      "medianMs": 216.70000000000073,
+      "p95Ms": 233.39999999999964,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Auto": {
+          "calls": 22,
+          "triangles": 25454,
+          "textures": 3
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 7280,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 42000,
+          "textures": 4
+        }
+      },
+      "calls": 67,
+      "triangles": 365564,
+      "camera": {
+        "center": [
+          77.59367788233789,
+          12.973414495969436
+        ],
+        "zoom": 22.747210490045482,
+        "pitch": 77.98690911424053,
+        "bearing": 167.64739066936966
+      },
+      "vehicle": "kitt",
+      "assetBytes": 1074240,
+      "errors": []
+    },
+    {
+      "index": 2,
+      "mode": "candidate",
+      "meanMs": 215.27666666666667,
+      "medianMs": 216.6999999999971,
+      "p95Ms": 233.39999999999782,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "Auto": {
+          "calls": 22,
+          "triangles": 25454,
+          "textures": 3
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 7280,
+          "textures": 0
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 42000,
+          "textures": 4
+        }
+      },
+      "calls": 67,
+      "triangles": 365564,
+      "camera": {
+        "center": [
+          77.59367788233789,
+          12.973414495969436
+        ],
+        "zoom": 22.747210490045482,
+        "pitch": 77.98690911424053,
+        "bearing": 167.64739066936966
+      },
+      "vehicle": "kitt",
+      "assetBytes": 1074240,
+      "errors": []
+    },
+    {
+      "index": 3,
+      "mode": "baseline",
+      "meanMs": 213.33499999999998,
+      "medianMs": 216.6999999999971,
+      "p95Ms": 216.79999999999927,
+      "layers": {
+        "District": {
+          "calls": 33,
+          "triangles": 287932,
+          "textures": 18
+        },
+        "Dome": {
+          "calls": 3,
+          "triangles": 768,
+          "textures": 0
+        },
+        "OSM2World streets": {
+          "calls": 4,
+          "triangles": 2130,
+          "textures": 2
+        },
+        "Street furniture": {
+          "calls": 4,
+          "triangles": 7280,
+          "textures": 0
+        },
+        "Auto": {
+          "calls": 68,
+          "triangles": 9972,
+          "textures": 2
+        },
+        "NPC traffic": {
+          "calls": 1,
+          "triangles": 42000,
+          "textures": 4
+        }
+      },
+      "calls": 113,
+      "triangles": 350082,
+      "camera": {
+        "center": [
+          77.59367788233789,
+          12.973414495969436
+        ],
+        "zoom": 22.747210490045482,
+        "pitch": 77.98690911424053,
+        "bearing": 167.64739066936966
+      },
+      "vehicle": "kitt",
+      "assetBytes": 473028,
+      "errors": []
+    }
+  ],
+  "baselineMeanMs": 203.47249999999997,
+  "candidateMeanMs": 218.47166666666664,
+  "regressionPercent": 7.371594031953532,
+  "passed": true
+}

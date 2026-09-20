@@ -1,0 +1,73 @@
+{
+  "note": "Fixed red-marking pixel mask within y570..750. Mean raw RGB brightness is an image comparison metric, not photometry; traffic moves between captures.",
+  "pixelStats": {
+    "markings-baseline": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 234.4076840981857,
+      "palePixels": 933
+    },
+    "markings-red": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 85,
+      "palePixels": 0
+    },
+    "markings-hidden": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 102.14941302027744,
+      "palePixels": 8
+    },
+    "no-grain": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 235,
+      "palePixels": 937
+    },
+    "no-old-vidhana": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 233.16399857701887,
+      "palePixels": 925
+    },
+    "no-basemap-transport": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 232.16648879402348,
+      "palePixels": 918
+    },
+    "no-district-ground": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 232.3649946638207,
+      "palePixels": 919
+    },
+    "no-map-flat-layers": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 233.39594450373534,
+      "palePixels": 926
+    },
+    "offset-units-minus1": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 232.41942369263606,
+      "palePixels": 920
+    },
+    "offset-factor-minus1": {
+      "sampledMarkingPixels": 937,
+      "meanRGBBrightness": 232.6204197794379,
+      "palePixels": 921
+    }
+  },
+  "geometry": {
+    "accepted": {
+      "triangles": 28,
+      "degenerateOrCollapsedTriangles": 0,
+      "minimumTriangleAltitudeMetres": 0.09951211302100665,
+      "medianTriangleAltitudeMetres": 0.09999818339834088,
+      "p90TriangleAltitudeMetres": 0.10000488561690947,
+      "fractionBelow20cm": 1
+    },
+    "expanded": {
+      "triangles": 904,
+      "degenerateOrCollapsedTriangles": 4,
+      "minimumTriangleAltitudeMetres": 0,
+      "medianTriangleAltitudeMetres": 0.09983550583866076,
+      "p90TriangleAltitudeMetres": 0.09989276603190726,
+      "fractionBelow20cm": 1
+    }
+  }
+}

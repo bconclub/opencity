@@ -1,0 +1,30 @@
+{
+  "note": "Visual placement only, not a frame-time benchmark. Other landmarks preserved in interception wrapper. Runtime collision/height data unchanged.",
+  "results": [
+    {
+      "mode": "after",
+      "view": "road",
+      "camera": {
+        "requested": {
+          "center": {
+            "lng": 77.59095500000001,
+            "lat": 12.97943500000001
+          },
+          "elevation": 0,
+          "zoom": 20.274128448476958,
+          "pitch": 84.3398575236392,
+          "bearing": -44.809524178427935
+        },
+        "actual": {
+          "pitch": 84.3398575236392,
+          "zoom": 20,
+          "center": [
+            77.59095500000001,
+            12.97943500000001
+          ]
+        }
+      },
+      "errors": []
+    }
+  ]
+}

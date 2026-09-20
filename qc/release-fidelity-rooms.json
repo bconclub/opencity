@@ -1,0 +1,21 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "serviceWorkers": "block",
+  "version": "v0.0.30",
+  "checks": [
+    "loading gate waits for city and ride assets",
+    "name and private room creation",
+    "onboarding fits 330/390/430px",
+    "invalid invite error and real invite join",
+    "cycle starts, renders remotely and has valid projected name tag",
+    "auto starts, renders remotely and has valid projected name tag",
+    "cybertruck starts, renders remotely and has valid projected name tag",
+    "cybercab starts, renders remotely and has valid projected name tag",
+    "kitt starts, renders remotely and has valid projected name tag",
+    "helicopter starts, renders remotely and has valid projected name tag",
+    "remembered name and room reconnect after reload",
+    "leave and cleanup",
+    "Free room public onboarding"
+  ],
+  "errors": []
+}

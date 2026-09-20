@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "treadTriangles": 90,
+  "riserTriangles": 90,
+  "distinctTreadLevels": 45,
+  "treadNormals": [
+    0,
+    0,
+    1
+  ],
+  "riserNormals": [
+    0.7147934436798096,
+    -0.6993356347084045,
+    0
+  ],
+  "stepRise": 0.15,
+  "stepGoing": 0.4741333333333333,
+  "roadEyeHeight": 3.5,
+  "treadLevelsAboveEye": 22,
+  "directLambert": {
+    "horizontalTread": 0.7682212795973757,
+    "outwardRiser": 0.08360324830228788,
+    "ratio": 9.188892718853278
+  },
+  "shadow": {
+    "normalBias": 1.2,
+    "bias": -0.0004,
+    "lightSpaceWidth": 900,
+    "mapPixels": 2048,
+    "lightSpaceMetresPerTexel": 0.439453125,
+    "normalBiasInStepRises": 8
+  },
+  "conclusion": "Current selected geometry has upward tread normals and outward riser normals. Current sun gives risers much less direct diffuse light than treads; upper upward-facing treads are hidden below eye height. Historical receiveShadow=false diagnostic retained bands, so normalBias cannot explain all contrast. NormalBias is large relative to step rise, but no isolated current shadow-bias A/B was run and no renderer change is justified by this CPU test alone."
+}

@@ -1,0 +1,72 @@
+{
+  "evidence": {
+    "camera": {
+      "center": [
+        77.59201520065346,
+        12.979208045331035
+      ],
+      "zoom": 22.673186882467544,
+      "pitch": 77.98683450243952,
+      "bearing": 42.970806347080725
+    },
+    "auto": {
+      "vehicleType": "auto",
+      "visualHeight": 2.115000009536743,
+      "roaming": false,
+      "groundHeight": 0,
+      "cameraOrbit": {
+        "yaw": 0,
+        "elevation": 12,
+        "distance": 13
+      },
+      "active": true,
+      "paused": false,
+      "boost": {
+        "reserve": 0,
+        "active": false,
+        "locked": false
+      },
+      "speed": 0,
+      "distance": 0,
+      "heading": 42.971227739444146,
+      "choice": "straight",
+      "wheelAngle": 0,
+      "position": [
+        77.59201520065348,
+        12.979208045331047
+      ],
+      "tilt": {
+        "enabled": false,
+        "steer": 0,
+        "center": null,
+        "lastSample": 0
+      },
+      "gamepad": {
+        "connected": false,
+        "index": null,
+        "armed": false
+      },
+      "physics": {
+        "steer": 0,
+        "yaw": 0,
+        "roll": 0,
+        "pitch": 0,
+        "impacts": 0,
+        "surface": "road"
+      },
+      "ended": false,
+      "edge": 3410,
+      "from": 3348,
+      "to": 3349,
+      "progress": 44.541434318849205,
+      "roadEdges": 3803,
+      "connectedNodes": 3109,
+      "keys": []
+    },
+    "loadingGone": true,
+    "flightHudHidden": true,
+    "version": "v0.0.31"
+  },
+  "errors": [],
+  "note": "Visual-only final color-delta capture; not a frame-time benchmark."
+}

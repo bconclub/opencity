@@ -1,0 +1,155 @@
+{
+  "note": "Visual placement only, not a frame-time benchmark. Other landmarks preserved in interception wrapper. Runtime collision/height data unchanged.",
+  "results": [
+    {
+      "mode": "before",
+      "view": "front",
+      "camera": {
+        "requested": {
+          "center": {
+            "lng": 77.59064999999998,
+            "lat": 12.97972999999999
+          },
+          "elevation": 18,
+          "zoom": 18.835023989483652,
+          "pitch": 84.52107412193836,
+          "bearing": -45.010131124441386
+        },
+        "actual": {
+          "pitch": 84.52107412193836,
+          "zoom": 18.835023989483652,
+          "center": [
+            77.59064999999998,
+            12.97972999999999
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "mode": "before",
+      "view": "road",
+      "camera": {
+        "requested": {
+          "center": {
+            "lng": 77.59095500000001,
+            "lat": 12.97943500000001
+          },
+          "elevation": 0,
+          "zoom": 20.279824642172187,
+          "pitch": 87.51715585375807,
+          "bearing": -44.809524178427935
+        },
+        "actual": {
+          "pitch": 87.51715585375807,
+          "zoom": 20,
+          "center": [
+            77.59095500000001,
+            12.97943500000001
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "mode": "before",
+      "view": "aerial",
+      "camera": {
+        "requested": {
+          "center": {
+            "lng": 77.59064999999998,
+            "lat": 12.97972999999999
+          },
+          "elevation": 18,
+          "zoom": 18.258869829463077,
+          "pitch": 57.330559230636,
+          "bearing": -42.1641759105104
+        },
+        "actual": {
+          "pitch": 57.33055923063599,
+          "zoom": 18.258869829463077,
+          "center": [
+            77.59064999999998,
+            12.97972999999999
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "mode": "after",
+      "view": "front",
+      "camera": {
+        "requested": {
+          "center": {
+            "lng": 77.59064999999998,
+            "lat": 12.97972999999999
+          },
+          "elevation": 18,
+          "zoom": 18.835023989483652,
+          "pitch": 84.52107412193836,
+          "bearing": -45.010131124441386
+        },
+        "actual": {
+          "pitch": 84.52107412193836,
+          "zoom": 18.835023989483652,
+          "center": [
+            77.59064999999998,
+            12.97972999999999
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "mode": "after",
+      "view": "road",
+      "camera": {
+        "requested": {
+          "center": {
+            "lng": 77.59095500000001,
+            "lat": 12.97943500000001
+          },
+          "elevation": 0,
+          "zoom": 20.279824642172187,
+          "pitch": 87.51715585375807,
+          "bearing": -44.809524178427935
+        },
+        "actual": {
+          "pitch": 87.51715585375807,
+          "zoom": 20,
+          "center": [
+            77.59095500000001,
+            12.97943500000001
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "mode": "after",
+      "view": "aerial",
+      "camera": {
+        "requested": {
+          "center": {
+            "lng": 77.59064999999998,
+            "lat": 12.97972999999999
+          },
+          "elevation": 18,
+          "zoom": 18.258869829463077,
+          "pitch": 57.330559230636,
+          "bearing": -42.1641759105104
+        },
+        "actual": {
+          "pitch": 57.33055923063599,
+          "zoom": 18.258869829463077,
+          "center": [
+            77.59064999999998,
+            12.97972999999999
+          ]
+        }
+      },
+      "errors": []
+    }
+  ]
+}

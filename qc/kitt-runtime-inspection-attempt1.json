@@ -1,0 +1,1711 @@
+{
+  "status": "FAIL",
+  "base": "http://127.0.0.1:4173/",
+  "started": "2026-09-11T01:13:50.697Z",
+  "candidatePhysicsOverride": {
+    "wheelbase": 2.5654,
+    "wheelRadius": 0.324
+  },
+  "variants": [
+    {
+      "variant": "before",
+      "assetSHA256": "498f019da73b071b7cacf54f06daa5a5ad0536a14bd27739a3df97f368ecd339",
+      "assetBytes": 473028,
+      "requests": [
+        {
+          "who": "driver",
+          "assetSHA256": "498f019da73b071b7cacf54f06daa5a5ad0536a14bd27739a3df97f368ecd339",
+          "url": "http://127.0.0.1:4173/assets/vehicles/kitt.glb"
+        },
+        {
+          "who": "observer",
+          "assetSHA256": "498f019da73b071b7cacf54f06daa5a5ad0536a14bd27739a3df97f368ecd339",
+          "url": "http://127.0.0.1:4173/assets/vehicles/kitt.glb"
+        }
+      ],
+      "checks": [
+        "local and remote eight-segment scanner changes through actual app render loop",
+        "manual throttle/steering and actual remote wheel motion",
+        "reverse speed reaches actual remote snapshot"
+      ],
+      "screenshots": [
+        "qc/kitt-runtime-before-parked-driver.png",
+        "qc/kitt-runtime-before-parked-observer.png"
+      ],
+      "parkedLocal": {
+        "auto": {
+          "vehicleType": "kitt",
+          "visualHeight": 1.3385711908340456,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0,
+            "active": false,
+            "locked": false
+          },
+          "speed": 0,
+          "distance": 0,
+          "heading": 167.64748841537732,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": [
+            77.59367788233789,
+            12.973414495969442
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0,
+            "yaw": 0,
+            "roll": 0,
+            "pitch": 0,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "network": {
+          "name": "KITT Driver",
+          "room": "1d099afdfa72893ec5ecd2abe7a1c445",
+          "id": "f56698bd-0270-4482-810a-eb25633d8705",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "name": "KITT Driver",
+              "pose": {
+                "vehicle": "kitt",
+                "lng": 77.59367788233789,
+                "lat": 12.973414495969442,
+                "altitude": 0,
+                "heading": 167.64748841537732,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "green"
+              }
+            },
+            {
+              "id": "04c72b01-c569-4228-852c-dcc4322d171b",
+              "name": "KITT Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "green"
+              }
+            }
+          ],
+          "lastMessage": 1789089296395,
+          "pose": {
+            "vehicle": "kitt",
+            "lng": 77.59367788233789,
+            "lat": 12.973414495969442,
+            "altitude": 0,
+            "heading": 167.64748841537732,
+            "pitch": 0,
+            "roll": 0,
+            "speed": 0
+          }
+        },
+        "remote": {
+          "ownId": "f56698bd-0270-4482-810a-eb25633d8705",
+          "remoteCount": 0,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "own": true,
+              "vehicle": "kitt",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "green",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "KITT Driver · You",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "role": "local",
+            "remotePlayerId": null,
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "1742ef56-bf53-498e-9e87-db2bcc4c023d",
+                "color": "1d2128",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "Glass",
+                "uuid": "8023d2c1-e4c8-4b1b-84bb-4e9f382d1852",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "RubberTrim",
+                "uuid": "cfed4d2c-ea1c-48b6-b54a-eb983a428b5e",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "89ff3835-f392-4c87-88a9-a61601d9a20a",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "ff1a6711-de1a-4287-9241-eaf5ef993520",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "4aed41a0-e391-4c88-ba4e-8233bc890995",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "357f0524-a80b-4db0-96e9-23513d73396a",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "40819c4c-1daf-4081-8843-bb94c4beae61",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "9adc9310-d7f4-4611-914f-0e4d112e15b0",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d7cbedf9-77c4-4510-b90e-e80a08274244",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d89e1a0e-fb21-4d45-b441-8ee2ae850b9c",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "27e46900-0e02-4b86-80ff-e978746ac2ec",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "d03395eb-61e0-41a6-9004-50128896009b",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 2.7799999713897705,
+            "radius": 0.3400000035762787,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [
+              {
+                "name": "Scanner_0",
+                "intensity": 0.08000000000091516,
+                "emissiveMap": false,
+                "material": "89ff3835-f392-4c87-88a9-a61601d9a20a"
+              },
+              {
+                "name": "Scanner_1",
+                "intensity": 0.0800000398135847,
+                "emissiveMap": false,
+                "material": "ff1a6711-de1a-4287-9241-eaf5ef993520"
+              },
+              {
+                "name": "Scanner_2",
+                "intensity": 0.08014663466570075,
+                "emissiveMap": false,
+                "material": "4aed41a0-e391-4c88-ba4e-8233bc890995"
+              },
+              {
+                "name": "Scanner_3",
+                "intensity": 0.12572039468819002,
+                "emissiveMap": false,
+                "material": "357f0524-a80b-4db0-96e9-23513d73396a"
+              },
+              {
+                "name": "Scanner_4",
+                "intensity": 1.2868442739876498,
+                "emissiveMap": false,
+                "material": "40819c4c-1daf-4081-8843-bb94c4beae61"
+              },
+              {
+                "name": "Scanner_5",
+                "intensity": 2.776872678155824,
+                "emissiveMap": false,
+                "material": "9adc9310-d7f4-4611-914f-0e4d112e15b0"
+              },
+              {
+                "name": "Scanner_6",
+                "intensity": 0.5901966453339862,
+                "emissiveMap": false,
+                "material": "d7cbedf9-77c4-4510-b90e-e80a08274244"
+              },
+              {
+                "name": "Scanner_7",
+                "intensity": 0.08817114090824556,
+                "emissiveMap": false,
+                "material": "d89e1a0e-fb21-4d45-b441-8ee2ae850b9c"
+              }
+            ],
+            "visualHeight": 1.3385711908340456
+          }
+        ]
+      },
+      "parkedRemote": {
+        "auto": {
+          "vehicleType": "auto",
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": false,
+          "paused": false,
+          "boost": null,
+          "speed": 0,
+          "distance": 0,
+          "heading": 0,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": null,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "network": {
+          "name": "KITT Observer",
+          "room": "1d099afdfa72893ec5ecd2abe7a1c445",
+          "id": "04c72b01-c569-4228-852c-dcc4322d171b",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "name": "KITT Driver",
+              "pose": {
+                "vehicle": "kitt",
+                "lng": 77.59367788233789,
+                "lat": 12.973414495969442,
+                "altitude": 0,
+                "heading": 167.64748841537732,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "green"
+              }
+            },
+            {
+              "id": "04c72b01-c569-4228-852c-dcc4322d171b",
+              "name": "KITT Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "green"
+              }
+            }
+          ],
+          "lastMessage": 1789089296394,
+          "pose": {
+            "vehicle": "spectator",
+            "lng": 77.5945,
+            "lat": 12.9755,
+            "altitude": 0,
+            "heading": 0,
+            "pitch": 0,
+            "roll": 0,
+            "speed": 0
+          }
+        },
+        "remote": {
+          "ownId": "04c72b01-c569-4228-852c-dcc4322d171b",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "own": false,
+              "vehicle": "kitt",
+              "lng": 77.59367788233789,
+              "lat": 12.973414495969442,
+              "altitude": 0,
+              "heading": 167.64748841537732,
+              "pitch": 0,
+              "roll": 0,
+              "speed": 0,
+              "color": "#16845f",
+              "position": [
+                -89.08125274910155,
+                -231.89681560441392,
+                0.019999832275483406
+              ],
+              "name": "KITT Driver",
+              "labelVisible": true,
+              "rotorAngle": 0
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "role": "remote",
+            "remotePlayerId": "f56698bd-0270-4482-810a-eb25633d8705",
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "c8c51482-3b42-4cf8-b7f7-358c70f0deab",
+                "color": "16845f",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "Glass",
+                "uuid": "0257817b-b236-4898-82f8-0a9bb5a55fdb",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "RubberTrim",
+                "uuid": "9a863e40-53b2-4908-895f-401d1e615f1e",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "733a2668-7442-4070-ac52-ad4fae966f29",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "80283a35-a9b8-412f-b79a-f7390e9b4b3f",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d00b8c49-4a80-4df2-9349-6ca03cded087",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "b72a145e-bab3-4d33-9e1e-7441fabe7c3b",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d46ad849-84c1-438b-97db-23bf94f308f1",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "e5a0b745-ed89-4a1d-91b8-eca82a67a1da",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "634d7d78-f689-41f9-9cb9-cdb2e922ddc5",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "78b75e80-a617-4145-8482-7609e2b4bf96",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "9155bec5-c4c5-4e18-a4f4-126974a982bc",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "fb836ffb-b317-4845-ba27-6347f6adff27",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 2.7799999713897705,
+            "radius": 0.3400000035762787,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [
+              {
+                "name": "Scanner_0",
+                "intensity": 2.8098352742860473,
+                "emissiveMap": false,
+                "material": "733a2668-7442-4070-ac52-ad4fae966f29"
+              },
+              {
+                "name": "Scanner_1",
+                "intensity": 1.2116592715216894,
+                "emissiveMap": false,
+                "material": "80283a35-a9b8-412f-b79a-f7390e9b4b3f"
+              },
+              {
+                "name": "Scanner_2",
+                "intensity": 0.11971575988658127,
+                "emissiveMap": false,
+                "material": "d00b8c49-4a80-4df2-9349-6ca03cded087"
+              },
+              {
+                "name": "Scanner_3",
+                "intensity": 0.08011799891467253,
+                "emissiveMap": false,
+                "material": "b72a145e-bab3-4d33-9e1e-7441fabe7c3b"
+              },
+              {
+                "name": "Scanner_4",
+                "intensity": 0.08000002967980854,
+                "emissiveMap": false,
+                "material": "d46ad849-84c1-438b-97db-23bf94f308f1"
+              },
+              {
+                "name": "Scanner_5",
+                "intensity": 0.080000000000632,
+                "emissiveMap": false,
+                "material": "e5a0b745-ed89-4a1d-91b8-eca82a67a1da"
+              },
+              {
+                "name": "Scanner_6",
+                "intensity": 0.08,
+                "emissiveMap": false,
+                "material": "634d7d78-f689-41f9-9cb9-cdb2e922ddc5"
+              },
+              {
+                "name": "Scanner_7",
+                "intensity": 0.08,
+                "emissiveMap": false,
+                "material": "78b75e80-a617-4145-8482-7609e2b4bf96"
+              }
+            ],
+            "visualHeight": 1.3385711908340456
+          }
+        ]
+      },
+      "parkedPose": {
+        "vehicle": "kitt",
+        "lng": 77.59367788233789,
+        "lat": 12.973414495969442,
+        "altitude": 0,
+        "heading": 167.64748841537732,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0
+      },
+      "manualLocal": {
+        "auto": {
+          "vehicleType": "kitt",
+          "visualHeight": 1.3385711908340456,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0.46997856567947716,
+            "active": false,
+            "locked": false
+          },
+          "speed": 6.379583728308966,
+          "distance": 2.610992031552651,
+          "heading": 176.14152980896824,
+          "choice": "straight",
+          "wheelAngle": 7.679388247320643,
+          "position": [
+            77.59368255526002,
+            12.973391495243263
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0.38896972118321216,
+            "yaw": 0.7767782163403979,
+            "roll": -0.010677393639709333,
+            "pitch": 0.055849500779377184,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": [
+            "ArrowUp",
+            "ArrowRight"
+          ]
+        },
+        "network": {
+          "name": "KITT Driver",
+          "room": "1d099afdfa72893ec5ecd2abe7a1c445",
+          "id": "f56698bd-0270-4482-810a-eb25633d8705",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "name": "KITT Driver",
+              "pose": {
+                "vehicle": "kitt",
+                "lng": 77.59368255526002,
+                "lat": 12.973391495243263,
+                "altitude": 0,
+                "heading": 176.14152980896824,
+                "pitch": 0.055849500779377184,
+                "roll": -0.010677393639709333,
+                "speed": 6.379583728308966,
+                "color": "green"
+              }
+            },
+            {
+              "id": "04c72b01-c569-4228-852c-dcc4322d171b",
+              "name": "KITT Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "green"
+              }
+            }
+          ],
+          "lastMessage": 1789089301239,
+          "pose": {
+            "vehicle": "kitt",
+            "lng": 77.59368255526002,
+            "lat": 12.973391495243263,
+            "altitude": 0,
+            "heading": 176.14152980896824,
+            "pitch": 0.055849500779377184,
+            "roll": -0.010677393639709333,
+            "speed": 6.379583728308966
+          }
+        },
+        "remote": {
+          "ownId": "f56698bd-0270-4482-810a-eb25633d8705",
+          "remoteCount": 0,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "own": true,
+              "vehicle": "kitt",
+              "lng": 77.59368077866434,
+              "lat": 12.973401500229079,
+              "altitude": 0,
+              "heading": 169.40292045198203,
+              "pitch": 0.05745420786016887,
+              "roll": -0.0014950284633690498,
+              "speed": 4.837309302772051,
+              "color": "green",
+              "position": [
+                -88.76741885256752,
+                -233.34186583998695,
+                0.019999831230406245
+              ],
+              "name": "KITT Driver · You",
+              "labelVisible": true,
+              "rotorAngle": 3.133711178575635
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "role": "local",
+            "remotePlayerId": null,
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "1742ef56-bf53-498e-9e87-db2bcc4c023d",
+                "color": "1d2128",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "Glass",
+                "uuid": "8023d2c1-e4c8-4b1b-84bb-4e9f382d1852",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "RubberTrim",
+                "uuid": "cfed4d2c-ea1c-48b6-b54a-eb983a428b5e",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "89ff3835-f392-4c87-88a9-a61601d9a20a",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "ff1a6711-de1a-4287-9241-eaf5ef993520",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "4aed41a0-e391-4c88-ba4e-8233bc890995",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "357f0524-a80b-4db0-96e9-23513d73396a",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "40819c4c-1daf-4081-8843-bb94c4beae61",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "9adc9310-d7f4-4611-914f-0e4d112e15b0",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d7cbedf9-77c4-4510-b90e-e80a08274244",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d89e1a0e-fb21-4d45-b441-8ee2ae850b9c",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "27e46900-0e02-4b86-80ff-e978746ac2ec",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "d03395eb-61e0-41a6-9004-50128896009b",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 2.7799999713897705,
+            "radius": 0.3400000035762787,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  -0.8217696925627085,
+                  0,
+                  0,
+                  -0.5698197718449155
+                ],
+                "steering": [
+                  0,
+                  -0.15805473646109808,
+                  0,
+                  0.9874303521171571
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  -0.8217696925627085,
+                  0,
+                  0,
+                  -0.5698197718449155
+                ],
+                "steering": [
+                  0,
+                  -0.19432148327417265,
+                  0,
+                  0.9809378987163894
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  -0.8217696925627085,
+                  0,
+                  0,
+                  -0.5698197718449155
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  -0.8217696925627085,
+                  0,
+                  0,
+                  -0.5698197718449155
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [
+              {
+                "name": "Scanner_0",
+                "intensity": 1.1705113304363928,
+                "emissiveMap": false,
+                "material": "89ff3835-f392-4c87-88a9-a61601d9a20a"
+              },
+              {
+                "name": "Scanner_1",
+                "intensity": 2.8256210446680154,
+                "emissiveMap": false,
+                "material": "ff1a6711-de1a-4287-9241-eaf5ef993520"
+              },
+              {
+                "name": "Scanner_2",
+                "intensity": 0.6652197221205128,
+                "emissiveMap": false,
+                "material": "4aed41a0-e391-4c88-ba4e-8233bc890995"
+              },
+              {
+                "name": "Scanner_3",
+                "intensity": 0.09056003258064488,
+                "emissiveMap": false,
+                "material": "357f0524-a80b-4db0-96e9-23513d73396a"
+              },
+              {
+                "name": "Scanner_4",
+                "intensity": 0.08001613167666219,
+                "emissiveMap": false,
+                "material": "40819c4c-1daf-4081-8843-bb94c4beae61"
+              },
+              {
+                "name": "Scanner_5",
+                "intensity": 0.08000000208622769,
+                "emissiveMap": false,
+                "material": "9adc9310-d7f4-4611-914f-0e4d112e15b0"
+              },
+              {
+                "name": "Scanner_6",
+                "intensity": 0.08000000000002284,
+                "emissiveMap": false,
+                "material": "d7cbedf9-77c4-4510-b90e-e80a08274244"
+              },
+              {
+                "name": "Scanner_7",
+                "intensity": 0.08,
+                "emissiveMap": false,
+                "material": "d89e1a0e-fb21-4d45-b441-8ee2ae850b9c"
+              }
+            ],
+            "visualHeight": 1.3385711908340456
+          }
+        ]
+      },
+      "manualRemote": {
+        "auto": {
+          "vehicleType": "auto",
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": false,
+          "paused": false,
+          "boost": null,
+          "speed": 0,
+          "distance": 0,
+          "heading": 0,
+          "choice": "straight",
+          "wheelAngle": 0,
+          "position": null,
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": null,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": []
+        },
+        "network": {
+          "name": "KITT Observer",
+          "room": "1d099afdfa72893ec5ecd2abe7a1c445",
+          "id": "04c72b01-c569-4228-852c-dcc4322d171b",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "name": "KITT Driver",
+              "pose": {
+                "vehicle": "kitt",
+                "lng": 77.59368255526002,
+                "lat": 12.973391495243263,
+                "altitude": 0,
+                "heading": 176.14152980896824,
+                "pitch": 0.055849500779377184,
+                "roll": -0.010677393639709333,
+                "speed": 6.379583728308966,
+                "color": "green"
+              }
+            },
+            {
+              "id": "04c72b01-c569-4228-852c-dcc4322d171b",
+              "name": "KITT Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "green"
+              }
+            }
+          ],
+          "lastMessage": 1789089301239,
+          "pose": {
+            "vehicle": "spectator",
+            "lng": 77.5945,
+            "lat": 12.9755,
+            "altitude": 0,
+            "heading": 0,
+            "pitch": 0,
+            "roll": 0,
+            "speed": 0
+          }
+        },
+        "remote": {
+          "ownId": "04c72b01-c569-4228-852c-dcc4322d171b",
+          "remoteCount": 1,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "own": false,
+              "vehicle": "kitt",
+              "lng": 77.59368171046948,
+              "lat": 12.973395798698741,
+              "altitude": 0,
+              "heading": 174.0469249897144,
+              "pitch": 0.055155583849429646,
+              "roll": -0.008044380785347593,
+              "speed": 5.576464315706955,
+              "color": "#16845f",
+              "position": [
+                -88.66645232354603,
+                -233.9758426070928,
+                0.019999830771907205
+              ],
+              "name": "KITT Driver",
+              "labelVisible": true,
+              "rotorAngle": 3.7285014527432345
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "role": "remote",
+            "remotePlayerId": "f56698bd-0270-4482-810a-eb25633d8705",
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "c8c51482-3b42-4cf8-b7f7-358c70f0deab",
+                "color": "16845f",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "Glass",
+                "uuid": "0257817b-b236-4898-82f8-0a9bb5a55fdb",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "RubberTrim",
+                "uuid": "9a863e40-53b2-4908-895f-401d1e615f1e",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "733a2668-7442-4070-ac52-ad4fae966f29",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "80283a35-a9b8-412f-b79a-f7390e9b4b3f",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d00b8c49-4a80-4df2-9349-6ca03cded087",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "b72a145e-bab3-4d33-9e1e-7441fabe7c3b",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d46ad849-84c1-438b-97db-23bf94f308f1",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "e5a0b745-ed89-4a1d-91b8-eca82a67a1da",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "634d7d78-f689-41f9-9cb9-cdb2e922ddc5",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "78b75e80-a617-4145-8482-7609e2b4bf96",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "9155bec5-c4c5-4e18-a4f4-126974a982bc",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "fb836ffb-b317-4845-ba27-6347f6adff27",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 2.7799999713897705,
+            "radius": 0.3400000035762787,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  -0.9572503669346718,
+                  0,
+                  0,
+                  -0.289260669644935
+                ],
+                "steering": [
+                  0,
+                  -0.2071454087168871,
+                  0,
+                  0.9783101653604105
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  -0.9572503669346718,
+                  0,
+                  0,
+                  -0.289260669644935
+                ],
+                "steering": [
+                  0,
+                  -0.27078711645483605,
+                  0,
+                  0.9626392561920977
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  -0.9572503669346718,
+                  0,
+                  0,
+                  -0.289260669644935
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  -0.9572503669346718,
+                  0,
+                  0,
+                  -0.289260669644935
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [
+              {
+                "name": "Scanner_0",
+                "intensity": 0.08,
+                "emissiveMap": false,
+                "material": "733a2668-7442-4070-ac52-ad4fae966f29"
+              },
+              {
+                "name": "Scanner_1",
+                "intensity": 0.08000000000002548,
+                "emissiveMap": false,
+                "material": "80283a35-a9b8-412f-b79a-f7390e9b4b3f"
+              },
+              {
+                "name": "Scanner_2",
+                "intensity": 0.08000000227838781,
+                "emissiveMap": false,
+                "material": "d00b8c49-4a80-4df2-9349-6ca03cded087"
+              },
+              {
+                "name": "Scanner_3",
+                "intensity": 0.08001724493076195,
+                "emissiveMap": false,
+                "material": "b72a145e-bab3-4d33-9e1e-7441fabe7c3b"
+              },
+              {
+                "name": "Scanner_4",
+                "intensity": 0.09105002365539636,
+                "emissiveMap": false,
+                "material": "d46ad849-84c1-438b-97db-23bf94f308f1"
+              },
+              {
+                "name": "Scanner_5",
+                "intensity": 0.6794223146721158,
+                "emissiveMap": false,
+                "material": "e5a0b745-ed89-4a1d-91b8-eca82a67a1da"
+              },
+              {
+                "name": "Scanner_6",
+                "intensity": 2.832773956990578,
+                "emissiveMap": false,
+                "material": "634d7d78-f689-41f9-9cb9-cdb2e922ddc5"
+              },
+              {
+                "name": "Scanner_7",
+                "intensity": 1.150227586780219,
+                "emissiveMap": false,
+                "material": "78b75e80-a617-4145-8482-7609e2b4bf96"
+              }
+            ],
+            "visualHeight": 1.3385711908340456
+          }
+        ]
+      },
+      "reverse": {
+        "auto": {
+          "vehicleType": "kitt",
+          "visualHeight": 1.3385711908340456,
+          "roaming": false,
+          "groundHeight": 0,
+          "cameraOrbit": {
+            "yaw": 0,
+            "elevation": 12,
+            "distance": 13
+          },
+          "active": true,
+          "paused": false,
+          "boost": {
+            "reserve": 0.7547851514952184,
+            "active": false,
+            "locked": false
+          },
+          "speed": -0.6161274117511374,
+          "distance": 4.193250841640099,
+          "heading": 186.88828912585973,
+          "choice": "straight",
+          "wheelAngle": 11.81730155046575,
+          "position": [
+            77.59368362994084,
+            12.973378861482132
+          ],
+          "tilt": {
+            "enabled": false,
+            "steer": 0,
+            "center": null,
+            "lastSample": 0
+          },
+          "gamepad": {
+            "connected": false,
+            "index": null,
+            "armed": false
+          },
+          "physics": {
+            "steer": 0.000007934789154119494,
+            "yaw": 0.00043054826652525564,
+            "roll": 0.00003005203959515383,
+            "pitch": -0.011128112353667683,
+            "impacts": 0,
+            "surface": "road"
+          },
+          "ended": false,
+          "edge": 1773,
+          "from": 54,
+          "to": 1987,
+          "progress": 112.88795121176925,
+          "roadEdges": 3803,
+          "connectedNodes": 3109,
+          "keys": [
+            "ArrowDown"
+          ]
+        },
+        "network": {
+          "name": "KITT Driver",
+          "room": "1d099afdfa72893ec5ecd2abe7a1c445",
+          "id": "f56698bd-0270-4482-810a-eb25633d8705",
+          "status": "Connected",
+          "public": false,
+          "connected": true,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "name": "KITT Driver",
+              "pose": {
+                "vehicle": "kitt",
+                "lng": 77.59368362994084,
+                "lat": 12.973378861482132,
+                "altitude": 0,
+                "heading": 186.88828912585973,
+                "pitch": -0.011128112353667683,
+                "roll": 0.00003005203959515383,
+                "speed": -0.6161274117511374,
+                "color": "green"
+              }
+            },
+            {
+              "id": "04c72b01-c569-4228-852c-dcc4322d171b",
+              "name": "KITT Observer",
+              "pose": {
+                "vehicle": "spectator",
+                "lng": 77.5945,
+                "lat": 12.9755,
+                "altitude": 0,
+                "heading": 0,
+                "pitch": 0,
+                "roll": 0,
+                "speed": 0,
+                "color": "green"
+              }
+            }
+          ],
+          "lastMessage": 1789089303316,
+          "pose": {
+            "vehicle": "kitt",
+            "lng": 77.59368362994084,
+            "lat": 12.973378861482132,
+            "altitude": 0,
+            "heading": 186.88828912585973,
+            "pitch": -0.011128112353667683,
+            "roll": 0.00003005203959515383,
+            "speed": -0.6161274117511374
+          }
+        },
+        "remote": {
+          "ownId": "f56698bd-0270-4482-810a-eb25633d8705",
+          "remoteCount": 0,
+          "tagCount": 1,
+          "players": [
+            {
+              "id": "f56698bd-0270-4482-810a-eb25633d8705",
+              "own": true,
+              "vehicle": "kitt",
+              "lng": 77.59368354326456,
+              "lat": 12.9733781689296,
+              "altitude": 0,
+              "heading": 186.87780248201193,
+              "pitch": -0.00018682126177287615,
+              "roll": 0.0002738104618533927,
+              "speed": -0.13987404204460446,
+              "color": "green",
+              "position": [
+                -88.4678582627904,
+                -235.93616954331037,
+                0.019999829354178312
+              ],
+              "name": "KITT Driver · You",
+              "labelVisible": true,
+              "rotorAngle": 6.6594065249887855
+            }
+          ],
+          "disposed": false
+        },
+        "models": [
+          {
+            "role": "local",
+            "remotePlayerId": null,
+            "paint": [
+              {
+                "name": "BodyPaint",
+                "uuid": "1742ef56-bf53-498e-9e87-db2bcc4c023d",
+                "color": "1d2128",
+                "emissiveMap": false
+              }
+            ],
+            "nonPaint": [
+              {
+                "name": "Glass",
+                "uuid": "8023d2c1-e4c8-4b1b-84bb-4e9f382d1852",
+                "color": "294450",
+                "emissiveMap": false
+              },
+              {
+                "name": "RubberTrim",
+                "uuid": "cfed4d2c-ea1c-48b6-b54a-eb983a428b5e",
+                "color": "1e2329",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "89ff3835-f392-4c87-88a9-a61601d9a20a",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "ff1a6711-de1a-4287-9241-eaf5ef993520",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "4aed41a0-e391-4c88-ba4e-8233bc890995",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "357f0524-a80b-4db0-96e9-23513d73396a",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "40819c4c-1daf-4081-8843-bb94c4beae61",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "9adc9310-d7f4-4611-914f-0e4d112e15b0",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d7cbedf9-77c4-4510-b90e-e80a08274244",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "d89e1a0e-fb21-4d45-b441-8ee2ae850b9c",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "Lamps",
+                "uuid": "27e46900-0e02-4b86-80ff-e978746ac2ec",
+                "color": "ffffff",
+                "emissiveMap": false
+              },
+              {
+                "name": "",
+                "uuid": "d03395eb-61e0-41a6-9004-50128896009b",
+                "color": "ffffff",
+                "emissiveMap": false
+              }
+            ],
+            "wheelbase": 2.7799999713897705,
+            "radius": 0.3400000035762787,
+            "wheels": [
+              {
+                "name": "Wheel_FL",
+                "spin": [
+                  0.25738927678627976,
+                  0,
+                  0,
+                  0.9663077978550292
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_FR",
+                "spin": [
+                  0.25738927678627976,
+                  0,
+                  0,
+                  0.9663077978550292
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RL",
+                "spin": [
+                  0.25738927678627976,
+                  0,
+                  0,
+                  0.9663077978550292
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Wheel_RR",
+                "spin": [
+                  0.25738927678627976,
+                  0,
+                  0,
+                  0.9663077978550292
+                ],
+                "steering": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            ],
+            "scanners": [
+              {
+                "name": "Scanner_0",
+                "intensity": 2.7995858970328817,
+                "emissiveMap": false,
+                "material": "89ff3835-f392-4c87-88a9-a61601d9a20a"
+              },
+              {
+                "name": "Scanner_1",
+                "intensity": 1.2363327018397587,
+                "emissiveMap": false,
+                "material": "ff1a6711-de1a-4287-9241-eaf5ef993520"
+              },
+              {
+                "name": "Scanner_2",
+                "intensity": 0.12162275104689113,
+                "emissiveMap": false,
+                "material": "4aed41a0-e391-4c88-ba4e-8233bc890995"
+              },
+              {
+                "name": "Scanner_3",
+                "intensity": 0.08012683721596023,
+                "emissiveMap": false,
+                "material": "357f0524-a80b-4db0-96e9-23513d73396a"
+              },
+              {
+                "name": "Scanner_4",
+                "intensity": 0.08000003272130124,
+                "emissiveMap": false,
+                "material": "40819c4c-1daf-4081-8843-bb94c4beae61"
+              },
+              {
+                "name": "Scanner_5",
+                "intensity": 0.08000000000071464,
+                "emissiveMap": false,
+                "material": "9adc9310-d7f4-4611-914f-0e4d112e15b0"
+              },
+              {
+                "name": "Scanner_6",
+                "intensity": 0.08,
+                "emissiveMap": false,
+                "material": "d7cbedf9-77c4-4510-b90e-e80a08274244"
+              },
+              {
+                "name": "Scanner_7",
+                "intensity": 0.08,
+                "emissiveMap": false,
+                "material": "d89e1a0e-fb21-4d45-b441-8ee2ae850b9c"
+              }
+            ],
+            "visualHeight": 1.3385711908340456
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "note": "Full app with local actual room server. Only GLB response/tuning and read-only inspection hooks are intercepted; production files remain untouched. GPU visuals require human review.",
+  "failure": "locator.click: Timeout 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#reset-auto')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"reset-auto\">Reset Knight Rider</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    88 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\user\\Documents\\ChatGPT\\Z\\qc\\kitt-runtime-inspection.cjs:71:41",
+  "finished": "2026-09-11T01:16:34.069Z"
+}

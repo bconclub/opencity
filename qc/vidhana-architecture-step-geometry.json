@@ -1,0 +1,11 @@
+{
+  "treadTriangles": 90,
+  "riserTriangles": 90,
+  "distinctRisers": 45,
+  "treadInteriorOverlap": false,
+  "treadNormals": "vertical +Z",
+  "riserNormals": "outward horizontal",
+  "treadsAboveRoadCamera": 22,
+  "totalTreads": 45,
+  "lightingObservation": "At a3.5m camera height, treads above3.5m face away from viewer and front risers obscure their tops."
+}

@@ -1,0 +1,217 @@
+{
+  "architecture": {
+    "columnCount": 12,
+    "columnHeight": 12.192,
+    "steps": 45,
+    "stairWidth": 62.1792,
+    "stairDepth": 21.336,
+    "landingZ": 6.75,
+    "canopyBottom": 18.942,
+    "canopyTop": 20.742,
+    "wingRoofZ": 19.3548,
+    "centralWingRoofZ": 34.1376,
+    "centralDomeTopZ": 45.72,
+    "northSouthGradeDifference": 3.048,
+    "datum": "Estimated north-side ground datum shared across flat review ground; south cellar/terrain unresolved",
+    "columns": 12,
+    "columnCenters": [
+      [
+        -383.0343123969441,
+        421.7128602499882
+      ],
+      [
+        -377.5250076274866,
+        416.1698199999852
+      ],
+      [
+        -375.72427990570964,
+        414.3921787499746
+      ],
+      [
+        -373.92762009289385,
+        416.23661199997474
+      ],
+      [
+        -371.53162168584674,
+        418.7260054999853
+      ],
+      [
+        -368.9674830398676,
+        421.2738419999743
+      ],
+      [
+        -366.48809249805294,
+        423.7319267499899
+      ],
+      [
+        -364.25955634533585,
+        426.0960852499705
+      ],
+      [
+        -362.2445854156914,
+        428.26752099997304
+      ],
+      [
+        -360.5699628730653,
+        429.91296974997135
+      ],
+      [
+        -362.51510136470483,
+        431.77131799996107
+      ],
+      [
+        -367.7667718969241,
+        436.88090599997827
+      ]
+    ],
+    "stairPlacement": {
+      "tangent": [
+        0.6993356406560726,
+        0.7147934398888677
+      ],
+      "outward": [
+        0.7147934398888677,
+        -0.6993356406560726
+      ],
+      "centerAlong": 44.23852194037802,
+      "topV": -556.1249967450274,
+      "bottomV": -534.7889967450274,
+      "landingRearV": -571.832961257508,
+      "topWidth": 29.34384792119843,
+      "estimated": true
+    },
+    "foyer": {
+      "backV": -571.832961257508,
+      "width": 25.34384792119843,
+      "entryWidth": 5.2,
+      "entryHeight": 6.8,
+      "recessDepth": 0.35,
+      "baseZ": 6.75,
+      "topZ": 18.942,
+      "estimated": true
+    },
+    "reviewOnly": true
+  },
+  "samples": [
+    {
+      "t": 0,
+      "fraction": -0.9,
+      "lng": 77.59108091587052,
+      "lat": 12.978964049883327,
+      "expectedStairHeight": 0,
+      "streetHeight": null
+    },
+    {
+      "t": 0,
+      "fraction": 0,
+      "lng": 77.59126130208446,
+      "lat": 12.979143715513187,
+      "expectedStairHeight": 0,
+      "streetHeight": null
+    },
+    {
+      "t": 0,
+      "fraction": 0.9,
+      "lng": 77.5914416882984,
+      "lat": 12.979323381143045,
+      "expectedStairHeight": 0,
+      "streetHeight": null
+    },
+    {
+      "t": 0.25,
+      "fraction": -0.9,
+      "lng": 77.5910695828519,
+      "lat": 12.979021278475779,
+      "expectedStairHeight": 1.6875,
+      "streetHeight": 0
+    },
+    {
+      "t": 0.25,
+      "fraction": 0,
+      "lng": 77.59122615465185,
+      "lat": 12.97917722482245,
+      "expectedStairHeight": 1.6875,
+      "streetHeight": null
+    },
+    {
+      "t": 0.25,
+      "fraction": 0.9,
+      "lng": 77.59138272645178,
+      "lat": 12.97933317116912,
+      "expectedStairHeight": 1.6875,
+      "streetHeight": null
+    },
+    {
+      "t": 0.5,
+      "fraction": -0.9,
+      "lng": 77.5910582498333,
+      "lat": 12.979078507068232,
+      "expectedStairHeight": 3.375,
+      "streetHeight": 0
+    },
+    {
+      "t": 0.5,
+      "fraction": 0,
+      "lng": 77.59119100721924,
+      "lat": 12.979210734131714,
+      "expectedStairHeight": 3.375,
+      "streetHeight": null
+    },
+    {
+      "t": 0.5,
+      "fraction": 0.9,
+      "lng": 77.59132376460516,
+      "lat": 12.979342961195197,
+      "expectedStairHeight": 3.375,
+      "streetHeight": 0
+    },
+    {
+      "t": 0.75,
+      "fraction": -0.9,
+      "lng": 77.59104691681469,
+      "lat": 12.979135735660684,
+      "expectedStairHeight": 5.0625,
+      "streetHeight": 0
+    },
+    {
+      "t": 0.75,
+      "fraction": 0,
+      "lng": 77.59115585978662,
+      "lat": 12.979244243440977,
+      "expectedStairHeight": 5.0625,
+      "streetHeight": 0.015963035729622693
+    },
+    {
+      "t": 0.75,
+      "fraction": 0.9,
+      "lng": 77.59126480275854,
+      "lat": 12.979352751221272,
+      "expectedStairHeight": 5.0625,
+      "streetHeight": 0
+    },
+    {
+      "t": 1,
+      "fraction": -0.9,
+      "lng": 77.59103558379607,
+      "lat": 12.979192964253135,
+      "expectedStairHeight": 6.75,
+      "streetHeight": 0
+    },
+    {
+      "t": 1,
+      "fraction": 0,
+      "lng": 77.591120712354,
+      "lat": 12.979277752750242,
+      "expectedStairHeight": 6.75,
+      "streetHeight": null
+    },
+    {
+      "t": 1,
+      "fraction": 0.9,
+      "lng": 77.59120584091193,
+      "lat": 12.979362541247347,
+      "expectedStairHeight": 6.75,
+      "streetHeight": 0
+    }
+  ]
+}

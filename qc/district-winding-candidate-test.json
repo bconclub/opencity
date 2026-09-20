@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "sourceHashes": {
+    "baseline": "6d9274e80b60a23b5bd8fa23af64b98333b23a9f1daf3407814faabac348a121",
+    "candidate": "e96864f35666e75bb20d011db0f4ef61e587d45dbc57e506e93c93cb3d3dc276"
+  },
+  "triangleCounts": {
+    "reversed": 30202,
+    "unchanged": 24735,
+    "total": 54937
+  },
+  "outwardFixtureTriangles": 32,
+  "checks": [
+    "Every position+UV tuple preserved in its original triangle",
+    "Only vertices1/2 exchanged where winding was inward",
+    "All bucket bounds/counts unchanged",
+    "Roof bucket exact byte-equivalent arrays",
+    "CW and CCW outer/hole fixtures face outside solids",
+    "Facade FrontSide, shadowSide DoubleSide; roof remains DoubleSide"
+  ],
+  "note": "CPU geometry/material checks, no renderer or performance measurement."
+}

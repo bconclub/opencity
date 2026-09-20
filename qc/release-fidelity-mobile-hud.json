@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "hidden flight HUD stays hidden during ground ride 330x844",
+    "hidden flight HUD stays hidden during ground ride 390x844",
+    "hidden flight HUD stays hidden during ground ride 430x844",
+    "hidden flight HUD stays hidden during ground ride 844x390",
+    "flight HUD remains available when actually flying"
+  ]
+}

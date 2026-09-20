@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "cpuOnly": true,
+  "metadataRejections": [
+    "version",
+    "geometry hash",
+    "atlas hash",
+    "size",
+    "byte limit",
+    "origin",
+    "bounds",
+    "extent",
+    "remote URL",
+    "bad type"
+  ],
+  "fallback": [
+    {
+      "failure": "404",
+      "reason": "Street coverage atlas unavailable"
+    },
+    {
+      "failure": "corrupt",
+      "reason": "Street coverage atlas integrity mismatch"
+    },
+    {
+      "failure": "geometry",
+      "reason": "Street coverage geometry mismatch"
+    },
+    {
+      "failure": "classified",
+      "reason": "Street coverage geometry mismatch"
+    },
+    {
+      "failure": "unknown",
+      "reason": "Street coverage material mismatch"
+    }
+  ],
+  "perLoadTextureIsolation": true,
+  "idempotentDispose": true,
+  "retryAfterFailure": true,
+  "opaqueOutput": true,
+  "hashes": {
+    "geometry": "87fe720941fc52856fd04f8ffa47f16df1bd363c56017530af65e6436a46b0dc",
+    "atlas": "2b72eb8b720b87cb65b4241f5f4789b6398852b79a6134b9e586fccf55f06c8b"
+  }
+}

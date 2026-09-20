@@ -1,0 +1,307 @@
+{
+  "source": "assets/vehicles/cybercab-rigged.glb",
+  "coordinateSystem": "GLB Y-up, forward -Z, wheel axle X",
+  "positionQuantizationMetres": 0.00001,
+  "normalQuantization": 0.00001,
+  "comparisons": [
+    {
+      "role": "tyre",
+      "reference": "FR",
+      "target": "FL",
+      "rotationAboutLocalY": 3.141592653589793,
+      "triangles": 672,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 672,
+      "windingUnmatchedTriangles": 672,
+      "attributesUnmatchedTriangles": 672,
+      "minimumBestNormalDot": -1.0000000000000004,
+      "maximumNormalVectorError": 2,
+      "maximumMatchedPositionErrorMetres": 1.0115582471600189e-16,
+      "unmatchedPositionVertices": 0
+    },
+    {
+      "role": "tyre",
+      "reference": "FR",
+      "target": "RL",
+      "rotationAboutLocalY": 3.141592653589793,
+      "triangles": 672,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 672,
+      "windingUnmatchedTriangles": 672,
+      "attributesUnmatchedTriangles": 672,
+      "minimumBestNormalDot": -1.0000000000000004,
+      "maximumNormalVectorError": 2,
+      "maximumMatchedPositionErrorMetres": 1.0115582471600189e-16,
+      "unmatchedPositionVertices": 0
+    },
+    {
+      "role": "tyre",
+      "reference": "FR",
+      "target": "RR",
+      "rotationAboutLocalY": 0,
+      "triangles": 672,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 0,
+      "windingUnmatchedTriangles": 0,
+      "attributesUnmatchedTriangles": 0,
+      "minimumBestNormalDot": 0.9999999999999997,
+      "maximumNormalVectorError": 2.5809568279517847e-8,
+      "maximumMatchedPositionErrorMetres": 0,
+      "unmatchedPositionVertices": 0
+    },
+    {
+      "role": "rim",
+      "reference": "FR",
+      "target": "FL",
+      "rotationAboutLocalY": 3.141592653589793,
+      "triangles": 240,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 0,
+      "windingUnmatchedTriangles": 0,
+      "attributesUnmatchedTriangles": 0,
+      "minimumBestNormalDot": 1,
+      "maximumNormalVectorError": 0,
+      "maximumMatchedPositionErrorMetres": 9.63797009990848e-17,
+      "unmatchedPositionVertices": 0
+    },
+    {
+      "role": "rim",
+      "reference": "FR",
+      "target": "RL",
+      "rotationAboutLocalY": 3.141592653589793,
+      "triangles": 240,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 0,
+      "windingUnmatchedTriangles": 0,
+      "attributesUnmatchedTriangles": 0,
+      "minimumBestNormalDot": 1,
+      "maximumNormalVectorError": 0,
+      "maximumMatchedPositionErrorMetres": 9.63797009990848e-17,
+      "unmatchedPositionVertices": 0
+    },
+    {
+      "role": "rim",
+      "reference": "FR",
+      "target": "RR",
+      "rotationAboutLocalY": 0,
+      "triangles": 240,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 0,
+      "windingUnmatchedTriangles": 0,
+      "attributesUnmatchedTriangles": 0,
+      "minimumBestNormalDot": 1,
+      "maximumNormalVectorError": 0,
+      "maximumMatchedPositionErrorMetres": 0,
+      "unmatchedPositionVertices": 0
+    },
+    {
+      "role": "liner",
+      "reference": "FR",
+      "target": "FL",
+      "rotationAboutLocalY": 3.141592653589793,
+      "triangles": 288,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 192,
+      "windingUnmatchedTriangles": 240,
+      "attributesUnmatchedTriangles": 288,
+      "minimumBestNormalDot": -1.0000000000000002,
+      "maximumNormalVectorError": 2,
+      "maximumMatchedPositionErrorMetres": 1.0900192036415384e-16,
+      "unmatchedPositionVertices": 0
+    },
+    {
+      "role": "liner",
+      "reference": "FR",
+      "target": "RL",
+      "rotationAboutLocalY": 3.141592653589793,
+      "triangles": 288,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 192,
+      "windingUnmatchedTriangles": 240,
+      "attributesUnmatchedTriangles": 288,
+      "minimumBestNormalDot": -1.0000000000000002,
+      "maximumNormalVectorError": 2,
+      "maximumMatchedPositionErrorMetres": 1.0900192036415384e-16,
+      "unmatchedPositionVertices": 0
+    },
+    {
+      "role": "liner",
+      "reference": "FR",
+      "target": "RR",
+      "rotationAboutLocalY": 0,
+      "triangles": 288,
+      "materialSame": true,
+      "positionsUnmatchedTriangles": 0,
+      "windingUnmatchedTriangles": 0,
+      "attributesUnmatchedTriangles": 0,
+      "minimumBestNormalDot": 0.9999999999999998,
+      "maximumNormalVectorError": 2.1073424255447017e-8,
+      "maximumMatchedPositionErrorMetres": 0,
+      "unmatchedPositionVertices": 0
+    }
+  ],
+  "sameSideRawArrays": [
+    {
+      "role": "tyre",
+      "front": "FL",
+      "rear": "RL",
+      "indicesEqual": true,
+      "attributesEqual": {
+        "position": true,
+        "normal": true
+      }
+    },
+    {
+      "role": "tyre",
+      "front": "FR",
+      "rear": "RR",
+      "indicesEqual": true,
+      "attributesEqual": {
+        "position": true,
+        "normal": true
+      }
+    },
+    {
+      "role": "rim",
+      "front": "FL",
+      "rear": "RL",
+      "indicesEqual": true,
+      "attributesEqual": {
+        "position": true,
+        "normal": true
+      }
+    },
+    {
+      "role": "rim",
+      "front": "FR",
+      "rear": "RR",
+      "indicesEqual": true,
+      "attributesEqual": {
+        "position": true,
+        "normal": true
+      }
+    },
+    {
+      "role": "liner",
+      "front": "FL",
+      "rear": "RL",
+      "indicesEqual": true,
+      "attributesEqual": {
+        "position": true,
+        "normal": true
+      }
+    },
+    {
+      "role": "liner",
+      "front": "FR",
+      "rear": "RR",
+      "indicesEqual": true,
+      "attributesEqual": {
+        "position": true,
+        "normal": true
+      }
+    }
+  ],
+  "pivots": {
+    "FL": [
+      -0.7799999713897705,
+      0.36500000953674316,
+      -1.4049999713897705
+    ],
+    "FR": [
+      0.7799999713897705,
+      0.36500000953674316,
+      -1.4049999713897705
+    ],
+    "RL": [
+      -0.7799999713897705,
+      0.36500000953674316,
+      1.3669999837875366
+    ],
+    "RR": [
+      0.7799999713897705,
+      0.36500000953674316,
+      1.3669999837875366
+    ]
+  },
+  "materials": [
+    {
+      "node": "Body_FixedFenders",
+      "name": "Material_0",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "Wheel_FL",
+      "name": "ReplacementRubberAndHiddenLiners",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "Rim_Wheel_FL",
+      "name": "ReplacementGoldRims",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "FixedLiner_Wheel_FL",
+      "name": "ReplacementRubberAndHiddenLiners",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "Wheel_FR",
+      "name": "ReplacementRubberAndHiddenLiners",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "Rim_Wheel_FR",
+      "name": "ReplacementGoldRims",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "FixedLiner_Wheel_FR",
+      "name": "ReplacementRubberAndHiddenLiners",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "Wheel_RL",
+      "name": "ReplacementRubberAndHiddenLiners",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "Rim_Wheel_RL",
+      "name": "ReplacementGoldRims",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "FixedLiner_Wheel_RL",
+      "name": "ReplacementRubberAndHiddenLiners",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "Wheel_RR",
+      "name": "ReplacementRubberAndHiddenLiners",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "Rim_Wheel_RR",
+      "name": "ReplacementGoldRims",
+      "side": 2,
+      "transparent": false
+    },
+    {
+      "node": "FixedLiner_Wheel_RR",
+      "name": "ReplacementRubberAndHiddenLiners",
+      "side": 2,
+      "transparent": false
+    }
+  ]
+}

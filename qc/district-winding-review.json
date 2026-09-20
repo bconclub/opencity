@@ -1,0 +1,1209 @@
+{
+  "commit": "334a1469d4342f4436a89711c4817e3ce4e6a931",
+  "scope": "Whole334a146 runtime snapshot, only district module differs; per-mesh first-render GL diagnostics, no timing benchmark.",
+  "sourceHashes": {
+    "baseline": "6d9274e80b60a23b5bd8fa23af64b98333b23a9f1daf3407814faabac348a121",
+    "candidate": "e96864f35666e75bb20d011db0f4ef61e587d45dbc57e506e93c93cb3d3dc276"
+  },
+  "runs": [
+    {
+      "mode": "baseline",
+      "pose": "ground",
+      "camera": {
+        "center": [
+          77.59201520065346,
+          12.979208045331035
+        ],
+        "zoom": 22.673186882467544,
+        "pitch": 77.98683450243952,
+        "bearing": 42.970806347080725
+      },
+      "materials": {
+        "0": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 310,
+          "doubleSidedShader": true
+        },
+        "1": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4996,
+          "doubleSidedShader": true
+        },
+        "2": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4458,
+          "doubleSidedShader": true
+        },
+        "3": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4718,
+          "doubleSidedShader": true
+        },
+        "4": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 5019,
+          "doubleSidedShader": true
+        },
+        "5": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 21720,
+          "doubleSidedShader": false
+        },
+        "6": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 12984,
+          "doubleSidedShader": false
+        },
+        "7": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 108,
+          "doubleSidedShader": true
+        },
+        "8": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 80,
+          "doubleSidedShader": true
+        },
+        "9": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 50,
+          "doubleSidedShader": true
+        },
+        "10": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 86,
+          "doubleSidedShader": true
+        },
+        "11": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 112,
+          "doubleSidedShader": true
+        },
+        "12": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 48,
+          "doubleSidedShader": true
+        },
+        "13": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 8,
+          "doubleSidedShader": true
+        },
+        "14": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 60,
+          "doubleSidedShader": true
+        },
+        "15": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 64,
+          "doubleSidedShader": true
+        },
+        "16": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 24,
+          "doubleSidedShader": true
+        },
+        "17": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 92,
+          "doubleSidedShader": true
+        }
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "mode": "baseline",
+      "pose": "aerial",
+      "camera": {
+        "center": [
+          77.5915,
+          12.978200000000001
+        ],
+        "zoom": 17.01953383999501,
+        "pitch": 60.69266304493491,
+        "bearing": -30.878017102205376
+      },
+      "materials": {
+        "0": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 310,
+          "doubleSidedShader": true
+        },
+        "1": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4996,
+          "doubleSidedShader": true
+        },
+        "2": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4458,
+          "doubleSidedShader": true
+        },
+        "3": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4718,
+          "doubleSidedShader": true
+        },
+        "4": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 5019,
+          "doubleSidedShader": true
+        },
+        "5": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 21720,
+          "doubleSidedShader": false
+        },
+        "6": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 12984,
+          "doubleSidedShader": false
+        },
+        "7": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 108,
+          "doubleSidedShader": true
+        },
+        "8": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 80,
+          "doubleSidedShader": true
+        },
+        "9": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 50,
+          "doubleSidedShader": true
+        },
+        "10": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 86,
+          "doubleSidedShader": true
+        },
+        "11": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 112,
+          "doubleSidedShader": true
+        },
+        "12": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 48,
+          "doubleSidedShader": true
+        },
+        "13": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 8,
+          "doubleSidedShader": true
+        },
+        "14": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 60,
+          "doubleSidedShader": true
+        },
+        "15": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 64,
+          "doubleSidedShader": true
+        },
+        "16": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 24,
+          "doubleSidedShader": true
+        },
+        "17": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 92,
+          "doubleSidedShader": true
+        }
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "mode": "baseline",
+      "pose": "facade",
+      "camera": {
+        "center": [
+          77.59793758390003,
+          12.975719636600004
+        ],
+        "zoom": 19.16917544277082,
+        "pitch": 85,
+        "bearing": 53.989247538750874
+      },
+      "materials": {
+        "0": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 310,
+          "doubleSidedShader": true
+        },
+        "1": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4996,
+          "doubleSidedShader": true
+        },
+        "2": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4458,
+          "doubleSidedShader": true
+        },
+        "3": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4718,
+          "doubleSidedShader": true
+        },
+        "4": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 5019,
+          "doubleSidedShader": true
+        },
+        "5": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 21720,
+          "doubleSidedShader": false
+        },
+        "6": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 12984,
+          "doubleSidedShader": false
+        },
+        "7": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 108,
+          "doubleSidedShader": true
+        },
+        "8": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 80,
+          "doubleSidedShader": true
+        },
+        "9": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 50,
+          "doubleSidedShader": true
+        },
+        "10": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 86,
+          "doubleSidedShader": true
+        },
+        "11": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 112,
+          "doubleSidedShader": true
+        },
+        "12": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 48,
+          "doubleSidedShader": true
+        },
+        "13": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 8,
+          "doubleSidedShader": true
+        },
+        "14": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 60,
+          "doubleSidedShader": true
+        },
+        "15": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 64,
+          "doubleSidedShader": true
+        },
+        "16": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 24,
+          "doubleSidedShader": true
+        },
+        "17": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 92,
+          "doubleSidedShader": true
+        }
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "mode": "candidate",
+      "pose": "ground",
+      "camera": {
+        "center": [
+          77.59201520065346,
+          12.979208045331035
+        ],
+        "zoom": 22.673186882467544,
+        "pitch": 77.98683450243952,
+        "bearing": 42.970806347080725
+      },
+      "materials": {
+        "0": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 310,
+          "doubleSidedShader": false
+        },
+        "1": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4996,
+          "doubleSidedShader": false
+        },
+        "2": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4458,
+          "doubleSidedShader": false
+        },
+        "3": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4718,
+          "doubleSidedShader": false
+        },
+        "4": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 5019,
+          "doubleSidedShader": true
+        },
+        "5": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 21720,
+          "doubleSidedShader": false
+        },
+        "6": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 12984,
+          "doubleSidedShader": false
+        },
+        "7": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 108,
+          "doubleSidedShader": false
+        },
+        "8": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 80,
+          "doubleSidedShader": false
+        },
+        "9": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 50,
+          "doubleSidedShader": false
+        },
+        "10": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 86,
+          "doubleSidedShader": false
+        },
+        "11": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 112,
+          "doubleSidedShader": false
+        },
+        "12": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 48,
+          "doubleSidedShader": false
+        },
+        "13": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 8,
+          "doubleSidedShader": false
+        },
+        "14": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 60,
+          "doubleSidedShader": false
+        },
+        "15": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 64,
+          "doubleSidedShader": false
+        },
+        "16": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 24,
+          "doubleSidedShader": false
+        },
+        "17": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 92,
+          "doubleSidedShader": false
+        }
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "mode": "candidate",
+      "pose": "aerial",
+      "camera": {
+        "center": [
+          77.5915,
+          12.978200000000001
+        ],
+        "zoom": 17.01953383999501,
+        "pitch": 60.69266304493491,
+        "bearing": -30.878017102205376
+      },
+      "materials": {
+        "0": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 310,
+          "doubleSidedShader": false
+        },
+        "1": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4996,
+          "doubleSidedShader": false
+        },
+        "2": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4458,
+          "doubleSidedShader": false
+        },
+        "3": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4718,
+          "doubleSidedShader": false
+        },
+        "4": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 5019,
+          "doubleSidedShader": true
+        },
+        "5": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 21720,
+          "doubleSidedShader": false
+        },
+        "6": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 12984,
+          "doubleSidedShader": false
+        },
+        "7": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 108,
+          "doubleSidedShader": false
+        },
+        "8": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 80,
+          "doubleSidedShader": false
+        },
+        "9": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 50,
+          "doubleSidedShader": false
+        },
+        "10": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 86,
+          "doubleSidedShader": false
+        },
+        "11": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 112,
+          "doubleSidedShader": false
+        },
+        "12": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 48,
+          "doubleSidedShader": false
+        },
+        "13": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 8,
+          "doubleSidedShader": false
+        },
+        "14": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 60,
+          "doubleSidedShader": false
+        },
+        "15": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 64,
+          "doubleSidedShader": false
+        },
+        "16": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 24,
+          "doubleSidedShader": false
+        },
+        "17": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 92,
+          "doubleSidedShader": false
+        }
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "errors": [],
+      "missing": []
+    },
+    {
+      "mode": "candidate",
+      "pose": "facade",
+      "camera": {
+        "center": [
+          77.59793758390003,
+          12.975719636600004
+        ],
+        "zoom": 19.16917544277082,
+        "pitch": 85,
+        "bearing": 53.989247538750874
+      },
+      "materials": {
+        "0": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 310,
+          "doubleSidedShader": false
+        },
+        "1": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4996,
+          "doubleSidedShader": false
+        },
+        "2": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4458,
+          "doubleSidedShader": false
+        },
+        "3": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 4718,
+          "doubleSidedShader": false
+        },
+        "4": {
+          "side": 2,
+          "shadowSide": null,
+          "cull": false,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 5019,
+          "doubleSidedShader": true
+        },
+        "5": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 21720,
+          "doubleSidedShader": false
+        },
+        "6": {
+          "side": 0,
+          "shadowSide": null,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 12984,
+          "doubleSidedShader": false
+        },
+        "7": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 108,
+          "doubleSidedShader": false
+        },
+        "8": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 80,
+          "doubleSidedShader": false
+        },
+        "9": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 50,
+          "doubleSidedShader": false
+        },
+        "10": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 86,
+          "doubleSidedShader": false
+        },
+        "11": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 112,
+          "doubleSidedShader": false
+        },
+        "12": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 48,
+          "doubleSidedShader": false
+        },
+        "13": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 8,
+          "doubleSidedShader": false
+        },
+        "14": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 60,
+          "doubleSidedShader": false
+        },
+        "15": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 64,
+          "doubleSidedShader": false
+        },
+        "16": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 24,
+          "doubleSidedShader": false
+        },
+        "17": {
+          "side": 0,
+          "shadowSide": 2,
+          "cull": true,
+          "frontFace": 2305,
+          "cullMode": 1029,
+          "triangles": 92,
+          "doubleSidedShader": false
+        }
+      },
+      "district": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "errors": [],
+      "missing": []
+    }
+  ],
+  "glChecks": {
+    "passed": true,
+    "poses": 3,
+    "checks": [
+      "Matched exact camera per pose",
+      "No page errors or missing first-party resources",
+      "All generic material bucket triangle counts retained",
+      "Facade culling enabled, CCW front, BACK cull, no DoubleSide shader branch",
+      "Roof remains uncullled DoubleSide"
+    ]
+  }
+}

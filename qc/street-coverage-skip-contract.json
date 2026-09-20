@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "cpuOnly": true,
+  "baselineNormalizedSHA256": "56fd0770fe9d8067e27d173b9de5c9d727dbda52de6ccc2c2135e97be446ed6e",
+  "candidateSHA256": "af14ada4dbf36f3b24de72061d3f68bac5fbf8ed04a28c1fdf399b35f2a00c82",
+  "onlyShaderAndCacheKeyChanged": true,
+  "gradientExpressionsOutsideBranch": true,
+  "explicitGradientTextureInsideBranch": true,
+  "three169GLSL300SourceContract": true,
+  "blendCases": 330,
+  "zeroBlendCasesSkipped": 246,
+  "maxAlgebraDifference": 0,
+  "limitation": "CPU source/algebra and lifecycle checks only; GPU compile, output equivalence and performance are covered separately in the browser report. Driver may still predicate texture work, so no saving is claimed."
+}
