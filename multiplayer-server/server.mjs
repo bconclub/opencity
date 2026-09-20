@@ -51,7 +51,7 @@ export function createRoomServer(options = {}) {
         response.setHeader('Access-Control-Allow-Methods','GET, OPTIONS');
         response.writeHead(204);response.end();return;
       }
-      if(request.method!=='GET'){response.writeHead(405);response.end('Method not allowed');return;}
+      if(request.method!=='GET'){response.setHeader('Allow','GET, OPTIONS');response.writeHead(405);response.end('Method not allowed');return;}
       const directory=[...rooms].filter(([,room])=>room.public===true && room.players.size>0)
         .sort(([aid,a],[bid,b])=>b.players.size-a.players.size || aid.localeCompare(bid)).slice(0,50)
         .map(([id,room])=>({room:id,playerCount:room.players.size,capacity:MAX_PLAYERS,label:'Public room '+id.slice(0,6)}));
