@@ -1,0 +1,1 @@
+LOAD_FROM_/tmp/b84-content1.txt
