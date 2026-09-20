@@ -1,0 +1,117 @@
+{
+  "device": "Windows Edge headless SwiftShader, 1100x760, same local scene, A/B/B/A 60 frames",
+  "results": [
+    {
+      "mode": "before",
+      "median": 200.09999999999854,
+      "p95": 216.70000000000073,
+      "mean": 206.62666666661704,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1088,
+        "duplicateBuildings": 0,
+        "contextBuildings": 0,
+        "drawGroups": 21
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309056,
+        "textures": 6
+      }
+    },
+    {
+      "mode": "after",
+      "median": 250,
+      "p95": 266.70000000000437,
+      "mean": 245.0299999999752,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "procedural roughness and recess maps; illustrative facades"
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309032,
+        "textures": 28
+      }
+    },
+    {
+      "mode": "after",
+      "median": 249.90000000000146,
+      "p95": 266.7000000000007,
+      "mean": 242.01833333335816,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "procedural roughness and recess maps; illustrative facades"
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309032,
+        "textures": 28
+      }
+    },
+    {
+      "mode": "before",
+      "median": 200,
+      "p95": 216.70000000000437,
+      "mean": 204.87333333333336,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1088,
+        "duplicateBuildings": 0,
+        "contextBuildings": 0,
+        "drawGroups": 21
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309056,
+        "textures": 6
+      }
+    }
+  ]
+}
