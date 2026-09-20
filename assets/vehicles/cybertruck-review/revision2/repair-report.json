@@ -1,0 +1,27 @@
+{
+  "revision": 2,
+  "status": "REQUIRES_CPU_AND_VISUAL_VALIDATION",
+  "candidateBlend": "D:\\CodexTools\\Blender\\projects\\cybertruck-reference\\cybertruck-reference-revision2.blend",
+  "preservedInputs": {
+    "D:\\CodexTools\\Blender\\projects\\cybertruck-reference\\original-source.blend": "261e9f31a2c984fe4315138d107f0f6aa660d083a53b272798b2a1722b2668f9",
+    "D:\\CodexTools\\Blender\\projects\\cybertruck-reference\\cybertruck-reference.blend": "add4f8b5d3186b2567a16fb32509c8b292c7bff361e7a0d8d570db239173935d"
+  },
+  "archBoundaryVerticesAdjusted": 366,
+  "coverOuterOffset": 0.149,
+  "tireOuterOffset": 0.1425,
+  "decorationOutwardShift": {
+    "FL": 0.030735444068908685,
+    "FR": 0.030735444068908685,
+    "RL": 0.03073538446426391,
+    "RR": 0.03073550367355346
+  },
+  "bedFloorCenter": 0.925,
+  "bedFloorMin": 0.9025,
+  "tireTop": 0.8785,
+  "changes": [
+    "Restrict arch correction to existing arc vertices; restore remaining sill/panel profile",
+    "Move wheel decoration faces outside solid tire sidewalls",
+    "Replace distorted bed-floor vertex heights with flat floor above rear tire tops"
+  ],
+  "firstCandidate": "Preserved, rejected for hidden wheel faces, zigzag sill and rear bed protrusions"
+}

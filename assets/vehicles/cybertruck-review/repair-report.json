@@ -1,0 +1,73 @@
+{
+  "status": "CPU_GEOMETRY_CANDIDATE_NOT_VISUALLY_ACCEPTED",
+  "originalBlend": "D:\\CodexTools\\Blender\\projects\\cybertruck.blend",
+  "originalBlendSHA256": "261e9f31a2c984fe4315138d107f0f6aa660d083a53b272798b2a1722b2668f9",
+  "candidateBlend": "D:\\CodexTools\\Blender\\projects\\cybertruck-reference\\cybertruck-reference.blend",
+  "candidateGLB": "assets/vehicles/cybertruck-review/cybertruck-reference.glb",
+  "bounds": {
+    "min": [
+      -1.2066500186920166,
+      -3.0120999813079834,
+      0.0
+    ],
+    "max": [
+      1.2066500186920166,
+      2.670799970626831,
+      1.7937999963760376
+    ]
+  },
+  "size": [
+    2.413300037384033,
+    5.6828999519348145,
+    1.7937999963760376
+  ],
+  "wheelCenters": {
+    "FL": [
+      -0.8884999752044678,
+      1.7925000190734863,
+      0.43924999237060547
+    ],
+    "FR": [
+      0.8884999752044678,
+      1.7925000190734863,
+      0.43924999237060547
+    ],
+    "RL": [
+      -0.8859999775886536,
+      -1.8424999713897705,
+      0.43924999237060547
+    ],
+    "RR": [
+      0.8859999775886536,
+      -1.8424999713897705,
+      0.43924999237060547
+    ]
+  },
+  "wheelbase": 3.635,
+  "frontTrack": 1.777,
+  "rearTrack": 1.772,
+  "nominalTireRadius": 0.43925,
+  "shellWidthTarget": 2.0316,
+  "stance": "Premium AWD/Cyberbeast Medium air height target",
+  "materialsPreserved": true,
+  "lampPalette": [
+    [
+      0.75,
+      0.91,
+      1.0
+    ],
+    [
+      1.0,
+      0.018,
+      0.006
+    ]
+  ],
+  "objects": 55,
+  "limitations": [
+    "No renders or GPU checks performed",
+    "Existing approximate body contours retained with local deformations",
+    "Tire width can protrude beyond shell, consistent with option-dependent envelope; mirrors measured separately",
+    "Nominal tire radius is not loaded rolling radius",
+    "Existing wheel parents retained; no other vehicle assets modified"
+  ]
+}
