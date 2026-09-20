@@ -1,0 +1,445 @@
+{
+  "device": "Windows Edge headless SwiftShader, 1100x760, actual stationary Cubbon Park South auto, A/B/B/A 120 frames, baseline combined changes pre-nearLOD",
+  "results": [
+    {
+      "iteration": 0,
+      "mode": "before",
+      "median": 233.3000000000029,
+      "p95": 433.2999999999993,
+      "mean": 231.96999999998758,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309032,
+        "textures": 18
+      },
+      "ride": {
+        "vehicleType": "auto",
+        "visualHeight": 2.115000009536743,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 0,
+          "active": false,
+          "locked": false
+        },
+        "speed": 0,
+        "distance": 0,
+        "heading": 167.64748841537732,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": [
+          77.59367788233789,
+          12.973414495969442
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0,
+          "impacts": 0,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 1773,
+        "from": 54,
+        "to": 1987,
+        "progress": 112.88795121176925,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      },
+      "errors": []
+    },
+    {
+      "iteration": 1,
+      "mode": "after",
+      "median": 266.59999999999854,
+      "p95": 483.29999999999563,
+      "mean": 256.6716666666667,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "nearTreeLOD": {
+          "loaded": true,
+          "disposed": false,
+          "error": null,
+          "selectedIndices": [
+            643,
+            654,
+            657,
+            692,
+            745,
+            787,
+            880,
+            923,
+            929,
+            957,
+            961,
+            969,
+            1003,
+            1006,
+            1026,
+            1057,
+            1072,
+            1086,
+            1192,
+            1210,
+            1215,
+            1294,
+            1397,
+            1437,
+            1530,
+            1531,
+            1562,
+            1567,
+            1573,
+            1583,
+            1722,
+            1723
+          ],
+          "nearCount": 32,
+          "radius": 80,
+          "limit": 32,
+          "drawCalls": 3,
+          "triangles": 20672,
+          "sourceTriangles": 646,
+          "hiddenFarInstances": 96,
+          "updates": 1,
+          "assetURL": "http://127.0.0.1:4173/assets/trees/review/shapespark-tree-01-1.glb"
+        },
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "render": {
+        "calls": 36,
+        "triangles": 329704,
+        "textures": 21
+      },
+      "ride": {
+        "vehicleType": "auto",
+        "visualHeight": 2.115000009536743,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 0,
+          "active": false,
+          "locked": false
+        },
+        "speed": 0,
+        "distance": 0,
+        "heading": 167.64748841537732,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": [
+          77.59367788233789,
+          12.973414495969442
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0,
+          "impacts": 0,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 1773,
+        "from": 54,
+        "to": 1987,
+        "progress": 112.88795121176925,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      },
+      "errors": []
+    },
+    {
+      "iteration": 2,
+      "mode": "after",
+      "median": 250,
+      "p95": 266.8000000000011,
+      "mean": 244.1041666666418,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "nearTreeLOD": {
+          "loaded": true,
+          "disposed": false,
+          "error": null,
+          "selectedIndices": [
+            643,
+            654,
+            657,
+            692,
+            745,
+            787,
+            880,
+            923,
+            929,
+            957,
+            961,
+            969,
+            1003,
+            1006,
+            1026,
+            1057,
+            1072,
+            1086,
+            1192,
+            1210,
+            1215,
+            1294,
+            1397,
+            1437,
+            1530,
+            1531,
+            1562,
+            1567,
+            1573,
+            1583,
+            1722,
+            1723
+          ],
+          "nearCount": 32,
+          "radius": 80,
+          "limit": 32,
+          "drawCalls": 3,
+          "triangles": 20672,
+          "sourceTriangles": 646,
+          "hiddenFarInstances": 96,
+          "updates": 1,
+          "assetURL": "http://127.0.0.1:4173/assets/trees/review/shapespark-tree-01-1.glb"
+        },
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "render": {
+        "calls": 36,
+        "triangles": 329704,
+        "textures": 21
+      },
+      "ride": {
+        "vehicleType": "auto",
+        "visualHeight": 2.115000009536743,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 0,
+          "active": false,
+          "locked": false
+        },
+        "speed": 0,
+        "distance": 0,
+        "heading": 167.64748841537732,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": [
+          77.59367788233789,
+          12.973414495969442
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0,
+          "impacts": 0,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 1773,
+        "from": 54,
+        "to": 1987,
+        "progress": 112.88795121176925,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      },
+      "errors": []
+    },
+    {
+      "iteration": 3,
+      "mode": "before",
+      "median": 216.70000000000437,
+      "p95": 250.09999999999854,
+      "mean": 222.46416666667912,
+      "state": {
+        "loaded": true,
+        "landmarkParts": 74,
+        "landmarkDomes": 7,
+        "replacedParts": 40,
+        "mappedColorBuildings": 33,
+        "enabled": true,
+        "shown": true,
+        "buildings": 1361,
+        "trees": 2800,
+        "roofDetails": 1082,
+        "duplicateBuildings": 0,
+        "invalidElevatedBases": 2,
+        "contextBuildings": 0,
+        "drawGroups": 21,
+        "facadeAtlasSize": 512,
+        "facadeVariants": 16,
+        "materialDetail": "packed roughness and baked recess shading; illustrative facades"
+      },
+      "render": {
+        "calls": 33,
+        "triangles": 309032,
+        "textures": 18
+      },
+      "ride": {
+        "vehicleType": "auto",
+        "visualHeight": 2.115000009536743,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 0,
+          "active": false,
+          "locked": false
+        },
+        "speed": 0,
+        "distance": 0,
+        "heading": 167.64748841537732,
+        "choice": "straight",
+        "wheelAngle": 0,
+        "position": [
+          77.59367788233789,
+          12.973414495969442
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0,
+          "impacts": 0,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 1773,
+        "from": 54,
+        "to": 1987,
+        "progress": 112.88795121176925,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      },
+      "errors": []
+    }
+  ]
+}
