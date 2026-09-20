@@ -1,0 +1,17 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
+const refs={baseline:'f1fd503',candidate:'4b79104'},root=path.resolve('qc/final-aa-snapshots'),result={},sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+// Archived small override sets make this reproducible after runtime rejects AA.
+const sourceDirectory=process.argv[2]||'qc/final-aa-compact-on-sources';
+const overrides=Object.fromEntries(['app.js','sw.js','render-quality.js','index.html'].map(p=>[p,fs.readFileSync(path.join(sourceDirectory,p))]));
+assert.equal((overrides['index.html'].toString().match(/maplibre-gl@5\.7\.2/g)||[]).length,2,'Candidate must pin both JS/CSS5.7.2');
+for(const [mode,ref]of Object.entries(refs)){
+ const commit=execFileSync('git',['rev-parse',ref],{encoding:'utf8'}).trim(),gitRead=file=>execFileSync('git',['show',commit+':'+file],{maxBuffer:40*1024*1024}),originalIndex=gitRead('index.html'),read=file=>mode==='candidate'&&overrides[file]?overrides[file]:mode==='baseline'&&file==='index.html'?Buffer.from(originalIndex.toString().replaceAll('maplibre-gl@5.6.1','maplibre-gl@5.7.2')):gitRead(file),worker=read('sw.js').toString(),files=new Set([...worker.match(/const files=\[(.*?)\];/s)[1].matchAll(/'([^']+)'/g)].map(m=>m[1]));
+ for(const m of worker.matchAll(/files\.push\(([^;]*)\);/g))for(const f of m[1].matchAll(/'([^']+)'/g))files.add(f[1]);
+ const tracked=execFileSync('git',['ls-tree','--name-only',commit],{encoding:'utf8'}).trim().split('\n');for(const f of tracked)if(/\.(js|css|html|json|webmanifest|ico)$/.test(f))files.add(f);
+ if(mode==='candidate')for(const p of Object.keys(overrides))files.add(p);
+ const entries=[],directory=path.join(root,mode);fs.mkdirSync(directory,{recursive:true});
+ for(const file of [...files].sort()){assert(!path.isAbsolute(file)&&!file.includes('..'));const body=read(file),target=path.join(directory,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,body);entries.push({path:file,bytes:body.length,sha256:sha(body)});}
+ result[mode]={commit,packageVersion:JSON.parse(read('package.json')).version,release:JSON.parse(read('release.json')),rendererRepair:{originalIndexSha256:sha(originalIndex),finalIndexSha256:sha(read('index.html')),substitution:'Both maplibre-gl@5.6.1 JS/CSS URLs become maplibre-gl@5.7.2',historicalBaselineUnmodified:false},sourceOverrides:mode==='candidate'?Object.entries(overrides).map(([p,b])=>({path:p,bytes:b.length,sha256:sha(b)})):[{path:'index.html',bytes:read('index.html').length,sha256:sha(read('index.html')),reason:'Mandatory shared renderer repair after captured FullHD baseline crash'}],files:entries,snapshotBytes:entries.reduce((n,f)=>n+f.bytes,0),manifestSha256:sha(Buffer.from(JSON.stringify(entries)))};
+}
+fs.writeFileSync('qc/final-aa-snapshots.json',JSON.stringify({prepared:new Date().toISOString(),scope:'Repaired reference f1fd503 with JS/CSS5.7.2 only versus4b79104 plus exact app.js/sw.js/render-quality.js/index.html overrides. Shared renderer repair mandatory after captured FullHD baseline crash. Not unmodified historical baseline. Equal room/cache exclusions.',excludedForBoth:['Room client and cache bootstrap empty','Service workers blocked; fresh contexts/network cache disabled'],snapshots:result},null,2));
+console.log(JSON.stringify(Object.fromEntries(Object.entries(result).map(([k,v])=>[k,{commit:v.commit,files:v.files.length,bytes:v.snapshotBytes,hash:v.manifestSha256,overrides:v.sourceOverrides}]))));
