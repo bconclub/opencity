@@ -1,1 +1,1 @@
-LOAD_FROM:/tmp/payload-0-1.json
+READ_FROM:/tmp/mcp-single-4.json
