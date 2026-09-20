@@ -37,7 +37,7 @@ fx.reset();assert.equal(fx.state().segments,0);assert.equal(fx.slipAngle,0);asse
 road=true;c=car();c.speed=5;c.vy=5;
 for(let i=0;i<30;i++)fx.update(c,{throttle:1},1/60);
 assert.equal(fx.state().totalSegments,0,'Stationary pose cannot draw disconnected marks');
-// Both rear contacts cross a 20 cm step. A braking strip must not bridge it.
+// Both rear contacts cross a 20 cm step. A braking stripe must not bridge it.
 step=true;c=car();c.speed=c.vy=8;c.y=1.2;fx.reset();fx.update(c,{},.1);
 c.speed=c.vy=6;c.y=1.4;fx.update(c,{brake:true},.1);
 assert.equal(fx.state().totalSegments,2,'Only front contacts remain on one continuous surface');
