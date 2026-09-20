@@ -1,0 +1,29 @@
+// REVIEW ONLY. This file is not imported by the game.
+// Official column/stair dimensions: https://kla.kar.nic.in/council/vds.htm
+// North-wing datum is provisionally shared across the flat review ground.
+export const ARCHITECTURE_DIMENSIONS=Object.freeze({columnCount:12,columnHeight:12.192,steps:45,stairWidth:62.1792,stairDepth:21.336,landingZ:6.75,canopyBottom:18.942,canopyTop:20.742,wingRoofZ:19.3548,centralWingRoofZ:34.1376,centralDomeTopZ:45.72,northSouthGradeDifference:3.048,datum:'Estimated north-side ground datum shared across flat review ground; south cellar/terrain unresolved'});
+export function buildLandmarks(T,data,xy){
+ data={...data,features:data.features.filter(f=>f.properties.site==='Vidhana Soudha')};
+ const D=ARCHITECTURE_DIMENSIONS,wingScale=D.wingRoofZ/30;
+ const portico=data.features.find(f=>f.properties.osm_id==='relation/5519270')?.geometry.coordinates[0].map(xy)||[];
+ function inPortico(x,y){let inside=false,near=false;for(let i=0,j=portico.length-1;i<portico.length;j=i++){const a=portico[i],b=portico[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;const dx=b[0]-a[0],dy=b[1]-a[1],t=Math.max(0,Math.min(1,((x-a[0])*dx+(y-a[1])*dy)/(dx*dx+dy*dy||1)));if(Math.hypot(x-a[0]-dx*t,y-a[1]-dy*t)<.35)near=true;}return inside||near;}
+ const group=new T.Group(),batches=new Map();let domes=0;
+ function material(colour,glass=false){const key=colour+'|'+glass;if(!batches.has(key))batches.set(key,{material:new T.MeshStandardMaterial({color:colour,roughness:glass?.26:.86,metalness:glass?.3:0,side:T.DoubleSide}),p:[],preservedNormals:[]});return batches.get(key);}
+ function append(geometry,batch,matrix){const g=geometry.index?geometry.toNonIndexed():geometry;g.applyMatrix4(matrix);const p=g.getAttribute('position'),start=batch.p.length;for(let i=0;i<p.count;i++)batch.p.push(p.getX(i),p.getY(i),p.getZ(i));const n=g.getAttribute('normal');if(n)batch.preservedNormals.push({start,values:new Float32Array(n.array)});if(g!==geometry)g.dispose();geometry.dispose();}
+ function surface(points,batch){const contour=points[0].map(p=>new T.Vector2(...p)),holes=points.slice(1).map(r=>r.map(p=>new T.Vector2(...p))),all=[...contour,...holes.flat()];return{contour,holes,all,tri:T.ShapeUtils.triangulateShape(contour,holes)};}
+ for(const f of data.features){const starts=new Map([...batches].map(([key,b])=>[key,b.p.length]));const p=f.properties;if(['relation/5518183','relation/5518184','relation/5519270'].includes(p.osm_id))continue;const rings=f.geometry.coordinates.map((r,index)=>{const points=r.slice(0,-1).map(xy),area=points.reduce((sum,a,i)=>{const b=points[(i+1)%points.length];return sum+a[0]*b[1]-b[0]*a[1];},0);if((index===0&&area<0)||(index>0&&area>0))points.reverse();return points;});if(rings[0].length<3)continue;
+  const h=Number(p.height)||8,base=Number(p.min_height)||0,shape=p['roof:shape']||'flat',curved=['onion','dome'].includes(shape),pyramid=shape==='pyramidal';
+  const stone=p.site==='Vidhana Soudha'?'#d2ccbf':p['building:colour']||p['roof:colour']||'#c8c1ad';const wall=material(stone,p['building:material']==='glass'),roof=material(p.site==='Vidhana Soudha'?(p['roof:colour']==='red'?'#ac624d':p['roof:material']==='glass'?'#b4c9c4':stone):p['roof:colour']||stone,p['roof:material']==='glass');
+  const roofHeight=curved?Math.min(Number(p['roof:height'])||h-base,h-base):pyramid?h-base:0,wallTop=h-roofHeight;
+  for(const r of rings)for(let i=0;i<r.length;i++){const first=r[i],last=r[(i+1)%r.length],count=p.osm_id==='relation/5284317'?Math.ceil(Math.hypot(last[0]-first[0],last[1]-first[1])):1;for(let k=0;k<count;k++){const at=t=>[first[0]+(last[0]-first[0])*t,first[1]+(last[1]-first[1])*t],a=at(k/count),b=at((k+1)/count),bottom=p.osm_id==='relation/5284317'&&inPortico((a[0]+b[0])/2,(a[1]+b[1])/2)?D.canopyBottom/wingScale:base;wall.p.push(a[0],a[1],bottom,b[0],b[1],bottom,b[0],b[1],wallTop,a[0],a[1],bottom,b[0],b[1],wallTop,a[0],a[1],wallTop);}}
+  if(curved){const r=rings[0],xmin=Math.min(...r.map(p=>p[0])),xmax=Math.max(...r.map(p=>p[0])),ymin=Math.min(...r.map(p=>p[1])),ymax=Math.max(...r.map(p=>p[1]));const profile=[ [0.94,0],[1,0.04],[1,.09],[.89,.12],[.91,.18],[.97,.30],[.98,.43],[.94,.56],[.82,.68],[.65,.76],[.42,.82],[.27,.88],[.20,.92],[.18,1],[0,1] ].map(([r,z])=>new T.Vector2(r,z));const g=new T.LatheGeometry(profile,64);g.rotateX(Math.PI/2);const matrix=new T.Matrix4().makeScale((xmax-xmin)/2,(ymax-ymin)/2,roofHeight);matrix.setPosition((xmin+xmax)/2,(ymin+ymax)/2,wallTop);append(g,roof,matrix);domes++;}
+  else if(pyramid){const r=rings[0],cx=r.reduce((s,p)=>s+p[0],0)/r.length,cy=r.reduce((s,p)=>s+p[1],0)/r.length;for(let i=0;i<r.length;i++){const a=r[i],b=r[(i+1)%r.length];roof.p.push(a[0],a[1],base,b[0],b[1],base,cx,cy,h);}}
+  else{const {all,tri}=surface(rings,roof);for(const t of tri)for(const i of t)roof.p.push(all[i].x,all[i].y,h);}
+  let mapZ=z=>z<=30?z*wingScale:z-30+D.wingRoofZ,slope=z=>z<=30?wingScale:1;
+  if(p.osm_id==='way/363474998'){const s=(D.centralWingRoofZ-D.wingRoofZ)/8;mapZ=z=>D.wingRoofZ+(z-30)*s;slope=()=>s;}
+  if(p.osm_id==='way/371511885'){const s=(D.centralDomeTopZ-D.centralWingRoofZ)/8;mapZ=z=>D.centralWingRoofZ+(z-38)*s;slope=()=>s;}
+  if(p.osm_id==='way/371511883'){const s=(D.centralWingRoofZ-D.wingRoofZ)/17;mapZ=z=>D.wingRoofZ+(z-30)*s;slope=()=>s;}
+  for(const [key,b] of batches){const start=starts.get(key)||0;for(const part of b.preservedNormals)if(part.start>=start)for(let i=0;i<part.values.length;i+=3){const scale=slope(b.p[part.start+i+2]),n=new T.Vector3(part.values[i],part.values[i+1],part.values[i+2]/scale).normalize();part.values.set(n.toArray(),i);}for(let i=start+2;i<b.p.length;i+=3)b.p[i]=mapZ(b.p[i]);}
+ }
+ return{group,domes,parts:data.features.length,architecture:{...D,columns:0,columnCenters:[],stairPlacement:null,foyer:null,reviewOnly:true}};
+}

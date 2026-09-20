@@ -1,0 +1,9 @@
+{
+  "note": "CPU collision probes use unchanged building collision world and mapped Vidhana road centerlines.",
+  "samples": 441,
+  "onRoad": 0,
+  "buildingCollision": 34,
+  "unblocked": 407,
+  "probes": [],
+  "roadOverlapSamples": []
+}
