@@ -9,6 +9,7 @@ export function setMapSceneCamera(T,camera,combined){
  const {inverse,eye}=scratch;inverse.copy(combined).invert();eye.set(0,0,1,0).applyMatrix4(inverse);
  const valid=Math.abs(eye.w)>1e-12&&Number.isFinite(eye.x)&&Number.isFinite(eye.y)&&Number.isFinite(eye.z)&&Number.isFinite(eye.w);
  if(valid)camera.position.set(eye.x/eye.w,eye.y/eye.w,eye.z/eye.w);else camera.position.set(0,0,0);
+ // This camera is exclusively driven by the supplied clip matrix.
  camera.matrixAutoUpdate=false;camera.matrixWorldAutoUpdate=false;
  camera.matrix.makeTranslation(camera.position.x,camera.position.y,camera.position.z);
  camera.matrixWorld.copy(camera.matrix);camera.matrixWorldInverse.makeTranslation(-camera.position.x,-camera.position.y,-camera.position.z);
