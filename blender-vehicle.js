@@ -1,7 +1,7 @@
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {paintHex,selectedVehicleColor} from './vehicle-colors.js';
 const templates=new Map();
-const originals={cybercab:{length:4.45,yaw:Math.PI/2},cybertruck:{length:5.683,yaw:-Math.PI/2},kitt:{length:4.8,yaw:-Math.PI/2},yulu:{length:1.9,yaw:-Math.PI/2},delivery:{length:1.9,yaw:-Math.PI/2}};
+const originals={cybercab:{length:4.45,yaw:-Math.PI/2},cybertruck:{length:5.683,yaw:-Math.PI/2},kitt:{length:4.8,yaw:-Math.PI/2},yulu:{length:1.9,yaw:-Math.PI/2},delivery:{length:1.9,yaw:-Math.PI/2}};
 // glTF is Y-up here. Keep steering above the wheel's independent spin pivot.
 export function bindVehicleWheelRig(T,root){
  const wheels=[],steering=[],axis=new T.Vector3(1,0,0),spin=new T.Quaternion();
