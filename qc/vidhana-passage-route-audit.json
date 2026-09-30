@@ -1,0 +1,22 @@
+{
+  "autoRoam": [
+    {
+      "id": 1551,
+      "width": 4,
+      "connected": true,
+      "allowedAtA": true,
+      "allowedAtB": true
+    }
+  ],
+  "npc": [
+    {
+      "id": 302,
+      "width": 4,
+      "connected": false,
+      "allowedAtA": false,
+      "allowedAtB": false
+    }
+  ],
+  "publicAccessFilterPresent": false,
+  "note": "Current NPC excludes narrow4m two-way service lane through retainTrafficLoops; auto-roam keeps it. Neither graph construction checks access=private or tunnel=building_passage. Generated data dropped both tags."
+}

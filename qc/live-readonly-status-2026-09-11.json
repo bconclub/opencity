@@ -1,0 +1,24 @@
+{
+  "CheckedAt": "2026-09-11T05:54:47.4875644Z",
+  "ReleaseURL": "https://www.opencity.world/release.json",
+  "ReleaseStatus": 200,
+  "ReleaseContentType": [
+    "application/json; charset=utf-8"
+  ],
+  "Release": {
+    "version": "0.0.30",
+    "date": "2026-09-11",
+    "name": "Prepared city loading and complete ride onboarding",
+    "versionScheme": "base-100-release-counter"
+  },
+  "HealthURL": "https://opencity-rooms.bconclub.com/health",
+  "HealthStatus": 200,
+  "Health": {
+    "ok": true,
+    "protocol": 1,
+    "world": "cbd-1",
+    "rooms": 1,
+    "players": 1
+  },
+  "Scope": "Read-only HTTP checks; no room creation, pose validation, server update or deployment"
+}

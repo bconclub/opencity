@@ -1,0 +1,11 @@
+{
+  "source": {
+    "file": "qc/vidhana-architecture-integration-stair-treatment-isolated.js",
+    "sha256": "29e5c1948c1e9d18e302082952a033d6006762e833ea37d4664c0fef3a1de6a7"
+  },
+  "candidate": {
+    "file": "qc/vidhana-stair-feature-filter-candidate.js",
+    "sha256": "02a6cfe548b9f7f183a9459f54686d7cecc33eb2c1255fbc8c659f223dc7141f"
+  },
+  "scope": "Review only. Preserve all45 physical steps, positions, normals, other landmarks and display metadata. Filter stair face lighting by minimum projected riser/tread width perpendicular to stair edge. Shadow reception disabled only for stair batch, matching prior shadowOff diagnostic. No AA."
+}

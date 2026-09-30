@@ -1,0 +1,77 @@
+{
+  "arcs": [
+    {
+      "sourceWay": "338941361",
+      "sourceSegment": 11,
+      "from": "3461278332",
+      "to": "3461278359",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "338941361",
+      "sourceSegment": 12,
+      "from": "3461278359",
+      "to": "3461278360",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "338941361",
+      "sourceSegment": 13,
+      "from": "3461278360",
+      "to": "10001492588",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "1092049622",
+      "sourceSegment": 3,
+      "from": "10001492588",
+      "to": "12113879974",
+      "oneway": "no"
+    },
+    {
+      "sourceWay": "1092049622",
+      "sourceSegment": 2,
+      "from": "12113879974",
+      "to": "12113879975",
+      "oneway": "no"
+    },
+    {
+      "sourceWay": "1092049622",
+      "sourceSegment": 1,
+      "from": "12113879975",
+      "to": "12113879976",
+      "oneway": "no"
+    },
+    {
+      "sourceWay": "1092049622",
+      "sourceSegment": 0,
+      "from": "12113879976",
+      "to": "3461278368",
+      "oneway": "no"
+    },
+    {
+      "sourceWay": "763048421",
+      "sourceSegment": 1,
+      "from": "3461278368",
+      "to": "12174568386",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "763048421",
+      "sourceSegment": 2,
+      "from": "12174568386",
+      "to": "3461278331",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "358318638",
+      "sourceSegment": 0,
+      "from": "3461278331",
+      "to": "3461278332",
+      "oneway": "no"
+    }
+  ],
+  "oldRejectedCurveEnabled": false,
+  "multiVehicleEnabled": false,
+  "boundaryPortalsEnabled": false
+}

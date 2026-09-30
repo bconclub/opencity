@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "source": {
+    "way": "way/363475448",
+    "tags": {
+      "highway": "service",
+      "tunnel": "building_passage"
+    },
+    "approaches": [
+      {
+        "way": "way/38542545",
+        "access": "private"
+      },
+      {
+        "way": "way/363475450",
+        "access": "private"
+      }
+    ],
+    "widthEstimated": true,
+    "publicRouteEligible": false
+  },
+  "targetFeatureIndex": 2023,
+  "graphEdges": 740,
+  "roadCentrelineSamples": 31372,
+  "openedRoadSamples": 58,
+  "newBlockedSamples": 0,
+  "unchangedRoadSamples": 31314,
+  "entryExitSamplesBothDirections": 293,
+  "sideAndRotatedCornerTests": true,
+  "separateColliderRetained": true,
+  "ambiguousBuildingSelectionRejected": true,
+  "stairsBlocked": true,
+  "scope": "CPU ground-level collision only. No graph/access mutation, no NPC/public-route promotion, no GPU smoke. Corridor width estimated; exact visual envelope checked separately."
+}

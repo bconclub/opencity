@@ -1,0 +1,16 @@
+{
+  "inputSHA256": "a6dc40fc23c4f192abebb3652fc9b030701672e54f3e1a5bba14f9e0fd73b613",
+  "moduleSHA256": "7714acd3a2e187af9183b402e9d7874a787342fe235de502b98df76b6a6a59a5",
+  "meshesSHA256": "f7c438c13da9a555944da96dc1ef369072d327c9a433b6f416c0b3c06131cf3d",
+  "origin": [
+    77.59136000000001,
+    12.97984615
+  ],
+  "conversionMs": 1620.0999999996275,
+  "meshes": 1169,
+  "triangles": 11940,
+  "errors": [],
+  "warnings": [],
+  "routesChanged": false,
+  "runtimePromoted": false
+}

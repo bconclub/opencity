@@ -1,0 +1,122 @@
+{
+  "note": "Fixed central stair rectangles. Mean variation across five small camera offsets is a bounded sampling diagnostic, not a motion-compensated temporal fidelity metric. No screenshots altered.",
+  "rows": [
+    {
+      "mode": "isolated",
+      "view": "front",
+      "roi": [
+        590,
+        474,
+        800,
+        520
+      ],
+      "mean": 121.60743720496893,
+      "std": 55.497094479556885,
+      "rowDifferenceMean": 82.83501765079363
+    },
+    {
+      "mode": "isolated",
+      "view": "aerial",
+      "roi": [
+        680,
+        636,
+        780,
+        704
+      ],
+      "mean": 166.5795835294117,
+      "std": 50.83828663666516,
+      "rowDifferenceMean": 60.11500507462684
+    },
+    {
+      "mode": "isolated",
+      "view": "aerial motion",
+      "centralROIMeans": [
+        167.0575278823529,
+        166.64786129411763,
+        166.5795835294117,
+        166.28940302941174,
+        165.70904202941176
+      ],
+      "meanRange": 1.3484858529411383,
+      "meanStd": 0.44712813876598684
+    },
+    {
+      "mode": "floor12",
+      "view": "front",
+      "roi": [
+        590,
+        474,
+        800,
+        520
+      ],
+      "mean": 193.7216895445135,
+      "std": 1.3526296094399761,
+      "rowDifferenceMean": 2.020089037037035
+    },
+    {
+      "mode": "floor12",
+      "view": "aerial",
+      "roi": [
+        680,
+        636,
+        780,
+        704
+      ],
+      "mean": 194.17084,
+      "std": 1.0007160828126982,
+      "rowDifferenceMean": 1.1833217910447709
+    },
+    {
+      "mode": "floor12",
+      "view": "aerial motion",
+      "centralROIMeans": [
+        194.18024799999998,
+        194.172184,
+        194.17084,
+        194.16512799999998,
+        194.153704
+      ],
+      "meanRange": 0.02654399999997281,
+      "meanStd": 0.00880140439701923
+    },
+    {
+      "mode": "analytic",
+      "view": "front",
+      "roi": [
+        590,
+        474,
+        800,
+        520
+      ],
+      "mean": 129.09815757763977,
+      "std": 38.876611296566,
+      "rowDifferenceMean": 71.98347398941799
+    },
+    {
+      "mode": "analytic",
+      "view": "aerial",
+      "roi": [
+        680,
+        636,
+        780,
+        704
+      ],
+      "mean": 179.59837449999998,
+      "std": 16.217183659853344,
+      "rowDifferenceMean": 28.246437880597007
+    },
+    {
+      "mode": "analytic",
+      "view": "aerial motion",
+      "centralROIMeans": [
+        179.96078676470586,
+        179.7215431764706,
+        179.59837449999998,
+        179.47001635294117,
+        179.2219630588235
+      ],
+      "meanRange": 0.7388237058823677,
+      "meanStd": 0.24682014447873088
+    }
+  ]
+}

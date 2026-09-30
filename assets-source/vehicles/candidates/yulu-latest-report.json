@@ -1,0 +1,128 @@
+{
+  "kind": "yulu",
+  "source": "D:\\Brands BCON\\OpenCity\\Models\\Yulu.glb",
+  "sourceBytes": 63323368,
+  "candidateBytes": 5450248,
+  "triangles": 93138,
+  "trianglesByObject": {
+    "Yulu_Body": 89998,
+    "Wheel_F": 5000,
+    "Wheel_R": 5000
+  },
+  "materials": 3,
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "boundsMin": [
+    -0.359282910823822,
+    -0.9561553597450256,
+    -5.131393976398613e-08
+  ],
+  "boundsMax": [
+    0.3599323630332947,
+    0.949133038520813,
+    1.1449087858200073
+  ],
+  "dimensions": [
+    0.7192152738571167,
+    1.9052884578704834,
+    1.1449087858200073
+  ],
+  "wheelPivots": {
+    "Wheel_F": [
+      0.0,
+      0.6948873996734619,
+      0.23999999463558197
+    ],
+    "Wheel_R": [
+      0.0,
+      -0.5751045942306519,
+      0.2549999952316284
+    ]
+  },
+  "wheelRadiiEstimated": {
+    "Wheel_F": 0.24,
+    "Wheel_R": 0.255
+  },
+  "fitScores": {
+    "Wheel_F": "side-orthographic",
+    "Wheel_R": "side-orthographic"
+  },
+  "axes": {
+    "authoringUp": "+Z",
+    "authoringForward": "+Y",
+    "wheelAxle": "local X",
+    "glTFUp": "+Y",
+    "glTFForward": "-Z"
+  },
+  "appearance": "Original baked texture material, UVs and rider geometry preserved; images resized from 2048 to 1024.",
+  "paintability": "No reliable BodyPaint isolation. One baked material spans complete scan; tinting would recolor rider, wheels, and accessories.",
+  "limitations": [
+    "Source is one fused scan mesh. Spatial wheel extraction can include nearby fork/fender fragments or leave wheel fragments on body.",
+    "98.7% triangle reduction can soften silhouette and texture-normal detail.",
+    "Wheel centres and radii are geometry fits, not manufacturer dimensions."
+  ],
+  "budgetStatus": "100k fidelity candidate exceeds requested 25k because 25k visibly faceted source body/rider.",
+  "wheelRepair": "Fragmented fused source wheel selections replaced with complete dark tyre/rim/spoke assemblies; supplied body, rider, texture, fork and fenders preserved.",
+  "wheelRadiiActual": {
+    "Wheel_F": 0.24,
+    "Wheel_R": 0.255
+  },
+  "wheelContactsActualZ": {
+    "Wheel_F": 0.0,
+    "Wheel_R": 0.0
+  },
+  "wheelGeometry": "Complete torus tyres, outer radii exact by construction; no fender/body fragments parented to wheels.",
+  "ridingState": "Kickstand geometry below Z=0 removed from central underside; no wheel geometry changed.",
+  "bodyActualMinZ": 0.13006000220775604,
+  "levelPitchDegrees": 0.0,
+  "wheelContactsZ": {
+    "Wheel_F": -5.364418020903372e-09,
+    "Wheel_R": -4.768371586472142e-09
+  },
+  "actualWheelGeometry": {
+    "Wheel_F": {
+      "widthX": 0.09840002655982971,
+      "radialMaxYZ": 0.24000006132605325,
+      "minZ": -4.470348358154297e-08,
+      "maxZ": 0.48000001907348633
+    },
+    "Wheel_R": {
+      "widthX": 0.10660003125667572,
+      "radialMaxYZ": 0.2550000380404949,
+      "minZ": -2.9802322387695312e-08,
+      "maxZ": 0.5099999904632568
+    }
+  },
+  "rig": {
+    "frontWheel": "Wheel_F",
+    "rearWheel": "Wheel_R",
+    "rollAxis": "local X",
+    "steerAxis": "local Z on Wheel_F",
+    "pivotInvariantMaxError": 0.0
+  },
+  "validationRenders": [
+    "yulu-latest-spin.png",
+    "yulu-latest-steer.png"
+  ]
+}

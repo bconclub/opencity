@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "castShadow": true,
+  "receiveShadow": true,
+  "diffScope": "Only stair receiveShadow=false to true and shader program cache key suffix. Exact candidate manifest SHA verified."
+}

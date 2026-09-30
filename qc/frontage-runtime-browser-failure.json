@@ -1,0 +1,536 @@
+{
+  "error": "TimeoutError: page.waitForFunction: Timeout 7000ms exceeded.",
+  "checks": [
+    "Immutable candidate boots with shared actual architecture and local two-client room",
+    "Actual auto-roam graph excludes passage and private approaches; manual graph byte-equivalent",
+    "Manual steering takes over public auto-roam",
+    "Real manual passage drive 1 clears both portals without collision",
+    "Real manual passage drive -1 clears both portals without collision",
+    "Manual stair front approach stops",
+    "Manual stair side approach stops",
+    "Pause holds pose and resumes without held keyboard input",
+    "Unchanged remote renderer receives Cybertruck and current passage pose"
+  ],
+  "errors": [],
+  "misses": [],
+  "samples": [
+    {
+      "case": "actual browser route graphs",
+      "manualUnchanged": true,
+      "manualEdges": 3803,
+      "tourEdges": 1284,
+      "privateRoutes": [
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/38542545",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/363475448",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/363475450",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/363475450",
+          "manualEdges": 1,
+          "tourEdges": 0
+        },
+        {
+          "id": "way/363475450",
+          "manualEdges": 1,
+          "tourEdges": 0
+        }
+      ]
+    },
+    {
+      "case": "passage 1",
+      "state": {
+        "vehicleType": "cybertruck",
+        "visualHeight": 1.7937999963760378,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 5.999947600504708,
+          "active": false,
+          "locked": false
+        },
+        "speed": 17.6010774703446,
+        "distance": 29.999738002523497,
+        "heading": 41.99839963176305,
+        "choice": "straight",
+        "wheelAngle": 68.29764034967138,
+        "position": [
+          77.59116610759143,
+          12.979427224036264
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0.030157824067327168,
+          "impacts": 0,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 1773,
+        "from": 54,
+        "to": 1987,
+        "progress": 112.88795121176925,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      }
+    },
+    {
+      "case": "passage -1",
+      "state": {
+        "vehicleType": "cybertruck",
+        "visualHeight": 1.7937999963760378,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 6.240636822335091,
+          "active": false,
+          "locked": false
+        },
+        "speed": 18.008678320626284,
+        "distance": 31.20318411167546,
+        "heading": 221.99839963176305,
+        "choice": "straight",
+        "wheelAngle": 71.03741526157754,
+        "position": [
+          77.59096876932914,
+          12.979213641852697
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0.03100951395014636,
+          "impacts": 0,
+          "surface": "road"
+        },
+        "ended": false,
+        "edge": 1773,
+        "from": 54,
+        "to": 1987,
+        "progress": 112.88795121176925,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      }
+    },
+    {
+      "case": "actual selected model footprint",
+      "vehicleBounds": {
+        "minX": -1.3685653049401216,
+        "maxX": 1.3685653049401216,
+        "minY": -3.24942238309192,
+        "maxY": 2.9081223724107685,
+        "margin": 0.08,
+        "paddingX": 0.08191528624810503,
+        "paddingY": 0.1573224017839372,
+        "maxPitch": 0.08,
+        "maxRoll": 0.045,
+        "neutralBounds": {
+          "minX": -1.2066500186920166,
+          "maxX": 1.2066500186920166,
+          "minY": -3.012099981307983,
+          "maxY": 2.670799970626831,
+          "minZ": -4.996003610813204e-16,
+          "maxZ": 1.7937999963760378
+        }
+      }
+    },
+    {
+      "case": "invalid body spawn rejected",
+      "rejected": true,
+      "error": "Test start intersects static geometry",
+      "prior": [
+        77.59090982885047,
+        12.979149849681887
+      ],
+      "after": [
+        77.59090982885047,
+        12.979149849681887
+      ]
+    },
+    {
+      "case": "stair front",
+      "state": {
+        "vehicleType": "cybertruck",
+        "visualHeight": 1.7937999963760378,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 1.0212286816292886,
+          "active": false,
+          "locked": false
+        },
+        "speed": 0,
+        "distance": 5.106143408146443,
+        "heading": 314.37372663049314,
+        "choice": "straight",
+        "wheelAngle": 11.592032780637242,
+        "position": [
+          77.59128046514269,
+          12.979125445591402
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0.04741406467379259,
+          "impacts": 64,
+          "surface": "grass"
+        },
+        "ended": false,
+        "edge": 1773,
+        "from": 54,
+        "to": 1987,
+        "progress": 112.88795121176925,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      }
+    },
+    {
+      "case": "stair side",
+      "state": {
+        "vehicleType": "cybertruck",
+        "visualHeight": 1.7937999963760378,
+        "roaming": false,
+        "groundHeight": 0,
+        "cameraOrbit": {
+          "yaw": 0,
+          "elevation": 12,
+          "distance": 13
+        },
+        "active": true,
+        "paused": false,
+        "boost": {
+          "reserve": 0.8530779613841473,
+          "active": false,
+          "locked": false
+        },
+        "speed": 1.268361378033383,
+        "distance": 4.265389806920737,
+        "heading": 224.37372663049314,
+        "choice": "straight",
+        "wheelAngle": 9.710620104739645,
+        "position": [
+          77.59136192751946,
+          12.979383335743947
+        ],
+        "tilt": {
+          "enabled": false,
+          "steer": 0,
+          "center": null,
+          "lastSample": 0
+        },
+        "gamepad": {
+          "connected": false,
+          "index": null,
+          "armed": false
+        },
+        "physics": {
+          "steer": 0,
+          "yaw": 0,
+          "roll": 0,
+          "pitch": 0.03866248893698681,
+          "impacts": 67,
+          "surface": "grass"
+        },
+        "ended": false,
+        "edge": 1773,
+        "from": 54,
+        "to": 1987,
+        "progress": 112.88795121176925,
+        "roadEdges": 3803,
+        "connectedNodes": 3109,
+        "keys": []
+      }
+    },
+    {
+      "case": "actual helicopter chase focus",
+      "focus": {
+        "point": [
+          77.59142867106462,
+          12.97913727021954
+        ],
+        "heading": -45.626273369506855,
+        "height": 45,
+        "hit": {
+          "id": "building-2526",
+          "name": "Vidhana Soudha",
+          "height": 39.79999923706055,
+          "source": "OpenStreetMap footprint · reconstructed model",
+          "note": "Displayed geometry height; architectural details are reconstructed.",
+          "lng": 77.5909669394678,
+          "lat": 12.979423903460592
+        },
+        "trials": [
+          {
+            "distance": 60,
+            "height": 45,
+            "shift": 12,
+            "hit": "building-2526",
+            "top": 39.79999923706055
+          }
+        ]
+      }
+    }
+  ],
+  "transport": [
+    {
+      "event": "upgrade",
+      "url": "/ws",
+      "origin": "http://127.0.0.1:62828"
+    },
+    {
+      "event": "websocket",
+      "url": "ws://127.0.0.1:62829/ws"
+    },
+    {
+      "event": "upgrade",
+      "url": "/ws",
+      "origin": "http://127.0.0.1:62828"
+    },
+    {
+      "event": "websocket",
+      "url": "ws://127.0.0.1:62829/ws"
+    }
+  ],
+  "state": {
+    "auto": {
+      "vehicleType": "cybertruck",
+      "visualHeight": 1.7937999963760378,
+      "roaming": false,
+      "groundHeight": 0,
+      "cameraOrbit": {
+        "yaw": 0,
+        "elevation": 12,
+        "distance": 13
+      },
+      "active": false,
+      "paused": false,
+      "boost": {
+        "reserve": 0.10452095842598126,
+        "active": false,
+        "locked": false
+      },
+      "speed": 2.1117554372715777,
+      "distance": 0.5226047921299063,
+      "heading": 41.99839963176305,
+      "choice": "straight",
+      "wheelAngle": 1.1897661951214618,
+      "position": [
+        77.59107437352355,
+        12.979327938868257
+      ],
+      "tilt": {
+        "enabled": false,
+        "steer": 0,
+        "center": null,
+        "lastSample": 0
+      },
+      "gamepad": {
+        "connected": false,
+        "index": null,
+        "armed": false
+      },
+      "physics": {
+        "steer": 0,
+        "yaw": 0,
+        "roll": 0,
+        "pitch": 0.03677931884045538,
+        "impacts": 0,
+        "surface": "road"
+      },
+      "ended": false,
+      "edge": 1773,
+      "from": 54,
+      "to": 1987,
+      "progress": 112.88795121176925,
+      "roadEdges": 3803,
+      "connectedNodes": 3109,
+      "keys": []
+    },
+    "multiplayer": {
+      "name": "Passage Driver",
+      "room": "e5179385b290433894efa7d083a38490",
+      "id": "dae9e0e9-261c-48e0-af0a-ed32d60451c7",
+      "status": "Connected",
+      "public": false,
+      "connected": true,
+      "players": [
+        {
+          "id": "dae9e0e9-261c-48e0-af0a-ed32d60451c7",
+          "name": "Passage Driver",
+          "pose": {
+            "vehicle": "helicopter",
+            "lng": 77.59142867106462,
+            "lat": 12.97913727021954,
+            "altitude": 60,
+            "heading": 314.37372663049314,
+            "pitch": 0,
+            "roll": 0,
+            "speed": 0,
+            "color": "green"
+          }
+        },
+        {
+          "id": "7884b8c1-fb48-4f99-9b17-5a8bc931df82",
+          "name": "Passage Observer",
+          "pose": {
+            "vehicle": "spectator",
+            "lng": 77.5945,
+            "lat": 12.9755,
+            "altitude": 0,
+            "heading": 0,
+            "pitch": 0,
+            "roll": 0,
+            "speed": 0,
+            "color": "green"
+          }
+        }
+      ],
+      "lastMessage": 1789112389244,
+      "pose": {
+        "vehicle": "helicopter",
+        "lng": 77.59142867106462,
+        "lat": 12.97913727021954,
+        "altitude": 60,
+        "heading": 314.37372663049314,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0
+      }
+    },
+    "body": "flight-active"
+  }
+}

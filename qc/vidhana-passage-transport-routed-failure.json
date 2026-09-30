@@ -1,0 +1,21 @@
+{
+  "endpoint": "ws://127.0.0.1:50762/ws",
+  "result": {
+    "error": true
+  },
+  "events": [
+    {
+      "event": "websocket",
+      "url": "ws://127.0.0.1:50762/ws"
+    },
+    {
+      "event": "socketerror",
+      "error": "Error in connection establishment: net::ERR_BLOCKED_BY_LOCAL_NETWORK_ACCESS_CHECKS"
+    },
+    {
+      "event": "console",
+      "type": "error",
+      "text": "WebSocket connection to 'ws://127.0.0.1:50762/ws' failed: Error in connection establishment: net::ERR_BLOCKED_BY_LOCAL_NETWORK_ACCESS_CHECKS"
+    }
+  ]
+}

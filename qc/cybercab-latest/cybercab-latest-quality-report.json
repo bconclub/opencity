@@ -1,0 +1,99 @@
+{
+  "status": "review_candidate",
+  "source": "D:\\Brands BCON\\OpenCity\\Models\\Cyber CAB.glb",
+  "sourceSha256": "558c39dea82ece80095e56667a2d0a2dc5c4d74cb98df919cc530817ed290f5f",
+  "sourceBytes": 60552920,
+  "sourceTriangles": 1942948,
+  "sourceBounds": [
+    [
+      -0.9520840048789978,
+      -0.40087100863456726,
+      -0.30519598722457886
+    ],
+    [
+      0.95073401927948,
+      0.4015609920024872,
+      0.3053399920463562
+    ]
+  ],
+  "candidate": "C:\\Users\\user\\Documents\\ChatGPT\\Z\\assets\\vehicles\\cybercab-latest-quality.glb",
+  "candidateBytes": 5317628,
+  "triangles": 59800,
+  "triangleBreakdown": {
+    "Body": 47800,
+    "Wheel_FL": 3000,
+    "Wheel_FR": 3000,
+    "Wheel_RL": 3000,
+    "Wheel_RR": 3000
+  },
+  "materials": 1,
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "boundsMin": [
+    -0.9399099349975586,
+    -2.2250397205352783,
+    -0.0009372830390930176
+  ],
+  "boundsMax": [
+    0.9405041337013245,
+    2.225667953491211,
+    1.4279916286468506
+  ],
+  "dimensions": [
+    1.8804140090942383,
+    4.45070743560791,
+    1.4289288520812988
+  ],
+  "wheelPivots": {
+    "Wheel_FL": [
+      -0.8185228109359741,
+      1.3564093112945557,
+      0.3507955074310303
+    ],
+    "Wheel_FR": [
+      0.8185228109359741,
+      1.3564093112945557,
+      0.3507955074310303
+    ],
+    "Wheel_RL": [
+      -0.8185228109359741,
+      -1.3564093112945557,
+      0.3507955074310303
+    ],
+    "Wheel_RR": [
+      0.8185228109359741,
+      -1.3564093112945557,
+      0.3507955074310303
+    ]
+  },
+  "wheelAxis": "local X",
+  "frontDirection": "+Y",
+  "appearancePolicy": "Original material, UVs, and textures retained; textures downscaled to 1024. No blanket smoothing or recolouring.",
+  "wheelLimitation": "Wheel faces are separated by conservative spatial envelopes from a single fragmented source mesh. Pivots function, but envelopes may include nearby arch/liner fragments or omit wheel fragments; visual review required.",
+  "renders": [
+    "C:\\Users\\user\\Documents\\ChatGPT\\Z\\qc\\cybercab-latest\\cybercab-latest-source.png",
+    "C:\\Users\\user\\Documents\\ChatGPT\\Z\\qc\\cybercab-latest\\cybercab-latest-quality.png"
+  ],
+  "editableBlend": "D:\\CodexTools\\Blender\\projects\\cybercab-latest-quality.blend"
+}

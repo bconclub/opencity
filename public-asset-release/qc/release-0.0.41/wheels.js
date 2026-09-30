@@ -1,0 +1,7 @@
+import * as T from 'three';import{createBlenderVehicle}from'/blender-vehicle.js';
+const scene=new T.Scene();scene.background=new T.Color('#a9bcc2');scene.add(new T.HemisphereLight(0xffffff,0x68716a,3));const light=new T.DirectionalLight(0xffffff,3);light.position.set(4,5,7);scene.add(light);
+const renderer=new T.WebGLRenderer({antialias:true});renderer.setSize(innerWidth,innerHeight);document.body.append(renderer.domElement);const camera=new T.PerspectiveCamera(40,innerWidth/innerHeight,.1,100);camera.up.set(0,0,1);
+const $=id=>document.getElementById(id);let model,angle=0;async function load(){model?.group.removeFromParent();$('stats').textContent='Loading original';model=createBlenderVehicle(T,$('vehicle').value);await model.ready;scene.add(model.group);$('stats').textContent='Ready: '+model.wheels.length+' original wheels';}
+$('vehicle').onchange=load;await load();
+function render(){requestAnimationFrame(render);const small=['yulu','delivery'].includes($('vehicle').value),d=small?3.5:8,view=$('view').value;camera.position.set(view==='side'?d:d*.7,view==='side'?0:view==='front'?d:-d,small?1.2:2.1);camera.lookAt(0,0,small?.8:.7);angle=$('animate').checked?angle+.05:Number($('spin').value)*Math.PI/180;model?.updateDrive(angle,Number($('steer').value)*Math.PI/180);renderer.render(scene,camera);}render();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});

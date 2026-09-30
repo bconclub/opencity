@@ -1,0 +1,232 @@
+{
+  "rawSHA256": "f7c438c13da9a555944da96dc1ef369072d327c9a433b6f416c0b3c06131cf3d",
+  "oldRawSHA256": "ca8789d4181bc435398ac6edbab468e6c489e37eaffbef4155dc11c5912c1f3e",
+  "horizontalScaleAppliedOnce": 0.9988824009162848,
+  "origin": [
+    77.59136000000001,
+    12.97984615
+  ],
+  "center": [
+    -60.678211628541604,
+    -5.131652476745521
+  ],
+  "clipRadiusM": 500,
+  "clipSides": 256,
+  "sourceMeshCount": 1169,
+  "unchangedWholeMeshes": 1141,
+  "changedMeshes": [
+    {
+      "index": 0,
+      "materialName": null,
+      "triangles": 48
+    },
+    {
+      "index": 1,
+      "materialName": null,
+      "triangles": 8
+    },
+    {
+      "index": 2,
+      "materialName": null,
+      "triangles": 32
+    },
+    {
+      "index": 3,
+      "materialName": null,
+      "triangles": 8
+    },
+    {
+      "index": 137,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 186,
+      "materialName": null,
+      "triangles": 16
+    },
+    {
+      "index": 398,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 440,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 468,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 495,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 501,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 642,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 650,
+      "materialName": null,
+      "triangles": 8
+    },
+    {
+      "index": 651,
+      "materialName": null,
+      "triangles": 4
+    },
+    {
+      "index": 652,
+      "materialName": null,
+      "triangles": 2
+    },
+    {
+      "index": 653,
+      "materialName": null,
+      "triangles": 8
+    },
+    {
+      "index": 655,
+      "materialName": null,
+      "triangles": 110
+    },
+    {
+      "index": 658,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 737,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 739,
+      "materialName": null,
+      "triangles": 56
+    },
+    {
+      "index": 764,
+      "materialName": null,
+      "triangles": 5
+    },
+    {
+      "index": 990,
+      "materialName": null,
+      "triangles": 4
+    },
+    {
+      "index": 991,
+      "materialName": null,
+      "triangles": 24
+    },
+    {
+      "index": 992,
+      "materialName": null,
+      "triangles": 4
+    },
+    {
+      "index": 993,
+      "materialName": null,
+      "triangles": 16
+    },
+    {
+      "index": 1123,
+      "materialName": null,
+      "triangles": 5
+    },
+    {
+      "index": 1134,
+      "materialName": null,
+      "triangles": 6
+    },
+    {
+      "index": 1160,
+      "materialName": null,
+      "triangles": 5
+    }
+  ],
+  "furnitureMatchedByExactGeometry": [
+    {
+      "index": 609,
+      "prior": 971,
+      "triangles": 2
+    },
+    {
+      "index": 610,
+      "prior": 970,
+      "triangles": 15
+    }
+  ],
+  "furnitureTrianglesRetained": 17,
+  "profiles": [
+    {
+      "color": [
+        0.30196078431372547,
+        0.30196078431372547,
+        0.30196078431372547
+      ],
+      "role": "asphalt"
+    },
+    {
+      "color": [
+        0.5490196078431373,
+        0.5490196078431373,
+        0.5490196078431373
+      ],
+      "role": "concrete"
+    },
+    {
+      "color": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "role": "paving"
+    },
+    {
+      "color": [
+        0.8980392156862745,
+        0.8980392156862745,
+        0.8980392156862745
+      ],
+      "role": "marking"
+    },
+    {
+      "color": [
+        0.30196078431372547,
+        0,
+        0
+      ],
+      "role": "source"
+    },
+    {
+      "color": [
+        0.7843137254901961,
+        0.7843137254901961,
+        0.7843137254901961
+      ],
+      "role": "source"
+    },
+    {
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "role": "source"
+    }
+  ],
+  "automaticRoutesEnabled": false,
+  "runtimePromoted": false
+}

@@ -1,0 +1,70 @@
+{
+  "source": "D:\\Brands BCON\\OpenCity\\Models\\Yulu.glb",
+  "bytes": 63323368,
+  "triangles": 1951358,
+  "materials": [
+    "Material_0"
+  ],
+  "images": [
+    {
+      "name": "Image_0",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    }
+  ],
+  "boundsMin": [
+    -0.9522920250892639,
+    -0.35932400822639465,
+    -0.5892419815063477
+  ],
+  "boundsMax": [
+    0.9507619738578796,
+    0.3601270020008087,
+    0.5806609988212585
+  ],
+  "dimensions": [
+    1.9030539989471436,
+    0.7194510102272034,
+    1.1699029803276062
+  ],
+  "objects": [
+    {
+      "name": "Mesh_0",
+      "triangles": 1951358,
+      "vertices": 1034498,
+      "materials": [
+        "Material_0"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.9030539989471436,
+        0.7194510102272034,
+        1.169903039932251
+      ],
+      "parent": null
+    }
+  ]
+}

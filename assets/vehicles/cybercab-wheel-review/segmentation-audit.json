@@ -1,0 +1,61 @@
+{
+  "originalFaces": 24848,
+  "partFaces": {
+    "Body": 14559,
+    "Wheel_FL": 2664,
+    "Wheel_FR": 2671,
+    "Wheel_RL": 2513,
+    "Wheel_RR": 2441
+  },
+  "method": "whole original faces selected by wheel envelope; no topology cuts",
+  "normalPolicy": "copy original corner normals",
+  "uvPolicy": "copy every original UV corner",
+  "wheelPivots": {
+    "Wheel_FL": [
+      -0.785,
+      1.405,
+      0.361
+    ],
+    "Wheel_FR": [
+      0.785,
+      1.405,
+      0.361
+    ],
+    "Wheel_RL": [
+      -0.785,
+      -1.367,
+      0.357
+    ],
+    "Wheel_RR": [
+      0.785,
+      -1.367,
+      0.357
+    ]
+  },
+  "maxUVError": {
+    "Body": 0.0,
+    "Wheel_FL": 0.0,
+    "Wheel_FR": 0.0,
+    "Wheel_RL": 0.0,
+    "Wheel_RR": 0.0
+  },
+  "maxCornerNormalVectorError": {
+    "Body": 0.0004839188381147877,
+    "Wheel_FL": 0.00036213470891263423,
+    "Wheel_FR": 0.0003370840811364955,
+    "Wheel_RL": 0.00047438761340162235,
+    "Wheel_RR": 0.0003541861063443004
+  },
+  "maxPositionError": {
+    "Body": 0.0,
+    "Wheel_FL": 0.0,
+    "Wheel_FR": 0.0,
+    "Wheel_RL": 0.0,
+    "Wheel_RR": 0.0
+  },
+  "status": "REJECTED_FOR_RUNTIME",
+  "reason": "90-degree wheel spin exposes triangular arch-edge gaps and rotates small gold/body fragments into tyre perimeter. Source physically connects wheel and body surfaces.",
+  "facesAdded": 0,
+  "facesRemoved": 0,
+  "faceAssignmentsPreserved": true
+}

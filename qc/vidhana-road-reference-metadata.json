@@ -1,0 +1,111 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "File:Dr_Ambedkar_Veedhi,_Bengaluru_(01).jpg",
+        "to": "File:Dr Ambedkar Veedhi, Bengaluru (01).jpg"
+      }
+    ],
+    "pages": {
+      "80076860": {
+        "pageid": 80076860,
+        "ns": 6,
+        "title": "File:Dr Ambedkar Veedhi, Bengaluru (01).jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Dr_Ambedkar_Veedhi%2C_Bengaluru_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dr_Ambedkar_Veedhi,_Bengaluru_(01).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=80076860",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2019-07-01 09:17:30",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Dr Ambedkar Veedhi, Bengaluru (01)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Taken with Nikon D80|Dr Ambedkar Veedhi|Attribution only license|Self-published work|Information field template with formatting|Photographs by Moheen Reeyad|Photographs taken on 2019-06-22|Supported by Chattogram Wikimedia Community|Photographs of roads by Moheen Reeyad|Images of India by Moheen Reeyad|Taken with Tamron 18-200mm F/3.5-6.3 Di II VC B018N|June 2019 in Bengaluru",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Dr Ambedkar Veedhi, in front of Vidhana Soudha, <a href=\"//commons.wikimedia.org/wiki/Bengaluru\" class=\"mw-redirect\" title=\"Bengaluru\">Bengaluru</a>, <a href=\"//commons.wikimedia.org/wiki/Karnataka\" class=\"mw-redirect\" title=\"Karnataka\">Karnataka</a>, <a href=\"//commons.wikimedia.org/wiki/India\" title=\"India\">India</a>.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "Taken on 22 June 2019, 06:10:06",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q28709819\" class=\"extiw\" title=\"d:Q28709819\"><span title=\"Bangladeshi graphic artist and writer\">Moheen Reeyad</span></a></bdi>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "<div style=\"max-width:900px\" id=\"license-information\">\n<div style=\"background-color:#eee; color:#333; padding:20px 30px; box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.37);\">\n<div style=\"padding-bottom:10px\">\n<figure class=\"mw-default-size\" typeof=\"mw:File/Thumb\"><a href=\"//commons.wikimedia.org/wiki/File:Dr_Ambedkar_Veedhi,_Bengaluru_(01).jpg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Dr_Ambedkar_Veedhi%2C_Bengaluru_%2801%29.jpg/250px-Dr_Ambedkar_Veedhi%2C_Bengaluru_%2801%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"130\" height=\"86\" style=\"--mw-file-upright: 0.5\" class=\"mw-file-element mw-file-upright\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Dr_Ambedkar_Veedhi%2C_Bengaluru_%2801%29.jpg/330px-Dr_Ambedkar_Veedhi%2C_Bengaluru_%2801%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"3872\" data-file-height=\"2574\"></a><figcaption>Image: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.moheenreeyad.com/\">Moheen Reeyad</a><br>License: <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> via <a class=\"external text\" data-mw-original-href=\"//commons.wikimedia.org/wiki/File:Dr_Ambedkar_Veedhi,_Bengaluru_(01).jpg\" href=\"https://commons.wikimedia.org/wiki/File:Dr_Ambedkar_Veedhi,_Bengaluru_(01).jpg\">Wikimedia Commons</a> </figcaption></figure>\n<p><b><a href=\"https://upload.wikimedia.org/wikipedia/commons/a/a8/Dr_Ambedkar_Veedhi%2C_Bengaluru_%2801%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=api&amp;utm_content=original\" class=\"internal\" title=\"Dr Ambedkar Veedhi, Bengaluru (01).jpg\"><i>This work</i></a> was published by <a href=\"//commons.wikimedia.org/wiki/User:Moheen\" title=\"User:Moheen\">Moheen Reeyad</a>, and released under the <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">free license CC BY-SA 4.0</a> which also allows the usage outside of Wikimedia under the following conditions:</b>\n</p>\n<ul><li>Feel free to use <a href=\"https://upload.wikimedia.org/wikipedia/commons/a/a8/Dr_Ambedkar_Veedhi%2C_Bengaluru_%2801%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=api&amp;utm_content=original\" class=\"internal\" title=\"Dr Ambedkar Veedhi, Bengaluru (01).jpg\"><b>this</b></a> for any purpose as long as you credit <b>Moheen Reeyad</b> as the author/creator and follow the terms of the chosen license(s) as well as the conform weblinks – like in the example on the right. Print publications additionally need to reproduce their URL (<a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/4.0/legalcode\">creativecommons.org/licenses/by-sa/4.0/legalcode</a>).</li></ul>\n<ul><li>If you remix, transform, or build upon the material, you must <b>distribute your contributions under the <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">same license</a></b> as the original.</li></ul>\n<p>Please <b><a rel=\"nofollow\" class=\"external text\" href=\"mailto:moheenreeyad@wikimedia.org.bd\">send me</a></b> a specimen copy or the URL of the website where the image is used. As a courtesy, please let me know if you plan to use this photo in any printed medium. Thanks in advance.\n</p>\n</div>\n<hr>\n<p>The <a rel=\"nofollow\" class=\"external text\" href=\"https://lizenzhinweisgenerator.de/?lang=en&amp;url=https://commons.wikimedia.org/wiki/File:Dr_Ambedkar_Veedhi,_Bengaluru_(01).jpg\">Online <b>Attribution Generator</b></a> offers a good tool to generate an attribution sufficient for your use case.\n</p>\n<hr>\n<div style=\"padding-bottom:10px\">\n<p>Feel free to contact me <a rel=\"nofollow\" class=\"external text\" href=\"mailto:moheenreeyad@wikimedia.org.bd\">via email</a> for any questions or in case you need:\n</p>\n<ul><li>an individual licenses to use the image without the requirements of the above terms and conditions</li>\n<li>a higher resolution or a different crop of the same subject</li>\n<li>or similar subject and photographs</li></ul>\n</div>\n<hr>\n<div style=\"padding-bottom:10px\">\n<p><i><b>NOTE</b>: Only the terms and conditions mentioned above authorize the free use of this image. Any infringement causes a <a href=\"//commons.wikimedia.org/wiki/Commons:Copyvio\" class=\"mw-redirect\" title=\"Commons:Copyvio\">copyright violation</a>, that may result in a penalty fee of five times <a rel=\"nofollow\" class=\"external text\" href=\"http://www.mediafon.net/meldung_volltext.php3?id=43146fe782e92\">the fee suggested</a> by the <a href=\"https://de.wikipedia.org/wiki/Mittelstandsgemeinschaft_Foto-Marketing\" class=\"extiw\" title=\"de:Mittelstandsgemeinschaft Foto-Marketing\">MFM</a>, inter alia.</i>\n</p>\n<hr>\n<p><small><a href=\"//commons.wikimedia.org/wiki/User:Moheen/Permission\" title=\"User:Moheen/Permission\">Templete credit</a>: <a href=\"//commons.wikimedia.org/wiki/User:Martin_Kraft\" title=\"User:Martin Kraft\">Martin Kraft</a>, published under the license <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/3.0/de/legalcode\">CC BY-SA 3.0</a>. <a href=\"//commons.wikimedia.org/wiki/User:Martin_Kraft/permission\" title=\"User:Martin Kraft/permission\">soucre template</a>)</small>\n</p>\n</div>\n</div>\n<p><br>\n</p>\n</div>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Attribution": {
+                "value": "© <a href=\"//commons.wikimedia.org/wiki/User:Moheen\" title=\"User:Moheen\">Moheen Reeyad</a>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "origin": [
+    77.59136000000001,
+    12.97984615
+  ],
+  "axes": "X east, Y north, Z up; transformed once from OSM2World X east, Y up, Z north",
+  "localBounds": {
+    "min": [
+      -560.585205078125,
+      -500.648193359375,
+      0
+    ],
+    "max": [
+      439.2247619628906,
+      494.7628479003906,
+      2
+    ]
+  },
+  "bounds": [
+    77.58618635189106,
+    12.975343678074553,
+    77.59541361100963,
+    12.984295613215803
+  ],
+  "duplicatesRemoved": 7,
+  "sourceTriangles": 11977,
+  "sourceMeshes": 1156,
+  "coplanarRedundantAreaRemovedM2": 53828.30979997148,
+  "coverageDifferenceM2": 0,
+  "remainingCoplanarMaterialOverlapM2": 7.018658773606327e-13,
+  "meshes": 7,
+  "triangles": 11634,
+  "bytes": 983456,
+  "footprintTriangles": 9285,
+  "groundIndexURL": "vidhana-ground.json",
+  "groundIndexBytes": 1151437,
+  "groundIndexTriangles": 9285
+}

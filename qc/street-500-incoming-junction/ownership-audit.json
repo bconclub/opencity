@@ -1,0 +1,551 @@
+{
+  "passed": true,
+  "sourceWays": [
+    "38542917",
+    "1091198032"
+  ],
+  "sharedNode": "428831267",
+  "widthM": 7.092065046505621,
+  "widthProvenance": "7.1 m native converter estimate, scaled once to map metre frame; not surveyed",
+  "basicArcAreaM2": 1497.7848445747372,
+  "basicArcMaximumRadiusM": 560.2729179146509,
+  "basicArcNativeOverlapM2": 0.0,
+  "protectedAreaOverlapM2": 0.0,
+  "detailedGeometryRadiusM": 500,
+  "ownership": {
+    "auto": {
+      "beforeFeatures": 3803,
+      "afterFeatures": 3803,
+      "removedSummedOverlapM2": 6669.990497797262,
+      "changes": [
+        {
+          "index": 17,
+          "removedM2": 22.64401856497998,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 20,
+          "removedM2": 47.02428058870467,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 21,
+          "removedM2": 5.8239829354803305,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 22,
+          "removedM2": 43.109670775397035,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 23,
+          "removedM2": 13.125941627495578,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 24,
+          "removedM2": 17.09591315660215,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 25,
+          "removedM2": 11.495909910155497,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 49,
+          "removedM2": 78.6373026514006,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 209,
+          "removedM2": 71.88035170599832,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 353,
+          "removedM2": 42.21816895307059,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 354,
+          "removedM2": 62.823807186410946,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 355,
+          "removedM2": 14.661994679455432,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 379,
+          "removedM2": 2.1363925260199608,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 380,
+          "removedM2": 44.93682458739936,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 381,
+          "removedM2": 6.8179685533936105,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 382,
+          "removedM2": 42.66279706387725,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 383,
+          "removedM2": 72.56271472535259,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 393,
+          "removedM2": 51.744833738985506,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 405,
+          "removedM2": 21.507315160748135,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 406,
+          "removedM2": 59.228279602849355,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 427,
+          "removedM2": 18.472427490119046,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 428,
+          "removedM2": 18.974961329503074,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 429,
+          "removedM2": 63.12401117845393,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 430,
+          "removedM2": 55.30463520985239,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 433,
+          "removedM2": 0.0001004050644723975,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 434,
+          "removedM2": 3.8037260109295428,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 435,
+          "removedM2": 28.97432674878371,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 446,
+          "removedM2": 29.352262659754537,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 450,
+          "removedM2": 63.31528599316863,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1373,
+          "removedM2": 49.61788867944702,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1375,
+          "removedM2": 51.1666500969975,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1442,
+          "removedM2": 20.244410798705644,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1451,
+          "removedM2": 23.260152465928456,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1635,
+          "removedM2": 6.195199856346818,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1660,
+          "removedM2": 106.19267861216186,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1667,
+          "removedM2": 43.36276360032625,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1668,
+          "removedM2": 11.664755786483406,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1669,
+          "removedM2": 139.2680039333985,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1670,
+          "removedM2": 107.17112102679056,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1671,
+          "removedM2": 165.39205329521255,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1672,
+          "removedM2": 168.5200142612305,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1673,
+          "removedM2": 170.11062372947163,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1674,
+          "removedM2": 169.91054492943678,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1701,
+          "removedM2": 102.34895026878908,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1746,
+          "removedM2": 28.452033926568134,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1751,
+          "removedM2": 33.06597533053986,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1797,
+          "removedM2": 205.3887805870828,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1798,
+          "removedM2": 107.13386862119128,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1799,
+          "removedM2": 60.69178864068619,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1800,
+          "removedM2": 47.25037061001498,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1801,
+          "removedM2": 152.67155288473523,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1802,
+          "removedM2": 97.51053582462036,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1803,
+          "removedM2": 93.76516208183044,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1845,
+          "removedM2": 24.17416653541386,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 1958,
+          "removedM2": 98.5450236804191,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2091,
+          "removedM2": 143.49772433728367,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2092,
+          "removedM2": 65.58261052825112,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2093,
+          "removedM2": 412.73806591990666,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2094,
+          "removedM2": 148.28250595394036,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2148,
+          "removedM2": 18.700604017186492,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2149,
+          "removedM2": 73.46156024475619,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2150,
+          "removedM2": 237.94517693122086,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2151,
+          "removedM2": 458.4020357328168,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2294,
+          "removedM2": 27.18182784861885,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2298,
+          "removedM2": 107.54848762249503,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2326,
+          "removedM2": 217.14283423305483,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2333,
+          "removedM2": 47.899280491048884,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2334,
+          "removedM2": 126.40895177240043,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2391,
+          "removedM2": 184.65968640645383,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2395,
+          "removedM2": 5.3260263570220445,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2401,
+          "removedM2": 30.41823169331973,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2443,
+          "removedM2": 49.36010123438498,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2444,
+          "removedM2": 120.18152454673871,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2688,
+          "removedM2": 10.039853198564007,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2689,
+          "removedM2": 34.50329232591358,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2743,
+          "removedM2": 63.033803312378,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2752,
+          "removedM2": 44.80509026529726,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2785,
+          "removedM2": 59.719661878166,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2803,
+          "removedM2": 17.487626360712625,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2920,
+          "removedM2": 62.065481791043965,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2947,
+          "removedM2": 47.15567007676583,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2988,
+          "removedM2": 36.22745784937706,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 2996,
+          "removedM2": 188.84158985497982,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 3004,
+          "removedM2": 231.3193098411773,
+          "kind": null,
+          "empty": false
+        },
+        {
+          "index": 3010,
+          "removedM2": 103.51914938834716,
+          "kind": null,
+          "empty": false
+        }
+      ],
+      "sourceSHA256": "a1a8e193103024c70d38e75eeb5cbc3cf9be6a2c0aeccd3870a6baaaa6b4fc89",
+      "ownedSHA256": "5e5ece0f945dd8a499af78909bd44c6b31e8aa7902f152cacb36f101cdb0c510"
+    },
+    "detail": {
+      "beforeFeatures": 3301,
+      "afterFeatures": 3301,
+      "removedSummedOverlapM2": 9.094947017729282e-13,
+      "changes": [],
+      "sourceSHA256": "7d8daadba9799c805835810d485755a8520d1a69bb424bc58802430953c5e5cf",
+      "ownedSHA256": "7d8daadba9799c805835810d485755a8520d1a69bb424bc58802430953c5e5cf"
+    }
+  },
+  "outputs": {
+    "auto": "qc\\street-500-incoming-junction\\auto-surfaces-owned.json",
+    "detail": "qc\\street-500-incoming-junction\\detail-surfaces-owned.json"
+  },
+  "graphChanged": false,
+  "conditionalMotorAccessEnabled": false,
+  "runtimePromoted": false
+}

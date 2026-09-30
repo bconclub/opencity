@@ -1,0 +1,49 @@
+[
+  {
+    "file": "assets/vehicles/cybercab-meshy-approved.glb",
+    "bytes": 4535896,
+    "triangles": 24848,
+    "materials": 1,
+    "images": [
+      {
+        "name": "Image_2",
+        "sha256": "F8A3F7DEE7F1E1C2ECC4BA277E648954968B9BB4E40F9DCE7E1B8E28D079CE5F"
+      },
+      {
+        "name": "Image_0",
+        "sha256": "2F14F688DC0F608EDC9830B91762B5ABEB94234CE131FADE2A66F3AF0A404C07"
+      },
+      {
+        "name": "Image_1",
+        "sha256": "EC00A3702A4B1BC3394AFDD34559F41FEC35301EF19CAD848C2FF125ED623CE6"
+      }
+    ],
+    "wheels": []
+  },
+  {
+    "file": "assets/vehicles/cybercab-wheel-review/repaired-candidate.glb",
+    "bytes": 4437428,
+    "triangles": 24667,
+    "materials": 3,
+    "images": [
+      {
+        "name": "Image_2",
+        "sha256": "F8A3F7DEE7F1E1C2ECC4BA277E648954968B9BB4E40F9DCE7E1B8E28D079CE5F"
+      },
+      {
+        "name": "Image_0",
+        "sha256": "2F14F688DC0F608EDC9830B91762B5ABEB94234CE131FADE2A66F3AF0A404C07"
+      },
+      {
+        "name": "Image_1",
+        "sha256": "EC00A3702A4B1BC3394AFDD34559F41FEC35301EF19CAD848C2FF125ED623CE6"
+      }
+    ],
+    "wheels": [
+      "Wheel_FL",
+      "Wheel_FR",
+      "Wheel_RL",
+      "Wheel_RR"
+    ]
+  }
+]

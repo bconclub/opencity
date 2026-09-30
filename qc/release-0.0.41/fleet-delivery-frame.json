@@ -1,0 +1,38 @@
+{
+  "delivery": {
+    "scale": 0.9989012018291054,
+    "sourceBounds": [
+      [
+        -0.9518070220947266,
+        -0.4088590145111084,
+        -0.8723419904708862
+      ],
+      [
+        0.9502829909324646,
+        0.4092020094394684,
+        0.8733369708061218
+      ]
+    ],
+    "normalizedBounds": [
+      [
+        -0.40858106999688987,
+        -0.95,
+        0.0
+      ],
+      [
+        0.40858106999688987,
+        0.95,
+        1.7437608124273876
+      ]
+    ],
+    "sideImage": "delivery-source-side.png",
+    "sideImageWorldWidth": 2.052,
+    "sideImageWorldHeight": 1.1725714285714286,
+    "sideImageCenter": [
+      0.0,
+      0.0,
+      0.8718804121017456
+    ],
+    "sideImageHorizontal": "left=negative Y; right=positive Y"
+  }
+}

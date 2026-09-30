@@ -1,0 +1,192 @@
+{
+  "error": "TimeoutError: page.waitForFunction: Timeout 90000ms exceeded.",
+  "checks": [],
+  "errors": [],
+  "misses": [],
+  "samples": [],
+  "state": {
+    "auto": {
+      "vehicleType": "auto",
+      "roaming": false,
+      "groundHeight": 0,
+      "cameraOrbit": {
+        "yaw": 0,
+        "elevation": 12,
+        "distance": 13
+      },
+      "active": false,
+      "paused": false,
+      "boost": null,
+      "speed": 0,
+      "distance": 0,
+      "heading": 0,
+      "choice": "straight",
+      "wheelAngle": 0,
+      "position": null,
+      "tilt": {
+        "enabled": false,
+        "steer": 0,
+        "center": null,
+        "lastSample": 0
+      },
+      "gamepad": {
+        "connected": false,
+        "index": null,
+        "armed": false
+      },
+      "physics": null,
+      "roadEdges": 3803,
+      "connectedNodes": 3109,
+      "keys": []
+    },
+    "architecture": {
+      "columnCount": 12,
+      "columnHeight": 12.192,
+      "steps": 45,
+      "stairWidth": 62.1792,
+      "stairDepth": 21.336,
+      "landingZ": 6.75,
+      "canopyBottom": 18.942,
+      "canopyTop": 20.742,
+      "wingRoofZ": 19.3548,
+      "centralWingRoofZ": 34.1376,
+      "centralDomeTopZ": 45.72,
+      "northSouthGradeDifference": 3.048,
+      "datum": "Estimated north-side ground datum shared across flat review ground; south cellar/terrain unresolved",
+      "columns": 12,
+      "columnCenters": [
+        [
+          -383.0343123969441,
+          421.7128602499882
+        ],
+        [
+          -377.5250076274866,
+          416.1698199999852
+        ],
+        [
+          -375.72427990570964,
+          414.3921787499746
+        ],
+        [
+          -373.92762009289385,
+          416.23661199997474
+        ],
+        [
+          -371.53162168584674,
+          418.7260054999853
+        ],
+        [
+          -368.9674830398676,
+          421.2738419999743
+        ],
+        [
+          -366.48809249805294,
+          423.7319267499899
+        ],
+        [
+          -364.25955634533585,
+          426.0960852499705
+        ],
+        [
+          -362.2445854156914,
+          428.26752099997304
+        ],
+        [
+          -360.5699628730653,
+          429.91296974997135
+        ],
+        [
+          -362.51510136470483,
+          431.77131799996107
+        ],
+        [
+          -367.7667718969241,
+          436.88090599997827
+        ]
+      ],
+      "stairPlacement": {
+        "tangent": [
+          0.6993356406560726,
+          0.7147934398888677
+        ],
+        "outward": [
+          0.7147934398888677,
+          -0.6993356406560726
+        ],
+        "centerAlong": 44.23852194037802,
+        "topV": -556.1249967450274,
+        "bottomV": -534.7889967450274,
+        "landingRearV": -571.832961257508,
+        "topWidth": 29.34384792119843,
+        "estimated": true
+      },
+      "foyer": {
+        "backV": -571.832961257508,
+        "width": 25.34384792119843,
+        "entryWidth": 5.2,
+        "entryHeight": 6.8,
+        "recessDepth": 0.35,
+        "baseZ": 6.75,
+        "topZ": 18.942,
+        "estimated": true
+      },
+      "reviewOnly": true,
+      "domeUpdate": {
+        "drumBase": 19.3548,
+        "lowerCourseTop": 21.65,
+        "galleryTop": 25.6,
+        "corniceTop": 28.1,
+        "crownSpringline": 31.4,
+        "crownTop": 38,
+        "collarTop": 39.8,
+        "publishedOverallTop": 45.72,
+        "publishedDiameter": 18.288,
+        "intermediateHeightsEstimated": true,
+        "missingTop": "Upper pedestal and lion emblem not reconstructed; do not equate collar summit with published overall height",
+        "mappedCenter": [
+          -384.44994473226075,
+          438.2835379999568
+        ],
+        "mappedDiameter": [
+          18.061516004242833,
+          18.0672360001426
+        ],
+        "drumCorners": 8,
+        "bays": 24,
+        "brackets": 24,
+        "addedTriangles": 6246,
+        "revision": 2,
+        "galleryOpeningHeight": 1.22,
+        "lowerPilasters": 24,
+        "railingBalusters": 32,
+        "otherSixDomesUnchanged": true,
+        "coreRemoved": true,
+        "reviewOnly": true
+      },
+      "actualCentralTopZ": 39.8,
+      "publishedOverallTopZ": 45.72,
+      "upperPedestalAndEmblemMissing": true
+    },
+    "multiplayer": {
+      "name": "Passage Driver",
+      "room": "",
+      "id": null,
+      "status": "Reconnecting",
+      "public": false,
+      "connected": false,
+      "players": [],
+      "lastMessage": 0,
+      "pose": {
+        "vehicle": "spectator",
+        "lng": 77.5945,
+        "lat": 12.9755,
+        "altitude": 0,
+        "heading": 0,
+        "pitch": 0,
+        "roll": 0,
+        "speed": 0
+      }
+    },
+    "body": ""
+  }
+}

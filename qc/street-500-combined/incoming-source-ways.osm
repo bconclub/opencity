@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (244689 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <way id="52057928" visible="true" version="8" changeset="134008126" timestamp="2023-03-23T06:58:28Z" user="tusharvalvi" uid="16531141">
+  <nd ref="428831252"/>
+  <nd ref="663564863"/>
+  <nd ref="663551378"/>
+  <nd ref="4058224525"/>
+  <nd ref="663551382"/>
+  <nd ref="663551394"/>
+  <nd ref="4058224530"/>
+  <nd ref="10038553626"/>
+  <nd ref="663311722"/>
+  <tag k="access" v="yes"/>
+  <tag k="foot" v="yes"/>
+  <tag k="highway" v="service"/>
+  <tag k="motor_vehicle" v="yes"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="1091198031" visible="true" version="9" changeset="156921633" timestamp="2024-09-21T17:11:31Z" user="uknown-gryphus" uid="2425805">
+  <nd ref="428831252"/>
+  <nd ref="4017403944"/>
+  <nd ref="663309945"/>
+  <nd ref="428831253"/>
+  <nd ref="428831254"/>
+  <tag k="access" v="permissive"/>
+  <tag k="bicycle" v="no"/>
+  <tag k="bicycle:conditional" v="yes @ (Mo-Su 08:00-21:00)"/>
+  <tag k="cycleway" v="no"/>
+  <tag k="foot" v="yes"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="junction" v="circular"/>
+  <tag k="lanes" v="2"/>
+  <tag k="maxspeed" v="25"/>
+  <tag k="motor_vehicle:conditional" v="yes @ (Mo-Sa 08:00-21:00)"/>
+  <tag k="note" v="Vehicular Traffic Allowed only between - 8AM to 9PM from Monday to Saturday. Sunday Vehicles not permitted."/>
+  <tag k="oneway" v="yes"/>
+  <tag k="sidewalk" v="both"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="1091198032" visible="true" version="10" changeset="167338048" timestamp="2025-06-08T07:42:40Z" user="Ram_Tikore" uid="21017193">
+  <nd ref="428831267"/>
+  <nd ref="663309903"/>
+  <nd ref="12150906130"/>
+  <nd ref="249088118"/>
+  <nd ref="12190250154"/>
+  <nd ref="12896223107"/>
+  <nd ref="12896223106"/>
+  <nd ref="12896223105"/>
+  <nd ref="428831251"/>
+  <nd ref="4017403935"/>
+  <nd ref="428831252"/>
+  <tag k="access" v="permissive"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="cycleway" v="no"/>
+  <tag k="foot" v="yes"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="junction" v="circular"/>
+  <tag k="lanes" v="2"/>
+  <tag k="maxspeed" v="25"/>
+  <tag k="motor_vehicle:conditional" v="yes @ (Mo-Sa 08:00-21:00)"/>
+  <tag k="note" v="Vehicular Traffic Allowed only between - 8AM to 9PM from Monday to Saturday. Sunday Vehicles not permitted."/>
+  <tag k="oneway" v="yes"/>
+  <tag k="sidewalk" v="both"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+</osm>

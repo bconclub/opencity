@@ -1,0 +1,39 @@
+{
+  "selectionCenter": [
+    77.5908,
+    12.9798
+  ],
+  "selectionRadiusM": 500,
+  "bounds": [
+    77.585721,
+    12.9751756,
+    77.596999,
+    12.9845167
+  ],
+  "projectionOrigin": [
+    77.59136000000001,
+    12.97984615
+  ],
+  "nodes": 1824,
+  "ways": 443,
+  "sourceWays": 442,
+  "preciseCircularClip": false,
+  "inputSHA256": "a6dc40fc23c4f192abebb3652fc9b030701672e54f3e1a5bba14f9e0fd73b613",
+  "addedElements": [
+    "node/428831251",
+    "node/4017403935",
+    "way/1091198032"
+  ],
+  "incomingSelectedNodes": [
+    428831251,
+    4017403935,
+    428831252
+  ],
+  "origin": [
+    77.59136000000001,
+    12.97984615
+  ],
+  "sourceElementsUnchanged": true,
+  "conditionalMotorAccessEnabled": false,
+  "routesChanged": false
+}

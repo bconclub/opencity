@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "groundAddedM2": 127.31372429884196,
+  "groundRemovedM2": 1.471674421247552,
+  "changedAreaOutside40mM2": 0.001363872614704048,
+  "remoteAddedBeyondToleranceM2": 0.0,
+  "remoteRemovedBeyondToleranceM2": 0.0,
+  "remoteBoundaryToleranceM": 0.0001,
+  "protectedMappedAreas": [
+    {
+      "way": "338941369",
+      "newGroundOverlapM2": 0.0,
+      "distanceFromJunctionM": 648.2115224984537
+    },
+    {
+      "way": "38318887",
+      "newGroundOverlapM2": 0.0,
+      "distanceFromJunctionM": 8.359958017057988
+    }
+  ],
+  "incomingSamples": 55,
+  "incomingMaximumGroundMissM": 0.0,
+  "existingRouteSamples": 2187,
+  "existingRouteMissesOver1mm": 0,
+  "unchangedMappedFeatureKinds": [
+    "zebra",
+    "signal",
+    "memorial"
+  ],
+  "conditionalMotorAccessEnabled": false,
+  "automaticRouteQualification": false,
+  "runtimePromoted": false
+}

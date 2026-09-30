@@ -1,0 +1,20 @@
+// Run authoritative road/detail generators on the unchanged driving graph.
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {buildRoadGraph,toLocal,toLngLat} from '../auto-roads.js';
+import {applyTrafficDirections} from '../traffic-simulation.js';
+import {loadDrivingData} from '../driving-data.js';
+import {addStreetDetail} from '../street-detail.js';
+const dir=new URL('./street-500-incoming-junction/',import.meta.url),root=new URL('../',import.meta.url),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+globalThis.fetch=async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(new URL(url,root)))});
+const data=await loadDrivingData(),graph=applyTrafficDirections(buildRoadGraph(data),data);
+const autoSource=fs.readFileSync(new URL('auto-mode.js',root),'utf8'),line=autoSource.split('\n').find(s=>s.trimStart().startsWith("const roads={type:'FeatureCollection'"));
+if(!line)throw Error('Authoritative road generation moved; review before extraction');
+const roads=new Function('graph','toLocal','toLngLat',line+';return roads;')(graph,toLocal,toLngLat);
+let detail;
+const map={hasImage:()=>true,setPaintProperty(){},addSource(id,source){if(id==='street-detail')detail=source.data;},addLayer(){},setLayoutProperty(){}};
+const api=addStreetDetail(map,graph,data);
+fs.writeFileSync(new URL('auto-surfaces-source.json',dir),JSON.stringify(roads));fs.writeFileSync(new URL('detail-surfaces-source.json',dir),JSON.stringify(detail));
+const files=['auto-mode.js','street-detail.js','auto-roads.js','driving-data.js','traffic-simulation.js','district-data.json','vidhana-road-network.json'];
+const receipt={files:Object.fromEntries(files.map(p=>[p,sha(fs.readFileSync(new URL(p,root)))])),roadFeatures:roads.features.length,visibleRoadFeatures:roads.features.filter(f=>!f.properties.vidhana).length,detailFeatures:detail.features.length,detailCentre:api.centre,detailRadius:api.radius,graphSHA256:sha(JSON.stringify(graph,(k,v)=>v instanceof Set?[...v]:v)),sourceRoadSHA256:sha(JSON.stringify(roads)),sourceDetailSHA256:sha(JSON.stringify(detail)),graphChanged:false};
+fs.writeFileSync(new URL('dynamic-source-audit.json',dir),JSON.stringify(receipt,null,2));console.log(receipt);

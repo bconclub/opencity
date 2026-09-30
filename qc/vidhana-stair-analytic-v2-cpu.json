@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "mode": "analytic",
+      "steps": 45,
+      "stairTriangles": 362,
+      "unchangedGeometryAndMetadata": true
+    },
+    {
+      "mode": "floor12",
+      "steps": 45,
+      "stairTriangles": 362,
+      "unchangedGeometryAndMetadata": true
+    }
+  ],
+  "coverageCases": 210,
+  "maximumNumericIntegrationError": 0.00007777777779205408
+}

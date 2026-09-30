@@ -1,0 +1,6 @@
+const fs=require('fs');let s=fs.readFileSync('qc/vidhana-stair-analytic-v2-performance.cjs','utf8');
+const a=s.indexOf('const manifest='),b=s.indexOf('const origin=',a);
+s=s.slice(0,a)+`const dir='qc/street-frontage-final',manifest=JSON.parse(fs.readFileSync(dir+'/manifest.json')),sha=b=>crypto.createHash('sha256').update(b).digest('hex'),variants=Object.fromEntries(Object.entries(manifest.variants).map(([mode,v])=>[mode,new Map(v.files.map(f=>{const body=fs.readFileSync(f.file);assert.equal(sha(body),f.sha256);return[f.path,{...f,body}]}))]));\n`+s.slice(b);
+s=s.replace('const asset=files.get(file);','const asset=variants[mode].get(file);').replace("const body=file==='landmarks.js'&&mode==='after'?candidate:asset.body;",'const body=asset.body;');
+s=s.replaceAll('qc/vidhana-stair-analytic-v2-performance','qc/street-frontage-final/performance').replaceAll('qc/vidhana-architecture-integration-boot-failure','qc/street-frontage-final/boot-failure').replace('manifest,treatment,scope:','manifest,scope:').replace('Immutable733fd33 versus landmark candidate with analytic staircase lighting.','Full immutable733fd33 versus9df5546 plus seven street overrides.');
+fs.writeFileSync('qc/street-frontage-final-performance.cjs',s);

@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "scope": "CPU centreline samples at <=0.5m; no road-width/visual/GPU claim",
+  "origin": [
+    77.5945,
+    12.9755
+  ],
+  "metresPerDegree": 111320,
+  "longitudeScale": 0.9744661660477517,
+  "metadataFile": "qc/vidhana-architecture-scene-ground.json",
+  "metadataSha256": "64820193f20e9ca746b6db8b2ff72b88f01ca1fc20d96c0639ad079f4fdd4886",
+  "architectureSourceSha256": "22e56ab2e00646cd73012769cd4040688d503fb1e277220a8b2f70785eaf1f0f",
+  "roadFeatures": 746,
+  "graphEdges": 740,
+  "centrelineSamples": 31372,
+  "nearbySamples": 1952,
+  "stairRunBlockedSamples": 0,
+  "existingWorldBlockedSamples": 232,
+  "newlyBlockedSamples": 0,
+  "fullLandingBlockedSamples": 68,
+  "fullLandingBlockedEdges": [
+    86,
+    361,
+    362
+  ],
+  "stairFootLngLat": [
+    77.59126130208446,
+    12.979143715513187
+  ],
+  "landingPointLngLat": [
+    77.59106895995204,
+    12.979327093117767
+  ],
+  "normalSamples": [
+    {
+      "x": 0.7147934398888524,
+      "y": -0.6993356406560883
+    },
+    {
+      "x": 0.7147934398888524,
+      "y": -0.6993356406560883
+    },
+    {
+      "x": 0.7147934398888524,
+      "y": -0.6993356406560883
+    }
+  ],
+  "landingNotAddedAsCollider": true,
+  "existingCollisionPrecedencePreserved": true
+}

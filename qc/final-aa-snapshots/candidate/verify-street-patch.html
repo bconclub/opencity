@@ -1,0 +1,5 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Street patch verification</title><style>body{margin:0;background:#adb5a1}#map{position:absolute;inset:0}aside{position:absolute;top:12px;left:12px;padding:12px;background:white;font:14px system-ui;z-index:2}</style><script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script><script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/"}}</script></head><body><div id="map"></div><aside>OSM2World street geometry, 4 material batches<br>Map data © OpenStreetMap contributors<br><span id="state">Loading</span></aside><script type="module">
+import {installStreetPatch} from './street-patch.js';
+const map=window.testMap=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'ground',type:'background',paint:{'background-color':'#adb5a1'}}]},center:[77.5907159,12.9797946],zoom:17.4,pitch:55,bearing:-25,attributionControl:false});
+map.on('load',async()=>{try{window.patch=await installStreetPatch(map);document.querySelector('#state').textContent=JSON.stringify(patch.state());}catch(e){window.testError=e.stack;}});
+</script></body></html>

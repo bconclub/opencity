@@ -1,0 +1,9 @@
+{
+  "runtimeChanged": false,
+  "streetDetailUnchanged": true,
+  "autoInput": "qc\\frontage-runtime-candidate\\auto-mode.js",
+  "inputAutoSHA256": "d1691d8edf1536d5eb1e448766f9676d04e0fbbb1a90cbfb084af71bdf80b37b",
+  "outputAutoSHA256": "29ad507cf0920e093e12b4198220db92070a55d84d99380c9b2c3d1f0f6caae5",
+  "sourceRoadSHA256": "a1a8e193103024c70d38e75eeb5cbc3cf9be6a2c0aeccd3870a6baaaa6b4fc89",
+  "ownedSurfaceBytes": 51942
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (244699 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <node id="249088118" visible="true" version="6" changeset="156079576" timestamp="2024-09-02T04:53:49Z" user="uknown-gryphus" uid="2425805" lat="12.9749010" lon="77.5905812"/>
+ <node id="428831251" visible="true" version="2" changeset="144666556" timestamp="2023-12-01T15:26:04Z" user="uknown-gryphus" uid="2425805" lat="12.9752250" lon="77.5902768"/>
+ <node id="428831252" visible="true" version="3" changeset="156079576" timestamp="2024-09-02T04:53:49Z" user="uknown-gryphus" uid="2425805" lat="12.9754576" lon="77.5902254"/>
+ <node id="428831267" visible="true" version="5" changeset="156079576" timestamp="2024-09-02T04:53:49Z" user="uknown-gryphus" uid="2425805" lat="12.9747933" lon="77.5908346"/>
+ <node id="663309903" visible="true" version="7" changeset="156079576" timestamp="2024-09-02T04:53:49Z" user="uknown-gryphus" uid="2425805" lat="12.9748265" lon="77.5907450"/>
+ <node id="4017403935" visible="true" version="2" changeset="144666556" timestamp="2023-12-01T15:26:04Z" user="uknown-gryphus" uid="2425805" lat="12.9753395" lon="77.5902370"/>
+ <node id="12150906130" visible="true" version="1" changeset="156079576" timestamp="2024-09-02T04:53:49Z" user="uknown-gryphus" uid="2425805" lat="12.9748545" lon="77.5906833">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="12190250154" visible="true" version="1" changeset="156921633" timestamp="2024-09-21T17:11:31Z" user="uknown-gryphus" uid="2425805" lat="12.9749635" lon="77.5904620"/>
+ <node id="12896223105" visible="true" version="1" changeset="167338048" timestamp="2025-06-08T07:42:40Z" user="Ram_Tikore" uid="21017193" lat="12.9751284" lon="77.5903244"/>
+ <node id="12896223106" visible="true" version="1" changeset="167338048" timestamp="2025-06-08T07:42:40Z" user="Ram_Tikore" uid="21017193" lat="12.9750501" lon="77.5903652"/>
+ <node id="12896223107" visible="true" version="1" changeset="167338048" timestamp="2025-06-08T07:42:40Z" user="Ram_Tikore" uid="21017193" lat="12.9750138" lon="77.5904058"/>
+ <way id="1091198032" visible="true" version="10" changeset="167338048" timestamp="2025-06-08T07:42:40Z" user="Ram_Tikore" uid="21017193">
+  <nd ref="428831267"/>
+  <nd ref="663309903"/>
+  <nd ref="12150906130"/>
+  <nd ref="249088118"/>
+  <nd ref="12190250154"/>
+  <nd ref="12896223107"/>
+  <nd ref="12896223106"/>
+  <nd ref="12896223105"/>
+  <nd ref="428831251"/>
+  <nd ref="4017403935"/>
+  <nd ref="428831252"/>
+  <tag k="access" v="permissive"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="cycleway" v="no"/>
+  <tag k="foot" v="yes"/>
+  <tag k="highway" v="unclassified"/>
+  <tag k="junction" v="circular"/>
+  <tag k="lanes" v="2"/>
+  <tag k="maxspeed" v="25"/>
+  <tag k="motor_vehicle:conditional" v="yes @ (Mo-Sa 08:00-21:00)"/>
+  <tag k="note" v="Vehicular Traffic Allowed only between - 8AM to 9PM from Monday to Saturday. Sunday Vehicles not permitted."/>
+  <tag k="oneway" v="yes"/>
+  <tag k="sidewalk" v="both"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+</osm>

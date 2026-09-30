@@ -1,0 +1,85 @@
+{
+  "reviewOnly": true,
+  "files": [
+    {
+      "path": "district.js",
+      "bytes": 23107,
+      "sha256": "5dfda2e1d59777fea0894bca2991b81390c364c08d8b1a6ddfa9713a31b5813b"
+    },
+    {
+      "path": "auto-mode.js",
+      "bytes": 18927,
+      "sha256": "d1691d8edf1536d5eb1e448766f9676d04e0fbbb1a90cbfb084af71bdf80b37b"
+    },
+    {
+      "path": "npc-traffic.js",
+      "bytes": 8251,
+      "sha256": "64258975a26444ce6fd80f201c11d5b4e7be7f8473bf2d9dbbbb3638320e6df2"
+    },
+    {
+      "path": "auto-world.js",
+      "bytes": 2361,
+      "sha256": "dad8afc99c7728efeae60b3dfcb680b1c2b73e614f3322e3c088085025c33447"
+    },
+    {
+      "path": "auto-physics.js",
+      "bytes": 3478,
+      "sha256": "7995ed841e7ae9295867326f54146d04bbca277b91c02335a85ab09797789c65"
+    },
+    {
+      "path": "landmark-focus.js",
+      "bytes": 2786,
+      "sha256": "a99c7727b1cc4026335b6507acec5c299851bcc6aee99c0d013ff7362490f55f"
+    },
+    {
+      "path": "stair-collision.js",
+      "bytes": 2933,
+      "sha256": "f0c6ca5eaabe72d2fc5a3367394e07e95e4cb8ea2c70daf6856764dd386425a3"
+    },
+    {
+      "path": "vidhana-driving-world.js",
+      "bytes": 712,
+      "sha256": "386d43e80447d700c1d39ed2181ef84382fc6c0ee547ffadbd0bc0cf5146597a"
+    },
+    {
+      "path": "vidhana-building-passage.js",
+      "bytes": 2213,
+      "sha256": "0970c3a519ea5e3c5af96359ab2b851ad158a71539ac840fbbcc2406d14d1419"
+    },
+    {
+      "path": "vehicle-footprint.js",
+      "bytes": 3279,
+      "sha256": "ce6848ec6d5e6a7cf6ecd9ae09df3f0433567759ca6a563ca4b22c60df99adfd"
+    }
+  ],
+  "readiness": "city-loading.js waits for districtState.loaded before prepareAuto. getDistrictArchitecture returns the actual built model metadata; no copied QC JSON or global test promise.",
+  "geometry": "landmarks.js must be chosen after stair visual filtering acceptance; omitted from this candidate until then.",
+  "sourceBaselines": [
+    {
+      "path": "district.js",
+      "sha256": "69d577c87a289163448afb144818aaffcd09f0a5a8c7e903d79fea3921bc3d4b"
+    },
+    {
+      "path": "auto-mode.js",
+      "sha256": "cb7dab896b4b61c741f5fbb8f62039c84680eab6bccc9417c9a4ee3ffa3c32d4"
+    },
+    {
+      "path": "npc-traffic.js",
+      "sha256": "124fefd1754f228068286519a106848dbfd47caa9622e55f33beccf37e4b824c"
+    },
+    {
+      "path": "auto-world.js",
+      "sha256": "d221dadc082f1309a5f69629b3d8463ae520eda1fefe98013a9a0de9f5cdade4"
+    },
+    {
+      "path": "auto-physics.js",
+      "sha256": "62708bda7db2f848d15e3a75c51e53505575329ea28038ca2f80378daf794560"
+    }
+  ],
+  "remaining": [
+    "Selected landmark module",
+    "Browser test of production composition",
+    "Preload/cache dependency update",
+    "Final asset staging and release approval"
+  ]
+}

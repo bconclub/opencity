@@ -1,0 +1,38 @@
+{
+  "sourceSHA256": "558c39dea82ece80095e56667a2d0a2dc5c4d74cb98df919cc530817ed290f5f",
+  "faceOrder": "Blender glTF importer original triangle order, verify against runtime source triangle sequence before use",
+  "classEncoding": {
+    "0": "body",
+    "1": "FL",
+    "2": "FR",
+    "3": "RL",
+    "4": "RR"
+  },
+  "triangles": 1942948,
+  "components": 889,
+  "threshold": 0.6,
+  "centroidRadius": 0.38,
+  "centroidWidth": 0.3,
+  "details": {
+    "FL": {
+      "completeIslands": 107,
+      "completeFaces": 127415,
+      "totalFaces": 133157
+    },
+    "FR": {
+      "completeIslands": 156,
+      "completeFaces": 121262,
+      "totalFaces": 132335
+    },
+    "RL": {
+      "completeIslands": 43,
+      "completeFaces": 116697,
+      "totalFaces": 125146
+    },
+    "RR": {
+      "completeIslands": 91,
+      "completeFaces": 129511,
+      "totalFaces": 136530
+    }
+  }
+}

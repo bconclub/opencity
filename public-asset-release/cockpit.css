@@ -1,0 +1,18 @@
+.flight-active #detail-note,.flight-active .readout,.flight-active #inspector,.flight-active .maplibregl-ctrl-scale{display:none!important}
+body.flight-active #flight-hud,body.auto-active #auto-hud{width:370px;top:16px;left:16px;padding:12px 16px;background:rgba(12,30,29,.9);border:1px solid #536e6a;color:#edf5ef;border-radius:12px}
+.flight-active #flight-hud .sub,.auto-active #auto-hud .sub,.flight-active .instruments span{color:#bdcec7}
+.flight-active #flight-hud .flight-top strong,.auto-active #auto-hud .flight-top strong{font-size:18px}
+.flight-active #flight-hud .instruments,.auto-active #auto-hud .instruments{margin:12px 0;gap:12px}
+.flight-active #flight-hud .instruments strong,.auto-active #auto-hud .instruments strong{font-size:26px}
+.flight-active #pad-distance,.flight-active .flight-note,.flight-active #flight-distance,.flight-active #flight-distance+span{display:none}
+.flight-active #flight-hud .instruments{grid-template-columns:repeat(3,1fr)}
+.flight-active #flight-hud .instruments>div:last-child{display:none}
+.flight-active #flight-hud button,.auto-active #auto-hud button{background:#203e38;color:#f0f6ef;border-color:#58786d;min-height:40px}
+.flight-active #flight-hud .flight-actions,.auto-active #auto-hud .flight-actions{display:flex;gap:6px;flex-wrap:wrap}
+.flight-active #flight-hud .flight-actions button,.auto-active #auto-hud .flight-actions button{flex:1;padding:6px;font-size:12px}
+.flight-active #flight-message,.auto-active #auto-message{font-size:12px;min-height:0;margin:8px 0 0;color:#cedfd4;line-height:1.5}
+.auto-active #auto-hud>.sub{display:none}
+#flight-mouse-tip{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);color:#e9f4ed;background:#15372cd9;padding:8px 14px;border-radius:8px;font:13px sans-serif;z-index:5;pointer-events:none}
+#flight-mouse-tip[hidden]{display:none}
+@media(pointer:fine) and (min-width:761px){body.flight-active #flight-controls{display:none}body.auto-active #auto-controls{display:none}}
+@media(max-width:760px){body.flight-active #flight-hud,body.auto-active #auto-hud{top:10px;left:10px;right:10px;width:auto;padding:10px 12px}#flight-mouse-tip{display:none}.flight-active #flight-controls{bottom:50px}.flight-active #flight-controls button{background:#15372ee8;color:#eaf6ee;border-color:#6a8c7b}}

@@ -1,0 +1,57 @@
+{
+  "note": "Fixed central stair rectangles only; contrast diagnostic, not a complete temporal or fidelity metric. No scaling or screenshot editing.",
+  "rows": [
+    {
+      "view": "aerial",
+      "mode": "isolated",
+      "roi": [
+        680,
+        636,
+        780,
+        704
+      ],
+      "mean": 166.5795835294117,
+      "std": 50.83828663666516,
+      "adjacentRowDifferenceMean": 60.11500507462684
+    },
+    {
+      "view": "aerial",
+      "mode": "featureFilter",
+      "roi": [
+        680,
+        636,
+        780,
+        704
+      ],
+      "mean": 194.54959999999997,
+      "std": 0.0,
+      "adjacentRowDifferenceMean": 0.0
+    },
+    {
+      "view": "front",
+      "mode": "isolated",
+      "roi": [
+        590,
+        474,
+        800,
+        520
+      ],
+      "mean": 121.60743720496893,
+      "std": 55.497094479556885,
+      "adjacentRowDifferenceMean": 82.83501765079363
+    },
+    {
+      "view": "front",
+      "mode": "featureFilter",
+      "roi": [
+        590,
+        474,
+        800,
+        520
+      ],
+      "mean": 194.63285732919255,
+      "std": 0.10377246899857519,
+      "adjacentRowDifferenceMean": 0.0009448888888889289
+    }
+  ]
+}

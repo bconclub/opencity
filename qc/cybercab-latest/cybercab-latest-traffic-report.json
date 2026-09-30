@@ -1,0 +1,48 @@
+{
+  "trafficCandidate": "C:\\Users\\user\\Documents\\ChatGPT\\Z\\assets\\vehicles\\cybercab-latest-traffic.glb",
+  "bytes": 3022280,
+  "triangles": 6000,
+  "triangleBreakdown": {
+    "Body": 4800,
+    "Wheel_FL_Cover": 150,
+    "Wheel_FL_Tyre": 150,
+    "Wheel_FR_Cover": 150,
+    "Wheel_FR_Tyre": 150,
+    "Wheel_RL_Cover": 150,
+    "Wheel_RL_Tyre": 150,
+    "Wheel_RR_Cover": 150,
+    "Wheel_RR_Tyre": 150
+  },
+  "materials": 3,
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "wheelNodes": [
+    "Wheel_FL",
+    "Wheel_FR",
+    "Wheel_RL",
+    "Wheel_RR"
+  ],
+  "picker": "C:\\Users\\user\\Documents\\ChatGPT\\Z\\qc\\cybercab-latest\\cybercab-latest-picker.png",
+  "limitation": "Aggressive 6k collapse from 1.94M-triangle source; intended for traffic distance only."
+}

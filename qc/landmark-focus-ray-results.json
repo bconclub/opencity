@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "scope": "CPU Three.js raycaster against actual emitted landmark triangles; browser camera and dwell not covered",
+  "modelSha256": "b73b26f0000790dfa30c53ffd56ab16a9b04a5230112feb30c72e972529c2989",
+  "helperSha256": "a99c7727b1cc4026335b6507acec5c299851bcc6aee99c0d013ff7362490f55f",
+  "results": [
+    {
+      "name": "crown-top",
+      "hit": [
+        -384.44994473226075,
+        438.2835379999568,
+        39.79999923706055
+      ],
+      "faceIndex": 31638,
+      "target": "building-2526",
+      "sourceId": "way/371511885",
+      "displayHeight": 39.79999923706055
+    },
+    {
+      "name": "crown-side",
+      "hit": [
+        -378.31958863621435,
+        432.2857542086772,
+        34
+      ],
+      "faceIndex": 30584,
+      "target": "building-2526",
+      "sourceId": "way/371511885",
+      "displayHeight": 39.79999923706055
+    },
+    {
+      "name": "stairs-0.2",
+      "hit": [
+        -363.5267577820177,
+        417.5552311110944,
+        5.400000095367432
+      ],
+      "faceIndex": 25885,
+      "target": "vidhana-front-stairs",
+      "displayHeight": 6.75
+    },
+    {
+      "name": "stairs-0.5",
+      "hit": [
+        -358.951507931977,
+        413.078923542383,
+        3.450000047683716
+      ],
+      "faceIndex": 25780,
+      "target": "vidhana-front-stairs",
+      "displayHeight": 6.75
+    },
+    {
+      "name": "stairs-0.8",
+      "hit": [
+        -354.3762580819363,
+        408.60261597367156,
+        1.5
+      ],
+      "faceIndex": 25676,
+      "target": "vidhana-front-stairs",
+      "displayHeight": 6.75
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "0.0.40",
+  "deployment": "dpl_CcxWmiELGd26Ri2rhMBLbU466Vhj",
+  "models": [
+    {
+      "id": "kitt",
+      "sha256": "8e18087a2c4b2663017edbf7444ac72b4848497388669eb2f597277884efd074",
+      "verified": true
+    },
+    {
+      "id": "yulu",
+      "sha256": "ec5f40766ee4c2b7cb48195789103a5f623e24fd77db3b8cd77d1dfad3626d04",
+      "verified": true
+    },
+    {
+      "id": "delivery",
+      "sha256": "12bcd34b29681051be15e0fc90343863d683f21b07a5f0e5b7322b4e2fa6311c",
+      "verified": true
+    }
+  ]
+}

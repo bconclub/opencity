@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cybercab model comparison | OpenCity</title>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.169.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.169.0/examples/jsm/"}}</script>
+<style>*{box-sizing:border-box}body{margin:0;background:#111817;color:#eef4ef;font:15px system-ui,sans-serif}header{padding:28px 32px;border-bottom:1px solid #34433e}header small{color:#a8cdbf;letter-spacing:.12em}h1{font-size:28px;margin:10px 0}header p{max-width:850px;color:#b6c4be;line-height:1.6;margin-bottom:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#34433e}article{background:#18211e;min-width:0;padding:20px}article h2{font-size:17px;margin:8px 0}article>p{color:#b6c4be;font-size:13px;line-height:1.5;min-height:60px}.viewer{height:330px;position:relative;background:#202825;border-radius:12px;overflow:hidden;touch-action:none}.viewer canvas{display:block;width:100%;height:100%}.status{position:absolute;bottom:12px;left:12px;font-size:11px;color:#a5c1b3}footer{padding:22px 32px;color:#b6c4be;font-size:13px;line-height:1.6}a{color:#a0e3c6}button{background:#d4e8da;color:#10271c;border:0;border-radius:7px;padding:9px 14px;cursor:pointer} @media(max-width:800px){.grid{grid-template-columns:1fr}header,footer{padding:20px}.viewer{height:320px}article>p{min-height:0}}</style></head><body>
+<header><small>OPENCITY / ASSET REVIEW</small><h1>One Cybercab. Three treatments.</h1><p>Same generated geometry, matching camera and lighting. Drag any model to rotate all three; scroll to zoom. These are experimental reconstructions, not manufacturer CAD.</p></header>
+<main class="grid">
+<article><h2>01 · Meshy output · Selected</h2><p>Selected for the current game preview. Best preserved original detail. Noisy normal maps and uneven surfaces produce crumpled highlights.</p><div class="viewer" data-asset="generated"><span class="status">Loading model…</span></div></article>
+<article><h2>02 · Smoothed</h2><p>Quieter highlights, but rounded panel transitions and reduced surface definition. Wheels remain joined to the body.</p><div class="viewer" data-asset="smoothed"><span class="status">Loading model…</span></div></article>
+<article><h2>03 · Recoloured</h2><p>More uniform gold and added seams. Colour masking damages window boundaries. This treatment is not approved for the game.</p><div class="viewer" data-asset="recoloured"><span class="status">Loading model…</span></div></article>
+</main><footer><button id="reset">Reset comparison</button><p><strong>Finding:</strong> material changes cannot repair distorted body panels. Next production model needs clean hard-surface topology before texturing. No additional Meshy generation has been started.</p><a href="/">Return to OpenCity</a></footer>
+<script type="module">
+import * as T from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+const views=[];let syncing=false,pending=false;
+function draw(){if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;for(const v of views)v.renderer.render(v.scene,v.camera);});}
+for(const host of document.querySelectorAll('.viewer')){
+ const renderer=new T.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setClearColor(0x202825);renderer.outputColorSpace=T.SRGBColorSpace;host.append(renderer.domElement);
+ const scene=new T.Scene(),camera=new T.PerspectiveCamera(32,1,.1,100);camera.position.set(6,3,-7);
+ const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,.65,0);controls.minDistance=3;controls.maxDistance=14;controls.maxPolarAngle=Math.PI*.49;controls.enablePan=false;controls.update();
+ scene.add(new T.HemisphereLight(0xffffff,0x69726a,2));for(const [x,y,z,power] of [[4,6,-3,2],[-4,3,4,1]]){const light=new T.DirectionalLight(0xffffff,power);light.position.set(x,y,z);scene.add(light);}
+ const floor=new T.Mesh(new T.PlaneGeometry(18,18),new T.MeshStandardMaterial({color:0x303a35,roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-.02;scene.add(floor);
+ const view={renderer,scene,camera,controls};views.push(view);
+ controls.addEventListener('change',()=>{if(syncing)return;syncing=true;for(const v of views)if(v!==view){v.camera.position.copy(camera.position);v.controls.target.copy(controls.target);v.controls.update();}syncing=false;draw();});
+ new ResizeObserver(()=>{const {width,height}=host.getBoundingClientRect();renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();draw();}).observe(host);
+ try{const gltf=await new GLTFLoader().loadAsync('./assets/vehicles/compare-'+host.dataset.asset+'.glb');scene.add(gltf.scene);host.querySelector('.status').textContent='Drag to rotate · scroll to zoom';draw();}catch(e){host.querySelector('.status').textContent='Model could not load';console.error(e);}
+}
+document.getElementById('reset').onclick=()=>{syncing=true;for(const v of views){v.camera.position.set(6,3,-7);v.controls.target.set(0,.65,0);v.controls.update();}syncing=false;draw();};
+</script></body></html>

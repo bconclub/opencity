@@ -1,0 +1,92 @@
+[
+  {
+    "index": 87,
+    "type": "Feature",
+    "properties": {
+      "osm": "way/38542545",
+      "name": "",
+      "surface": "unknown",
+      "width": 4,
+      "widthEstimated": true,
+      "lanes": 0,
+      "note": "",
+      "_layer": "transportation",
+      "class": "service",
+      "oneway": "no"
+    },
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.5907743,
+          12.9790027
+        ],
+        [
+          77.5909934,
+          12.9792403
+        ]
+      ]
+    },
+    "samples": 8
+  },
+  {
+    "index": 365,
+    "type": "Feature",
+    "properties": {
+      "osm": "way/363475448",
+      "name": "",
+      "surface": "unknown",
+      "width": 4,
+      "widthEstimated": true,
+      "lanes": 0,
+      "note": "",
+      "_layer": "transportation",
+      "class": "service",
+      "oneway": "no"
+    },
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.5909934,
+          12.9792403
+        ],
+        [
+          77.5911489,
+          12.9794086
+        ]
+      ]
+    },
+    "samples": 52
+  },
+  {
+    "index": 366,
+    "type": "Feature",
+    "properties": {
+      "osm": "way/363475450",
+      "name": "",
+      "surface": "unknown",
+      "width": 4,
+      "widthEstimated": true,
+      "lanes": 0,
+      "note": "",
+      "_layer": "transportation",
+      "class": "service",
+      "oneway": "no"
+    },
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          77.5911489,
+          12.9794086
+        ],
+        [
+          77.591347,
+          12.9796235
+        ]
+      ]
+    },
+    "samples": 8
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "viewport": [
+    319,
+    814
+  ],
+  "device": "Current Windows host, Codex in-app Chromium, visible tyre review fixture",
+  "samples": 180,
+  "cybertruck": {
+    "meanFrameMs": 16.77,
+    "meanRenderCpuMs": 0.68,
+    "drawCalls": 54,
+    "triangles": 8352,
+    "downloadBytes": 623636
+  },
+  "cybercab": {
+    "meanFrameMs": 16.68,
+    "meanRenderCpuMs": 0.33,
+    "drawCalls": 18,
+    "triangles": 24675,
+    "downloadBytes": 4437428
+  },
+  "limitations": "Single-vehicle test scene, not full map or physical phone. Blender work concurrently active. Vsync-limited frame times do not reveal GPU headroom."
+}

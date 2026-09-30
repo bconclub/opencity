@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="580" viewBox="0 0 1180 580">
+<rect width="980" height="580" fill="#f7f7f0"/>
+<g font-family="Arial" fill="#253640">
+<text x="30" y="34" font-size="23">Section across mapped passage beneath estimated landing</text>
+<text x="30" y="60" font-size="14">Facade perpendicular section. Model geometry, not surveyed construction dimensions.</text>
+<path d="M70 390H1120" stroke="#4d5656" stroke-width="3"/>
+<text x="73" y="418" font-size="15">Current ground datum0m</text>
+<path d="M70 221.25H463H474.853V225.000H486.707V228.750H498.560V232.500H510.413V236.250H522.267V240.000H534.120V243.750H545.973V247.500H557.827V251.250H569.680V255.000H581.533V258.750H593.387V262.500H605.240V266.250H617.093V270.000H628.947V273.750H640.800V277.500H652.653V281.250H664.507V285.000H676.360V288.750H688.213V292.500H700.067V296.250H711.920V300.000H723.773V303.750H735.627V307.500H747.480V311.250H759.333V315.000H771.187V318.750H783.040V322.500H794.893V326.250H806.747V330.000H818.600V333.750H830.453V337.500H842.307V341.250H854.160V345.000H866.013V348.750H877.867V352.500H889.720V356.250H901.573V360.000H913.427V363.750H925.280V367.500H937.133V371.250H948.987V375.000H960.840V378.750H972.693V382.500H984.547V386.250H996.400V390.000" fill="none" stroke="#9d7c4e" stroke-width="5"/>
+<text x="78" y="207" font-size="15">Landing underside6.75m</text>
+<path d="M70 221V90M463 221V90" stroke="#c4b999" stroke-width="12"/>
+<text x="483" y="110" font-size="14">Column/foyer geometry starts at6.75m</text>
+<rect x="232" y="308.75" width="67.83" height="80" fill="#2d779c" opacity=".7"/>
+<rect x="216" y="301" width="100" height="89" fill="none" stroke="#116ca9" stroke-dasharray="5 4"/>
+<text x="325" y="340" font-size="15">Conservative envelope: width2.713m, height3.2m</text>
+<text x="325" y="363" font-size="14">Body bounds include all four loaded ground GLBs + margin</text>
+<path d="M265 303V226" stroke="#207442" stroke-width="2"/>
+<text x="285" y="267" font-size="15">3.50m extra ceiling clearance</text>
+<text x="223" y="439" font-size="14">way363475448 runs into/out of section</text>
+<text x="30" y="479" font-size="15">68 road samples: zero emitted-geometry envelope intersections;58 blocked by old coarse footprint.</text>
+<text x="30" y="505" font-size="15">Candidate carves only this mapped passage from that footprint; stairs remain blocked.</text>
+<text x="30" y="540" font-size="13">Route width4m is estimated. Source OSM: tunnel=building_passage; approaches access=private.</text>
+</g></svg>

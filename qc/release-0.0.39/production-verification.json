@@ -1,0 +1,11 @@
+{
+  "version": "0.0.39",
+  "commit": "e5b79ec",
+  "branch": "codex/release-0.0.39",
+  "domain": "https://www.opencity.world",
+  "deployment": "dpl_7EsDLvvfymYou3q5rCZwZPqgn4di",
+  "originalGlbProductionHashesMatch": true,
+  "runtimeAndPreviewBytesMatch": true,
+  "sourceGeometryReduction": false,
+  "textureReduction": false
+}

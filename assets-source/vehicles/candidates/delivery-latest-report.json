@@ -1,0 +1,102 @@
+{
+  "kind": "delivery",
+  "source": "D:\\Brands BCON\\OpenCity\\Models\\Delivery Rider.glb",
+  "sourceBytes": 63620220,
+  "candidateBytes": 5449780,
+  "triangles": 99998,
+  "trianglesByObject": {
+    "Delivery_Body": 89999,
+    "Wheel_F": 5000,
+    "Wheel_R": 4999
+  },
+  "materials": 1,
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "boundsMin": [
+    -0.4090113639831543,
+    -0.9549205899238586,
+    -0.01475580409169197
+  ],
+  "boundsMax": [
+    0.40988585352897644,
+    0.9557908773422241,
+    1.7363225221633911
+  ],
+  "dimensions": [
+    0.8188972473144531,
+    1.9107115268707275,
+    1.7510783672332764
+  ],
+  "wheelPivots": {
+    "Wheel_F": [
+      0.0,
+      0.7251164317131042,
+      0.23999999463558197
+    ],
+    "Wheel_R": [
+      0.0,
+      -0.6412353515625,
+      0.2200000137090683
+    ]
+  },
+  "wheelRadiiEstimated": {
+    "Wheel_F": 0.24,
+    "Wheel_R": 0.22
+  },
+  "fitScores": {
+    "Wheel_F": 4718.71,
+    "Wheel_R": 5354.23
+  },
+  "axes": {
+    "authoringUp": "+Z",
+    "authoringForward": "+Y",
+    "wheelAxle": "local X",
+    "glTFUp": "+Y",
+    "glTFForward": "-Z"
+  },
+  "appearance": "Original baked texture material, UVs and rider geometry preserved; images resized from 2048 to 1024.",
+  "paintability": "No reliable BodyPaint isolation. One baked material spans complete scan; tinting would recolor rider, wheels, and accessories.",
+  "limitations": [
+    "Source is one fused scan mesh. Spatial wheel extraction can include nearby fork/fender fragments or leave wheel fragments on body.",
+    "98.7% triangle reduction can soften silhouette and texture-normal detail.",
+    "Wheel centres and radii are geometry fits, not manufacturer dimensions."
+  ],
+  "budgetStatus": "100k fidelity candidate exceeds requested 25k because 25k visibly faceted source body/rider.",
+  "levelPitchDegrees": 7.998161820447578e-07,
+  "wheelContactsZ": {
+    "Wheel_F": -5.364418020903372e-09,
+    "Wheel_R": 1.370906829722962e-08
+  },
+  "rig": {
+    "frontWheel": "Wheel_F",
+    "rearWheel": "Wheel_R",
+    "rollAxis": "local X",
+    "steerAxis": "local Z on Wheel_F",
+    "pivotInvariantMaxError": 0.0
+  },
+  "validationRenders": [
+    "delivery-latest-spin.png",
+    "delivery-latest-steer.png"
+  ]
+}

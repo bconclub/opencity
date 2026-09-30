@@ -1,0 +1,70 @@
+{
+  "source": "D:\\Brands BCON\\OpenCity\\Models\\Delivery Rider.glb",
+  "bytes": 63620220,
+  "triangles": 1960246,
+  "materials": [
+    "Material_0"
+  ],
+  "images": [
+    {
+      "name": "Image_0",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    }
+  ],
+  "boundsMin": [
+    -0.9518070220947266,
+    -0.4088590145111084,
+    -0.8723419904708862
+  ],
+  "boundsMax": [
+    0.9502829909324646,
+    0.4092020094394684,
+    0.8733369708061218
+  ],
+  "dimensions": [
+    1.9020900130271912,
+    0.8180610239505768,
+    1.745678961277008
+  ],
+  "objects": [
+    {
+      "name": "Mesh_0",
+      "triangles": 1960246,
+      "vertices": 1041972,
+      "materials": [
+        "Material_0"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.902090072631836,
+        0.8180609941482544,
+        1.7456789016723633
+      ],
+      "parent": null
+    }
+  ]
+}

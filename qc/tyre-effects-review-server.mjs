@@ -8,4 +8,4 @@ http.createServer(async(req,res)=>{try{const url=new URL(req.url,'http://localho
  else if(url.pathname==='/__addons/utils/BufferGeometryUtils.js')file=cache+'/BufferGeometryUtils.js';
  else {file=resolve(root,'.'+decodeURIComponent(url.pathname));if(!file.startsWith(root+sep))throw Error('Path');}
  const body=await readFile(file);res.writeHead(200,{'Content-Type':({'.js':'text/javascript','.html':'text/html','.glb':'model/gltf-binary','.png':'image/png','.json':'application/json','.css':'text/css'})[extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(body);
- }catch{res.writeHead(404).end();}}).listen(4175,'127.0.0.1',()=>console.log('Tyre review http://127.0.0.1:4175/qc/tyre-effects-review.html'));
+ }catch{res.writeHead(404).end();}}).listen(Number(process.env.QC_PORT)||4175,'127.0.0.1',()=>console.log('Tyre review port '+(process.env.QC_PORT||4175)));

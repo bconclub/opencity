@@ -1,0 +1,35 @@
+{
+  "origin": [
+    77.5907159,
+    12.9797946
+  ],
+  "axes": "X east, Y north, Z up; transformed once from OSM2World X east, Y up, Z north",
+  "localBounds": {
+    "min": [
+      -209.58065795898438,
+      -219.61598205566406,
+      0
+    ],
+    "max": [
+      213.1586151123047,
+      219.63954162597656,
+      0.10000000149011612
+    ]
+  },
+  "bounds": [
+    77.5887816777979,
+    12.977819540905388,
+    77.5926831432082,
+    12.981769855276205
+  ],
+  "duplicatesRemoved": 3,
+  "sourceTriangles": 2119,
+  "sourceMeshes": 158,
+  "coplanarRedundantAreaRemovedM2": 6345.561546965357,
+  "coverageDifferenceM2": 0,
+  "remainingCoplanarMaterialOverlapM2": 3.342263141296121e-14,
+  "meshes": 4,
+  "triangles": 2130,
+  "bytes": 182248,
+  "footprintTriangles": 1416
+}

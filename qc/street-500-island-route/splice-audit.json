@@ -1,0 +1,9 @@
+{
+  "portals": 22,
+  "districtTransportationFeatures": 2086,
+  "districtFeaturesWithSourceWayAndNodes": 0,
+  "sourceIdentityPositiveFixture": true,
+  "sameCoordinatesDifferentNodesRejected": true,
+  "openedPortals": 0,
+  "status": "Independent blocker: district vectors lack source way/node provenance,488m geometric cut plus1.5m node rounding cannot prove handoff. Keep all22 external portals closed; this isolated loop needs none."
+}

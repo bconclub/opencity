@@ -1,0 +1,23 @@
+{
+  "files": {
+    "auto-mode.js": "cb7dab896b4b61c741f5fbb8f62039c84680eab6bccc9417c9a4ee3ffa3c32d4",
+    "street-detail.js": "2f9e9c9e07d7fb8a3253b01a0d19afa71257a07e6070b98ff071063178b8eed0",
+    "auto-roads.js": "88976fc0c2e818c44550c44985a679ddc776e1a6cc5c73adc4e37acfe7bb34d4",
+    "driving-data.js": "bf0f8d28cd4788e3b42ef49ff09afeac61b3f0a8f68646c27ea01af606ca454f",
+    "traffic-simulation.js": "e261033f9e1fc5c6374e4b3c329d40e8ccaa195adb9b761f4531f5cf6d592d16",
+    "district-data.json": "4121c44a43b23f2b37179a7ec73eaa2e3755f157f864140dae3b2f01e40cd7a5",
+    "vidhana-road-network.json": "0322308ded4925ee1c9a396e9acc8b538460ffa398514ac31a398d76541e1df9"
+  },
+  "roadFeatures": 3803,
+  "visibleRoadFeatures": 3063,
+  "detailFeatures": 3301,
+  "detailCentre": [
+    77.59366482496262,
+    12.973411709476892
+  ],
+  "detailRadius": 250,
+  "graphSHA256": "ea3b04460a90a431e8fd4b17f042db6a45a2d1e7d3394fcd5bb5c4c7a32ea432",
+  "sourceRoadSHA256": "a1a8e193103024c70d38e75eeb5cbc3cf9be6a2c0aeccd3870a6baaaa6b4fc89",
+  "sourceDetailSHA256": "7d8daadba9799c805835810d485755a8520d1a69bb424bc58802430953c5e5cf",
+  "graphChanged": false
+}

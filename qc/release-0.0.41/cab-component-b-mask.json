@@ -1,0 +1,39 @@
+{
+  "sourceSHA256": "558c39dea82ece80095e56667a2d0a2dc5c4d74cb98df919cc530817ed290f5f",
+  "faceOrder": "Verified against original GLB primitive index order by comparing all triangle vertex positions",
+  "maximumTrianglePositionErrorMeters": 3.2782554626464844e-07,
+  "classEncoding": {
+    "0": "body",
+    "1": "FL",
+    "2": "FR",
+    "3": "RL",
+    "4": "RR"
+  },
+  "triangles": 1942948,
+  "components": 889,
+  "threshold": 0.35,
+  "centroidRadius": 0.4,
+  "centroidWidth": 0.4,
+  "details": {
+    "FL": {
+      "completeIslands": 109,
+      "completeFaces": 129669,
+      "totalFaces": 147127
+    },
+    "FR": {
+      "completeIslands": 159,
+      "completeFaces": 130980,
+      "totalFaces": 150952
+    },
+    "RL": {
+      "completeIslands": 46,
+      "completeFaces": 120988,
+      "totalFaces": 134841
+    },
+    "RR": {
+      "completeIslands": 97,
+      "completeFaces": 134137,
+      "totalFaces": 144566
+    }
+  }
+}

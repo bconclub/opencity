@@ -1,0 +1,20 @@
+{
+  "entries": [
+    {
+      "mode": "isolated",
+      "file": "qc/vidhana-architecture-integration-stair-treatment-isolated.js",
+      "sha256": "29e5c1948c1e9d18e302082952a033d6006762e833ea37d4664c0fef3a1de6a7"
+    },
+    {
+      "mode": "floor12",
+      "file": "qc/vidhana-stair-contrast-floor-candidate.js",
+      "sha256": "6f832baddd47e0985a286325bddacc56a7bb7e1b7fdcbfca805994fb1856ef78"
+    },
+    {
+      "mode": "analytic",
+      "file": "qc/vidhana-stair-analytic-bundle.js",
+      "sha256": "13931419c3a3cc56504b742292ed6ebe663e943826480a6c24b5565144be402a"
+    }
+  ],
+  "scope": "Review only; all45physical steps preserved. Compare12% normal contrast floor with analytic pixel box integration of projected stair phase. Analytic branch evaluates standard lighting twice and blends linear-light tread/riser results by coverage. Shadow reception off stair only, no AA."
+}

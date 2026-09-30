@@ -1,0 +1,470 @@
+{
+  "coordinateFrame": "Normalized game coordinates X lateral, +Y verified forward, +Z up; source glTF +PI/2 X then -PI/2 yaw, length scale, XY bounds centered, full source minimum Z grounded",
+  "method": "Fresh original GLBs imported in isolated background Blender; all original vertices preserved, transformed exactly as runtime. Orthographic texture renders at 1400px width, side observed from +X. Axle centers/radii measured from visible original hubs and tyre silhouettes; widths cross-checked with full source vertex positions below axle. Estimates, not CAD/manufacturer dimensions.",
+  "originalsUnmodified": true,
+  "runtimeUnmodified": true,
+  "frames": {
+    "cybertruck": {
+      "scale": 2.986328012948982,
+      "sourceBounds": [
+        [
+          -0.9520419836044312,
+          -0.37712299823760986,
+          -0.32424598932266235
+        ],
+        [
+          0.9509639739990234,
+          0.3804129958152771,
+          0.3237670063972473
+        ]
+      ],
+      "normalizedBounds": [
+        [
+          -1.131125479928645,
+          -2.8415,
+          0.0
+        ],
+        [
+          1.131125479928645,
+          2.8415,
+          1.935179361873355
+        ]
+      ],
+      "sideImage": "cybertruck-source-side.png",
+      "sideImageWorldWidth": 6.13764,
+      "sideImageWorldHeight": 3.507222857142857,
+      "sideImageCenter": [
+        0.0,
+        0.0,
+        0.9675896763801575
+      ],
+      "sideImageHorizontal": "left=negative Y; right=positive Y"
+    },
+    "kitt": {
+      "scale": 2.5222562153564443,
+      "sourceBounds": [
+        [
+          -0.9522380232810974,
+          -0.40601301193237305,
+          -0.2576940059661865
+        ],
+        [
+          0.9508200287818909,
+          0.40697601437568665,
+          0.2568880021572113
+        ]
+      ],
+      "normalizedBounds": [
+        [
+          -1.0252833123110436,
+          -2.4,
+          0.0
+        ],
+        [
+          1.0252833123110436,
+          2.4,
+          1.2979076682998405
+        ]
+      ],
+      "sideImage": "kitt-source-side.png",
+      "sideImageWorldWidth": 5.184,
+      "sideImageWorldHeight": 2.962285714285714,
+      "sideImageCenter": [
+        0.0,
+        0.0,
+        0.6489538550376892
+      ],
+      "sideImageHorizontal": "left=negative Y; right=positive Y"
+    },
+    "yulu": {
+      "scale": 0.9983952116183601,
+      "sourceBounds": [
+        [
+          -0.9522920250892639,
+          -0.35932400822639465,
+          -0.5892419815063477
+        ],
+        [
+          0.9507619738578796,
+          0.3601270020008087,
+          0.5806609988212585
+        ]
+      ],
+      "normalizedBounds": [
+        [
+          -0.35914822180241585,
+          -0.95,
+          0.0
+        ],
+        [
+          0.35914822180241585,
+          0.95,
+          1.1680255336171306
+        ]
+      ],
+      "sideImage": "yulu-source-side.png",
+      "sideImageWorldWidth": 2.052,
+      "sideImageWorldHeight": 1.1725714285714286,
+      "sideImageCenter": [
+        0.0,
+        0.0,
+        0.5840127468109131
+      ],
+      "sideImageHorizontal": "left=negative Y; right=positive Y"
+    },
+    "delivery": {
+      "scale": 0.9989012018291054,
+      "sourceBounds": [
+        [
+          -0.9518070220947266,
+          -0.4088590145111084,
+          -0.8723419904708862
+        ],
+        [
+          0.9502829909324646,
+          0.4092020094394684,
+          0.8733369708061218
+        ]
+      ],
+      "normalizedBounds": [
+        [
+          -0.40858106999688987,
+          -0.95,
+          0.0
+        ],
+        [
+          0.40858106999688987,
+          0.95,
+          1.7437608124273876
+        ]
+      ],
+      "sideImage": "delivery-source-side.png",
+      "sideImageWorldWidth": 2.052,
+      "sideImageWorldHeight": 2.052,
+      "sideImageCenter": [
+        0.0,
+        0.0,
+        0.8718804121017456
+      ],
+      "sideImageHorizontal": "left=negative Y; right=positive Y",
+      "sideImageResolution": [
+        1400,
+        1400
+      ]
+    }
+  },
+  "vehicles": {
+    "cybertruck": {
+      "source": "D:\\Brands BCON\\OpenCity\\Models\\cYBER tRUCK.glb",
+      "sha256": "5165690281d01d4715259696b99404bc5076a982a92b1954e3ac2d78dd14c881",
+      "forward": "+Y",
+      "forwardConfidence": "high",
+      "forwardVisualEvidence": "windscreen and white front light at right, bed at left",
+      "measurementConfidence": "moderate",
+      "wheels": [
+        {
+          "tag": "FL",
+          "center": [
+            -0.91,
+            1.9553,
+            0.4503
+          ],
+          "radius": 0.4428,
+          "width": 0.45,
+          "maskHalfWidth": 0.225,
+          "maskRadius": 0.4478,
+          "centerAndRadiusUncertaintyMetres": 0.012,
+          "pixelCenterAndRadius": [
+            1146,
+            518,
+            101
+          ]
+        },
+        {
+          "tag": "FR",
+          "center": [
+            0.91,
+            1.9553,
+            0.4503
+          ],
+          "radius": 0.4428,
+          "width": 0.45,
+          "maskHalfWidth": 0.225,
+          "maskRadius": 0.4478,
+          "centerAndRadiusUncertaintyMetres": 0.012,
+          "pixelCenterAndRadius": [
+            1146,
+            518,
+            101
+          ]
+        },
+        {
+          "tag": "RL",
+          "center": [
+            -0.91,
+            -1.7142,
+            0.4503
+          ],
+          "radius": 0.4428,
+          "width": 0.45,
+          "maskHalfWidth": 0.225,
+          "maskRadius": 0.4478,
+          "centerAndRadiusUncertaintyMetres": 0.012,
+          "pixelCenterAndRadius": [
+            309,
+            518,
+            101
+          ]
+        },
+        {
+          "tag": "RR",
+          "center": [
+            0.91,
+            -1.7142,
+            0.4503
+          ],
+          "radius": 0.4428,
+          "width": 0.45,
+          "maskHalfWidth": 0.225,
+          "maskRadius": 0.4478,
+          "centerAndRadiusUncertaintyMetres": 0.012,
+          "pixelCenterAndRadius": [
+            309,
+            518,
+            101
+          ]
+        }
+      ],
+      "widthEvidence": "low tyre vertices span approximately absolute X .70 through 1.13; broader .45m mask needed to retain tyre depth",
+      "recommendedSpinAxis": [
+        1,
+        0,
+        0
+      ],
+      "recommendedSteerAxis": [
+        0,
+        0,
+        1
+      ],
+      "status": "conservative candidate masks; require spin and steering render verification"
+    },
+    "kitt": {
+      "source": "D:\\Brands BCON\\OpenCity\\Models\\kNIGHT rIDER.glb",
+      "sha256": "8e18087a2c4b2663017edbf7444ac72b4848497388669eb2f597277884efd074",
+      "forward": "+Y",
+      "forwardConfidence": "high",
+      "forwardVisualEvidence": "nose and front lamps at right, rear spoiler at left",
+      "measurementConfidence": "moderate",
+      "wheels": [
+        {
+          "tag": "FL",
+          "center": [
+            -0.78,
+            1.2182,
+            0.3231
+          ],
+          "radius": 0.3147,
+          "width": 0.29,
+          "maskHalfWidth": 0.145,
+          "maskRadius": 0.3197,
+          "centerAndRadiusUncertaintyMetres": 0.012,
+          "pixelCenterAndRadius": [
+            1029,
+            488,
+            85
+          ]
+        },
+        {
+          "tag": "FR",
+          "center": [
+            0.78,
+            1.2182,
+            0.3231
+          ],
+          "radius": 0.3147,
+          "width": 0.29,
+          "maskHalfWidth": 0.145,
+          "maskRadius": 0.3197,
+          "centerAndRadiusUncertaintyMetres": 0.012,
+          "pixelCenterAndRadius": [
+            1029,
+            488,
+            85
+          ]
+        },
+        {
+          "tag": "RL",
+          "center": [
+            -0.78,
+            -1.4182,
+            0.3231
+          ],
+          "radius": 0.3259,
+          "width": 0.29,
+          "maskHalfWidth": 0.145,
+          "maskRadius": 0.3309,
+          "centerAndRadiusUncertaintyMetres": 0.012,
+          "pixelCenterAndRadius": [
+            317,
+            488,
+            88
+          ]
+        },
+        {
+          "tag": "RR",
+          "center": [
+            0.78,
+            -1.4182,
+            0.3231
+          ],
+          "radius": 0.3259,
+          "width": 0.29,
+          "maskHalfWidth": 0.145,
+          "maskRadius": 0.3309,
+          "centerAndRadiusUncertaintyMetres": 0.012,
+          "pixelCenterAndRadius": [
+            317,
+            488,
+            88
+          ]
+        }
+      ],
+      "widthEvidence": "tyre lower vertices concentrated absolute X .67 through .918; envelope .635 through .925",
+      "recommendedSpinAxis": [
+        1,
+        0,
+        0
+      ],
+      "recommendedSteerAxis": [
+        0,
+        0,
+        1
+      ],
+      "status": "conservative candidate masks; require spin and steering render verification"
+    },
+    "yulu": {
+      "source": "D:\\Brands BCON\\OpenCity\\Models\\Yulu.glb",
+      "sha256": "ec5f40766ee4c2b7cb48195789103a5f623e24fd77db3b8cd77d1dfad3626d04",
+      "forward": "+Y",
+      "forwardConfidence": "high",
+      "forwardVisualEvidence": "handlebars and front fork at right, luggage rack and tail lamp at left",
+      "measurementConfidence": "moderate",
+      "wheels": [
+        {
+          "tag": "F",
+          "center": [
+            0,
+            0.7153,
+            0.2542
+          ],
+          "radius": 0.233,
+          "width": 0.086,
+          "maskHalfWidth": 0.043,
+          "maskRadius": 0.235,
+          "centerAndRadiusUncertaintyMetres": 0.005,
+          "pixelCenterAndRadius": [
+            1188,
+            625,
+            159
+          ]
+        },
+        {
+          "tag": "R",
+          "center": [
+            0,
+            -0.5731,
+            0.2542
+          ],
+          "radius": 0.2404,
+          "width": 0.086,
+          "maskHalfWidth": 0.043,
+          "maskRadius": 0.2424,
+          "centerAndRadiusUncertaintyMetres": 0.005,
+          "pixelCenterAndRadius": [
+            309,
+            625,
+            164
+          ]
+        }
+      ],
+      "widthEvidence": "original lower tyre X front [-.03717,.03942], rear [-.03999,.04073]",
+      "recommendedSpinAxis": [
+        1,
+        0,
+        0
+      ],
+      "recommendedSteerAxis": [
+        0,
+        0,
+        1
+      ],
+      "status": "conservative candidate masks; require spin and steering render verification"
+    },
+    "delivery": {
+      "source": "D:\\Brands BCON\\OpenCity\\Models\\Delivery Rider.glb",
+      "sha256": "12bcd34b29681051be15e0fc90343863d683f21b07a5f0e5b7322b4e2fa6311c",
+      "forward": "+Y",
+      "forwardConfidence": "high",
+      "forwardVisualEvidence": "rider face and headlamp at right, Zomato box behind rider at left",
+      "measurementConfidence": "moderate",
+      "wheels": [
+        {
+          "tag": "F",
+          "center": [
+            0,
+            0.7123,
+            0.2358
+          ],
+          "radius": 0.236,
+          "width": 0.11,
+          "maskHalfWidth": 0.055,
+          "maskRadius": 0.238,
+          "centerAndRadiusUncertaintyMetres": 0.005,
+          "pixelCenterAndRadius": [
+            1186,
+            1134,
+            161
+          ]
+        },
+        {
+          "tag": "R",
+          "center": [
+            0,
+            -0.6537,
+            0.2343
+          ],
+          "radius": 0.236,
+          "width": 0.122,
+          "maskHalfWidth": 0.061,
+          "maskRadius": 0.238,
+          "centerAndRadiusUncertaintyMetres": 0.005,
+          "pixelCenterAndRadius": [
+            254,
+            1135,
+            161
+          ]
+        }
+      ],
+      "widthEvidence": "original lower tyre X front [-.05035,.05230], rear [-.05748,.05837]",
+      "recommendedSpinAxis": [
+        1,
+        0,
+        0
+      ],
+      "recommendedSteerAxis": [
+        0,
+        0,
+        1
+      ],
+      "status": "conservative candidate masks; require spin and steering render verification"
+    }
+  },
+  "maskLimitations": [
+    "Each source is one Mesh_0 with fused and fragmented scan regions. Spatial cylinder cannot prove semantic separation from fork, suspension, fender or wheel arch.",
+    "Do not reuse earlier decimated/rebuilt wheel candidates. Prior Yulu/Delivery +PI/2 yaw has front/rear source labels reversed relative current correct -PI/2 yaw.",
+    "Classify whole triangles using all three original vertices. Keep every unselected triangle in static body, retain UV, normal, materials and textures exactly.",
+    "Full cylinder can capture static body parts where they occupy same space. Test 90deg spin and .4rad steering separately, both sides, before accepting. Shrinking radius protects body but leaves tyre perimeter static.",
+    "For two-wheelers use tight X width to exclude side fork/fender, inspect center-plane fender still intersecting envelope.",
+    "Yulu source sits on kickstand. Full-source minZ grounding leaves tyre bottoms .025-.03m above zero; do not claim tyre road contact at Z=0."
+  ]
+}

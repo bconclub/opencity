@@ -1,0 +1,73 @@
+{
+  "status": "REVIEW_CANDIDATE",
+  "source": "D:\\Brands BCON\\OpenCity\\Models\\cYBER tRUCK.glb",
+  "sourceSHA256": "5165690281d01d4715259696b99404bc5076a982a92b1954e3ac2d78dd14c881",
+  "candidate": "assets/vehicles/cybertruck-latest-qc/cybertruck-latest-candidate-quality-150k.glb",
+  "candidateBytes": 5305388,
+  "triangles": 150000,
+  "partTriangles": {
+    "Body": 143994,
+    "Wheel_FL": 1500,
+    "Wheel_FR": 1500,
+    "Wheel_RL": 1500,
+    "Wheel_RR": 1500,
+    "Glass_Windshield": 2,
+    "Glass_Left": 2,
+    "Glass_Right": 2
+  },
+  "materials": 2,
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "dimensionsMeters": [
+    2.032,
+    5.683,
+    1.79
+  ],
+  "wheelPivots": {
+    "Wheel_FL": [
+      -0.740337073802948,
+      2.003826141357422,
+      0.4865967929363251
+    ],
+    "Wheel_FR": [
+      0.740337073802948,
+      2.003826141357422,
+      0.4865967929363251
+    ],
+    "Wheel_RL": [
+      -0.740337073802948,
+      -1.8515233993530273,
+      0.4865967929363251
+    ],
+    "Wheel_RR": [
+      0.740337073802948,
+      -1.8515233993530273,
+      0.4865967929363251
+    ]
+  },
+  "wheelContract": "Wheel_FL/FR/RL/RR; local X axle after glTF Y-up export",
+  "paintLimitation": "Body, dark glass, trim and cabin share one supplied texture atlas/material. Material retained as Material_0; no BodyPaint alias because runtime recoloring would tint glass and cabin.",
+  "segmentationLimitation": "Supplied single mesh has 1,341 disconnected scan islands. Wheel triangles were isolated by tight four-cylinder spatial envelopes; visual spin review required for small arch fragments.",
+  "method": "UV-preserving Blender Decimate; supplied atlas retained and resized from 2K to 1K; no reconstructed body geometry."
+}

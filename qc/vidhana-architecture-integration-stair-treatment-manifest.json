@@ -1,0 +1,30 @@
+{
+  "original": "b73b26f0000790dfa30c53ffd56ab16a9b04a5230112feb30c72e972529c2989",
+  "entries": [
+    {
+      "mode": "original",
+      "file": "qc/vidhana-architecture-integration-stair-treatment-original.js",
+      "sha256": "b73b26f0000790dfa30c53ffd56ab16a9b04a5230112feb30c72e972529c2989",
+      "bytes": 33196
+    },
+    {
+      "mode": "isolated",
+      "file": "qc/vidhana-architecture-integration-stair-treatment-isolated.js",
+      "sha256": "29e5c1948c1e9d18e302082952a033d6006762e833ea37d4664c0fef3a1de6a7",
+      "bytes": 33352
+    },
+    {
+      "mode": "shadowOff",
+      "file": "qc/vidhana-architecture-integration-stair-treatment-shadowOff.js",
+      "sha256": "2ffd3c4984574816308597c3c85e94c5a0995b88eec980a858f64f31b25a3382",
+      "bytes": 33497
+    },
+    {
+      "mode": "filtered",
+      "file": "qc/vidhana-architecture-integration-stair-treatment-filtered.js",
+      "sha256": "d6683f1a3334beda082cb79d8dec8a776f3f6f7a9c6e8990d52f4cd263517686",
+      "bytes": 35103
+    }
+  ],
+  "scope": "Review only. Isolate unchanged stair mesh, test shadow reception separately, then screen-space normal filtering below2px stair-going. No AA or position/normal-buffer changes, no runtime promotion."
+}

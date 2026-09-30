@@ -1,0 +1,123 @@
+{
+  "sourceSHA256": "9d4e23f03a19cf4f819d0ca49e42c8a79f9b28458d7e2f76b57a2c75262c0ac8",
+  "remoteSourceSHA256": "aa944fb8346bff3fd25c9feeaceca7fb12ca108ca660dfd98057cc6cb7e9f98c",
+  "connectedWaysResponseSHA256": "d8f156b7ae0f2d590da1ecb60e06826a22ab6e05fbd57276f3a57f7d3641f48c",
+  "outputSHA256": "bf2c7db53322fb31a158d224c7c5f2980296f413c64957b1f3fadcdd07f1aa77",
+  "apiURL": "https://api.openstreetmap.org/api/0.6/way/1091198032/full",
+  "nodeWaysURL": "https://api.openstreetmap.org/api/0.6/node/428831252/ways",
+  "sourceVersion": "10",
+  "sourceTimestamp": "2025-06-08T07:42:40Z",
+  "addedWay": "1091198032",
+  "addedNodes": [
+    "249088118",
+    "428831251",
+    "663309903",
+    "4017403935",
+    "12150906130",
+    "12896223105"
+  ],
+  "sharedNodesUnchanged": [
+    "428831252",
+    "428831267",
+    "12190250154",
+    "12896223106",
+    "12896223107"
+  ],
+  "junctionNode": "428831252",
+  "incidentWays": [
+    "52057928",
+    "1091198031",
+    "1091198032"
+  ],
+  "tags": {
+    "access": "permissive",
+    "bicycle": "yes",
+    "cycleway": "no",
+    "foot": "yes",
+    "highway": "unclassified",
+    "junction": "circular",
+    "lanes": "2",
+    "maxspeed": "25",
+    "motor_vehicle:conditional": "yes @ (Mo-Sa 08:00-21:00)",
+    "note": "Vehicular Traffic Allowed only between - 8AM to 9PM from Monday to Saturday. Sunday Vehicles not permitted.",
+    "oneway": "yes",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  },
+  "coordinates": [
+    {
+      "id": "428831267",
+      "lon": 77.5908346,
+      "lat": 12.9747933,
+      "radiusM": 556.7330314145775
+    },
+    {
+      "id": "663309903",
+      "lon": 77.590745,
+      "lat": 12.9748265,
+      "radiusM": 553.0608403899502
+    },
+    {
+      "id": "12150906130",
+      "lon": 77.5906833,
+      "lat": 12.9748545,
+      "radiusM": 550.0606303926804
+    },
+    {
+      "id": "249088118",
+      "lon": 77.5905812,
+      "lat": 12.974901,
+      "radiusM": 545.2603489620163
+    },
+    {
+      "id": "12190250154",
+      "lon": 77.590462,
+      "lat": 12.9749635,
+      "radiusM": 539.0405913504563
+    },
+    {
+      "id": "12896223107",
+      "lon": 77.5904058,
+      "lat": 12.9750138,
+      "radiusM": 533.9131641084201
+    },
+    {
+      "id": "12896223106",
+      "lon": 77.5903652,
+      "lat": 12.9750501,
+      "radiusM": 530.2625547913067
+    },
+    {
+      "id": "12896223105",
+      "lon": 77.5903244,
+      "lat": 12.9751284,
+      "radiusM": 522.0088623487649
+    },
+    {
+      "id": "428831251",
+      "lon": 77.5902768,
+      "lat": 12.975225,
+      "radiusM": 511.86651890908433
+    },
+    {
+      "id": "4017403935",
+      "lon": 77.590237,
+      "lat": 12.9753395,
+      "radiusM": 499.72309442411455
+    },
+    {
+      "id": "428831252",
+      "lon": 77.5902254,
+      "lat": 12.9754576,
+      "radiusM": 486.8509522122986
+    }
+  ],
+  "diagnoses": [
+    "Missing incoming road in local OSM snapshot caused two-approach acute converter cap.",
+    "Malformed native cap radius486\u2013490m lies inside500m clip; it is not the circle clipping seam."
+  ],
+  "estimatedWidth": "Do not add a guessed width tag; regenerate original converter from mapped two lanes and sidewalk tags. Resulting widths remain estimates.",
+  "routesChanged": false,
+  "conditionalMotorAccessEnabled": false,
+  "runtimePromoted": false
+}

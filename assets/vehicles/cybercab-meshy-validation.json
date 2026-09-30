@@ -1,0 +1,44 @@
+{
+  "source": "D:\\Brands BCON\\OpenCity\\Models\\CyberCAB Textured.glb",
+  "sourceBytes": 61515104,
+  "sourceTriangles": 1952024,
+  "gameTriangles": 24000,
+  "gameBytes": 4064576,
+  "boundsMin": [
+    -2.3967761993408203,
+    -2.2261509895324707,
+    0.0033495426177978516
+  ],
+  "boundsMax": [
+    2.396313428878784,
+    2.2267258167266846,
+    2.747556447982788
+  ],
+  "materials": 1,
+  "images": [
+    {
+      "name": "Image_0",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "wheelRig": "static joined mesh",
+  "lengthMetres": 4.45,
+  "scaleNote": "Uniformly scaled to estimated length; original proportions preserved"
+}

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cases": [
+    "legacy asphalt",
+    "legacy concrete",
+    "legacy paving",
+    "legacy marking",
+    "explicit asphalt ignores input brightness",
+    "source red preserved",
+    "source sign preserved",
+    "source white preserved",
+    "future unknown role preserves source"
+  ],
+  "sharedTextures": 2,
+  "assetMaterials": 7,
+  "sourceColourBatches": 3,
+  "geometryAdded": 0
+}

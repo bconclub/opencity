@@ -1,0 +1,152 @@
+{
+  "player": {
+    "path": "C:\\Users\\user\\Documents\\ChatGPT\\Z\\assets\\vehicles\\cybercab-latest-candidate.glb",
+    "bytes": 3678940,
+    "triangles": 24800,
+    "budget": 25000,
+    "budgetPass": true,
+    "meshNodes": [
+      "Body",
+      "Wheel_FL",
+      "Wheel_FR",
+      "Wheel_RL",
+      "Wheel_RR"
+    ],
+    "missingWheelNodes": [],
+    "wheelIsolationPass": false,
+    "wheelOrigins": {
+      "Wheel_FL": [
+        -0.8185228109359741,
+        1.3564093112945557,
+        0.17539775371551514
+      ],
+      "Wheel_FR": [
+        0.8185228109359741,
+        1.3564093112945557,
+        0.17539775371551514
+      ],
+      "Wheel_RL": [
+        -0.8185228109359741,
+        -1.3564093112945557,
+        0.17539775371551514
+      ],
+      "Wheel_RR": [
+        0.8185228109359741,
+        -1.3564093112945557,
+        0.17539775371551514
+      ]
+    },
+    "materials": [
+      "Material_0"
+    ],
+    "images": [
+      {
+        "name": "Image_0",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "Image_1",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "Image_2",
+        "size": [
+          1024,
+          1024
+        ]
+      }
+    ]
+  },
+  "traffic": {
+    "path": "C:\\Users\\user\\Documents\\ChatGPT\\Z\\assets\\vehicles\\cybercab-latest-traffic.glb",
+    "bytes": 3040416,
+    "triangles": 6000,
+    "budget": 6000,
+    "budgetPass": true,
+    "meshNodes": [
+      "Body",
+      "Wheel_FL",
+      "Wheel_FR",
+      "Wheel_RL",
+      "Wheel_RR"
+    ],
+    "missingWheelNodes": [],
+    "wheelIsolationPass": false,
+    "wheelOrigins": {
+      "Wheel_FL": [
+        -0.8185228109359741,
+        1.3564093112945557,
+        0.17539775371551514
+      ],
+      "Wheel_FR": [
+        0.8185228109359741,
+        1.3564093112945557,
+        0.17539775371551514
+      ],
+      "Wheel_RL": [
+        -0.8185228109359741,
+        -1.3564093112945557,
+        0.17539775371551514
+      ],
+      "Wheel_RR": [
+        0.8185228109359741,
+        -1.3564093112945557,
+        0.17539775371551514
+      ]
+    },
+    "materials": [
+      "Material_0.001"
+    ],
+    "images": [
+      {
+        "name": "Image_0",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "Image_0.001",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "Image_1",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "Image_1.001",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "Image_2",
+        "size": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "Image_2.001",
+        "size": [
+          1024,
+          1024
+        ]
+      }
+    ]
+  },
+  "status": "FAIL"
+}

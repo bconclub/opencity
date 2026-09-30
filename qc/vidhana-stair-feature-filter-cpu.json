@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "physicalSteps": 45,
+  "stairTriangles": 362,
+  "geometryAndMetadataIdentical": true,
+  "normalCounts": {
+    "tread": 92,
+    "riser": 90,
+    "side": 180
+  },
+  "projections": [
+    {
+      "view": "road",
+      "riserMedianPx": 4.503198038733756,
+      "treadMedianPx": 0.4983815094025778,
+      "pitchMedianPx": 4.565729496411011,
+      "note": "CPU perspective estimate from requested eye/target with MapLibre default field of view; GPU measurement still required."
+    },
+    {
+      "view": "front",
+      "riserMedianPx": 1.4221825468243614,
+      "treadMedianPx": 1.1720754571675887,
+      "pitchMedianPx": 2.598669529480305,
+      "note": "CPU perspective estimate from requested eye/target with MapLibre default field of view; GPU measurement still required."
+    },
+    {
+      "view": "aerial",
+      "riserMedianPx": 0.551671019475728,
+      "treadMedianPx": 1.7285974849683516,
+      "pitchMedianPx": 2.2802337503639194,
+      "note": "CPU perspective estimate from requested eye/target with MapLibre default field of view; GPU measurement still required."
+    }
+  ],
+  "candidateSHA256": "02a6cfe548b9f7f183a9459f54686d7cecc33eb2c1255fbc8c659f223dc7141f"
+}

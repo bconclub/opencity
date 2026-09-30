@@ -1,0 +1,146 @@
+{
+  "cybertruck": {
+    "scale": 2.986328012948982,
+    "sourceBounds": [
+      [
+        -0.9520419836044312,
+        -0.37712299823760986,
+        -0.32424598932266235
+      ],
+      [
+        0.9509639739990234,
+        0.3804129958152771,
+        0.3237670063972473
+      ]
+    ],
+    "normalizedBounds": [
+      [
+        -1.131125479928645,
+        -2.8415,
+        0.0
+      ],
+      [
+        1.131125479928645,
+        2.8415,
+        1.935179361873355
+      ]
+    ],
+    "sideImage": "cybertruck-source-side.png",
+    "sideImageWorldWidth": 6.13764,
+    "sideImageWorldHeight": 3.507222857142857,
+    "sideImageCenter": [
+      0.0,
+      0.0,
+      0.9675896763801575
+    ],
+    "sideImageHorizontal": "left=negative Y; right=positive Y"
+  },
+  "kitt": {
+    "scale": 2.5222562153564443,
+    "sourceBounds": [
+      [
+        -0.9522380232810974,
+        -0.40601301193237305,
+        -0.2576940059661865
+      ],
+      [
+        0.9508200287818909,
+        0.40697601437568665,
+        0.2568880021572113
+      ]
+    ],
+    "normalizedBounds": [
+      [
+        -1.0252833123110436,
+        -2.4,
+        0.0
+      ],
+      [
+        1.0252833123110436,
+        2.4,
+        1.2979076682998405
+      ]
+    ],
+    "sideImage": "kitt-source-side.png",
+    "sideImageWorldWidth": 5.184,
+    "sideImageWorldHeight": 2.962285714285714,
+    "sideImageCenter": [
+      0.0,
+      0.0,
+      0.6489538550376892
+    ],
+    "sideImageHorizontal": "left=negative Y; right=positive Y"
+  },
+  "yulu": {
+    "scale": 0.9983952116183601,
+    "sourceBounds": [
+      [
+        -0.9522920250892639,
+        -0.35932400822639465,
+        -0.5892419815063477
+      ],
+      [
+        0.9507619738578796,
+        0.3601270020008087,
+        0.5806609988212585
+      ]
+    ],
+    "normalizedBounds": [
+      [
+        -0.35914822180241585,
+        -0.95,
+        0.0
+      ],
+      [
+        0.35914822180241585,
+        0.95,
+        1.1680255336171306
+      ]
+    ],
+    "sideImage": "yulu-source-side.png",
+    "sideImageWorldWidth": 2.052,
+    "sideImageWorldHeight": 1.1725714285714286,
+    "sideImageCenter": [
+      0.0,
+      0.0,
+      0.5840127468109131
+    ],
+    "sideImageHorizontal": "left=negative Y; right=positive Y"
+  },
+  "delivery": {
+    "scale": 0.9989012018291054,
+    "sourceBounds": [
+      [
+        -0.9518070220947266,
+        -0.4088590145111084,
+        -0.8723419904708862
+      ],
+      [
+        0.9502829909324646,
+        0.4092020094394684,
+        0.8733369708061218
+      ]
+    ],
+    "normalizedBounds": [
+      [
+        -0.40858106999688987,
+        -0.95,
+        0.0
+      ],
+      [
+        0.40858106999688987,
+        0.95,
+        1.7437608124273876
+      ]
+    ],
+    "sideImage": "delivery-source-side.png",
+    "sideImageWorldWidth": 2.052,
+    "sideImageWorldHeight": 1.1725714285714286,
+    "sideImageCenter": [
+      0.0,
+      0.0,
+      0.8718804121017456
+    ],
+    "sideImageHorizontal": "left=negative Y; right=positive Y"
+  }
+}

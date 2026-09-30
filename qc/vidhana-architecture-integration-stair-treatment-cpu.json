@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "mode": "original",
+      "triangles": 69391,
+      "draws": 11,
+      "triangleHash": "2eba983729a933ba41fbebded10d34fa8941dd9fbfdc6f985dd46f827a52f0b5",
+      "stairTriangles": null
+    },
+    {
+      "mode": "isolated",
+      "triangles": 69391,
+      "draws": 12,
+      "triangleHash": "2eba983729a933ba41fbebded10d34fa8941dd9fbfdc6f985dd46f827a52f0b5",
+      "stairTriangles": 362
+    },
+    {
+      "mode": "shadowOff",
+      "triangles": 69391,
+      "draws": 12,
+      "triangleHash": "2eba983729a933ba41fbebded10d34fa8941dd9fbfdc6f985dd46f827a52f0b5",
+      "stairTriangles": 362
+    },
+    {
+      "mode": "filtered",
+      "triangles": 69391,
+      "draws": 12,
+      "triangleHash": "2eba983729a933ba41fbebded10d34fa8941dd9fbfdc6f985dd46f827a52f0b5",
+      "stairTriangles": 362
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "emptyPatchesKeepExactFeatures": true,
+  "polygonHoleHeight": 0,
+  "retainedHeight": 0.12,
+  "multiPolygonHeight": 0.12,
+  "deletedStripHeight": 0,
+  "sourceGraphChanged": false
+}

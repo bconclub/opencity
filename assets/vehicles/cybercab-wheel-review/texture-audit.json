@@ -1,0 +1,44 @@
+[
+  {
+    "file": "assets/vehicles/cybercab-meshy-approved.glb",
+    "materials": 1,
+    "images": [
+      {
+        "name": "Image_2",
+        "bytes": 1127549,
+        "sha256": "F8A3F7DEE7F1E1C2ECC4BA277E648954968B9BB4E40F9DCE7E1B8E28D079CE5F"
+      },
+      {
+        "name": "Image_0",
+        "bytes": 1215788,
+        "sha256": "2F14F688DC0F608EDC9830B91762B5ABEB94234CE131FADE2A66F3AF0A404C07"
+      },
+      {
+        "name": "Image_1",
+        "bytes": 1213595,
+        "sha256": "EC00A3702A4B1BC3394AFDD34559F41FEC35301EF19CAD848C2FF125ED623CE6"
+      }
+    ]
+  },
+  {
+    "file": "assets/vehicles/cybercab-wheel-review/rejected-candidate.glb",
+    "materials": 1,
+    "images": [
+      {
+        "name": "Image_2",
+        "bytes": 1127549,
+        "sha256": "F8A3F7DEE7F1E1C2ECC4BA277E648954968B9BB4E40F9DCE7E1B8E28D079CE5F"
+      },
+      {
+        "name": "Image_0",
+        "bytes": 1215788,
+        "sha256": "2F14F688DC0F608EDC9830B91762B5ABEB94234CE131FADE2A66F3AF0A404C07"
+      },
+      {
+        "name": "Image_1",
+        "bytes": 1213595,
+        "sha256": "EC00A3702A4B1BC3394AFDD34559F41FEC35301EF19CAD848C2FF125ED623CE6"
+      }
+    ]
+  }
+]

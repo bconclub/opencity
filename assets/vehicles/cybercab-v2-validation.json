@@ -1,0 +1,25 @@
+{
+  "source": "D:\\CodexTools\\Meshy\\cybercab-v2\\source.glb",
+  "triangles": 24698,
+  "bytes": 1648072,
+  "boundsMin": [
+    -0.9274609088897705,
+    -2.22499942779541,
+    0.0
+  ],
+  "boundsMax": [
+    0.927459716796875,
+    2.22499942779541,
+    1.3616750240325928
+  ],
+  "materials": 4,
+  "provenance": "Meshy reconstruction from generated images",
+  "wheels": "Joined static source mesh",
+  "estimatedLength": 4.45,
+  "lodBytes": 986468,
+  "lodTriangles": 5794,
+  "cleanup": "Recomputed smooth normals, four light smoothing iterations, retained base colour; removed noisy generated PBR maps",
+  "forward": "+Y",
+  "finish": "Cleaned Meshy geometry, gold colour correction, fine door seams and light strips; not manufacturer CAD",
+  "paintCleanup": "Closed 5px holes in gold mask and removed baked lighting/flecks from gold pixels; glass boundaries retained"
+}

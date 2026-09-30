@@ -1,0 +1,10 @@
+{
+  "picker": "cybertruck-latest-picker-640x420.png",
+  "spin90": "cybertruck-latest-wheel-spin90.png",
+  "wheelPivotDriftMeters": 0.0,
+  "transparentFilm": true,
+  "resolution": [
+    640,
+    420
+  ]
+}

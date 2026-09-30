@@ -1,0 +1,166 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "id": "cybertruck",
+      "footprint": {
+        "minX": -1.3685653049401216,
+        "maxX": 1.3685653049401216,
+        "minY": -3.24942238309192,
+        "maxY": 2.9081223724107685,
+        "margin": 0.08,
+        "paddingX": 0.08191528624810503,
+        "paddingY": 0.1573224017839372,
+        "maxPitch": 0.08,
+        "maxRoll": 0.045,
+        "neutralBounds": {
+          "minX": -1.2066500186920166,
+          "maxX": 1.2066500186920166,
+          "minY": -3.012099981307983,
+          "maxY": 2.670799970626831,
+          "minZ": -4.996003610813204e-16,
+          "maxZ": 1.7937999963760378
+        }
+      },
+      "approaches": 24,
+      "maxOverlap": 0,
+      "passageSamples": 586,
+      "frontStop": {
+        "distance": 7.115370825338302,
+        "impacts": 995,
+        "x": -349.24721004703036,
+        "y": 403.5844864088505,
+        "overlap": 0
+      }
+    },
+    {
+      "id": "cybercab",
+      "footprint": {
+        "minX": -1.0852591075352434,
+        "maxX": 1.0852591075352434,
+        "minY": -2.4250146551301803,
+        "maxY": 2.4250146551301808,
+        "margin": 0.08,
+        "paddingX": 0.07625913221156627,
+        "paddingY": 0.12001522733476994,
+        "maxPitch": 0.08,
+        "maxRoll": 0.055,
+        "neutralBounds": {
+          "minX": -0.9289999753236771,
+          "maxX": 0.9289999753236771,
+          "minY": -2.22499942779541,
+          "maxY": 2.2249994277954106,
+          "minZ": -0.01799997687339827,
+          "maxZ": 1.3616750240325932
+        }
+      },
+      "approaches": 24,
+      "maxOverlap": 0,
+      "passageSamples": 586,
+      "frontStop": {
+        "distance": 7.593974381452676,
+        "impacts": 959,
+        "x": -349.59258814064805,
+        "y": 403.9223955122216,
+        "overlap": 0
+      }
+    },
+    {
+      "id": "kitt",
+      "footprint": {
+        "minX": -1.1629115790189357,
+        "maxX": 1.1629115790189357,
+        "minY": -2.6317084089413068,
+        "maxY": 2.6372082068145057,
+        "margin": 0.08,
+        "paddingX": 0.05141159713874758,
+        "paddingY": 0.11220831548122374,
+        "maxPitch": 0.08,
+        "maxRoll": 0.04,
+        "neutralBounds": {
+          "minX": -1.031499981880188,
+          "maxX": 1.031499981880188,
+          "minY": -2.439500093460083,
+          "maxY": 2.444999891333282,
+          "minZ": -0.0030000004917386763,
+          "maxZ": 1.2649999856948857
+        }
+      },
+      "approaches": 24,
+      "maxOverlap": 0,
+      "passageSamples": 586,
+      "frontStop": {
+        "distance": 7.385863994975357,
+        "impacts": 1017,
+        "x": -349.44090289610244,
+        "y": 403.77399054408306,
+        "overlap": 0
+      }
+    },
+    {
+      "id": "auto",
+      "footprint": {
+        "minX": -1.0813565404516265,
+        "maxX": 1.081356421242337,
+        "minY": -1.5912523065135509,
+        "maxY": 1.5912523065135513,
+        "margin": 0.08,
+        "paddingX": 0.25065380168972484,
+        "paddingY": 0.15205874305224715,
+        "maxPitch": 0.08,
+        "maxRoll": 0.14,
+        "neutralBounds": {
+          "minX": -0.7507027387619019,
+          "maxX": 0.7507026195526123,
+          "minY": -1.3591935634613037,
+          "maxY": 1.3591935634613042,
+          "minZ": -3.0180159781541065e-16,
+          "maxZ": 1.7436110973358157
+        }
+      },
+      "approaches": 24,
+      "maxOverlap": 0,
+      "passageSamples": 586,
+      "frontStop": {
+        "distance": 8.430916002734966,
+        "impacts": 931,
+        "x": -350.1886403848082,
+        "y": 404.50555780047495,
+        "overlap": 0
+      }
+    },
+    {
+      "id": "cycle",
+      "footprint": {
+        "minX": -1.029147275299508,
+        "maxX": 1.029147275299508,
+        "minY": -1.134178825761968,
+        "maxY": 1.134178825761968,
+        "margin": 0.08,
+        "paddingX": 0.619147275597531,
+        "paddingY": 0.1641788221856894,
+        "maxPitch": 0.08,
+        "maxRoll": 0.32,
+        "neutralBounds": {
+          "minX": -0.3299999997019768,
+          "maxX": 0.3299999997019768,
+          "minY": -0.8900000035762787,
+          "maxY": 0.8900000035762787,
+          "minZ": -3.576278717609682e-9,
+          "maxZ": 1.915
+        }
+      },
+      "approaches": 24,
+      "maxOverlap": 0,
+      "passageSamples": 586,
+      "frontStop": {
+        "distance": 8.88640594044736,
+        "impacts": 760,
+        "x": -350.5153265437945,
+        "y": 404.82517919252945,
+        "overlap": 0
+      }
+    }
+  ],
+  "coverage": "Four GLB source node/accessor bounds plus actual procedural cycle geometry.24 edge/angle approaches per model; independent clipped-area overlap test; real ground physics frontal stop; passage both directions and body-wall/sideways rejection.8cm body margin. General existing building/NPC colliders remain unchanged."
+}

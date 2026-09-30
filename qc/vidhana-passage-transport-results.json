@@ -1,0 +1,21 @@
+{
+  "endpoint": "ws://127.0.0.1:50192/ws",
+  "result": {
+    "message": "{\"type\":\"error\",\"code\":\"version_mismatch\"}"
+  },
+  "events": [
+    {
+      "event": "upgrade",
+      "url": "/ws",
+      "origin": "http://127.0.0.1:50191"
+    },
+    {
+      "event": "websocket",
+      "url": "ws://127.0.0.1:50192/ws"
+    },
+    {
+      "event": "received",
+      "payload": "{\"type\":\"error\",\"code\":\"version_mismatch\"}"
+    }
+  ]
+}

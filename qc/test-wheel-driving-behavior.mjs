@@ -16,11 +16,11 @@ const loader=new GLTFLoader();
 loader.register(()=>({name:'CPU_TEXTURE_PLACEHOLDER',loadTexture:()=>Promise.resolve(new T.Texture())}));
 const close=(a,b,label)=>assert(Math.abs(a-b)<1e-6,`${label}: ${a} != ${b}`);
 const axis=new T.Vector3(1,0,0),q=new T.Quaternion(),report=[];
-for(const [id,file]of [['cybercab','assets/vehicles/cybercab-rigged.glb'],['cybertruck','assets/vehicles/cybertruck.glb'],['kitt','assets/vehicles/kitt.glb'],['auto','qc/auto-wheel-candidate/auto-rickshaw-rigged.glb']]){
- const bytes=fs.readFileSync(file),gltf=await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+for(const [id,file]of [['cybercab','assets/vehicles/cybercab-rigged.glb'],['cybertruck','assets/vehicles/cybertruck.glb'],['kitt','assets/vehicles/kitt.glb'],['auto','assets/auto/auto-rickshaw-rigged.glb'],['yulu','assets/vehicles/yulu.glb'],['delivery','assets/vehicles/delivery.glb']]){
+ const override=process.argv.slice(2).find(arg=>arg.startsWith(id+'='));const bytes=fs.readFileSync(override?override.slice(id.length+1):file),gltf=await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
  const group=new T.Group(),root=gltf.scene;root.rotation.x=Math.PI/2;group.add(root);
- const rig=bindVehicleWheelRig(T,root);assert.equal(rig.wheels.length,id==='auto'?3:4,`${id} independent wheels`);
- assert(rig.wheelRadius>.2&&rig.wheelRadius<.6,`${id} metre-scale tyre radius`);
+ const rig=bindVehicleWheelRig(T,root);assert.equal(rig.wheels.length,id==='auto'?3:['yulu','delivery'].includes(id)?2:4,`${id} independent wheels`);
+ assert(rig.wheelRadius>.12&&rig.wheelRadius<.6,`${id} metre-scale tyre radius`);
  const centres=rig.wheels.map(w=>w.getWorldPosition(new T.Vector3()));
  for(const angle of [0,.4,2.7,-.4,-2.7]){
   rig.update(angle,0);root.updateWorldMatrix(true,true);
@@ -29,10 +29,10 @@ for(const [id,file]of [['cybercab','assets/vehicles/cybercab-rigged.glb'],['cybe
  for(const turn of [-.4,.4]){
   rig.update(1.25,turn);root.updateWorldMatrix(true,true);
   const steer=Object.fromEntries(rig.steering.map(s=>[s.tag,s.pivot.rotation.y]));
-  if(id==='auto')close(steer.F,-turn,`${id} front wheel points along turn`);
+  if(['auto','yulu','delivery'].includes(id))close(steer.F,-turn,`${id} front wheel points along turn`);
   else{assert(Math.sign(steer.FL)===-Math.sign(turn)&&Math.sign(steer.FR)===-Math.sign(turn),`${id} front wheels point along turn`);
   assert(Math.abs(steer[turn>0?'FR':'FL'])>Math.abs(steer[turn>0?'FL':'FR']),`${id} inner tyre has tighter Ackermann angle`);}
-  close(steer.RL,0,`${id} rear axle not steering`);close(steer.RR,0,`${id} rear axle not steering`);
+  if(['yulu','delivery'].includes(id))close(steer.R,0,`${id} rear wheel not steering`);else{close(steer.RL,0,`${id} rear axle not steering`);close(steer.RR,0,`${id} rear axle not steering`);}
  }
  rig.update(.3,.2,1.1);root.updateWorldMatrix(true,true);
  if(id==='auto'){
@@ -44,9 +44,9 @@ for(const [id,file]of [['cybercab','assets/vehicles/cybercab-rigged.glb'],['cybe
  for(const s of rig.steering){q.setFromAxisAngle(axis,-(.3+(s.tag[0]==='R'?1.1:0)));close(s.wheel.quaternion.angleTo(s.rest.clone().multiply(q)),0,`${id} rear-only launch slip`);}
  const drift=Math.max(...rig.wheels.map((w,i)=>w.getWorldPosition(new T.Vector3()).distanceTo(centres[i])));assert(drift<1e-6,`${id} pivots fixed while rolling and steering`);
  rig.update(0,0);root.updateWorldMatrix(true,true);
- const contacts=rig.getWheelContacts(group);assert.equal(contacts.length,id==='auto'?3:4);
+ const contacts=rig.getWheelContacts(group);assert.equal(contacts.length,id==='auto'?3:['yulu','delivery'].includes(id)?2:4);
  assert(contacts.every(c=>[c.x,c.y,c.z,c.width].every(Number.isFinite)&&c.width>0&&Math.abs(c.z)<.08),`${id} tyre contact points near ground`);
- assert(contacts.find(c=>c.tag===(id==='auto'?'F':'FL')).y>contacts.find(c=>c.tag==='RL').y,`${id} contacts use game +Y forward`);
+ assert(contacts.find(c=>c.tag===(['auto','yulu','delivery'].includes(id)?'F':'FL')).y>contacts.find(c=>c.tag===(['yulu','delivery'].includes(id)?'R':'RL')).y,`${id} contacts use game +Y forward`);
  group.position.set(100,200,9);group.rotation.z=1.2;
  const transformed=rig.getWheelContacts(group);for(let i=0;i<contacts.length;i++)for(const key of ['x','y','z'])close(transformed[i][key],contacts[i][key],`${id} contact remains model-local`);
  const profile=vehicleProfile(id);profile.wheelRadius=rig.wheelRadius;
@@ -59,4 +59,4 @@ for(const [id,file]of [['cybercab','assets/vehicles/cybercab-rigged.glb'],['cybe
  assert(car.speed<0&&car.wheel<stoppedWheel,`${id} reverse rolls backwards`);
  report.push({vehicle:id,wheelRadius:rig.wheelRadius,pivotDrift:drift,contacts,forwardReverseStop:true,frontAckermann:true,rearOnlySlip:true});
 }
-console.log(JSON.stringify({passed:true,assets:report,limitation:'CPU rig and physics checks only. New 2M-triangle D: source cars are not rigged by this test. Auto tests the isolated-wheel candidate.'},null,2));
+console.log(JSON.stringify({passed:true,assets:report,limitation:'CPU checks against the shipped optimized GLBs. Textures require separate visual review.'},null,2));

@@ -1,0 +1,38 @@
+{
+  "candidate": "C:\\Users\\user\\Documents\\ChatGPT\\Z\\assets\\vehicles\\cybercab-latest-final.glb",
+  "bytes": 8186288,
+  "triangles": 130648,
+  "materials": 3,
+  "textures": "3 x 1024 supplied body textures",
+  "wheelPivots": {
+    "Wheel_FL": [
+      -0.8185,
+      1.3564,
+      0.3508
+    ],
+    "Wheel_FR": [
+      0.8185,
+      1.3564,
+      0.3508
+    ],
+    "Wheel_RL": [
+      -0.8185,
+      -1.3564,
+      0.3508
+    ],
+    "Wheel_RR": [
+      0.8185,
+      -1.3564,
+      0.3508
+    ]
+  },
+  "wheelNodes": [
+    "Wheel_FL",
+    "Wheel_FR",
+    "Wheel_RL",
+    "Wheel_RR"
+  ],
+  "wheelRepair": "Original fragmented wheel regions replaced with smooth dark tyres and metallic wheel covers. Body geometry, UVs, finish, windows, and textures retained.",
+  "sideGlass": "Not added. Supplied source side apertures remain open; attempted fitted panels failed visual placement review and were removed.",
+  "limitation": "Wheel geometry is reconstructed because supplied single mesh could not be separated without rotating body shards."
+}

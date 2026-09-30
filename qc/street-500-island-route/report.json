@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "scope": "Single4.6m vehicle fixture,2.1m width includes0.1m side margins; not runtime traffic activation",
+  "sourceWays": [
+    "1092049622",
+    "338941361",
+    "358318638",
+    "763048421"
+  ],
+  "sourceArcs": [
+    {
+      "sourceWay": "338941361",
+      "sourceSegment": 11,
+      "from": "3461278332",
+      "to": "3461278359",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "338941361",
+      "sourceSegment": 12,
+      "from": "3461278359",
+      "to": "3461278360",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "338941361",
+      "sourceSegment": 13,
+      "from": "3461278360",
+      "to": "10001492588",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "1092049622",
+      "sourceSegment": 3,
+      "from": "10001492588",
+      "to": "12113879974",
+      "oneway": "no"
+    },
+    {
+      "sourceWay": "1092049622",
+      "sourceSegment": 2,
+      "from": "12113879974",
+      "to": "12113879975",
+      "oneway": "no"
+    },
+    {
+      "sourceWay": "1092049622",
+      "sourceSegment": 1,
+      "from": "12113879975",
+      "to": "12113879976",
+      "oneway": "no"
+    },
+    {
+      "sourceWay": "1092049622",
+      "sourceSegment": 0,
+      "from": "12113879976",
+      "to": "3461278368",
+      "oneway": "no"
+    },
+    {
+      "sourceWay": "763048421",
+      "sourceSegment": 1,
+      "from": "3461278368",
+      "to": "12174568386",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "763048421",
+      "sourceSegment": 2,
+      "from": "12174568386",
+      "to": "3461278331",
+      "oneway": "yes"
+    },
+    {
+      "sourceWay": "358318638",
+      "sourceSegment": 0,
+      "from": "3461278331",
+      "to": "3461278332",
+      "oneway": "no"
+    }
+  ],
+  "pathLengthM": 165.6390118540475,
+  "sourceLengthM": 167.43526207850212,
+  "offsetM": 0.5,
+  "roundingRadiusM": 6,
+  "sampleSpacingM": 0.0999631936355145,
+  "bodyPoses": 1657,
+  "extraSweptMarginM": 0.002,
+  "outsideGroundM2": 0.0,
+  "outsideSourceCorridorsM2": 0.0,
+  "islandOverlapM2": 0.0,
+  "raisedKerbOverlapM2": 0.0,
+  "minimumIslandDistanceM": 3.204281483983354,
+  "minimumMeasuredTurningRadiusM": 5.835824857367937,
+  "minimumSourceProgressStepM": 0.0,
+  "oldRejectedCurveIslandOverlapM2": 0.008809805240748762,
+  "graph": {
+    "originalDirectedStates": 316,
+    "originalCycles": 5,
+    "fixtureDirectedStates": 10,
+    "fixtureCycles": 1,
+    "unsupportedBoundaryPortalSegmentsStillExcluded": 22,
+    "originalGraphModified": false
+  },
+  "limits": [
+    "Rejected old curve remains disabled; replacement uses actual connector1092049622, not relabeled loop2.",
+    "Two-way connector legs need exclusive occupancy or separately qualified opposing lanes before multi-NPC activation;0.5m offset is not proof of lane separation.",
+    "Vehicle envelopes larger than4.6x2.1m not qualified.",
+    "Source width estimates labeled; no new road polygons, nearest-node connections or boundary handoffs."
+  ],
+  "sourceSHA256": "9d4e23f03a19cf4f819d0ca49e42c8a79f9b28458d7e2f76b57a2c75262c0ac8",
+  "groundSHA256": "adf4bbb84f7244386514f22ecfe2a883dcdafe6ca8fe518287d1b48f26750723"
+}
