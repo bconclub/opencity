@@ -1,1 +1,6 @@
-{"version": "0.0.40", "date": "2026-09-14", "name": "Supplied Knight Rider, Yulu and delivery scooter", "versionScheme": "base-100-release-counter"}
+{
+  "version": "0.0.41",
+  "date": "2026-09-19",
+  "name": "Restore supplied fleet and showroom with Devaraj road improvements",
+  "versionScheme": "base-100-release-counter"
+}
